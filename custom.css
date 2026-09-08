@@ -1,0 +1,35 @@
+/* Site-wide, minimal override of obsidianhtml defaults.
+   White background, max-width centered wrapper, black links with
+   underline on hover, serif headings, monospace accents, whitespace. */
+
+body {
+  background: #fff !important;
+  color: #111;
+  max-width: 60rem;
+  margin: 0 auto !important;
+  padding: 1.5rem;
+}
+
+a { color: #000; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+code, pre, kbd, samp {
+  font-family: 'SourceCodePro-Regular', 'Courier New', monospace;
+}
+
+/* small home bar shown on the root page */
+.site-topbar {
+  font-size: 0.85em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+.site-topbar a {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
