@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the machinery of freedom">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the machinery of freedom';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the machinery of freedom" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-machinery-of-freedom">The Machinery of Freedom</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note is backed by a local extracted source and remains part of the vault's crosslinked book layer.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>David Friedman's The Machinery of Freedom is a libertarian and anarcho-capitalist argument built less on moral proclamation than on institutional comparison. The book begins with Lenny Bruce's contrast between Gimbels, Macy's, and "one big phone company," then defines freedom through property rights, voluntary exchange, and the ability to refuse unwanted deals. Friedman repeatedly treats government as an institution with incentives, not as a neutral public servant, and he treats markets as coordination systems whose moral importance lies in letting people pursue different ends without first winning a political fight.   </p>
+<p>Part I defends private property by turning familiar anti-capitalist claims into questions about incentives and information. Friedman argues that "property rights vs. human rights" is a verbal confusion, because property rights are human rights over scarce resources. He then moves through doctors' fees, selfishness, love, trade, force, Robin Hood redistribution, Marxist exploitation, monopoly, inheritance, interest, and the political misuse of "need." The repeated pattern is to ask what happens when a goal such as equality, charity, monopoly control, medical care, or public broadcasting is pursued through politics rather than through individually chosen exchange.   </p>
+<p>Part II is a set of incremental reforms meant to sell the state "in small pieces." Vouchers replace government production of schooling with parental choice; Adam Smith's critique of Oxford becomes a critique of modern universities; "Open the gates" defends immigration; streets, minicity proposals, drug laws, youth rights, medical licensing, welfare services, scarcity, pollution, and socialist democracy are all reframed as places where private ownership or priced choice could replace political monopoly. This part explains why the book can advocate vouchers and other transitional reforms while later arguing for a society without taxes or government.   </p>
+<p>Part III makes the radical turn from limited-government libertarianism to anarcho-capitalism. Friedman defines government as legitimized coercion, then sketches private protection agencies, arbitration, competing legal systems, market-produced law, and contractual relations among agencies such as Tannahelp Inc. and Dawn Defense. He treats police, courts, law, national defense, revolution, ruling-class theory, and public goods as economic problems. The central claim is not that conflict disappears, but that firms selling protection and adjudication would often find arbitration cheaper than violence and would have to satisfy customers who care about the legal rules under which they live.   </p>
+<p>Part IV revises the book for libertarians themselves. Friedman challenges natural-rights arguments that try to derive every answer from non-initiation of coercion or absolute property rights, using laser beams, photons, carbon dioxide, Russian roulette, airplanes, madmen with rifles, criminal proof standards, and punishment multipliers to show line-drawing problems. He then explains his consequentialist or economic-analysis-of-law approach, discusses medieval Iceland, foreign policy, private money, the Libertarian Party, Chesterton, and the risk that a political party named "Libertarian" will obey the incentives of parties once it gains assets to sell.   </p>
+<p>The appendices ground the polemic in numbers and reading pathways. Appendix 1 collects tax rates, tax incidence, income distribution, and national-income source tables to support earlier claims about graduated income taxes, state and local tax burdens, rental income, employee compensation, and corporate profits. Appendix 2 supplies Friedman's intellectual neighborhood: Heinlein, Kornbluth, Niven, Rand, Vinge, Alchian and Allen, Milton Friedman, Hazlitt, Mises, Coase, Becker, Stigler, Epstein, Posner, Kolko, Spooner, Nozick, Rothbard, Tannehill, Bastiat, Hayek, Orwell, Szasz, Mencken, Reason, Cato, SIL, the Libertarian Party, and many other books, magazines, organizations, institutes, and sources.   </p>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="core-concepts-and-linkages">Core concepts and linkages</h2>
+<ul>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: Friedman's baseline is voluntary exchange under property rights, where refusal, contract, price, and ownership coordinate plural ends without political allocation.   </li>
+<li><a href="//02%20Concepts/Polycentric%20Order.html">Polycentric Order</a>: the private-protection and arbitration chapters make competing legal systems the book's most radical institutional claim.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the reform chapters often define the state by failed monopoly, regulatory capture, licensing barriers, and coercive provision rather than by neutral public purpose.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: the postscript tests libertarian rights claims against punishment, proof, pollution, risk, madmen, and emergency coercion, forcing tradeoffs into the open.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the annotated competition appendix preserves a libertarian field of books, fiction, institutes, magazines, and disagreements rather than a single doctrinal lineage.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: the tax appendix, interest discussion, private money material, and income-source tables connect Friedman's political theory to fiscal incidence and monetary alternatives.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: vouchers, arbitration, reputation, pollution pricing, and private roads all depend on mechanisms for making preferences and costs visible outside ordinary electoral politics.   </li>
+</ul>
+<h2 id="section-by-section-notes">Section-by-section notes</h2>
+<h3 id="preface-to-the-second-edition">Preface to the Second Edition</h3>
+<p>Summary: Friedman dates most of the book to 1967-1973 and explains why the second edition keeps dated examples such as Ronald Reagan as California governor, heroin addicts in New York, U.S. Steel's market share, and 1970 prices rather than rewriting everything for 1988. He credits Jeff Hummel with updating appendices, adds eight new chapters as Part IV, and clarifies the apparent inconsistency between a voucher plan in Chapter 10 and the no-tax anarcho-capitalist society in Part III. Part II is described as reform within present institutions, while Part III is the fuller radical picture; Jeffrey Rogers Hummel becomes the dedicatee because he already understood the 1973 argument even while debating Friedman publicly. Source anchors: 1967 and 1973; Ronald Reagan; heroin addicts; U.S. Steel; Jeff Hummel; eight new chapters; voucher system; Jeffrey Rogers Hummel   </p>
+<p>Analysis: The dates 1967 and 1973, the 1988 revisions, and examples such as Ronald Reagan, heroin addicts, and U.S. Steel make the preface a warning about empirical aging without conceptual abandonment. Jeff Hummel and the eight new chapters identify the second edition's main addition: a postscript aimed at libertarians who already know the first edition's case. The voucher system explanation is especially important because it separates Friedman's transitional strategy from his endpoint, preventing the reader from mistaking school vouchers for the final theory of a no-tax order.   </p>
+<h3 id="preface-to-the-first-edition">Preface to the First Edition</h3>
+<p>Summary: The first-edition preface states Friedman's political identity as a set of familiar principles carried farther than most speakers intend. He argues from the right to "go to hell" in one's own fashion to abolishing censorship, drug laws for marijuana and heroin, laws against Dr. Quack's cancer cure, compulsory seat belts, welfare, tariffs, subsidies, loan guarantees, urban renewal, and agricultural price supports. He calls himself an Adam Smith liberal, a Goldwater conservative, and sometimes a Goldwater anarchist, then insists that the book is about libertarian ideas rather than the libertarian movement's history or head count. If the reader is persuaded, he says, the important numerical fact is simply that the number of libertarians has increased by one. Source anchors: go to hell; censorship; marijuana; heroin; seat belts; Adam Smith liberal; Goldwater anarchist; libertarians   </p>
+<p>Analysis: The "go to hell" phrase, censorship, marijuana, heroin, and seat belts show Friedman's refusal to split personal liberty from economic liberty. Adam Smith liberal and Goldwater anarchist place him in older liberal and American conservative vocabularies while also signaling that he will outrun both. By dismissing movement head counts, he makes the preface a conversion device: the book will try to change one reader's institutional beliefs rather than prove importance by rallies, parties, or media attention.   </p>
+<h3 id="introduction">Introduction</h3>
+<p>Summary: The introduction defines libertarianism through the permission to run one's own life without paternalistic protection or enforceable claims on others beyond being left alone. Friedman rejects laws against drugs, gambling, pornography, compulsory seat belts, welfare, Social Security, and forced charity, while allowing voluntary communes, virtuous communities, private insurance, and contractual exclusion. The hard question is how "left alone" can mean anything in an interdependent society, so he turns to property rights, self-ownership, transfer, coercion, heroin use, shooting another person, land and mineral resources, rental income around 13 percent, raw minerals around 3 percent, and the claim that private property is the machinery that makes freedom possible. Source anchors: drugs; gambling; pornography; Social Security; property rights; coercion; rental income; mineral resources   </p>
+<p>Analysis: Drugs, gambling, pornography, and Social Security make the introduction deliberately broad: Friedman wants the same rule to cover vice laws and redistribution. Property rights and coercion supply the book's operational vocabulary, because being left alone becomes definable only when control over bodies and resources is specified. Rental income and mineral resources turn <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> into the introduction's real mechanism, because Friedman argues that most income comes from human production and can therefore be coordinated through ownership, contract, refusal, and exchange rather than political allocation.   </p>
+<h3 id="part-i-in-defense-of-property">Part I: In Defense of Property</h3>
+<p>Summary: Part I defends private property by asking how scarce things should be allocated among people with different ends. Friedman attacks the phrase "property rights vs. human rights" through restaurant sit-ins, stools, redwood trees, conservationists, newsprint, the FCC, The Realist, The Berkeley Barb, Black Panther publications, National Review, airwaves, and Howard Hughes. He then uses one hundred physicians charging $10, love, trade, force, public and private property, Robin Hood redistribution, Marx's labor theory, an 1849 factory, $1 million in construction costs, inheritance, medical "need," Medicare, British socialized medicine, Gabriel Kolko's railroad and regulation history, U.S. Steel, capital gains, and monopoly to argue that markets usually discipline plans better than politics does. Source anchors: property rights; FCC; Berkeley Barb; Robin Hood; Marx; 1849 factory; Medicare; Gabriel Kolko   </p>
+<p>Analysis: Property rights, FCC licensing, and Berkeley Barb examples show Friedman using speech and media to make private ownership look pluralistic and public ownership look censorial. Robin Hood, Marx, the 1849 factory, and Gabriel Kolko answer left criticisms by separating desirable goals from the political machinery used to pursue them. Medicare and the attack on "need" are central because they show why Friedman thinks expert-defined necessities can become mandates that override the very personal tradeoffs freedom is supposed to protect.   </p>
+<h3 id="part-ii-libertarian-grab-bag-or-how-to-sell-the-state-in-small-pieces">Part II: Libertarian Grab Bag or How to Sell the State in Small Pieces</h3>
+<p>Summary: Part II tests libertarian reforms against concrete policy areas. "Sell the schools" compares public schools to the U.S. Post Office, proposes vouchers, Regents-exam qualification, parochial schools, Gallup polling, Prince Edward County, and competition for teachers and methods. The university chapters quote Adam Smith on Oxford, attack the corporate university's need to take positions while pretending neutrality, and imagine Adam Smith U. "Open the gates" defends immigration, "Sell the streets" and the 99 and 44/100ths percent built road material discuss private streets and jitneys, "Is William F. Buckley a contagious disease?" attacks drug prohibition, while "It's my life," youth rights, medical licensing, creeping capitalism, "If you want it, buy it," scarcity, pollution fees, rivers, air, sulfur dioxide, and the CAB appear in the later policy cases. Source anchors: U.S. Post Office; vouchers; Regents exam; Adam Smith; immigration; jitneys; William F. Buckley; pollution   </p>
+<p>Analysis: The U.S. Post Office, vouchers, and Regents exam show Friedman making a transitional reform precise enough to answer control and fraud objections. Adam Smith and the university essays extend the incentive critique into institutions that see themselves as truth-seeking rather than commercial. Immigration, jitneys, William F. Buckley, pollution, and the CAB make <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> appear by subtraction: Friedman argues that many state functions fail because monopoly, subsidy, licensing, exclusion, prohibition, and regulatory capture blunt feedback that private choice would expose.   </p>
+<h3 id="part-iii-anarchy-is-not-chaos">Part III: Anarchy Is Not Chaos</h3>
+<p>Summary: Part III defines government as legitimized coercion and then asks whether police, courts, law, and national defense can be produced without it. Friedman distinguishes anarchy from disorder through Mencken, the IRS, the draft, jury service, Lysander Spooner's No Treason, and eminent domain, then constructs private protection agencies such as Tannahelp Inc., Dawn Defense, and Murbard Ltd. He uses arbitration, reputation, locks, burglar alarms, Brinks guards, capital punishment preferences, water law in desert areas, market-produced law, the stability problem, Ayn Rand's objection to competing agencies, anarcho-capitalist legitimacy, national defense as the hard problem, revolution, CAB regulation, ruling-class theory, public goods, UPS, private arbitration, private security, the Society for Individual Liberty, the Libertarian Party, H. L. Hunt, and the mercenary/slave contrast. Source anchors: legitimized coercion; IRS; Lysander Spooner; Tannahelp Inc.; Dawn Defense; capital punishment; national defense; Libertarian Party   </p>
+<p>Analysis: Legitimized coercion, the IRS, and Lysander Spooner establish Friedman's definition of government by contrasting tax collection with private robbery and contract. Tannahelp Inc., Dawn Defense, and capital punishment preferences make <a href="//02%20Concepts/Polycentric%20Order.html">Polycentric Order</a> the operational heart of the anarcho-capitalist proposal: legal rules could be bundled into protection services and bargained among agencies instead of monopolized by one sovereign. National defense and the Libertarian Party keep the section from being merely utopian, because Friedman admits the hardest public-good problem while also arguing that education, alternative institutions, and market-like libertarian activity matter more than commanding a political machine.   </p>
+<h3 id="part-iv-for-libertarians-an-expanded-postscript">Part IV: For Libertarians: An Expanded Postscript</h3>
+<p>Summary: Part IV is aimed at libertarians who prefer absolute rights arguments to Friedman's practical case. "Problems" challenges non-initiation and absolute property principles with a thousand-megawatt laser, flashlight photons, carbon dioxide from breathing, pollution, Russian roulette with many chambers, private airplanes, John Locke's labor-mixing theory, criminal proof at 98 percent, double restitution, a madman about to shoot a crowd, a privately owned rifle, and a hypothetical draft against totalitarian conquest. "Where I stand" and "Answers" explain Friedman's economic analysis of law, while later chapters discuss medieval Iceland, private law enforcement, foreign policy, private money, the Libertarian Party's incentives, the Socialist Party precedent, a Democratic payment to a Libertarian candidate, and G. K. Chesterton's decentralism, Marconi Affair, Zionism essay, Catholicism, and good humor. Source anchors: thousand megawatt laser; carbon dioxide; Russian roulette; John Locke; 98 percent; madman; medieval Iceland; G. K. Chesterton   </p>
+<p>Analysis: The thousand megawatt laser, carbon dioxide, Russian roulette, John Locke, and 98 percent examples force line-drawing questions that simple rights slogans cannot answer by themselves. The madman and rifle case turns <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> against libertarian purity because Friedman openly weighs rights violations, risk, proof, punishment, and consequences rather than hiding tradeoffs behind absolutist language. Medieval Iceland and G. K. Chesterton widen the postscript from intra-libertarian theory to history and intellectual lineage, showing that private law and decentralist politics are not only abstract diagrams.   </p>
+<h3 id="appendix-1-some-numbers">Appendix 1: Some Numbers</h3>
+<p>Summary: Appendix 1 supplies numerical tables for claims scattered through the book. It compares personal income tax collected in 1955, 1960, 1965, 1970, 1975, 1980, and 1984 with taxable income, average tax rates, lowest-bracket rates, and highest-bracket rates, drawing on Historical Statistics of the United States and the Statistical Abstract. It then shows 1977 federal taxes, state and local taxes, all taxes, and percentage of families by income class, using the Tax Foundation's Allocating Tax Burdens and Government Benefits by Income Class. The appendix also presents income distribution among families from 1913 through 1985 and national income sources from 1900-09 through 1985, including compensation of employees, proprietors' income, rental income of persons, and corporate profits before tax. Source anchors: 1955; 1984; average tax rate; highest bracket; 1977; Tax Foundation; top 5%; corporate profits   </p>
+<p>Analysis: The 1955-to-1984 tax table, average tax rate, and highest bracket data support Friedman's claim that dramatic statutory progressivity does not straightforwardly translate into equally dramatic average burdens. The 1977 Tax Foundation table matters because it lets him compare federal taxes with state and local taxes across income classes, not just tell a story about rich and poor. The top 5 percent and corporate profits rows reinforce earlier arguments about income distribution, rent, capital, and labor compensation by anchoring them in historical series rather than slogans.   </p>
+<h3 id="appendix-2-my-competition">Appendix 2: My Competition</h3>
+<p>Summary: Appendix 2 is Friedman's annotated map of libertarian, economic, legal, historical, and fictional competitors. In fiction he recommends Poul Anderson's "No Truce with Kings," Robert Heinlein's The Moon is a Harsh Mistress, Kornbluth's The Syndic, Niven and Pournelle's Oath of Fealty, Ayn Rand's Atlas Shrugged and The Fountainhead, Eric Frank Russell, J. Neil Schulman, L. Neil Smith, and Vernor Vinge's True Names and "The Ungoverned." In economics, law, and public policy he lists Alchian and Allen, Milton Friedman, Hazlitt, Marshall, Mises, Peltzman, Adam Smith, Becker and Stigler, Coase, Richard Epstein, Landes and Posner, Anderson and Hill, Kolko, Sowell, Szasz, Julian Simon, Nozick, Rothbard, Tannehill, Bastiat, Hayek, Orwell, Spooner, Mencken, Reason, Cato, SIL, the Libertarian Party, Laissez Faire Books, and many institutes and magazines. Source anchors: Heinlein; The Moon is a Harsh Mistress; Ayn Rand; Coase; Richard Epstein; Gabriel Kolko; Robert Nozick; Reason   </p>
+<p>Analysis: Heinlein, The Moon is a Harsh Mistress, and Ayn Rand show the imaginative side of Friedman's project: anarcho-capitalist order is easier to picture when fiction has already made private governance legible. Coase, Richard Epstein, Gabriel Kolko, and Robert Nozick identify the serious intellectual competitors and allies around externalities, takings, regulatory history, and rights theory. Reason, Cato, SIL, and the Libertarian Party make the appendix a <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> device for a movement: Friedman's annotations preserve a field of disagreement and recruitment pathways, not a party catechism.   </p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html">voluntary order, civil society, and nonstate capacity</a></li>
+	<li><a class="backlink" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html">freaks of fortune - the emerging world of capitalism and risk in america</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A114860544472867588036584092263139250579{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D114860544472867588036584092263139250579{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B114860544472867588036584092263139250579{level}" level="{level}" note_temp_id="114860544472867588036584092263139250579" onclick="window.ObsHtmlGraph.run(this, '114860544472867588036584092263139250579', 'the machinery of freedom');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C114860544472867588036584092263139250579{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="as i lay dying">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'as i lay dying';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=as i lay dying" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="as-i-lay-dying">As I Lay Dying</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note sits in the American-fiction layer of <code>01 Books</code>, one of five William Faulkner titles in the vault beside <a href="//01%20Books/The%20Sound%20and%20the%20Fury.html">The Sound and the Fury</a>, <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a>, <a href="//01%20Books/Light%20in%20August.html">Light in August</a>, and <a href="//01%20Books/Go%20Down%2C%20Moses.html">Go Down, Moses</a>. It is backed by a local extracted source (<code>91 Extracted Text/Standalone/As I Lay Dying.md</code>) and feeds the <a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a> map of content, since the Bundren family's identity is produced and contested inside the county's talk, household economy, and public rituals. Conceptually the novel is anchored in memory and narrative, language and ideology, moral economy, coercive labor, and ecological constraint — the notes this book advances most directly.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Faulkner builds <em>As I Lay Dying</em> out of fifty-nine interior monologues that circle one task: getting Addie Bundren from her farmhouse to Jefferson for burial. The novel opens with Darl and Jewel coming up from the field while Cash saws Addie's coffin directly beneath her window, and it never leaves the pressure of that dying room for long. What looks at first like a plain burial promise becomes a moving cross section of the Bundren family: Anse's grievance-heavy passivity, Cash's carpentry and stoicism, Jewel's ferocity, Dewey Dell's pregnancy panic, Vardaman's shattered child logic, and Darl's unnervingly lucid eye for how everybody else lies to themselves. Faulkner turns a wagon trip through Yoknapatawpha roads, washed bridges, mule drownings, buzzards, and drugstores into a study of how each family member converts Addie's death into a different private need.   </p>
+<p>The novel's structure matters because no single speaker can master what is happening. Darl sees Cash's beveled coffin, Anse's evasions, and Jewel's illegitimacy with frightening clarity, but his vision is also the most unstable. Vardaman can say "My mother is a fish" and make grief feel more exact than adult rhetoric. Cash reduces disaster to numbered reasons about bevels, balance, and a shattered leg. Dewey Dell keeps translating every object, road sign, and male face into the problem of the abortion she cannot name. Addie herself arrives late and retroactively detonates the book by explaining her hatred of schoolchildren, her contempt for words like "love" and "sin," and the affair with Whitfield that made Jewel. The family's journey therefore works as narrative method, not just plot: each speaker exposes a different break in the shared reality.   </p>
+<p>Faulkner makes the trip grotesquely physical. Addie's corpse swells in the summer heat. Cash's leg is smashed in the river crossing and then packed in raw cement. Jewel sells his horse, then sacrifices the new team to get the wagon forward. Dewey Dell meets MacGowan in Jefferson, loses her dignity to his fake "treatment," and is stripped of her last money by Anse at the grave. Vardaman watches buzzards wheel above the wagon and keeps trying to understand the box, the drilled holes, and the fact that his mother is at once absent and still somehow audible. The book's comedy and horror are inseparable because Anse keeps narrating every catastrophe as proof of his own hardship while the rest of the family absorbs the actual damage. By the time Darl burns Gillespie's barn in an effort to stop the trip, burial has become something more like a public exhibition of decomposition and selfishness.   </p>
+<p>What the novel is doing specifically is testing whether a family can be described at all without distortion. Each monologue offers motive and self-justification, then another voice cuts across it. Cora's piety misreads Addie. Whitfield's confession arrives only after he decides God has relieved him of the need to speak. Peabody sees Anse as lazy cruelty incarnate. Samson, Tull, Armstid, Moseley, and MacGowan register how the Bundrens look from the outside: stubborn, comic, pitiable, and dangerous to themselves. The famous polyphony is therefore not ornamental modernism. Faulkner uses it to show that burial, marriage, parenthood, religion, and duty are all made of contested speech, and that the person most committed to plain truth, Darl, is the one the family finally sends to Jackson.   </p>
+<p>Addie's own section gives the book its hidden center. Her account of schoolteaching, whipping children, marrying Anse, bearing Cash and Darl, taking Jewel through Whitfield, and then turning later children into negative repayment reveals that the journey is governed by an old hatred nobody around her fully understands. She wanted to be buried in Jefferson, but the trip does not honor her so much as reveal what her life produced: one son who builds, one who rages, one who sees too much, one daughter trapped in repetition, one child stunned into animal metaphor, and a husband who reaches the graveyard thinking about new teeth. The burial promise is real, but Faulkner makes it inseparable from revenge, habit, and the dead weight of Bundren family language.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Addie Bundren</strong>: the dead mother and hidden center of the book. A former schoolteacher who hated her students and her walk to the spring, she married Anse, bore Cash and Darl, then took Jewel through the affair with Whitfield, and bore Dewey Dell and Vardaman afterward as a kind of negative repayment. Her monologue appears after her death and detonates the family's pieties about motherhood, love, and sin; her one request — burial in Jefferson — quietly governs the entire expedition.   </li>
+<li><strong>Anse Bundren</strong>: the father and the vow-maker. He made the promise he refuses to break, but he narrates every catastrophe as proof of his own martyrdom while the actual labor and damage fall on the children. He reaches Jefferson not purified but rewarded: new teeth, a new wife, and the air of a man who was owed all along.   </li>
+<li><strong>Cash Bundren</strong>: the craftsman and eldest practical conscience. He builds the coffin on the bevel as a defense against the rain and against feeling, reasons through every accident as a problem of balance and load, and absorbs the crossing's broken leg and the raw-cement "cure." It is Cash who calmly endorses sending Darl to Jackson.   </li>
+<li><strong>Darl Bundren</strong>: the seer, with the most monologues in the book (nineteen). He reads Jewel's illegitimacy, Dewey Dell's pregnancy, and Anse's evasions with unnerving clarity, and burns Gillespie's barn to try to stop the trip. His true-seeing is the thing the family finally classifies as madness and commits to Jackson, where the novel leaves him laughing on the train.   </li>
+<li><strong>Jewel Bundren</strong>: Addie's son by Whitfield and her chosen child. He appears as pure force: contemptuous of Cash's coffin-making, possessive of the horse his own night labor bought, the one who fights the horse through the river and saves the coffin from the barn fire. His ferocity is love made into bodily refusal.   </li>
+<li><strong>Dewey Dell Bundren</strong>: the daughter, pregnant by Lafe and unable to name her condition. For her the trip is a route to medicine that Jefferson converts into fraud: MacGowan swindles her toward a bogus "cure," and her final section shows Anse stripping her of the ten dollars over the grave — the pregnancy left unresolved and her vulnerability clarified.   </li>
+<li><strong>Vardaman Bundren</strong>: the young child who chops up a fish and fuses it with his mother — "My mother is a fish." His repetitive litanies, his fear of the nailed box, and his startled accounts of flood, buzzards, and fire carry the novel's most exact grief.   </li>
+<li><strong>Secondary figures</strong>: Cora Tull (pious neighbor whose religion misreads Addie) and Vernon Tull (practical witness and repeated helper); Doctor Peabody (professional ire at Bundren neglect and the cement leg); Brother Whitfield (Jewel's father, whose confession never happens); and the county cast of Samson, Armstid, Moseley, and MacGowan, who register the Bundrens as spectacle, credit risk, gatekeeping, and prey.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//01%20Books/The%20Sound%20and%20the%20Fury.html">The Sound and the Fury</a>: the sibling experiment in radical interiority. Where that novel gives Compson trauma four dated sections, this one multiplies the voices to fifty-nine and drops all chronology but the road.   </li>
+<li><a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a>: likewise a Yoknapatawpha story told by competing narrators; here the contested fact is a common burial and a family's secrets rather than an antebellum myth.   </li>
+<li><a href="//01%20Books/Light%20in%20August.html">Light in August</a>: shares the county, the road, and the outsider who watches an itinerant family; Jefferson classifies the Bundrens the way it classifies Lena Grove and Joe Christmas.   </li>
+<li><a href="//01%20Books/Go%20Down%2C%20Moses.html">Go Down, Moses</a>: both books tie land, labor, and inheritance to what bodies pay; Anse's appetite answers Isaac McCaslin's renunciation.   </li>
+<li><a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a>: the Bundrens' identity is made and unmade inside county gossip, household economy, and public rituals of burial.   </li>
+<li>Key concept notes the book engages throughout: <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>, <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>, <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>, <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>, <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>, and <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>Burial as an economy of obligation, sacrifice, resentment, and self-interest.   </li>
+<li>The body as the novel's truth medium: corpse, coffin, bevels, cement, fish, buzzards, drilled air-holes.   </li>
+<li>Grief displaced into labor and objects: Jewel's horse, Cash's carpentry, Vardaman's fish, Anse's teeth.   </li>
+<li>Words that cover instead of reveal: Anse's vow, Cora's piety, Whitfield's non-confession, MacGowan's "medicine."   </li>
+<li>The county as audience, judge, and creditor.   </li>
+<li>Womanhood, pregnancy, and unnameable female need (Addie and Dewey Dell against the town's response).   </li>
+<li>Environment as antagonist: rain, river, bridge, mud, heat.   </li>
+<li>Family unity as coercion: the group that preserves the dead by breaking the living.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: the fifty-nine monologues preserve the trip as contested testimony rather than a single authoritative family account.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Addie's contempt for words like love and sin, Cora's piety, and Anse's self-excusing speech make language a source of distortion as much as meaning.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: the burial vow becomes a ledger of obligation, sacrifice, resentment, and self-interest inside the Bundren family — and, in Jefferson, inside the drugstore and the credit arrangements that keep the wagon moving.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: neighbors, borrowed teams, county gossip, and the practical knowledge of men like Cash and Tull supply the infrastructure that keeps Anse's vow technically alive even when it fails to coordinate anyone's safety.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: the trip repeatedly turns living bodies into the machinery that moves Addie's coffin, with Cash, Jewel, and the others absorbing the damage.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: rain, washed bridges, mud, heat, and river crossings shape the journey as forcefully as family intention.   </li>
+<li><a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>: outsiders, doctors, druggists, the law after Gillespie's burned barn, and finally the commitment to Jackson turn Bundren suffering into public classifications — religious, medical, legal — that may clarify or punish.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="darl-1">Darl 1</h3>
+<p>Summary: Darl opens the novel by placing himself and Jewel in the cotton field, the cottonhouse, the plank path, the laid-by rows, and the farmhouse window where Cash is sawing boards for Addie Bundren's coffin while she is still alive. He notices Jewel's broken straw hat, Cash's deliberate carpentry, and the way the house, barn, and field line up around the dying room. The scene fixes the relation among the brothers immediately: Cash works, Jewel burns with silent resentment, and Darl watches with a verbal precision none of the others possess. The section also establishes that Addie's death is already being prepared in public, with her last sight full of hammering, sawing, and the box that will take her away. Source anchors: cottonhouse; Jewel's straw hat; Cash sawing; Addie's window; coffin boards; laid-by cotton.   </p>
+<p>Analysis: The <code>cottonhouse</code>, <code>Cash sawing</code>, and <code>Addie's window</code> matter because Faulkner begins with labor arranged around a death that has not yet occurred. <code>Jewel's straw hat</code> and the <code>coffin boards</code> matter because Darl's first act is to register both physical detail and buried family grievance, especially Jewel's fury at Cash's visible workmanship. The <code>laid-by cotton</code> matters because Darl's calm geometry makes the farm look orderly even as the family inside it is already being organized around burial — the opening monologue establishing Darl as the novel's recorder of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>.   </p>
+<h3 id="cora-1">Cora 1</h3>
+<p>Summary: Cora Tull turns from Darl's visual control to domestic economy, talking about saved eggs, chickens, possums, snakes, sugar, flour, and the cakes she baked to sell — "the cakes turned out right well" — and about the rich town lady who changed her mind, with Kate's running commentary that "those rich town ladies can change their minds. Poor folks cant." She then reads the deathbed: Addie propped on the pillow with the quilt to her chin, her face "wasted away so that the bones draw just under the skin," watching out the window while Cash works, the fanning girl standing over her. The section ends as Darl passes through the hall without looking in and Eula watches him go. Cora's section links hens, baking, and barter to the neighboring deathbed, showing how rural gossip and religious judgment are already shaping Addie's final hours. Source anchors: eggs; chickens; cakes turned out right well; rich town ladies; Kate; Addie propped on the pillow; bones under the skin; just watching Cash yonder; Darl passes the door; Addie next door.   </p>
+<p>Analysis: The <code>eggs</code>, <code>cakes</code>, and <code>chickens</code> matter because Cora's moral authority grows out of household competence, not detached theology. The <code>rich town ladies</code> and <code>Kate</code> matter because even her charity-baking anecdote is delivered through a ledger of fairness and a religious gloss on honesty — "the Lord can see into the heart" — a form of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> that converts small commerce into moral testimony. <code>Addie propped on the pillow</code> and <code>just watching Cash yonder</code> matter because the deathbed arrives through Cora's eye as a scene of strained housekeeping and imperfect piety; <code>Darl passes the door</code> registers only that one son walks past without entering, without yet assigning him any special feeling — that reading is Cora's sentimental addition in her next section. <code>Addie next door</code> matters because Faulkner uses Cora to show that even before the coffin leaves the yard, the Bundren story is already being narrated, judged, and simplified by outsiders, a form of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as much as piety.   </p>
+<h3 id="darl-2">Darl 2</h3>
+<p>Summary: Darl comes back to the porch where Anse Bundren and Vernon Tull sit with snuff, the water bucket, and the practical question of whether Jewel is ready to go with him on the wagon trip. Addie is inside dying, but Anse talks in his usual vague, self-protective way while Darl drinks from the gourd and listens. The scene turns on departure: Darl and Jewel are being sent away at exactly the moment their mother is closest to death, and everybody knows it without saying it plainly. Faulkner lets Darl register the porch, the gourd, the snuffbox, and Anse's evasive commands so the family's style of communication appears before the body ever starts moving. Source anchors: porch; Vernon Tull; snuffbox; gourd; Jewel ready; Addie dying.   </p>
+<p>Analysis: The <code>porch</code>, <code>snuffbox</code>, and <code>gourd</code> matter because Anse's family government is made of ordinary objects and avoided statements rather than decisive action. <code>Vernon Tull</code> and <code>Jewel ready</code> matter because this departure is publicly staged; the neighbors can see the sons being sent off while Addie lies inside. <code>Addie dying</code> matters because Darl's exactness exposes Anse's method: he keeps the practical machinery of the house moving while refusing to name the moral indecency of sending sons away from their mother's bed — an early specimen of the self-protecting <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> that rules the household.   </p>
+<h3 id="jewel-1">Jewel 1</h3>
+<p>Summary: Jewel finally speaks and his section is all raw contempt for Cash's coffin making under Addie's window, the sawing and hammering she must hear with every breath, and the performance of goodness implied by the box itself. He hears Cash saying See, see what a good one I am making for you, and he hates the righteousness of the gesture as much as the noise. Jewel's language is compressed, violent, and stripped of Darl's description or Cora's morality; he is possessed by immediate bodily anger. In a few lines Faulkner makes Jewel's relation to Addie feel singular, more intimate and more possessive than his brothers' relation to her. Source anchors: Cash's coffin; hammering; Addie's window; every breath; See what a good one; Jewel's anger.   </p>
+<p>Analysis: <code>Cash's coffin</code>, <code>hammering</code>, and <code>Addie's window</code> matter because Jewel experiences the same event as desecration rather than duty. <code>Every breath</code> matters because he measures the scene through Addie's body, not through ritual obligation or craftsmanship. <code>See what a good one</code> and <code>Jewel's anger</code> matter because Faulkner uses Jewel to reveal a family competition already embedded in the burial: even love for Addie is expressed as accusation against whoever appears to claim her most publicly — a quarrel waged through the <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> of duty each brother deploys.   </p>
+<h3 id="darl-3">Darl 3</h3>
+<p>Summary: Darl narrates the moment he and Jewel actually leave, with Jewel mounting the wagon, Vernon present, and the trip beginning while Addie remains behind. He watches Jewel refuse eye contact and registers the tense pause before motion, as though departure itself were an accusation. The section also sharpens Darl's eerie relation to what is happening elsewhere; he moves through the road and wagon space while holding the deathbed in mind. The trip for lumber or hauling work becomes inseparable from Addie's dying, so travel in this novel begins as compelled absence rather than purposeful journey. Source anchors: wagon; Vernon present; Jewel mounts; no eye contact; leaving the yard; Addie behind.   </p>
+<p>Analysis: The <code>wagon</code>, <code>Jewel mounts</code>, and <code>leaving the yard</code> matter because the novel's larger trip starts as a smaller enforced removal from the mother's bedside. <code>Vernon present</code> matters because witnesses keep framing Bundren decisions, making private failure visible to the county. <code>No eye contact</code> and <code>Addie behind</code> matter because Darl senses that this departure will later look like abandonment, and Faulkner uses that knowledge to stain the road itself with guilt before the corpse ever rides upon it — Darl's backward-looking narration already converting departure into remembered <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">memory</a>.   </p>
+<h3 id="cora-2">Cora 2</h3>
+<p>Summary: Cora reads Darl's departure sentimentally, insisting it was the sweetest thing she ever saw, as though he knew he would never see Addie again and as though Anse were driving him from his mother's deathbed. Here she introduces her signature reading of the family: she always said "Darl was different from those others," "the only one of them that had his mother's nature, had any natural affection," and she sets Jewel against him as a selfish Bundren "after that extra three dollars," denying his dying mother the goodbye kiss. Her version turns Darl into the uniquely feeling Bundren and places Anse in the role of blind, selfish father. She keeps translating the family through her own religious and emotional categories, making Darl the vessel of tenderness and the others examples of hardness. The section is less about objective fact than about how rural spectators convert a family crisis into exemplary feeling. Source anchors: sweetest thing; Darl's farewell; never see her again; Anse driving him; Darl was different; the only one that had his mother's nature; natural affection; the extra three dollars; Jewel denied the kiss; Cora's judgment.   </p>
+<p>Analysis: <code>Sweetest thing</code>, <code>Darl's farewell</code>, and <code>only one with feeling</code> matter because Cora's need to moralize immediately simplifies the tangled relations that Faulkner will keep complicating. <code>Anse driving him</code> matters because she sees one true selfishness in the father, but her confidence also shows how quickly the county produces <a href="//02%20Concepts/Language%20and%20Ideology.html">legible</a> narratives about the Bundrens. <code>Never see her again</code> matters because Cora is right about the gravity of the moment even while her piety makes Darl too pure and the family too easily classifiable.   </p>
+<h3 id="dewey-dell-1">Dewey Dell 1</h3>
+<p>Summary: Dewey Dell's first monologue fuses her pregnancy with field labor, Lafe, cotton rows, sweating men, and Addie's dying inside the house. She thinks through the tub full of guts image, through Lafe's role in making her pregnant, through the work that keeps everybody moving while she is trapped inside a body she cannot control. Pa avoids sweat, Jewel cares only in his own way, Cash saws, and Darl knows too much; all of this circles her private terror that is already separate from Addie's death. The section establishes that the journey to Jefferson will matter to Dewey Dell less as burial than as the possible route to medicine or abortion. Source anchors: Lafe; cotton rows; tub full of guts; Pa and sweat; Cash sawing; Jefferson possibility.   </p>
+<p>Analysis: <code>Lafe</code>, the <code>tub full of guts</code>, and <code>Jefferson possibility</code> matter because Dewey Dell experiences the family's crisis through reproductive panic rather than mourning alone. <code>Pa and sweat</code> and <code>Cash sawing</code> matter because every member of the household becomes for her a distorted fact inside that panic, either useless, opaque, or burdening. The <code>cotton rows</code> matter because Faulkner roots her fear in <a href="//02%20Concepts/Coercive%20Labor.html">field work and bodily repetition</a>, making pregnancy one more rural inevitability that the trip may or may not interrupt.   </p>
+<h3 id="tull-1">Tull 1</h3>
+<p>Summary: Vernon Tull watches Anse rub his knees and complain in his passive, half-reasoning style about roads, weather, and the coming need to move Addie. Tull tries to talk practically, but Anse keeps turning every choice into testimony that he is the man most burdened by circumstance. The section gives the neighborhood's measured view of him: slippery, self-excusing, and somehow able to make other men shoulder the actual labor. Tull's porchside perspective places Anse inside county talk and exposes the social mechanism by which Bundren trouble becomes everyone's business. Source anchors: Vernon Tull; rubbing his knees; road; weather; moving Addie; Anse's complaints.   </p>
+<p>Analysis: <code>Vernon Tull</code>, <code>rubbing his knees</code>, and the <code>road</code> matter because Tull reads Anse not through interior motives but through repeated observable habits. <code>Weather</code> and <code>moving Addie</code> matter because Anse treats <a href="//02%20Concepts/Ecological%20Constraint.html">unavoidable material conditions</a> as personal persecution, a habit that will carry the wagon into worse and worse situations. <code>Anse's complaints</code> matter because Faulkner uses Tull to show how the community already knows his pattern even when it keeps helping him anyway.   </p>
+<h3 id="anse-1">Anse 1</h3>
+<p>Summary: Anse's first section is a self-pitying sermon about the road, the coming rain, his promise to Addie, and the bad luck that seems always to choose him. He imagines the weather shutting down like a wall behind the boys and between him and the obligation he has undertaken. His syntax sprawls around grievance and fate, making him sound acted upon even when he is choosing. Addie's death enters his consciousness chiefly as a burden of transport and vow, not as a singular person disappearing. Source anchors: road; rain wall; promise; bad luck; boys away; Addie's burial vow.   </p>
+<p>Analysis: The <code>road</code>, <code>rain wall</code>, and <code>bad luck</code> matter because Anse narrates material difficulty as metaphysical injustice. <code>Promise</code> and <code>Addie's burial vow</code> make <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> unstable inside the family: he converts a real obligation into self-dramatization, preparing the pattern by which every sacrifice on the trip will be credited to him rather than to the children who bear it. <code>Boys away</code> matters because even before Addie dies, Anse has rearranged the family so he can claim helplessness while others do the moving.   </p>
+<h3 id="darl-4">Darl 4</h3>
+<p>Summary: Darl, now on the road with Jewel, sees Jewel's trimmed neck, the white line above the sunburn, and the refusal to look back toward the house. The wagon road tunnels between mule ears and ahead into distance, yet Darl's awareness keeps splitting between the trip and the death scene at home. He addresses Jewel and silently measures his brother's hardness against the unseen room they have left behind. Faulkner makes this section a hinge between physical travel and Darl's uncanny sense that Addie's dying can still be apprehended from miles away. Source anchors: trimmed neck; white line; no looking back; mule ears; wagon road; Jewel on the seat.   </p>
+<p>Analysis: The <code>trimmed neck</code>, <code>white line</code>, and <code>no looking back</code> matter because Darl treats Jewel's body as readable surface, a way of diagnosing his brother's refusal to submit to grief publicly. The <code>mule ears</code> and <code>wagon road</code> matter because travel in this novel is always visually framed, made into a corridor that both carries and traps. <code>Jewel on the seat</code> matters because the brothers are physically together while emotionally divided, a split that lets Darl's clairvoyant inwardness grow stranger as the section advances — his sight staging the family's contest between what is physically present and what is <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">remembered</a>.   </p>
+<h3 id="peabody-1">Peabody 1</h3>
+<p>Summary: Doctor Peabody arrives in fury, cursing Anse for waiting so long to send for him and treating the whole Bundren household as a nest of neglect. He jokes coarsely about being made to work like a mule and complains that if there were anything to be done he would have to haul Addie back from death. The section gives the doctor's outsider view: Anse as lazy, the family as poor patients, and Addie's decline as the result of years of depletion. Peabody's professional irritation never conceals that he knows she is beyond repair. Source anchors: Doctor Peabody; too late; Anse's neglect; mule joke; Addie beyond help; hauled back from death.   </p>
+<p>Analysis: <code>Doctor Peabody</code>, <code>too late</code>, and <code>Anse's neglect</code> matter because medicine here arrives not as hope but as retrospective accusation. The <code>mule joke</code> and <code>hauled back from death</code> matter because Peabody's rough humor is his way of acknowledging helplessness without piety. <code>Addie beyond help</code> matters because Faulkner uses the doctor to confirm materially what the family has been circling symbolically: the novel begins after cure has already ceased to be possible, Peabody's verdict standing as the county's medical <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>, an authority that classifies the Bundrens rather than saves them.   </p>
+<h3 id="darl-5">Darl 5</h3>
+<p>Summary: Darl narrates Addie's last moments with extraordinary stillness: Anse beside the bed, Vardaman peering from behind his leg, Dewey Dell saying it is Jewel she wants, and Addie's life seeming to drain into her eyes. The room is sparse, but every gesture is final, and Jewel's absence becomes the central wound of the scene. Anse responds with formula rather than recognition, and the children cluster without shared understanding. Darl makes the deathbed into a tableau of failed relation, with each living body arranged around Addie's need for the son who is not there. Source anchors: Addie's eyes; Vardaman behind Anse; Dewey Dell says Jewel; Anse at the bed; last breath; absent Jewel.   </p>
+<p>Analysis: <code>Addie's eyes</code>, <code>Dewey Dell says Jewel</code>, and <code>absent Jewel</code> matter because the dying scene is organized by a demand that cannot be satisfied. <code>Vardaman behind Anse</code> matters because the child witnesses death through paternal obstruction rather than guidance. <code>Anse at the bed</code> and <code>last breath</code> matter because Darl's calm staging strips away any comforting rhetoric; the family is physically present, yet Addie's final intelligible desire points elsewhere, and Darl's staging exposes how little the household's <a href="//02%20Concepts/Language%20and%20Ideology.html">shared language</a> can meet the dying woman's need.   </p>
+<h3 id="vardaman-1">Vardaman 1</h3>
+<p>Summary: Vardaman responds to Addie's death through the fish he has caught and chopped up, through running, crying, and the sense that what was whole is now cut into not-fish pieces and not-blood. He cannot keep the categories of mother, fish, body, and butchered flesh separate. The porch, dust, hands, and overalls all carry the residue of the fish scene into his mourning. Faulkner lets childish logic become the most accurate language available for shock. Source anchors: fish; cut into pieces; running; crying; dust; not-blood on overalls.   </p>
+<p>Analysis: The <code>fish</code>, <code>cut into pieces</code>, and <code>not-blood on overalls</code> matter because Vardaman understands death as material disassembly before he understands it as ritual loss. <code>Running</code> and <code>crying</code> matter because his body reacts faster than any concept can. The <code>dust</code> matters because Faulkner grounds this metaphysical confusion in concrete yard matter, making Vardaman's famous equation of mother and fish arise from labor and slaughter rather than from abstract symbolism — a proof that the child's <a href="//02%20Concepts/Language%20and%20Ideology.html">language</a> stays closer to bodily fact than adult ritual does.   </p>
+<h3 id="dewey-dell-2">Dewey Dell 2</h3>
+<p>Summary: Dewey Dell turns inward again and imagines that Darl could do everything for her if he would, because he knows without being told, while her own problem feels like the world packed inside a tub of guts. The need for help with the pregnancy grows beside Addie's death and cannot be spoken openly. Men appear to her as instruments or failures, and the coming trip suggests access to medicine while also threatening exposure. Her section ties female bodily crisis to silence, secrecy, and dependence on male movement. Source anchors: Darl knows; tub of guts; pregnancy secret; could do everything; trip to town; male dependence.   </p>
+<p>Analysis: <code>Darl knows</code>, the <code>tub of guts</code>, and the <code>pregnancy secret</code> matter because Dewey Dell's fear is inseparable from her sense that knowledge itself is dangerous. <code>Could do everything</code> and <code>male dependence</code> matter because she is trapped between needing male access to the outside world and fearing what male intervention will cost her. The <code>trip to town</code> matters because burial logistics and reproductive desperation become one road for her long before Jefferson appears, her silence and secrecy constituting a gendered <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> that the novel will not let her escape.   </p>
+<h3 id="vardaman-2">Vardaman 2</h3>
+<p>Summary: Vardaman fixates on the coffin being finished, on the idea that they are going to put Addie in it and nail her up, and on the panic that language cannot hold what the box means. He remembers getting shut in the crib and transfers that suffocation to his mother. Cash becomes the immediate target of his questions because Cash made the box. The section pushes grief into literal terror of enclosure, darkness, and nailed wood. Source anchors: coffin finished; nail her up; Cash; shut in the crib; box; suffocation.   </p>
+<p>Analysis: <code>Coffin finished</code>, <code>nail her up</code>, and <code>box</code> matter because Vardaman cannot separate burial custom from violent imprisonment. <code>Cash</code> matters because the craftsman brother becomes, in the child's logic, the one responsible for making death operative. <code>Shut in the crib</code> and <code>suffocation</code> matter because Faulkner shows grief translating itself through <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">remembered bodily fear</a>, not through adult consolations about soul or rest.   </p>
+<h3 id="tull-2">Tull 2</h3>
+<p>Summary: Tull recounts the night rain, the wakefulness, and the general expectation that something bad would happen before morning. The house, the storm, the coffin, and the family all seem suspended in a tense interval between death and departure. Tull watches practical preparations continue under weather pressure and sees the Bundrens as people who somehow attract calamity while refusing simpler alternatives. His section turns local observation into atmosphere, binding rain and burial into one oppressive event. Source anchors: midnight; rain; storm making; wakeful house; coffin; expectation of trouble.   </p>
+<p>Analysis: <code>Midnight</code>, <code>rain</code>, and <code>storm making</code> matter because nature begins to collaborate with the family's disorder. The <code>wakeful house</code> and <code>coffin</code> matter because after Addie's death the farm is no longer domestic space but temporary mortuary and launching point. The <code>expectation of trouble</code> matters because Tull gives the county's common-sense reading: whatever the Bundrens do next will likely be harder and stranger than necessary, with rain and river already acting as <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> on every choice.   </p>
+<h3 id="darl-6">Darl 6</h3>
+<p>Summary: Darl describes Cash working by lantern over the coffin on trestles, the rusted lamp, grease, soot, chips, and boards glowing in the wet dark while the labor continues after death. The scene is almost ceremonial in its attention to tools and surfaces, but the ceremony is handmade, poor, and exhausted. Cash's body and the coffin merge through workmanship, as though building were his way of speaking where others pray or complain. Darl's eye turns nocturnal carpentry into the novel's first sustained image of death labor. Source anchors: lantern on a stump; trestles; coffin boards; soot-smeared chimney; Cash at work; night rain.   </p>
+<p>Analysis: The <code>lantern on a stump</code>, <code>soot-smeared chimney</code>, and <code>night rain</code> matter because Darl makes Cash's labor visible as both degraded and solemn. <code>Trestles</code>, <code>coffin boards</code>, and <code>Cash at work</code> matter because the coffin is never an abstraction; it is built in sweat, bad light, and improvised rural material. The section matters because Faulkner lets craftsmanship become the most durable answer to death in this family, even when that answer is also a form of helplessness — Cash's work operating as the family's most honest <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>, exchanging labor for what words cannot provide.   </p>
+<h3 id="cash-1">Cash 1</h3>
+<p>Summary: Cash speaks in his famous numbered logic about why he made the coffin on the bevel, stressing more surface for the nails, more gripping area, and the practical superiority of his design. His section strips away grief language and turns the burial into carpentry reasoning. The result is both comic and moving because the list is so exact and so clearly a defense against emotional collapse. Cash's mind works by fit, balance, and joinery even while his mother lies dead. Source anchors: bevel; nails; gripping surface; coffin design; numbered reasons; Cash's logic.   </p>
+<p>Analysis: <code>Bevel</code>, <code>nails</code>, and <code>gripping surface</code> matter because Cash experiences burial as a technical problem with solvable properties. The <code>coffin design</code> and <code>numbered reasons</code> matter because method is his shelter against disorder; he keeps emotional chaos outside the sentence by turning it into procedure. <code>Cash's logic</code> matters because Faulkner uses him to show one honest form of Bundren duty, materially useful and emotionally limited at the same time — the bevels converting filial love into a technical <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> of fit and balance.   </p>
+<h3 id="vardaman-3">Vardaman 3</h3>
+<p>Summary: Vardaman condenses grief to the sentence "My mother is a fish," joining Addie's death to the fish he caught, cut, and watched become something else. The line appears after coffin terror, chopping, blood, and incomprehension, so it is less metaphor than desperate identity statement. He has no adult theology with which to process what happened; he only has transformation. In five words Faulkner lets a child's damaged logic become the novel's most famous truth about death and substitution. Source anchors: My mother is a fish; chopped fish; Addie's death; transformation; child logic; no theology.   </p>
+<p>Analysis: <code>My mother is a fish</code>, the <code>chopped fish</code>, and <code>transformation</code> matter because Vardaman does not compare mother and fish from cleverness; he fuses them because both have crossed from animate presence into cut matter. <code>Addie's death</code> and <code>child logic</code> matter because the sentence is exact to the scale at which he can bear reality. <code>No theology</code> matters because Faulkner refuses to correct him; the novel lets this damaged equation stand as more truthful than the pious formulas surrounding the corpse — the child's <a href="//02%20Concepts/Language%20and%20Ideology.html">language</a> favored over the adult's.   </p>
+<h3 id="tull-3">Tull 3</h3>
+<p>Summary: Tull returns with Peabody's team and recounts the practical confusion around moving the wagon, recovering the buckboard, and preparing to start for Jefferson. The spring, the ditch, the overturned vehicle, and the improvised repairs show how the burial trip is already becoming a mechanical hazard before the corpse has gone far. Tull's emphasis remains on what men have to fetch, drag, and hitch while Anse theorizes hardship. The county's labor keeps compensating for Bundren obstinacy. Source anchors: Peabody's team; spring; ditch; buckboard; getting started; Tull helping again.   </p>
+<p>Analysis: <code>Peabody's team</code>, <code>ditch</code>, and <code>buckboard</code> matter because the family's promise immediately spills into public labor and borrowed equipment. The <code>spring</code> and <code>getting started</code> matter because even departure requires rescue operations rather than orderly planning. <code>Tull helping again</code> turns <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> into one of the journey's hidden infrastructures: neighborly work keeps Anse's vow possible while allowing him to narrate himself as the main sufferer.   </p>
+<h3 id="darl-7">Darl 7</h3>
+<p>Summary: Darl tells Jewel, "It's not your horse that's dead," as the family moves deeper into the ruined trip and Jewel's force is directed toward animal, wagon, and coffin at once. Jewel sits rigid, hat soaked, face wooden, and Darl's remark cuts through the immediate object to the larger death everyone is trying not to name. The road, the mud, and the swollen weather close around the wagon while each brother clings to a different version of necessity. Darl's section exposes grief as displaced action and insult. Source anchors: not your horse that's dead; Jewel rigid; soaked hat; mud road; coffin burden; brotherly taunt.   </p>
+<p>Analysis: <code>Not your horse that's dead</code>, <code>Jewel rigid</code>, and <code>brotherly taunt</code> matter because Darl weaponizes truth precisely where Jewel is most invested in displacement. The <code>soaked hat</code> and <code>mud road</code> matter because the material burden of the trip gives Darl's line immediate cruelty; Jewel is already fighting the world physically while Darl keeps naming the hidden wound. The <code>coffin burden</code> matters because Faulkner shows the brothers responding to Addie through entirely different mediums, one through force and one through verbal penetration, the verbal brokering of grief being a form of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>.   </p>
+<h3 id="cash-2">Cash 2</h3>
+<p>Summary: Cash insists the coffin will not tote or ride on a balance unless they do it correctly, returning to leverage, distribution, and the physical laws of hauling Addie's box. Even in crisis his mind stays with weight and center rather than ceremony. The section captures him trying to solve a problem while others bark orders and lose patience. Practical intelligence in this novel often sounds pedantic only because everyone else is rushing toward disaster. Source anchors: tote on a balance; ride on a balance; coffin weight; hauling; Cash insists; others shouting.   </p>
+<p>Analysis: <code>Tote on a balance</code>, <code>ride on a balance</code>, and <code>coffin weight</code> matter because Cash keeps locating catastrophe in ignored mechanics rather than bad luck. <code>Hauling</code> and <code>Cash insists</code> matter because his expertise is exact but politically weak inside the family; he can see what is wrong without being able to stop Anse or Jewel from forcing motion. <code>Others shouting</code> matters because Faulkner places one true craftsman's voice inside a social setting that values urgency and pride over sound method, so his warning never arrives where it could change the outcome — a failure of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </p>
+<h3 id="darl-8">Darl 8</h3>
+<p>Summary: Darl watches the men stoop to lift, sees blood rise and leave faces, and describes the bodily strain around the coffin with the same exactness he brings to death itself. The work of carrying Addie becomes an ugly communal performance, full of command, rage, and physical near-collapse. Jewel's face, the hands beneath the box, and the sense of suffocated effort all turn the family into bearers rather than mourners. The section makes transportation itself look like violence. Source anchors: lifting the coffin; blood in waves; suffocated face; hands under the box; command to pick up; bodily strain.   </p>
+<p>Analysis: <code>Lifting the coffin</code>, <code>hands under the box</code>, and <code>bodily strain</code> matter because Addie's passage is literally made out of male backs and commands, not abstract filial devotion. The <code>blood in waves</code> and <code>suffocated face</code> matter because Darl records burden as damage accumulating in living bodies around the dead one. <code>Command to pick up</code> turns the burial promise into <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, making every step of transport reveal the family hierarchy under stress.   </p>
+<h3 id="vardaman-4">Vardaman 4</h3>
+<p>Summary: Vardaman turns toward townward desire and fantasy, imagining the glass display, the toy, Santa Claus, and the promise that things might reappear next Christmas. The trip is partly burial, partly entry into stores and spectacle he barely understands. Dewey Dell and the adults move through their own urgencies, while Vardaman attaches himself to visible objects and imagined returns. His section shows how Jefferson exists first as shop-window enchantment and childhood misrecognition. Source anchors: going to town; glass display; Santa Claus; next Christmas; Jewel to the barn; child desire.   </p>
+<p>Analysis: <code>Going to town</code>, <code>glass display</code>, and <code>Santa Claus</code> matter because Vardaman experiences the journey through commodities and seasonal fantasy rather than through adult obligation. <code>Next Christmas</code> and <code>child desire</code> matter because he keeps converting irreversible loss into delayed return. <code>Jewel to the barn</code> matters because the family's actual crisis continues at the edge of his attention, showing how children's perception in the novel both misses and preserves truths the adults cannot frame — the boy recoding the trip through the <a href="//02%20Concepts/Language%20and%20Ideology.html">language</a> of toys and holiday promises.   </p>
+<h3 id="darl-9">Darl 9</h3>
+<p>Summary: Darl notes Dewey Dell carrying a basket and a newspaper-wrapped parcel while Jewel goes toward the barn and other family motions gather for departure. Peabody's back and Dewey Dell's secret object register in his vision as clues to motives he cannot fully control. The section is brief but important because Darl keeps catching the hidden errands embedded within the burial trip. For him, every gesture on the farm points beyond what is said aloud. Source anchors: basket; newspaper-wrapped parcel; Dewey Dell; Jewel to the barn; Peabody's back; hidden errand.   </p>
+<p>Analysis: The <code>basket</code>, <code>newspaper-wrapped parcel</code>, and <code>hidden errand</code> matter because Darl's seeing is always social as well as physical; he reads objects as signs of concealed desire. <code>Dewey Dell</code> and <code>Peabody's back</code> matter because the medical and reproductive undercurrents of the novel are already circulating before Jefferson is reached. <code>Jewel to the barn</code> matters because Faulkner keeps braiding separate motives into one family departure, making Darl the main registrar of those overlaps — observation becoming a rival form of knowing to the family's spoken economy, a strain of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>.   </p>
+<h3 id="anse-2">Anse 2</h3>
+<p>Summary: Anse defends his wish that Jewel not bring the horse, claiming respect for Addie and insisting it would not look right for a son to ride beside his dead mother like a circus rider. His language turns public appearance into moral principle and lets him scold Jewel while avoiding harder responsibilities. The section reveals how often Anse uses decorum to mask convenience and control. He frames himself as guardian of propriety while relying on everyone else's effort and property. Source anchors: Jewel's horse; respect for Addie; circus animal; public appearance; Anse's rule; hidden convenience.   </p>
+<p>Analysis: <code>Jewel's horse</code>, <code>respect for Addie</code>, and <code>circus animal</code> matter because Anse translates resentment and dependence into the language of decorum. <code>Public appearance</code> and <code>Anse's rule</code> matter because he governs through what will look right to others, not through what will minimize harm. <code>Hidden convenience</code> matters because the section shows his signature method: moralize a practical preference until it sounds like self-denying duty, morality attaching itself to the rhetoric of <a href="//02%20Concepts/Language%20and%20Ideology.html">public appearance</a> whenever Anse's convenience is at stake.   </p>
+<h3 id="darl-10">Darl 10</h3>
+<p>Summary: Darl sees Jewel riding up the lane fast on the horse, turning into the road while Tull watches from his lot, the mud flying under the hooves. The image is sharp, almost heroic, but Darl frames it as part of the family's exposed procession through county eyes. Jewel's lightness in the saddle contrasts with the wagon's weight and the corpse it carries. The section fixes Jewel as kinetic force: he enters scenes by charging into them. Source anchors: riding up the lane; mud flying; Tull watching; Jewel on horseback; wagon procession; county eyes.   </p>
+<p>Analysis: <code>Riding up the lane</code>, <code>Jewel on horseback</code>, and <code>mud flying</code> matter because Jewel's relation to Addie is repeatedly staged through physical force and speed. <code>Tull watching</code> and <code>county eyes</code> matter because even Jewel's most singular appearances are publicly consumed; the Bundrens cannot separate grief from spectacle. The <code>wagon procession</code> matters because Faulkner uses the contrast between mounted son and coffin wagon to keep exposing different ways of carrying Addie, the community's watching eyes turning private grief into public legibility — an operation of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as spectacle.   </p>
+<h3 id="anse-3">Anse 3</h3>
+<p>Summary: Anse broadens his complaints into a philosophy of hard country, bad roads, and the impossibility of an honest man profiting in this world. He turns every environmental and economic limit into proof that he has been singled out by suffering. The burial trip becomes another example in his long case against geography, labor, and Providence. Faulkner lets him speak until self-pity becomes comic and morally corrosive at once. Source anchors: hard country; honest man; no profit; bad roads; suffering singled out; burial trip as grievance.   </p>
+<p>Analysis: <code>Hard country</code>, <code>honest man</code>, and <code>no profit</code> matter because Anse never narrates conditions neutrally; he uses them to build a theology of self-exemption. The <code>bad roads</code> and <code>burial trip as grievance</code> matter because the promise to Addie keeps being absorbed into his older habit of turning circumstance into personal martyrdom. <code>Suffering singled out</code> matters because Faulkner wants readers to see that Anse's selfishness often arrives clothed in fatalism rather than overt cruelty — <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> drafted as personal enemy.   </p>
+<h3 id="samson-1">Samson 1</h3>
+<p>Summary: Samson sees the Bundrens arrive near sundown, identifies them uncertainly, and records how strange they look from outside: five in the wagon, one on horseback, all pressing on without normal stopping behavior. He and MacCallum read the family as a moving rural spectacle before they know the exact damage already behind and ahead of them. Samson's house offers temporary hospitality, but the section emphasizes first impression, public curiosity, and the visual oddity of the funeral convoy. The Bundrens enter county space as rumor become object. Source anchors: sundown; five in the wagon; one on horseback; Samson's porch; MacCallum; strange procession.   </p>
+<p>Analysis: <code>Sundown</code>, <code>five in the wagon</code>, and <code>one on horseback</code> matter because Samson encounters the family first as form and arrangement rather than inner motive. <code>Samson's porch</code> and <code>MacCallum</code> matter because outsider witness keeps widening the novel's social frame; the trip is never solely a private ordeal. The <code>strange procession</code> matters because Faulkner wants the Bundrens to appear as both pitiable and grotesque from the county's perspective, not just from their own — the county's gaze here beginning the process of public classification that will later decide Darl's fate, an early exercise of communal <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>.   </p>
+<h3 id="dewey-dell-3">Dewey Dell 3</h3>
+<p>Summary: Dewey Dell watches the New Hope sign, the road curving away through trees, and the words "New Hope. 3 mi." as if the landscape itself were announcing a possibility she cannot trust. Addie's death remains present, but Jefferson and abortion keep pulling at her consciousness harder than piety does. The sign becomes a cruel double meaning: burial hope for Anse and the family, bodily hope for her alone. Faulkner lets road language become reproductive desperation. Source anchors: New Hope sign; 3 mi.; curving road; trees; abortion hope; Addie's death beside it.   </p>
+<p>Analysis: The <code>New Hope sign</code>, <code>3 mi.</code>, and <code>curving road</code> matter because Dewey Dell reads geography through desire and panic, not through map sense. <code>Abortion hope</code> and <code>Addie's death beside it</code> matter because the daughter's urgent future sits inside the mother's completed life, making the wagon carry two incompatible female crises at once. The <code>trees</code> matter because the landscape seems to speak in advertisements and distances, turning rural travel into psychological torment — a sign system the novel lets Dewey Dell read more truly than the adults read their own words, evidence for <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>.   </p>
+<h3 id="tull-4">Tull 4</h3>
+<p>Summary: Tull follows after the family and finds them at the levee facing the bridge sagged down into the river, with Anse sitting and looking as though the obstacle might solve itself. The broken bridge, the river, and the stalled wagon convert burial into engineering problem and stubbornness test. Tull sees clearly that what ought to happen is one thing and what Anse will insist on is another. The family's refusal to turn back or choose the safer route prepares the central flood disaster. Source anchors: levee; bridge sagged into the river; stalled wagon; Anse sitting; safer route refused; flood danger.   </p>
+<p>Analysis: The <code>levee</code>, <code>bridge sagged into the river</code>, and <code>flood danger</code> make <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> immediate rather than atmospheric: road, bridge, and river now set the terms under which the burial vow can proceed. <code>Anse sitting</code> and <code>safer route refused</code> matter because indecision in him is never passive; it forces others toward more dangerous labor while preserving his pose of endurance. The <code>stalled wagon</code> matters because Addie's coffin has become a problem of route choice, making stubbornness itself one of the novel's most destructive physical forces.   </p>
+<h3 id="darl-11">Darl 11</h3>
+<p>Summary: Darl explains Jewel's "spell of sleeping." For months the fifteen-year-old is lost in dazed exhaustion — asleep at the supper table, asleep over the milk bucket, the hoe dying in his hands — while Pa calls it laziness and Addie, certain he is not sick, secretly rearranges the household to cover for him. Darl reconstructs the truth from the missing lantern: every night Jewel slips out to clear new ground by lantern light, working himself fleshless to earn a horse. Cash and Darl decode the secret — "Rutting," Cash says, and he refuses to believe it is a girl, because it is the land itself Jewel is wallowing in — and the brothers agree not to tell. The horse arrives from Quick, a rope-bridle descendant of the Texas ponies Flem Snopes auctioned, and Anse explodes that Jewel went behind his back to buy an animal "for me to feed." Jewel answers that the horse will not eat a mouthful of Anse's corn: "I'll kill him first." Addie weeps openly and once more keeps her night vigil beside Jewel, and Darl says that on that day he knew "I knew," as plainly as he knows the secret he will later read in Dewey Dell. Source anchors: sleeping spell; missing lantern; clearing new ground; Mr Quick; Texas ponies; rope bridle; bought it with my money; I'll kill him first; rutting; Addie crying.   </p>
+<p>Analysis: The <code>sleeping spell</code>, <code>missing lantern</code>, and <code>clearing new ground</code> matter because Darl converts local lore — a sick boy, a lazy boy — into a measured secret history, a reconstruction that is the book's most explicit demonstration of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> at work. <code>Rutting</code> and the <code>land</code> matter because Cash's diagnosis gives Jewel's labor its savage content: the horse is bought with the son's own body, an act of <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> that Anse immediately tries to reclassify as theft from the family account. <code>Bought it with my money</code> and <code>I'll kill him first</code> matter because Jewel's independence is staked against Anse's claim that everything belongs to the household; the quarrel here is the first open version of the <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> that will govern the entire journey. <code>Addie crying</code> and the brothers' silence matter because the family survives on what it does not say, and that conspiracy of unspokenness is the friction against which Darl's later truth-telling will break.   </p>
+<h3 id="tull-5">Tull 5</h3>
+<p>Summary: Tull narrates the walk across the flooded bridge. Anse, Dewey Dell, and Vardaman climb out of the wagon so the men can lighten it for the ford, and Tull takes the boy across the sagging, swaying planks while the current climbs the underside and logs spew through the jam. Anse keeps to his refrain — "I give her my word," it "is sacred on me," "It aint no luck in turning back" — even as Tull argues they could lay over a day for the water to fall. The boy's hand in Tull's makes Tull feel led across, as if the child promised a fine place "where Christmas come twice"; and the section ends with Tull watching the wagon swing back toward the ford, Dewey Dell still carrying her lunch-basket and parcel — "They would risk the fire and the earth and the water and all just to eat a sack of bananas" — and resolving to go down and help at the water. Source anchors: walked the bridge; swaying planks; I give her my word; no luck in turning back; log jam; the boy's hand; Christmas twice; bananas; the ford.   </p>
+<p>Analysis: <code>I give her my word</code>, <code>no luck in turning back</code>, and the <code>log jam</code> matter because the vow is here openly tested against the <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> of rising water and collapsing bridge, and Anse's superstition is a magic phrase that can neither lower the river nor justify the risk. The <code>boy's hand</code> and <code>Christmas twice</code> matter because Vardaman supplies, in pure faith, the trust that Anse's rhetoric only claims. <code>Bananas</code> and the <code>lunch-basket</code> matter because the practical promise of town — food, purchase, relief — is what actually pushes the family onto the water; and Tull's exasperated co-operation, lending judgment and labor he never gets credit for, is a working instance of the neighborhood <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> without which the vow would have died at the bridge.   </p>
+<h3 id="darl-12">Darl 12</h3>
+<p>Summary: Darl renders the river as thick, dark, murmuring, yellow, dimpled, and monstrously alive beneath the bridge crossing, giving the flood a strange agency before the wagon enters it. The current seems to speak, and the section slows into near-hypnotic description just before catastrophe. Darl's language does not reduce danger; it magnifies it by making the water seem significant beyond measurement. The crossing becomes a scene of nature reading the family back. Source anchors: thick dark current; yellow surface; murmuring river; bridge crossing; significance; impending catastrophe.   </p>
+<p>Analysis: The <code>thick dark current</code>, <code>yellow surface</code>, and <code>murmuring river</code> matter because Darl turns natural hazard into an active presence that overwhelms human intention. The <code>bridge crossing</code> and <code>impending catastrophe</code> matter because Faulkner wants readers to feel that the disaster is visible before it happens, even if Anse's plan keeps moving forward. <code>Significance</code> matters because Darl's visionary mode gives the flood a kind of judgmental force, as though the environment itself were exposing Bundren folly — an act of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">narrative</a> that makes the flood legible right before it becomes fatal.   </p>
+<h3 id="vardaman-5">Vardaman 5</h3>
+<p>Summary: Vardaman narrates the crossing as chaos: Cash trying, Darl going under, Dewey Dell screaming his name, Vernon moving, Jewel and the horse resisting, and Addie's coffin appearing and disappearing in water and motion. Child syntax turns the wreck into a blur of calls, bodies, and half-seen rescue. The river crossing is for him not one coherent event but a scatter of shouted names and moving objects. Faulkner uses his fractured perception to register disaster at the level of panic rather than overview. Source anchors: Cash trying; Darl under water; Dewey Dell screaming; Jewel and the horse; Addie's coffin; river chaos.   </p>
+<p>Analysis: <code>Cash trying</code>, <code>Darl under water</code>, and <code>Addie's coffin</code> matter because Vardaman catches the exact human stakes of the crossing without imposing adult order on them. <code>Dewey Dell screaming</code> and <code>Jewel and the horse</code> matter because kinship in crisis appears as noise and motion, not shared understanding. The <code>river chaos</code> matters because Faulkner lets the child's perspective preserve the event's sensory violence after Darl's symbolic river language and Tull's practical witness, the flood functioning here as <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> that overrides every family plan.   </p>
+<h3 id="tull-6">Tull 6</h3>
+<p>Summary: Tull later tells Cora how Darl jumped out and Jewel fought the horse while Cash struggled with the wagon, and Cora uses the account to revise her earlier saintly reading of Darl. The section shows how quickly heroism and blame are reassigned after catastrophe. Tull's emphasis stays on what each man actually did under pressure, while Cora keeps moralizing from the sidelines. The family history is now being rewritten in county conversation as much as in memory. Source anchors: Darl jumped out; Jewel fought the horse; Cash struggled; Cora judging again; after the crossing; county retelling.   </p>
+<p>Analysis: <code>Darl jumped out</code>, <code>Jewel fought the horse</code>, and <code>Cash struggled</code> matter because Tull's report puts bodily action against Cora's sentimental theories. <code>Cora judging again</code> matters because outside narration in the novel is unstable and self-correcting, not simply authoritative. <code>After the crossing</code> and <code>county retelling</code> matter because Faulkner shows that family identity is publicly remade after each crisis, often by people who were not inside the danger at all — the retelling becoming a public <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">memory</a> that the truth of the crossing will have to answer to.   </p>
+<h3 id="darl-13">Darl 13</h3>
+<p>Summary: Darl describes Cash lying gray on the ground with eyes closed and hair plastered to his forehead after the river accident, his body already altered by pain and shock. Addie's coffin has been saved, but Cash's leg and stomach have taken the blow. The section lingers on the cost of successful transport: the family preserves the dead at the expense of the living craftsman who built her box. Darl's calm observation makes injury look both intimate and sacrificial. Source anchors: Cash on the ground; gray face; plastered hair; broken leg; Addie's coffin saved; cost of the crossing.   </p>
+<p>Analysis: <code>Cash on the ground</code>, <code>gray face</code>, and <code>broken leg</code> matter because Faulkner converts abstract duty into visible bodily payment. <code>Addie's coffin saved</code> and <code>cost of the crossing</code> matter because the family's fidelity to the burial promise is now inseparable from damage to the son most plainly acting in good faith. <code>Plastered hair</code> matters because Darl's scrutiny preserves Cash's dignity and vulnerability at once, resisting any easy heroic gloss — the vow now plainly visible as <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> laid upon the living.   </p>
+<h3 id="cash-3">Cash 3</h3>
+<p>Summary: Cash returns to balance, insisting again that the wagon arrangement was wrong and that the load would not carry properly unless distributed correctly. Even maimed, he interprets catastrophe through mechanics rather than accusation. The section doubles down on his role as the novel's practical intelligence, one that everyone ignores until the ignored principle becomes disaster. His injured body does not change the terms in which he thinks. Source anchors: balance again; load distribution; broken leg; mechanics; ignored warning; Cash's persistence.   </p>
+<p>Analysis: <code>Balance again</code>, <code>load distribution</code>, and <code>ignored warning</code> matter because Cash's authority comes from demonstrated relation to matter, not from social power. The <code>broken leg</code> and <code>mechanics</code> matter because even his own suffering is processed through causes and structures. <code>Cash's persistence</code> matters because Faulkner keeps returning to his technical voice as a rebuke to Anse's fatalism and the family's repeated substitution of willpower for sound method — the ignored load-distribution warning becoming a textbook failure of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> within the family.   </p>
+<h3 id="cora-3">Cora 3</h3>
+<p>Summary: Cora reflects on Addie, motherhood, religion, and sin, recalling camp meeting language, Brother Whitfield, and the feeling that Addie never submitted fully to saving grace. She treats childbearing as a divine gift Addie failed to understand and reads the Bundren household through a moral framework of acceptance versus hardness. Her section prepares Addie's own monologue by giving the pious public interpretation that Addie herself will later explode. It is the county's religious version of Bundren history. Source anchors: Addie; motherhood; camp meeting; Brother Whitfield; saving grace; Cora's piety.   </p>
+<p>Analysis: <code>Addie</code>, <code>motherhood</code>, and <code>saving grace</code> matter because Cora can only read female suffering through religious vocation. <code>Camp meeting</code> and <code>Brother Whitfield</code> make <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> and <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> the county's sanctioned grammar for judging Addie before Addie can speak for herself. <code>Cora's piety</code> matters because Faulkner positions her as a necessary foil, making the later self-account sharper by first giving the communal version that bodily and sexual facts will undermine.   </p>
+<h3 id="addie-1">Addie 1</h3>
+<p>Summary: Addie speaks from the grave and recounts teaching school, beating children, walking down to the spring to be quiet and hate them, marrying Anse, giving birth to Cash and Darl, and eventually taking Jewel through Whitfield because violation seemed the only honest answer to being used up by words and duty. She distrusts words like love, motherhood, and sin, treats Anse as dead language made flesh, and later bears Dewey Dell and Vardaman as a kind of negative repayment. Her section names the central private facts the rest of the novel circles without mastering: hatred, bodily violation, the affair, and the emptiness of public language. Source anchors: schoolchildren; spring; hatred; Anse; Jewel through Whitfield; words are empty.   </p>
+<p>Analysis: <code>Schoolchildren</code>, the <code>spring</code>, and <code>hatred</code> matter because Addie grounds her inward life in repetitive bodily scenes rather than ideals of nurture. <code>Anse</code> and <code>words are empty</code> turn <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> into the novel's deepest wound: marriage, motherhood, sin, and love operate as social forms that falsify experience. <code>Jewel through Whitfield</code> matters because the son's singularity and ferocity finally receive a hidden origin, turning much of the earlier family tension into the afterlife of Addie's one chosen act.   </p>
+<h3 id="whitfield-1">Whitfield 1</h3>
+<p>Summary: Reverend Whitfield hears that Addie is dying, wrestles with Satan, resolves to confess his sin, and then retreats from confession once he decides God has intervened and removed the necessity. His section is brief, self-dramatizing, and morally cowardly, showing a minister converting fear into providential absolution. The affair that produced Jewel is acknowledged, but responsibility is evaded at the decisive moment. Whitfield's inward rhetoric exposes organized religion's role in the novel as language that protects the speaker more than the truth. Source anchors: Reverend Whitfield; wrestled with Satan; confession; Addie dying; God removed the need; affair with Addie.   </p>
+<p>Analysis: <code>Reverend Whitfield</code>, <code>wrestled with Satan</code>, and <code>confession</code> matter because Faulkner lets clerical inward drama appear as another form of self-serving narration. <code>Addie dying</code> and <code>affair with Addie</code> make <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> morally suspect here: Whitfield's office gives him language for confession but not the courage to let truth alter living relations. <code>God removed the need</code> matters because religious language ratifies cowardice rather than redeeming it.   </p>
+<h3 id="darl-14">Darl 14</h3>
+<p>Summary: Darl reports that on the horse Jewel rode to Armstid's and back with a team, and that Cash had to be laid on top of Addie in the wagon after the accident. Cash vomits over the edge, Vernon comments on the stomach blow, and the burial procession becomes a moving pile of broken living and dead flesh. The family salvages forward motion by stacking son on mother. The section makes the obscenity of the trip unmistakable. Source anchors: Armstid's team; Jewel rode for help; Cash on top of Addie; vomiting over the wagon; Vernon speaking; forward motion anyway.   </p>
+<p>Analysis: <code>Armstid's team</code>, <code>Jewel rode for help</code>, and <code>forward motion anyway</code> matter because progress now depends on emergency improvisation and Jewel's expendable force. <code>Cash on top of Addie</code> and <code>vomiting over the wagon</code> matter because Faulkner stages the trip as literal compression of the living onto the dead. <code>Vernon speaking</code> matters because even at this point practical neighbors can only comment on damage; they cannot force the Bundrens to stop — the wagon now visibly running on the stacked bodies of the family, a literal <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> arrangement.   </p>
+<h3 id="armstid-1">Armstid 1</h3>
+<p>Summary: Armstid watches Anse drink whiskey, eat supper, and bargain for a team on credit while already picking and choosing as though he were a careful buyer instead of a desperate man traveling with a corpse and an injured son. Anse's talent for converting dependence into entitled negotiation appears in full. The section records how outsiders are drawn into financing and sustaining the Bundren journey. Armstid sees enough to know that Anse's passivity is strategic rather than helpless. Source anchors: whiskey; supper; team on credit; Anse bargaining; corpse in the wagon; Armstid watching.   </p>
+<p>Analysis: <code>Whiskey</code>, <code>team on credit</code>, and <code>Anse bargaining</code> matter because Anse's most active energy often appears when he can acquire something without paying full cost. The <code>corpse in the wagon</code> and <code>Armstid watching</code> matter because the obscenity of the scene makes that bargaining sharper, not milder. <code>Supper</code> matters because ordinary hospitality becomes another rural subsidy keeping the burial promise alive while Anse preserves his self-image as victim of fate rather than user of neighbors — Anse's credit-bargaining converting the county's generosity into a ledger in which he always appears owed, a dynamic of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>.   </p>
+<h3 id="vardaman-6">Vardaman 6</h3>
+<p>Summary: Vardaman sees seven buzzards in little tall black circles and calls Darl's attention to them, making the birds into visual prophecy over the wagon. The corpse's condition has become legible in the sky before the family fully admits it on the ground. The section is brief, but it marks the stage when Addie's body begins to announce itself publicly through scavenger behavior. Child witness again catches a truth the adults would rather not phrase. Source anchors: seven buzzards; little black circles; Darl look; sky over the wagon; corpse smell; public sign.   </p>
+<p>Analysis: The <code>seven buzzards</code>, <code>little black circles</code>, and <code>sky over the wagon</code> matter because the environment now records Addie's decomposition in an unavoidable code. <code>Darl look</code> and <code>corpse smell</code> matter because Vardaman needs another witness to certify what he sees but cannot narratively control. The <code>public sign</code> matters because once the birds arrive, the family's private vow is visibly turning into county spectacle and biological fact — the animals acting as the environment's final witness, another face of <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> upon the expedition.   </p>
+<h3 id="moseley-1">Moseley 1</h3>
+<p>Summary: Druggist Moseley notices the barefoot country girl standing blank-faced outside his Mottson store window, "like she was waiting for a sign," then draws out of her that the trouble is the female one and that it has already stopped. He asks where her ma is — "out yonder in the wagon," she says — and refuses outright: he has nothing for her "unless it's a nipple," and advises her to go home and let her pa make Lafe buy a wedding license. His refusal is delivered as moralizing self-portrait — "a respectable druggist, that's kept store and raised a family and been a church-member for fifty-six years in this town" — and as providential counsel: the Lord gave her what she has, "you let Him take it away from you if it's His will." She leaves, and Albert later tells Moseley what happened outside Grummet's hardware: the marshal ordering the wagon out of town, the corpse eight days dead, and the son buying ten cents' worth of cement for the broken leg. Source anchors: Mottson; store window; waiting for a sign; female trouble; Where's your ma; out yonder in the wagon; unless it's a nipple; wedding license; kept store and raised a family; church-member for fifty-six years; Grummet's hardware; cement.   </p>
+<p>Analysis: <code>Moseley</code>, the <code>store window</code>, and <code>Dewey Dell waiting</code> matter because Mottson's commerce first sees her as spectacle and problem rather than patient. <code>Where's your ma</code> and <code>out yonder in the wagon</code> matter because his first remedy is to route her back into the very household the trip meant to escape, confirming that town medicine has no independent answer to her condition. <code>Kept store and raised a family</code> and <code>church-member for fifty-six years</code> matter because his refusal is a performance of respectable credentials, rudimentary decency dressed up as civic and religious standing, rather than care that meets her on her own terms — and his Lord-given counsel shows religious <a href="//02%20Concepts/Language%20and%20Ideology.html">language</a> deployed to leave the situation exactly as it is. The <code>refusal</code> matters because the town reproduces the same male control that made the trip her only chance in the first place, the druggist's paternal moralism standing as a verdict of <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> delivered from behind a counter.   </p>
+<h3 id="darl-15">Darl 15</h3>
+<p>Summary: Darl arrives at a house where Anse wants water and a bucket but resists being beholden, even while the wagon stops in obvious need. The family pauses within sight of town signs, stores, and settlement, but pride and dependency remain tangled. Darl frames the stop as another example of Anse trying to take necessity and turn it into injured dignity. Even thirst and borrowed containers become stages for Bundren self-display. Source anchors: stopping for water; borrow a bucket; Anse not beholden; house by the road; town nearby; wagon pause.   </p>
+<p>Analysis: <code>Stopping for water</code>, <code>borrow a bucket</code>, and <code>wagon pause</code> matter because ordinary need keeps colliding with Anse's performance of proud deprivation. <code>Anse not beholden</code> and the <code>house by the road</code> matter because his rhetoric of independence survives only through other people's supplies. <code>Town nearby</code> matters because even on the edge of Jefferson the family cannot enter civic space cleanly; every practical act remains morally distorted by Anse's vanity — his insistence on not being beholden turning hospitality into an unpayable debt inside the family's <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>.   </p>
+<h3 id="vardaman-7">Vardaman 7</h3>
+<p>Summary: Vardaman walks behind the wagon with Darl, Jewel, and Dewey Dell after Jewel has returned on foot, now without the horse, while Cash rides with his leg fixed in crude fashion. He names siblings one by one as if reassembling family after the river, the buzzards, and the town approach. Enumeration becomes his way of stabilizing a shaken world. The section links Jewel's sacrifice, Cash's injury, and the continued haul toward Jefferson through childish repetition. Source anchors: walking behind the wagon; Jewel came back on foot; no horse; Cash's leg fixed; naming siblings; town approach.   </p>
+<p>Analysis: <code>Walking behind the wagon</code>, <code>Jewel came back on foot</code>, and <code>no horse</code> matter because Vardaman registers loss through changed arrangements of bodies and property. <code>Cash's leg fixed</code> and <code>naming siblings</code> matter because after repeated shocks he uses listing to keep the family thinkable. The <code>town approach</code> matters because Jefferson is near, but his section shows that arrival does not simplify anything; it only gathers the cost of what the road has already taken — listing the family being the child's way of holding on to <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">memory</a> after shock.   </p>
+<h3 id="darl-16">Darl 16</h3>
+<p>Summary: Darl asks Jewel whose son he is while the family remembers Addie under the apple tree and the moonlit farm where secrets gathered around the coffin before departure. The question names what Addie's monologue and Whitfield's confession have already revealed to readers but not to the family in open speech. Darl uses truth as incision. The section binds illegitimacy, memory, and present humiliation together just before the final convulsion of the trip. Source anchors: whose son are you; Jewel; apple tree; moonlight; Addie's hidden history; Darl's incision.   </p>
+<p>Analysis: <code>Whose son are you</code>, <code>Jewel</code>, and <code>Addie's hidden history</code> matter because Darl's most destabilizing power is not clairvoyance alone but his willingness to verbalize what the household survives by leaving unsaid. The <code>apple tree</code> and <code>moonlight</code> matter because the family's past remains spatially present, attached to the yard where Addie first lay in the coffin. <code>Darl's incision</code> matters because truth in this novel is not liberating; it becomes another wound the family cannot incorporate — Darl's question making explicit what the household's <a href="//02%20Concepts/Language%20and%20Ideology.html">language of family</a> exists to keep buried.   </p>
+<h3 id="vardaman-8">Vardaman 8</h3>
+<p>Summary: Vardaman remembers Addie under the apple tree, hears her inside the wood when Darl tells him to put his ear close, and cannot tell exactly what she is saying. The coffin still seems inhabited and audible to him. The cat, the moon, and the wood all turn the yard into a haunted acoustic space. His section makes burial feel impossible because listening defeats closure. Source anchors: apple tree; put your ear close; hear her inside the wood; cat jumps down; moon; coffin not silent.   </p>
+<p>Analysis: The <code>apple tree</code>, <code>hear her inside the wood</code>, and <code>coffin not silent</code> matter because Vardaman refuses the dead body's reduction to object. <code>Put your ear close</code> matters because Darl collaborates in this uncanny experience, deepening both intimacy and disturbance. The <code>cat jumps down</code> and <code>moon</code> matter because Faulkner surrounds the scene with ordinary nocturnal details, making haunting arise from the exact farm world rather than from gothic excess — the coffin that will not go silent being the purest figure of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">unfinished memory</a> in the novel.   </p>
+<h3 id="darl-17">Darl 17</h3>
+<p>Summary: Darl sees Jewel materialize in the doorway when the barn burns, lean and furious in the glare, instantly reading that Darl has set the fire. The scene stages Darl's desperate attempt to halt the journey by destroying barn, coffin, and corpse together, and Jewel's equally desperate counterforce as he rescues the wagon. Fire, doorway, and disbelief replace river and mud as the new medium of catastrophe. The section makes clear that Darl's lucidity has turned into action against the family's own logic of duty. Source anchors: barn fire; doorway glare; Jewel sees Darl; furious disbelief; rescue attempt; stop the journey.   </p>
+<p>Analysis: The <code>barn fire</code>, <code>doorway glare</code>, and <code>Jewel sees Darl</code> matter because the novel's hidden conflict finally becomes open combat between two brothers' answers to Addie's burial. <code>Furious disbelief</code> and <code>rescue attempt</code> matter because Jewel's commitment is still material and immediate, while Darl tries to end meaning through destruction. <code>Stop the journey</code> matters because Faulkner makes arson the logical outcome of a trip that has become unbearable yet socially unstoppable — arson becoming Darl's desperate attempt to close the account book of the burial <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> on terms the family refuses.   </p>
+<h3 id="vardaman-9">Vardaman 9</h3>
+<p>Summary: Vardaman says he went to find where they stay at night and saw the aftermath of the burning barn, with red swirling up, the barn no longer a barn, and the adults asking where Darl had gone. He witnesses structure turning into ruin and private suspicion turning into public inquiry. The child's perception of the barn sinking and rising captures the unreality of fire better than adult narrative would. Darl's act enters family history through Vardaman's bewildered eye. Source anchors: burning barn; red swirling up; where is Darl; barn no longer a barn; night search; Vardaman saw it.   </p>
+<p>Analysis: <code>Burning barn</code>, <code>red swirling up</code>, and <code>barn no longer a barn</code> matter because Vardaman records destruction as ontological change, not just property loss. <code>Where is Darl</code> and <code>night search</code> matter because the family instantly moves from rescue to internal accusation. <code>Vardaman saw it</code> matters because the child becomes unwilling witness whose perception will help deliver Darl to Jackson later, even though he barely understands the act he saw — his blinded retelling hardening into a record that helps <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> classify Darl as mad.   </p>
+<h3 id="darl-18">Darl 18</h3>
+<p>Summary: Darl narrates the approach to Jefferson through signs, stores, patent medicine ads, cafes, garages, and diminishing mileboards until town becomes an accumulation of commercial surfaces around the wagon. After all the rural ordeal, entry into civic space does not purify the journey; it makes it more glaring and public. The Bundrens arrive carrying rot, injury, scandal, and exhausted determination straight into the marketplace. Darl treats town as another language of signs that cannot hide what the wagon contains. Source anchors: signs for town; patent medicine; cafes and garages; diminishing mileboards; Jefferson approach; wagon entering commerce.   </p>
+<p>Analysis: The <code>signs for town</code>, <code>patent medicine</code>, and <code>cafes and garages</code> matter because Jefferson first appears as commodity language rather than civic dignity. The <code>diminishing mileboards</code> and <code>Jefferson approach</code> matter because arrival has been imagined for so long that the visual countdown itself becomes oppressive. <code>Wagon entering commerce</code> matters because Faulkner makes the Bundrens carry the raw material of death and private shame into a space organized by buying, selling, and public display, commercial signage becoming the final <a href="//02%20Concepts/Language%20and%20Ideology.html">language</a> the family has to pass through on the way to its reckoning.   </p>
+<h3 id="cash-4">Cash 4</h3>
+<p>Summary: Cash explains that there was nothing else to do but send Darl to Jackson once Gillespie knew about the fire and could sue, and once the family needed legal and practical closure. He accepts the choice in his usual measured, material way, without melodrama. The section matters because it translates fratricidal betrayal into necessity, lawsuit avoidance, and family continuation. Cash's calmness is more devastating than open grief because he knows exactly what is being sacrificed. Source anchors: send Darl to Jackson; Gillespie; lawsuit threat; nothing else to do; family necessity; Cash's calm explanation.   </p>
+<p>Analysis: <code>Send Darl to Jackson</code>, <code>Gillespie</code>, and <code>lawsuit threat</code> matter because the family justifies institutional violence through property damage and local law rather than through Darl's suffering alone. <code>Nothing else to do</code> and <code>family necessity</code> matter because Cash's voice shows how practical reason can ratify moral abandonment when options have been narrowed by prior decisions. <code>Cash's calm explanation</code> matters because Faulkner lets the most trustworthy brother endorse the betrayal, making it feel socially inevitable rather than emotionally correct — the threatened lawsuit showing how property damage and civil law give the family's decision its institutional <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>.   </p>
+<h3 id="peabody-2">Peabody 2</h3>
+<p>Summary: Peabody hears that Cash's leg has been packed in raw cement by Anse's people and erupts in disgust, comparing such treatment to mule doctoring and condemning the ignorance that would do this to a man already broken. He reads the crude repair as the final proof of Bundren incompetence under pressure. The burial trip has now produced a second medical crisis after Addie's death, and Peabody can only curse after the damage. His section is the doctor's epilogue on preventable injury. Source anchors: raw cement; Cash's leg; mule doctoring; Peabody furious; preventable injury; Bundren incompetence.   </p>
+<p>Analysis: <code>Raw cement</code>, <code>Cash's leg</code>, and <code>preventable injury</code> matter because the family's devotion to motion keeps turning practical improvisation into bodily harm. <code>Mule doctoring</code> and <code>Peabody furious</code> matter because the doctor's crude language names a real degradation: human care has fallen below even proper veterinary judgment. <code>Bundren incompetence</code> matters because Faulkner closes the medical line of the novel by showing that ignorance and stubbornness have done nearly as much violence as flood or fire — the doctor's fury serving as the profession's final verdict, a last assertion of <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> against the family's homemade medicine.   </p>
+<h3 id="macgowan-1">MacGowan 1</h3>
+<p>Summary: In the Jefferson drugstore, clerk Skeet MacGowan — put on alert by the boy Jody of a waiting country girl — stages a predatory joke in place of treatment. He passes himself off as the doctor, decodes her unspoken problem ("something in your belly you wish you didn't have"), refuses her ten dollars as too small a price for his "knowledge and skill," feeds her a turpentine-smelling mixture, tells her the "operation" will not hurt ("Ever hear about the hair of the dog?"), and schedules her for ten o'clock. When she returns he locks the store, hands over capsules packed with talcum powder, and leads her down into the cellar. His narration never drops its jaunty, self-congratulating tone, so the episode reads as anecdote from inside and violation from outside. Source anchors: MacGowan; Jody; prescription case; female trouble; ten dollars; turpentine; hair of the dog; capsules; talcum powder; cellar.   </p>
+<p>Analysis: <code>MacGowan</code>, the <code>prescription case</code>, and the <code>ten dollars</code> matter because the trip's last hope turns into supply-chain fraud: Jefferson is the final, most orderly gatekeeping in the economy that has run on Dewey Dell's body all along, an ugly settlement of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> at the county seat. The <code>turpentine</code>, <code>hair of the dog</code>, and <code>talcum powder</code> matter because MacGowan's authority is manufactured language — doctor, medicine, operation are labels worn like a costume, and the section is the book's clearest proof that civic <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> can be counterfeited exactly where it claims to help. <code>Skeet's</code> tone of narration matters for <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: the clerk's jesting voice shows how a community's words can absorb cruelty into routine.   </p>
+<h3 id="vardaman-10">Vardaman 10</h3>
+<p>Summary: Vardaman reaches Jefferson at night, seeing dark stores, courthouse lights in the trees, the clock face, and the town as a place where illumination perches outside rather than within the buildings. He experiences arrival through light, windows, and the strange roosting cityscape rather than through legal or burial completion. The town is beautiful and alien at once. After the whole journey, Jefferson is still grasped first as spectacle by the child. Source anchors: dark stores; courthouse lights; trees; clock face; Jefferson at night; arrival as spectacle.   </p>
+<p>Analysis: <code>Dark stores</code>, <code>courthouse lights</code>, and <code>clock face</code> matter because Vardaman receives Jefferson as image, not resolution. The <code>trees</code> and <code>arrival as spectacle</code> matter because even the county seat looks unstable, its lights perched like living things outside official solidity. <code>Jefferson at night</code> matters because Faulkner delays closure again; the destination becomes another uncanny environment rather than a simple end to movement — the nighttown lights and the repeated chant that Darl is his brother registering how the child now holds the family together through <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">repeated testimony</a>.   </p>
+<h3 id="darl-19">Darl 19</h3>
+<p>Summary: Darl has gone to Jackson, laughing as two men in mismatched coats put him on the train while heads turn like owls along the car. The section is narrated from after his removal, so Darl's voice persists even as the family has declared him mad. His laughter, the train, and the car full of watchers transform institutional commitment into public theater. The brother who saw too much is finally carried away by another vehicle, under another gaze. Source anchors: gone to Jackson; laughing on the train; mismatched coats; heads like owls; two men escorting him; public theater of madness.   </p>
+<p>Analysis: <code>Gone to Jackson</code>, <code>laughing on the train</code>, and <code>two men escorting him</code> matter because the novel refuses to let Darl's removal appear clinical or humane; it is another spectacle of transport. <code>Mismatched coats</code> and <code>heads like owls</code> matter because institutional authority looks shabby and voyeuristic rather than noble. The <code>public theater of madness</code> makes <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> punitive: the community manages unbearable truth by labeling Darl and exporting him to Jackson.   </p>
+<h3 id="dewey-dell-4">Dewey Dell 4</h3>
+<p>Summary: Dewey Dell's final monologue is a short, brutal scene over the new grave. As her father sees the ten dollars, she protests that it is "not my money," that it is "Cora Tull's money," "Mrs Tull's," earned from sold cakes; but Anse insists it was the Sunday clothes in her package, and plays the injured patriarch — "My own daughter accuses me of being a thief"; "the daughter of my dead wife, calls me a thief over her mother's grave" — swearing he would pay it back with the clincher that "Addie. It was lucky for you you died, Addie." She cannot name its purpose, can only repeat that it is not hers, and the section closes on the stripped fact: "He took the money and went out." The pregnancy stays unresolved, and the girl who reached town for a remedy is left, by her own father, without the money and without words. Source anchors: He saw the money; It's not my money; Cora Tull's money; Mrs Tull's; sold the cakes; the daughter of my dead wife; calls me a thief over her mother's grave; a loan; lucky for you you died Addie; He took the money and went out.   </p>
+<p>Analysis: <code>It's not my money</code>, <code>Cora Tull's money</code>, and <code>sold the cakes</code> matter because the ten dollars were never hers to begin with — they came from another woman's baking income — and every attempt to say so is overridden. The father's refrain, <code>calls me a thief over her mother's grave</code> and the self-excusing "a loan" he claims he could repay, matter because the novel's final seizure does not happen in the Jefferson marketplace but inside the family itself, at the graveside, where the burial vow's <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> completes its work: sacrifice flows to Anse, and only he leaves the scene with anything. The closing fact, <code>He took the money and went out</code>, matters because Faulkner ends Dewey Dell's line not with confession or medicine but with plain dispossession — no money, no language, no remedy.   </p>
+<h3 id="cash-5">Cash 5</h3>
+<p>Summary: Cash closes the novel by recalling the stop for shovels, the graphophone playing in the house, Jewel's insistence that Cash be taken to Peabody, and Anse's final return with the borrowed tools, a new set of teeth, and the woman he introduces as Mrs. Bundren. The burial is complete, Darl is gone, Dewey Dell is cheated, Cash is crippled, and Anse converts the journey into remarriage and dental improvement. The graphophone and the new wife make the ending grotesquely domestic again, but on terms that expose the whole trip as partly a vehicle for Anse's appetite. Source anchors: shovels; graphophone; take Cash to Peabody; new teeth; Mrs. Bundren; journey complete.   </p>
+<p>Analysis: <code>Shovels</code>, <code>graphophone</code>, and <code>journey complete</code> matter because the novel ends by reducing enormous suffering back to household routine and borrowed objects, refusing any grand tragic closure. <code>Take Cash to Peabody</code> and <code>new teeth</code> matter because the living son's real need is subordinated, once again, to Anse's acquisition. <code>Mrs. Bundren</code> matters because Faulkner's final stroke turns the burial promise into bitter revelation: Anse has survived the road not purified by duty but rewarded in the very petty, bodily ways the novel has taught us to distrust in him — the graphophone, shovels, and new teeth closing the journey as a settlement of debts in which only Anse comes out ahead, the final irony of the book's <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The count</strong>: fifty-nine monologues; Darl speaks nineteen, more than any other narrator.   </li>
+<li><strong>"My mother is a fish"</strong> — Vardaman's equation of his chopped catch with Addie, the novel's most quoted line.   </li>
+<li><strong>The bevel</strong>: Cash builds the coffin "on the bevel" so weight is distributed and he justifies the design as more surface for the nails — his defense, and his love-language.   </li>
+<li><strong>"It aint on a balance"</strong> — Cash's repeated diagnosis of the doomed crossing and of the family's whole method.   </li>
+<li><strong>Jewel's horse</strong>: earned by a summer of clearing new ground by lantern for Quick; "Rutting," Cash calls it — the land, not a woman; a descendant of the Texas ponies Flem Snopes auctioned.   </li>
+<li><strong>"He wont never eat a mouthful of yours"</strong> — Jewel's vow over the horse; "I'll kill him first."   </li>
+<li><strong>The crossing</strong>: a log reared "like Christ"; the mules roll over stiff-legged; Cash's leg is taken and packed later in raw cement on the wagon.   </li>
+<li><strong>The bridge</strong>: sagged into the river, only the two ends in sight; Tull crosses holding Vardaman's hand, feeling led to a place "where Christmas come twice."   </li>
+<li><strong>New Hope 3 mi.</strong> — the road sign Dewey Dell reads as private hope for a cure she cannot name.   </li>
+<li><strong>Seven buzzards</strong> in little black circles over the wagon — Vardaman's count as the body begins to announce itself.   </li>
+<li><strong>The burned barn</strong>: Darl sets Gillespie's barn on fire to stop the trip; Vardaman witnesses it; the lawsuit threat becomes the legal basis for the commitment.   </li>
+<li><strong>"Send Darl to Jackson"</strong> — the family's legal and moral settlement; on the train Darl laughs and laughs ("Yes yes yes yes yes").   </li>
+<li><strong>MacGowan's "medicine"</strong>: turpentine mixture, talcum-powder capsules, and a ten-dollar "operation" that ends in the drugstore cellar.   </li>
+<li><strong>Anse's settlement</strong> (final scene): Jewel spots the change first — "He got them teeth" — and pa presents the new wife: "Meet Mrs Bundren." Both appear only after the grave is filled and the borrowed shovels are returned; the editors' later discussion question glosses the teeth as the "new teeth" Anse gains at the end.   </li>
+<li><strong>"If ever was such a misfortunate man"</strong> — Anse's self-pitying refrain even as the actual misfortunes fall on Cash, Darl, and Dewey Dell.   </li>
+<li><strong>The toolbox</strong>: Cash's saw, hammer, chalk-line, rule, square, and plane are recovered from the river one by one after the crossing — a scene of the family literally fishing its craft back out of the flood.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/A Fable.html">a fable</a></li>
+	<li><a class="backlink" href="//01 Books/Absalom, Absalom!.html">absalom, absalom!</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A232506578769036084101440001977595960326{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D232506578769036084101440001977595960326{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B232506578769036084101440001977595960326{level}" level="{level}" note_temp_id="232506578769036084101440001977595960326" onclick="window.ObsHtmlGraph.run(this, '232506578769036084101440001977595960326', 'as i lay dying');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C232506578769036084101440001977595960326{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

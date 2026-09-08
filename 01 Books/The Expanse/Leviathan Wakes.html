@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="leviathan wakes">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'leviathan wakes';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=leviathan wakes" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="leviathan-wakes">Leviathan Wakes</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Leviathan Wakes</code> is the opening volume of <a href="//04%20Series/The%20Expanse.html">The Expanse</a>. It establishes the series' core political geometry, the Rocinante crew's founding trauma, and the protomolecule as the force that turns ordinary strategic rivalry into species-level crisis.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>The novel runs two braided plots that eventually collapse into the same disaster. On one side, James Holden begins as an idealistic executive officer on an aging ice hauler and becomes an unwilling public actor after the destruction of the <em>Canterbury</em>. His instinct is to expose information immediately, but the book repeatedly shows that truth without strategic framing can still act like a weapon. On the other side, Detective Joe Miller begins as a compromised station cop on Ceres, taking what should be a politically managed missing-person case. His search for Julie Mao grows from routine assignment into obsession, then into moral commitment, then finally into a strange kind of devotion that becomes decisive at Eros.   </p>
+<p>The novel's structure matters. Holden sees the system from the outside: ship to ship, navy to navy, broadcast to broadcast. Miller sees it from the inside: dock records, gang pressure, station poverty, administrative corruption, and the psychological distortions of life in the Belt. Their two narratives are not simply different viewpoints on the same event. They are two different epistemologies. Holden believes openness will purify events. Miller believes institutions lie by default and that only pattern-recognition, intuition, and persistence can uncover truth. The protomolecule plot punishes both assumptions. Transparency triggers escalation. Cynicism alone cannot imagine the scale of what is coming.   </p>
+<p><code>Leviathan Wakes</code> is also a novel about infrastructure. Water haulers, docking logs, air recyclers, cheap pressure suits, riot gear, station spin, drive plumes, and comm discipline are not background texture. They are the medium through which power operates. Earth and Mars dominate because they control force and industrial depth. The Belt survives because it moves resources while living in a permanent condition of scarcity. Protogen exploits that asymmetry by using Belter populations as disposable experimental material. The book's horror comes from the fact that the conspiracy does not begin with a supernatural force; it begins with an elite corporate willingness to treat frontier populations as laboratory matter.   </p>
+<p>By the end, the personal and systemic scales lock together. Julie Mao, the missing heiress at the center of Miller's search, becomes the human interface through which the protomolecule redirects Eros. Miller's love, guilt, projection, and empathy become unexpectedly strategic assets. Holden's moral stubbornness prevents easy absorption into anyone else's agenda, but it also leaves him vulnerable to manipulation. Fred Johnson emerges as a transitional statesman: more responsible than the radicals, more dangerous than the idealists, and keenly aware that the Belt now possesses information powerful enough to reorder the system.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li>James Holden: wants to act ethically in real time, distrusts secrecy, and repeatedly mistakes moral sincerity for political safety.   </li>
+<li>Naomi Nagata: combines technical brilliance with social intelligence; she is often the first person on the crew to grasp second-order consequences.   </li>
+<li>Amos Burton: operates with extreme directness, practical loyalty, and a violence threshold calibrated to immediate survival rather than abstract law.   </li>
+<li>Alex Kamal: stabilizes the crew through competence, humor, and professional focus; the pilot seat is often where chaos becomes navigable.   </li>
+<li>Detective Josephus Miller: begins detached and self-eroding, then latches onto Julie as a way to recover purpose, identity, and an object worthy of absolute commitment.   </li>
+<li>Julie Mao: idealistic, rebellious, and politically serious; she is not merely a victim or clue but the person whose choices place her at the center of the conspiracy.   </li>
+<li>Fred Johnson: seeks to convert Belter grievance into durable institutional power while preserving enough plausibility to negotiate with Earth and Mars.   </li>
+<li>Dresden and Protogen: embody cold instrumental rationality, treating atrocity as a justified cost of accelerated species adaptation.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/The%20Expanse.html">The Expanse</a>: introduces the Rocinante crew, Fred Johnson's role, and the Earth-Mars-Belt triad that governs the early series.   </li>
+<li><a href="//05%20Characters%20and%20Entities/James%20Holden.html">James Holden</a>: the idealist whose broadcasts and moral stubbornness drive the plot.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Rocinante Crew</a>: the Canterbury survivors who become the Rocinante's found family.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">Protomolecule and Ring Network</a>: the Phoebe artifact that turns strategic rivalry into species-level crisis.   </li>
+<li><a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA and Belt Political Identity</a>: the Belt's contested self-image, from Anderson Dawes to Fred Johnson.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: the Holden-Miller dispute over disclosure, secrecy, and escalation.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Star Helix, the OPA, and Mars competing to define order.   </li>
+<li><a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>: Ceres, Eros, and Tycho as the material base of the conflict.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>Information release as escalation, not neutral disclosure.   </li>
+<li>Colonial extraction and the politics of life-support dependence.   </li>
+<li>Corporate experimentation untethered from any moral community.   </li>
+<li>The difference between justice, revenge, and preemptive necessity.   </li>
+<li>Found family under conditions of pursuit, grief, and improvisation.   </li>
+<li>Human contact with the alien mediated through contamination, translation failure, and embodiment.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: Holden's broadcast, Miller's pattern-reading, Ceres rumor cascades, Protogen secrecy, and Eros coordination failures make information release an active political force rather than neutral disclosure.   </li>
+<li><a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>: Ice hauling, water dependence, station reservoirs, air, and Belter life-support systems make resource movement the material basis of the Earth-Mars-Belt order.   </li>
+<li><a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>: Ceres, the Belt, Tycho, and Eros show frontier life as dependence, improvisation, local violence, and mediated sovereignty rather than open emptiness.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Earth, Mars, Star Helix, Fred Johnson's OPA, and Protogen all compete to define order through ships, police, surveillance, legal authority, and control of habitats.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: The Canterbury attack, the Donnager battle, Eros, and the final containment problem test who can act under uncertainty without turning partial knowledge into system-wide disaster.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: Julie, Miller, Holden, Dresden, and the Belter victims make the novel a dispute over which lives count as obligations and which can be written off as experiment, collateral damage, or strategy.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="prologue-julie">Prologue: Julie</h3>
+<p>Summary: Julie Mao endures eight days in a storage locker after armed boarders seize the <em>Scopuli</em>, living on stale suit water while they torture her crew. When the ship falls silent, she leaves hiding and searches its empty decks, finding signs of a hurried evacuation rather than rescue. The sealed engineering deck and its organic contamination reveal that the attackers lost control of something aboard their own ship. Source anchors: Julie; Scopuli; locker; water; engineering.   </p>
+<p>Analysis: Julie Mao enters as an active survivor whose discipline buys her time but cannot restore control over the <em>Scopuli</em>, a freighter linked to <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">the OPA's courier network</a>. Her passage from a human-made prison to the altered engineering deck changes the threat from deliberate kidnapping to <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">alien biological transformation</a>, while her search for the crew makes that shift a consequence of loyalty rather than curiosity alone.   </p>
+<h3 id="chapter-one-holden">Chapter One: Holden</h3>
+<p>Summary: The <em>Canterbury</em> hauls ice from Saturn to the Belt, placing Holden and the crew inside the material system that keeps millions alive. Holden manages routine work, his strained affair with Ade, and Captain McDowell's reluctance to lose time on an uncertain distress call. Once Rebecca confirms the call comes from the <em>Scopuli</em>, Holden accepts command of the rescue mission despite McDowell's warning not to play hero. Source anchors: Canterbury; Ade; McDowell; Scopuli; Belt.   </p>
+<p>Analysis: The <em>Canterbury</em> makes <a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a> operational: a delayed water hauler affects both company margins and the inhabited stations that depend on its ice. <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> decision to answer the <em>Scopuli</em> call grows from law, conscience, and his need to act like the person he believes himself to be; McDowell's warning identifies the unresolved tension between rescue duty and responsibility for his own crew in the <a href="//02%20Concepts/Frontier%20Systems.html">frontier economy</a>.   </p>
+<h3 id="chapter-two-miller">Chapter Two: Miller</h3>
+<p>Summary: Miller translates a witness's Belt creole while Havelock's impatience shows how poorly the Earther reads Ceres. At Star Helix, Miller reports that major criminal organizations are withdrawing personnel even as ordinary crime falls, but Captain Shaddid orders him to set the pattern aside. She instead gives him a private contract to locate Juliette Andromeda Mao and return the shareholder's daughter to Earth without publicity. Source anchors: Ceres; Havelock; Shaddid; Star Helix; Juliette Andromeda Mao.   </p>
+<p>Analysis: Miller's fluency in Ceres speech and criminal rhythms is a practical investigative skill for reading the station's <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>, yet Captain Shaddid treats his unexplained pattern as less valuable than a politically sensitive retrieval. The Juliette Andromeda Mao assignment therefore begins as corporate service rather than justice, establishing how <a href="//02%20Concepts/State%20Capacity.html">Star Helix authority</a> follows contracts and class power as much as evidence.   </p>
+<h3 id="chapter-three-holden">Chapter Three: Holden</h3>
+<p>Summary: Holden takes Naomi, Amos, and Shed from the <em>Knight</em> to the drifting <em>Scopuli</em>, where the crew finds a breached hull, no survivors, and equipment stripped with disciplined care. Naomi's salvage mech provides access while Amos searches the ship's computers and Holden examines the communications station. They discover that the distress beacon is a battery-powered transmitter planted apart from the ship's own systems, proving that the call was bait. Source anchors: Knight; Scopuli; Naomi; Amos; transmitter.   </p>
+<p>Analysis: The false distress beacon turns <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> rescue mission into a prepared ambush: someone weaponized a humanitarian obligation, exploiting the code of aid that organizes shipping in the <a href="//02%20Concepts/Frontier%20Systems.html">Belt</a>. Naomi Nagata and <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Amos Burton</a> also show the emerging crew's division of labor, because mechanical access, computer inspection, and command judgment produce the conclusion together rather than through Holden alone.   </p>
+<h3 id="chapter-four-miller">Chapter Four: Miller</h3>
+<p>Summary: Hasini summons Miller to the Blue Frog after Havelock, worn down by anti-Earther hostility, arrives looking for a fight. Miller walks him through the port district and explains that residents see Earth in Havelock before they see a capable detective. Drinks with other officers restore some of Havelock's footing, but Captain Shaddid's emergency recall interrupts the evening when Holden's broadcast reaches Ceres. Source anchors: Blue Frog; Hasini; Havelock; Ceres; Shaddid.   </p>
+<p>Analysis: The Blue Frog episode shows Miller maintaining order through favors, social interpretation, and face-saving rather than formal force, the informal governance of a station where the <a href="//02%20Concepts/State%20Capacity.html">formal security contract</a> only partially applies. Dmitri Havelock's competence cannot overcome the identity imposed on him by Ceres, where his body marks him as an Earther in the eyes of the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">Belt's political community</a>; Miller can temporarily translate between groups, but the emergency recall moves that local tension into a system-wide crisis.   </p>
+<h3 id="chapter-five-holden">Chapter Five: Holden</h3>
+<p>Summary: The <em>Knight</em> races toward the <em>Canterbury</em> as a stealth warship launches torpedoes against the hauler. Captain McDowell's crew attempts an emergency burn, but the damaged drive cannot save the ship, and Holden watches Ade and everyone aboard die. Alex identifies the attackers' heat-sink and radar-absorbing technology as military-grade, and an MCRN serial number on the planted battery leads Holden to broadcast the evidence and implicate Mars. Source anchors: Canterbury; Knight; Ade; Alex; MCRN.   </p>
+<p>Analysis: The MCRN battery is genuine evidence, but it proves only the origin of one component, not the identity of the attackers, and the stealth technology itself points at the <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Martian military-industrial complex</a>. <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> converts that partial clue into a public accusation while still in shock from the <em>Canterbury</em>'s destruction, demonstrating how <a href="//02%20Concepts/Information%20and%20Coordination.html">truthful data can create a false causal story</a> when grief and urgency collapse the distinction between evidence and conclusion.   </p>
+<h3 id="chapter-six-miller">Chapter Six: Miller</h3>
+<p>Summary: Miller tells Havelock that Holden's broadcast has effectively declared war on Mars for the Belt, then returns to a Star Helix force short of riot equipment. At the Ceres docks, he faces a mob forming around a fatal beating and disables the killer with a sniper rifle. Miller breaks the crowd's momentum by arguing that every Belter arrested, crippled, or killed now weakens them for the conflict that may come later. Source anchors: Holden; Ceres; Havelock; Shaddid; OPA.   </p>
+<p>Analysis: Ceres's missing riot gear forces <a href="//02%20Concepts/State%20Capacity.html">Star Helix</a> from crowd control toward lethal SWAT tactics just as public fear spikes, showing how thin the station's coercive capacity really is. Miller's speech to the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a> sympathizer succeeds because he frames restraint as service to the Belt rather than obedience to police, proving that authority on the frontier only works when paired with a political language the crowd accepts.   </p>
+<h3 id="chapter-seven-holden">Chapter Seven: Holden</h3>
+<p>Summary: The <em>Knight</em> survivors grieve in cramped quarters while the acceleration drugs wear off and debate where they can safely go. Pur'n'Kleen orders Holden to cooperate with the <em>Donnager</em>, and Captain Yao demands silence, but Fred Johnson separately offers OPA protection. Holden chooses the Martian rendezvous and orders Fred's message erased; the chapter ends when Alex detects six unidentified ships burning to intercept them first. Source anchors: Knight; Donnager; Naomi; Alex; Mars.   </p>
+<p>Analysis: Holden tries to preserve lawful procedure by accepting the <em>Donnager</em>'s authority, even though the same authority threatens to treat his crew as suspects. Fred Johnson's offer creates an alternative alliance with the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a>, but erasing it while continuing toward Mars exposes Holden's contradictory position: he wants the protection of <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Martian military institutions</a> without surrendering the <a href="//02%20Concepts/Information%20and%20Coordination.html">information</a> that may protect him from those same institutions.   </p>
+<h3 id="chapter-eight-miller">Chapter Eight: Miller</h3>
+<p>Summary: OPA broadcasts celebrate resistance while Miller and Havelock discuss Havelock's decision to leave Ceres for a Protogen job on Ganymede. Miller searches Julie Mao's apartment and finds a disciplined life: jiu-jitsu awards, few possessions, the <em>Razorback</em>, and messages showing a breach with her parents. Her father's last warning says the Belt is about to become unsafe, giving the retrieval case a specific connection to the widening crisis. Source anchors: Julie Mao; Razorback; Havelock; Protogen; OPA.   </p>
+<p>Analysis: Julie Mao's apartment contradicts the spoiled-heiress premise of Miller's assignment: her sparse possessions and jiu-jitsu record show chosen discipline, while the <em>Razorback</em> messages document political independence within the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">Belt's resistance politics</a>. The warning from her father is most important because it predates open war, implying that a <a href="//02%20Concepts/Commodity%20Systems.html">corporate family</a> like the Maos possessed privileged knowledge rather than ordinary parental anxiety.   </p>
+<h3 id="chapter-nine-holden">Chapter Nine: Holden</h3>
+<p>Summary: The unidentified ships continue toward the <em>Knight</em> while Holden documents the pursuit for the approaching <em>Donnager</em>. Fred Johnson sends a tightbeam offer of help and evidence that Havelock is alive, forcing the crew to weigh OPA sanctuary against the danger of reversing course. Alex explains that any turn would look hostile and still leave them exposed, so Holden keeps the Martian rendezvous while Naomi scrubs Fred's message. Source anchors: Knight; Donnager; Fred; Naomi; Alex.   </p>
+<p>Analysis: Fred Johnson's private message gives Holden useful intelligence but also material the Martians could interpret as collaboration, showing how <a href="//02%20Concepts/Information%20and%20Coordination.html">communication</a> itself becomes a liability. Alex Kamal's flight calculation, not Holden's moral preference, closes off the apparent choice: orbital momentum makes political neutrality impossible because every course change can be read as allegiance by the <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">armed observers</a>.   </p>
+<h3 id="chapter-ten-miller">Chapter Ten: Miller</h3>
+<p>Summary: Captain Shaddid rejects Miller's request to deepen the Julie investigation and redirects him to routine protection-racket work. Surveillance footage links extortionist Mateo Judd to the same OPA emblem found in Julie's apartment, so Miller approaches Anderson Dawes and conceals the meeting from Havelock. By morning Mateo has been murdered, convincing Miller that the OPA is taking control of Ceres policing rather than merely competing with criminals. Source anchors: Shaddid; Mateo; OPA; Havelock; Julie Mao.   </p>
+<p>Analysis: Captain Shaddid's order narrows Miller's inquiry just as its evidence begins connecting Julie Mao to organized political power. Mateo Judd's killing turns Miller's hypothesis inside out: the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a> is not simply moving into the rackets of the <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> but disciplining the people who police them, and Miller's lie to Havelock shows that the investigation has already pulled him outside <a href="//02%20Concepts/State%20Capacity.html">institutional accountability</a>.   </p>
+<h3 id="chapter-eleven-holden">Chapter Eleven: Holden</h3>
+<p>Summary: The <em>Donnager</em> takes the <em>Knight</em> aboard, separates the survivors, and subjects Holden to Lieutenant Lopez's intelligence interview. Lopez tests Holden's account, offers him a future on Mars, and treats the hidden attackers as a serious military problem rather than a pirate nuisance. Before the questioning resolves, close-quarters combat rocks the battleship and a gauss round crosses the holding room, killing Shed and venting its air. Source anchors: Donnager; Lopez; Yao; Shed; gauss.   </p>
+<p>Analysis: The <em>Donnager</em> projects overwhelming <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Martian military capacity</a>, but Lieutenant Lopez's interrogation also reveals uncertainty inside that power: Mars does not know who fielded the stealth ships. Shed Garvey's instantaneous death punctures both the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a>'s hope of rescue and the navy's confidence, proving that the unknown force can bring capital-ship weapons to decisive range.   </p>
+<h3 id="chapter-twelve-miller">Chapter Twelve: Miller</h3>
+<p>Summary: As failed attacks and reprisals make war visible on Ceres, Miller follows Julie's training history and learns that she returned from an off-station assault without letting her discipline lapse. Anderson Dawes confronts him and demands that he abandon the case, confirming that the OPA also wants Julie's movements hidden. The agent's fear persuades Miller that the danger exceeds factional theater, and he tells Havelock to leave Ceres while travel remains possible. Source anchors: Ceres; Julie; Havelock; OPA; Dawes.   </p>
+<p>Analysis: Miller's investigation gains weight because Anderson Dawes applies pressure instead of offering a harmless explanation, revealing that the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a> lacks control over events it is being blamed for. Julie Mao's resilience after the unexplained assault suggests direct contact with the hidden operation, while Miller's warning to Havelock shows his inference crossing into action: an organization built to project defiance over the <a href="//02%20Concepts/Frontier%20Systems.html">frontier</a> is frightened enough to silence a police inquiry.   </p>
+<h3 id="chapter-thirteen-holden">Chapter Thirteen: Holden</h3>
+<p>Summary: Naomi and Amos seal the gauss holes with improvised covers while Holden struggles through decompression and Shed's death. Lieutenant Kelly's marines evacuate the four survivors through a <em>Donnager</em> being boarded by troops in powered armor. Their only route out is a corvette in the hangar, so the group prepares to cross open space under fire with Kelly's activation codes and little time before the flagship is lost. Source anchors: Naomi; Amos; Shed Garvey; Kelly; corvette.   </p>
+<p>Analysis: <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Naomi Nagata and Amos Burton</a> save the compartment before formal rescue arrives, making practical improvisation the condition of survival. The attackers' powered armor and successful boarding shift the unknown enemy from technological anomaly to organized force, while Kelly's escape plan transfers the survivors from <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Martian custody</a> into direct participation in the battle for the <em>Donnager</em>.   </p>
+<h3 id="chapter-fourteen-miller">Chapter Fourteen: Miller</h3>
+<p>Summary: The Martian destroyer <em>Scipio Africanus</em> destroys the transponder-dark prospector <em>Xinglong</em>, and anti-Martian torture on Ceres shows how strategic panic becomes intimate violence. Captain Shaddid again orders Miller to close the Julie case, while Anderson Dawes denies that the OPA destroyed the <em>Donnager</em> and promises to share anything his people find. Miller outwardly accepts their bargain but secretly sends Julie's information to an independent address. Source anchors: Xinglong; Scipio Africanus; Enrique Dos Santos; Shaddid; Dawes.   </p>
+<p>Analysis: The <em>Xinglong</em> incident demonstrates escalation through incompatible but plausible stories: <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Mars</a> sees an unidentified threat, while the Belt sees another innocent ship killed, each side reading the same event through its own political lens. Enrique Dos Santos's torture converts that narrative conflict into collective punishment, and Miller's covert <a href="//02%20Concepts/Information%20and%20Coordination.html">data transfer</a> reflects his conclusion that neither Shaddid nor Anderson Dawes can be trusted to control Julie's evidence.   </p>
+<h3 id="chapter-fifteen-holden">Chapter Fifteen: Holden</h3>
+<p>Summary: Holden, Naomi, Alex, Amos, and the surviving marines fight across the <em>Donnager</em>'s hangar toward the corvette <em>Tachi</em>. Lieutenant Kelly dies after getting them aboard, Amos suffers a compound fracture, and the Martian flagship self-destructs behind their escape. With no safe institutional destination, Holden uses Fred Johnson's code word and receives a new transponder identity plus coordinates for OPA refuge. Source anchors: Tachi; Kelly; Amos; Donnager; Fred.   </p>
+<p>Analysis: The <em>Tachi</em> gives the survivors <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">mobility and weapons</a> but also marks them as possessors of a Martian warship, making rescue inseparable from political liability. Fred Johnson can manufacture a legitimate transponder identity that Pur'n'Kleen and Mars cannot provide, revealing that <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a> influence already reaches the registries on which lawful movement depends — a quiet illustration of how <a href="//02%20Concepts/State%20Capacity.html">administrative records</a> become instruments of power.   </p>
+<h3 id="chapter-sixteen-miller">Chapter Sixteen: Miller</h3>
+<p>Summary: Mars uses the <em>Donnager</em> attack to impose a military cordon on the Belt, naming the whole region rather than only the OPA as the enemy. Captain Shaddid and Anderson Dawes then order Miller off Julie's case because another team is pursuing the <em>Scopuli</em> connection; when he refuses, Shaddid fires him. Miller surrenders his files, drinks through the loss of his job, and realizes that Julie—not the badge—has become the remaining source of purpose in his life. Source anchors: Mars; Shaddid; Dawes; Star Helix; Julie.   </p>
+<p>Analysis: The Martian cordon turns a security response into collective political classification of the whole <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">Belt</a>, while the joint pressure from Captain Shaddid and Anderson Dawes exposes cooperation beneath their public opposition. Losing <a href="//02%20Concepts/State%20Capacity.html">Star Helix</a> frees Miller from orders but removes legal authority and access, so his continued pursuit of Julie Mao becomes openly personal and increasingly obsessive.   </p>
+<h3 id="chapter-seventeen-holden">Chapter Seventeen: Holden</h3>
+<p>Summary: Aboard the <em>Tachi</em>, the survivors cook a real meal, toast their dead, and begin treating the captured ship as a home rather than an escape craft. Holden explores its systems, takes responsibility for overusing Naomi as an answer to every crisis, and learns that the crew has renamed the vessel <em>Rocinante</em>. They reach Tycho with a false gas-freighter identity, where Holden requires suits and weapons before anyone leaves the ship. Source anchors: Tachi; Rocinante; Naomi; Tycho; transponder.   </p>
+<p>Analysis: Naming the <em>Rocinante</em> converts Martian property into the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a>'s shared institution, while the meal and division of cabins establish a domestic order after repeated loss. Holden's recognition that Naomi Nagata cannot absorb every unsolved problem is an early correction in his leadership, but his armed arrival at Tycho shows that survival in the <a href="//02%20Concepts/Frontier%20Systems.html">frontier</a> has also made suspicion routine.   </p>
+<h3 id="chapter-eighteen-miller">Chapter Eighteen: Miller</h3>
+<p>Summary: Ceres celebrates the <em>Donnager</em>'s destruction while Miller wakes from a deliberate bender and admits that his career and self-respect have collapsed. He returns to work without authorization, pressures Immanuel Corvus Dowd for financial information, and gives Muss enough of the result to protect her from complicity. Following the money and Earth's abrupt withdrawal from Ceres leads him to ask whether Julie discovered a plan designed to make Mars and the Belt attack each other. Source anchors: Ceres; Donnager; Dowd; Muss; Julie.   </p>
+<p>Analysis: The public celebration after the <em>Donnager</em> strips fear from Ceres at the moment Miller sees how expendable the station may be to the inner planets. Immanuel Corvus Dowd's records let him move beyond Julie Mao's personal history toward <a href="//02%20Concepts/Commodity%20Systems.html">financing</a> and state behavior, while <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth's</a> withdrawal from Ceres proves that the administrative core will abandon a frontier it cannot control; Miller's limited disclosure to Muss preserves the investigation by keeping it outside the compromised command structure.   </p>
+<h3 id="chapter-nineteen-holden">Chapter Nineteen: Holden</h3>
+<p>Summary: Fred Johnson receives Holden on Tycho without guards and explains that the station's protection comes from economic interdependence, not OPA guns. He proposes a criminal investigation into the <em>Canterbury</em> and <em>Donnager</em> attacks, asking the crew to recover evidence rather than choose a side in the war. After an uneasy night among Tycho's crowds and his own memories, Holden returns to the <em>Rocinante</em> because the ship already feels more like home than the station. Source anchors: Fred; Tycho; Canterbury; Donnager; Rocinante.   </p>
+<p>Analysis: Fred Johnson offers Holden a third response to mass violence—evidence and trial—but also values the crew as witnesses who can legitimize his politics. Tycho Station's safety depends on every faction needing its shipyards, so Fred's apparent neutrality is an engineered balance typical of a <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">Belt</a> political leader; Holden's retreat to the <em>Rocinante</em> shows that his durable loyalty now lies with the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> rather than any patron.   </p>
+<h3 id="chapter-twenty-miller">Chapter Twenty: Miller</h3>
+<p>Summary: With Star Helix gone and Ceres under OPA control, Miller works the Julie case from public terminals and dwindling personal funds. He compares ship registries and flight records until a Tycho entry gives him a vessel worth tracking, then asks Havelock to place a watch from Ganymede. Havelock reports that the Protogen-linked ship has filed for Eros, and Miller spends a quarter of his remaining money to follow it. Source anchors: Ceres; Havelock; Protogen; Eros; Tycho.   </p>
+<p>Analysis: Miller's loss of police databases turns investigation into costly manual reconstruction, but the Eros flight plan proves that persistence can recover a trail institutions tried to close. Havelock's continued help supplies the privileged access Miller no longer has, while Miller's expensive passage makes the case a material commitment of the kind the <a href="//02%20Concepts/Illicit%20Markets.html">informal economy</a> demands; the detective now navigates <a href="//02%20Concepts/Information%20and%20Coordination.html">information</a> without the support of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a>.   </p>
+<h3 id="chapter-twenty-one-holden">Chapter Twenty-One: Holden</h3>
+<p>Summary: Tycho shore leave exposes how badly the crew needs space beyond the <em>Rocinante</em>, while Amos's excess and Naomi's blunt appraisal reveal the strain beneath their survival. Naomi tells Holden that the others now regard him as their captain because he keeps them focused on solvable problems. Fred Johnson then recruits the crew to identify the stealth ships, and Holden designs crude gas tanks and hull changes that can hide the gunship inside its false freighter identity. Source anchors: Tycho; Rocinante; Naomi; Fred; compressed-gas storage tanks.   </p>
+<p>Analysis: Naomi Nagata makes <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> authority relational rather than inherited from Captain McDowell: the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> follows him because his decisions organize their fear. The gas-tank disguise joins that social legitimacy to Tycho's industrial capacity, letting Fred Johnson turn a conspicuous Martian weapon into a covert investigative platform without changing what the ship can do—an improvisation characteristic of the <a href="//02%20Concepts/Frontier%20Systems.html">fragile frontier order</a>.   </p>
+<h3 id="chapter-twenty-two-miller">Chapter Twenty-Two: Miller</h3>
+<p>Summary: Miller rides a cheap, crowded transport to Eros while reviewing the small case file that Julie has come to dominate. A missionary's confidence in divine purpose prompts Miller to contrast inherited belief with his own chosen pursuit. On Eros, he reads the station's casinos and brothels as the economy left behind after industry moved to Ceres, contacts his former colleague Sematimba, and confirms the <em>Rocinante</em>'s arrival time. Source anchors: Eros; Julie; missionary; Sematimba; Rocinante.   </p>
+<p>Analysis: Eros's dependence on vice follows from its obsolete docks and long berthing times, making exploitation an economic adaptation of the <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> that flourish where legitimate commerce cannot; the station's casinos, brothels, and free-fight arenas are exactly the informal economy that fills the gap left by fading <a href="//02%20Concepts/State%20Capacity.html">institutional oversight</a>. Miller's fixation on Julie Mao functions like the missionary's faith but lacks institutional support; Sematimba is therefore crucial because an old personal connection replaces the badge Miller no longer carries.   </p>
+<h3 id="chapter-twenty-three-holden">Chapter Twenty-Three: Holden</h3>
+<p>Summary: Holden leads Naomi, Alex, and Amos through Eros's casino district toward the flophouse room rented by Lionel Polanski. A tail follows them into the poorer levels, where an armed woman orders the crew toward the stairs and hidden gunmen open fire. Holden's group returns fire from the lobby until a stranger in a hat kills the woman, introduces himself as Miller, and warns that police are coming. Source anchors: Eros; Lionel Polanski; flophouse; Amos; Miller.   </p>
+<p>Analysis: The route from the Eros casino level to Lionel Polanski's flophouse moves the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> from visible commerce into a prepared capture site. <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Amos Burton</a> reads the danger tactically while <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> still seeks official categories—asking whether the attackers are police—so Miller's intervention joins local investigative knowledge to the crew's firepower at the point both searches converge.   </p>
+<h3 id="chapter-twenty-four-miller">Chapter Twenty-Four: Miller</h3>
+<p>Summary: Miller studies the failed ambush and identifies Amos as the only <em>Canterbury</em> survivor with comparable experience under fire. He leads the crew to Lionel Polanski's room, where they find Julie's transformed body and the organic growth that killed her. Miller then asks Sematimba to conceal his presence and the crew's role, warning that the gunmen had support inside Eros security and that the conspiracy is too deep for an ordinary police response. Source anchors: Amos; Holden; Julie; Sematimba; Eros.   </p>
+<p>Analysis: Julie Mao's body ends Miller's missing-person case while proving that the case was never a simple retrieval and that the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> had already claimed her. His immediate analysis of the ambush and Eros security's silence shows his professional habits surviving personal shock; asking Sematimba to falsify the official picture sacrifices <a href="//02%20Concepts/State%20Capacity.html">procedure</a> to keep the only living witnesses outside the conspiracy's reach.   </p>
+<h3 id="chapter-twenty-five-holden">Chapter Twenty-Five: Holden</h3>
+<p>Summary: Holden resents leaving a lethal gunfight without statements, but Miller explains that his arrangement with Sematimba is the only reason they can move at all. In a hotel room, Naomi works Julie's terminal through its evidence bag and recovers logs about the <em>Scopuli</em>, a Phoebe sample, and coordinates for asteroid BA834024112. The crew concludes that the hidden ship may be tethered there, and Miller asks to join because finding Julie has become a murder investigation. Source anchors: Sematimba; Julie; Phoebe; BA834024112; Miller.   </p>
+<p>Analysis: Julie's terminal links the personal crime scene to the <em>Scopuli</em> and a recoverable location, converting grief into an actionable <a href="//02%20Concepts/Information%20and%20Coordination.html">trail of information</a>. BA834024112 matters because it is a stable physical coordinate outside competing public narratives; Miller's request to continue also distinguishes his stated duty to identify Julie's killers from the obsession that first sustained the search—a search now pointed at the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">hidden ships</a>.   </p>
+<h3 id="chapter-twenty-six-miller">Chapter Twenty-Six: Miller</h3>
+<p>Summary: At breakfast, Holden challenges the lockdown Sematimba placed on the <em>Rocinante</em> while the group tests whether Miller can be trusted aboard. Julie's logs suggest that her body may be the sample scheduled to leave Eros, but a radiation alarm drives everyone toward the shelters before they can depart. Miller recognizes Ceres criminal Gabby Smalls among the CPM guards and sees stolen Star Helix riot gear, revealing that the evacuation force was installed in advance as part of the operation. Source anchors: Roci; Sematimba; CPM; riot gear; Eros.   </p>
+<p>Analysis: Gabby Smalls and the Star Helix riot gear turn an apparent emergency response into evidence of premeditation: the same missing equipment and disappearing criminals Miller noticed on Ceres now control movement on Eros. The CPM uniforms give the <a href="//02%20Concepts/Illicit%20Markets.html">gangs</a> the appearance of <a href="//02%20Concepts/State%20Capacity.html">public authority</a>, allowing the attackers to herd victims through compliance rather than open conquest—a prototype of the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> harvesting operation.   </p>
+<h3 id="chapter-twenty-seven-holden">Chapter Twenty-Seven: Holden</h3>
+<p>Summary: Holden initially wants to obey the evacuation after the radiation alarm, but Miller identifies the guards as Ceres gangsters and explains how the missing riot gear completes a long-planned operation. The crew hides in maintenance passages; Holden and Miller then leave Naomi, Alex, and Amos with a deadline while they follow citizens being moved toward supposed shelters. When fake officers block the route, Miller kills them with practiced shots and directs the civilians to hide. Source anchors: Miller; Golden Bough; Naomi; maintenance hatch; cops.   </p>
+<p>Analysis: The radiation alarm weaponizes public trust by making the safest-looking action—following uniformed officers—the route into the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">experiment</a>. Miller's recognition of the Ceres riot gear lets Holden reinterpret infrastructure, personnel, and announcements as one kill system built on counterfeit <a href="//02%20Concepts/State%20Capacity.html">authority</a>, but Miller's summary executions also introduce a method of resistance that Holden has not morally accepted.   </p>
+<h3 id="chapter-twenty-eight-miller">Chapter Twenty-Eight: Miller</h3>
+<p>Summary: Miller recalls his first justified police shooting and compares its emotional aftermath with how easily he now kills. He and Holden capture CPM guard Ko, who admits that Protogen trained the gang, installed surveillance and scientific equipment across Eros, and planned the operation for months. After Ko becomes dead weight, Miller kills him without warning; carrying the body back, he recognizes that his imagined Julie has become the part of himself still capable of compassion. Source anchors: Ko; Protogen; Eros; Miller; Julie Mao.   </p>
+<p>Analysis: Ko's account supplies the operation's logistics—months of installation, imported systems, and gang labor—while Miller's killing supplies its moral cost. The contrast with his first police shooting shows that repeated self-isolation has changed his threshold for violence within the collapsing <a href="//02%20Concepts/State%20Capacity.html">order</a>; imagined Julie is less evidence about the real woman than an internal witness to what he is becoming.   </p>
+<h3 id="chapter-twenty-nine-holden">Chapter Twenty-Nine: Holden</h3>
+<p>Summary: Holden finds the crew's refuge empty and feels betrayed even though Naomi followed his order to leave after the deadline. He and Miller enter the casino levels, where packed civilians and false police turn a gunshot into a riot. Holden shoots a guard who is about to execute a fallen child, carries the dead boy despite Miller's warning, and finally reaches a corridor where thirty-four armored men block every route to the docks. Source anchors: Naomi; Eros; Miller; child; casinos.   </p>
+<p>Analysis: Naomi Nagata's absence exposes <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> dependence on her judgment, because he experiences correct obedience as abandonment under fear. The dead child then collapses his preference for restraint into direct violence, while the dock blockade makes clear that individual rescue cannot defeat an operation designed around <a href="//02%20Concepts/State%20Capacity.html">controlling the movement of an entire population</a>—<a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">the people of the Belt</a> reduced to experimental matter.   </p>
+<h3 id="chapter-thirty-miller">Chapter Thirty: Miller</h3>
+<p>Summary: Miller and Holden rest against silent pachinko machines as Eros's casino levels fragment into executions, fires, and temporary lulls. Expecting to die from radiation, Miller feels his normal investigative self separate from a calmer “death-self,” and he admits to Holden that he is no longer at his best. When infected victims emerge from the reopened tube station, the mercenaries withdraw toward the port, giving the two men a brief route through the collapsing crowd-control system. Source anchors: pachinko; death-self; Holden; zombies; tube station.   </p>
+<p>Analysis: The pachinko machines place artificial celebration beside organized killing, while Miller's death-self explains his unusual calm without presenting it as sound judgment. The infected victims also reveal that the mercenaries' control was temporary and instrumental: once the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> test advances, their retreat opens a path for Miller and Holden but abandons everyone else to the contagion—the <a href="//02%20Concepts/Illicit%20Markets.html">gangs</a> discarded as meat for the machine.   </p>
+<h3 id="chapter-thirty-one-holden">Chapter Thirty-One: Holden</h3>
+<p>Summary: Holden follows Miller behind retreating mercenaries while infected victims spread the brown material through Eros. Near the docks, Protogen troops and discarded CPM guards turn on each other when the latter realize they are being abandoned. Miller bluffs that he and Holden are joining one side, and they sprint across the resulting field of fire; both are wounded, but the crossing gets them closer to the <em>Rocinante</em>. Source anchors: brown goo; mercenaries; Protogen; corridor; Miller.   </p>
+<p>Analysis: The fight between Protogen troops and CPM guards reveals the hierarchy of the Eros operation: gang labor from the <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> was useful for containment but never included in the planned escape. Miller exploits that betrayal as temporary cover, while <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> wounds show how little control the pair retain even after correctly understanding the factions around them—<a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">the losing crew</a> surviving on improvisation.   </p>
+<h3 id="chapter-thirty-two-miller">Chapter Thirty-Two: Miller</h3>
+<p>Summary: Miller wakes under treatment, initially fearing that the tubes in his neck mean infection before Naomi explains his condition. He overhears Naomi reject Holden's habit of mistaking sexual pursuit for love, then later discusses killing, conscience, and Naomi with Holden. Although the crew has saved his life, Miller's hallucinated Julie persists at his bedside and his mind continues trying to connect her case to the war. Source anchors: tubes; Naomi; Holden; Julie; monitors.   </p>
+<p>Analysis: The <em>Rocinante</em> sick bay makes Miller dependent on the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> he joined only hours earlier, giving their rescue more weight than a tactical alliance. Naomi Nagata's confrontation with <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> parallels Miller's own problem in harsher form: both men construct stories about women, but Miller's imagined Julie has become inseparable from his damaged conscience and investigative reasoning.   </p>
+<h3 id="chapter-thirty-three-holden">Chapter Thirty-Three: Holden</h3>
+<p>Summary: Holden and Miller recover for five days while competing explanations for Eros feed a broader Earth-Mars-Belt war. Approaching BA834024112, Naomi detects an unusual heat and electromagnetic trace; Holden matches its drive signature to the ships that attacked the <em>Donnager</em>. The crew finds a nearly invisible stealth ship tethered to the otherwise worthless asteroid and decides to board the vessel Julie escaped before going to Eros. Source anchors: BA834024112; Naomi; drive signature; stealth ship; Donnager.   </p>
+<p>Analysis: The drive signature gives <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> a more reliable identification method than hull shape or planted serial numbers, connecting the hidden ship to the <em>Donnager</em> attack without repeating his earlier evidentiary mistake. BA834024112 works as a cache because ordinary mapping records only a worthless rock; the conspiracy hides costly technology inside the assumptions of routine navigation across the <a href="//02%20Concepts/Frontier%20Systems.html">Belt frontier</a>. Lesson not lost on the crew: <a href="//02%20Concepts/Information%20and%20Coordination.html">sensor data</a> must be read before it is broadcast.   </p>
+<h3 id="chapter-thirty-four-miller">Chapter Thirty-Four: Miller</h3>
+<p>Summary: Miller, Holden, Naomi, and Amos enter the stealth ship through a forced airlock and find improvised prisoner restraints, missing lifeboats, and records of a two-year Phoebe research program. The logs show that the protomolecule repurposes living systems and that Julie's contamination forced the crew to abandon ship before completing its plan. Miller and Holden conclude that Protogen used the war as cover to test the organism on Eros, while Naomi finds additional evidence below. Source anchors: Phoebe; protomolecule; Protogen; Eros; Scopuli.   </p>
+<p>Analysis: The stealth ship's ordinary operational failures—insufficient containment, no brig, and hurried evacuation—show that Protogen did not control the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> despite years of study. Branding it as a company product expresses the deeper error: Protogen treats an alien process as proprietary technology and the population of Eros as an acceptable scale test, a corollary of treating the <a href="//02%20Concepts/Commodity%20Systems.html">Belt as a commodity</a> rather than a community.   </p>
+<h3 id="chapter-thirty-five-holden">Chapter Thirty-Five: Holden</h3>
+<p>Summary: Naomi opens the stealth ship's communications logs and finds disciplined code traffic plus a plain-language message directing data to Thoth Station. The crew copies the records, recovers a safe that Naomi cannot open without destructive force, and sets the ship's reactor to destroy the remaining evidence after their departure. Back aboard the <em>Rocinante</em>, Miller shows Holden that Earth forces have attacked Mars and destroyed Deimos, making the engineered war explicit. Source anchors: Naomi; comm logs; Thoth Station; safe; Deimos.   </p>
+<p>Analysis: Thoth Station turns scattered evidence into a target, while the sealed safe preserves both scientific value and political danger beyond <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Naomi Nagata's</a> immediate reach. The Deimos feed shows the conspiracy's leverage: secret ships built under <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth-linked</a> authority make even a request for clarification look like proof of betrayal, converting incomplete institutional knowledge into open battle between <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Mars</a> and Earth.   </p>
+<h3 id="chapter-thirty-six-miller">Chapter Thirty-Six: Miller</h3>
+<p>Summary: Miller watches Earth and Mars move from battle to blockade after Deimos, waiting for the nuclear escalation that has not yet come. Amos checks whether he has slept, then Holden arrives to argue that releasing the stealth-ship records will correct the false stories driving the war. Miller counters that facts without context can trigger vigilantism and tells Holden the safer course is to destroy the safe and quarantine Eros and Phoebe, even though neither man can bring himself to discard the discovery. Source anchors: Deimos; Amos; Holden; safe; Phoebe.   </p>
+<p>Analysis: The Deimos aftermath tests the central dispute between <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> and Miller rather than resolving it. Holden treats fuller disclosure as the cure for manipulated information; Miller uses a Ceres murder case to show how accurate fragments can still produce lethal conclusions. The question of <a href="//02%20Concepts/Information%20and%20Coordination.html">responsible information use</a> is never settled—the sealed safe remains aboard because scientific and political power defeats both men's stated caution, keeping alive the very contest that will drive <a href="//04%20Series/The%20Expanse.html">the series forward</a>.   </p>
+<h3 id="chapter-thirty-seven-holden">Chapter Thirty-Seven: Holden</h3>
+<p>Summary: During a high-g pause, the crew cooks together while Miller watches the <em>Rocinante</em>'s domestic routines from the edge. Naomi proposes that the protomolecule needs a large distributed mass of human processing to complete its task, explaining why Protogen selected sealed, populous Eros. Holden then refuses Fred Johnson's demand for the sealed sample, admits he has not actually hidden it, and leaves Fred holding the evidence only because no safer custodian exists. Source anchors: galley; Naomi; protomolecule; Fred; safe.   </p>
+<p>Analysis: <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Naomi Nagata</a> supplies a mechanism connecting the Phoebe organism's small-scale failures to the Eros experiment: biomass provides both material and computation for the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a>, making her engineering reasoning the key that turns horror into a solvable problem. Holden's exchange with Fred Johnson then shows the governance problem that survives discovery—no institution is trustworthy enough for the sample, yet destroying it would surrender the only means of understanding what Eros may become.   </p>
+<h3 id="chapter-thirty-eight-miller">Chapter Thirty-Eight: Miller</h3>
+<p>Summary: On Tycho's observation deck, Miller helps Naomi trace a hidden communications route from the stealth ship to Thoth Station and withholds the human source who enabled it. He gives the coordinates to Fred only after demanding a credible assault plan, then joins the OPA boarding force rather than remain safely behind. Holden asks him to regroup with the <em>Rocinante</em> after the station is secure, making Miller realize that the crew still considers his return possible. Source anchors: Nauvoo; Naomi; Thoth; Fred; OPA.   </p>
+<p>Analysis: Miller and Naomi Nagata build trust through controlled <a href="//02%20Concepts/Information%20and%20Coordination.html">disclosure</a>: she verifies the route while he protects Havelock, separating useful evidence from the exposure of a source. His demand that Fred Johnson demonstrate operational capacity keeps Thoth's location from becoming another reckless broadcast, and Holden's invitation gives the assault a personal future Miller had not expected—an alliance now involving the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a>'s emerging military capacity.   </p>
+<h3 id="chapter-thirty-nine-holden">Chapter Thirty-Nine: Holden</h3>
+<p>Summary: The <em>Rocinante</em> tumbles cold and airless toward Thoth Station while the <em>Guy Molinari</em> broadcasts that it is harmless runaway cargo. Once the station commits fighters and weapons, Alex restores the reactor, dodges point-defense fire, and brings the Roci close enough to destroy the defenses despite damage and leaking maneuvering water. The ship secures a docking approach, and Holden hands the operation to Fred Johnson's assault force. Source anchors: Rocinante; Thoth; Guy Molinari; Alex; PDCs.   </p>
+<p>Analysis: The <em>Guy Molinari</em>'s false warning exploits Protogen's need to keep Thoth Station invisible: defenders delay fire because any launch exposes the base to wartime observers, a gamble built entirely on <a href="//02%20Concepts/Information%20and%20Coordination.html">misdirection</a>. <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Alex Kamal</a> then converts that strategic hesitation into a close-range advantage, but the damaged <em>Rocinante</em> shows that deception buys only seconds, not safety—the crew's <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a>-led risk compounding under <a href="//04%20Series/The%20Expanse.html">the widening war</a>.   </p>
+<h3 id="chapter-forty-miller">Chapter Forty: Miller</h3>
+<p>Summary: Miller rides into Thoth with young OPA fighters, including Diogo, whose heavy Belt creole and improvised armor embody the force Protogen underestimated. The assault discovers riot-control ammunition, pushes through the station, and captures Dresden with his staff. Dresden treats the attackers as negotiators, offering Fred Johnson money, weapons, and amnesty in exchange for leaving Protogen's research intact. Source anchors: Diogo; OPA; Thoth; Dresden; Fred.   </p>
+<p>Analysis: Diogo survives because Protogen prepared for disorder rather than a disciplined assault, making crowd-control rounds a sign of corporate contempt as well as tactical failure—the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA</a> militia underestimated as undisciplined irregulars. Dresden's offer extends the same logic into negotiation: he assumes Fred Johnson's political cause has a price and cannot recognize that Eros has placed the legitimacy of the research itself on trial, an arrogance that underestimates the <a href="//02%20Concepts/State%20Capacity.html">statesmen</a> now holding the station.   </p>
+<h3 id="chapter-forty-one-holden">Chapter Forty-One: Holden</h3>
+<p>Summary: The damaged <em>Rocinante</em> docks at Thoth, and Holden, Naomi, Alex, and Amos cross to the station after its assault force secures the main areas. Fred Johnson presents Dresden, who admits that Protogen removed ethical restraints from its scientists and used Eros to learn what the protomolecule could do with enough biomass. Dresden argues that the data can save humanity and begins persuading Fred that destroying it would make every death pointless; Miller silently draws his pistol. Source anchors: Rocinante; Thoth station; Dresden; Fred; science team.   </p>
+<p>Analysis: Dresden's altered science team is the institutional mechanism behind Eros: Protogen did not merely employ unethical people but designed an organization unable to treat victims as moral constraints, an extreme case of <a href="//02%20Concepts/State%20Capacity.html">corporate power</a> detached from any ethical community. Holden wants confession to support judgment, yet Dresden converts confession into a claim of necessity, showing how control of expertise can make atrocity sound like the only rational policy in a universe that may harbor the builders of the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a>; Miller's response will be to short-circuit the argument entirely.   </p>
+<h3 id="chapter-forty-two-miller">Chapter Forty-Two: Miller</h3>
+<p>Summary: Miller shoots Dresden before the scientist can finish persuading Fred, then defends the killing to an enraged Holden as the only way to stop a powerful man from escaping consequences. Later, Diogo gives Miller access to decrypted Eros feeds that show bodies incorporated into the protomolecule's machinery. Amos tells Miller that Holden has expelled him from the crew and that the others will follow their captain despite understanding why Miller acted. Source anchors: Dresden; Holden; Diogo; Eros; Amos.   </p>
+<p>Analysis: Shooting Dresden rejects both trial and negotiation because Miller believes wealth, allies, and persuasive expertise would restore the scientist's power—a unilateral act that is exactly the kind of self-appointed judgment <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> will refuse to excuse. The Eros feeds reinforce his certainty but do not erase the act's cost: <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Amos Burton</a> distinguishes agreement with Miller's diagnosis from acceptance of unilateral killing, and crew loyalty therefore sets a boundary Miller cannot cross, making the murder a wedge that splits the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">Rocinante's</a> found family.   </p>
+<h3 id="chapter-forty-three-holden">Chapter Forty-Three: Holden</h3>
+<p>Summary: Tycho mechanic Sam repairs the wounded <em>Rocinante</em> while Holden prepares to leave and argues with Miller about Dresden. Miller insists Dresden would have escaped; Holden answers that private certainty cannot authorize execution and tells him to find another ship. Afterward Naomi challenges Holden's assumption that she is avoiding him and invites him home, moving their relationship forward as the repaired ship nears readiness. Source anchors: Sam; Rocinante; Miller; Dresden; Naomi.   </p>
+<p>Analysis: Sam's reconstruction of the <em>Rocinante</em> provides a material counterpart to a <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> whose moral unity is less easily repaired. Holden's break with Miller preserves a rule against self-appointed judgment even when Dresden's guilt is undisputed, while Naomi Nagata's direct invitation shows that honest intimacy requires asking rather than projecting distance onto her—<a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> learning that both love and justice depend on consent rather than assumption.   </p>
+<h3 id="chapter-forty-four-miller">Chapter Forty-Four: Miller</h3>
+<p>Summary: Excluded from the <em>Rocinante</em>, Miller sits beneath the unfinished <em>Nauvoo</em> and recognizes that neither revenge nor solving Julie's case has given him a place to belong. A Tycho employer refuses him because his role at Thoth is public knowledge; Fred Johnson then hires him as an independent security consultant while warning that peace negotiations may require surrendering him. Miller responds by proposing that the <em>Nauvoo</em> strike Eros and push it into the sun. Source anchors: Nauvoo; Rocinante; Fred; Eros; Thoth station.   </p>
+<p>Analysis: The <em>Nauvoo</em> gives Miller a solution at the scale of the danger: its engines and mass can move what ordinary weapons cannot safely destroy or recover, an engineering answer to the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a>'s contamination of Eros. Repurposing a ship built to carry a religious community to the stars is also an irreversible political theft, but Fred Johnson accepts the calculation because every smaller option leaves Eros available to the competing maritime powers—a hard trade for the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA's</a> claim to act for the Belt.   </p>
+<h3 id="chapter-forty-five-holden">Chapter Forty-Five: Holden</h3>
+<p>Summary: Holden wakes beside Naomi and begins learning the ordinary details of a relationship he had previously imagined from a distance. Fred then briefs Holden, Naomi, and Miller on the plan to drive Eros sunward while booby-trapped freighters deny its docks to recovery teams. Holden insists that the <em>Rocinante</em> guard Eros and that Miller command the surface operation because Fred's own OPA personnel might seize a sample; Fred reluctantly accepts the division of authority. Source anchors: Naomi; Fred; Eros; Rocinante; Miller.   </p>
+<p>Analysis: <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> trust in Naomi Nagata becomes operational when they enter Fred Johnson's planning room as partners rather than captain and subordinate alone, anchoring the <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew</a> in a new configuration. His demand that Miller control the Eros blockade is a narrow reconciliation based on comparative risk: Miller has already killed to prevent capture of the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a>, while the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">OPA's</a> wider organization contains actors with incentives to possess it—so Holden uses the one man he does not trust to guard the one thing he cannot lose.   </p>
+<h3 id="chapter-forty-six-miller">Chapter Forty-Six: Miller</h3>
+<p>Summary: Miller removes Mormon resisters from the unfinished <em>Nauvoo</em>, seeing how a vessel built as temple, habitat, and interstellar promise is being taken for a mission its owners reject. Diogo casually suggests gassing the holdouts, and Miller forces a negotiated evacuation instead. En route to Eros with the blockade ships and irreplaceable warheads, he learns that Mars has destroyed Phoebe, a decision that offers limited hope that someone across the political divide understands the organism's danger. Source anchors: Nauvoo; Mormons; Diogo; Eros; Phoebe.   </p>
+<p>Analysis: The <em>Nauvoo</em> seizure tests whether emergency necessity must reproduce the coercion it opposes; Miller rejects Diogo's gas proposal even while carrying out the confiscation, preserving a line of restraint inside an act of theft. <a href="//05%20Characters%20and%20Entities/Mars%20as%20Military-Technocratic%20State.html">Mars's</a> destruction of Phoebe is reassuring only as evidence of one aligned decision, not institutional unity, so the blockade still assumes that other Martian or <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth</a> forces will try to recover Eros—each great power acting as a distinct center of decision.   </p>
+<h3 id="chapter-forty-seven-holden">Chapter Forty-Seven: Holden</h3>
+<p>Summary: Breakfast exposes Holden and Naomi's new relationship immediately, and the crew absorbs the change with teasing rather than fracture. At Eros, a UN science vessel and corvette refuse to withdraw, so Holden paints the escort with the <em>Rocinante</em>'s targeting laser and threatens the vulnerable laboratory ship until both retreat. Naomi then argues that Miller was right about Dresden, forcing Holden to separate his anger at the killing from his anger at losing control of the decision. Source anchors: Naomi; Rocinante; corvette; target; Dresden.   </p>
+<p>Analysis: The <em>Rocinante</em>'s disguised hull lets <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> reveal superior force only after verbal authority fails, turning the earlier stealth tactic into deterrence rather than ambush against the UN science ship. Naomi Nagata's defense of Miller also tests Holden's preference for openness: he must consider that Dresden's access and persuasion were operational <a href="//02%20Concepts/Information%20and%20Coordination.html">weapons of influence</a> even though he still rejects execution without consent—the difference between transparent procedure and unilateral judgment.   </p>
+<h3 id="chapter-forty-eight-miller">Chapter Forty-Eight: Miller</h3>
+<p>Summary: Miller listens to Eros repeat fragments of absorbed speech while Protogen's involvement becomes public and the blockade temporarily slows the wider war. His team plants and synchronizes the armed freighter at its dock, but Miller refuses the return transport and remains alone with the detonation codes. As the <em>Nauvoo</em> approaches, Eros shouts a refusal and moves out of the generation ship's path, proving that the asteroid can perceive a threat and maneuver itself. Source anchors: Eros; Nauvoo; Diogo; OPA; bombs.   </p>
+<p>Analysis: Staying on Eros gives Miller direct control over the blockade's final weapon and reflects his belief that he has no useful life to return to—a decision that dissolves the remaining ties to <a href="//02%20Concepts/State%20Capacity.html">institutional order</a> that held him together. The <em>Nauvoo</em>'s miss then changes the problem from redirecting inert mass to confronting agency: the voices in the Eros feed are no longer incidental residue once the station acts in apparent response to danger, proving the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> has begun to think and move on its own terms.   </p>
+<h3 id="chapter-forty-nine-holden">Chapter Forty-Nine: Holden</h3>
+<p>Summary: The <em>Rocinante</em> confirms that Eros has shifted two hundred kilometers without a visible drive, then loses the asteroid on radar when it alters its reflective properties. Holden coordinates with Fred Johnson and the UN corvette as Eros accelerates sunward toward Earth, but conventional pursuit offers no clear way to stop it. Miller transfers the freighters' detonation codes and then reveals that he dismissed his crew and remained on Eros. Source anchors: Rocinante; Eros; Fred; corvette; Miller.   </p>
+<p>Analysis: Eros's maneuver and disappearance from radar invalidate the propulsion and tracking assumptions shared by every human faction, an escalation of the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> from infection to agency. <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> can coordinate the <em>Rocinante</em>, Fred Johnson, and the UN corvette, yet that coalition remains reactive; Miller's presence inside the station becomes strategically important precisely because external force cannot predict or match the new physics—<a href="//02%20Concepts/Information%20and%20Coordination.html">coordination</a> across the system now organized around a single object in motion.   </p>
+<h3 id="chapter-fifty-miller">Chapter Fifty: Miller</h3>
+<p>Summary: Holden offers to recover Miller, but Miller refuses and proposes taking the blockade bomb toward whatever controls Eros so he can disable it from inside. Naomi uploads a dead-man's-switch routine that will detonate if Miller releases his terminal, then Holden calls for a final goodbye. Miller asks him to pursue Julie's parents and Protogen through Mao-Kwikowski Mercantile and to tell them he is sorry he did not find her in time before entering Eros again. Source anchors: bomb; Naomi; Mao-Kwikowski Mercantile; Julie; Holden.   </p>
+<p>Analysis: The dead-man's switch converts Miller's continued consciousness into the only restraint on the bomb, joining his investigative purpose to the blockade's destructive capacity—his own body now the final <a href="//02%20Concepts/State%20Capacity.html">control mechanism</a>. His request concerning Mao-Kwikowski Mercantile keeps responsibility attached to living institutions, while the apology to Julie Mao reveals that he still understands the mission as a failed rescue as much as species-level defense against the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">alien threat</a>.   </p>
+<h3 id="chapter-fifty-one-holden">Chapter Fifty-One: Holden</h3>
+<p>Summary: The <em>Rocinante</em> pursues Eros under increasing acceleration until sustained gravity begins threatening the crew's eyes, organs, and blood vessels. Holden refuses to stop but also refuses Fred's request to destroy the ship and crew in a final collision, prompting Naomi to challenge his self-pity after he chooses their lives. The UN fleet instead fires its nuclear arsenal at the five transponders on Eros's surface, using Miller's abandoned blockade ships as targeting beacons. Source anchors: Rocinante; g; Fred; Naomi; transponders.   </p>
+<p>Analysis: Sustained high gravity makes <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden's</a> command physically distributive: his refusal to abandon pursuit spends every <a href="//05%20Characters%20and%20Entities/Rocinante%20Crew.html">crew member's</a> body, not only his own, placing the captain's moral convictions inside shared physical risk. Naomi Nagata forces him to acknowledge that declining Fred Johnson's suicide order was a choice rather than helpless failure, and the five transponders create an alternative that concentrates force on Eros without sacrificing the ship—<a href="//02%20Concepts/Information%20and%20Coordination.html">information</a> repurposed as weaponry.   </p>
+<h3 id="chapter-fifty-two-miller">Chapter Fifty-Two: Miller</h3>
+<p>Summary: Miller advances through jammed doors and protomolecule growth while repeatedly resetting the five-second dead-man's switch. He scavenges oxygen and finds that the station's spin still produces gravity even though its acceleration does not, another sign that Eros is controlling local physical effects. Hearing the feed repeat a warning about the <em>Razorback</em>, Miller realizes its language preserves the neural and software structures of the dead and concludes that Juliette Andromeda Mao remains alive within it. Source anchors: hand terminal; oxygen; Eros; Razorback; Juliette Andromeda Mao.   </p>
+<p>Analysis: The oxygen resupply and jammed doors keep Miller's progress dependent on ordinary maintenance skills even inside an impossible system, a reminder that the <a href="//02%20Concepts/Frontier%20Systems.html">frontier</a> still runs on improvisation. The <em>Razorback</em> phrase is a source-specific memory associated with Juliette Andromeda Mao, so recognizing it gives Miller a testable hypothesis: the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> has retained a human decision-maker rather than merely replaying random archived speech—the detective instinct that first made Julie Mao his case now identifying her as the key to the whole phenomenon.   </p>
+<h3 id="chapter-fifty-three-holden">Chapter Fifty-Three: Holden</h3>
+<p>Summary: Miller sends suit medical data to prove that he is lucid, then tells the <em>Rocinante</em> crew that Julie controls Eros and may turn aside if he can reach her. Holden initially refuses to delay the incoming missiles, but Miller argues that Eros can outrun them and that the internal bomb remains the fallback. Holden buys him time from Fred Johnson by offering the sealed protomolecule sample in exchange, then suggests Venus as a destination that will not kill a human population. Source anchors: med data; Julie; missiles; Fred; Venus.   </p>
+<p>Analysis: Miller's medical data addresses the immediate alternative explanation—that radiation or hypoxia has produced his belief—without proving the larger claim about Julie Mao. <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> therefore makes a bounded gamble: the incoming missiles retain fuel, Miller retains the bomb, and the sealed sample gives Fred Johnson enough political value to accept a delay—an exchange of the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> for time, showing how <a href="//02%20Concepts/Information%20and%20Coordination.html">information</a> is now the most negotiable currency in the system.   </p>
+<h3 id="chapter-fifty-four-miller">Chapter Fifty-Four: Miller</h3>
+<p>Summary: Miller scavenges another oxygen cylinder in the transformed medical bays and follows concentrations of heat and blue light deeper into Eros. He finds Julie lying within a living grotto, wakes her, and explains that the station is carrying her remembered wish to go home toward Earth without understanding the consequences. Miller persuades her that she is more capable than the mechanism using her and asks her to choose Venus; Julie turns Eros away while admitting that she is afraid. Source anchors: medical bays; oxygen; fireflies; Julie; Venus.   </p>
+<p>Analysis: Julie Mao's agency survives through memory and desire rather than ordinary bodily control, which explains both Eros's course and its defensive response to the <em>Nauvoo</em>—the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> built on the person it consumed. Miller succeeds by treating her as the person Protogen erased: he names the human cost, offers Venus as a concrete alternative, and places the decision with Julie instead of attempting to command the alien system, letting her remembered desire to be free become the counterweight that turns the host away from Earth.   </p>
+<h3 id="chapter-fifty-five-holden">Chapter Fifty-Five: Holden</h3>
+<p>Summary: Holden dreams that Eros reaches Montana before a real alarm wakes him to a UN corvette targeting the <em>Rocinante</em>. The standoff ends when Eros changes course away from Earth, and Holden orders the pursuing ships to stop before their missiles follow the new path. The crew watches Eros enter Venus orbit, break into a spreading fractal cloud, and vanish beneath the atmosphere, saving Earth while leaving an active alien process beyond human containment. Source anchors: Montana; Eros; Rocinante; Venus; Amos.   </p>
+<p>Analysis: The UN corvette remains ready to fight over access even during an extinction threat, showing that strategic rivalry between the great powers survives evidence of Eros's autonomy. Its diversion to Venus validates Miller's appeal without making the outcome safe: the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">Eros fragments</a> spread across an environment humans cannot enter, so the immediate rescue of Earth creates a less observable long-term problem—<a href="//04%20Series/The%20Expanse.html">the series'</a> dangling threat born from a moment of mercy.   </p>
+<h3 id="epilogue-fred">Epilogue: Fred</h3>
+<p>Summary: Fred prepares to address Earth, Mars, and Belt representatives on Ceres while Venus grows two-kilometer crystal structures and the protomolecule sample gives the OPA leverage. Holden asks for amnesty, ownership of the <em>Rocinante</em>, and public credit for Josephus Aloisus Miller as a named person rather than a generic Belter hero. Fred refuses the last distinction because he needs Miller as a political symbol, then opens the peace conference by offering the stars as the alternative to mutual annihilation. Source anchors: Fred; Ceres; Venus; Miller; Rocinante.   </p>
+<p>Analysis: Fred Johnson understands that the Ceres peace conference listens to the <a href="//05%20Characters%20and%20Entities/OPA%20and%20Belt%20Political%20Identity.html">Belt</a> because he controls the sample, not because the other powers have accepted equality—leverage derived from the <a href="//05%20Characters%20and%20Entities/Protomolecule%20and%20Ring%20Network.html">protomolecule</a> rather than recognition. His decision to turn Josephus Aloisus Miller into an icon repeats the narrative abstraction <a href="//05%20Characters%20and%20Entities/James%20Holden.html">Holden</a> opposes, but Fred treats that simplification as a bargaining instrument capable of converting one man's death into institutional standing, closing the book on Miller's individual humanity while opening <a href="//04%20Series/The%20Expanse.html">The Expanse</a>'s new political order.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Solomon Epstein and the Epstein Drive</strong>: a backyard inventor whose near-light-speed yacht is still visible centuries later; his drive makes the colonized solar system economically possible because it "hadn't given humanity the stars, but it had delivered the planets." A shorthand for technological endowment resetting the constraints of an entire system.   </li>
+<li><strong>The Canterbury's death</strong>: nuclear torpedoes delivered by a stealth ship that a full ice hauler cannot outrun; the MCRN-stamped battery is a real clue that proves only provenance, not guilt. The whole war begins because partial evidence is broadcast as full truth.   </li>
+<li><strong>Holden's transparent-society creed</strong>: "If everyone knows everything, nothing stays secret" versus Miller's counter, "You never, never put that kind of accusation out there until you know the score." The book's central argument about the ethics of disclosure.   </li>
+<li><strong>The Rocinante's name</strong>: from <em>Don Quixote</em>'s horse, "no longer a workhorse." Miller identifies Holden's trajectory to Eros purely from the ship-name choice, an example of deductive signature-reading.   </li>
+<li><strong>Amos's confession</strong>: "A few things fell different when I was a kid. I could have been those ass-bandits on Thoth." A concise statement of the idea that moral luck, not nature, separates men like Amos from Protogen's engineered sociopaths.   </li>
+<li><strong>Dresden's theft of the protomolecule pitch</strong>: "First. Fastest. Furthest." and his speech casting Eros's deaths as "small potatoes" next to Genghis Khan's murder of a quarter of humanity. The model of utilitarian atrocity pitched to a corporate board.   </li>
+<li><strong>The Phoebe origin story</strong>: the protomolecule was a weapon fired at primordial Earth 2.3 billion years ago, captured by Saturn; Phoebe is a dead drop, not a launcher. Unlocks the meaning of every later contagion set-piece.   </li>
+<li><strong>Naomi's distributed-computing hypothesis</strong>: the protomolecule needs biomass as both material and processing power, "not smart enough yet," which is why Eros (isolated, populous) is the ideal test site.   </li>
+<li><strong>The Eros feed / Radio Free Eros</strong>: the station's absorbed human speech recompiled into glossolalia; the <em>Razorback</em> phrase reveals "the dead of Eros weren't dead" — Julie survives as memory inside the machine, the seed crystal that lets Miller redirect the whole station.   </li>
+<li><strong>The Nauvoo's repurposing</strong>: a two-kilometer Mormon generation ship turned into the hammer that misses, because Eros has become a thinking ship that can dodge. The pivot from "redirect inert mass" to "confront agency."   </li>
+<li><strong>The five transponders</strong>: turning Miller's moored OPA freighters back on converts Eros's stealth into a targeting beacon for the largest interplanetary nuclear barrage in history — an information trick that saves the Rocinante but dooms Miller.   </li>
+<li><strong>The dead-man's switch</strong>: Naomi's five-second routine means Miller's continued consciousness is the only thing separating a controlled entry from catastrophic detonation; his thumb on the button becomes the book's image of sacrifice as an ongoing act rather than a single choice.   </li>
+<li><strong>"Give her Venus"</strong>: Holden's offhand suggestion becomes the final destination that spares Earth; Eros's fractal seed-cloud vanishing into Venus's cloud deck leaves an active alien process beyond human containment — the series' open wound.   </li>
+<li><strong>Fred's icon-making of Miller</strong>: reducing "Josephus Aloisus Miller" to "the Belter" who saved Earth, against Holden's insistence on the actual man. A compact lesson in how states convert individual sacrifice into usable narrative.   </li>
+<li><strong>Ceres as the meeting ground</strong>: the peace conference runs on Tycho-built infrastructure and Fred's hidden sample; Earth and Mars treat Ceres as neutral largely because neither respects it enough to care.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//04 Series/The Expanse.html">04 series/the expanse</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Speculative Governance and Future Orders.html">speculative governance and future orders</a></li>
+	<li><a class="backlink" href="//01 Books/The Expanse/Abaddon's Gate.html">abaddon's gate</a></li>
+	<li><a class="backlink" href="//01 Books/The Expanse/Caliban's War.html">caliban's war</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/OPA and Belt Political Identity.html">opa and belt political identity</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Protomolecule and Ring Network.html">protomolecule and ring network</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Earth as Administrative Core.html">earth as administrative core</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Rocinante Crew.html">rocinante crew</a></li>
+	<li><a class="backlink" href="//02 Concepts/Speculative Governance.html">speculative governance</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/James Holden.html">james holden</a></li>
+	<li><a class="backlink" href="//01 Books/The Expanse.html">01 books/the expanse</a></li>
+	<li><a class="backlink" href="//01 Books/The Martian.html">the martian</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/leviathan-wakes/index.html">leviathan-wakes</a></li>
+	<li><a class="backlink" href="//obs.html/tags/the-expanse/index.html">the-expanse</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A311640059904929880826229958322232772676{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D311640059904929880826229958322232772676{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B311640059904929880826229958322232772676{level}" level="{level}" note_temp_id="311640059904929880826229958322232772676" onclick="window.ObsHtmlGraph.run(this, '311640059904929880826229958322232772676', 'leviathan wakes');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C311640059904929880826229958322232772676{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

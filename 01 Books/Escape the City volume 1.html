@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="escape the city volume 1">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'escape the city volume 1';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=escape the city volume 1" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="escape-the-city-volume-1">Escape the City volume 1</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>Travis J. I. Corcoran's <em>Escape the City volume 1</em> is the first half of a practical, engineer's-eye homesteading manual (followed by <em>Escape the City volume 2</em>, which covers household, meat-processing, brewing, workshop, and blacksmithing). It sits in the practical-survival cluster alongside other how-the-machine-actually-works literature, and is conceptually the terrestrial twin of the vault's frontier-expansion books: the same "private actors build their own infrastructure under technical risk" logic that runs through <em>The High Frontier - Human Colonies in Space</em> and <em>How to rapidly industrialize Mars</em> is applied to an individual family carving a self-reliant footprint out of rural New England. It is the anchor reading for the <a href="//03%20Reading%20Paths/Private%20Frontier%20Capital%2C%20Infrastructure%2C%20and%20Technical%20Risk.html">Private Frontier Capital, Infrastructure, and Technical Risk</a> reading path, and it feeds the concept notes on <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>, <a href="//02%20Concepts/Legibility.html">Legibility</a>, <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>, <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>, <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>, and <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>. No real Series hub covers it; it is a standalone two-volume manual with a direct sibling volume 2.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><em>Escape the City volume 1</em> is a decision manual for people who want to leave suburban or city life and run a modern homestead, written from the specific vantage of a suburban-born, forty-something, engineer-and-lawyer-typed author who bought a 56-acre farm in southern New Hampshire. The book is deliberately not a pastoral meditation. It is organized as an equipment-and-process handbook, moving from motivation (why move at all), to planning and finding land, to the hard infrastructure the rural household must own and run (heat, water, electricity, internet, garbage, septic, roads, freight, radio, driveway), to buildings, boundaries and layout, vehicles (dominated by the tractor), livestock, plants, pests, and finally the forest as a productive asset. Throughout, the author's persona is the curious amateur who treats homesteading as an engineering problem: he gives prices (as of 2021), catalogs failure modes, and repeatedly insists that enthusiasm is not competence.   </p>
+<p>Corcoran frames the book around Robert Heinlein's "competent man" quotation and explicitly rejects specialization. His guiding method is to break each system into components, research interfaces and tolerances, and test assumptions. The sustained argument is that the country is not a pre-modern wilderness but a place where the background services of the city are privatized downward onto the household: no trash pickup, no municipal water or sewer, no guarantee of grid power during ice storms, no curbside delivery, often no high-bandwidth internet, and no anonymous contractor culture. Every one of those services becomes a physical system the owner must design, buy, maintain, and repair — an "infrastructure pyramid" that is wider and taller than the suburban one.   </p>
+<p>The book is also, unusually for the genre, honest about economics and second-order effects. It attacks the circulating "one-acre self-sufficient homestead" fantasy by John Seymour for omitting parking, septic, wells, and pig behavior; it runs real cost-per-pound arithmetic for eggs, eggs-for-meat, sheep, pork, hay, and mushrooms; it works through two full hypothetical first-year budgets (a "small garden and chickens" homesteader who spends roughly $10,000, and a "homemade bacon" homesteader who spends roughly $40,000); it computes solar-panel NPV and firewood heating-degree-day math; and it repeatedly warns that labor, cold, snow, rats, weeds, and husbands-and-wives' competing priorities will consume more of every resource than the plan anticipated. It is aggressively skeptical of permaculture food-forest theory and of armchair formulas, favoring what it calls "actual dependencies" over fantasy.   </p>
+<p>Structurally, each major section follows a "tools first, processes second" schema, so the reader costs out fences, tractors, coops, orchards, and mills before deciding whether the activity is worth doing. The tone is chatty and self-deprecating (the author recounts his own mistakes at length: the log splitter sized for 30-inch rounds, the tree-guard that strangled a willow, the hay baler with a slipping knotter, the fence gate posts installed three inches too narrow, and the run-over brushhog), which does more than humanize: it treats failure as data. The result is less a how-to-homestead pamphlet than a manual for how to <em>think</em> about homesteading: enumerate the system, size the inputs, respect the constraints, buy the right tool once, and expect friction.   </p>
+<p>The manual closes inland and in the forest: forest management as a decades-long crop decision, firewood logging as a physical and safety skill, chainsaws down to their chain geometry, lumber milling and drying, mushroom culture, maple syrup as a spring ritual with evaporator sizing math, beekeeping as a rent-taking business, and deer hunting as a legal-and-tooling exercise in local knowledge. Volume 1 deliberately hands off the kitchen, butchery, brewing, workshop, and blacksmithing domains to Volume 2.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>The reader / escaping urbanite</strong>: the intended audience — a suburban or city adult (often with a white-collar remote-friendly job) who dreams of land, livestock, and self-reliance but lacks farm experience. Corcoran constantly calibrates advice to this person's actual failure modes: overestimating first-year productivity, falling in love with a single property, buying animals before fences, and underestimating winter.   </li>
+<li><strong>The author, Travis Corcoran (the narrator-homesteader)</strong>: a suburbanite until age forty, self-described "curious amateur" with a "systematic and analytic" engineer/lawyer temperament (he half-jokes about being INTJ/"sperg"). He is the book's example-of-one: he does real homesteading work (1.5 days/week, plus hired farmhands at peaks), he welds, breeds sheep, taps maple trees, skids logs, and he documents his own purchases, prices, and mistakes. His wife is a shadow partner who manages the vineyard, berry patch, and front orchard and is credited with the pragmatic "learn gardening, food processing, and medical study" advice for young women.   </li>
+<li><strong>The homesteaders, hobby farmers, and gentleman farmers the manual addresses</strong>: the taxonomy of rural dreamers (suburbanite-in-the-country, garden-with-chickens, market gardener, homesteader, commercial farmer) that the entire book is organized to serve differentially. The manual's core recommendation is that readers identify which scenario they actually intend before buying land, tractors, or chickens.   </li>
+<li><strong>Rural contractors, loggers, excavators, and farmhands</strong>: the informal labor market the homestead depends on. Corcoran depicts rural scheduling norms ("I almost forgot," show-up-unannounced), branding absent (Don with a backhoe, email harleydavidsonfan1983@yahoo.com), logging and excavator supply chains oriented to big commercial jobs, and a farmhand labor pool that ranges from competent to catastrophic (the weeder who pulled all the pumpkins). He also documents the Free State Project's libertarian day-labor cohort and their "counterculture" work-boundary violations.   </li>
+<li><strong>Neighbors and town officials</strong>: the social environment — the mill-ruining farmer who hayed the fields, the gunsmith neighbor defended by the zoning board, the building officer the board backed, and the toxic seller who stripped fixtures and returned to steal hardware. Corcoran is clear that informal local power, friendship networks, and right-to-farm law largely set the terms of rural coexistence.   </li>
+<li><strong>The ancillary experts and correspondents</strong>: a friend Sean ("pigs are a-holes"), friend Marcus (cattle and logging stories), friend Dan (seed mix recommendations), the commercial orchard friend (cider blend plan), contractors, a forester, shearers, sawyers, and the book's proofreader (fastener expertise) — all woven in as named authorities reinforcing the "I report what I and trusted locals actually found" method.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//01%20Books/Escape%20the%20City%20volume%202.html">Escape the City volume 2</a> — the direct sibling volume; carries kitchen, meat processing, brewing, workshop/blacksmithing, irrigation, ponds, and farmhand material referenced throughout by <code>(see vol 2 ...)</code> cross-references.   </li>
+<li><a href="//03%20Reading%20Paths/Private%20Frontier%20Capital%2C%20Infrastructure%2C%20and%20Technical%20Risk.html">Private Frontier Capital, Infrastructure, and Technical Risk</a> — the reading path this manual most directly anchors, treating private households as frontier infrastructure builders.   </li>
+<li><a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> — the core concept: household-owned heat, water, power, septic, road, freight, and communication systems standing in for municipal background services.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> — right-to-farm law, zoning-board friendships, contractor trust networks, and cultural-fit norms governing rural exchange.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a> — surveying, stakes, ground paint, baselines, and the "seeing like a state" treatment of 20-foot log standardization.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> — acreage-per-animal, solar insolation, frost dates, growth factors, sustainable cord-per-acre harvest rates.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> — driveway snow, feed storage, pallet deliveries, freight liftgates, winter chore access, and implement-swap friction.   </li>
+<li><a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> — the CAPEX/OPEX arithmetic, $10k vs $40k first-year budgets, tractor-vs-excavator-rental reasoning, and solar NPV.   </li>
+<li><a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a> — the white-label implement market, illiquid rural real estate, log and pulp markets, and the "buy piglets or buy feed" commodity logic.   </li>
+<li><a href="//01%20Books/The%20High%20Frontier%20-%20Human%20Colonies%20in%20Space.html">The High Frontier</a> and <a href="//01%20Books/How%20to%20rapidly%20industrialize%20Mars.html">How to rapidly industrialize Mars</a> — thematic siblings in the frontier-capital cluster, for the same bootstrap-infrastructure-from-scratch logic at larger scale.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The privatized utility</strong>: municipal background services (water, heat, power, sewage, roads, trash, phones) reappear on a homestead as owned systems requiring capital, maintenance, and repair. Track how each section converts a city service into a household task.   </li>
+<li><strong>Competence as process</strong>: Heinlein's "competent man" ideal expressed as enumeration, sizing, and rehearsal — "tools first, processes second," budgets before pigs, and 100 hours of close-to-home chainsaw practice before felling.   </li>
+<li><strong>Friction and second-order effects</strong>: Clausewitz's friction, the Hayek/Friedman bottom-up planning threads, and the recurring message that the simplest thing is difficult and accumulates.   </li>
+<li><strong>Ecological and physical constraint as arithmetic</strong>: acreage per animal, bushels per tree, cords per acre per year, BTU budgets, frost days — the manual's standard move is to turn romantic goals into numbers.   </li>
+<li><strong>Anti-fragility and resilience</strong>: wood heat, PTO generators, well buckets, wood gasification, stored seeds, and a deliberate preference for multi-use tools and redundancy ("backup of the backup").   </li>
+<li><strong>The skepticism filter</strong>: Chesterton's fence and the efficient-market heuristic applied to food forests, walipini, permaculture pig "plowing," and heritage-breed obsessions — if it were truly better, someone would already be doing it.   </li>
+<li><strong>Local knowledge and informal institutions</strong>: town meeting politics, right-to-farm, scheduling norms, fencing a hard-to-parcel land, and the sheer value of trustworthy neighbors and contractors.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>: rural households directly manage heat (oil/propane/wood), water (well + pump + treatment), backup power (generator, batteries, solar), septic, roads and driveways, freight delivery, garbage, and radio — every background service of suburban life becomes owned infrastructure with failure modes.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: contractors, neighbors, zoning boards, right-to-farm statutes, Free State Project labor, and "rule of friendship" shape what can be built, hired, and defended far more than written law.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a>: surveys, monuments, deeds, stakes, 3-4-5 baselines, ground paint, and standardized 20-foot logs convert land and wood into coordinates others (excavator operators, sawyers, machines) can act on.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: pasture acres per sheep, deer fencing, pollination groups, growth factors and DBH, heating degree days, one cord per acre per year, first/last frost — biology and climate cap every plan regardless of budget.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: storage parity for feed and fuel, winter chore access, pallet deliveries and liftgates, snow-drift economics, hay-elevator flows, and implement-swap time all determine whether a homestead's repeated chores stay workable.   </li>
+<li><a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>: the book is a sustained CAPEX/OPEX exercise — $10k vs $40k first-year scenarios, tractor-vs-rental versus excavator-vs-contractor math, solar NPV, per-pound egg/pork/hay/mushroom costs, and "buy cheap once" traps.   </li>
+<li><a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a>: illiquid rural real estate, white-label implements, spot-price oil and pulp markets, loggers' two-sided business, and the commodity-business warning that hobbyists compete against scaled professionals.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="intro">Intro</h3>
+<p>Summary: Corcoran opens with three ways to read the book — straight through, by index, and by following cross-references in a "spanning tree" of topics (he likens it to Wikipedia, TVTropes, or the Encyclopædia Britannica). The worked example is a BLT: a "I, Bacon, Lettuce and Tomato Sandwich" recipe that walks the reader from a loaf of bread (vol 2 baking) through bacon (vol 2 butchering), tomato, lettuce, mayonnaise, a cast-iron skillet, and tomato soup — a culinary variant of Leonard Read's "I, Pencil." The welcome section establishes the author as a suburban-raised amateur ("not a third-generation farm guy"), a systematic/analytic INTJ type, and a manifesto for the Heinleinian "competent man" ethos, complete with the dedication "not to be bug men" and the full "change a diaper / plan an invasion" quotation. He then defines the taxonomy of gardening, homesteading, farming, horse farm, hobby farm, gentleman farmer, and his coinage "hobo farmer," and enumerates five farming scenarios — suburbanite in the country, a garden with chickens, market gardener, homesteading, and commercial farmer — with the running principle that no single rural dream fits all of them. He also explains the equipment-first, processes-second organization and notes that all prices are 2021 new-equipment prices, with used equipment as low as 10% of new.   </p>
+<p>Analysis: The Intro installs the book's central rhetorical move: turn a mundane consumable (a BLT, implicitly a pencil) into a branching chain of owned competencies, then sort readers by actual motive and scale before any money is spent. The taxonomy matters because it relentlessly separates "gardens grow food; farms grow dollars," and the hobo-farmer self-deprecation primes the reader to accept the author as a fellow amateur rather than a guru. This framing is itself a <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> discipline — decide which scenario you are buying before buying anything — and the "equipment first" rule means cost gating happens up front. The Heinlein dedication gives the book its <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> ethos: a household that can staff its own infrastructure.   </p>
+<p>Source anchors: BLT; Leonard Read, "I, Pencil"; Robert Heinlein, Time Enough for Love; spanning tree; gardening/homesteading/farming; horse farm; hobby farm; gentleman farmer; hobo farmer; market gardener; commercial farmer; 2021 prices.   </p>
+<h3 id="life-in-the-country">Life in The Country</h3>
+<p>Summary: This section argues the country is still recognizably modern — schools, Amazon, Facebook, commuting, TV — but operationally different: no trash collection, legally fine AR-15 shooting in backyards, pig carcasses hung in a garage as the first step of bacon-making, and raccoons handled with a .22 rather than a police call. Distance from civilization is literally measured in 30-minute-to-two-hour drives for coffee, dinner, or groceries; the country store may combine gas station, convenience store, and hardware store; and the nearest hospital may be far. Corcoran compares taxes versus services (rural taxes lower, services thinner due to per-capita economics), reproduces a town right-to-farm clause backed by New Hampshire RSA 674:32 a-c and the federal right-to-farm consensus, and details what a farmer may legally do to a suburban neighbor: tractors at 4 a.m., hot-August manure spreading, pig slaughter and intestinal composting on the property line, and halogen lights at 10 p.m. He covers zoning, noise-ordinance hearings, yard-aesthetic norms (a 1,000-square-foot house on a lot with three working cars, four dead cars, snowmobiles, steel beams, a chicken coop, and an ice-fishing shack), internet reality (56-acre farm, ~50 Mbit/s fiber), cultural fit and scheduling norms, branding absence ("Don with a backhoe"), Free State Project day-labor boundary violations, rural jobs and remote work, neighbors, and buyer's remorse.   </p>
+<p>Analysis: The section converts "moving to the country" from a lifestyle fantasy into an institutional and social audit. The right-to-farm material is the clearest example: written law plus a town zoning board staffed by friends of the offending gunsmith make "the rule of friendship" dispositive, which is <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> operating at full strength. Buyer's remorse, cultural-fit mismatches, and the FSP labor norms all reinforce the same lesson that motivation must survive contact with local social texture. At the same time the "56-acre farm with fiber internet" detail and the free-market substitute services (contract trash pickup, tutors) sketch a fully modern life with private provision — the mildest possible version of <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>, where even public utilities can be bought as services.   </p>
+<p>Source anchors: right to farm; RSA 674:32 a-c; AR-15 backyard; pig carcass in garage; .22 raccoon; country store; 56-acre farm; fiber internet; cultural fit; "Don with a backhoe"; Free State Project; remote work; buyer's remorse; noise ordinance hearing; zoning board.   </p>
+<h3 id="planning-your-move">Planning Your Move</h3>
+<p>Summary: Planning spans everything from the final moving-truck weeks to a fifteen-year horizon. Corcoran rejects one-size acreage advice: a 10'x10' garden and chickens fit on a quarter acre, while sheep (10 on 2.5 pasture acres), a half-acre garden, a half-acre vineyard, a woodlot, cattle, hay, and grain push needs to fifteen, forty, or more acres. He devotes a section to why John Seymour's widely circulated "Start a 1-Acre, Self-Sufficient Homestead" article is harmful — no parking, septic, well, or yard; pigs imprisoned in a barn stall; the "pigs plow your grassland" myth; and an unrealistically small cow pasture — with the maxim "you can fix almost everything later, but not total size." He gives three countdown plans (ten-year for young adults building career/financial base/tools/skills/mate with a SpaceX-rocket compounding analogy; three-year research and practice plan; one-year house-hunting plan), a full house-hunting workflow (commute limits, town-tax spreadsheets showing fourfold variation, boot-on-the-ground town investigation, need/want lists with immutable-versus-mutable features, deed-registry spelunking including an F12 browser hack to dodge New Hampshire's $2-per-page deed fee, and a sober treatment of illiquid rural markets where a 3,500-unit town has only two houses meeting basic criteria), buying and haggling (BATNA, price and fixture haggling, junk and third-party equipment clauses, seller's tools negotiation — the Kubota B7800 package deal — and required inspections including septic pumping and well "shocking"), and arrival/goal-setting with two fully-budgeted first-year narratives.   </p>
+<p>Analysis: This is the book's heart as a planning document. The acreage discussion is a pure <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> exercise — activity determines land need, and margins must absorb boulders, slopes, and poor soil. The illiquid-market analysis and the haggling play-by-play (including the <span class="arithmatex">\(20k-package-to-\)</span>18k Kubota negotiation with comps and a manufactured walk-away) are <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a> in action, while the two first-year narratives convert the whole planning stack into explicit <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>: $10,000 buys chickens, a garden, a used riding mower, and a winter of firewood; $40,000 buys a used tractor, fences, sheds, three pigs, and a full butchery kit. The "arrival goals" warning — everyone overestimates the first five years — is the book's recurring humility check, and the "work backwards from the winter cold window" scheduling logic is a nice example of sequencing under a physical constraint.   </p>
+<p>Source anchors: John Seymour, 1-acre homestead; space shuttle/SpaceX rockets; FOUR acreage arithmetic (10'x10' garden, 0.1 acre pigs, 2.5 acres sheep, 0.5 vineyard); realtor.com; New Hampshire deed registry; BATNA; Kubota B7800, <span class="arithmatex">\(18k; septic inspection; well shocking; Small Garden and Chickens (\)</span>10k); Homemade Bacon ($40k); arrival goal priority lists.   </p>
+<h3 id="utilities">Utilities</h3>
+<p>Summary: Utilities is the manual's largest infrastructure section. Heat covers oil furnaces and 250-gallon tanks and the economics of spot prices and fall lock-in deals, propane delivery and vaporization limits in cold weather, and a deep dive on wood heat: make-up air and chimney draft, flues and chimney types and defects (creosote, occlusion, cracked linings), cleaning, wood stoves versus fireplaces and fireplace inserts, wood boilers with their 300–500-gallon water jackets and feed/ash/airlock/maintenance routines, and the full firewood chain (cords, grapple loads, energy content, drying, stacking on mega-pallets, heating-degree-day estimation, manual/electric/hydraulic/PTO splitting, sourcing from loggers via the "I'm a farmer, several grapple loads, cash in hand" pitch, and a sustainable one-cord-per-acre rule). Water covers wells (groundwater vs aquifer, dug vs drilled, artesian), pumps, testing and shocking, modular treatment stages, emergency water, rainwater, and grey water. Electricity covers line power and its costs, generator sizing and classes, PTO generators, transfer switches and inverters, wood gasification, and a full solar sizing/NPV treatment. It then covers internet, garbage, septic, roads and road classes, freight, radio (ham/CB/FRS/GMRS/MURS, ending on the software-defined Baofeng UV-5R), and driveway snow removal and grading.   </p>
+<p>Analysis: The utility sections are the clearest statement of the <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> thesis: every background service of the city is enumerated, sized, and given a physical home on the property. The wood-burner subsections in particular are an exercise in <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> — firewood is a storage, drying, stacking, moving, and feeding problem measured in cords and heating-degree-days, and the author's "measure the splitter before you cut" advice is a small masterpiece of second-order thinking. Electricity is treated under <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> and ecological reality: solar doesn't make sense everywhere, but NH's high power prices offset its low insolation, and NPV math decides. The septic, well, road-class, and freight subsections all demonstrate that rural life privatizes risk downward — a cracked leach field or a class-6 road is a household problem with a dollar figure.   </p>
+<p>Source anchors: 250-gallon oil tank; creosote; chimney cap; wood boiler; cord; face cord; grapple load; mega-pallet; heating degree days; PTO generator; transfer switch; solar NPV; 100 gallons per household alcohol law aside; well pump; shock chlorination; septic leach field; class 5 vs class 6 roads; depot delivery; Baofeng UV-5R; spreader chains; "three-inch mix" driveway fill.   </p>
+<h3 id="buildings">Buildings</h3>
+<p>Summary: Buildings enumerates the outbuilding stack beyond the house: workshop, bunkhouse, barn, coop, run-in shed, sugar shack, garden shed, tractor shed, firewood shed, and alternative structures (pole barns, cargo containers, fabric buildings). The house chapter argues hunting criteria — workshop space, pantry/storage, proximity to barns. The workshop chapter specifies 200 square feet as a bare minimum, an 800-square-foot shop described as cramped, ground-level access, a dedicated subpanel, lighting math (80–100 foot-candles; the author's "insane overkill" 180 fc × 800 sf = 144,000 lumens in 32 fixtures), and a workbench recipe. Barns get the central-aisle design, stall sizes and per-animal square footage (12'x12' stall holds 1 pony, 1 horse, 1.5 cows, 7 goats, 7 sheep, 40 chickens, 24 turkeys, 24 geese, 3 pigs), hayloft lighting and drop-hay options, underground conduit for barn utilities, yard hydrants and their packing/freezing maintenance, NEMA L5-15 locking outlets in stall ceilings, mucking with a pitchfork technique, and Joel Salatin's removable-partition idea. Coops get roosts (2x4 edge-up for chickens — the experimental forum lesson), automatic doors, fixed versus mobile chicken tractors, floor bedding, laying boxes, feeders/waterers (including nipple systems), dust, calcium, grit, food storage, light timers, and a <span class="arithmatex">\(0-to-\)</span>6,500 cost range. Run-in sheds, sugar shacks, garden sheds, tractor sheds, cargo containers, fabric buildings (with the anti-wind anchoring and cover economics), and greenhouses/high tunnels/low tunnels are all given design and price detail.   </p>
+<p>Analysis: Buildings is where infrastructure becomes site design. The per-animal-stall math and the "you go to war with the barn you have" honesty are <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> applied to floor plans; the author's clean-sheet wish list (five to six stalls, six-plus stalls of covered storage, removable half-height dividers so a skid-steer can muck the whole barn) is textbook <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>. The fabric-building anchoring saga, the cargo-container corner-loading cautions, and the greenhouse vent/shade/heating upgrade ladder all carry the book's persistent message that you should spend capital on structure first because it cannot be retrofitted, and defer lights, heaters, and irrigation until you know what you actually want. The high-tunnel economics (<span class="arithmatex">\(2.21–\)</span>5.50 per square foot across DIY, economy, premium, and reinforced) and raised-bed price ladder ($0 to $1,050 per 4'x16' bed) are <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> miniatures.   </p>
+<p>Source anchors: 800 sq ft workshop; 144,000 lumens; 12'x12' stall; central aisle barn; hayloft; yard hydrant; Joel Salatin; chicken tractor; roll-away laying box; nipple waterer; rubber bowls; run-in shed; sugar shack; cargo container TEU; ShelterLogic fabric building; kayak-hoist-solved high tunnel; wiggle wire; high tunnel; walipini; 2x4 roost edge-up; egg-washing bucket.   </p>
+<h3 id="surveying-and-layout">Surveying and Layout</h3>
+<p>Summary: Corcoran separates surveying (licensed, legal weight, upstream of deeds) from layout (informal, no legal weight, for the owner's own work). Surveying delivers monuments (permanent; brass disks to rebar with crimped markers, survey nails, buried rebar — and removing one is a crime under New Hampshire RSA 472:6), stakes (temporary), a map, and optionally a report, all anchored in earlier surveys and office research with the National Society of Professional Surveyors 2 cm + 50 ppm precision standard. He recounts his own $600 boundary survey for a stone wall and screening trees along a 500-ft driveway, and reads old farm subdivision history off property-line geometry like a bullet-crack forensics photograph (straight long lines old, lines terminating against them newer). Layout covers the tool kit (stakes, mallet, string, string reel and level, flagging tape, ground paint, surveyor's tape, measuring wheel, compass, builder's level, transit), baselines, the 3-4-5 rule for right angles, diagonal-checks for squareness, grid-and-string staking for orchards, and vertical layout with string levels, builder's levels, water levels, and cut-and-fill.   </p>
+<p>Analysis: Surveying versus layout is a distinction about <a href="//02%20Concepts/Legibility.html">Legibility</a>: a survey makes land legible to the law and to everyone downstream (deeds, excavators, zoning officers), while layout makes a garden, fence line, or orchard legible to the owner's own muscles and machines. The advice to do all layout before excavation, stake every point, and stay on site while the excavator works is a coordination rule for <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> — machines are expensive and the cost of "kinda north/south" is measured in moved earth. The 3-4-5 and diagonal-check material gives the reader a repeatable procedure, and the <span class="arithmatex">\(600-vs-\)</span>150 survey story is a clean Ecapital decision about when precision is worth paying for. The Public Land Survey System aside frames the entire chapter as the tension between legible rectangular grids and inherited, organic New England metes-and-bounds.   </p>
+<p>Source anchors: survey; monument; stake; New Hampshire RSA 472:6; National Society of Professional Surveyors; $600 survey; 3-4-5 rule; diagonal check; builder's level; water level; string level; cut and fill; stone wall; metes-and-bounds; Public Land Survey System.   </p>
+<h3 id="vehicles">Vehicles</h3>
+<p>Summary: The vehicles section is dominated by the tractor, approached as a platform: three-point-hitch categories 0–4 (with cat. 1 as the overwhelming homestead choice), front-end loaders (bucket attachment systems, pin-on vs skid-steer quick-attach, forks, grapples, teeth, quick spades, chain grab hooks — including welding hooks onto the bucket and the "it's a barn, not a yuppie condo" permission structure), engines and cold-weather diesel gelling, cockpits/cabs/ROPS and rollover safety statistics, wheels/tires/tubes with full sizing and tread-pattern detail, tire ballast and chains, the three-point hitch (top link, lifter arms, telescoping stabilizers, quick hitches, rear remotes, top-and-tilt), the PTO (540-RPM stubs, shafts, guards, slip and overrun clutches, machine keys, shear pins and their nylock-nut/grade rules), and the implement catalog (unpowered drawbars, ballast, rakes, back blades, box blades, plows, middle busters, subsoilers, disc harrows, fence stretchers; powered log splitters, snowblowers, rotary cutters/bushhogs, rototillers, post-hole diggers, post drivers, and spreaders/seeders/overseeders). Buying guidance covers need/category/horsepower mapping to acres, new vs used, dealer inspection, odd brands and the gray market, and operation (starting interlocks, driving controls, PTO/3PH handling, FEL joystick, implement-attachment friction — Clausewitz's "friction" quoted approvingly). Riding mowers, ATVs/UTVs, skid-steers, backhoes, excavators (rent vs hire), bulldozers, trailers, and general maintenance (batteries, jacks, tires, oil changes) each get treatments.   </p>
+<p>Analysis: The tractor chapters are the book's most concentrated dose of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the value of the machine is in its interfaces (3PH, PTO, quick-attach, remotes) and its inventory of implements, and the recurring pain is swapping, mounting, greasing, and shear-pin replacement. The cat. 1 focus and "'what category' before 'how much horsepower'" is a sizing discipline; the 56-acre→50-60 HP recommendation versus the author's own at-the-limit 30 HP B7800 is honest <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> applied to machinery. Safety forms a through-line — ROPS + seatbelt as a 99% rollover-survival claim, PTO guards, tractor-towing flip hazard, and "never trust a hydraulic cylinder" — and the safety messaging is itself a bet on survivability as part of <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>. The gray-market/arbitrage story, the white-label implement business model, and the "buy cheap used, outgrow it, trade it" advice are <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a> set-pieces.   </p>
+<p>Source anchors: three-point hitch categories; cat. 1; skid-steer quick attach; ROPS; PTO 540 rpm; shear pins; nylock nuts; slip clutch; post hole digger; backhoe subframe; gray market; Messick's; Kubota B7800; tire ballast; tire chains; riding mower; zero-turn; BCS two-wheel tractor; excavator rent vs hire; bulldozer PAT; trailer hitch classes; machine keys.   </p>
+<h3 id="raising-animals">Raising Animals</h3>
+<p>Summary: Fencing comes first because it is common to nearly all livestock: perimeter versus cross fencing, corner designs from single posts up through the double-H corner, post types and driving methods, gates (stiles, cattle guards, swing gates and their installation/accessories, sliding gates, and electric-fence spring gates), chicken wire, wood fences, electric fencing (components, P vs PN modes, cross-pasture electro-mesh), woven wire, high-tensile wire, and feedlot panels, followed by the author's own five-phase fencing program (front 1.25 acres, chicken run, run subdivisions, road pasture, orchard) and "what I'd do differently." Chickens get sexes and roosters, breeds, egg and meat economics, predators, chicks (enclosures, heat, food/water/inoculation), keeping, and eggs. Goats and sheep cover resources, herd size, health care (drenches, FAMACHA, hoof trimming, hammocks), shearing and wool processing economics, breeding, milk, lambing, meat, the annual schedule, and per-sheep economics. Pigs cover behavior and ethics (the "pigs are a-holes" friend, and the dignity-vs-community argument), resources (shelter, straw, outdoor space, strong fence, water, food, mud wallow, feed types and growing your own), herd size, breeding economics, escapes and Maxwell's-demon herding, permaculture skepticism, and detailed conversion-ratio/marginal-growth/prise-per-pound arithmetic. Cattle are deferred to a friend's herd, and fish get ponds and IBC-tote aquaponics.   </p>
+<p>Analysis: The animals section makes <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> concrete: fencing first because livestock is only a cycle of value if it stays contained and fed, and every species adds feed, water, shelter, health, breeding, and escape demands. The egg, sheep, and pig cost-per-pound chapters are sustained <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> — eggs at $1.20–1.50/dozen, sheep at about $5.70/lb of meat with fleece offsets, and pigs at anywhere from 74¢/lb (scraps + self-butchery) to $10/lb (heritage breed + custom feed + outsourced butchery). The fencing philosophy — "no such thing as a fence that is too good," ground-anchored corners, and the phase plan — is a physical constitution of the property, tying into <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> (gates large enough for machinery, runs arranged so animals and equipment can move). The pig-ethics digression, arguing that rights come from integration into the human community rather than intelligence, is the book's most explicit political-philosophy statement, and it sits oddly-and-refreshingly alongside all the conversion-ratio math. The IBC-tote fish chapter gestures at <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> extended to protein.   </p>
+<p>Source anchors: double-H corner; T-post; woven wire; high-tensile; electro-mesh; cattle guard; 4" goat-and-sheep fence; wing-clipping; rams fighting; FAMACHA; Deb's Garlic Drench; sheep hammock; shearer; fleece economics; Ivermectin; piglets $100-125; "Maxwell's Demon" pig herding; pig conversion ratio; IBC tote aquaponics; joel us chicken tractor.   </p>
+<h3 id="raising-plants">Raising Plants</h3>
+<p>Summary: The plant section opens with definitions (forest, woodlot, orchard, berry patch, vineyard, lawn, pasture, field, garden) and then a sustained attack on the "food forest" concept via Wikipedia's definition, the Big Rock Candy Mountain allusion, Chesterton's fence, the efficient-market heuristic, and an account of Paradise Lot where even the authors' mostly-documented failures resolve into "more research is needed." Silvopasture is treated through two worked examples (sheep in a fenced orchard; sheep asked to eat Japanese knotweed, which they stunted but did not kill). The orchard core covers tree biology (cultivars, pollination groups and pairs, grafting and rootstocks), planning math (bushels, sizes, spacing, pollination partner distance, climate zones, the grid layout method), multi-year schedules, ordering, planting, pruning, pest control (rust, Japanese beetles, guard ropes and the tree-guard strangulation story), harvesting, storage, and hard-cider orchards. Lawns get a full maintenance program (mowing, clippings, fertilizing, weeds, watering and why you mostly don't, overseeding, dethatching, aerating, top dressing, leaves, rock walls). The garden chapter is exhaustive: locating and bed/path sizing, raised-bed materials with a price ladder, the annual-planning spreadsheet (zones, frost dates, seed catalogs, complements/antagonists, rotation, multi-/cover-cropping, overwintering), seed starting indoors, soil preparation, planting depth, mulching options, thinning, weeding, irrigation, fertilizing, harvesting, cleanup, seed saving and genetics; then specific plants. Pasture covers creation (logging, stump removal, contouring, soil testing, amending, drag harrowing, seeding, cultipacking, TLC), maintenance (brushhogging, fertilizing, 2,4-D, overseeding, rotational grazing), hay vs silage, and the full haying chain and economics. Field crops, vineyards, and berry patches round out the catalog.   </p>
+<p>Analysis: The plant chapters are where <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> and skepticism meet agronomy. The food-forest takedown is the flagship of the book's "Chesterton's fence" method: understand what already works and why before inventing layered utopias, and treat "low maintenance" as a red flag. The orchard chapters show genuine complexity accepted where biology demands it — pollen compatibility, rootstock/scion interaction, and pollination-group charts are exactly the kind of legible systems the author respects, and the iterative spreadsheet-based garden planning is <a href="//02%20Concepts/Legibility.html">Legibility</a> applied to a seasonal system. The raised-bed and mulching price ladders, haying economics (naive $1,275/acre vs realistic $300 first-years), and the "plant trees first because they take fifteen years" advice are <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> throughout. The lawn-watering math (the tripod-sprinkler acre being essentially impractical) and rotational grazing's S-curve are <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> and constraint thinking made explicit.   </p>
+<p>Source anchors: food forest; Big Rock Candy Mountain; Chesterton's fence; Paradise Lot; pollination groups; Granny Smith; grafting; rootstock B.9/M.111; bushel; CRZ; drip irrigation; walipini; USDA zone 5b; last spring freeze May 19; raised beds; weed barrier; glyphosate torch-hole template; F1 hybrid Royal Hybrid sunflower; cover crops; compost dots; 2,4-D; rotational grazing; strip grazing; hay bales; two-string; hay elevator; vineex row standing; bluebarley "grazing acres"; berry patch; bird netting; cordons; espalier; fan; apple peeler; hard cider; 26 USC 5042.   </p>
+<h3 id="pests-and-invasive-species">Pests and Invasive Species</h3>
+<p>Summary: The pests chapter opens with Colorado potato beetles (identified by stripes and orange underside eggs): three defenses — late planting (the author's success, changing odds from maybe 90% to 50% plus luck), low tunnels (an abject failure for lack of attention, not a disproof of the method), and Sevin/carbaryl, which failed absolutely once because a bottle stored in the garden shed over winter had been destroyed by cold, then worked when fresh. Rats follow as an unavoidable barn companion wherever feed exists: poison (bromethalin vs warfarin, Tomcat bait stations) rejected in favor of traps and dogs once poison failed to work and the author soured on its slow deaths; spring traps and the gold-standard Goodnature A24 CO2 trap; and the author's two short Corgi mixes' nightly "barn time" rat-hunt over stall floors and under feed dishes. Flies are accepted barn furniture whose indoor overflow is dealt with by fly paper over the kitchen compost bin; wasps and hornets get Raid Wasp &amp; Hornet spray (prallethrin and cypermethrin). The invasive-species half covers glyphosate in its forms and sprayer tiers (handheld, backpack, vehicle), Japanese knotweed's biology and carbohydrate rhizomes, the conventional useless/harmful methods (surface spray, tarps destroyed, brushhogging that spreads hydra-like fragments), the successful surface-spray-then-pull multi-year campaign on the "stonewall patch," and the far better JK injection-gun technique with its node placement, vent-hole modification, cane marking, and 98%+ claimed kill rates; then Oriental bittersweet (cut-and-spray, impractical to remove), and poison ivy (urushiol, war of attrition, never burn or compost).   </p>
+<p>Analysis: The pest and invasive-material is a finest-grained demonstration of the book's method: identify the biology, find the failure mode of the cheap/fast fix, then design a labor-and-chemistry program that respects the organism's actual limits. The Colorado potato beetle section is a lesson in timing, chemistry storage, and attention rather than product choice; the rat material is an explicit ethical and operational decision among poison, mechanical traps, and predator animals with vaccination-free pets; and knotweed is the template long-haul fight, ending with a tool (the injection gun) whose node-idiot-proofing converts an otherwise interminable surface-spraying grind into a 98% kill in one season. The <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> lens is at its most literal here: an invasive's rhizome reserves are a carbohydrate endowment, and the winning move is to exhaust it faster than it refills. The "never compost knotweed or poison ivy" rules are precisely the kind of second-order caution the book is built on.   </p>
+<p>Source anchors: Colorado potato beetle; Sevin/carbaryl; delayed planting; rat; bromethalin; warfarin; Tomcat; Goodnature A24; Corgi mixes; "barn time"; fly paper; Raid Wasp and Hornet; glyphosate 41%/50%; JK injection gun; Japanese knotweed; rhizome; Oriental bittersweet; triclopyr; poison ivy; urushiol; glyphosate sprayer tiers.   </p>
+<h3 id="forest-products">Forest Products</h3>
+<p>Summary: The final and longest section treats the forest as a renewable productive asset, answering <em>The Lorax</em> with paper arithmetic (a paper-mill tree makes ~80,000 sheets, so a million printed Loraxes cost over 1,250 trees) and defining silviculture. It grades wood into veneer, sawmill, and firewood/pulpwood tiers and gives rough prices; explains DBH and growth factors (the years-per-inch table, with ~81 years to 18" at a median 4.5 factor); covers rotational clearcutting, shelterwood/seed-tree, and selective harvesting; runs sustainable-yield math (a 37-ft-radius tenth-acre inventory circle, and the New England rule of one cord per acre per year in perpetuity); and explains forest improvement (selective pressure, the 24×diameter release rule, and a worked 36-year sapling-thinning plan) and coppicing/pollarding. Firewood logging gets full treatment: dealing with loggers, safety, choosing and marking trees, felling (escape routes, the 60–90° notch and why 90 is worth pursuing, the felling cut and hinge, wedges, sit-back and hang-up recovery), limbing, slash disposal (drag, chip, burn with NH permits and full extinguishing discipline), log lengths, winching, and skidding with ATV arch or tractor skidding-plate/FEL-hook. Chainsaws get a mini-manual: selection (Husqvarna vs Stihl; the author's Rancher and Dolmar), bars, skirted nuts, clutches and brakes, chains (parts, sizes, cutting-edge geometries, tooth sequences, brands, making your own), sharpening by hand and machine, raker depth, and the field/workshop checklists. Lumber covers milling economics, hiring a portable sawyer, bandsaw mills, chainsaw mills, cut types (plain, quarter, rift), riving, bowl blanks, and air vs kiln drying with checking and honeycombing. Mushrooms cover hunting/farming, substrates, spawn, biological efficiency economics, and the author's failed and accidental experiences. Maple syrup covers biology, collection, reduction (evaporator vs reverse osmosis), equipment (taps, buckets, homemade and commercial arches, pans flat/divided/drop-flue/raised-flue, sizing math, the kayak-hoist cleanup, accessories, indoor finishes with thermometer/hydrometer/optical), and process. Beekeeping is a gloss toward Storey's Guide plus hive technology and economics, and hunting covers licenses/tags/regions, seasons, scouting, tree stands, butchering logistics, and posting/trespass law.   </p>
+<p>Analysis: Forest Products is the manual's capstone: the same "turn a resource into numbers and a schedule" method applied to the slowest-maturing crop. The grading, growth-factor, and sustainable-yield material is the definitive statement of <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> — firewood self-sufficiency only works at one cord per acre per year, and a tree is a crop that takes a human lifetime. The chainsaw chapter pushes <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> to the level of machine metaphysics (pitch, gauge, raker depth, carbide, and the "all my chains are the same H80, and every AR-15 is .223 so no incompatible magazines" standardization argument), while the felling safety material is the book's most serious survival text. Maple syrup and its evaporator-sizing math generalize the book's pattern of "determine your desired output, then size the tool." Beekeeping's Mancur Olson "stationary bandit" economics and hunting's tag and check-station explanations tie resource husbandry to <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> and state management of common-pool resources. Throughout, the section shows a private capital-owner building long-horizon, multi-output infrastructure — fuel, lumber, syrup, honey, and protein from one asset — the purest example of the vault's frontier-capital theme.   </p>
+<p>Source anchors: The Lorax; silviculture; veneer; sawmill; pulpwood; DBH; growth factor; rotational clearcutting; shelterwood; seed tree; 37-ft radius inventory; one cord per acre; 24× rule; coppicing; pollarding; logger; landing; widow maker; notch cut; felling cut; hinge; felling wedge; peavey; shearing slash; NH burn permit; skidding; choker chain; skidding plate; chainsaw; Husqvarna Rancher; Dolmar 7910; skirted nuts; centrifugal clutch; chain brake; pitch; gauge; H80; Oregon 72L; raker depth gauge; Biltmore stick; board foot; quarter sawn; riving; bowl blank; honeycombing; air vs kiln dried; mushrooms; biological efficiency; maple syrup; 66 Brix; sugar shack; drop flue pan; kayak hoist; beekeeping; Langstroth; Flow Hive; hunting tag; check station; posting.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>BLT as a competence map</strong>: "I, Bacon, Lettuce and Tomato Sandwich" sends new readers through vol 2 (bread, bacon, mayonnaise, cast iron, tomato soup) — the book's spanning-tree organization in one recipe.   </li>
+<li><strong>The competent-man ethos</strong>: the Heinlein quotation, and the dedication "not to be bug men," do all the ideological heavy lifting; reopened on the "specialization is for insects" line.   </li>
+<li><strong>One-acre fantasy rebuke</strong>: John Seymour's "Start a 1-Acre, Self-Sufficient Homestead" — no parking, no septic, no well, no yard, a cow on half an acre, and the pigs-will-plow myth; "you can fix almost everything later, but not total size."   </li>
+<li><strong>First-year budgets</strong>: the "Small Garden and Chickens" homesteader lands near $10,000; the "Homemade Bacon" homesteader near $40,000 — both before depreciation and both self-audited with line-item expense lists.   </li>
+<li><strong>Right to farm</strong>: all 50 states; NH RSA 674:32 a-c; a town can authorize 4 a.m. tractors, hot-August manure, and backyard pig slaughter next door, and someone else can start a farm ten years after you buy.   </li>
+<li><strong>Illiquid rural real estate</strong>: a town of 3,500 housing units hosts ~37 listings; the author's bare-minimum criteria (2,500 sf, 10+ acres) leave two; about one acceptable house per town per year; three-month search window ≈ 25% odds.   </li>
+<li><strong>The $18k Kubota deal</strong>: seller's <span class="arithmatex">\(20k package → comp research (\)</span>17k low / $19k high) → split to $18k → manufactured walk-away → seller caves a week later; "play the game the way it's meant to be played."   </li>
+<li><strong>Firewood as numbers</strong>: face cord vs full cord (128 ft³); grapple load ≈ 10±2 cords; oak cord ~5,000 lb green / 3,600 dry; ~24M BTU/cord typical; NH rule = one cord/acre/year in perpetuity; 1,800-sf house in Anchorage ≈ 9.6 dry cords.   </li>
+<li><strong>Wood boilers</strong>: 300–500-gallon water jackets make them all-or-nothing season-long systems; NH run is roughly first week of November to last week of April; feed twice daily; weekly ash; the Friday-night skip trick before cleaning.   </li>
+<li><strong>Solar realism</strong>: NH insolation ≈ 3 kWh/m²/day → discount 25%; author's 1,500 kWh/month and $386/month bill imply 67 panels ≈ <span class="arithmatex">\(16,4k (system ~\)</span>24.6k, and ~$20k with existing inverter/batteries); NPV verdict: solar beats NH grid power despite weak sun.   </li>
+<li><strong>Panel price falloff</strong>: $3.50/W (2006) → $0.50/W (2020), ≈ 13%/year compounding — yet "ignore the wait-one-more-year bug."   </li>
+<li><strong>Anti-fragility stack</strong>: wood heat + PTO generator + well bucket/manual pump + wood gasifier ambitions + stored seeds; the "backup of the backup" habit (two heat lamps, spare chains, spare motors on the shelf).   </li>
+<li><strong>Chainsaw chain standardization</strong>: "every AR-15 in my house is chambered in .223" → all chains are one geometry/loop size so there are never incompatible spares.   </li>
+<li><strong>Tree felling craft</strong>: 60–90° notch reaching ~25% depth; a full 90° makes the tree land exactly when the notch closes; wedges for sit-back; escape routes pre-chosen at 45°; hinge kept even or the tree twists.   </li>
+<li><strong>Knotweed injection</strong>: glyphosate concentrate injected into the hollow cane between the 1st and 2nd nodes draws poison both up into the stalk and down into the rhizome; vent the summer water-filled internode first; ~200–250 ft²/hour on hands and knees; 98%+ kill claimed and matched.   </li>
+<li><strong>Classic failure modes saved for reuse</strong>: Sevin stored too cold went inert; the log splitter's 24" limit vs 30" rounds; the spiral tree guard that strangulated a willow; gate posts set 3" too narrow; hay baler knotter stuck after two bales; the brushhog eating a bounced-out tractor-caddy tool.   </li>
+<li><strong>Sheep herd math</strong>: 10 ewes × ~80% × 150% ≈ 12 lambs; ~6–7 in the freezer; 120 lb live → ~60 lb cut; two fleeces/year (spring poor, fall good); mature-herd "meat cost" ≈ $5.70/lb with fleece sales offset.   </li>
+<li><strong>Pig economics ladder</strong>: scraps+self-butchery 74¢/lb → packaged feed+outsourced $5.55/lb → pumpkins+feed+self $2.60/lb (the author's method) → heritage+custom mix+butchering $10/lb; "buy piglets or buy feed and you can make money; buy both and you never will."   </li>
+<li><strong>Hay economics</strong>: naive $1,275/acre vs $300/acre the first two years and <span class="arithmatex">\(600 thereafter; ~\)</span>300/acre of out-of-pocket costs; ~100 two-string bales per acre per cutting.   </li>
+<li><strong>The $60 stone-wall/expense cleanup</strong>: 12–24" quarry rocks at $20/yd³ + $150 trucking per 15-yd load, three loads + a rented excavator ≈ $2,000 total, ≈ $10 per linear foot of New England wall (and 1 yd³ ≈ 5–6 feet).   </li>
+<li><strong>Solar concealment of intent in negotiation</strong>: "I'll be so house poor after closing I can't afford much" — expensive signaling is more trusted than cheap signaling.   </li>
+<li><strong>Land-reading as class</strong>: long straight property lines are old; lines terminating against them are newer (the bullet-crack forensic trick); the west got Jefferson's legible Public Land Survey rectangles instead.   </li>
+<li><strong>Retrieval cue for the whole book</strong>: "the actual dependencies hidden inside that phrase" — self-sufficiency is a phrase; this volume is the dependency list.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//index.html">index</a></li>
+	<li><a class="backlink" href="//01 Books/Escape the City volume 2.html">escape the city volume 2</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/homesteading/index.html">homesteading</a></li>
+	<li><a class="backlink" href="//obs.html/tags/frontier-systems/index.html">frontier-systems</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A74865006804210072629622088882860028960{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D74865006804210072629622088882860028960{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B74865006804210072629622088882860028960{level}" level="{level}" note_temp_id="74865006804210072629622088882860028960" onclick="window.ObsHtmlGraph.run(this, '74865006804210072629622088882860028960', 'escape the city volume 1');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C74865006804210072629622088882860028960{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

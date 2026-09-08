@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="a fable">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'a fable';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=a fable" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="a-fable">A Fable</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>A Fable</code> treats World War I less as a timeline of battles than as an administrative-mythic machine: rituals, schedules, paperwork, and public ceremonies that keep killing socially and procedurally possible. Faulkner makes that machine visible by staging a stoppage (a mutiny that produces silence) and then following the panic-response across crowd, staff room, provost procedure, economic coercion (payday debt), and quasi-fraternal authentication (lodge signs, committee names, passes).   </p>
+<p>Within this vault the book is especially useful for thinking about how institutions metabolize disruption: the Place de Ville as a clock-face, the factory-compound converted into a man-proof pen with electrified wire, the execution staged as a marketplace, and the later conversion of bodies into national ritual via the "unknown soldier" extraction at Verdun.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Faulkner builds the novel around an impossible hinge: a French regiment refuses the ritual of going over the top, and the refusal propagates along the line as silence until the guns stop across sectors. The text insists the stoppage is not a private moral awakening but a logistical event: heliographs blink, dispatch riders roar, staff officers assemble, and the line itself becomes an audience watching the inspectors and provost marshals who arrive to make the pause legible as a "recess" rather than as a collapse. In the background, an aviator recognizes that even the anti-aircraft barrage can be theater: blank shells fired so the sky will still look "orthodox" while generals conduct their back-channel meeting.   </p>
+<p>The novel's public face is the crowd. Faulkner turns civilians into a collective body that moves like fluid down boulevards to the Place de Ville, toward an Hotel with a blank door guarded by three allied sentries under three flagstaffs. The crowd follows lorries carrying an arrested regiment, crashes against electrified wire at a compound that used to be a factory in peace, then turns back when it realizes it cannot yet be "late." The day becomes a machine of waiting: two-hourly reliefs, shadows, and the overlapping bugles of three armies (French, English, American) that close the day like a stamped document.   </p>
+<p>Under that mass movement sits a second binding medium: money and membership. A flashback to late spring 1916 introduces the runner and the battalion economy: a surly private with a thick leather money-belt and a dogeared notebook lends and collects at payday, and a committee with a grand title, Les Amis Myriades et Anonymes a la France de Tout le Monde, can send a French government motorcar to reach him. Names (Reverend Tobe Sutterfield; later "Tooleyman") matter here as mechanisms: legitimacy traveling by title, paperwork, and access rather than by rank.   </p>
+<p>Faulkner tightens the mutiny into a procedural trap. The runner is battered awake in the silence, finds the battalion p.c. emptied of its "orderly disorder," and uses a pass to move where rifles are suddenly irrelevant. Later he tries to recruit power by learning a lodge sign and by leveraging the money-belt man's hold over the battalion ("making them all Masons or anyway making them believe they are Masons"). The war-machine's answer is sealing: police perimeters, and then a perimeter manned by troops who cannot read the pass and do not share the language of the men bottled up behind them.   </p>
+<p>The punishment scenes are rendered with grotesque practicality: medals are torn off coats before the volley; a sergeant-major finishes a body with a pistol; fatigue parties arrive with a barrow and tarpaulin; and in another cell an American, Buchwald, tries to stage a clean symbolic death for a French general by literally plugging a wrong bullet-hole with candle wax so the corpse can be shot again "correctly." Procedure is sustained by people competent with tools.   </p>
+<p>Finally, the war collapses into domestic ruin and then resurfaces as national ritual. Marthe and her family return to a farm beyond Chalons near Vienne-la-pucelle and St Mihiel, bury a cheap coffin, and face land they are forbidden to work until unexploded shells are found. Then the state orders men to go to Verdun, to Fort Valaumont's catacombs, and "with expedition and despatch" extract "one complete cadaver" for the unknown-soldier rite. The fort's smell is described as fear and endurance made material, something men will get used to. If the book has a bleak claim about persistence, it is that trained tolerance of what should be intolerable is itself an institutional resource.   </p>
+<p>Within this vault, <code>A Fable</code> is particularly relevant to <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> (how panic and staff-control propagate), <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> (tokens like "Fatherland," court-martial language, committee names as legitimacy), <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> (ritual authority: flags, medals, sentries, executions), and <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> (what "silence" does to the war-machine, and how the machine reasserts itself).   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<p><code>A Fable</code> is built on a deliberately flattened cast in which most figures act less as individuals than as functions of the war-machine or of the attempt to refuse it. The characters below carry the book's load; several are unnamed in the text and are identified by role.   </p>
+<ul>
+<li><strong>The runner</strong>: an anonymous English battalion runner, once a successful London architect who renounced his commission (he calls it "that sort of masturbation about the human race people call hoping") to live back in the mud as a private. He moves through the book as the official "listener": the man who learns about the thirteen French deserters, who explains the blank-shell "recess" to a disbelieving sentry, and who, in the end, organizes the battalion's climb over the parapet barehanded. His motivational arc runs from despair ("It's not that we didn't believe: it's that we couldn't, didn't know how anymore. That's the most terrible thing they have done to us") to a final shout of possibility ("They cant kill us! They cant! Not dare not: they cant!") before he is destroyed in the mutual barrage. In the epilogue a scarred veteran on crutches who "came back out in '16" and claims he only waited "until he would be ready to do the needing" preserves his function as witness.   </li>
+<li><strong>Levine</strong>: a seventeen-year-old RAF replacement pilot who joins too late for the RFC's heroic register (Ball, McCudden, Mannock). His arc is disillusionment: he wants to repay the cost of his training, but the "recess" voids the only trade he has learned; he forces the squadron to fire blank tracer at him so he can test what is real, and his smoldering sidcott becomes the image of the war's quiet persistence ("you could depend on it"). He embodies the book's tragedy of the idealist youth — the one for whom stopping the war deletes the meaning of the letter to his mother.   </li>
+<li><strong>The division commander (General Gragnon)</strong>: a self-made soldier, an orphan of the Pyrenees who rose from private to general of division and was given a doomed attack as a sacrifice so that the group commander could earn his baton. His motivation is honor and record: "How it dies is the reason it died. That's my record." He demands the right to shoot his own mutinied regiment, is refused, is put under arrest himself, and is finally killed in a basement cell — with the state staging the death "from in front" as if he had died in the attack, to keep the record clean. Buchwald completes the irony: the "victim" refuses to turn, so the executioners must shoot "correctly" the second time.   </li>
+<li><strong>Buchwald</strong>: an American private (a future bootlegging czar), brought from Blois with an Iowan and a Negro undertaker to kill the French general in the whitewashed cell. His function is grotesque practical competence: he treats a sanctioned killing as a problem of optics, proposing to plug the wrong bullet-hole with candle wax so the corpse can be shot again "in the right place." He is the book's proof that procedure is maintained by people good with tools.   </li>
+<li><strong>The money-lender (the sentry)</strong>: a surly English private, ex-horse groom of the great stolen horse, who owns his battalion economically — beneficiary of his mates' insurance and holder of their future pay in a thick leather money-belt. He is the battalion's true command-chain: rankless, but able to say "Follow me" because everyone owes him. The runner's plan banks on this: "You own the whole battalion... All you'll need is just to tell them to when you say Follow me." His personal history (Baptist, Mason, dice-player, made over in America) ties the battalion economy back to the book's American fable of the horse.   </li>
+<li><strong>Reverend Tobe Sutterfield / "Tooleyman"</strong>: the old Negro with the "Roman consul" face, head of the committee Les Amis Myriades et Anonymes a la France de Tout le Monde; his French name is a corruption of "Tout le Monde" — "Tooleyman." He traveled to France to find the horse's groom (the money-lender) and save him, "bears witness" to man rather than to God in the old sense, and at the end goes over the wire with the runner ("Maybe this is what I been hunting for too"). He is the book's moral center: the character who believes that man needs only to say "Enough of this" and that "cant no witness hurt him."   </li>
+<li><strong>The corporal (unnamed)</strong>: the leader of the thirteen — the ring of mountain foreigners at the heart of the mutiny, seen as the "savior" figure the book's fable keeps circling. He refuses every avenue of escape the generalissimo offers (the car, Paris, the world, recognition as son), repeating "There are still ten." His motivation is simplicity itself: to keep the ten with him and to die for the possibility the refusal represents. At the execution he is bound to the middle post; when the volley cuts his cords, the post pitches backward over the refuse ditch into the barbed wire, where the sergeant-major finishes him with a pistol.   </li>
+<li><strong>The old generalissimo (supreme commander)</strong>: the gray, fragile, sleepless old man in the Hôtel de Ville at Chaulnesmont, the corporal's father (revealed only through Magda's story and the locket). He is the machine incarnate — ruthless, courteous, "not afraid of man" but respectful of his capacities, certain that man "will prevail" and has already begun taking his house to the road. Against the corporal he plays a long, gentle, despairing game of persuasion, and loses.   </li>
+<li><strong>Marthe / Magda</strong>: the corporal's half-sister, who raised him — "I wasn't Marthe until after I had a brother and had to cross half of Europe to face thirty years later the French general who would hold the refusal of his life." She carries the locket containing the generalissimo's portrait, confronts him across a desk, and demands only the permission to bury her half-brother's body. At the fence after the execution she states flatly: "The war is over." She is the book's measure of what the machine costs in kin and land.   </li>
+<li><strong>The old generalissimo's staff circle</strong>: the group commander ("Mama Bidet"), who burns the division commander's resignation and pronounces the book's thesis — "Fatherland... Yes, let them believe they can stop it, so long as they dont suspect that they have" — and the Quartermaster General, the old general's St Cyr classmate who once loved him, who confronts his mentor after the catastrophe ("We did it then... We against all because we no longer belong to us") and is refused even the dignity of resigning.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling fiction from Faulkner</strong>: <code>A Fable</code> sits inside Faulkner's own war-haunted fiction: <a href="//01%20Books/Soldiers%20Pay.html">Soldiers Pay</a> treats the same returning-soldier materials with the same tension between civilian sympathy and institutional neglect; the Yoknapatawpha family novels (<a href="//01%20Books/The%20Sound%20and%20the%20Fury.html">The Sound and the Fury</a>, <a href="//01%20Books/As%20I%20Lay%20Dying.html">As I Lay Dying</a>) echo its use of a single event and a single voice to organize an entire community.   </li>
+<li><strong>War-fiction and history siblings</strong>: <a href="//01%20Books/War%20and%20Peace.html">War and Peace</a> matches its thesis that commanders do not make history but are made by it; <a href="//01%20Books/If%20This%20Is%20A%20Man%20-%20The%20Truce%20%28Abacus%2040th%20Anniversary%29.html">If This Is A Man - The Truce</a> resonates with its portrait of the truce as fragile and of endurance as institutional; <a href="//01%20Books/Homage%20to%20Catalonia.html">Homage to Catalonia</a> carries its mutiny-within-a-war theme into civil conflict; <a href="//01%20Books/World%20War%20Z.html">World War Z</a> extends the same image of a global war-machine grinding to a halt and restarting; <a href="//01%20Books/Worm.html">Worm</a> presents organized refusal and coalition power at a similar superhuman scale.   </li>
+<li><strong>Era and structural context</strong>: The novel is a WWI fable (May–November 1918) written against the background of the Korean-era reappraisal of total war; <a href="//01%20Books/The%20War%20That%20Ended%20Peace.html">The War That Ended Peace</a> supplies the diplomatic machinery, and <a href="//01%20Books/Postwar.html">Postwar</a> its aftermath. There is no series hub — <code>A Fable</code> is a standalone.   </li>
+<li><strong>Concept and MoC hubs</strong>: the book is a primary exhibit for <a href="//00%20Maps%20of%20Content/War%2C%20Revolution%2C%20and%20Civilizational%20Breakdown.html">War, Revolution, and Civilizational Breakdown</a>, and it interlocks with <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>, <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>, <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>, <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>, <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>, <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>, and <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The mutiny as a "recess"</strong>: the refusal of one regiment is immediately reframed by staff, provost, and news-rumor as a pause that both sides have agreed on, then as a "curious week's holiday," then as something to be forgotten. Track how a stoppage is converted back into a procedure. See <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>.   </li>
+<li><strong>Legitimacy by ritual and token</strong>: white flags on empty staffs, three national bugles, two-hourly sentry relief, the "Medaille Militaire torn off" before the volley, the signed pass, the committee name, the lodge sign. The machine protects objects and meanings while killing bodies. See <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>.   </li>
+<li><strong>Language as a weapon and a shield</strong>: the word "Fatherland," the army-legal language of the court-martial, "anarchist" pinned on a foreigner so punishment can proceed, committee titles that "travel by title rather than rank," "Monsieur Tooleyman." See <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>.   </li>
+<li><strong>Money as informal command-chain</strong>: the money-belt and the dogeared notebook, the sixpence-a-day debt economy, insurance policies made over to one man, the "Association." See <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>.   </li>
+<li><strong>Information as coordination</strong>: heliographs blinking silence into a condition, dispatch riders, blank shells fired for appearances, the officer who "learns it looks like a recess but is a collapse." See <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </li>
+<li><strong>Collapse and reassertion</strong>: what silence does to the war-machine — how it seals, audits, and restarts; how men are made to "get used to" fort-smell, gas-masks, and the next ceremony. See <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>.   </li>
+<li><strong>The conversion of bodies into state artifacts</strong>: the extraction of "one complete cadaver," the unknown soldier, the ossuary at Verdun, the empty coffin filled with a farmer's corpse. See <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>.   </li>
+<li><strong>The fable's Christ-allegory without theological comfort</strong>: the thirteen, the "resurrection" witnessed by three officers, the priest's suicide with a borrowed bayonet, "Remember that bird" — a passion narrative that the machine reabsorbs into ritual rather than belief.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: how a single regimental refusal becomes a coordinated "recess" across sectors, and how the staff controls panic through sealing, auditing, and restaging the pause as procedure.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: the tokens — "Fatherland," court-martial phrasing, committee titles, the word "anarchist" — that let punishment proceed without admitting native desire to stop.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: flags, medals, sentries, executions, two-hourly reliefs, signatures — the rituals that manufacture authority and continuity inside a stoppage.   </li>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: what the silence does to the machine and how the machine reasserts itself; trained tolerance of the intolerable as an institutional resource.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the money-belt economy, the "Association," the lodge, the committee that sends a government motorcar to a private's billet.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: heliographs, dispatch riders, blank shells, passes — how the pause is made legible and how knowledge travels (or is blocked) across it.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the factory-compound converted into a pen, the execution staged as a marketplace, the "expedition and despatch" extraction of a cadaver at Fort Valaumont.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="wednesday">Wednesday</h3>
+<p>Summary: The opening chapter renders the city's dawn as a single collective body. Long before the barracks bugles, the warrened tenements disgorge their people, who flow through lanes and alleys like streams becoming rivers until the whole population pours into the Place de Ville, facing the blank door of the Hotel, "the three sentries of the three co-embattled nations" flanking three empty flagstaffs awaiting the three concordant flags. The sunrise gun crashes and the three flags break out and stream into sunlight; garrison cavalry tries to hold the boulevard and is underswept by the kneeling, martyr-like crowd; infantry with a light tank parts the mass like a snow-plow. At one point a thin, travel-stained young woman faints, and a tall man in a faded smock — whom the sergeant calls "not even a field marshal... an advocate" — offers her a heel of bread and lectures that the whole regiment, at zero, never left the trench except officers and N.C.O.'s, and that by last evening every front in France had quit except token guns. The three allied generals pass in a pennoned car, and then the lorries come: the whole arrested regiment packed "as though for the transportation of cattle," followed by one last lorry carrying only thirteen men — manacled, chained, alien — with the crowd perceiving that the thirteenth is alien even to the other twelve. As the last lorry crosses the Place, the corporal in it stares full at the old generalissimo on the Hotel steps. The girl who fainted tries to break toward the lorries, spits her half-chewed bread at the tall man, and is left alone in the emptying Place. Source anchors: Place de Ville; blank Hotel door; three sentries / three flagstaffs; sunrise gun; infantry + light tank; "not even a field marshal... an advocate"; "as though for the transportation of cattle"; the thirteen-man lorry; corporal / generalissimo stare; the girl's bread spat out.   </p>
+<p>Analysis: Wednesday establishes the book's core method: legitimacy manufactured through choreography that people cannot easily refuse. The tableau of three sentries under three empty flagstaffs converts private dread into public waiting, and the crowd's silent, kneading flow shows a polity held together by spectacle rather than consent, a concrete anchor for <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>. The tall man's speech — the whole front stopped "at zero" when the men would not climb the parapet — is the book's information event: an anonymous passerby carries more truth than the garrison, and the crowd absorbs it without acting on it, which points toward <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as the chapter's real subject. The thirteen-man lorry and the muteness of the manacled foreigners stage the stoppage as an image of mass refusal the crowd can look at but not yet touch; the girl who spits the bread at the advocate shows that the crowd's sympathy is promiscuous and its anger still misdirected.   </p>
+<h3 id="monday-monday-night">Monday: Monday Night</h3>
+<p>Summary: This division opens with the division commander's backstory: an orphan of a Pyrenean Catholic orphanage who rose from enlisted private to general of division, whose "destiny" has slowed — who is offered, by his corps commander and only friend Lallemont, an attack that the corps commander knows is intended to fail. "There will be a ribbon," he is told; "I cant afford a failure," the division commander replies. He realizes the attack is a sacrifice planned so the group commander — "Mama Bidet," the "General Cabinet," the Marshal d'Aisance — can earn his baton, and that nothing he does matters, only that the attack be made. In his command post he watches the barrage lift and nobody leave the trench, orders barrages ranged on the communication trenches behind the mutinied regiment, and then at Corps Headquarters formally requests permission to have the whole regiment executed. The group commander answers with the flat phrase "Endorsed as received... Return to your troops." The night section has the division commander read the dead aide's book (a story he coldly admires for its competence), drive alone through spring darkness to the chateau, try to resign — and have the group commander burn the resignation over a candle, telling him the only word that can destroy them is "Fatherland," and ordering him to Chaulnesmont that afternoon. Source anchors: orphanage / self-made soldier; Lallemont; "There will be a ribbon"; the doomed attack; "Mama Bidet"; barrages on communication trenches; "Endorsed as received"; the burned resignation; "Fatherland"; Chaulnesmont.   </p>
+<p>Analysis: The chapter is Faulkner's portrait of the machine from inside: a general who believes he is choosing a sacrifice is himself selected, "not because you were Charles Gragnon, but because you were General of Division Gragnon at this time, this day, this hour." The doom is procedural — the attack must fail, the ribbon will come, the record must stay clean — and the division commander's demand to execute his own men is simultaneously an assertion of honor and the machine speaking through him, which makes this the best anchor in the book for <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: panic and staff-control propagate through ritual rank, not through people. The burned resignation and the "Fatherland" speech preview the novel's thesis about language — authority survives as long as belief in the word survives — which connects directly to <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>. Gragnon is also the book's clearest instance of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> collapsing into procedure: the career that defines him is exactly what is being sacrificed to keep the succession to the baton intact.   </p>
+<h3 id="tuesday-night">Tuesday Night</h3>
+<p>Summary: The chapter cross-cuts to two British privates resting on a firestep below the Bethune slag-heap after the "recess" has begun. One is the sentry — a jockey-sized ex-horse-groom whom the authorities have investigated because eleven, then twenty, of his battalion-mates made him beneficiary of their life-assurance policies; the colonel, questioned at Whitehall, can only say the word is "love," while the staff suspect he "owns the battalion." The other is the runner: a former successful London architect who renounced his commission ("I just dont want this anymore") and returned to ranks, though he retains a component of the officer that keeps the men from fully trusting him. From an old A.S.C. lay-preacher at the St Omer ammunition dump he learns about the thirteen French soldiers — "the same thing all them two thousand years ago: that all we ever needed to do was just to say, Enough of this" — and stops believing he can cross the line to witness them directly. He tells the sentry the mechanics of the recess: a three-mile column of lorry-borne blank AA shells, batteries unloading live ammunition for dummies in the dark, an unarmed corridor of "harmless archie batteries" flown through to make the sky look orthodox, all to ferry a German general to the Allied command "to agree on how, not what." The sentry finally kicks the unconscious runner in the face; the officer and sergeant arrive to order the sentry down to the dugout. Source anchors: Bethune slag-heap; insurance beneficiaries (11, then 20); "Try to buy with one file, the man who already owns the battalion"; the runner's renunciation; St Omer lay-preacher; "Enough of this"; three miles of blank AA shells; batteries unloading live ammo; unarmed archie corridor / German general; the sentry's boot.   </p>
+<p>Analysis: This chapter introduces the book's alternative command-chain. The sentry's money-belt and the battalion's insurance-and-payday economy are the informal structure that actually holds the unit together, which makes the chapter a strong anchor for <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: "the man who already owns the battalion" exercises authority that rank cannot touch. The runner's lecture on the blank shells converts the war-machine's theater into logistics disguised as combat — an unarmed corridor, a column of myriads of harmless shells, an archie barrage staged for appearances — a direct link to <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>, since the entire deception exists so that the pause can be hidden by coordinated lies about what the sky is doing. The sentry's violence is not stupidity but institution: he has invested four years of debt and profit in the war's continuation, and the runner's "We could all just say Enough" is, to him, a threat to the ledger. The chapter also sets up the book's central ambiguity: the man who "owns" the men is exactly the leverage the runner needs to move a whole battalion later.   </p>
+<h3 id="monday-tuesday-wednesday">Monday: Tuesday: Wednesday</h3>
+<p>Summary: This division belongs to Levine, the seventeen-year-old RAF replacement pilot. He is turned back from his last practice flight by a general in a Harry Tate who signals him down, then summoned to the mess where the major announces the French have asked for an armistice effective at noon: "It was a French truce; it wasnt ours." The guns, however, begin at twelve and go on until fifteen hours; the squadron's flight commanders fly out in the "similitude of B Flight" and do not return; the hangars are padlocked at night behind armed guards. Next day Levine is ordered up on a "job," and he and the major and Bridesman herd down a German two-seater carrying a Prussian general, who steps out of the observer's seat, shoots his own pilot through the face before the assembled squadron, and is led off to the mess — the machine revealing itself before the tyros: "hun generals dont fight strangers." Levine deduces what the blank tracer and the locked hangars meant — that the corridor was for flying the German general to the Allied command — and forces the squadron to fire blank tracer at him so he can feel whether it can kill, ending with his sidcott smoldering from the phosphorus hit. That night Collyer closes the bar; Levine sits against the hut wall, "time... back in mufti," listening into the silence for the single voice of all the women in the western world who realize their sons will not die after all, the sidcott burning slowly and steadily on like the war itself. Source anchors: Levine; Harry Tate; "It was a French truce"; noon armistice / guns till fifteen hours; the padlocked hangars; the German general shooting his pilot; "hun generals dont fight strangers"; blank tracer experiment; sidcott burning; "Collyer closed the bar"; "time... back in mufti"; the single voice of women.   </p>
+<p>Analysis: The chapter is the war-machine's theater seen from the seat of its youngest volunteer. Levine's hunger — "what had I done for motherland's glory had motherland but matched me with her need" — is systematically voided: the RAF comes too late for the RFC's immortality, the recess cancels the purpose of his training, and the padlocked hangar is the visible symptom of a command that stages combat for appearances. The scene with the German general shooting his pilot makes the point brutally concrete — the elite manufacture and then police their own official truth — which supports <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: the same rule-book that lets a general kill his pilot forbids a squadron from admitting what it saw. Levine's sidcott, smoldering all night, is the book's cleanest image of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: a thing that cannot be put out, that keeps on quietly and steadily, "you could depend on it," the war's persistence abstracted into a burning fabric. His letter to his mother and his listening for the "single voice of all the women" remind the reader that the people with the least invested in the machine's reputation — mothers, women — are precisely those who would gain most from its stoppage, and that the machine knows it.   </p>
+<h3 id="tuesday-wednesday">Tuesday: Wednesday</h3>
+<p>Summary: The chapter reins in the crowd to measure it. The young woman who fainted on Wednesday now stands at the old eastern city gate, scanning each arriving face; the villagers and farmers, the parents and kin, have been streaming in since Tuesday, when the news of the mutiny reached the district, "hoicked by anguish and terror" toward the city. They learn the details: the regiment did not fail in an attack but refused to perform the ritual itself — "declined to perform that ritual act which, after four years, had become as much and as inescapable a part of the formal ritual of war as the Grand March"; that the whole three thousand were corrupted by a single squad of thirteen, four of them foreigners, only the corporal able to speak French; and that the thirteen, leave-billeting across the French, British, and American zones for two years, three times vanished from France for two weeks with papers unstamped, implying "only darkness and a pair of wire-cutters" — No-Man's-Land and over. Heliographs begin to blink; at noon the French and German fronts fall silent and at three o'clock the American and British sectors follow. The crowd has meanwhile surged to the compound — a converted factory, "converted again yesterday into a man-proof pen" with barricades of electrified wire, searchlight towers, and an elevated catwalk for guards — crashes against the wire, and then faces about, realizing it cannot be "late": the division commander will not arrive until three o'clock, and the only permitted action is to wait. The chapter ends with the division commander arriving in his car under arrest, the furled sabre under the chief-of-staff's arm, watched by the crowd as a victim "like them, of that same instant in geography and in time," then the provost-marshals' cars, and at sunset the three national bugles — Battre aux Champs, Last Post, Retreat — the flags descending and the crowd flowing home to eat and return. Source anchors: eastern city gate; kin from Tuesday; "as inescapable... as the Grand March"; thirteen, four foreigners, one Francophone corporal; unstamped passes two years; wire-cutters / No-Man's-Land; heliographs; noon / three o'clock silence; factory-converted compound; electrified wire / catwalks; the facing-about; "three o'clock"; division commander under arrest with sabre; provost marshals; Battre aux Champs / Last Post / Retreat.   </p>
+<p>Analysis: The chapter makes the mutiny legible as an administrative scandal before it is a moral one. The crowd learns not a doctrine but a paper trail — unstamped passes, vanished two-week absences, wire-cutters — which is precisely <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> operating in public: the staff's horror is that the system was porous for years without knowing it. The compound's electrified wire and catwalks are the book's blunt institutional metaphor, the same industrial efficiency that shipped numbered matériel converted in a day into a pen for French bodies. The two-hourly sentry relief and the triple bugles closing the day like a stamped document continue the theme of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the machine keeps its calendar and its ceremonies running through the pause, so that waiting itself becomes an act of loyalty. The division commander's walk to the blank door under a furled sabre — victim and executioner in one — shows how the book understands the officer class: caught in the same procedure they serve, given "no rights in its fate."   </p>
+<h3 id="tuesday-wednesday-wednesday-night">Tuesday: Wednesday: Wednesday Night</h3>
+<p>Summary: The chapter opens in a 1916 flashback: the runner reports to a battalion in Picardy billets near Amiens, preparing for the First Battle of the Somme, and in the brigade office finds a surly private summoned before the brigadier — "someone named Reverend Tobe Sutterfield" from America has asked the French government to reach him, the private's hook being "Missouri." The private refuses, and two hours later the runner sees why he matters: he is a lender seated on his bunk with a thick leather money-belt and a dogeared notebook, counting out French notes, the line on payday extending into the street. An orderly summons him — "It's a bleeding f<strong><em>ing motorcar from Paris with a bleeding f</em></strong>ing prime minister in it" — and the runner sees a long black government car containing a rich American woman, a high Cabinet secretary, a thin Negro youth, and an old Negro in a worn tophat with the serene "Roman consul" face. The runner works the orderly-room and learns the committee name: Les Amis Myriades et Anonymes a la France de Tout le Monde. In Paris he visits the committee's house, where the old Negro explains he is now "Tooleyman" (Tout le Monde), and tells the runner the horse story: the champion three-year-old, "Mistairy," owned by nothing and no one, whose groom is the money-lender — the twenty-two months of flight across the Mississippi watershed on three legs, the Federal deputy marshal who is a failed poet and resigns rather than catch them, the Missouri jail and the New Orleans lawyer, the crowd that frees the old Negro, the baptism in the creek, the Masonry, and the rich American woman — a widow, whose money helped support the French air squadron in which her only son was a pilot until a German killed him, and whose money then brought them to France. The runner returns to the battalion; in 1918, after the break-through and the running rearguard battle, he is snatched for special courier duty, learns the whole strange secret of the thirteen, and three days later wakes with blood in his mouth and his lip cut and teeth gone, remembering the rifle-butt in the face, in a dugout that has moved topside into periscopes and telephones; using the pass issued Monday and the sergeant-major's curt "Latrine," he climbs out, watches the S.E.5s and the German aeroplane in the blank-archie corridor heading for the Villeneuve Blanche aerodrome, and finally — in a gendarme's uniform after beating a French policeman — reaches Paris. Source anchors: Picardy / Amiens; First Battle of the Somme; "Reverend Tobe Sutterfield"; "Missouri"; money-belt + dogeared notebook; payday queue; French government motorcar; "Roman consul" face; Les Amis Myriades et Anonymes; "Tooleyman"; Mistairy / three-legged horse; the Federal deputy who resigns; Missouri jail / New Orleans lawyer; baptism in the creek; the lady's dead airman son; the thirteen; special-courier duty; rifle-butt / lost teeth; Monday pass / "Latrine"; S.E.5s and German plane; blank-archie corridor; gendarme's uniform.   </p>
+<p>Analysis: This is the book's economic and fraternal core. The money-belt and the dogeared notebook are an accounting system — sixpence a day for thirty days, "If you're still alive... Right" — that binds future pay to a single body and creates coercion without rank, which is the strongest single anchor in the vault for <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: debt, paperwork, and membership functioning as a parallel command-chain inside the official one. The committee title Les Amis Myriades et Anonymes a la France de Tout le Monde does the same at civilian scale — legitimacy traveling by name and motorcar and access rather than by military hierarchy, which is <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> operating through language, hence the "Tooleyman" corruption of "Tout le Monde" as a case study for <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>. The horse story frames the mutiny's deeper claim: the horse "belonged to nothing to be stolen from; it was the world's horse," and the flight was not theft but "immolation, apotheosis" — the same logic of unconditional value that later makes the corporal refuse the generalissimo's freedom. The 1918 section shows the pass working where rifles no longer do, and the blank-archie corridor making the pause readable from below, which returns the chapter to <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </p>
+<h3 id="wednesday-night">Wednesday Night</h3>
+<p>Summary: The young woman remains at the eastern gate through the dispersal of the Place; she still has the crust of bread, which she eats in quick birdlike snatches, then runs to a family group coming up the road — an old man on a crutch leaning on a blind old woman, and a woman carrying a child whom she calls "Marthe." The blind woman interrogates her fiercely about "that foreigner, that anarchist who murdered them"; the girl answers that he is there too, and, pressed, that the prisoner is her husband. The party is recognized and mobbed in the rue — food, a spoon, a bottle, then refuse thrown at them from the fires — until a mounted provost-marshal's patrol meets them and the N.C.O. tells them, "Get out of town while you can." They shelter in a stone stall midden, where Marthe divides bread and plans to see the Mayor; her witless sister Marya, serene and happy, says of the prisoner's fate, "He will wear a fine sword here." The chapter then cuts to the compound as the last strand of electrified wire goes up: the whole regiment is driven out of the barracks by individual, contemptuous Senegalese guards, into the parade ground huddle under the wire, and at dusk begins to howl toward the lighted window where the corporal stands in the strong-room cell for the thirteen. Meanwhile the division commander enters the boudoir-room of the hotel where the three old generals sit, surrenders his sabre, and repeats for the fourth time his request to have the regiment executed; the identification scene follows, in which a British colonel testifies he saw the corporal killed at Mons in 1914, an American captain that he buried him in the Atlantic in 1917, and the generalissimo's own officer that the corporal has been with the regiment since 1913 — "so all that remains for us is to witness to his resurrection." Major Blum then recites the corporal's good works: the levies for a blind girl's operation, the old man of the ruined Aisne farm, the wedding and the wine with the American company. The chapter ends with the arrival of the German general from Villeneuve Blanche, and — after Magda (the woman who calls herself Marthe) confronts the generalissimo with the locket and the story of the mountain valley, the mother, Beirut, and the dowry paid to cross Europe — the study dinner at which the German general proposes the alliance to keep the war from being ended "by a group of peasants in a half-mown field." Source anchors: eastern gate; the crust of bread; Marthe; the blind woman / "anarchist"; mobbing in the rue; provost patrol; stone stall; "He will wear a fine sword here"; electrified wire; Senegalese eviction; the howling toward the lighted window; the strong-room cell; the surrendered sabre; witness to his resurrection (Mons 1914 / Atlantic burial 1917 / regiment since 1913); Major Blum's good works; the locket / Magda's story; the German general's dinner.   </p>
+<p>Analysis: The chapter shows the mutiny dissolving the boundary between private kin and public enemy. The blind woman's insistence that "the anarchist" be a foreigner is the central linguistic operation of the book — the desire to stop must be attributed to an outsider so punishment can proceed — which anchors <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> exactly. The identification scene is the book's most explicit staging of the fable: three officers independently "kill" and "bury" the corporal, and the only consistent fact is that he keeps reappearing, so the machine must "witness to his resurrection" — a passion-narrative rhythm that doubles as a logistics problem for <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>. The howling of the evicted regiment toward the single lighted window, and the Senegalese guards lounging above the white working parties, give <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> its most visceral image: a mass body held together by the wire's electric field rather than by any conviction. Magda's story — the purloined dowry that paid the passage to Beirut, the locket proof of paternity, the farm at Vienne-la-pucelle — converts the abstract war into a family settlement the generalissimo is unwilling to honor, making the motorcar-borne German general's dinner (an alliance to keep the war running) the book's clean statement that the machine's interests are hostile to man's.   </p>
+<h3 id="thursday-thursday-night">Thursday: Thursday Night</h3>
+<p>Summary: In a Paris bedroom the runner lays out his knowledge to the old Negro: the blank shells, the tracer, the phosphorus hit "like a garden pea," the German general ferried under shield of an orthodox-looking sky to meet the Allied "pooh-bahs"; he admits he stole a policeman's suit to get out and back in. He asks to be made a Mason, or at least taught the sign — "the hand flicked low against the flank" — because the money-belt man "did it by making them all Masons or anyway making them believe they are Masons" and owns the battalion's future pay. The old Negro groans, dresses, and decides to go with him: "Maybe this is what I been hunting for too." They free the money-lender sentry from his thirty-hour arrest (the runner felling guards with the flat of a pistol, "That makes five"), and are carried through the battalion dugouts as the runner preaches his one-sentence gospel — climb out barehanded through the wire, walk toward the German wire with empty open hands, "Let them that's already dead and maimed and missing be enough of this" — until the whole battalion goes over the parapet, and the German side climbs out to meet them, and both sides' artillery, with one volley of rockets overhead, puts a barrage down on both, the runner shouting "They cant kill us! They cant! Not dare not: they cant!" as the flame takes half his body. The chapter then follows the mechanisms of containment and judgment: the Quartermaster General confronts the old generalissimo with what they have done ("We did it then. We against all because we no longer belong to us") and is refused even the resignation; the thirteen are given a feast in their cell, where Polchek is exposed as the informer who went on sick parade, and another man, turning on a name no one knows, is dragged away; the corporal is taken out to the old general's car and up to the citadel, where the generalissimo offers him life, the car, Paris, the world, even acknowledgment as his son — and the corporal refuses each in turn: "There are still ten." Lapin and the simian Cassetete ("Horse") are introduced with their Paris-litany; the priest comes to offer the corporal "life" in exchange for saving the division commander's, is refused ("Tell him that"), and afterward allows himself to be pierced with a borrowed bayonet. Finally, in a whitewashed cell, the American trio — Buchwald, an Iowan he knocks unconscious, and a Negro undertaker — kills the French general who refuses to turn, and Buchwald proposes plugging the wrong bullet-hole with candle wax so the corpse can be shot again "in the right place." Source anchors: blank shells / tracer; "like a garden pea"; policeman's suit; Mason sign (hand at flank); "making them believe they are Masons"; money-belt; freeing the sentry; "That makes five"; the barehanded climb-out; German line climbing out; rockets; the mutual barrage; "They cant kill us!"; Quartermaster General confrontation; the feast / Polchek; the citadel offers; "There are still ten"; Lapin / Cassetete / "Paris"; the priest's suicide; Buchwald / candle-wax re-shooting.   </p>
+<p>Analysis: The chapter is the book's test of whether refusal can be coordinated, staged as a race between procedural closure and improvised legitimacy. The runner's plan treats the battalion as an economy: move the money-belt man and the men move, which is <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> as direct action — the debt ledger as the only lever strong enough to lift a unit out of the trench. The mutual barrage, by which "We against all" prevents "naked and weaponless hand touching opposite naked and weaponless hand," makes <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> explicit: the system that cannot lose a war can still coordinate its own side and the enemy's to destroy the hope of stopping. The citadel interview is the philosophical duel of the book — the generalissimo offers life, Paris, sonship, the bird, and receives "There are still ten" each time — which reframes <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> from the top: the most powerful man in Europe cannot buy what his machine is destroying. The Buchwald coda returns the book to its tradesman's irony: even the state's mercy killing must be done "from in front," for the record, and the undertaker's competence (candle wax) preserves the fiction.   </p>
+<h3 id="friday-saturday-sunday">Friday: Saturday: Sunday</h3>
+<p>Summary: The executions are staged like a marketplace. On a bright lark-filled morning the gaudy Senegalese regiment forms three sides of a hollow square on a parade ground facing a long ditch filled with war's refuse and a railroad embankment backstop; the mutinied regiment files in hatless, unarmed, still caked with Aisne/Oise/Marne mud; a handful of them break and kneel toward the posts and are herded back. The sergeant-major tears the Medaille Militaire off the corporal's coat — "You dont want to keep this... I know who to give it to" — and a volley cuts cords; the corporal's post, flawed or rotten, falls backward with its burden onto the barbed wire, and the sergeant-major flicks a rusted strand away with his toe before finishing the body with a pistol. The fatigue party arrives with a barrow and tarpaulin, rolls the body up, and cuts a gap in the bottom strand of the fence so a farm cart can take it away. At the fence the tall woman — Marthe — is questioned about her husband's farm "beyond Chalons," near Vienne-la-pucelle and St Mihiel, and answers flatly: "The war is over." (The sergeant-major: "But not the army. How do you expect peace to put an end to an army when even war cant?") He passes the signed paper and the torn-off medal through the wire. The sisters and the girl ride out in the cart, are shifted to a train at Chalons, arrive at St Mihiel, and reach the farm: the house unmarked, the land "Ruined. Ruined. It will take years. And they wont even let me start now" — forbidden to work until unexploded shells are found — and they bury the cheap coffin beneath an ancient beech-tree bank. Marthe drops the medal onto the empty mantel. At dawn the guns begin again; the family flees to a crater while a barrage passes two hundred metres away, and Marthe, climbing out, is overtaken by a charge of French and American troops. When they return, the beech tree is gone and the coffin with it; on Sunday the girl, sent for the shovel, digs with them all day for fragments, "but the body itself was gone." Source anchors: Senegalese hollow square; the refuse ditch; rail embankment backstop; Lapin / the corporal / Cassetete-Horse; Medaille Militaire torn off; the volley; the falling post / barbed wire; the pistol at the ear; tarpaulin + barrow; cutting the bottom strand; Marthe at the fence; Chalons / Vienne-la-pucelle / St Mihiel; "The war is over"; "But not the army"; the signed paper + the medal; the farm; "It will take years"; forbidden to work until shells found; beech-tree burial; medal on the mantel; the guns; the crater; the charge; the vanished beech tree; the body gone.   </p>
+<p>Analysis: The execution is the book's grossest demonstration that the war's moral theater depends on tradesmen's competence and choreography. The Medaille Militaire is torn off before the volley — the institution protects its objects and meanings even as it kills bodies — which is <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> at its most literal, and the sergeant-major's wire-flicking, tarpaulin-rolling, strand-cutting work treats a human body as regulated matériel, an anchor for <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>. Marthe's "The war is over" against the sergeant-major's "But not the army" draws the book's central line between ceremony and lived geography: the war can be declared over at the top while the land below it is still closed by unexploded shells, and the medal that should pass to the dead man's sister is routed through the fence like a document. The final barrage — a brief curtain-call of the resumed war ripping up the burial — completes the book's argument about <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: the peace is a recess, the guns always resume, and the only durable response is the family's stubborn, dumb return to a land they cannot yet work.   </p>
+<h3 id="tomorrow">Tomorrow</h3>
+<p>Summary: The final division opens a year and a half later, after the true armistice of November. Twelve men and a dour office sergeant — leaving Paris at midnight in a special third-class carriage with a new empty military coffin and a stolen brandy ration — reach St Mihiel and then Verdun, where an old woman whose son Theodule was killed in 1916 begs to come and identify him ("I will know him"); the sergeant refuses. At Fort Valaumont they find a midden of bones and scraps beside the low entrance, and descend into the catacombs among tiered bunks, torchlight, and the great underground smell of fear and endurance — fear "attenuated to that point where it must choose between coma and madness and in the intermittent coma no longer feared but merely stank." Under the order to proceed "with expedition and despatch... and extricate therefrom one complete cadaver of one French soldier unidentified and unidentifiable," a stretcher is filled, signed, and carried up. Back in St Mihiel the squad, now led by the ex-picklock "Picklock," sells the corpse to the old woman — "This is Theodule. This is my son" — for the money in her reticule (a hundred francs, all that survives of her sold farm), then buys from a local farmer a replacement body dug out of his plowed field near Vienne-la-pucelle, on the land of the widow whose dead brother was the corporal, where "the whole war started again after that recess they took last May, right in that field yonder"; Morache trades his gold watch for the farmer's price, and the empty coffin returns to Paris carrying a different, anonymous dead. The epilogue shifts to the farm years later: Marya moves among the geese, Marthe sows with the hired man, and a scarred English veteran on crutches — one leg and one arm gone, his face divided by saffron scar — arrives "come for the medal," with the man who had once denied his name, Zsettlani; she tells them the girl went back to the brothel in Marseilles. The last scene is the great funeral of the old generalissimo six years after, the cortege up the Champs-Elysees to the Arc de Triomphe and the flame, when the same one-legged Englishman bursts out of the crowd, rips the French medal from his breast, and hurls it at the caisson — "Listen to me too, Marshal! This is yours: take it!" — crying the epitaphs "They shall not pass. My country right or wrong. Here is a spot which is forever England," until the crowd and police drag him down; lying in the gutter, bleeding, he laughs at the ring of faces: "Tremble. I'm not going to die. Never." A gaunt old man in a worn black overcoat — the Quartermaster General — bends over him: "I am not laughing... What you see are tears." Source anchors: twelve men + sergeant; empty coffin; St Mihiel; the old woman / Theodule; Verdun; the midden; Fort Valaumont catacombs; "with expedition and despatch"; "one complete cadaver"; the smell of fear/endurance; the signed receipt; Picklock; the old woman's reticule / "This is Theodule"; the replacement body near Vienne-la-pucelle; Morache's watch; the empty-coffin swap; the farm years later; Marya / the geese; the scarred veteran "come for the medal"; Zsettlani; the girl returned to Marseilles; the funeral cortege; the flung medal; "They shall not pass"; "Tremble. I'm not going to die. Never."; "What you see are tears."   </p>
+<p>Analysis: Tomorrow completes the book's argument that the state converts bodies into artifacts and calls it honor. The "expedition and despatch" extraction is <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> in pure form: a cadaver is quota, receipted, signed, and its anonymity is the entire point, because the unknown soldier must be interchangeable to be national. The old woman's counter-claim — "This is Theodule. This is my son" — is the only moment in the novel in which identity defeats the system, and the squad immediately restores the balance by buying a replacement corpse, so that even the theft of a corpse participates in the inventory; her hundred francs (a sold farm) and Morache's watch are the last prices paid into the machine. The epilogue at the farm and the funeral race the machine's afterlife against the persistence of refusal: the scarred veteran flinging the medal at the caisson, and the old general's "I am not laughing... What you see are tears," give <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> its final form — the institutions win, the wars restart, but the refusal acquires an enduring witness who refuses to die. The whole division is thus a study in how a legend is made legible to the state (the unknown soldier) and kept illegible to it (the flung medal).   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The money-economy of the battalion</strong>: leather money-belt, dogeared notebook, sixpence-a-day repayment, insurance made over to one man, the payday queue "like people waiting to enter a cinema." Retrieved in the 1916 Amiens flashback and again in the runner's Mason-sign scheme.   </li>
+<li><strong>Les Amis Myriades et Anonymes a la France de Tout le Monde</strong>: the committee and its banner over the faubourg gate, the knitting woman in the white coif, the motorcar that reaches a private in a billet; "Tooleyman" = "Tout le Monde."   </li>
+<li><strong>The horse, Mistairy</strong>: the champion running horse "owned by nothing," the three-legged flight across America, the Federal deputy who is a failed poet and resigns, the New Orleans lawyer, "It was a heap," "We dont like rich niggers here," the baptism in the creek, the Masons.   </li>
+<li><strong>The thirteen</strong>: four foreigners, nine Frenchmen, corporal "who few knew by name and even they could not pronounce it"; unstamped two-week leaves; wire-cutters; "Only darkness and a pair of wire-cutters."   </li>
+<li><strong>The "resurrection" testimony</strong>: Boggan at Mons, Brzewski buried at sea, "so all that remains for us is to witness to his resurrection."   </li>
+<li><strong>Blank shells / the orthodox sky</strong>: three miles of AA shells, batteries unloading live rounds for dummies, the unarmed corridor, the S.E.5s and the German two-seater, "archie never hits anything anyway," the tracer "like a garden pea," seaweed-like phosphorus.   </li>
+<li><strong>Tokens of legitimacy</strong>: "Endorsed as received"; the furled sabre; the torn-off Medaille Militaire; the signed paper and the medal passed through the wire; the Monday pass and the word "Latrine."   </li>
+<li><strong>The internal clock</strong>: two-hourly sentry relief; three o'clock; noon / fifteen hours; "time... back in mufti"; the three national bugles at sunset.   </li>
+<li><strong>The machine's vocabulary</strong>: "Fatherland"; "anarchist"; "the war is over" / "But not the army"; "expedition and despatch"; "one complete cadaver"; "They shall not pass. My country right or wrong. Here is a spot which is forever England."   </li>
+<li><strong>Buchwald's candle wax</strong>: "plug it up" and the re-shooting "in the right place"; the Iowan's map and pencil; the Negro undertaker from Mississippi.   </li>
+<li><strong>The farm near Vienne-la-pucelle beyond St Mihiel</strong>: the unmarked house "eviscerated by removal," the beech-tree bank burial, the medal on the mantel, "It will take years," unexploded shells still closing the land, the crater, the charge passing Marthe.   </li>
+<li><strong>Endings</strong>: the flung medal at the caisson; "Tremble. I'm not going to die. Never."; "I am not laughing... What you see are tears"; the December 1944 / November 1953 composition note.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//02 Concepts/Order and Governance.html">order and governance</a></li>
+	<li><a class="backlink" href="//02 Concepts/Common Patterns and Transferable Lessons.html">common patterns and transferable lessons</a></li>
+	<li><a class="backlink" href="//02 Concepts/Crisis Governance.html">crisis governance</a></li>
+	<li><a class="backlink" href="//02 Concepts/Legitimacy and Succession.html">legitimacy and succession</a></li>
+	<li><a class="backlink" href="//02 Concepts/War, Crisis, and Collapse.html">war, crisis, and collapse</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A109462764496708570681353417899866991066{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D109462764496708570681353417899866991066{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B109462764496708570681353417899866991066{level}" level="{level}" note_temp_id="109462764496708570681353417899866991066" onclick="window.ObsHtmlGraph.run(this, '109462764496708570681353417899866991066', 'a fable');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C109462764496708570681353417899866991066{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

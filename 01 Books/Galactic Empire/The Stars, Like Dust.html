@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the stars, like dust">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the stars, like dust';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the stars, like dust" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-stars-like-dust">The Stars, Like Dust</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This book sits inside <a href="//04%20Series/Galactic%20Empire.html">Galactic Empire</a> as one of the three locally represented volumes of Asimov's early empire novels. It is more concerned with regional conquest, noble houses, occupation, and pre-Imperial political forms than with a centralized Galactic Empire, which makes it a companion to <a href="//01%20Books/Galactic%20Empire/The%20Currents%20of%20Space.html">The Currents of Space</a> and <a href="//01%20Books/Galactic%20Empire/Pebble%20in%20the%20Sky.html">Pebble in the Sky</a> without requiring Foundation-scale psychohistory. Its nebular states, archaic titles, radioactive Earth archives, and lost Earth document show the political raw material out of which later imperial centralization would be assembled, and readers of the wider sequence can treat its guarded democratic text as a seed-concept for the problems <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> later manages.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Isaac Asimov builds <em>The Stars, Like Dust</em> around Biron Farrill's discovery that every apparent rescue may be another layer of coercion. The novel begins in University Hall Room 526 on radioactive Earth, where a dead visiphone circuit, stopped ventilation, Hypnite, and a radiation bomb make Biron believe he has narrowly escaped assassination. Sander Jonti then appears as the useful rescuer, but the white strap of Biron's wrist watch later reveals that the bomb was a dud and that Jonti's warning was part of a constructed emergency. The opening therefore teaches Biron, before he ever reaches Rhodia, that political information in the Nebular Kingdoms is staged, withheld, and weaponized — the working substance of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> as adversarial theater rather than transparent report.   </p>
+<p>The public tyranny in the book is the rule of the Tyranni, a militarized people who have taken fifty worlds across the Trans-Nebular Region and turned old local houses into supervised dependencies. Biron's father, the Rancher of Widemos, is executed for treason, and Jonti tells Biron to seek protection from Hinrik V, Director of Rhodia. That route sends Biron from Earth to the Rhodian court, where Simok Aratap of the Tyranni sees through his false name, weighs the stolen papers and the black personal capsule, and lets him move because surveillance may expose a larger conspiracy. Asimov sets Biron's raw grief beside Aratap's administrative patience: the Rancher dies violently, but the Tyrannian machine prefers traps that make enemies reveal themselves. The conquest is not maintained by garrison alone but by <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> management and the restrained exercise of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>.   </p>
+<p>Rhodia initially looks like the weakest piece on the board. Hinrik V performs panic, foolishness, and servility; Artemisia faces marriage to an old Tyrannian favorite; Gillbret oth Hinriad survives as an eccentric with illegal spy devices, a visisonor, and a story about a hidden rebellion world inside the Horsehead Nebula. The palace chapters make Rhodian decadence practical rather than decorative. False windows, diamagnetic monorails, Cellite stockings, dressing rooms, guard uniforms, and the stolen cruiser Remorseless all become tools in an escape from a court where sanctuary rights mean nothing unless force, deception, and timing can make them real. The Hinriad court is also a working lesson in <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: etiquette, gender, and rank still slow armed search long after formal law has collapsed.   </p>
+<p>The middle of the novel turns on two false centers of rebellion. The first is Jonti's Lingane, where the Autarch appears to be the most competent anti-Tyrannian leader but is exposed as the man who killed the Rancher of Widemos and tried to use Biron as disposable proof of Hinrik's guilt. The second is Gillbret's remembered world in the Horsehead Nebula, reached after a meteor damages the Tyrannian ship Bloodsucker and leaves him among factories, laboratories, and men from many Nebular Kingdoms. Biron wants the story to be true because it gives his father's death a destination, but the search by tele-camera, massometer, and hyperspace calculation keeps narrowing hope until Aratap's pursuit makes the supposed secret planet militarily useless. Lingane's service stations and Articles of Association show an alternative model of wealth — <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> through trade chokepoints rather than territory.   </p>
+<p>Aratap is the book's most effective ruler because he treats sentiment, law, and fear as instruments. He lets Biron, Artemisia, and Gillbret steal Remorseless because its built-in hyperspace transmitter can be followed; he brings Hinrik along so any rescue can be presented as Rhodian business; he understands that public trials might strengthen the legend of a rebellion world. His Tyranny is not shown as raw cruelty alone. It is a statecraft of managed appearances, legal jurisdiction, technological surveillance, and selective leniency, which is why Biron's blunt courage repeatedly fails until he learns to read political theater as carefully as engine-room danger.   </p>
+<p>The hidden answer is not the Horsehead Nebula but Rhodia itself. Gillbret's impossible accident, the death of two Tyrannian crewmen, and the survival of his story only make sense when Biron realizes that the damaged Bloodsucker followed its original course toward Rhodia rather than wandering into an astronomical impossibility. Hinrik's cowardice is then reversed: the Director has spent twenty years pretending weakness while protecting the real rebel base in his own system, preserving the document the Rancher had sought, and accepting even Artemisia's possible sacrifice as part of that concealment. The revelation is cruel because Hinrik's mask has hurt real people, not merely fooled enemies, and because his <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> as puppet Director was itself the disguise.   </p>
+<p>The "document" turns out to be the preamble to the United States Constitution, and Asimov uses it against both sides of the feudal order. Hinrik says it will destroy the Tyranni and the Nebular aristocrats alike because a politics beginning with "We the people" leaves no natural place for Khans, Autarchs, Directors, Ranchers, or hereditary privilege. That ending gives the book a sharper edge than a simple liberation plot: Biron may inherit Widemos, marry Artemisia, and despise Tyranni power, but the text Hinrik guards points beyond Biron's class as much as beyond Tyrannian conquest. The rebellion's weapon is not a fleet or a secret planet but a claim about political legitimacy, preserved across twenty years as <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> whose archive is a single guarded document rooted in <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth as Administrative Core</a>. Read retrospectively against the wider sequence, this guarded constitutional text is less the Foundation itself than the seed-concept of popular sovereignty that Asimov's later foundation-building order will inherit and manage.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Biron Farrill</strong>: son of the executed Rancher of Widemos, educated on Earth as a pilot in a period when navigation is a forbidden science in the Kingdoms. He is driven by grief and dynastic obligation, and his arc is the movement from blunt, physical courage to political literacy. He learns that his name is capital, that his father was a competitor as well as a martyr, and that saving a rebellion can require letting an enemy live.   </li>
+<li><strong>Artemisia oth Hinriad</strong>: the Director's daughter, facing marriage to an old Tyrannian favorite. She reads etiquette and machinery with equal skill, converts palace gender rules into escape infrastructure, and refuses the Autarch's offers. Her relationship with Biron is partly genuine love and partly a political test of whose dynastic logic he will serve.   </li>
+<li><strong>Gillbret oth Hinriad</strong>: the Director's cousin and a Hinriad of the possible succession. He has hidden a twenty-year memory of the so-called rebellion world behind a lifelong part as a harmless dilettante; his visisonor and spy devices make his eccentricity material, and his eventual sabotage of the hyperatomics is loyalty to a secret he cannot verify.   </li>
+<li><strong>Sander Jonti / the Autarch of Lingane</strong>: the book's principal false rescuer. He stages Biron's near-death on Earth, ships him to Rhodia to be arrested, and later courts Artemisia while planning Biron's death. He is the picture of competent autocracy: brilliant, cold, and willing to spend any person to protect his own position in the eventual new order.   </li>
+<li><strong>Simok Aratap</strong>: the Tyrannian Commissioner, second-generation conqueror who prefers one ship, inference, and legal jurisdiction over display and massacre. He lets fugitives run because the stolen cruiser is a self-reporting surveillance asset, and he releases them eventually because full trials would manufacture the legend of a rebellion world.   </li>
+<li><strong>Hinrik V</strong>: Director of Rhodia, seemingly the book's feeblest puppet. The ending reveals that his twenty years of cowardice, panic, and servility concealed the real rebellion and the rebel base in his own system; the cost of the mask is that even his daughter was nearly sacrificed to maintain it.   </li>
+<li><strong>Tedor Rizzett</strong>: colonel in the Linganian forces and the Autarch's trusted aide. Loyal to the memory of the Rancher of Widemos, he removes the energy capsule from Jonti's blaster, broadcasts the confession, and holds the Linganian crew's allegiance long enough for Biron to address them. He embodies the commoner-officer stratum of the rebellion.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Galactic%20Empire.html">Galactic Empire</a>: the hub for this book and its two siblings, which together show consolidation without integration in pre-Foundation politics.   </li>
+<li><a href="//01%20Books/Galactic%20Empire/The%20Currents%20of%20Space.html">The Currents of Space</a>: Florina's kyrt hierarchy and Sark's colonial governance extend this book's survey of peripheries ruled by a small conquering class.   </li>
+<li><a href="//01%20Books/Galactic%20Empire/Pebble%20in%20the%20Sky.html">Pebble in the Sky</a>: radioactive Earth as archive, prejudice, and origin question forms the bridge between this novel's lost document and the later imperial order.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: the Tyranni's fifty conquered worlds and puppet directorships are the book's central imperial structure.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: staged assassination, surveillance ships, personal beams, and Aratap's managed leniency make deception the novel's operating system.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the Tyrannian preference for surveillance, jurisdiction, and physiological enforcement (neuronic whips) over open massacre.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: Hinriad succession, puppet election, Dynastic marriage, and the constitution's abolition of titled government.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth as Administrative Core</a>: the Earth archives, University of Earth, Terrestrial Consul, and the protected document that only Earth's historical records could supply.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>: a retrospective, interpretive bridge — the guarded constitutional document is a seed of popular sovereignty that the Foundation-era order will later manage as knowledge turned into governance.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>Staged emergencies and the weaponization of rescue: Biron learns to read engineered danger backward.   </li>
+<li>Rule by a tiny conqueror class over outnumbered worlds: coercion through surveillance, law, and selective leniency rather than massacre.   </li>
+<li>The conservation of power through managed appearances: puppets, masks, and the theatrical Director.   </li>
+<li>Forbidden knowledge and the cost of science under occupation: the visisonor, Earth pilot training, and the hyperatomic secrets.   </li>
+<li>The economics of underdevelopment: industrialized worlds outside the Kingdoms set against the deliberately deindustrialized Nebular worlds.   </li>
+<li>The document as political weapon: a founding text that outlaws the very rulers who would use it.   </li>
+<li>The rebellion that is hidden in plain sight: concealment by strategic uselessness.   </li>
+<li>Dynastic marriage, heredity, and succession as instruments of both tyranny and rebellion.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: the Tyranni rule fifty worlds through puppet directors, taxation, and the suppression of native industrialization while the inner worlds urbanize around them.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Aratap's apparatus — Outer Police, massometer, hyperspace transmitter, prize crews — lets a small occupation class track and control a huge subject population with minimal force.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: the novel is an extended case of adversarial knowledge: staged bombs, false identities, tapped beams, communicators shorted to broadcast confessions, and surveillance conducted by letting fugitives run.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: Hinriad election under Tyrannian influence, the marriage alliance, and the constitution's replacement of titled succession by popular sovereignty.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: sanctuary right, rank, impropriety, and lady's-skirts etiquette survive as operative defenses after formal institutions have become Tyrannian instruments.   </li>
+<li><a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>: Gillbret's four-step developmental cycle explains why the Tyranni freeze Nebular worlds at an agricultural stage; Lingane's service stations show wealth through trade routes instead.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the Rancher's search and Hinrik's twenty-year custody of the constitutional document test how a dangerous archive survives occupation.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: the Rancher, the Autarch, and the Hinriads are rival versions of a ruling class being produced, consumed, and replaced by rebellion.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>: interpretive — the preserved founding document prefigures the later project of turning knowledge and its strategic custody into long-range governance.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<p><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </p>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="h_1-the-bedroom-murmured">1. THE BEDROOM MURMURED</h3>
+<p>Summary: Biron Farrill wakes in University Hall Room 526 on Earth after Sander Jonti's visiphone call reaches him without activating the sending circuit. The room has no ventilation, no lights, a jammed door, a Hypnite cylinder under the bed, and a radiation counter murmuring from the closet while his wrist watch radiation strap stays white. Biron first treats the situation as a student prank, then finds the radiation bomb and realizes that the radioactive blue horizon outside Earth is no abstraction. Superintendent Esbak and Jonti finally break in, with Jonti ordering leadsheets and claiming he came to warn Biron that his life was in danger. Source anchors: Biron Farrill, Room 526, Sander Jonti, Hypnite, radiation counter, wrist watch, radiation bomb, Esbak.   </p>
+<p>Analysis: Biron Farrill enters the novel as a physically capable student who is still politically naive, and Room 526 turns into a laboratory for that naivete. Sander Jonti's broken visiphone call, the Hypnite, and the radiation bomb turn <a href="//02%20Concepts/Intelligence.html">Intelligence</a> into theater: they train Biron to believe in a direct assassination attempt before he has evidence about who arranged it. The wrist watch matters because its white strap later makes this entire episode readable as theater, while Esbak and the leadsheets give the staged danger enough institutional texture to fool Biron. The room's broken circuits and dried ventilation also work by cutting off ordinary reporting channels, so Biron cannot check the emergency except through the channel Jonti controls.   </p>
+<h3 id="h_2-the-net-across-space">2. THE NET ACROSS SPACE</h3>
+<p>Summary: In the student lounge at four-thirty in the morning, Sander Jonti tells Biron that the Rancher of Widemos is in Tyrannian hands and may already have been executed. Jonti describes the Tyranni as rulers of fifty worlds across five hundred light-years who use assassination, intrigue, and puppet governments because they are outnumbered by the Nebular peoples they rule. He says he is from the Nebular Kingdoms, not merely Vegan, and directs Biron toward Hinrik V of Rhodia as a possible protector if Widemos is confiscated. After Biron leaves, Jonti receives a private polarized-beam message, learns Widemos is dead, and treats Biron as expendable in the hunt for a dangerous Earth document. Source anchors: student lounge, Rancher of Widemos, Tyranni, fifty worlds, Hinrik V, Rhodia, private beam, Earth document.   </p>
+<p>Analysis: The student lounge conversation moves Biron from personal panic into a map of imperial control, but Sander Jonti controls that map from the first sentence. The Rancher of Widemos gives Biron grief and dynastic obligation, while the Tyranni and fifty worlds define the scale of the enemy he has inherited. The explanation of a conqueror class ruling hundreds of times its own population by deception and division is an essay on <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>, where <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> substitutes surveillance and intrigue for numbers. Hinrik V and Rhodia look like refuge because Jonti frames them that way, but the private beam and Earth document reveal that Jonti is already managing Biron as a movable piece rather than saving him as an ally — classic <a href="//02%20Concepts/Intelligence.html">Intelligence</a> tradecraft in which the rescued man is the instrument.   </p>
+<h3 id="h_3-chance-and-the-wrist-watch">3. CHANCE AND THE WRIST WATCH</h3>
+<p>Summary: Biron leaves Earth for Rhodia under the temporary name Malaine, carrying the black personal capsule and a ticket silently supplied by Jonti. On the ship, Captain Hirm Gordell moves him from Room 140 D to a first-class double room near officer country, claiming a weak-hearted passenger needs the room close to the gravitational center. Biron notices that Room 140 D remains unused, realizes the move enabled access to his baggage, and later finds his identification papers, his father's letters, and Hinrik's introduction gone. During the first Jump, he looks at his wrist watch and sees the strap still white, proving the radiation bomb in University Hall was a dud. Source anchors: Malaine, black personal capsule, Captain Hirm Gordell, Room 140 D, gravitational center, first Jump, wrist watch, Hinrik introduction.   </p>
+<p>Analysis: The ship chapter makes Biron's suspicion depend on small physical discrepancies rather than speeches. Captain Hirm Gordell's story about the gravitational center gives official form to the theft of Room 140 D, while the missing Hinrik introduction cuts Biron off from the scripted protection Jonti promised. The wrist watch overturns Biron's understanding of the Hypnite and radiation bomb, so the first Jump carries him away from Earth at the same moment he realizes that the rescue story began with a lie. The detail of the white strap — inverting the presumed evidence — is precisely how <a href="//02%20Concepts/Intelligence.html">Intelligence</a> is read in reverse: the "proof" of an attack becomes the proof of its staging.   </p>
+<h3 id="h_4-free">4. FREE?</h3>
+<p>Summary: Tedor Rizzett and Jonti discuss a missing document dated to Earth's fifteenth through twenty-first centuries, something stolen twenty years earlier and described by the Rancher of Widemos as death for the Tyranni and for the Nebular rulers as well, but final life for the Galaxy. On Rhodia, Simok Aratap questions Biron after the ship lands, surrounded by Outer Police guards and armed with Biron's letters, registration receipt, commencement tickets, and black capsule. Biron insists he is Biron Malaine of Earth and asks for the Terrestrial Consul, then improvises a story about a plot against Director Hinrik. Aratap lets him go because watching his meeting with Hinrik may reveal more than arresting him immediately. Source anchors: Tedor Rizzett, missing document, twenty years, Simok Aratap, Outer Police, Terrestrial Consul, Director Hinrik, black capsule.   </p>
+<p>Analysis: Tedor Rizzett and Jonti place the missing document beyond ordinary military value, since the Rancher says it threatens Tyranni rule and Nebular privilege together; a stolen Earth relic circulating covertly for two decades is also a case of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> in institutional secrets. Simok Aratap then demonstrates the opposite kind of power: he does not need to believe Biron's Biron Malaine story when the black capsule and confiscated papers already identify him, and he has the <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> to refuse the Terrestrial Consul's protections. By allowing access to Director Hinrik, Aratap turns Biron's improvised lie into surveillance, making Rhodia an investigative trap rather than a sanctuary — the book's opening demonstration of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> as patience.   </p>
+<h3 id="h_5-uneasy-lies-the-head">5. UNEASY LIES THE HEAD</h3>
+<p>Summary: The narration situates Rhodia as the 1098th settled world, with Tyrann as the 1099th, and describes how the Hinriad order survived until Tyrannian conquest turned the Directorship into a supervised puppet office. Hinrik V, chosen twenty years earlier, trembles under Tyrannian pressure while his daughter Artemisia refuses marriage to an old Tyrannian court favorite with bad breath and three dead wives. Hinrik fears that the execution of the Rancher of Widemos means the Tyranni may remove him next. When Major Andros calls about a young man from Earth with news of an assassination plot, Artemisia insists on seeing the visitor before her father collapses into panic. Source anchors: Rhodia, Tyrann, Hinriad, Hinrik V, Artemisia, Tyrannian court favorite, Rancher of Widemos, Major Andros.   </p>
+<p>Analysis: Rhodia and Tyrann being almost consecutive settlements makes their political difference feel historical rather than natural: one becomes the old Hinriad court, the other the conquering military power. Hinrik V's fear after the Rancher of Widemos execution shows how <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> work through puppet rule, disciplining hereditary directors without abolishing their local titles. The chapter also densifies <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the Directorship is elective within the Hinriad family, influenced by Tyrannian choice, and now levered toward a marriage alliance that would bind Artemisia to a dying court favorite. Artemisia's refusal of the Tyrannian court favorite and her handling of Major Andros introduce her as the person in the palace most willing to convert status into action.   </p>
+<h3 id="h_6-that-wears-a-crown">6. THAT WEARS A CROWN</h3>
+<p>Summary: Biron waits in the Palace Grounds and feels provincial before Palace Central, whose straight lines and absence of false windows make Widemos Hall seem barbaric to him. Artemisia questions him in a diamagnetic monorail carriage with a guard present, and Biron admits the assassination story is false before claiming Sanctuary Right under his true name, Biron Farrill. Gillbret oth Hinriad appears after eavesdropping through palace communications, recognizes the Rancher's son, and jokes about succession. Hinrik meets Biron, learns that Aratap sent him, panics over a possible trap, and later decides he knows what he must do. Source anchors: Palace Grounds, Widemos Hall, diamagnetic monorail, Artemisia, Sanctuary Right, Gillbret oth Hinriad, Hinrik, Aratap.   </p>
+<p>Analysis: Palace Grounds and Widemos Hall measure Biron's social pride against the older Hinriad world, so his claim of Sanctuary Right is both legal appeal and aristocratic reflex. The feudal customs he invokes have been losing force — a demonstration that <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> decay under conquest while still carrying enough residual grammar to be worth claiming. Artemisia tests him before Hinrik can surrender him, while Gillbret oth Hinriad's eavesdropping shows that the palace has its own hidden circuits beneath Tyrannian supervision. Aratap's name is enough to break Hinrik's composure, which makes the Director's weakness seem convincing before the ending reinterprets it; the succession jokes are also the first hint that the literal line of the Hinriads is less a government than a cover.   </p>
+<h3 id="h_7-musician-of-the-mind">7. MUSICIAN OF THE MIND</h3>
+<p>Summary: Gillbret brings Biron into his hidden laboratory and library, where illegal Tyranni spy-beam detectors and a visisonor are concealed among book films. The visisonor is keyed to the mind like personal capsules, impressing electrical patterns directly on the brain to produce colored sound, tactile hallucination, and a blue-violet ball that makes Biron dizzy. Gillbret explains that the Tyranni forbid such equipment and that discovery could mean death, then attacks their militarism for keeping the Nebular Kingdoms agricultural while nearby worlds urbanize. He admits that he has spent his life playing the harmless dilettante and asks Biron to pilot a ship so he and Artemisia can flee her forced marriage. Source anchors: Gillbret, visisonor, personal capsules, blue-violet ball, Tyranni spy-beam, Primitivist, Earth library, forced marriage.   </p>
+<p>Analysis: Gillbret's visisonor makes his eccentricity material: the blue-violet ball and personal capsules show that his mind games depend on <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> the Tyranni have made politically dangerous. The Tyranni spy-beam equipment explains why his dilettante mask has political value inside the Rhodian palace, and his speech about the four-step economic cycle — agricultural submission freezing worlds before industrialization — is the book's clearest account of the <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> of occupation, in which deindustrialization is a deliberate instrument of empire. His comments on Primitivist collecting and the Earth library connect Hinrik's old scholarly pose to <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth as Administrative Core</a>, the archive-house where the missing document was guarded, while the forced marriage gives Artemisia's escape an immediate deadline.   </p>
+<h3 id="h_8-a-lady-s-skirts">8. A LADY'S SKIRTS</h3>
+<p>Summary: Guards with neuronic whips arrive to arrest Biron for high treason, but Gillbret distracts them by pretending Biron needs a cloak and then using the visisonor. Biron tackles one guard, seizes a whip, and fights through pain that feels like boiling lead in his foot even though the skin is unbroken. The guards hallucinate unseen terrors, and Gillbret admits he cannot control what the visisonor makes them see. Biron follows directions to Artemisia's room, where she hides him in a dressing room behind dust-repelling force fields, gowns, and the social protection implied by a lady's skirts. Source anchors: neuronic whips, high treason, cloak, visisonor, boiling lead, Artemisia's room, dressing room, lady's skirts.   </p>
+<p>Analysis: The neuronic whips make Tyrannian enforcement intimate because they can create disabling pain without visible wounds — a physiological instrument of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> designed to punish without leaving legal or moral evidence. Biron's arrest for high treason shows how little Sanctuary Right protects him, and his foot, unbroken yet burning, becomes the book's best example of coercion that operates below the threshold of visible harm. Gillbret's cloak trick and visisonor convert court eccentricity into escape technology, but the uncontrolled hallucinations keep the rescue unstable. Artemisia's room, dressing room, and lady's skirts then turn gendered palace etiquette into a defensive barrier that armed guards hesitate to violate — one of the novel's strongest demonstrations that <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> survive formal collapse.   </p>
+<h3 id="h_9-and-an-overlord-s-trousers">9. AND AN OVERLORD'S TROUSERS</h3>
+<p>Summary: Artemisia blocks the captain of the guard by invoking rank, impropriety, and the scandal of searching her private rooms at night. Biron chokes a tall guard unconscious, binds him with Cellite stockings strong as steel, cleans himself with detergent mist, and squeezes into the guard's uniform and conical cap. Artemisia carries a stolen neuronic whip in her bag while Gillbret helps them pass guard posts as royal family with escort. On the Palace Field they take Aratap's armored cruiser Remorseless, and Aratap deliberately avoids a general alarm because he wants the fugitives to lead him toward the conspiracy. Source anchors: captain of the guard, Cellite stockings, detergent mist, Palace Field, Remorseless, Aratap, Major Andros, general alarm.   </p>
+<p>Analysis: Artemisia's success with the captain of the guard depends on <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> that Tyrannian force has not fully erased: rank, impropriety, and private-room etiquette still slow armed search. Cellite stockings, detergent mist, and a conical cap make the escape practical rather than romantic, with palace domestic objects replacing formal weapons. Remorseless is the crucial prize, but Aratap's refusal to sound a general alarm shows that the theft remains inside his plan; Major Andros wants police reaction, while Aratap wants evidence. Reading the ship that has just been "stolen from him" as a self-reporting asset is the book's key move in <a href="//02%20Concepts/Intelligence.html">Intelligence</a>: surrender is sometimes itself the surveillance.   </p>
+<h3 id="h_10-maybe">10. MAYBE!</h3>
+<p>Summary: Biron's spationautics training on Earth proves mostly academic when he pilots Remorseless by luck and searches the Standard Galactic Ephemeris for a usable course. Gillbret recounts his journey twenty years earlier as Hinrik's representative to the Khan's coronation aboard the Tyrannian ship Bloodsucker. The outward trip and the stay on Tyrann were uneventful, but on the return trip a genuine meteor penetrated the hull, ricocheted through the control room, and cut both crewmen to pieces, leaving Gillbret the only survivor. The meteor smashed the control board and altered the ship's course so that it never returned to Rhodia, and it was while trapped alone on the Bloodsucker that Gillbret discovered a Tyrannian ship with its controls set can make its Jumps automatically. He says he used ordinary etheric radio near an unknown planet, where rebels from many Nebular Kingdoms brought him underground among laboratories, factories, and ships. Source anchors: spationautics, Remorseless, Standard Galactic Ephemeris, Khan's coronation, Bloodsucker, meteor, etheric radio, rebellion world.   </p>
+<p>Analysis: Biron's shaky handling of Remorseless keeps the escape dependent on luck, which matches Gillbret's account of the meteor that supposedly carried Bloodsucker to the rebellion world. The Khan's coronation places Gillbret aboard the Bloodsucker at all, while the automatic-Jump secret he learns from the damaged ship reveals the military-technological edge that let <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> decide the conquest. Etheric radio, laboratories, factories, and Nebular personnel give Gillbret's story enough concrete machinery for Biron to want belief, even though the same details will later be tested; the search itself is an exercise in <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as navigation through near-blind space.   </p>
+<h3 id="h_11-and-maybe-not">11. AND MAYBE NOT!</h3>
+<p>Summary: Biron presses Gillbret on the weakness of his evidence: no tour of the laboratories, no proof of the factories, a convenient meteor story, and the suspicious fact that the Tyranni let him return to Rhodia alive. Gillbret points to the vanished ship Tireless and to a strange massometer object as possible signs that the rebels have real power. The lead turns toward the Autarch of Lingane, because Biron's father visited Hinrik's Primitivist Earth library six months earlier and spoke of both the Autarch and the unknown document. Biron calculates a Jump using rho, theta, phi, the Galactic Baseline, proper motion, curvature correction, and two known stars before he and Artemisia kiss on the way to Lingane. Source anchors: Tireless, massometer, Autarch of Lingane, Earth library, unknown document, Galactic Baseline, rho theta phi, Lingane.   </p>
+<p>Analysis: Biron's questions about Tireless and the massometer begin separating Gillbret's memory from usable evidence, the same skeptical discipline <a href="//02%20Concepts/Intelligence.html">Intelligence</a> demands when sources cannot be corroborated. The Autarch of Lingane becomes plausible because the Earth library and unknown document place Hinrik, Widemos, and Gillbret's story in the same chain of visits six months earlier, linking the archive of <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth as Administrative Core</a> to the conspiracy's paper trail. The Galactic Baseline and rho theta phi calculation make Biron's competence newly technical — his Earth education in navigation is worth more than his title — while the kiss with Artemisia ties the Lingane Jump to personal allegiance as well as navigation.   </p>
+<h3 id="h_12-the-autarch-comes">12. THE AUTARCH COMES</h3>
+<p>Summary: On Lingane, the Autarch and Tedor Rizzett discuss a cruiser orbiting within one hundred thousand miles, a stopped mail ship, and a message capsule containing only the word Gillbret. The chapter describes Lingane as a trade world with service stations, a valuable position in interstellar routes, and Articles of Association that preserved partial autonomy after Tyrannian pressure thirty years earlier. The Autarch suspects a trap or final Tyrannian bear hug but decides to visit the ship alone. Aboard Remorseless, Biron, Artemisia, and Gillbret wait as the Autarch's yacht approaches, sends one suited man across a space line, and reveals the Autarch to be Sander Jonti. Source anchors: Tedor Rizzett, Gillbret, Lingane, service stations, Articles of Association, Autarch's yacht, space line, Sander Jonti.   </p>
+<p>Analysis: Lingane's service stations and Articles of Association explain why its ruler can act more independently than Hinrik without being openly free of Tyrann. The trade monopoly built on strategically placed service stations makes Lingane a textbook case of <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>, where <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> substitutes route control for large territory. The merchant dynasties that became the Autarchy also show <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> hardening a plutocracy into an autocracy as planet states consolidate around it. Tedor Rizzett's caution gives the Autarch a military staff, not just a title, while the one-word Gillbret message shows how thin the fugitives' evidence remains. The space line entrance lets Sander Jonti return as the Autarch, converting Biron's rescuer from Earth into the political actor at Lingane's center.   </p>
+<h3 id="h_13-the-autarch-remains">13. THE AUTARCH REMAINS</h3>
+<p>Summary: Jonti sits aboard Remorseless and explains that the message Gillbret told him enough: Gillbret could not pilot, so a young aristocrat must be with him. Biron accuses Jonti of staging the Hypnite emergency, using a dud radiation bomb, waking him with the broken visiphone, arranging the stateroom change, and stealing the papers that exposed him on Rhodia. Jonti claims he wanted to involve Hinrik because Hinrik betrayed the Rancher of Widemos after Widemos spoke too freely six months earlier. When Rizzett appears on the visiplate, Biron reveals himself as the Rancher of Widemos, and Artemisia refuses Jonti's demand that she transfer to his ship. Source anchors: Hypnite, dud radiation bomb, broken visiphone, stateroom change, Hinrik, Rancher of Widemos, Rizzett, Artemisia.   </p>
+<p>Analysis: Biron's reconstruction of Hypnite, the dud radiation bomb, the broken visiphone, and the stateroom change proves he has learned to read engineered danger backward, turning the staged emergency of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> into a case file. Jonti's countermove — sacrificing one truth to cover another — shows how layered deception operates: the Autarch admits arranging the bomb to buy credibility for the false charge against Hinrik. Biron's rebuff of that charge, and Jonti's claim that Hinrik killed the Rancher, frames the rest of the book as a contest over the <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> of the houses: who is worthy of the Widemos inheritance, who is a traitor within the Hinriads, and which ruler's name can lead a rebellion. Rizzett's salute and Artemisia's refusal to leave Remorseless also divide loyalty between Lingane's Autarch and Biron's inherited claim.   </p>
+<h3 id="h_14-the-autarch-leaves">14. THE AUTARCH LEAVES</h3>
+<p>Summary: After Jonti's revelations, Biron, Artemisia, and Gillbret sit in a tense tableau while Rizzett waits on the visiplate and the Autarch prepares to leave. Biron refuses to let Artemisia transfer to Jonti's ship, and Jonti exits through a contact air lock after repeated attempts to mate the flexible extensions and magnetic fields. Gillbret handles the Autarch's officer and disconnects the magnetic field when Biron orders it. Artemisia follows Biron afterward and tells him she loves him, but he steps back because Jonti's charge against Hinrik has made him feel not quits with the Hinriads. Source anchors: Rizzett, Artemisia, contact air lock, magnetic fields, Gillbret, Hinriads, Biron, Autarch.   </p>
+<p>Analysis: The contact air lock and magnetic fields slow Jonti's departure enough to keep the emotional damage in the room after the political exchange ends. Biron's refusal to release Artemisia protects her from the Autarch while also asserting control over her choices. Gillbret's obedience and the reference to the Hinriads show how Jonti's claim against Hinrik has poisoned Biron's trust in the family that sheltered him, including Artemisia. The scene therefore makes <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> personal: in a feudal order, the suspicion of a traitor Director contaminates the daughter's claim to loyalty no less than the inheritance.   </p>
+<h3 id="h_15-the-hole-in-space">15. THE HOLE IN SPACE</h3>
+<p>Summary: Tedor Rizzett boards Remorseless to arrange a super de luxe trailer with emergency air lock, power thrusters, two months' water, frozen meats instead of Tyrannian concentrate, clothing, and cosmetics. He praises the dead Rancher of Widemos as honorable and friendly to commoners while describing the Autarch as brilliant but cold. Artemisia and Gillbret argue over whether Hinrik could have betrayed Widemos, with Artemisia insisting her father hates the Tyranni. The joined ships Jump to the edge of the Horsehead Nebula, the hole in space, while Aratap and ten Tyrannian vessels follow less than a light-year behind. Source anchors: Tedor Rizzett, trailer, two months' water, Tyrannian concentrate, Rancher of Widemos, Hinrik, Horsehead Nebula, ten Tyrannian vessels.   </p>
+<p>Analysis: Tedor Rizzett's provisioning of the trailer makes the expedition look practical, but his memories of the Rancher of Widemos also challenge Jonti's colder leadership style, sketching two different versions of <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: the popular lord who was "the same to everyone" and the governing intellect no one can approach. The contrast between frozen meats and Tyrannian concentrate gives the fugitive ship a lived-in, anti-military texture before the Horsehead Nebula search begins. Hinrik remains contested through Artemisia's defense of him, while the ten Tyrannian vessels show that Aratap has turned their journey into a tracked operation; the "hole in space" name for the nebula signals the deliberate blankness in which the book's false center of rebellion will be constructed.   </p>
+<h3 id="h_16-hounds">16. HOUNDS!</h3>
+<p>Summary: Simok Aratap follows from the Tyrannian side, uncomfortable in uniform and irritated that Major Andros insisted on ten ships when he preferred one. He brings Hinrik so that Biron's death and Artemisia's recovery can be presented as a Rhodian matter rather than an obvious Tyrannian execution. Aratap explains the massometer, which can detect ships only within about a million miles when planetary gravity does not overwhelm it, and the hidden hyperspace transmitter built into Tyrannian cruisers like Remorseless. As Remorseless Jumps from Lingane to the Horsehead Nebula and then searches inside the darkness, Aratap infers they are looking for habitable planets and descends near the barren planet where they land. Source anchors: Simok Aratap, Major Andros, ten ships, Hinrik, massometer, hyperspace transmitter, Horsehead Nebula, barren planet.   </p>
+<p>Analysis: Simok Aratap's preference for one ship over ten ships reveals his reliance on inference rather than display, while Major Andros represents heavier police instinct; the friction between them is a dispute inside <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> about whether to overawe or observe. Hinrik's presence lets Aratap convert Tyrannian pursuit into Rhodian legal theater, so that execution can be framed as dynastic rescue. The massometer and hyperspace transmitter make <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> the central flaw in stealing Remorseless: the same ship that gives Biron mobility gives Aratap a trail through the Horsehead Nebula to the barren planet, and Aratap's entire detection advantage is asymmetric knowledge that the fugitives do not know they are broadcasting.   </p>
+<h3 id="h_17-and-hares">17. AND HARES!</h3>
+<p>Summary: Biron explains the planet search problem: stars are easy to locate, but habitable planets occupy tiny angles, and tele-camera time exposures must catch planetary streaks near each candidate star. After three failures, Gillbret's confidence weakens, while Biron jokes that Horsehead Nebula may come from Horace Hedd rather than an Earth horse head. At the fourth star, atmospheric readings show almost thirty percent oxygen, nitrogen and inert gases, and no carbon dioxide, yet the planet is rocky and dead. Biron and the Autarch go out in suit linings to set up a radio transmitter on high ground, with Jonti carrying a foamite coat and a carbon dioxide cylinder. Source anchors: tele-camera, Horsehead Nebula, Horace Hedd, thirty percent oxygen, carbon dioxide, radio transmitter, foamite coat, carbon dioxide cylinder.   </p>
+<p>Analysis: The tele-camera search turns Gillbret's remembered rebellion world into a statistical problem rather than a legend — systematic surveying under conditions of darkness that the chapter itself calls boring, in which <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> replaces heroism. Biron's Horace Hedd joke about Horsehead Nebula shows his nerves under pressure, but the thirty percent oxygen and absent carbon dioxide mark the planet as scientifically strange in a way Asimov later corrects. The radio transmitter, foamite coat, and carbon dioxide cylinder prepare the surface scene as a technical setup where Jonti can isolate Biron; the sheer procedural detail of the equipment is the mask under which an assassination attempt will be staged.   </p>
+<h3 id="h_18-out-of-the-jaws-of-defeat">18. OUT OF THE JAWS OF DEFEAT!</h3>
+<p>Summary: Artemisia watches from Remorseless and realizes that a surface radio transmitter makes little sense if ordinary space radio and sub-ether methods have failed. Gillbret sees the Autarch's ship and Rizzett with a long-range blasting rifle, while Artemisia grabs a neuronic whip and runs outside without a carbon dioxide cylinder. On the cliff, Biron tells Jonti that the transmitter is a pretext for an accidental death and accuses him of betraying the Rancher of Widemos, alerting the Rhodian ship, and pursuing Artemisia through Hinriad succession. Jonti opens a suitcase containing radio equipment and a hidden blaster, admits the murder, and fires, but Rizzett has removed the energy capsule and shorted the communicator so the crew hears the confession. Source anchors: radio transmitter, long-range blasting rifle, neuronic whip, carbon dioxide cylinder, hidden blaster, energy capsule, Rizzett, confession.   </p>
+<p>Analysis: Artemisia's doubts about the radio transmitter show that she can read machinery as well as etiquette when Biron is in danger, and her bareheaded dash without a carbon dioxide cylinder nearly kills her — her rescue and her collapse are a single act. The carbon dioxide cylinder and long-range blasting rifle make the trap dependent on physical conditions, not only Jonti's words. Rizzett's removal of the energy capsule and broadcast of the confession transfer authority away from the Autarch: Jonti's hidden blaster becomes evidence against him rather than the instrument of Biron's death. The overturned communicator — turning a private scene into a broadcast — is the novel's cleanest inversion of <a href="//02%20Concepts/Intelligence.html">Intelligence</a>: the same channel the conspirator uses for secrecy becomes the medium of his exposure.   </p>
+<h3 id="h_19-defeat">19. DEFEAT!</h3>
+<p>Summary: Rizzett's intervention leaves Jonti exposed, but the Autarch still claims that only he knows the coordinates of the fifth intranebular planet and that finding it again by chance would be 250 quadrillion to one. Back on the ship, Biron speaks to about fifty Linganian crewmen and argues that replacing the Khan with the Autarch would not free the Galaxy from tyranny. He asks them to choose a free Galaxy rather than another ruler, trying to turn Jonti's own soldiers against him. The effort fails when Aratap enters with Tyrannian guards, announces that the word is defeat, and takes control of the ship. Source anchors: Rizzett, fifth intranebular planet, 250 quadrillion, fifty Linganian crewmen, Khan, Autarch, free Galaxy, Aratap.   </p>
+<p>Analysis: Rizzett can expose the Autarch's murder of Widemos, but the fifth intranebular planet still lets Jonti claim strategic indispensability — a criminal who holds the only map becomes impossible to remove. Biron's appeal to the fifty Linganian crewmen starts a <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> argument before the Constitution appears: he rejects both Khan and Autarch in favor of a free Galaxy, framing a politics in which revolution is not the swap of one titled ruler for another. The speech also works as <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> refinement — "filthy Tyranni" gives way to "a free Galaxy" as the mobilizing formula. Aratap's entrance cuts off that political persuasion with armed control, showing that correct moral language does not yet give Biron operational power.   </p>
+<h3 id="h_20-where">20. WHERE?</h3>
+<p>Summary: Aratap questions Artemisia, Gillbret, Rizzett, and Biron while a prize crew takes the Autarch's ship and Major Andros escorts it toward Tyrann. He offers selective bargains and presses for the coordinates of the rebellion world, then turns Jonti's death into a legal problem by framing the Autarch's murder under Linganian jurisdiction. A general alarm sounds when Gillbret disappears and is later found near the engine room after a false storage alarm. Confined with Biron, Gillbret admits that he has shorted the hyperatomics so the next Jump will turn the ship, the prisoners, and the knowledge of the rebellion world into iron vapor. Source anchors: Aratap, prize crew, Major Andros, rebellion world, Autarch's murder, general alarm, engine room, hyperatomics.   </p>
+<p>Analysis: Aratap's questioning separates <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> from military capture: the prize crew and Major Andros secure ships, while the Autarch's murder gives him jurisdictional pressure over Rizzett, turning a killing into a convenience of prosecution. The rebellion world is valuable to him only if he can extract it without making Jonti a martyr or bargain partner, which is why he games each prisoner against the next — surveillance maintained by dividing captives. Gillbret's move in the engine room with the hyperatomics is desperate loyalty to the secret, but it also threatens Biron, Artemisia, and everyone aboard with meaningless iron vapor; the "where" of the chapter is finally located not in space but inside a sabotaged engine that no political bargain can reach.   </p>
+<h3 id="h_21-here">21. HERE?</h3>
+<p>Summary: Biron escapes the force-field cell by claiming Gillbret is ill, then fights the doctor and guard, seizes a neuronic whip and club, and runs toward the engine room. He tells Lieutenant Lancy that Gillbret has shorted the hyperatomics, triggers an alarm, jumps a railing, sprains his knee, throws away his weapons, and insists that the next Jump will kill everyone. Aratap orders the Jump halted, and the engine crew reports that C Bank is completely shorted and repairs will add six hours. Gillbret dies after a doctor's injection, and Aratap later reports that the supposed fifth star is a white dwarf with no possible planets, leaving no rebellion world in the Horsehead Nebula. Source anchors: force-field cell, neuronic whip, Lieutenant Lancy, hyperatomics, C Bank, six hours, Gillbret dies, white dwarf.   </p>
+<p>Analysis: Biron's escape from the force-field cell is not a bid for freedom but a decision to save even Aratap's ship from Gillbret's hyperatomics sabotage — an act that inverts the ordinary hero's aim and marks his conversion from private vengeance to something like political stewardship. Lieutenant Lancy and C Bank turn his warning into verifiable engineering fact, which is why Aratap stops the Jump despite being Biron's captor; the chapter is a small case of <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> in which the ship's survival is bought by telling the enemy the truth. Gillbret dies believing in the secret he protected, while the white dwarf seems to erase the Horsehead Nebula rebellion and leaves Biron with only inference.   </p>
+<h3 id="h_22-there">22. THERE!</h3>
+<p>Summary: Aratap releases Hinrik, Artemisia, Biron, and the others because trials would strengthen the rebellion-world myth, though Lingane will lose Associated State status and Tyrannian control will tighten. He advises Biron to marry Artemisia quickly before the Pohang marriage can be revived. On Remorseless, Biron tells Rizzett that Gillbret's impossible odds mean Bloodsucker did not drift randomly into the Horsehead Nebula; it followed its original course to Rhodia, so the rebellion world is in the Rhodian system. Hinrik admits he has led the rebellion for twenty years, kept the document safe, and used the American Constitution's "We the people" against Khans, Autarchs, Directors, Ranchers, and the Tyranni alike. Source anchors: Aratap releases, Pohang, Rizzett, Rhodian system, Hinrik, twenty years, American Constitution, We the people.   </p>
+<p>Analysis: Aratap releases the prisoners because public punishment would do more for the rebellion-world myth than silence would, which makes his leniency another form of control — mercy as policy is still <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and statecraft. Biron's deduction about the Rhodian system rescues Gillbret's testimony by replacing astronomical chance with the original Bloodsucker course, turning a fairy tale into coordinate logic. Hinrik's twenty years of pretense and the American Constitution change the meaning of victory through <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: "We the people" threatens Biron's Rancher inheritance as directly as it threatens Tyrannian rule. The chapter is the book's real ending because the weapon is a preserved founding text — <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> converted into a legitimacy machine rooted in <a href="//05%20Characters%20and%20Entities/Earth%20as%20Administrative%20Core.html">Earth as Administrative Core</a> — that abolishes the entire order of Khans, Autarchs, Directors, and Ranchers, and in so doing also points beyond the triumph of the Farrill-Hinriad marriage. Read across the wider sequence, this guarded constitutional seed is not yet the Foundation, but it is the popular-sovereignty premise that later foundation-building will have to inherit and manage, which is why it belongs beside <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> as an interpretive rather than literal connection.   </p>
+<h3 id="afterword">AFTERWORD</h3>
+<p>Summary: In the afterword, Asimov identifies <em>The Stars, Like Dust</em> as a novel written and published in 1950 and comments from November 1982 on a scientific error in Chapter 17. He explains that the lifeless E-type world Biron visits should not have the nitrogen-oxygen atmosphere described in the story. Without life, there would be carbon dioxide and nitrogen but no free oxygen, so the scene with nearly thirty percent oxygen and no carbon dioxide is chemically wrong. Asimov says he will not change the passage because correcting it would require too much rewriting, and asks readers to suspend disbelief. Source anchors: 1950, November 1982, Chapter 17, E-type world, carbon dioxide, nitrogen, no free oxygen, suspend disbelief.   </p>
+<p>Analysis: The afterword matters because Asimov names the exact failure in Chapter 17 rather than leaving the E-type world as a fictional convenience. Carbon dioxide, nitrogen, and no free oxygen correct the atmospheric premise that shaped Biron's surface excursion with Jonti; the correction itself is a small exhibit of how <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> includes the advance of scientific knowledge between publication and revision. By dating the correction to November 1982 and preserving the 1950 text, Asimov lets the old plot stand while marking the scientific claim readers should not carry forward — a deliberate, documented limit on the fictional world rather than a silent rewrite.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li>Room 526 staging: the dud radiation bomb, stopped ventilation, dead visiphone sending circuit, and the white wrist-watch strap that "proves" the opposite of what the scene appears to prove.   </li>
+<li>The net across space: Jonti's claim that the Tyranni "rule fifty worlds" from a base outnumbered "hundreds to one"; the personal polarized beam whose receiver is Jonti's own brain.   </li>
+<li>The 1098th/1099th settlements: Rhodia settled as the 1098th human world and Tyrann, its conqueror, as the 1099th — conquest embedded in near-identical planetary age.   </li>
+<li>The visisonor: a box keyed to the mind that impresses sense-patterns directly on the brain; its use on the guards produces hallucinated terrors no one can control, and it is illegal under Tyrann.   </li>
+<li>The four-step economic cycle: agricultural world → raw-material exporter → budding industry → mechanized world; the Tyranni freeze the Nebular Kingdoms at step three to strip them of weapons.   </li>
+<li>Ship details: the stolen Tyrannian cruiser Remorseless, its enormous power and cramped water discipline, Tyrannian concentrate ration bricks, the massometer (useful within ~a million miles), and the never-mentioned-to-the-fugitives hyperspace transmitter that reveals any Tyrannian hull's position.   </li>
+<li>The rebellion-world bait: Gillbret's meteor story, the vanished ship Tireless, and the five candidate stars inside the Horsehead Nebula; the fifth turns out to be a white dwarf.   </li>
+<li>The inverse odds: the Autarch's "two hundred and fifty quadrillion to one" figure is the clue Biron reads backward to prove Bloodsucker never left its course for Rhodia.   </li>
+<li>The hidden base in plain sight: Hinrik V's twenty years of staged cowardice, protecting the rebel system and the document while nearly sacrificing Artemisia to the marriage.   </li>
+<li>The constitutional ending: Hinrik recites the Preamble to the United States Constitution from memory, framing "We the people" as a government that leaves no place for Khans, Autarchs, Directors, or Ranchers.   </li>
+<li>Afterword correction: the lifeless E-type world of Chapter 17 would have nitrogen and carbon dioxide but no free oxygen; Asimov (November 1982) keeps the 1950 text and asks readers to suspend disbelief.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//04 Series/Galactic Empire.html">galactic empire</a></li>
+	<li><a class="backlink" href="//01 Books/Galactic Empire/The Currents of Space.html">the currents of space</a></li>
+	<li><a class="backlink" href="//01 Books/Galactic Empire/Pebble in the Sky.html">pebble in the sky</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A263388206110583909034173505795840847733{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D263388206110583909034173505795840847733{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B263388206110583909034173505795840847733{level}" level="{level}" note_temp_id="263388206110583909034173505795840847733" onclick="window.ObsHtmlGraph.run(this, '263388206110583909034173505795840847733', 'the stars, like dust');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C263388206110583909034173505795840847733{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

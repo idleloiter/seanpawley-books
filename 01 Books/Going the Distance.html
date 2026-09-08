@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="going the distance">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'going the distance';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=going the distance" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="going-the-distance">Going the Distance</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Going the Distance</code> (Ron Harris, Princeton University Press, 2020; series: Princeton Economic History of the Western World, ed. Joel Mokyr) is a standalone nonfiction study of Eurasian long-distance trade and the organizational revolution that produced the joint-stock business corporation between 1400 and 1700. It sits under the <a href="//00%20Maps%20of%20Content/Empire%2C%20Trade%2C%20and%20Maritime%20Worlds.html">Empire, Trade, and Maritime Worlds</a> MoC as the vault's principal account of the organizational break that let the English and Dutch dominate the Cape Route, and it feeds the <a href="//03%20Reading%20Paths/Maritime%20Empire%2C%20Peripheries%2C%20and%20Gateway%20Power.html">Maritime Empire, Peripheries, and Gateway Power</a> reading path as well as the commercial-institution axis that runs across the early-modern cluster. Its sibling/kindred relations (per <code>06 Plans/book-affinity.md</code>, <code>Early-modern commercial Europe</code>, all <code>[med]</code>) are <a href="//01%20Books/Genoa%20and%20the%20Genoese.html">Genoa and the Genoese</a> (the earlier Mediterranean republic-of-merchants and its sea-loan/commenda/state-finance machinery), <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a> (the parallel commercial takeoff of the North Sea littoral that later hosts the VOC and EIC world), and <a href="//01%20Books/1493.html">1493</a> (the post-Columbian world economy of silver and commodities in which corporate long-distance trade operated). The note itself is the hub where the book's comparative frame — China, India, the Middle East, and Western Europe — is recorded against the vault's institutional concepts; the entity nodes <a href="//05%20Characters%20and%20Entities/East%20India%20Company.html">East India Company</a> and <a href="//05%20Characters%20and%20Entities/Dutch%20Republic%20as%20Commercial%20Polity.html">Dutch Republic as Commercial Polity</a> are its direct institutional anchors.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Ron Harris frames the book around a sharp historical reversal: in 1400 Eurasian long-distance trade was dominated by Asian merchants using family firms, partnerships, itinerant agents, ethnic networks, and ruler-backed expeditions, while Europeans remained peripheral buyers at eastern Mediterranean entrepôts; by 1700 Dutch and English merchants had become dominant on the Cape route and much of the longer-haul Indian Ocean trade through the VOC and EIC. Harris is not mainly telling a story about better ships or more aggression, though both matter. He is asking why the joint-stock business corporation appeared in Western Europe around 1600, why it did so in the context of long-distance trade, and why it did not diffuse quickly into China, India, or the Middle East.   </p>
+<p>The book's comparative method is unusually explicit. Harris treats China, India, the Middle East, and Western Europe as participants in the same broad Eurasian trading world and asks what organizational forms each region used to solve similar commercial problems. That lets him compare Quanzhou, Nanjing, Turfan, Surat, Isfahan, Quseir-al-qadim, Cairo, Lisbon, London, and Amsterdam without pretending they were identical environments. His key distinction is between endogenous institutions that emerge repeatedly in many places, migratory institutions that travel across regions, and embedded institutions that arise in one civilization and remain difficult to transplant elsewhere. The corporation, in his telling, is the most important embedded institution of the period.   </p>
+<p>What makes the argument more than a typology is Harris's insistence on organizational bottlenecks. Family firms, merchant networks, general partnerships, caravanserais, sea loans, commenda contracts, and ruler-operated enterprises all solved some problems of distance, information, and risk, but each also hit scale limits. Family firms could not easily mobilize huge amounts of passive outside capital. Networks based on kin, confession, or ethnicity could stretch across the Indian Ocean, but they still relied on personal trust. Ruler-run ventures such as the Estado da Índia or Zheng He's voyages could command enormous resources, yet they were hostage to court priorities and political reversal. Harris keeps returning to these constraints because he wants the emergence of the VOC and EIC to appear as a response to specific failures in earlier organizational repertoires.   </p>
+<p>The corporate chapters focus on credible commitment. Harris argues that around 1600 the Dutch Republic and England possessed a combination that other regions lacked: governments constrained enough that investors could believe rulers would not simply seize pooled capital, and governance arrangements robust enough that entrepreneurs could not easily defraud distant, passive shareholders. Participation rights, access to information, dividend expectations, tradable shares, and the possibility of exit through stock sales made multilateral impersonal cooperation feasible on a new scale. That scale mattered immediately in the ability to finance more ships, more agents, and more regular voyages, and mattered even more in the longer run because the corporate form moved from Asian trade into finance, infrastructure, empire, and industry.   </p>
+<p>Harris is careful not to make Europe the measure of all things. He spends much of the book on non-European commercial systems and repeatedly argues that Europe invented the corporation out of weakness, not civilizational superiority. Asian merchants had long organized high-value trade successfully, and many organizational building blocks used by Europeans were themselves borrowed, adapted, or transplanted. The novelty lies in the corporate combination that the VOC and EIC achieved and in the fact that institutions with some overlapping features, such as lineage groups, waqfs, and guilds, did not evolve into equivalent large-scale joint-stock firms. The book therefore matters for imperial history because it explains how English and Dutch merchants could convert a late arrival in the Indian Ocean into durable commercial advantage through organization as much as through force.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>The international port cities and entrepôts (Quanzhou, Malacca, Hormuz, Aden, Goa, Surat, Cairo-Fustat, Livorno, Amsterdam, London)</strong>: The book's real geography. Cosmopolitan hubs where merchants from different civilizations met, exchanged goods and information, and — decisively for Harris — encountered one another's institutions. Malacca (with its four shahbandars and multilingual merchant community), Hormuz (fifty-four ships a year from India alone around 1620), and Aden functioned as cross-cultural gateways; the port-city environment is treated as the transmission medium for migratory institutions.   </li>
+<li><strong>Ming emperors Yongle (r. 1402–24) and Xuande, and the admiral Zheng He (1371–1433)</strong>: The apex of the ruler-operated enterprise. Zheng He commanded seven state-financed fleets (1405–1433) — the first reported at 317 ships and 27,870 men — built around a court-eunuch chain of command precisely because eunuchs had no intergenerational claims. The enterprise is Harris's proof that tax-funded state trade could be enormous yet politically brittle: it died with Yongle's legitimation needs, the tax backlash, and the Confucian elite's hostility to eunuchs.   </li>
+<li><strong>The Pu lineage of Quanzhou (Pu Shougeng, d. ca. 1297, and his descendants)</strong>: A foreign-origin Muslim merchant-official family whose firm fused lineage organization with office-holding: Pu Shougeng as commissioner of maritime affairs used state posts to run a private trade empire, served the Song then defected to the Mongols, and his lineage held hegemony over Fujian until the Ispah Rebellion (1357–66) and the Ming takeover destroyed it. Harris uses it to show the lineage as China's protocorporate platform and its fatal dependence on dynastic alliance.   </li>
+<li><strong>Virji Vora (ca. 1590–post-1670) and Mulla Abdul Ghafur (d. 1718)</strong>: The two best-documented Gujarati family-firm merchants of Surat, the Mughal port annexed in 1576. Vora, a Jain, ran branches from Malabar to the Persian Gulf, lent to Mughals and Europeans, and reportedly amassed Rs 8 million and several ships; Ghafur, a Bohra Isma'ili, owned seventeen of Surat's 112 ships, kept a mansion-warehouse hub at Mocha, traded from Jeddah to Manila, and left Rs 8.5 million. Their firms show how far purely personal, single-owner enterprises could go — and how they lacked legal structures, external capital, and secure succession.   </li>
+<li><strong>The Fugger family of Augsburg (Jakob Fugger II "the Rich," 1459–1525; Anton Fugger, 1493–1560)</strong>: The largest European family firm, founded by weaver Johann Fugger in Augsburg in 1367, turned merchant-bankers and lenders to the Habsburgs; working capital reached 5 million guilders by 1546. Harris uses the Fuggers as the organizational model the English and Dutch knew and rejected: brilliant at partnership lock-in and succession management (wills, the "Fugger &amp; Nephews" partnerships), but fatally exposed to sovereign default, religious war, and the lack of asset partitioning.   </li>
+<li><strong>The Portuguese Crown and its merchant-syndicate partners (Kings Manuel I, Sebastian I; the German-Italian financiers)</strong>: From Vasco da Gama's voyage (1497–98) and the founding of the Estado da Índia in 1505, Portugal ran a ruler-owned, public-private Asian enterprise: the Carreira da Índia, the Casa da Índia, the cartazes licensing system, and the "Asia" and "Europa" contracts. German and Italian houses (Welser, Fugger, Höchstetter, Imhof, Hirschvogel, Bardi) financed voyages; Konrad Rott's 1575–80 contracts ended in bankruptcy; Giovanni Rovallesca's 1580 and Gerhard Paris's 1585 contracts restructured the pepper trade. Harris reads the whole century as Portugal's failure to solve credible commitment, expropriation, and risk-spreading.   </li>
+<li><strong>The Maghribi/Cairo Jewish merchant network (Joseph Lebdi, Abraham Ben Yiju, Madmun b. Hasan b. Bundar, the nagid of Aden)</strong>: Documented in the Cairo Geniza's "India Book" (mostly covering trade 1090–1150). Harris uses it as a "thin" early personal network — formal friendships, commissioned agents, commenda, adenosine transit hubs — to show how much personal-commerce could achieve and where its information flows, infrastructure, and scale limits lay.   </li>
+<li><strong>The New Julfa Armenian merchant network (the Khwaja Minasian and Sceriman/Shahrimanian family firms; the Assembly of Merchants)</strong>: The "epitome" of the merchant network, hub at Isfahan's suburb founded 1604–5 after Shah Abbas I's deportations, spokes from Manila and Madras to Amsterdam and London, organized on patriarchal family firms and commenda contracts regulated by the Astrakhan code. The network was sophisticated enough to free-ride the VOC and EIC's Cape Route shipping and EIC account records, yet remained bound to communal trust.   </li>
+<li><strong>The Sephardic Jewish network of Livorno (the Ergas and Silvera families)</strong>: The post-heyday network operating "in the shadow of the corporation," documented by the 13,670 surviving business letters (1704–46). Stationed and commissioned agents, marriage-based partnership, and reliance on corporate shipping show the network surviving as an enclave, in symbiosis with the VOC and EIC.   </li>
+<li><strong>The VOC (chartered 1602) and its principals</strong>: Six merged precompanies from Amsterdam, Delft, Rotterdam, Enkhuizen, Middelburg, and Hoorn, unified under a States-General charter; the bewindhebber directors, the participanten passive shareholders (about 1,815 subscribers, fl. 6,424,588 raised), the Heeren XVII board, Governor-General Jan Pieterszoon Coen at Batavia, and the protesting investor Isaac Le Maire. The company is Harris's case of an incomplete transition to the corporation: oligarchic, locked-in, state-linked, yet backed by a functioning Amsterdam share market.   </li>
+<li><strong>The EIC (chartered 1600) and its insiders</strong>: The London merchants, dominated by Levant Company veterans (at least 23 of the 132 at the first meeting in September 1599), with Russia Company members, navigators such as James Lancaster, and promoters like Thomas Smythe; the Crown side is Queen Elizabeth I (charter of December 31, 1600) and James I (perpetual charter of 1609). The EIC is Harris's case of the completed corporate transition: one class of shareholder, one vote per member, per-voyage joint stocks, and a participatory General Court.   </li>
+<li><strong>The Middle Eastern societies and their institutions</strong>: The Islamic city, the guild, the madrasa, and above all the waqf (family and charitable endowment) — Harris argues that the waqf's early availability as a semipublic institutional form, its path-dependent rigidity, and Islam's prohibition of interest (which blocked the sea loan) left the corporate form without demand, supply, or legal recognition.   </li>
+<li><strong>The societies excluded from the corporate breakthrough</strong>: India (the Delhi Sultanate and Mughal Empire oriented to the land; South Indian guilds and sreni that never became corporations) and China (the lineage institution and a state that could finance Zheng He but could not credibly commit not to expropriate). Both are comparative controls proving that trade dominance flowed from organizational power, not geography.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling/kindred books (per <code>06 Plans/book-affinity.md</code>, Early-modern commercial Europe, <code>[med]</code>)</strong>:   </li>
+<li><a href="//01%20Books/Genoa%20and%20the%20Genoese.html">Genoa and the Genoese</a>: the medieval republic-of-merchants whose commenda, sea loans, compera-funded public debt, and Casa di San Giorgio are the direct institutional prehistory of the institutional machinery Harris discusses for the VOC and EIC; Harris explicitly engages the Genoese sea-loan and commenda record (Van Doosselaere's 93 percent commenda figure; the compera and Casa di San Giorgio in chapter 9).   </li>
+<li><a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a>: the parallel commercial takeoff of the North Sea world (money, written law, merchant discipline, the Dutch and English maritime expansion) that produced the Amsterdam and London worlds in which the VOC and EIC operated; Pye's account of North Sea commercial institutions is the regional prequel to Harris's corporate Anglo-Dutch story.   </li>
+<li><a href="//01%20Books/1493.html">1493</a>: the post-Columbian world economy of silver, sugar, and commodity flows across Eurasia and the Atlantic that Harris treats as the environmental and commercial backdrop; chapter 1's silver-to-gold ratios and commodity price differentials and the conclusion's Atlantic trade and Manila Galleons are arguably the same subject of a unified world economy.   </li>
+<li><strong>MoC</strong>: <a href="//00%20Maps%20of%20Content/Empire%2C%20Trade%2C%20and%20Maritime%20Worlds.html">Empire, Trade, and Maritime Worlds</a> — the book's home mapping of oceanic commerce, corporate power, and colonial expansion.   </li>
+<li><strong>Reading path</strong>: <a href="//03%20Reading%20Paths/Maritime%20Empire%2C%20Peripheries%2C%20and%20Gateway%20Power.html">Maritime Empire, Peripheries, and Gateway Power</a> — Harris's Cape Route, cartazes, monopoly charters, and gateway entrepôts are a coordinated statement of the path's thesis.   </li>
+<li><strong>Entities</strong>: <a href="//05%20Characters%20and%20Entities/East%20India%20Company.html">East India Company</a> (the EIC as this book's central case), <a href="//05%20Characters%20and%20Entities/Dutch%20Republic%20as%20Commercial%20Polity.html">Dutch Republic as Commercial Polity</a> (the merchant-dominated polity whose federal structure made the VOC's non-expropriation credible), <a href="//05%20Characters%20and%20Entities/Medici%20Bank.html">Medici Bank</a> (the decentralized European partnership model of the family-firm era in which Harris's Fugger microstudy is embedded), and <a href="//05%20Characters%20and%20Entities/Byzantine%20Empire.html">Byzantine Empire</a> (the carrier that preserved the sea loan from Roman antiquity into Italian finance).   </li>
+<li><strong>Concepts</strong>: <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> (personal-to-impersonal cooperation), <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> (joint-stock capital, shares, stock markets, sea loans, commenda), <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> (mobilizing passive outsider capital at unprecedented scale), <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> (credible non-expropriation as the precondition of corporate capital), <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> (charters, monopolies, and the state-corporation bargain), <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> (monsoons, the Cape Route, caravanserais, nakhuda shipping), <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> (insider-outsider information asymmetry and its institutional correction), <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> (endogenous, migratory, and embedded institutions), <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> (institutional gates that let the sea loan and commenda travel but blocked the corporation), and <a href="//02%20Concepts/Institutions.html">Institutions</a> (mission, networks, family firms).   </li>
+<li><strong>Reinforced in the graph</strong>: The Edge of the World note already links back to this note; layering the three affinity siblings here completes the reciprocal wiring of the early-modern commercial Europe cluster.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Personal vs. impersonal cooperation</strong> as the master axis of business organization: every premodern form (family firm, network, ruler enterprise) is priced by the book against the corporate shift to impersonal, multilateral, voluntary cooperation.   </li>
+<li><strong>The endogenous–migratory–embedded typology</strong>: which organizational forms arise everywhere independently, which travel, and which — like the corporation — stay locked in one civilization.   </li>
+<li><strong>Credible commitment on two levels</strong>: the ruler (or state) must credibly promise not to expropriate pooled capital, and managers must credibly promise not to cheat passive outsiders.   </li>
+<li><strong>Environmental and geographic challenge as a driver of organization</strong>: monsoon closures, the 90-day "closed" Indian Ocean, distances four to six times longer than anything Europeans had sailed before 1492.   </li>
+<li><strong>Organizational vs. technological/military explanations of Europe's trade ascendancy</strong>: Harris's negative case against shipping, navigation, guns, and violence as sufficient causes.   </li>
+<li><strong>The migration of institutions and resistance to migration</strong>: the sea loan, funduq, and commenda vs. the non-migrating corporation; printing and paper money as analogues of embedded, resisted innovations.   </li>
+<li><strong>Stock markets, share transferability, and the exit option</strong> as the escape valve for locked-in capital.   </li>
+<li><strong>Scale limits of functional alternatives</strong>: what exactly a family firm, a merchant network, and a ruler's enterprise could not do.   </li>
+<li><strong>Eurocentrism and weakness-based innovation</strong>: Europe invents the corporation as a latecomer compensating for distance, cost, and lack of state resources — not from superiority.   </li>
+<li><strong>The comparative natural experiment</strong>: four regions, one trading environment (the greater Indian Ocean), four organizational repertoires.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: Harris compares the organizational forms that made long-distance Eurasian exchange possible before and after the rise of the business corporation, and locates the corporate break as the shift from bounded personal trust to impersonal cooperation.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: commenda contracts, sea loans, bottomry and respondentia, shareholder rights, tradable shares, dividends, the Amsterdam Beurs, the London share market, and passive capital pools are the book's practical machinery; the VOC's fl. 6,424,588 joint stock and the EIC's £464,284 across twelve joint stocks are its signature numbers.   </li>
+<li><a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>: the VOC and EIC matter because they made stranger investment durable enough to finance repeated voyages, armed commerce, and distant agents at scale — capital the Fuggers, the Surat houses, and the Estado da Índia could not pool.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: ruler-run ventures (Zheng He, Estado da Índia), the Asia/Europa contracts, charters, and the credible-commitment constraint show trade organization depending on political execution, restraint, and the space created between ruler and family.   </li>
+<li><a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>: the charter of incorporation as a bargain between Crown and investors, the monopoly grant, tariff exempts, and the VOC's partial fusion with the Dutch Republic make the corporation an instrument of political economy, not just of markets.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the Cape Route, monsoon circuits, caravanserais, ports, agents, ships, and information delays make organizational form a throughput problem; Harris's opening chapter is almost pure logistics.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: family firms, merchant networks, diasporas, agents, letters, governance rights, and shareholder information solve or fail to solve distance and trust; the EIC's General Court and the VOC's Batavia hub are opposed information regimes.   </li>
+<li><a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>: endogenous, migratory, and embedded institutions explain why some commercial forms traveled while the corporation remained European for three centuries; the waqf's early start is the book's clearest path-dependency case.   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>: Harris treats legal, political, and financial gateways as decisive constraints — Islam's usury ban as the gateway that blocked the sea loan, legal personality and stock markets as the compatible gateways that alone let the corporation migrate.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: the book's whole subject — the menu of organizational forms, the law and norms composing them, and the North–Greif definitional frame in which institutions are "the rules of the game."   </li>
+<li><a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a>: the Cape Route, cartazes, and guns-on-ships debate; Harris argues naval technology cannot explain European dominance, but the corporations' armed freight capacity is inseparable from their commercial reach.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: the Estado da Índia's factories and forts, the VOC's conquests and Batavia, and the EIC's evolution into a territorial power show the trade enterprise generating imperial periphery before the colonial eighteenth century.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Summary: Harris opens by contrasting the world of 1400, when porcelain, silk, and spices moved through many hands in the South China Sea, Indian Ocean, Arabian Sea, and Silk Route, with the world of 1700, when English and Dutch ships sailed directly around the Cape of Good Hope. He emphasizes the marginal place of Europeans before Vasco da Gama, the later dominance of the VOC and EIC, the shift from sole traders and family firms to joint-stock corporations, and the deeper move from personal to impersonal cooperation. In the fifteenth century no regular Cape trade existed; in the sixteenth, 815 ships — most Portuguese, none corporate — rounded the Cape; in the seventeenth, 3,187 ships did, close to 95 percent of them on behalf of business corporations, 2,577 (80 percent) of them operated by the VOC and EIC alone. The introduction lays out his two-level argument (the organizational explanation of the corporation; the organizational explanation of England's and the Dutch Republic's trade dominance), the research questions, the comparative method across China, India, the Middle East, and Western Europe, and the preemption concern about Eurocentrism, plus his microstudy methodology and the typology of endogenous, migratory, and embedded institutions. Source anchors: Cape of Good Hope; VOC; EIC; personal cooperation; impersonal cooperation; Vasco da Gama; Eurocentrism; microstudies.   </p>
+<p>Analysis: The Cape of Good Hope, Vasco da Gama, and the VOC/EIC are not presented as isolated maritime milestones but as evidence for a wider organizational break. By pairing personal cooperation with impersonal cooperation, and by quantifying the takeover of the Cape Route (from 815 to 3,187 ships, with four-fifths corporate-operated), Harris defines the book's core problem before any regional survey begins. The introduction matters because it tells the reader that the real puzzle is not merely why Europeans sailed farther, but why the VOC and EIC could mobilize strangers' capital on a scale that older arrangements around Goa, Surat, or Cairo could not. That makes the book a study of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> in transition from bounded trust to impersonal corporate cooperation and an intervention in <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> theory, since the ruler's credible commitment not to expropriate poolable capital is announced as the precondition of the whole corporate project; the comparative frame itself is an exercise in <a href="//02%20Concepts/Institutions.html">Institutions</a> as the unit of analysis.   </p>
+<h3 id="chapter-1-environment-and-trade">Chapter 1: Environment and Trade</h3>
+<p>Summary: Harris begins the formal argument by mapping Eurasian trade environments and the problems they posed. He moves across the Indian Ocean, South China Sea, Arabian Sea, Silk Route, ports, caravan towns, and monsoon corridors, asking how geography, seasonality, political fragmentation, and distance shaped transaction costs, information flows, and security. The chapter situates places such as Quanzhou, Surat, Cairo, and the Cape route inside a commercial ecology of ports, entrepôts, overland relays, and high-value goods. It reviews the noninstitutional literature (Smithian growth — Findlay and O'Rourke; Marxism — Wallerstein, Abu-Lughod; Braudel and the Annales school; the Weber-inspired Steensgaard), quantifies Indian Ocean distances (Fuzhou to Aden 5,450 nautical miles; Lisbon to Calicut 9,510), the double monsoon and the roughly ninety-day annual closure of the ocean, the Silver Route price gaps in silver-to-gold ratios across Europe, the Ottoman Empire, Persia, India, China, and Japan, and cargo markups for cloves and nutmeg. It then evaluates geography, shipping, navigation, violence, and guns as explanations for Europe's trade ascendancy, arguing that each fails and that organization is the neglected variable, while the Portuguese cartazes regime and Grotius's mare liberum mark the legalization of maritime power. Source anchors: Indian Ocean; Silk Route; monsoon; Quanzhou; Surat; Cairo; monsoons; Cape Route; silver-to-gold ratios; cartazes; mare liberum; Steensgaard.   </p>
+<p>Analysis: The Indian Ocean and the monsoon matter because Harris wants organization tied to environment rather than treated as free-floating legal form. Quanzhou, Surat, and Cairo anchor <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> in real nodal points where information, goods, and credit had to be coordinated under conditions of distance and uncertainty; the monsoon calendar and the ninety-day closure make the seasonal <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> literal travel constraints. By laying out the Silk Route alongside maritime circuits, the chapter establishes that different geographies could produce overlapping organizational pressures even when the merchants and states involved were very different. The chapter's commodity world — pepper prices in Amsterdam, nutmeg at 840 times its Banda price in London, sugar whose price did not fall, porcelain, tea, coffee, silver — is precisely the subject of <a href="//01%20Books/1493.html">1493</a>'s unified post-Columbian economy, and the discussion of guns, cartazes, and the free-sea regime turns the ocean itself into an arena of <a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a> and contested <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> before any corporation appears.   </p>
+<h3 id="chapter-2-theoretical-frameworks-for-analyzing-the-development-of-institutions-in-interaction-with-their-environment">Chapter 2: Theoretical Frameworks for Analyzing the Development of Institutions in Interaction with Their Environment</h3>
+<p>Summary: This chapter supplies the conceptual tools for the rest of the book. Harris distinguishes endogenous institutions, migratory institutions, and embedded institutions, then uses those categories to think about how organizational forms arise, diffuse, or fail to diffuse. He surveys the static institutional toolkit (transaction-cost economics, theories of the firm, property rights, contract and agency theory, information economics, limited liability, asset partitioning, corporate governance), the dynamic tradition from Douglass North's historical new institutional economics through path dependence (David, Arthur; Bebchuk and Roe), and the comparative turn (Greif, Kuran, Pomeranz, Rosenthal and Wong, Zhang). He then argues that the theory of institutional migration is underdeveloped: LLSV's legal-origins work and Acemoglu–Johnson–Robinson's mortality-rates theory study migration's effects in colonial contexts but not its mechanics, while the legal-transplants literature (Watson) is Eurocentric and neglects trade organizations. He connects these insights to the study of long-distance trade and asks why some arrangements, such as itinerant traders or partnerships, appeared widely, while others, such as the corporation, remained bounded to one civilizational setting for centuries. The chapter is also where he makes institutional migration itself into an object of study rather than a background assumption. Source anchors: endogenous institutions; migratory institutions; embedded institutions; institutional migration; Douglass North; path dependence; legal transplants; comparison; corporations.   </p>
+<p>Analysis: Endogenous institutions, migratory institutions, and embedded institutions are the chapter's essential working categories, and Harris uses them to keep later comparisons from collapsing into loose analogy. Partnerships and the corporation matter here because they let him ask not only what worked, but what could travel. Institutional migration makes <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> concrete: some organizational solutions crossed Eurasia relatively easily while the corporation stayed tied to specific European political and legal conditions. The chapter is also a claim about the discipline: Harris reads the whole new institutional toolkit as at last capable of opening the "black box" of the premodern trading firm, and he frames <a href="//02%20Concepts/Institutions.html">Institutions</a> in the North–Greif register — rules of the game, systems of social factors generating behavioral regularities — so that later claims about the waqf, the lineage, the guild, and the charter all resolve back through this theoretical screen, with <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> and <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> supplying the load-bearing assumptions.   </p>
+<h3 id="chapter-3-universal-building-blocks">Chapter 3: Universal Building Blocks</h3>
+<p>Summary: Harris surveys the simpler commercial forms that appeared widely across Eurasia: itinerant traders, bilateral agency relations, stationed and traveling agents, small family firms, loans, and general partnerships. He treats these as recurring solutions that merchants in multiple regions could reach without borrowing from one another because the underlying problems of transport, information, and trust were so widespread. The chapter includes three microstudies. The Muziris Papyrus (mid-second century CE, Vienna Papyrus) shows a Greek-language sea-loan/agency contract and standard-form "boilerplate" template financing Roman-Egyptian trade with India aboard the ship Hermapollon, a trade whose sophistication, Harris stresses, exceeded anything visible again until the Cairo Geniza nearly a millennium later. The Turfan and Dunhuang contracts (seventh–tenth centuries CE) show Sogdian and Chinese Silk Route trade conducted through simple ex ante price contracts — sale, exchange, and fixed-interest loans — with no evidence of partnership, commenda, or commissioned agency, and Valerie Hansen's reconstructed 670 CE silk-loan dispute illustrates enforcement without survivable writing. The Indian Ocean Arab ship microstudy (the ninth-century Belitung wreck, the Geniza, Quseir al-Qadim's Sheikh's House, and the 1704 freight contract of Abdul Ghafur's vessel Fez Ressan captured by the VOC) shows the ship as an organizational unit and the nakhuda — the Indian Ocean's unique coordinator of freight, passengers, and merchant affairs — as a device that lowered entry barriers into maritime trade. The chapter's framing argument is that family firms, the family partnership, and the family enterprise—patriarch, partnership, or enterprise—constitute the organic core of Eurasian business. Source anchors: Muziris Papyrus; Hermapollon; Turfan contracts; Dunhuang; Sogdians; Valerie Hansen; Belitung wreck; Quseir al-Qadim; nakhuda; Abdul Ghafur; itinerant traders; family firm.   </p>
+<p>Analysis: Itinerant traders and agency matter because Harris is careful not to start Eurasian commerce from absence or primitiveness. Family firms and general partnerships show how much coordination could already be achieved with personal ties and relatively simple contracts. The Muziris Papyrus shows a legally and financially sophisticated <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> — sea loan, agency, security, standard form — in existence in the second century, while the Turfan contracts show that sophistication was not universal: overland Silk Route trade ran on simpler <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> of loan and exchange with witness-based enforcement. The Arab ship and the nakhuda are the chapter's most original point for the vault: the ship was not just a vehicle but an organization, a place where <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>, capital, labor, and trade know-how met, which is why the ship as an organizational form recurs in <a href="//02%20Concepts/Institutions.html">Institutions</a> analysis. Those anchors are important because later corporate success only makes sense once the reader sees that pre-corporate trade was already sophisticated, but built out of arrangements that remained bounded by kinship, bilateral trust, and modest organizational scale.   </p>
+<h3 id="chapter-4-varying-organizational-building-blocks">Chapter 4: Varying Organizational Building Blocks</h3>
+<p>Summary: The fourth chapter turns to more unevenly distributed forms, organizational devices that existed in some parts of Eurasia but not others and often spread by emulation or transplantation. Harris develops his methodology for studying migration (routes and timings, gradual vs. abrupt origins, material and textual evidence, morphological similarities, migration at the level of abstract ideas or of detail, migration of structure vs. function), drawing on genetics, archaeology, linguistics, and the history of science, with the Columbian Exchange and the world's writing systems as his worked examples. He then surveys the three prototypical migratory institutions. The sea loan (Athenian nautikòn dáneion, Roman faenus nauticum) was carried through the Byzantine Empire (Rhodian Sea Law, Basilica) into the Italian merchant cities, where interest reached 25–33 percent for western Mediterranean round trips and 40–100 percent for Levant voyages, and produced the bottomry and respondentia variants; it was rejected by Islam as usurious, so it bypassed the Islamic zones and reached only the far end of Eurasia, with the Portuguese using it on the Macau–Nagasaki route. The funduq, khan, and caravanserai — from the Greek pandocheion through the Umayyad funduq, Ayyubid roadside khans, and Safavid caravanserais such as Ribat-i Karim and Tash Rabat — provided shelter, protection, markets, and information, and spread from the Middle East through Islamic North Africa and Central Asia but, in the fondaco form (Fondaco dei Tedeschi in Venice being the exception), was only partially imported to Latin Europe. The chapter concludes by identifying the commenda as the third and most widely migrating form, sketched in advance for chapter 5. Source anchors: sea loan; faenus nauticum; Byzantine Empire; Rhodian Sea Law; bottomry; respondentia; Macau–Nagasaki; funduq; khan; caravanserai; Fondaco dei Tedeschi; Tash Rabat; Columbian Exchange; writing systems; migration.   </p>
+<p>Analysis: The caravanserai and sea loan matter because they are concrete examples of institutions whose history cannot be told as isolated local invention. Migration, emulation, and transplantation let Harris explain why some commercial devices became widely available without implying civilizational sameness. The chapter's treatment of the Columbian Exchange as a migration episode, and of the sea-loan's blockade at the Islamic usury frontier, shows <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> operating at the level of whole civilizations; the sea loan's survival inside <a href="//05%20Characters%20and%20Entities/Byzantine%20Empire.html">Byzantine Empire</a> legal codifications (Rhodian Sea Law, Basilica) makes that polity a carrier of <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>. The funduq and caravanserai network is the book's clearest case of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> infrastructure — a day's travel apart along the caravan roads — while the differing reception of these forms reveals the <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> that decided what could be imported where. Because the Genoese sea-loan record and the Italian merchant cities are central here, the chapter directly engages <a href="//01%20Books/Genoa%20and%20the%20Genoese.html">Genoa and the Genoese</a>, and its Columbian-Exchange migration material is a genuine overlap with <a href="//01%20Books/1493.html">1493</a>.   </p>
+<h3 id="chapter-5-the-commenda">Chapter 5: The Commenda</h3>
+<p>Summary: Harris singles out the commenda as a major migratory form of partnership that linked investors and traveling merchants while distributing risk and profit in a flexible way. He establishes its features from the richest surviving sources — the Islamic law books (qirad, mudaraba, muqarada), the Cairo Geniza, and the Italian notarial records — and describes it as a complex nexus of contracts: equity investment plus labor, a separate pool of assets, limited investor liability, investor-borne sea risk, a mandate (wide by default in Hanafi law, strict in Maliki), and profit splits that in Islam ran fifty-fifty and in Italy commonly 75–25, with a versed bilateral commenda variant. He traces its likely origins to pre-Islamic Arabia (Udovitch; the Prophet and Khadijah as investor-traveller), with Crone's skeptical revisionism, and the possibility of older Middle Eastern building blocks (the Jewish isqa, the Byzantine chreokoinonia, Mesopotamian and Greco-Roman precursors). He then follows its migration: the Italian commenda (collegantia, first contracts from Venice in 1072–73; 93 percent of formalized commercial ties in Van Doosselaere's Genoa sample), the independent Hanseatic Widerlegung (Cordes's oral, headcount-based profit-sharing Sonderweg), its non-reception in England (in fit with common-law forms of action), its use by the Cairo Jewish merchants, the New Julfa Armenian ěnkerut'iwn, the Mongol ortoy in Central Asia and Yuan China, its probable arrival in India and the East Indies (Tomé Pires), the Song joint ventures that may have been commenda, and the qiraḍ-ortoy meeting in China. He closes by arguing that the commenda was the ultimate migratory institution but had a heyday that ended with the sixteenth- and seventeenth-century corporations. Source anchors: commenda; qirad; mudaraba; collegantia; Widerlegung; societas maris; ěnkerut'iwn; ortoy; isqa; chreokoinonia; Udovitch; Cordes; Van Doosselaere; Tomé Pires; Geniza; New Julfa.   </p>
+<p>Analysis: The commenda and the traveling merchant matter because they show a pre-corporate device for delegating risk across distance without creating a permanent impersonal organization. The investor, contract, and separate-pool-of-assets anchors are equally important, since Harris is identifying ingredients that later corporations would absorb and transform: equity finance, separation of investor from traveller, and a legally partitioned asset pool. Because the commenda matched capital with labor, spread risk, and created <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> without personal enclosure at the settlement stage, the chapter shows what <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> looked like before the corporation — and because its reception differed so dramatically by legal system (Roman law in Italy, common-law forms of action in England, Sharia and rabbinical courts in Cairo, the Astrakhan code for the Armenians), the chapter is also a sustained study in <a href="//02%20Concepts/Institutions.html">Institutions</a> and <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> absorbing a foreign form as <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> expanded. The Genoese and Venetian commenda material makes <a href="//01%20Books/Genoa%20and%20the%20Genoese.html">Genoa and the Genoese</a> a genuine chapter-level sibling: the sea-loan-to-commenda transition that Epstein's notaries document is exactly the migration path Harris charts.   </p>
+<h3 id="chapter-6-family-firms-in-three-regions">Chapter 6: Family Firms in Three Regions</h3>
+<p>Summary: Harris now studies family firms comparatively across three regions, using microhistorical evidence to show how kinship, inheritance, internal monitoring, and household authority structured trade enterprises. The Gujarat microstudy covers Virji Vora (born ca. 1590–1600, mentioned in European records from 1619, Jain by religion, with branches throughout India and the Persian Gulf and Red Sea, reported wealth of Rs 8 million) and Mulla Abdul Ghafur (arrived in Surat about 1670, Bohra Isma'ili, hub at Mocha, eight of the nineteen ships in the Dutch-escorted 1701 "fleet of Hindustan," seventeen of Surat's 112 ships in a Dutch survey, Rs 8.5 million at his death in 1718, succession passing to the adopted son Abdul Hai and then Mulla Muhammad Ali). The Pu lineage microstudy follows the thirteenth-century Quanzhou merchant-official family — Pu Shougeng's conversion from Song service to the Yuan, his sons' and grandsons' offices, the strategic intermarriages of the Su family, and the destruction of the family's hegemony in the Ispah Rebellion (1357–66) and the Ming takeover. The Fugger microstudy traces the Augsburg family firm from Johann Fugger's settlement in 1367, through Jakob the Rich's partnership lock-in and wills of 1521 and 1525 (net worth about 2.1 million guilders), Anton Fugger's management (working capital of 5 million guilders by 1546), the 1585 Asia Contract with Spain-Portugal (three-twelfths of the syndicate to Georg Fugger's Heirs) and the 1591 Europa Contract, and the family firm's weakness: dependence on lending to rulers, absent asset partitioning, and succession fragility. He also surveys the Bardi and Peruzzi of Florence and the Medici as earlier Italian partnership models. The chapter concludes that in all three regions the family firm hit outer limits: sensitivity to intergenerational transfer, to state expropriation, and to the lack of separate legal personality. Source anchors: Virji Vora; Mulla Abdul Ghafur; Surat; Pu Shougeng; Quanzhou; Ispah Rebellion; Fugger; Jakob Fugger II; Anton Fugger; Asia Contract 1585; Ganerbschaft; Medici; Bardi; Peruzzi; family firm; succession.   </p>
+<p>Analysis: Family firms and kinship matter because Harris sees them as one of the strongest alternatives to the corporation across Eurasia, and the three microstudies form the book's empirical proof that personal organization could reach very large scale but not cross into impersonal pooling. Inheritance, lineage, and internal monitoring solved continuity problems inside the household, while the Pu lineage shows how <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and office-holding could be fused with business — and how catastrophic dynastic reversal could be; the Fuggers show the mirror image in <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>, with ruler lending and sovereign debt as the family firm's fatal exposure. The Medici and the Italian partnership systems place this chapter squarely on the territory of the <a href="//05%20Characters%20and%20Entities/Medici%20Bank.html">Medici Bank</a> entity, and the Fuggers' inability to raise outside equity or partition assets is the negative image of the <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> and <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> breakthroughs of chapters 10–11. <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> is visible in how each family used marriage, office, and intermarriage strategically; the chapter matters because it shows that one of the most effective non-corporate organizations succeeded by intensifying personal ties, not by escaping them.   </p>
+<h3 id="chapter-7-merchant-networks">Chapter 7: Merchant Networks</h3>
+<p>Summary: This chapter expands from the household to larger commercial networks built on ethnicity, religion, diaspora, or repeated contact. The Cairo Geniza microstudy reconstructs the Maghribi Jewish network (mostly 1090–1150), with Cairo-Fustat as the central hub and Aden as the secondary hub, organized on extended families, "formal friendships," commissioned and commenda agents, and letters that carried instructions and accounted for unbalanced reciprocity; the three exemplar merchants are Joseph Lebdi, Abraham Ben Yiju (resident in India for seventeen years), and Madmun b. Hasan b. Bundar, the nagid of the Yemen. The New Julfa Armenian microstudy (hub founded 1604–5 after Shah Abbas I's deportation of the Julfans) shows the network at its height: patriarchal family firms such as the Khwaja Minasian and Sceriman/Shahrimanian firms, extensive use of unilateral and bilateral commenda (with profit shares for traveling agents in the 22–35 percent range and bilateral splits around 38.55 percent), the Assembly of Merchants tribunal in New Julfa, cross-reporting, and social sanctions; Herzig and Aslanian provide the evidence. The Livorno Sephardic microstudy (Francesca Trivellato's Ergas and Silvera partnership, 1704–46) shows the network in its post-heyday phase under the shadow of the corporations: stationed commissioned agents, marriage-based partnership, the "Portuguese Nation," and free-riding on corporate shipping. The chapter concludes by contrasting the early thin Maghribi network, the full Armenian hub-and-spokes network, and the marginal Livorno enclave. Source anchors: Cairo Geniza; Maghribi network; formal friendships; Aden; Abraham Ben Yiju; Madmun; New Julfa; Armenians; commenda; Assembly of Merchants; Sceriman; Aslanian; Livorno; Ergas; Silvera; Trivellato; nakhuda.   </p>
+<p>Analysis: Merchant networks and the Maghribi, Armenian, and Sephardic cases matter because Harris wants to grant full sophistication to non-European long-distance commerce while measuring its ceiling. Isfahan's New Julfa, Cairo, Aden, and Livorno show how far these webs could extend, and the letters, cross-reporting, communal sanctions, and tribunals illustrate the social mechanisms that held them together: <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> was identity-bound and hub-structured, and <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> — formal friendship, the Assembly of Merchants, ostracism — supplied enforcement where courts could not. The nakhuda and the freight-ship infrastructure underwrite the discussion of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>. Those same anchors make the network's limitation clear too: dense communal trust moved news, credit, and enforcement across continents but kept cooperation unlike the increasingly anonymous shareholder world of the corporation, and the Livorno case shows networks surviving in enclaves precisely by attaching themselves to the VOC's and EIC's shipping and information infrastructure — the first point in the book where the corporate form appears as the dominant partner in <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>.   </p>
+<h3 id="chapter-8-trade-by-rulers-and-states">Chapter 8: Trade by Rulers and States</h3>
+<p>Summary: Harris turns to ventures organized by political rulers — the Ming voyages and sixteenth-century Portugal — to ask what states could accomplish that private merchants could not. The Zheng He microstudy covers the seven voyages (1405–1433) — the first with 317 ships (62 treasure ships) and 27,870 men, built in the Nanjing shipyards, commanded through a eunuch hierarchy, run on taxes and conscription, and financed and organized as diplomacy, tribute, war, and trade at once; it ends with the standard explanations for the termination after 1433 (the Yongle emperor's death, the Timurid decline, the tax backlash, the Confucian elite's hostility to eunuchs). The Portugal microstudy shows the Portuguese crown as the first European direct trader in Asia: Vasco da Gama's 1497–98 voyage, Manuel I's 1499 title over the conquest, navigation, and commerce of India, the Estado da Índia (1505), the Carreira da Índia, the Casa da Índia, the cartazes licensing, and the crown's perpetual need for private capital: German-Italian syndicates from 1502–05 (Welser, Fugger, Höchstetter, Imhof, Hirschvogel, the Florentine Marchioni), the liberdades da Índia system of official perquisite trade, the free spice trades that eroded Crown monopolies, and the Asia and Europa Contracts of 1575–91 (Konrad Rott's ruinous contracts, Giovanni Rovallesca's 150,000-quintal obligation, Paris's 1585 contract with the Welsers and Fuggers). The chapter closes by comparing Chinese and Portuguese state capacity and asking whether Portugal could have dominated long-distance oceanic trade without an organizational revolution. Source anchors: Zheng He; Yongle; Xuande; treasure ships; Nanjing; eunuchs; Estado da Índia; Vasco da Gama; Carreira da Índia; Casa da Índia; cartazes; Manuel I; Welser; Fugger; Marchioni; Asia Contract; Europa Contract; Konrad Rott; Rovallesca.   </p>
+<p>Analysis: Zheng He and the Estado da Índia are paired here because they reveal opposite ends of a common problem: rulers and states could mobilize extraordinary resources, but only as long as courts remained committed. Goa, Cochin, Macao, and Nagasaki anchor <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> in the actual geography of Asian trade, where Portuguese expansion depended heavily on state violence and state coordination; the Asia and Europa Contracts show <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> at work in the auctioning of crown monopolies to private syndicates, split into saleable shares and renegotiated under every financial crisis. The cartazes regime and the fortress-and-factory network make the Estado an early case of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>, and the Crown's inability to credibly commit not to expropriate — visible in the unilateral alteration of the German syndicate's terms — anticipates the commitment problem the corporation solves. By comparing those cases, the chapter shows why ruler-backed organization could be huge in scale yet unstable across time, and why the Portuguese crown's failures open the space for the <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> solution of the joint-stock firm, while the whole exchange economies rest on silver and copper that only the state and its German financiers could supply — the same <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a> problem the VOC and EIC would solve by pooling passive investment.   </p>
+<h3 id="chapter-9-the-origins-of-the-business-corporation">Chapter 9: The Origins of the Business Corporation</h3>
+<p>Summary: Harris identifies the corporate breakthrough in Western Europe around 1600 and asks why it happened there, then. He defines the business corporation by seven characteristics — separate legal personality, collective decision-making and delegated management, joint-stock equity finance, lock-in of investment, transferability of interest, protection from expropriation by the ruler, and asset partitioning — and shows that attributes 1–2 reach back to the medieval Roman Catholic Church (investiture, conciliar, and papal-schism controversies argued in corporate terms), attributes 3–6 were first compounded onto the corporate form around 1600 by the VOC and EIC, and attribute 7 belongs to later centuries. He reviews four historiographies of the corporation's origins (Roman jurists' invention — Duff, Malmendier's societas publicanorum, the peculium; the medieval glossators; von Gierke's Germanic tribal corporatism; and Berman and Tierney's canon-law/church view) and argues with the church-and-Roman-law synthesis. He then traces the corporation from church to municipality and guild, through the regulated corporations of sixteenth-century England (the Spanish, Eastland, French, and Merchant Adventurers companies), to the Genoese compera, maona, and Casa di San Giorgio, the Toulouse mills, mining and water-supply companies, and the first joint-stock trade corporations (Russia/Muscovy Company 1553, Levant Company 1581), whose failures prepared the ground for the EIC and VOC. He closes by introducing the Dutch precompanies (voorcompagnieën, Compagnie van Verre, 1594) and the English joint-venture tradition, and by explaining why the English and Dutch, as latecomers at the far western end of Eurasia, with the greatest distances and no Asian goods or rulers to rely on, needed the corporate form. Source anchors: business corporation; seven characteristics; Roman Catholic Church; canon law; Berman; Tierney; glossators; municipal corporations; guilds; regulated companies; Merchant Adventurers; compera; maona; Casa di San Giorgio; Toulouse mills; Russia Company; Levant Company; voorcompagnieën; Compagnie van Verre.   </p>
+<p>Analysis: The Dutch Republic and England matter because Harris treats them as the only settings in which credible commitment operated on both sides of the investment relation, so the chapter is really about <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> meeting finance. Perpetual corporate personality is the Church's decisive contribution (the papacy's need for succession without hereditary transmission), and Harris's institutional argument rests on <a href="//02%20Concepts/Institutions.html">Institutions</a> as accumulated constitutional law: the corporation was available "off the shelf" in 1600. The Genoese compera, the maona of Chios, and the Casa di San Giorgio — debt-finance schemes with transferable shares and colonial mandates — are the prehistory of share capital and make this chapter a genuine engagement with <a href="//01%20Books/Genoa%20and%20the%20Genoese.html">Genoa and the Genoese</a>. Passive investors, tradable shares, and the stock-market-adjacent liquidity of the VOC and EIC mark the shift from merchant participation to shareholder participation, so the business corporation reorganized <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> by persuading strangers that pooled capital could survive both ruler predation and managerial opportunism, building on the <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> (joint-stock equity, ship part-ownership, precompany syndicates of commenda) that chapters 5 and 6 had inventoried.   </p>
+<h3 id="chapter-10-the-dutch-east-india-company">Chapter 10: The Dutch East India Company</h3>
+<p>Summary: Harris uses the VOC as the first durable large-scale joint-stock corporation. He reconstructs its formation out of the six city-based precompanies (Amsterdam, Delft, Rotterdam, Enkhuizen, Middelburg, Hoorn) under the States-General charter of March 20, 1602; the joint-stock offering that raised fl. 6,424,588 (1,143 subscribers in Amsterdam, 264 in Zeeland, about 1,815 total), capital that remained essentially locked at fl. 6,440,200 in 1693; the two-class governance structure of bewindhebbers and participanten; the Heeren XVII board; the monopoly and sovereign powers (fortification, governors, forces, justice) granted within the Cape-to-Magellan monopoly; the protection from taxation and requisition; the ten-year lock-in, the in-kind dividends of 1610 and 1612, Isaac Le Maire's protest and short-selling, and the deliberate retroactive change of the rules; the role of the Amsterdam stock market (the 1611 Beurs and 1609 Wisselbank) in giving passive shareholders an exit through share sales, with roughly a third of Amsterdam-chamber shares changing hands in 1603–12; and the VOC in Asia — 1,770 ships sent east in the seventeenth century, the conquest of Malacca, Hormuz's capture (1622), the taking of Cochin and Quilon, the Spice Islands, Batavia as the Asian headquarters under Governor-General Jan Pieterszoon Coen, and the information-monitoring asymmetry between Batavia and the Heeren XVII. He concludes that the VOC was a transitional, incomplete toward impersonal organization: oligarchic, state-linked, and partly redistributive, but with a functioning exit option. Source anchors: VOC; charter 1602; States-General; bewindhebbers; participanten; Heeren XVII; fl. 6,424,588; Amsterdam; Beurs; Wisselbank; Isaac Le Maire; lock-in; dividend 1610; Batavia; Jan Pieterszoon Coen; Malacca; Hormuz 1622; stock market.   </p>
+<p>Analysis: The VOC and Amsterdam matter because Harris needs a concrete demonstration that the new form worked in practice, not just in theory, and the fl. 6,424,588 joint stock — roughly 1,815 heterogeneous subscribers, many outside trade — is the book's headline number for <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>: stranger investment became a repeatable system for financing more voyages and broader armed operations than older merchant forms could sustain. The share market and the exit option are central because they gave passive investors a way to commit capital without permanent personal dependence on managers, which is a breakthrough in <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> as well as in <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>. The VOC's fusion with a merchant-dominated federal polity — the Dutch Republic's political weight of Amsterdam and the overlap of bewindhebber and magistrate — is the book's counter-model of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Institutions.html">Institutions</a>, making the <a href="//05%20Characters%20and%20Entities/Dutch%20Republic%20as%20Commercial%20Polity.html">Dutch Republic as Commercial Polity</a> entity the natural node for this chapter, while the same merchant-state fusion appears as <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> underwriting a credible no-expropriation charter. The contrast with the English model (oligarchy vs. one-member-one-vote) is drawn in chapter 11, but the Batavia-versus-London information structure is already set up here as a divergence in <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> and in <a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a> (forts, fleets, the conquest of the spice archipelago), connecting this chapter's commercial empire to the North Sea commercial world chronicled in <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a>.   </p>
+<h3 id="chapter-11-the-english-east-india-company">Chapter 11: The English East India Company</h3>
+<p>Summary: The EIC is presented as a second, distinct corporate pathway rather than a copy of the VOC. Harris reconstructs the founding process: the Levant-Company-dominated meetings of September 1599, the dual track of charter and joint stock, the first charter of December 31, 1600 (218 members, "one body corporate and politick," for fifteen years, monopoly from the Cape of Good Hope to the Straits of Magellan), the 1609 perpetual charter of James I, and the evolution of joint-stock finance: £68,937 raised for the first voyage (1601), £464,284 across twelve joint stocks in 1601–12, roughly 410 names in Harris's own shareholder database from 1599–1609 and 1,318 in Rabb's list to 1630, with the per-voyage accounts, the repeat-investment pattern among insiders and outsiders, the first (1613), second (1617), and third (1632) long-term joint stocks, the merged permanent stock of 1651, and the capital trajectory from £370,000 (1657) through £740,000 (1682) and £1,488,000 (1693) to the merged United Company's £3,163,000 (1709) and £6,000,000 (1794). He then examines governance (governor, deputy, Court of Committees, General Court; one vote per member, eroded toward investment-weighted voting from the 1609 charter onward), information flows (the insiders' superior knowledge and the design forcing disclosure — audits, accounts, court minutes), liquidity and exit (the end-of-voyage opt-out and adjudicated share transfers, roughly a hundred transactions documented 1601–09, rising to 655 a year by 1688 after the Glorious Revolution and the Bank of England), the credible-commitment story of the Crown and parliament and the judiciary constraining prerogative, and the EIC in Asia: 807 ships eastbound in the seventeenth century, the factories at Bantam (1602) and Surat (by 1613 the principal western-India factory), private trade's informational benefits, Bombay (1661 acquisition) and Madras (1639) and the rise of Calcutta, and the qualifying discussion of when the EIC became territorial (Stern's 1657 Saint Helena and 1668 Bombay). He closes with a formal comparison of the VOC and EIC — one class vs. two classes of shares, voice, dividends, information, exit — and the conclusion that the EIC was less oligarchic because it lacked the Dutch stock market and had to compensate with voice, information, and per-voyage exit. Source anchors: EIC; London; Levant Company; Elizabeth I; James I; charter 1600; charter 1609; joint stock; per-voyage accounts; £68,937; £464,284; General Court; Court of Committees; one member one vote; information flows; share transfers; Glorious Revolution; Bank of England; credible commitment; Bantam; Surat; Bombay; Madras; Calcutta.   </p>
+<p>Analysis: The EIC and London matter because Harris does not want the Dutch case mistaken for a single miraculous blueprint: the English path paired the corporation with per-voyage joint-stock equity because there was no preexisting share market, and compensated investors with voice, disclosure, and repeated exit decisions. That design is a distinct solution to the same problem of attracting passive outsiders, so this chapter and chapter 10 together form the book's central demonstration of <a href="//02%20Concepts/Institutions.html">Institutions</a> in action, grounded in the <a href="//05%20Characters%20and%20Entities/East%20India%20Company.html">East India Company</a> entity. The credibility of the charter depended on the English Crown's emergent rule-of-law constraints — parliament, the judiciary, and constitutional ideas — which is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> from a different starting point than the Dutch Republic. Chase-figure tell of scale: £464,284 pooled across twelve joint stocks in thirteen years, 807 ships in the century, second in Europe only to the VOC. The chapter also stresses <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> (the General Court as an information conduit and audit discipline replacing the market), <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> (share liquidity, exit, and the delayed London stock market), and the logistics of a decentralized factory system from Bantam to Surat, so the chapter's maritime commercial world of London and the Indian Ocean p naturally sits with the North Sea merchant-world narrative of <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a>.   </p>
+<h3 id="chapter-12-why-did-the-corporation-only-evolve-in-europe">Chapter 12: Why Did the Corporation Only Evolve in Europe?</h3>
+<p>Summary: Harris closes the substantive argument by asking why lineages, waqfs, guilds, networks, and ruler-run enterprises elsewhere in Eurasia did not develop into equivalent corporations, and why the European form itself did not migrate outward for roughly three centuries. He builds a theory of resistance to migration: four states of affairs (different demand; no awareness; functionally equivalent organs; true embeddedness with unsupplied demand), the insight that the more complex an institution the harder it migrates wholesale, and the insight that complementarity and threat to rulers block adoption — developed through printing and paper money as embedded institutions-cum-technologies that China invented but Europe adopted late (Gutenberg's movable type ca. 1440; the first European banknotes in Sweden in 1661). He then applies the framework region by region. For the Islamic Middle East, he argues that demand was low (proximity to markets, family-and-agent organization), that the building blocks were absent (cities without corporate character, guilds and madrasas not autonomous), and that the waqf supplied the semipublic demand so early that it path-dependently blocked the corporation — while the sea loan's rejection as usury, the Ottoman exceptions in the Indian Ocean, and the first Ottoman joint-stock company (1851) mark the timeline. For India, he argues that geography made long-distance trade unnecessary at corporation scale (Abu-Lughod: "on the way to everywhere"), that the Chola precedent remained a dead end, that the guilds and sreni never acquired corporate governance or charter-based monopoly rights, and that the Europeans' joint-stock experiments of the seventeenth century were transplants, not indigenous evolution (the first Indian Companies Act came only in 1866). For China, he argues that the lineage institution — from ancestral halls to "contractual lineages" with commoditized shares — was the Chinese analogue (Zelin's Fu-Rong salt yard, Pomeranz's Yutang Company, Billy So on South Fukien), that state and tributary structure filled the demand (Zheng He as the alternative to commerce), and that the corporation arrived only with the 1904 Companies Act; he explains the absence by the ruler's inability to credibly commit, the absence of a stock market and of a space between state and family, and the Confucian religion-state interweaving. The chapter's conclusion is that the business corporation was embedded in European civilization — the Catholic Church, the state-family gap, the stock market — and that Europe's very dominance prevented the lineage and the waqf from ever crossing into impersonal cooperation. Source anchors: Europe; waqf; lineage; guilds; stock markets; China; India; Middle East; printing; paper money; Corporations Act; sreni; Yutang; Fu-Rong; Kuran; Weber; Chola; osmanlı joint-stock 1851; Companies Act 1904.   </p>
+<p>Analysis: Waqf and guilds matter because Harris is taking seriously institutions that had some corporate-like features without treating them as failed European copies; the waqf's early start as a semipublic endowment vehicle is a textbook <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> case, and the Chinese lineage is the strongest mobile alternative in the book. China and the Middle East anchor the comparative refusal to universalize Europe's path, and <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> (the waqf, the lineage, communal guild order) are shown to be so well adapted and so well embedded that they blunted the demand for anything formal. The printing press and paper money demonstrate that proximity plus knowledge does not cause adoption when the receiving civilization resists — a general model of <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> at the institutional level: without compatible legal, political, and financial gates, the corporate form did not migrate outward for centuries. <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> explains the missing "space between ruler and family" that Europe alone carved out, and the chapter ends by casting the corporation against the <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> literature (printing, paper money, movable type) as the epoch's most consequential example of an innovation simultaneously embedded and accumulative.   </p>
+<h3 id="conclusion-institutional-migration-and-the-corporation">Conclusion: Institutional Migration and the Corporation</h3>
+<p>Summary: Harris concludes by returning to institutional migration as the book's master problem. He recaps the movement of simpler organizational forms across Eurasia — endogenous forms (itinerant traders, loans, agency, ships), migratory forms (commenda, sea loan, caravanserai, khan), and the embedded corporation that alone resisted importation — and the agents of migration (migrating populations, expanding religions, conquering empires, and above all merchants meeting in the multicultural hubs of Aden, Hormuz, Malacca, and Quanzhou). He restates the interplay of family, religion, and ruler as the shaping factor. He recaps the corporation's rise from the Roman Catholic Church, its coupling with joint-stock equity (the VOC by 1602, the EIC by 1612), and its information-based advantages as both vertical integration and horizontal merger rivaling the Fugger. He marshals the personal-impersonal literature (Rosenthal and Wong on formal vs. informal enforcement; Greif and Tabellini on clan vs. corporation; Masten and Prüfer on communities vs. courts), insists the shift is not automatically progressive, and charts the corporation's subsequent spread into water supply, banks, insurance, canals, railways, and industry (twenty-four joint-stock companies in England by 1740; £90 million invested by 1810). He closes with the two versions of his core argument: the ambitious second-level argument that the corporate form explains English and Dutch dominance in Cape Route trade in the seventeenth century, and the modest first-level argument that, whatever explains dominance, the joint-stock corporation was the first impersonal organization and a precondition for the later financial, colonial, transportation, and industrial revolutions. Source anchors: institutional migration; resistance to migration; family firms; networks; corporation; fiscal-military state; industrial revolutions; Rosenthal and Wong; Greif and Tabellini; Manila Galleons; Atlantic trade.   </p>
+<p>Analysis: Institutional migration and resistance to migration summarize the book's broadest payoff, because Harris wants the reader to see the corporation as one case within a wider pattern of mobile and immobile institutions: the family firm, the network, and the ruler enterprise remain in the conclusion to remind us that the corporation did not replace organizational history so much as overtake older forms in particular sectors and scales. The claim that the corporation succeeded because of its information advantage — as vertical integration of the whole trade and as horizontal merger of a nation's merchants — makes <a href="//02%20Concepts/Institutions.html">Institutions</a> and <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> the true engine of dominance, and the discussion of Atlantic trade without corporations and the silver-laden Manila Galleons confines the argument to the Eurasian/Cape world while still engaging the global economy mapped by <a href="//01%20Books/1493.html">1493</a>. By ending with the industrial revolutions, fiscal-military state formation, and the caveat that impersonal cooperation is not inherently better in every environment, Harris also shows why the seventeenth-century corporate break mattered far beyond the Indian Ocean world that first revealed its power — an outcome registered in the vault across <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>, <a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>, <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>, and <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Cape Route arithmetic</strong>: 815 ships around the Cape in the sixteenth century (no corporate operators); 3,187 in the seventeenth, ~95 percent corporate, 2,577 (80 percent) VOC + EIC. VOC ships: 1,770 eastbound in the seventeenth century; EIC ships: 807 eastbound; from the 1620s the VOC and EIC together routinely out-launched Portugal (194 vs. 66 in the second decade; 199 vs. 60 in the third).   </li>
+<li><strong>Monsoon closure</strong>: the Indian Ocean was "totally closed" for about ninety days a year (June–August); a single-year voyage from the Arabian Peninsula to Malaya had a narrow February departure window. Distances: Lisbon–Calicut via the Cape 9,510 nautical miles; Fuzhou–Aden 5,450; a typical Mediterranean route ~1,480 — Indian Ocean hauls four to six times longer than European ones.   </li>
+<li><strong>Commodity margins</strong>: pepper sold in Amsterdam for three to four times its Southeast Asia price; cloves 100× in India and up to 240× in Lisbon; nutmeg 840× in London vs. the Banda Islands. Silver-to-gold ratio in 1400: 12 in Europe, 6 in China, 4.5 in Japan — the price gap that made American silver the essential European export to Asia.   </li>
+<li><strong>The VOC's founding numbers</strong>: chartered March 20, 1602; fl. 6,424,588 subscribed (1,143 subscribers in Amsterdam, 264 in Zeeland, ~1,815 total); capital barely moved (fl. 6,440,200 in 1693); first dividend only in 1610 and in kind (spices); roughly a third of Amsterdam-chamber shares changed hands 1603–12.   </li>
+<li><strong>The EIC's founding numbers</strong>: first meeting September 22, 1599 (132 names); charter December 31, 1600 (218 members); first voyage subscribed £68,937 (232 investors); £464,284 raised across twelve joint stocks 1601–12; 410 names in Harris's 1599–1609 database; long-term stocks of £418,000 (1613) and £3,163,000 after the 1709 merger; £6,000,000 peak in 1794. Share transactions ran ~40/year in the first decade, ~655/year by 1688.   </li>
+<li><strong>Family-firm ciphers</strong>: Fugger working capital 2 million guilders (1525) and 5 million (1546); Virji Vora's reported Rs 8 million and Ghafur's Rs 8.5 million (1718); Ghafur's seventeen of Surat's 112 ships; the Pu lineage running a trade enterprise for roughly three centuries (tenth/eleventh to late fourteenth century) — longer than any comparable family firm in the book.   </li>
+<li><strong>Commenda by the numbers</strong>: Islamic qirad default 50–50 profit split; Italian commenda 75–25 (investor-traveler); Armenian unilateral commenda gave the traveling party 22–35 percent; a bilateral 1737–46 Saidabad commenda (investor Rs 6,800, agent Rs 1,500) split profits about 38.55/61.45 to the agent/investor; Van Doosselaere's Genoa sample found 93 percent of formalized commercial ties (6,764 of 7,221) were commenda.   </li>
+<li><strong>Retrieval phrases</strong>: "endogenous / migratory / embedded institutions"; "personal to impersonal cooperation"; "organizational revolution"; "credible commitment on two levels"; "the corporation was invented out of weakness"; "the space between the state and the family"; "the ultimate embedded institution"; "the first-level and second-level arguments"; "organizational as opposed to technological or military explanations of Europe's trade ascendancy."   </li>
+<li><strong>Signature primary sources</strong>: the Muziris Papyrus (Vienna Papyrus, mid-second-century CE sea-loan/boilerplate); the Turfan and Dunhuang contracts; the Cairo Geniza "India Book"; the New Julfa Holy Savior Cathedral archive and the seized Santa Catharina papers (1748); the EIC minutes and charters; the VOC charter and Amsterdam shareholder register; the Portuguese crown contracts for the Asia and Europa trades.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html">maritime empire, peripheries, and gateway power</a></li>
+	<li><a class="backlink" href="//02 Concepts/Chokepoints and Gateways.html">chokepoints and gateways</a></li>
+	<li><a class="backlink" href="//01 Books/The Edge of the World.html">the edge of the world</a></li>
+	<li><a class="backlink" href="//02 Concepts/Economy, Firms, and Infrastructure.html">economy, firms, and infrastructure</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html">small firms, tacit knowledge, and industrial risk</a></li>
+	<li><a class="backlink" href="//02 Concepts/Order and Governance.html">order and governance</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html">coercive labor, commodity systems, and extraction</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Qing Empire.html">qing empire</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/East India Company.html">east india company</a></li>
+	<li><a class="backlink" href="//02 Concepts/Common Patterns and Transferable Lessons.html">common patterns and transferable lessons</a></li>
+	<li><a class="backlink" href="//02 Concepts/Information, Legibility, and Coordination.html">information, legibility, and coordination</a></li>
+	<li><a class="backlink" href="//02 Concepts/Empire, Frontier, and Periphery.html">empire, frontier, and periphery</a></li>
+	<li><a class="backlink" href="//02 Concepts/Commodity Systems.html">commodity systems</a></li>
+	<li><a class="backlink" href="//01 Books/A History of Portugal and the Portuguese Empire.html">01 books/a history of portugal and the portuguese empire</a></li>
+	<li><a class="backlink" href="//02 Concepts/Commercial Society.html">commercial society</a></li>
+	<li><a class="backlink" href="//01 Books/The Dutch Republic.html">the dutch republic</a></li>
+	<li><a class="backlink" href="//02 Concepts/Maritime Power.html">maritime power</a></li>
+	<li><a class="backlink" href="//01 Books/1493.html">1493</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/long-distance-trade/index.html">long-distance-trade</a></li>
+	<li><a class="backlink" href="//obs.html/tags/17th-century/index.html">17th-century</a></li>
+	<li><a class="backlink" href="//obs.html/tags/indian-ocean/index.html">indian-ocean</a></li>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/business-corporations/index.html">business-corporations</a></li>
+	<li><a class="backlink" href="//obs.html/tags/book/index.html">book</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A158254589563159968451461238766410930493{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D158254589563159968451461238766410930493{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B158254589563159968451461238766410930493{level}" level="{level}" note_temp_id="158254589563159968451461238766410930493" onclick="window.ObsHtmlGraph.run(this, '158254589563159968451461238766410930493', 'going the distance');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C158254589563159968451461238766410930493{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

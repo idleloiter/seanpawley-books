@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the silmarillion">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the silmarillion';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the silmarillion" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-silmarillion">The Silmarillion</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>The Silmarillion</code> is the mythic and cosmological founding text of the <a href="//04%20Series/Middle-earth%20Legendarium.html">Middle-earth Legendarium</a> series, the deep-time background against which <code>The Hobbit</code> and <code>The Lord of the Rings</code> are set. In the graph it performs the role of origin story and divine history: it supplies the theology (Eru Il?vatar and the Ainur), the first cosmology (the Valar, the Two Trees, the Silmarils, Morgoth), the whole First Age of Beleriand, the rise and downfall of N?menor, and the Second/Third Age frame that connects directly into <code>The Lord of the Rings</code>. It thus sits beside the other volumes of the legendarium not as a sibling adventure but as the standing cosmology that explains their world's fundamental categories: why there is evil, why Elves fade, why Men are mortal, why the Ring exists, and why the Third Age is the "afterlife" of First Age wounds. The note belongs thematically to the vault's reading paths on civilizational collapse, legitimacy, memory, religion, and war (see <code>03 Reading Paths/Collapse, Resilience, and Civilizational Survival</code>, <code>03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture</code>, <code>03 Reading Paths/Identity, Memory, and Cultural Legitimacy</code>), and its analytical load falls on the concept cluster of religion and legitimacy, memory and knowledge preservation, empire and collapse, and war. Because Phase 4 has not yet produced Middle-earth entity nodes (F?anor, Morgoth, N?menor, the Valar, and so on), this note anchors its cross-links to the concept layer and to the series hub only, flagging entity nodes for future creation.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>The Silmarillion</code> is not a prequel novel but a compiled mythology whose own editorial history matters. Christopher Tolkien's foreword explains that the published book was assembled after J. R. R. Tolkien's death from four decades of evolving prose, poems, annals, oral-tale forms, and philosophical revisions, with Guy Kay assisting in 1974-1975. That editorial frame is not incidental: it prepares the reader for the book's shifting density and tone, from the close, motive-driven detail of the tale of T?rin Turambar to the high, compressed register of the War of Wrath. The collected volume contains five works plus reference apparatus: the Ainulindal? (creation through music), the Valaquenta (a catalogue of the divine powers), the Quenta Silmarillion (the First-Age history of the Silmarils, running to twenty-four chapters), the Akallab?th (the Downfall of N?menor), and Of the Rings of Power and the Third Age, together with a note on pronunciation, an index of names, genealogical tables, and an appendix on Elvish name-elements.   </p>
+<p>The book's opening establishes a theology before any Elvish history. The Ainulindal? has Eru Il?vatar make the Ainur and teach them a Great Music; Melkor introduces discord from a desire to create and possess independently; Il?vatar answers with new themes, shows the Vision of the World, and sends the Flame Imperishable into Ea so that the Valar descend to shape Arda already marred. The Valaquenta then names the powers who guard Arda (Manw?, Varda, Ulmo, Aul?, Yavanna, Mandos, Nienna, Orom?, Tulkas, and the Maiar including Melian, Olorin, and, in the catalogue of enemies, Sauron and the Balrogs). The result is a cosmology in which evil begins as possessive will inside creation and history, not as an equal rival outside it.   </p>
+<p>The Quenta Silmarillion proper is organized around the making, the theft, and the attempted recovery of F?anor's Silmarils. Its early chapters move from the Lamps and the Two Trees, through the awakening of the Elves at Cuivi?nen and their summons west, to Thingol and Melian in Doriath, F?anor's craft, Melkor's unchaining, Ungoliant's destruction of the Trees, the Oath of F?anor, the Kinslaying at Alqualond?, and the Flight of the Noldor under the Doom of Mandos. The Silmarils work as more than jewels: they preserve hallowed light, intensify possessiveness, bind seven sons to a ruinous oath, and draw whole peoples into exile, fratricide, and long defeat. The middle and late chapters show the "long defeat" of the Eldar and Edain in Beleriand: the return of the Noldor and the foundation of hidden realms, the coming of Men, the Dagor Bragollach and the fall of Fingolfin, Beren and L?thien's recovery of a Silmaril, the Nirnaeth Arnoediad, T?rin Turambar's doom and the ruin of Doriath, Tuor's coming to Gondolin and its fall, and E?rendil's voyage. Through all of this the book repeatedly tests whether secrecy, beauty, and guarded borders (Doriath, Nargothrond, Gondolin) can survive pride, betrayal, dragon-fire, and Morgoth's pressure from Angband.   </p>
+<p>The final works extend the pattern past the First Age. The Akallab?th gives the Edain the gift of N?menor, then follows their fear of death, their imperial expansion over Middle-earth, Sauron's capture and corruption of Ar-Pharaz?n, the worship of Melkor, the assault on Aman, and the Downfall, which leaves Elendil, Isildur, and An?rion to found Arnor and Gondor. Of the Rings of Power then links Celebrimbor and the Three, the Seven and the Nine, Sauron's One Ring, the Last Alliance, Isildur's taking of the Ring and his death, Imladris, the Istari, and the Periannath to the world of <code>The Lord of the Rings</code>. The book closes by making the Third Age the afterlife of First Age choices rather than a separate adventure world, so that the Ring is legible as the heir of the Silmarils and of Morgoth's originating discord.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Eru Il?vatar (the One)</strong>: the creator; makes the Ainur and the Great Music, sends the Flame Imperishable into Ea, and repeatedly folds Melkor's rebellion into a larger design. His motivations are largely an author-function: sovereignty, care, and the reserving of "new things" (the Children) to himself. He is the ultimate source of legitimacy and of both Men's death-gift and Elves' immortality.   </li>
+<li><strong>Melkor / Morgoth</strong>: the greatest of the Ainur, who falls through possessive will. He wants to create and rule independently, covets the Silmarils, lusts to dominate Elves and Men, and becomes the Dark Enemy. His motivation is envy, pride, and the desire to be "Lord" over other wills; the book measures him through a long history of ruin, cruelty, and self-dispersal of his own strength.   </li>
+<li><strong>Manw? and Varda</strong>: the chief Valar, king and queen of Arda; Manw? rules by non-coercive wisdom and Varda makes light and stars. They embody legitimate, restrained governance as against Melkor's domination.   </li>
+<li><strong>Ulmo</strong>: the Lord of Waters, who never abandons Elves and Men, warns and guides them (Turgon, Tuor, E?rendil), and represents a pervasive, patient providence working through water and music.   </li>
+<li><strong>F?anor</strong>: greatest of the Noldor, maker of the Silmarils and of the Elvish letters. His motivation blends love of his dead father, pride, grief over the theft of his jewels, and resentment of the Valar. He sets the Oath in motion and triggers the Kinslaying, the Doom of the Noldor, and the whole First Age tragedy; he dies burning his ships at Losgar.   </li>
+<li><strong>Fingolfin and Fingon</strong>: the more patient, steadfast branch of the Noldor; Fingolfin's defiant duel with Morgoth and Fingon's rescue of Maedhros are high-water marks of Noldorin valour against the doom.   </li>
+<li><strong>Thingol (Elw? Singollo) and Melian</strong>: king and Maia-queen of Doriath; Thingol is proud, possessive of the Silmaril, and sets Beren an impossible task that draws Doriath into ruin; Melian's wisdom and Girdle protect the realm until her husband's death withdraws her power.   </li>
+<li><strong>L?thien and Beren</strong>: the Elf-maid and mortal Man whose quest wins a Silmaril, and whose union joins the Two Kindreds; L?thien chooses mortality to be with Beren, and their line produces Elwing, Elrond, and Elros.   </li>
+<li><strong>Morgoth's servants — Sauron, Balrogs, Gothmog, Glaurung, Ungoliant, Carcharoth</strong>: instruments of the Enemy; Sauron especially recurs as a Maia of Aul? corrupted into the great deceiver who later forges the One Ring and engineers N?menor's fall.   </li>
+<li><strong>H?rin and Huor, T?rin Turambar, Morwen, Nienor</strong>: the doomed mortal house of Hador, caught in Morgoth's curse. T?rin is the tragic center of the longest tale, undone by pride, secrecy, and the dragon's lies even as he achieves great deeds.   </li>
+<li><strong>Turgon, Idril, Tuor, Maeglin, E?rendil</strong>: the line and realm of Gondolin; Turgon's proud refusal to abandon his work of hands condemns the city, Maeglin's treachery betrays it, and Tuor, Idril, and E?rendil carry its remnant to the sea. E?rendil becomes the star who pleads for the Two Kindreds.   </li>
+<li><strong>Elendil, Isildur, and An?rion</strong>: the faithful N?men?rean exiles who escape the Downfall, found Arnor and Gondor, form the Last Alliance, and (in Isildur's refusal to destroy the Ring) set the conditions for the Third Age.   </li>
+<li><strong>Ar-Pharaz?n and the N?men?rean kings</strong>: mortal rulers corrupted by the fear of death and by Sauron into imperial aggression and worship of Melkor, ending in the Downfall.   </li>
+<li><strong>Elrond and Elros</strong>: the Half-elven sons of E?rendil and Elwing; Elrond chooses the Eldar and becomes the keeper of lore in Imladris, while Elros chooses Men and founds the line of the N?men?rean kings.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Middle-earth%20Legendarium.html">Middle-earth Legendarium</a> — the series hub; this book supplies the cosmology and history the other Middle-earth volumes inherit.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — creation as music, the worship of Eru vs. the cult of Melkor/Morgoth in N?menor, and the consecration of oath and kingship.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> and <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> — the kingship of the Noldor, the succession of Finw?'s house, the line of Elros, and Isildur's claim ("were-gild for my father's death").   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> — the War of the Jewels, the great battles (Dagor Aglareb, Bragollach, Nirnaeth Arnoediad, War of Wrath), and the Downfall of N?menor.   </li>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> — the fall of realms (Nargothrond, Doriath, Gondolin, N?menor) against the survival of remnants (the Havens, the exiles, Imladris, the line of Isildur).   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> — N?menor's transition from teachers to tribute-taking lords and masters; Morgoth's realm versus the border realms of the Eldar.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> and <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> — runes and letters, Daeron's Cirth, the lays and songs (Lay of Leithian, Narn, Noldolant?), the compiled-history frame, and Elrond's treasury of lore at Imladris.   </li>
+<li><a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> — the sundering of the Elves, the exiles' identity, Thingol's ban on the Noldorin tongue, and N?men?rean D?nedain self-conception.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> — the Oath of F?anor, fealty and friendship-oaths (Finrod's to Barahir), and the were-gild/kinship economy of the First Age.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> and <a href="//02%20Concepts/Technology%2C%20Platforms%2C%20and%20Speculative%20Systems.html">Technology, Platforms, and Speculative Systems</a> — F?anor's craft and Silmarils, the smithing of the Rings, and the One Ring as master-device.   </li>
+<li><a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a> — the One Ring governing the lesser Rings and surveilling/enslaving their bearers.   </li>
+<li><a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a> — the Teleri ships, C?rdan's Havens, N?menor's fleets, and E?rendil's voyage to Valinor.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> — the Noldorin princes, the Edain houses, and the N?men?rean ruling house.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> — the thralls and slaves of Angband, the mining Elves, and N?menor's oppressive rowing-slaves and tribute.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a> and <a href="//02%20Concepts/Information%2C%20Legibility%2C%20and%20Coordination.html">Information, Legibility, and Coordination</a> — Morgoth's spies, Sauron's watch-tower at Tol-in-Gaurhoth, and the palant?ri.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> — the Valar administering a world whose future they only partly foresee.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> — the naming of Morgoth, the error-laden doomed names of T?rin, and the linguistic divisions of the Elvish peoples.   </li>
+<li>Sibling volumes to connect at Phase 4: <code>The Hobbit</code> and <code>The Lord of the Rings</code> (whose final entanglements this book explicitly foreshadows), and other Middle-earth works if added.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Possessive creation and the origin of evil</strong>: Melkor's fall as the archetype binding creativity, envy, domination, and ruin — the lens through which the Silmarils and the Ring are read.   </li>
+<li><strong>Oath, doom, and the cost of binding commitments</strong>: the Oath of F?anor and its cascading kinslayings as the engine of the First Age.   </li>
+<li><strong>The hidden realm and guarded borders</strong>: Doriath's Girdle, Nargothrond's caves, and Gondolin's secrecy tested against pride, love, and betrayal.   </li>
+<li><strong>Secrecy vs. revelation and legibility</strong>: Morgoth's spies and knowledge-gathering against the Eldar's hidden refuges.   </li>
+<li><strong>Knowledge, song, and memory as inheritance</strong>: the compilation of history, the loss of lore, and how memory survives collapse.   </li>
+<li><strong>Elves versus Men: immortality, mortality, and the gift of death</strong>: the cosmological contrast that drives N?menor's envy and the Doom of Men.   </li>
+<li><strong>Imperial rise and civilizational collapse</strong>: N?menor as the paradigm of a gifted polity corrupted by fear of death, inequality, and domination.   </li>
+<li><strong>The price of craft and the corruption of technology</strong>: from F?anor's Silmarils to Sauron's One Ring.   </li>
+<li><strong>Legitimacy, succession, and the right to rule</strong>: who is the rightful Lord — Eru, the Valar, Morgoth, F?anor's heirs, Elendil's line.   </li>
+<li><strong>Resilience through remnant and exile</strong>: how the defeated carry forward culture, seed-trees, and a line.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: The Silmarillion grounds divine right in creation-as-music and in the worship that a polity renders. Where N?menor worships Eru, its kings are legitimate; where it adopts the cult of Melkor the Giver of Freedom under Sauron, it forfeits that standing and is drowned. Manw? as vicegerent of Il?vatar makes sovereignty in Arda a religious office.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: The book repeatedly stages claims to rule and inheritance: F?anor's claim to kingship after Finw?'s death, the "Dispossessed" sons of F?anor over the Silmarils, Thingol's heir Dior, the N?men?rean sceptre, and finally Isildur's blood-right and Aragorn's line. Succession by blood, oath, and choice (Elrond/Elros) is a running problem.   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: The First Age is structured as serial war against Morgoth ending in catastrophic defeat; the Akallab?th is a civilizational collapse; the battle of the Last Alliance and the Downfall are the twin crises that open the Third Age.   </li>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: Every realm that falls leaves a remnant that carries on — the Havens of Sirion, the survivors of Gondolin, Elendil's nine ships, the seed of the White Tree, the line of Isildur sheltered at Imladris. Resilience is figured as portable inheritance rather than the preservation of walls.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: N?menor's arc from gift-bearing helpers to tribute-extracting masters is the clearest statement, mirroring the earlier contrast between the Elves' border-realms and Morgoth's expanding domain. The periphery (Beleriand, Middle-earth) is where the centre's virtues decay into domination.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> and <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: The book is self-consciously a compiled record — loremasters, runes, lays, genealogies, Elrond's lore — that must be actively preserved because "much that was held in memory perished in the ruins." Elrond's house is the vault-locus of this theme.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: Kinship, friendship, and oath form a moral economy of obligation. F?anor's Oath, Finrod's pledge to Barahir, and Isildur's framing of the Ring as "were-gild" show how binding values are converted into action and tragedy.   </li>
+<li><a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a>: Sauron's One Ring is the master device that makes the lesser Rings interoperable, surveilling and enslaving their bearers — a platform that both concentrates convenience and extracts control.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> and <a href="//02%20Concepts/Technology%2C%20Platforms%2C%20and%20Speculative%20Systems.html">Technology, Platforms, and Speculative Systems</a>: F?anor's Silmarils and the Elven/One Rings dramatize how craft-invention concentrates power and carries hidden costs; the productive promise of the Rings is vulnerable to the hidden controller.   </li>
+<li><a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: Sundering (Vanyar/Noldor/Teleri, Calaquendi/Moriquendi, Sindar), exilic identity, and the language-ban all make culture a carrier of legitimacy and a source of conflict.   </li>
+<li><a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a>: Ships bind the cosmos — the Teleri's swan-ships, C?rdan's Havens, N?menor's fleets, and E?rendil's Vingilot journeying to Valinor and then the sky.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: The Noldorin princes, the Three Houses of the Edain, and the N?men?rean royal line show how elites form, hold lore and craft, and either legitimate or corrupt their politics.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a> and <a href="//02%20Concepts/Information%2C%20Legibility%2C%20and%20Coordination.html">Information, Legibility, and Coordination</a>: Morgoth's spies and Sauron's watch-tower; the palant?ri as instruments of legibility over space and time; the Valar's and Ulmo's pervasive unseen knowledge.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: Angband's thralls and mining slaves, the enslaved Elves and Men of the East, and N?menor's rowing-slaves under the lash ground the book's politics in forced extraction.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: The Valar administer a marred world whose end they do not fully foresee, governing through restraint rather than coercive mastery — a speculative model of legitimate but incomplete authority.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Naming and language carry ideology — F?anor names Morgoth, Thingol bans the Noldorin tongue, T?rin takes doomed pseudonyms — and the linguistic strata of the Elves map their polity history.   </li>
+<li><a href="//04%20Series/Middle-earth%20Legendarium.html">Middle-earth Legendarium</a>: This volume is the mythological foundation the rest of the series rests on; its themes are the standing matrix for <code>The Hobbit</code> and <code>The Lord of the Rings</code>.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="foreword">Foreword</h3>
+<p>Summary: Christopher Tolkien frames the book as a posthumous construction published four years after J. R. R. Tolkien's death, drawn from material that began in battered notebooks around 1917 and continued changing for more than half a century. He explains the difficulty of making one coherent text from poems, annals, oral tales, prose variants, theological reflection, and philosophical revision, and notes that the concluding chapters (after the death of T?rin Turambar) introduced peculiar difficulties because they had remained unchanged long and were in disharmony with more developed conceptions elsewhere. The foreword identifies the five component works (Ainulindal?, Valaquenta, Quenta Silmarillion, Akallab?th, Of the Rings of Power), names Guy Kay's assistance in 1974-1975, and describes the genealogical tables, the table of Elvish peoples, the pronunciation note, the index, the appendix of name-elements, and the maps. <br />
+Source anchors: Christopher Tolkien; 1917; T?rin Turambar; Ainulindal?; Valaquenta; Guy Kay; genealogical tables.   </p>
+<p>Analysis: Christopher Tolkien makes clear that coherence has been edited into the book rather than simply discovered as a finished text. The compilation is itself a work of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>, reconciling variant manuscripts across poems, annals, and prose without erasing their formal differences. The editorial apparatus — genealogies, indices, pronunciation and name-elements — is the institutional infrastructure that lets a sprawling, layered tradition endure, which is the same labor ascribed in-universe to Elrond and the loremasters; the resulting "varying speed" and registers make the work an embodied record of how <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> require selection and arrangement, not passive copying.   </p>
+<h3 id="ainulindal-the-music-of-the-ainur">Ainulindal?: The Music of the Ainur</h3>
+<p>Summary: <code>Ainulindal?</code> begins with Eru Il?vatar creating the Ainur, teaching them music, and giving them a great theme to develop in harmony until Melkor introduces discord out of a desire to create and possess independently, seeking the Flame Imperishable that is with Il?vatar alone. Il?vatar answers Melkor with deeper themes, reveals the Vision of the World, and shows that even rebellion will be woven into a larger design. The Ainur see Arda, the Children (Elves and Men), Time, and the Flame, and the Valar descend into Ea to shape the world under conditions already marred by Melkor, who covets it and names it his own kingdom. The Valar and Melkor then begin their first strife for the dominion of Arda. <br />
+Source anchors: Eru Il?vatar; Ainur; Melkor; Flame Imperishable; Vision; Arda; Ea; Manw?; Ulmo; Aul?.   </p>
+<p>Analysis: The Ainulindal? grounds <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> in creation as music: legitimate authority derives from participation in a theme and from the source of the Flame, not from possession of matter. Melkor's search for the Flame exposes the sterility of domination, since he can distort Arda but not originate life, while Il?vatar's repeated re-theming of the discord shows rebellion contained within a larger providential order. The Vision and the descent into Ea create <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>, as the Valar enter a world they must administer without full foreknowledge of its end; and the twin creation of Elves and Men installs from the first the book's core contrast between <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>'s two children, the Firstborn and the Followers.   </p>
+<h3 id="valaquenta">Valaquenta</h3>
+<p>Summary: <code>Valaquenta</code> catalogues the Valar, Valier, Maiar, and enemies, giving the hierarchy of powers active in Arda. It names Manw? and Varda, Ulmo, Aul? and Yavanna, the F?anturi Mandos (N?mo) and L?rien (Irmo), Nienna, Tulkas and Nessa, Orom? and V?na, then the Maiar such as E?nw?, Ilmar?, Oss? and Uinen, Melian, and Ol?rin. It closes by defining Melkor as Morgoth, Naming the Balrogs (Valaraukar) among the corrupted spirits, and identifying Sauron as a Maia of Aul? who becomes Morgoth's greatest servant. <br />
+Source anchors: Manw?; Varda; Ulmo; Aul?; Yavanna; Mandos; Nienna; Orom?; Melian; Ol?rin; Sauron; Balrogs.   </p>
+<p>Analysis: The Valaquenta gives the later tales their metaphysical geography: winds, stars, waters, craft, and growing things all have personal histories under named powers, so that nature itself is legible as society. Melian matters because she becomes an embodied power in Doriath rather than distant theology. Sauron being a Maia of Aul? places the later Ring-maker inside a lineage of craft corrupted toward domination, which anticipates the book's treatment of <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> — the same workshop skill that makes the Silmarils and the Rings can be turned to enslavement. The catalogue also formalizes <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> at divine scale, a hierarchy of reverence and office in which Melkor's forfeiture of his name is the first act of political illegitimacy.   </p>
+<h3 id="quenta-silmarillion-chapter-1-of-the-beginning-of-days">Quenta Silmarillion: Chapter 1: Of the Beginning of Days</h3>
+<p>Summary: The chapter recounts the first war and the Spring of Arda. Tulkas comes to the Valar's aid and drives Melkor away, and under the light of the Lamps Illuin and Ormal (wrought by Aul?) Yavanna's growth flourishes while the Valar dwell on Almaren. Melkor, using secret friends among the Maiar, builds Utumno in the north and marrs the Spring; he casts down the pillars and breaks the Lamps, wrecking the original design of Arda, and the Valar depart to Aman, where Yavanna raises the Two Trees (Telperion and Laurelin) and Nienna waters their roots with tears. The chapter also introduces the different gifts of Elves and Men: Elves love the world and are bound to it, while Men are mortal, the "Guests," given a gift of freedom beyond the Music. <br />
+Source anchors: Tulkas; Utumno; Illuin; Ormal; Almaren; Aman; Telperion; Laurelin; Valinor; the Spring of Arda.   </p>
+<p>Analysis: This chapter establishes the pattern of marring and diminution that runs through the whole legendarium: every order the Valar build is vulnerable to Melkor's undoing, so legitimacy must contend with permanent imperfection. The Lamps-to-Trees sequence makes loss generative (out of the wreck of the Lamps grow the Trees), a theme of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> in which disaster paradoxically produces new and greater forms. The closing exposition on Elvish immortality versus the mortality of Men installs the cosmology — death as the "gift of Il?vatar," the Elves bound to the world — that drives nearly every later tragedy, especially N?menor, and it is a founding statement of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> since these are decreed fates, not accidents.   </p>
+<h3 id="quenta-silmarillion-chapter-2-of-aul-and-yavanna">Quenta Silmarillion: Chapter 2: Of Aul? and Yavanna</h3>
+<p>Summary: Aul?, impatient for the coming of the Children who would learn his crafts, secretly makes the Seven Fathers of the Dwarves in Middle-earth. Il?vatar confronts him, and Aul? offers to destroy his presumptuous work; Il?vatar accepts the offer and gives the Dwarves independent life, but they must sleep until after the Firstborn awaken and will face strife with Il?vatar's own children. Yavanna, anxious that Aul?'s children will harm growing things, wins through Manw? the boon that the thought of the Kelvar and Olvar will summon guardian spirits: the Shepherds of the Trees (Ents) and the Eagles of the Lords of the West. <br />
+Source anchors: Aul?; Dwarves; Seven Fathers; Mahal; Il?vatar; Yavanna; Ents; Eagles; Kelvar; Olvar.   </p>
+<p>Analysis: The chapter is a meditation on <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> and the boundary of creation: Aul? is a sub-creator whose beings live only by Il?vatar's fiat, and his humility (offering to destroy them) is what legitimizes the gift. It also frames ecological guardianship, as Yavanna's fear that craft-children will despoil growing things produces the Ents and Eagles — a divine counterweight to industry. The tension between Aul?'s dedication to making and Yavanna's love of growth sets up a <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> of creation in which every maker's work has costs to others, and it prefigures the alliance-and-friction between Dwarves and Elves (and the coming assault on trees and land) throughout the Quenta.   </p>
+<h3 id="quenta-silmarillion-chapter-3-of-the-coming-of-the-elves-and-the-captivity-of-melkor">Quenta Silmarillion: Chapter 3: Of the Coming of the Elves and the Captivity of Melkor</h3>
+<p>Summary: While Melkor builds Angband in the north under Sauron's command, the Valar, troubled by tidings from Middle-earth, prepare for the coming of the Firstborn. Varda makes new stars against their awakening. The Elves awake at Cuivi?nen, the Water of Awakening, and name themselves Quendi; Orom? finds them by chance. Melkor, already aware of them, has waylaid and enslaved many stray Elves and bred the race of the Orcs in cruel mockery of them. The Valar assault Utumno, bind Melkor with the chain Angainor, and imprison him in Mandos for three ages. Some Elves refuse the summons west and become the Avari; the rest, the Eldar, divide into Vanyar, Noldor, and Teleri and begin the long westward march, some (like the Nandor) turning aside. <br />
+Source anchors: Cuivi?nen; Quendi; Orcs; Orom?; Angband; Angainor; Mandos; Eldar; Avari; Vanyar; Noldor; Teleri; Nandor.   </p>
+<p>Analysis: This chapter introduces the origin of the Orcs as Melkor's corrupted, enslaved Elves — a founding act of <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> and of hatred born of mockery, making the Enemy's armies the ruins of a kindred. The sundering of the Elves into kindreds is the root of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> in the legendarium, since language, light, and allegiance divide the Firstborn. The choice of the Avari to stay with starlight rather than the Trees, and the summons of the Valar that "from this summons came many woes," frames the whole subsequent history as the consequence of a well-intentioned governance decision — a theme of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> where the Valar's protective impulse becomes a source of exile and tragedy.   </p>
+<h3 id="quenta-silmarillion-chapter-4-of-thingol-and-melian">Quenta Silmarillion: Chapter 4: Of Thingol and Melian</h3>
+<p>Summary: Melian, a Maia who served V?na and Est? in the gardens of L?rien, comes to Middle-earth. Elw?, lord of the Teleri, seeking his friend Finw? in the starlit wood of Nan Elmoth, is enchanted by the nightingales of Melian and falls in love with her; they stand spellbound together while long years pass. Because Elw? is lost, his people search for him, Olw? takes the kingship of the Teleri and departs west, and Elw?'s abandoned following become the Eglath, the Forsaken. Elw? (now Thingol, King Greymantle) and Melian rule the Grey-elves, the Sindar, with their hidden halls at Menegroth in Doriath; of their love comes L?thien, the fairest of the Children of Il?vatar. <br />
+Source anchors: Melian; Elw?; Thingol; Nan Elmoth; Olw?; Eglath; Sindar; Menegroth; Doriath; L?thien.   </p>
+<p>Analysis: Melian's incarnation as Thingol's queen makes the divine immanent in a mortal lineage, so that Doriath becomes a realm protected by Maia-power and pointed toward the coming of L?thien. The chapter dramatizes how a single choice of love sunders a people and redirects history — Elw?'s enchantment strands the Teleri and founds the Sindar — which is a recurring pattern of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> since these loss-branching genealogies are precisely what the book preserves. Thingol's hybrid status (a king who saw the Trees yet stays in Middle-earth) makes him a hinge figure for <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>, a Moriquendi ruler elevated by light and Maia-blessing.   </p>
+<h3 id="quenta-silmarillion-chapter-5-of-eldamar-and-the-princes-of-the-eldali">Quenta Silmarillion: Chapter 5: Of Eldamar and the Princes of the Eldali?</h3>
+<p>Summary: The chapter details how Ulmo brings the Vanyar and Noldor to Aman, with the torn-off eastern horn of the transported island becoming the Isle of Balar. The Teleri, delayed, remain in Beleriand under Olw?, learning sea-lore from Oss? and Uinen; some, like the Falathrim under C?rdan, stay behind. The friends of Elw? become the Eglath. In Valinor the Eldar build Tirion upon T?na in the Calacirya, and the White Tree Galathilion (seedling of Telperion) is planted; the Teleri later come to Alqualond?. The genealogies of the princes are given: Finw?'s sons F?anor, Fingolfin, and Finarfin; the seven sons of F?anor; the sons of Fingolfin (Fingon, Turgon, Aredhel); and the sons of Finarfin (Finrod, Orodreth, Angrod, Aegnor, and Galadriel). <br />
+Source anchors: Eldamar; Tirion; T?na; Calacirya; Tol Eress?a; Alqualond?; Finw?; F?anor; Fingolfin; Finarfin; Galadriel; C?rdan.   </p>
+<p>Analysis: This chapter maps the political and family geography that structures the whole Quenta, making <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> concrete: the names, kinship, and inherited qualities of the Noldorin princes determine the alliances and rivalries (especially within the house of Finw?) that drive the tragedy. The making of the White Tree and its seedlings (Galathilion, Celeborn, later Nimloth) installs the image of a propagated, preserved heritage that recurs as a hinge of legitimacy into the N?menor and Third Age material. The sundering of the Elves in Aman (Vanyar, Noldor, Teleri; Calaquendi and Moriquendi) remains the deep structure of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>.   </p>
+<h3 id="quenta-silmarillion-chapter-6-of-f-anor-and-the-unchaining-of-melkor">Quenta Silmarillion: Chapter 6: Of F?anor and the Unchaining of Melkor</h3>
+<p>Summary: The chapter recounts F?anor's birth (son of Finw? and M?riel, who was consumed in bearing him and went to the halls of Mandos) and his matchless skill, including his devising of the letters that bear his name and his first great gems. Finw? remarries Indis and fathers Fingolfin and Finarfin, deepening a rift with F?anor. When Melkor completes his three ages of bondage, he sues for pardon, is released and given freedom in Valinor, and dissembles his malice — hated by Vanyar and Teleri but listened to by the knowledge-hungry Noldor. F?anor, who first names Melkor "Morgoth," holds no converse with him. <br />
+Source anchors: F?anor; M?riel; Finw?; Indis; Fingolfin; letters; Melkor unchained; Noldor; Morgoth.   </p>
+<p>Analysis: The chapter is the hinge on which the pristine Noontide of Valinor turns toward ruin, and it locates that turn in a family quarrel within the legitimate ruling house — a study in <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> and elite psychology. Melkor's release and feigned reform show governance struggling with a failure it cannot comprehend, since Manw? "was free from evil and could not comprehend it"; this is a limit-case of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>. F?anor's restless craft and the Noldor's hunger for hidden knowledge set up the susceptibility to Melkor's lies explored next, making curiosity and pride the entry points for the corruption of a gifted polity.   </p>
+<h3 id="quenta-silmarillion-chapter-7-of-the-silmarils-and-the-unrest-of-the-noldor">Quenta Silmarillion: Chapter 7: Of the Silmarils and the Unrest of the Noldor</h3>
+<p>Summary: F?anor makes the three Silmarils, jewels containing the blended light of the Two Trees, hallowed by Varda so that no evil or unclean hand may touch them. Melkor lusts for them and sows lies among the Noldor — that the Valar are jealous captors who will let Men supplant them, and that Fingolfin plots to usurp F?anor. The Noldor begin making weapons, and F?anor openly defies the Valar and calls for departure. Summoned before Mandos, F?anor is banned from Tirion for twelve years; Melkor visits him at Formenos and is rebuked. When Melkor flees Valinor, a doubt hangs over the realm. <br />
+Source anchors: Silmarils; F?anor; Melkor's lies; Noldor unrest; Formenos; Mandos; Valar; Valinor.   </p>
+<p>Analysis: The Silmarils are the narrative's central cursed objects, and Melkor's lies reveal how <a href="//02%20Concepts/Information%2C%20Legibility%2C%20and%20Coordination.html">Information, Legibility, and Coordination</a> can be weaponized: a rival secretly feeding credibility-distorting narrative to a proud elite poisons trust from within, a theme of institutional self-deception as much as of plot. F?anor's possessiveness — "he seldom remembered now that the light within them was not his own" — makes the jewels a <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> node where legitimate shared light is privatized and fought over. The deepening rift in Finw?'s house, orchestrated by Melkor, shows how internal legitimacy failures make a polity recruitable by an external enemy, setting the stage for the Oath.   </p>
+<h3 id="quenta-silmarillion-chapter-8-of-the-darkening-of-valinor">Quenta Silmarillion: Chapter 8: Of the Darkening of Valinor</h3>
+<p>Summary: Melkor, evading pursuit, allies with Ungoliant in the dark region of Avathar, a spider-spirit that devours light. During a festival when the Valar and Elves are gathered on Taniquetil (and F?anor and Fingolfin are formally reconciled in word), Melkor and Ungoliant descend on Ezellohar, wound the Two Trees to their core, drain them of their light and the Wells of Varda, and flee north, leaving Valinor in darkness and wailing. Only the mingled light preserved in the Silmarils now remains of the Trees. <br />
+Source anchors: Ungoliant; Avathar; Ezellohar; Telperion; Laurelin; Darkening of Valinor; Wells of Varda; flight of Melkor.   </p>
+<p>Analysis: The destruction of the Trees is the First Age's founding catastrophe, converting the Elves' homeland from a place of imperishable light into a mourning realm. It is an act of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> inflicted at the very heart of the legitimate order, showing that the Enemy can collapse even the centre, not merely the frontier. The survival of light only in the Silmarils makes F?anor's jewels the contested locus of all remaining legitimacy, so that the preservation of a precious thing becomes inseparable from possessive conflict — a core statement of the book's entire problem, and of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> where what survives the ruin becomes the next war's prize.   </p>
+<h3 id="quenta-silmarillion-chapter-9-of-the-flight-of-the-noldor">Quenta Silmarillion: Chapter 9: Of the Flight of the Noldor</h3>
+<p>Summary: In the darkness, Yavanna asks for a little of the Silmarils' light to heal the Trees, but F?anor refuses, fearing the Valar would possess his work. News comes that Melkor has slain Finw? at Formenos and stolen the Silmarils; F?anor curses Melkor and names him Morgoth, then stirs the Noldor to flee Valinor, swearing a terrible oath with his seven sons to pursue any who hold a Silmaril. The Noldor break with the Valar despite Mandos' warnings. At Alqualond?, the Teleri refuse to lend their ships, and the Noldor commit the Kinslaying; the Doom of the Noldor (the Prophecy/curse of Mandos) is pronounced as they march north. F?anor burns the Teleri ships at Losgar, abandoning Fingolfin, who crosses the Grinding Ice of Helcarax?. <br />
+Source anchors: Oath of F?anor; Kinslaying at Alqualond?; Doom of the Noldor; Prophecy of the North; Losgar; Helcarax?; death of Finw?.   </p>
+<p>Analysis: This chapter is the book's central moral pivot. The Oath and the Kinslaying convert a quarrel over hallowed light into systemic fratricide, and the Doom of Mandos makes the Noldor's chosen exile a self-fulfilling curse — a striking case of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> in which binding vows drive the conflict they are meant to settle. The burning of the ships and the abandonment of Fingolfin institutionalize treachery-by-trust, so that <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> (who rightfully leads and inherits) is poisoned from the start. The Doom's claim that "their Oath shall drive them, and yet betray them" frames the whole First Age as the working-out of a self-imposed, unbreakable commitment against <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>.   </p>
+<h3 id="quenta-silmarillion-chapter-10-of-the-sindar">Quenta Silmarillion: Chapter 10: Of the Sindar</h3>
+<p>Summary: The chapter returns to Beleriand to describe Thingol and Melian's growing realm. L?thien is born in Neldoreth, and Dwarves (Naugrim) come over the Blue Mountains from Belegost and Nogrod, helping build Menegroth, the Thousand Caves. Denethor of the Nandor leads his people into Ossiriand and is later slain by Orcs on Amon Ereb, becoming the Green-elves (Laiquendi). As evil returns, Thingol arms the Sindar with Dwarven smithcraft, wins the first battle of the Wars of Beleriand, and Melian sets the Girdle that fences Doriath, the guarded kingdom. <br />
+Source anchors: Sindar; Thingol; L?thien; Dwarves; Belegost; Nogrod; Menegroth; Denethor; Laiquendi; Girdle of Melian; Doriath.   </p>
+<p>Analysis: This chapter establishes the alternative civic order of Beleriand against which the returning Noldor will sit in tension: a guarded, light-touched realm sustained by a Maia's power and Dwarven craft. The Girdle of Melian is the paradigm example of a hidden realm defended by secrecy and enchantment, which the book will test repeatedly; its inviolability is a form of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> that preserves peace only while its protector lives. The 140-league proximity of Menegroth to Angband's gates, "far and yet all too near," frames the guarded realm as a fragile refuge within a hostile polity — a study of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> at the level of a single realm.   </p>
+<h3 id="quenta-silmarillion-chapter-11-of-the-sun-and-moon-and-the-hiding-of-valinor">Quenta Silmarillion: Chapter 11: Of the Sun and Moon and the Hiding of Valinor</h3>
+<p>Summary: The Valar, using the last flower and fruit of the Trees, make the Moon (Isil, guided by Tilion) and the Sun (Anar, guided by Arien), which rise into the heavens as new lights. Morgoth is dismayed and hides in Angband. The Valar also strengthen the Pel?ri and set the Enchanted Isles to bar the way west, hiding Valinor — the Hiding of Valinor — so that, as Mandos foretold, the Blessed Realm is shut against the Noldor, and no messenger reaches it save one later. <br />
+Source anchors: Isil; Anar; Arien; Tilion; Sun and Moon; Hiding of Valinor; Pel?ri; Enchanted Isles.   </p>
+<p>Analysis: The chapter converts the death of the Trees into a new astronomical order, making light itself a product of sacrifice and governance — the Sun as "a sign for the awakening of Men and the waning of the Elves." The Hiding of Valinor turns legitimacy, once open, into a closed and gated order, barring the very exiles it might have reclaimed; this is a shift in <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> from accessible blessing to fenced authority. It also emphasizes that even the divine order's protective measures (fortifying Valinor, blocking the West) deepen rather than heal the breach, a theme of how well-intentioned control of information and access perpetuates collapse.   </p>
+<h3 id="quenta-silmarillion-chapter-12-of-men">Quenta Silmarillion: Chapter 12: Of Men</h3>
+<p>Summary: The chapter marks the awakening of Men at Hild?rien with the first rising of the Sun, and reflects on their nature: mortal, frail, easily swayed and afraid of the Valar, whom no emissary came to guide them; Ulmo alone takes thought for them. It notes that none have returned from the dead save Beren, whose hand touched a Silmaril, and that Elves and Men were at first allies, with the offspring of Elf and mortal (E?rendil, Elwing, Elrond) sharing both fates. <br />
+Source anchors: Men; Hild?rien; Atani; Edain; mortality; Ulmo; Elves and Men; E?rendil.   </p>
+<p>Analysis: This chapter is the doctrinal heart of the legendarium's anthropology, defining <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> around the Elves/Men distinction: Men are the "Usurpers," the "Children of the Sun," mortal and free beyond the Music, which the Eldar both admire and fear (the Elves even "resemble Melkor most of all the Ainur" in the will they attribute to Men). The death of Men — "the gift of Il?vatar," which "as Time wears even the Powers shall envy" — sets up the N?menor tragedy and the envy that Sauron will exploit. The note that only Beren returned from death, by the power of a Silmaril, prefigures the mingled-kindred line central to the book's resolution.   </p>
+<h3 id="quenta-silmarillion-chapter-13-of-the-return-of-the-noldor">Quenta Silmarillion: Chapter 13: Of the Return of the Noldor</h3>
+<p>Summary: F?anor and his sons land in Drengist; he is slain at the Battle-under-Stars (Dagor-nuin-Giliath) by Gothmog and the Balrogs, his body burning to ash. Maedhros is taken and hanged by the wrist on Thangorodrim; Fingolfin crosses the Ice and the Sun rises; Fingon rescues Maedhros by cutting off his hand, healing the feud, and Maedhros renounces the kingship to Fingolfin. The Noldor besiege Angband, found the Siege, deal wanderers, hold Mereth Aderthad (the Feast of Reuniting), and establish realms: Finrod builds Nargothrond, Turgon (guided by Ulmo's dreams) begins seeking the hidden vale of Tumladen. The chapter ends with Dagor Aglareb, the Glorious Battle, and the four-hundred-year Siege of Angband, punctuated by the coming of Glaurung the first dragon. <br />
+Source anchors: Dagor-nuin-Giliath; death of F?anor; Maedhros; Fingon; rescue; Siege of Angband; Nargothrond; Gondolin; Dagor Aglareb; Glaurung; Mereth Aderthad.   </p>
+<p>Analysis: The return of the Noldor converts exile into a bounded, fortified polity, but the Doom under which they labor leaves the "long peace" precarious. The rescue of Maedhros is a moment of reconciliation that partially heals the Kinslaying's legacy, yet the renunciation of kingship and Maedhros's enduring oath-claim keep <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> unresolved within Finw?'s house. The founding of Nargothrond and the planning of Gondolin begin the pattern of hidden realms built against the Enemy, and the Siege of Angband is the central strategic condition of the First Age — a defensive equilibrium analyzed under <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>, fragile because it depends on unity and vigilance against internal dissension and the Enemy's patient subversion.   </p>
+<h3 id="quenta-silmarillion-chapter-14-of-beleriand-and-its-realms">Quenta Silmarillion: Chapter 14: Of Beleriand and Its Realms</h3>
+<p>Summary: The chapter is a geographical and political survey of Beleriand under the Siege, mapping the lands (Hithlum, Nevrast, Dorthonion, the realms along Sirion and Gelion, Doriath, Ossiriand, the Falas) and how the Noldorin lords and the Sindar hold them against Angband. <br />
+Source anchors: Beleriand; Hithlum; Nevrast; Dorthonion; Sirion; Gelion; Doriath; Ossiriand; Falas; Siege of Angband.   </p>
+<p>Analysis: This chapter shows legitimacy and order as spatial: the book maps which lords hold which marches, and the boundary-work of the Siege is a form of <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> that distributes power across a frontier against a single concentrated enemy. The cartography of hidden realms and watch-passes underlines how <a href="//02%20Concepts/Empire%2C%20Frontier%2C%20and%20Periphery.html">Empire, Frontier, and Periphery</a> operate at the level of a defended heartland versus an unquiet border, and how the valleys and passes function as chokepoints. The rhythm of mapped borders and named guardians gives the reader the political settlement whose failure the subsequent battles will destroy — a study in the spatial load-bearing of legitimacy.   </p>
+<h3 id="quenta-silmarillion-chapter-15-of-the-noldor-in-beleriand">Quenta Silmarillion: Chapter 15: Of the Noldor in Beleriand</h3>
+<p>Summary: The chapter tells how Turgon, guided by Ulmo's earlier counsel, secretly builds Gondolin in the hidden vale of Tumladen behind the Encircling Mountains, gathering a third of Fingolfin's Noldor and many Sindar, and shuts himself and his people inside; Ulmo warns him against loving his handiwork too well and foretells a hidden escape-route and messenger. Meanwhile the truth of the Kinslaying and the Doom gradually reaches Thingol through Melian and Galadriel, and Thingol in anger forbids his realm to speak the Noldorin tongue. Finrod tells Galadriel that he, too, must swear an oath and go into darkness. <br />
+Source anchors: Gondolin; Tumladen; Turgon; Ulmo; Vinyamar; Galadriel; Melian; Thingol; ban on Quenya; Finrod.   </p>
+<p>Analysis: The building of Gondolin is the purest expression of the hidden-realm ideal — secrecy, beauty, and self-contained fertility — but Ulmo's warning ("love not too well the work of thy hands") frames that ideal as a vulnerability, one that Turgon's pride later makes fatal; this is <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> and its risks at civic scale. Thingol's ban on the Noldorin tongue turns language into an ideological weapon, a clear link to <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> and <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>, where the enforced identity-cost of the Kinslaying now fractures the alliance against Morgoth. Finrod's foreseen oath ties the next generation of the house of Finarfin into the same binding-commitment logic as the Oath of F?anor.   </p>
+<h3 id="quenta-silmarillion-chapter-16-of-maeglin">Quenta Silmarillion: Chapter 16: Of Maeglin</h3>
+<p>Summary: Aredhel, weary of guarded Gondolin, leaves against Turgon's counsel, is drawn into Nan Elmoth where E?l the Dark Elf takes her to wife, and bears a son, Maeglin. Maeglin grows in the shadow, learns craft from the Dwarves, and longs for Gondolin; mother and son flee, E?l pursues, and in Gondolin E?l is given the choice to abide or die, casts a javelin that kills Aredhel, and is thrown from the Caragd?r. Maeglin, now high in Turgon's favour, secretly lusts for Idril his cousin, and the chapter closes noting a dark seed of evil sown in Gondolin's bliss. <br />
+Source anchors: Aredhel; E?l; Maeglin; Nan Elmoth; Galvorn; Gondolin; Idril; Caragd?r.   </p>
+<p>Analysis: Maeglin's story plants a treason inside the hidden realm, showing that even the most secret and beautiful of refuges carries the seed of its own betrayal. The chapter is a study of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> and of illegitimate desire: Maeglin's love for his kin, rooted in the shadow of the Kinslaying, becomes the lever Morgoth will later use. Idril's instinctive distrust and the doomed E?l framing the whole episode make Gondolin's fate a demonstration that secrecy cannot be secured from within, a point about <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and internal vulnerabilities that the Guarded Realm's walls cannot screen.   </p>
+<h3 id="quenta-silmarillion-chapter-17-of-the-coming-of-men-into-the-west">Quenta Silmarillion: Chapter 17: Of the Coming of Men into the West</h3>
+<p>Summary: Finrod Felagund, hunting east of Sirion, discovers B?or's people, the first Men in Beleriand, and befriends them. Other houses follow: the Haladin (later led by the woman Haleth through the perilous land into Brethil) and the people of Marach (later of Hador). Morgoth's emissary Amlach appears amid discord sowing doubt among Men. The Elf-kings settle the Edain in separate regions — B?or's house in Dorthonion, Hador's in Dor-l?min — and note that these Men both aid the Eldar and are caught in the Doom of the Noldor; the genealogies of Hador and B?or (leading to T?rin, Tuor, and Beren) are given. <br />
+Source anchors: Finrod Felagund; B?or; Haleth; Marach; Hador; Edain; Estolad; Three Houses; Dor-l?min; Dorthonion.   </p>
+<p>Analysis: This chapter integrates Men into the First Age polity and gives the hero-lines that anchor the later "mortal" stories. Morgoth's failed attempt to estrange Elves and Men through a disguised liar's speech is a concrete case of disinformation as an instrument of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> — weakening the coalition by manufacturing doubt about the reliability of allies and the existence of the threat. The settling of the Three Houses, each bound by friendship and by the shadow of the Doom, creates the <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> of alliance in which mortal valor is both crucial and doomed; Haleth's proud, independent migration is a model of non-state resilience against the grain of the Elf-kings' borders.   </p>
+<h3 id="quenta-silmarillion-chapter-18-of-the-ruin-of-beleriand-and-the-fall-of-fingolfin">Quenta Silmarillion: Chapter 18: Of the Ruin of Beleriand and the Fall of Fingolfin</h3>
+<p>Summary: When Morgoth (weak for a time) reassembles, he breaks the Siege in the Dagor Bragollach, the Battle of Sudden Flame, pouring fire from Thangorodrim and overwhelming Ard-galen (renamed Anfauglith). Angrod, Aegnor, and many of the Edain fall; Barahir rescues Felagund and receives his ring. Fingolfin, despairing, rides alone to Angband, challenges Morgoth to single combat, wounds him seven times with Ringil, but is slain; Thorondor rescues his body. Sauron takes Tol Sirion (renamed Tol-in-Gaurhoth), the Swarthy/Easterling Men enter and ally with Maedhros, and H?rin and Huor are borne by eagles to Gondolin and sworn to secrecy. <br />
+Source anchors: Dagor Bragollach; Anfauglith; Ring of Barahir; fall of Fingolfin; Ringil; Thorondor; Sauron; Tol-in-Gaurhoth; H?rin; Huor; Gondolin.   </p>
+<p>Analysis: The chapter is the First Age's descent from the Siege into open crisis. Fingolfin's single combat is the emblem of defiant but doomed legitimacy — the rightful king who, when the polity's defenses fail, invests everything in a personal challenge against a power no mortal polity can match; it is a stark study of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> in which military defeat is met with an act of desperate honor that reframes rather than reverses the loss. Sauron's capture of the watch-pass and the arrival of the Easterlings deepen the threat from the periphery, and the fall of Fingolfin institutionalizes both grief and, in the foundering defense of the hidden realms, the motive for the secrecy and flight that structure the final chapters.   </p>
+<h3 id="quenta-silmarillion-chapter-19-of-beren-and-l-thien">Quenta Silmarillion: Chapter 19: Of Beren and L?thien</h3>
+<p>Summary: This long chapter tells how Gorlim's betrayal by Sauron's phantom destroys Barahir's outlaws; Beren alone survives, mourns his father, and enters Doriath where he meets and falls in love with L?thien. Thingol, to be rid of him, sets the impossible bride-price: a Silmaril from Morgoth's crown. Beren, aided by the loyalty and song of L?thien and the hound Huan, reaches Angband (with the doomed help of Finrod Felagund and his companions, who die in Sauron's dungeons after a contest of songs). In Morgoth's hall L?thien enchants the court, Beren cuts a Silmaril, but Carcharoth the wolf bites off his hand and the Silmaril; in the pursuit the wolf is slain by Huan (who dies), the Silmaril recovered, and Beren dies. L?thien's song moves Mandos to grant her and Beren a second mortal life together, joined in death; she chooses mortality, and their line continues. <br />
+Source anchors: Beren; L?thien; Thingol; Silmaril; Finrod Felagund; Luthien's song before Mandos; Huan; Carcharoth; Angband; Tol-in-Gaurhoth; Lay of Leithian.   </p>
+<p>Analysis: The Silmaril quest is the book's greatest single drama, and it reframes the meaning of the jewel: won by love and self-sacrifice rather than by oath-driven conquest, the recovered Silmaril becomes a moral object opposed to the Feanorian claim. Thingol's bride-price shows how pride and possessiveness draw a guarded realm into the "fate of a mightier realm," a <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> where the price of a daughter is set against the cost of a hallowed jewel. L?thien's choice of mortality to join Beren consecrates the union of the Two Kindreds against the death-fear that corrupts N?menor, making this the positive pole of the book's treatment of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> and the gift of death.   </p>
+<h3 id="quenta-silmarillion-chapter-20-of-the-fifth-battle-nirnaeth-arnoediad">Quenta Silmarillion: Chapter 20: Of the Fifth Battle: Nirnaeth Arnoediad</h3>
+<p>Summary: Beren and L?thien depart to Tol Galen and bear Dior. Maedhros organizes the Union of Maedhros to attack Morgoth, but the Oath and past deeds withhold Doriath and Nargothrond from full aid. At the Nirnaeth Arnoediad (the Battle of Unnumbered Tears), Fingon is tricked by Uldor the Easterling's treachery and the ally's late arrival; Glaurung and the dragons and Balrogs break the hosts, and the Easterlings of the house of Ulfang betray Maedhros. Fingon is slain by Gothmog; H?rin and Huor hold the rearguard to allow Turgon's escape, and both die; H?rin is taken and, defying Morgoth, is bound upon Thangorodrim under a curse. The Havens of the Falas fall, and Gil-galad escapes to the Isle of Balar. <br />
+Source anchors: Nirnaeth Arnoediad; Union of Maedhros; Fingon; Gothmog; H?rin; Huor; Uldor; betrayal; Turgon; Gil-galad; Balar; Haudh-en-Ndengin.   </p>
+<p>Analysis: The Nirnaeth is the pivot from the Eldar's partial strength to their long defeat, and the book presents it as a failure of coordination as much as of force: the strategic union is broken by the Oath-driven withholding of allies and by the treachery of Men. This is a direct instance of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> failing — false intelligence (Uldor's warnings) and distrust between hosts allowing the enemy to divide and conquer. The death of Fingon and the desperate rearguard of H?rin and Huor convert military defeat into moral heroism, while Morgoth's curse upon the house of Hador turns the war's climax into an intimate family doom, linking strategic <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> to the personal tragedies that follow.   </p>
+<h3 id="quenta-silmarillion-chapter-21-of-t-rin-turambar">Quenta Silmarillion: Chapter 21: Of T?rin Turambar</h3>
+<p>Summary: This longest chapter tells the full "Tale of Grief," the curse of Morgoth upon H?rin's children. T?rin, sent from Dor-l?min to Doriath, grows as Thingol's foster-son but kills Saeros and becomes an outlaw; with Beleg, then with the help of M?m the Petty-Dwarf, he wars in the wild, is captured by Orcs, and in a dark mistake kills Beleg. He goes to Nargothrond (unnamed, "Agarwaen"), becomes the Black Sword, but his open-war policy and the great bridge he insists on building lead to the sack of Nargothrond by Glaurung, who holds T?rin with his eyes, drives off Finduilas (who is slain), and sends T?rin to Dor-l?min where he learns Morwen and Nienor are gone. Nienor, ensorcelled with forgetfulness and named N?niel, unknowingly marries her brother T?rin (now "Turambar") in Brethil. T?rin slays Glaurung the dragon, but its death-speech reveals the truth: Nienor was his sister, and she casts herself into the river; T?rin, discovering his doom, slays Brandir and himself falls on his sword Gurthang. <br />
+Source anchors: T?rin Turambar; Beleg C?thalion; Glaurung; Nargothrond; Finduilas; Nienor; M?m; Gurthang; curse of Morgoth; Narn i H?n H?rin.   </p>
+<p>Analysis: T?rin is the fullest study of the individual entangled in a doom he cannot escape, and the chapter relentlessly shows how secrecy, pride, and mistaken identity compound into catastrophe. Every self-chosen new name (Neithan, Gorthol, Agarwaen, Turambar, "Master of Doom") is an attempt to master fate by renaming, and each fails — a sharp link to <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> and to <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> where the dragon's lies and false geographies (the reports that drive T?rin to misidentify kin) weaponize information. The intimate horror — an unwitting incestuous marriage arranged by concealment and dragon-spell — makes this the book's most concentrated argument that domination works through the corruption of knowledge, identity, and trust as much as through force.   </p>
+<h3 id="quenta-silmarillion-chapter-22-of-the-ruin-of-doriath">Quenta Silmarillion: Chapter 22: Of the Ruin of Doriath</h3>
+<p>Summary: Given a false freedom, H?rin is used by Morgoth as an unwitting instrument: he cries out Turgon's name near Gondolin (revealing its region) and, at the stone of Cabed Naeramarth, finds and buries the dying Morwen, then brings the Nauglam?r (the Dwarven Necklace) from Nargothrond to Thingol. Enchanted by the Silmaril, Thingol has the Dwarves reset it with the jewel; when they demand it, he scorns them and is slain by them in Menegroth. Melian's Girdle falls with his death. The Dwarves of Nogrod sack Menegroth and take the Necklace, but Beren and Dior ambush them at Sarn Athrad, recover it, and drown the hoard; Beren and L?thien die, and Dior, wearing the Nauglam?r, rules Doriath until the sons of F?anor, their Oath reawakened, assault it in winter, slay Dior, Nimloth, and Celegorm/Curufin/Caranthir in the second kinslaying, and leave his sons to starve. Elwing escapes with the Silmaril to the Havens of Sirion. <br />
+Source anchors: H?rin; Nauglam?r; Thingol; death of Thingol; Dwarves of Nogrod; sack of Doriath; Beren and L?thien; Dior; sons of F?anor; second kinslaying; Elwing.   </p>
+<p>Analysis: The ruin of Doriath shows the cursed Silmaril converting a once-blessed, Girdled realm into a site of greed and kinslaying; Thingol's possessiveness of the jewel draws the Dwarves' envy and the Feanorian Oath down upon what Melian had protected. The chapter is a dry account of how sacred objects corrupt the legitimate order from within — the king's own greed, not the Enemy's frontal assault, destroys Doriath — and it presents the "second slaying of Elf by Elf" as the Oath's inexorable working. H?rin's tragic emergence from the curse, used by Morgoth to reveal Gondolin and haunt the survivors, shows the defeated mortal as an unwitting vector of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and collapse.   </p>
+<h3 id="quenta-silmarillion-chapter-23-of-tuor-and-the-fall-of-gondolin">Quenta Silmarillion: Chapter 23: Of Tuor and the Fall of Gondolin</h3>
+<p>Summary: Tuor, son of Huor, is fostered by Grey-elves, enslaved by Easterlings, and escapes to Nevrast, where Ulmo arrays him in the arms Turgon left at Vinyamar and bids him find Gondolin. With Voronw?, Tuor enters the hidden city, warns Turgon to abandon it and go to the sea (as Ulmo counsels), but Turgon refuses, and the entrance is sealed. Tuor marries Idril, and E?rendil is born. Maeglin, captured by Orcs, betrays Gondolin's location to Morgoth, who assaults the city at the festival of the Gates of Summer; Ecthelion and Glorfindel die fighting Balrogs, Turgon falls in the ruin, Maeglin is cast from the walls, and Tuor and Idril lead the remnant out by Idril's secret way. Glorfindel dies defending the Eagles' Cleft; the survivors reach the Havens of Sirion, and Tuor and Idril eventually sail west in E?rr?m?, while Gil-galad becomes High King. <br />
+Source anchors: Tuor; Ulmo; Gondolin; Turgon; Idril; Maeglin's treason; fall of Gondolin; Ecthelion; Glorfindel; E?rendil; Sirion; Gil-galad.   </p>
+<p>Analysis: The fall of Gondolin completes the trilogy of hidden realms (after Nargothrond and Doriath), and its destruction vindicates Ulmo's warning against loving one's handiwork and trusting in secrecy: the city falls not to frontal assault alone but to a traitor within who was bought by desire and threat. The chapter is a study of <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> and civic pride turning into vulnerability, and of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> failing against internal betrayal. The escape of the remnant under Tuor and Idril, carrying E?rendil, is the book's clearest example of resilience through portable inheritance and remnant survival, feeding the line that will plead for the Two Kindreds before the Valar.   </p>
+<h3 id="quenta-silmarillion-chapter-24-of-the-voyage-of-e-rendil-and-the-war-of-wrath">Quenta Silmarillion: Chapter 24: Of the Voyage of E?rendil and the War of Wrath</h3>
+<p>Summary: E?rendil marries Elwing at the Havens of Sirion and builds Vingilot with C?rdan, seeking Tuor and Idril and hoping to reach Valinor. The sons of F?anor, their Oath reawakened, assault the Havens in the third and cruellest kinslaying; Elwing casts herself into the sea with the Silmaril and is borne up by Ulmo; E?rendil, with Elwing, reaches Valinor and pleads for the Two Kindreds before the Valar. Manw? grants him and his descendants the choice of kindred (Elrond the Eldar, Elros Men). The Valar send the host of the West in the War of Wrath; E?rendil slays Ancalagon the Black, Morgoth is overthrown and thrust through the Door of Night, and the Silmarils are recovered. Maedhros and Maglor, unwilling to surrender them, steal them but are burned by their touch; Maedhros casts himself into a chasm and Maglor into the sea, so the three Silmarils rest in air, earth, and water. The Eldar depart west. <br />
+Source anchors: E?rendil; Elwing; Vingilot; third kinslaying; Silmaril; plea before the Valar; Manw?; Elrond; Elros; War of Wrath; Ancalagon; Morgoth's fall; Door of Night; Maedhros; Maglor.   </p>
+<p>Analysis: E?rendil's voyage transforms the Silmaril from a cursed object of possessiveness into a holy star pleading for mercy, and the Valar's response ends the First Age. The fate of the three Silmarils — air, fire, water — dissolves the Feanorian claim into the elements of the world, a resolution to the <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> of the Oath that the sons cannot inherit because their right to the jewels "had become void." The dual blood of E?rendil and Elwing (Elves and Men, with Maia ancestry through L?thien) is the book's culminating statement of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>, uniting the Two Kindreds and producing the lines of both Elrond and the N?men?rean kings, so that the First Age's end is also the seed of all that follows.   </p>
+<h3 id="akallab-th-the-downfall-of-n-menor">Akallab?th: The Downfall of N?menor</h3>
+<p>Summary: The Valar reward the faithful Edain with the island-gift of N?menor (Elenna, Westernesse), raised from the sea and enriched by Aul? and Yavanna, where the D?nedain, led by Elros, grow mighty in ships, lore, long life, and kingly rule. Forbidden to sail west, they nonetheless become great mariners and, over time, tribute-taking lords and masters of Middle-earth. Fear of death and envy of the Undying Lands grow; the kings harden against the Valar. When Sauron (who has fortified Mordor) challenges N?menor, Ar-Pharaz?n the Golden humbles him and takes him captive to N?menor, where Sauron corrupts him, builds worship of Melkor, cuts down the White Tree (though Isildur saves a fruit), and drives the king to assault Aman. Il?vatar changes the shape of the world, opens a chasm, and drowns N?menor; the faithful, led by Elendil and his sons, escape on nine ships to found Arnor and Gondor, while Sauron's spirit flees and the world is made round, opening the Straight Road for the Eldar. <br />
+Source anchors: N?menor; Elenna; D?nedain; Elros; Ban of the Valar; Ar-Pharaz?n; Sauron; worship of Melkor; White Tree Nimloth; Isildur; Downfall; Elendil; An?rion; Straight Road.   </p>
+<p>Analysis: The Akallab?th is the legendarium's fullest meditation on <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> and on civilizational rise-and-fall: a gifted, ordered polity tips from benevolent seamanship to tribute, slavery, and tyranny as the fear of death displaces the gift of life. Sauron cannot defeat Ar-Pharaz?n by force, so he converts the king's envy of immortality into a new <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — the cult of Melkor the "Giver of Freedom" — showing religion as the instrument through which domination recruits legitimacy. Isildur's saving of the White Tree's fruit and Elendil's nine ships are the engine of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: the Downfall destroys the realm but implants its seed in the exiles who found Gondor and Arnor, carrying legitimacy, lore, and the line of Elros into the Third Age.   </p>
+<h3 id="of-the-rings-of-power-and-the-third-age">Of the Rings of Power and the Third Age</h3>
+<p>Summary: This closing work recounts Sauron's return to Middle-earth after the War of Wrath, his fair-seeming among the Elves (as Annatar, Lord of Gifts) at Eregion, the making of the Rings of Power under his guidance, and his secret forging of the One Ring to rule them, with which he perceives and governs the wearers of the lesser rings. The Elves preserve the Three (Narya, Nenya, Vilya) unsullied by Celebrimbor; Sauron takes the Seven (given to Dwarves, who prove hard to tame) and the Nine (which turn their mortal bearers into the Nazg?l). The Last Alliance of Elendil, Gil-galad, and An?rion defeats Sauron, though all three heroes die; Isildur cuts the Ring from Sauron's hand but refuses to destroy it, and is later slain on the Gladden Fields when the Ring betrays him. N?men?rean exiles found Arnor and Gondor, which slowly wane; Elrond preserves lore at Imladris, and C?rdan the Havens. The Istari (Mithrandir/Gandalf, Curun?r/Saruman, Radagast) come from the West, the White Council forms, and Saruman secretly covets the Ring. The Ring is found by the Periannath (hobbits); Frodo destroys it in the fires of Mount Doom, Sauron falls, the Heir of Isildur (Aragorn) is crowned, and the Three Rings fail as the Elves depart from the Grey Havens. <br />
+Source anchors: Sauron; Celebrimbor; Eregion; Rings of Power; One Ring; Nazg?l; Last Alliance; Isildur; Gladden Fields; Elrond; Imladris; Istari; White Council; Saruman; Mithrandir; Periannath; Mount Doom; Aragorn.   </p>
+<p>Analysis: The section makes explicit that the Ring is the Second and Third Age's heir to the Silmarils and to Morgoth's originating discord: craft and technological promise are again susceptible to a hidden controlling principle. The One Ring is the clearest instance of <a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a> in the whole vault — a master device that renders the lesser Rings interoperable, concentrating their benefit while surveilling and enslaving their users. The Last Alliance removes Sauron's body but leaves the governing infrastructure intact, and Isildur's refusal to unmake the Ring (framed as "were-gild," a <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> claim) reproduces the possessive logic of F?anor's Oath. The Third Age is thereby the afterlife of First Age wounds, resolved only when a mortal hobbit, not a great power, unmakes the master-device — vindicating Mithrandir's line that "help oft shall come from the hands of the weak when the Wise falter," and closing the legendarium on <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> reasserted through humility rather than strength.   </p>
+<h3 id="reference-apparatus-pronunciation-index-and-appendix">Reference Apparatus: Pronunciation, Index, and Appendix</h3>
+<p>Summary: The closing reference sections include a note on pronunciation (covering consonants such as c, ch, dh, and vowels such as ai, au, and the circumflex), a full index of names, genealogical tables, a table of the Elvish peoples, a table of contents, and an appendix of elements in Quenya and Sindarin names that helps the reader unpack the meaning and lineage of the dense Elvish, Mannish, Dwarvish, and geographic terminology. <br />
+Source anchors: pronunciation; consonants; vowels; index of names; genealogical tables; Elvish peoples; table of contents; appendix; name-elements; Quenya; Sindarin.   </p>
+<p>Analysis: The reference apparatus is itself an argument for <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the pronunciation note makes Quenya and Sindarin a historically textured medium rather than ornament, the index and genealogies let the reader navigate a tradition in which figures such as Elrond, Gil-galad, and C?rdan connect the Elder Days to the Third Age across scattered references, and the name-elements appendix teaches how names carry meaning and lineage. Just as the foreword frames the book as a compiled mythology, the apparatus supports the reader in parsing a compiled history, so that the whole structure — text plus apparatus — models how a civilization preserves, transmits, and anchors its memory.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The five works</strong>: Ainulindal? (creation), Valaquenta (powers), Quenta Silmarillion (First Age), Akallab?th (N?menor), Of the Rings of Power (Second/Third Ages), plus reference apparatus.   </li>
+<li><strong>The Silmarils</strong>: three jewels made by F?anor from the light of the Two Trees; hallowed so that no evil or unclean hand may touch them; the book's central cursed-and-holy objects; their final homes are air, fire, and water.   </li>
+<li><strong>The Oath of F?anor</strong>: sworn by F?anor and his seven sons to pursue any who holds a Silmaril "unto the end of days"; drives three kinslayings (Alqualond?, Doriath, Sirion) and the whole First Age tragedy.   </li>
+<li><strong>The Doom of the Noldor / Prophecy of the North</strong>: Mandos' curse that the Oath "shall drive them, and yet betray them," and that the Noldor "shall be slain... by weapon and by torment and by grief."   </li>
+<li><strong>The hidden realms</strong>: Doriath (Girdle of Melian), Nargothrond (caves of Narog), Gondolin (secret vale of Tumladen); each founded on secrecy and each destroyed.   </li>
+<li><strong>Doom of the Noldor as legitimacy-poison</strong>: the Kinslaying, the burning of the ships at Losgar, and the crossing of the Grinding Ice of Helcarax?.   </li>
+<li><strong>Beren and L?thien</strong>: the quest of the Silmaril; L?thien's song before Mandos; the union that joins Elves and Men and produces Elwing, Elrond, and Elros.   </li>
+<li><strong>T?rin Turambar</strong>: "Master of Doom by doom mastered"; the many failed pseudonyms; Gurthang the black sword; the killing of Beleg, the unwitting marriage to Nienor, and the death of Glaurung.   </li>
+<li><strong>The Paths / "the Straight Road"</strong>: after N?menor's Downfall the world is made round, but the Eldar still travel a Straight Road that leaves the bent world to reach Eress?a and Valinor.   </li>
+<li><strong>E?rendil the Mariner</strong>: his vessel Vingilot becomes the star Gil-Estel; he pleads for the Two Kindreds and keeps watch on the ramparts of the sky.   </li>
+<li><strong>The One Ring as platform</strong>: "as soon as Sauron set the One Ring upon his finger they were aware of him"; the Ring's ability to perceive and govern the wearers of the lesser rings is the vault's clearest platform-governance image.   </li>
+<li><strong>The Last Alliance's unfinished business</strong>: Isildur refuses to cast the Ring into Orodruin, framing it as "were-gild for my father's death," and is slain on the Gladden Fields; Elrond foretells Sauron's return.   </li>
+<li><strong>The closing mechanism</strong>: "help oft shall come from the hands of the weak when the Wise falter"; Frodo, a Perian, unmakes the Ring in the Fire where it was wrought.   </li>
+<li><strong>Refrain of the whole book</strong>: "the fate of Arda Marred" — the First Age ends "from the high and the beautiful to darkness and ruin," yet the Third Age is its healing aftermath.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//04 Series/Middle-earth Legendarium.html">middle-earth legendarium</a></li>
+	<li><a class="backlink" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html">lord of the rings - 03 - the return of the king</a></li>
+	<li><a class="backlink" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html">lord of the rings - 01 - the fellowship of the ring</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/silmarillion/index.html">silmarillion</a></li>
+	<li><a class="backlink" href="//obs.html/tags/middle-earth/index.html">middle-earth</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A16508450173370233003972587694973016182{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D16508450173370233003972587694973016182{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B16508450173370233003972587694973016182{level}" level="{level}" note_temp_id="16508450173370233003972587694973016182" onclick="window.ObsHtmlGraph.run(this, '16508450173370233003972587694973016182', 'the silmarillion');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C16508450173370233003972587694973016182{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

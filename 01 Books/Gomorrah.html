@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="gomorrah">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'gomorrah';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=gomorrah" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="gomorrah">Gomorrah</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>Roberto Saviano's <em>Gomorrah</em> (subtitle: <em>A Personal Journey into the Violent International Empire of Naples' Organized Crime System</em>) sits at the center of the vault's institutions-of-informal-power cluster. Read beside <a href="//01%20Books/Narconomics.html">Narconomics</a> (cartels as firms), <a href="//01%20Books/Harpoon.html">Harpoon</a> (disrupting criminal finance), <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a> (the money-laundering layer of illicit enterprise), and <a href="//01%20Books/Days%20of%20Rage.html">Days of Rage</a> (underground violence as a market), it is the case study that grounds all of them: a parallel state and a multinational company rolled into one, built on textiles, narcotics, cement, rubbish, and violence. The natural reading path is <a href="//03%20Reading%20Paths/Illicit%20Markets%2C%20Contraband%2C%20and%20State%20Capacity.html">Illicit Markets, Contraband, and State Capacity</a>, with the broader graph reached through the MoCs <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a> and <a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a>, and indexed from <a href="//index.html">Book Index</a> alongside the <a href="//00%20Maps%20of%20Content/Linkage%20Atlas.html">Linkage Atlas</a>.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Saviano writes <em>Gomorrah</em> as a reported descent into the commercial world of the Camorra, refusing the usual split between "criminal" and "normal" economies. The port of Naples, the Secondigliano drug markets, Casal di Principe's cement firms, Mondragone's travel agencies, Aberdeen's restaurants, and Campania's waste pits are presented as parts of one logistics network. Goods, bodies, money, weapons, and poisons move faster than police, customs, journalism, or civic memory can track them. The book was Saviano's first; the extract's frontmatter records that he was born in 1979, studied philosophy at the University of Naples, and that <em>Gomorrah</em> won the 2006 Viareggio Literary Prize and led to his being placed under police protection after publication.   </p>
+<p>The book is organized in two parts of thematic essays rather than numbered chapters. Part One runs from the port of Naples to the northern suburbs: "The Port," "Angelina Jolie," "The System," "The Secondigliano War," and "Women." Part Two widens from neighborhood war to international reach: "Kalashnikov," "Cement," "Don Peppino Diana," "Hollywood," "Aberdeen, Mondragone," and "Land of Fires." Each essay follows a commodity or an institution until it exposes power.   </p>
+<p>Part One makes merchandise the first protagonist. A container in the port springs open and drops frozen Chinese migrants into the water; the same port handles 20 percent of the value but more than 70 percent of the quantity of Italy's textile imports from China, with 60 percent of arriving goods escaping customs inspection and roughly 200 million euros in taxes evaded each semester. The chapter "Angelina Jolie" moves inland to the clandestine fashion district north of Naples—nicknamed Las Vegas—and the anonymous tailor Pasquale, whose handmade white suit ends up on Angelina Jolie at the Oscars while he earns about 600 euros a month. "The System" decodes the word the clans use for themselves: not Camorra, which they treat as an outsider's term, but System (in Secondigliano "I belong to the Secondigliano System"). A self-described Directory of families—Licciardi, Contini, Mallardo, Lo Russo, Bocchetti, Stabile, Prestieri, Bosti, plus the more autonomous Sarno and Di Lauro—runs a garment, retail, and drug empire, with 71 municipal administrations in Campania dissolved since 1991 for infiltration.   </p>
+<p>"The Secondigliano War" narrates the corporate-governance crisis of Paolo Di Lauro's clan: business disagreement between the Di Lauro heirs and the secessionist "Spaniards" becomes daily homicide. The killing of Gelsomina Verde—a young woman tortured and burned because she had once dated a man who switched sides—and the torturing to death of Edoardo La Monica show how the clan writes messages on bodies when direct targets are absent. "Women" corrects any reading of the Camorra as exclusively male, following managers such as Anna Mazza and Immacolata Capone, and victims such as fourteen-year-old Annalisa Durante.   </p>
+<p>Part Two cross-cuts to the Casalesi confederation of Casal di Principe, whose founding boss Antonio Bardellino first bet on cocaine over heroin, and whose current leaders run a cartel with an estimated economic potential of around 30 billion euros, secured by cement, milk monopolies, and public works from Castelvolturno to the TAV high-speed railway. The Spartacus trial—626 hearings, 500 witnesses, twenty-four pentiti, twenty-one life sentences—is treated as a Nuremberg without victors. The book's moral center is Don Peppino Diana, the Casal di Principe priest killed on March 19, 1994, whose murder Saviano reads as the price paid for peace between clans and as a permanent wound in local memory. Against him stand the villas, movies, and self-mythologies of the bosses: Walter Schiavone's Scarface-inspired Hollywood villa, Sandokan's underground bunker, Cosimo Di Lauro dressing "like the Crow," and bosses collecting Botticelli, Jung, Lacan, and neo-melodic singers. "Aberdeen, Mondragone" follows the La Torre clan as it converts Campania labour and capital into respectable Scottish entrepreneurship. The closing essay, "Land of Fires," turns toxic-waste brokering into the book's most total image of the system, ending on a floating refrigerator in flooded fields with the claim that knowing the clans' mechanisms is a condition of breathing honestly.   </p>
+<p>Saviano's method is immersion rather than distance: he works unloading smuggled sneakers at five in the morning, guards the risk of being seen with clan sentinels, rides his Vespa to murder scenes on police frequencies, and reads trials and wiretaps with the same attention he gives faces and odours. The book advances an argument—the Camorra is not a breakdown of capitalism but one of its most efficient modes—and it repeatedly insists that distinguishing the legal from the illegal economy misses how the two are the same circulation.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>The Camorra / the System</strong>: The umbrella term covers dozens of Campania clans. The book's central claim is that "Camorra" has become a scholarly word of contempt, while clan members speak of <em>the System</em>—"a mechanism rather than a structure"—whose real power is the Directory, an economic, financial, and operational body named by the Naples DDA (District Anti-Mafia Directorate). The System's motive is market conquest: to control retail chains, import routes, construction, public contracts, and every step between production and consumption.   </li>
+<li><strong>Paolo Di Lauro (Ciruzzo 'o milionario)</strong>: boss of Secondigliano and Scampia, called "the millionaire" after Luigi Giuliano saw hundred-thousand-lire bills fall from his pockets at a poker table. A financial boss rather than a fighter, he built the open-air drug-market model and the Confezioni Valent company (founded 1989, seized November 2001). His sons <strong>Cosimo, Marco, and Ciro Di Lauro</strong> take over the family business; Cosimo, "the prince of the gang," orders everyone put on salary, imposes a generational turnover (no executives over thirty), and is arrested on January 21, 2005 in a forty-square-meter hole near his villa.   </li>
+<li><strong>The Spaniards (secessionists)</strong>: <strong>Raffaele Amato ('a vicchiarella)</strong> flees to Barcelona with the Di Lauro cash box and stops remitting; with <strong>Gennaro Marino McKay</strong>, <strong>Rosario Pariante</strong>, <strong>Raffaele Abbinante</strong>, <strong>Arcangelo Abate</strong>, and <strong>Giacomo Migliaccio</strong>, they secede, turning a business dispute into the feud. McKay runs Case Celesti under franchising rights, paying a monthly fee for independence.   </li>
+<li><strong>The Licciardi family (Masseria Cardone)</strong>: <strong>Gennaro Licciardi ('a scigna</strong>—"the monkey"), who died in prison at thirty-eight of an umbilical hernia after surviving sixteen stab wounds, transformed the cheap-labour reservoir of Secondigliano/Scampia into a narcotics machine; his brothers <strong>Pietro and Vincenzo</strong> and sister <strong>Maria ('a piccerella)</strong> ran its military and economic wings. Pietro transferred investments to Prague and Brno and was arrested in Prague in June 1999.   </li>
+<li><strong>The Nuvoletta clan of Marano</strong>: the only non-Sicilian family inside the Cosa Nostra cupola; they built a cocaine "popular shareholding" scheme (a 600-euro pension doubles in a month), municipal food-supply rackets through the representative <strong>Giuseppe Gala, "Showman"</strong> (found burned alive in his car in January 2003), and a vast asset empire run by <strong>Pietro Nocera</strong>, whose seized properties proved only "a mere 5 percent of his economic empire."   </li>
+<li><strong>The Casalesi confederation (Casal di Principe, San Cipriano d'Aversa, Casapesenna)</strong>: founded by <strong>Antonio Bardellino</strong>, first of Italy's bosses to bet on cocaine over heroin, and after his 1988 killing led by <strong>Francesco Sandokan Schiavone</strong> (so named for his resemblance to actor Kabir Bedi), with <strong>Walter Schiavone</strong> directing the firing squads, <strong>Carmine Schiavone</strong> the pentito who opened the clan's books, <strong>Francesco "Cicciariello" Schiavone</strong>, <strong>Francesco "Cicciotto di Mezzanotte" Bidognetti</strong>, <strong>Michele Zagaria</strong>, <strong>Mario Iovine</strong>, and <strong>Vincenzo De Falco</strong>. Post-trial the cartel is run by a dyarchy of fugitives, <strong>Antonio Iovine ('o ninno)</strong> and <strong>Zagaria</strong>.   </li>
+<li><strong>Don Peppino Diana</strong>: parish priest of the Church of Saint Nicholas of Bari in Casal di Principe, author of the anti-clan document "For Love of My People," distributed on Christmas Day; killed in his church on his name day, March 19, 1994. His killers' squad was composed of Giuseppe Quadrano (the actual shooter), Mario Santoro, Francesco Piacenti, and Vincenzo Verde, with Nunzio De Falco as alleged instigator.   </li>
+<li><strong>Augusto La Torre and the Mondragone/Chiuovi clan</strong>: a "psychoanalyst boss" who read Jung, Freud, and Lacan, reconciled himself to the Casalesi, colonized Aberdeen with the help of his brother <strong>Antonio La Torre</strong>, invented the "Mondragone-style" execution (body beaten, dropped in a well, grenade thrown in), and eventually collaborated with the law from January 2003.   </li>
+<li><strong>The stakeholders</strong>: the managerial class of toxic-waste brokering, personified by <strong>Franco</strong>, a Bocconi graduate from Villa Literno who moves hundreds of thousands of tons of waste with a phone and a price list, never joining a clan.   </li>
+<li><strong>Ordinary participants and victims</strong>: <strong>Xian Zhu (Nino)</strong>, the Chinese businessman who treats the port as his "triad"; <strong>Pasquale</strong>, the finest tailor in the area who ends up driving trucks for the Licciardi family; <strong>Pikachu</strong> and <strong>Kit Kat</strong>, the boy-soldier narrators of the feud; <strong>Don Ciro</strong>, the "submarine" who delivers clan stipends; <strong>Gelsomina Verde, Attilio Romanò, Dario Scherillo, Edoardo La Monica, Giulio Ruggiero, Annalisa Durante, Carmela Attrice, Emanuele "Manù"</strong>—the dead and the innocent who populate the book; and <strong>Anna Mazza</strong> and <strong>Immacolata Capone</strong>, the women who ran business empires and were killed when the rules of gender protection broke down.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling/kindred books</strong> (affinity map, institutions-of-informal-power cluster, all [high]): <a href="//01%20Books/Narconomics.html">Narconomics</a> — cartels as firms with markets, franchises, and labour; <a href="//01%20Books/Harpoon.html">Harpoon</a> — the statecraft of cutting off criminal finance; <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a> — the offshore money layer that lets illicit capital cross into legality; <a href="//01%20Books/Days%20of%20Rage.html">Days of Rage</a> — armed undergrounds as consumers and producers of political violence.   </li>
+<li><strong>Reading path</strong>: <a href="//03%20Reading%20Paths/Illicit%20Markets%2C%20Contraband%2C%20and%20State%20Capacity.html">Illicit Markets, Contraband, and State Capacity</a>.   </li>
+<li><strong>Concept anchors</strong>: <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>, <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a>, <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>, <a href="//02%20Concepts/Institutions.html">Institutions</a>, <a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>, <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>, <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>, <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>, <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>, <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>.   </li>
+<li><strong>MoCs</strong>: <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a>, <a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a>, <a href="//index.html">Book Index</a>, <a href="//00%20Maps%20of%20Content/Linkage%20Atlas.html">Linkage Atlas</a>.   </li>
+<li><strong>Entities</strong>: no Camorra-specific entity node exists in <code>05 Characters and Entities</code>; if created later, the Directory/Secondigliano Alliance and the Casalesi cartel are the two candidates the book would anchor.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>The System as an economic mechanism rather than an ethnic or moral category: the Camorra "coincides directly with the economy."   </li>
+<li>True fakes, pretend tax-transit, honest contraband: legality defined by paperwork and speed rather than by substance.   </li>
+<li>Violence as communication, contract enforcement, and R&amp;D (guinea-pig "Visitors"), not as an interruption of the economy.   </li>
+<li>Liberalization and franchising inside an illegal market: Di Lauro's "laissez-faire, laissez-passer" retail model versus vertical Cosa Nostra control.   </li>
+<li>Institutional capture without parasitism: dissolved councils, rerouted subsidies, clans as banks and employers.   </li>
+<li>The double track: legal and illegal firms as the same circulation ("scratch"), capital emigrating while poisons are buried at home.   </li>
+<li>Culture as raw material for power: cinema, nicknames, songs, art, and religious ritual absorbed into command.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: <em>Gomorrah</em> is the vault's ground-level study of how an illegal market is actually operated—territorial pricing, franchise fees (McKay pays a monthly fee to the clan), quality control performed on expendable "Visitors," customer protection, reserve workforces, and violence-backed contract enforcement where courts do not exist.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the book measures the state by its failures and its occasional recoveries; 71 Campania municipalities dissolved since 1991, nine of 92 in the province of Naples never infiltrated, customs that stop 60 percent-less than it clears, and the Spartacus trial as the rare moment when procedure outlasts the cartel.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the clans replace banks (loans at 2-4 percent to underground factories, mortgages, "popular shareholding" in cocaine), replace courts (dispute resolution by assassination), replace welfare (monthly stipends, submarines, funerals), and replace zoning boards (shopping centres, patron-saint festivals, and trash collection as clan services).   </li>
+<li><a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">Economy, Firms, and Infrastructure</a>: the Camorra as a firm portfolio—Valent, Vip Moda, Vocos, Vitec, Cirio and Parmalat distribution, earthmoving, cement plants, real estate, shopping centres, and eventually incinerators and airports—whose constraint is mainstream European competition rather than law.   </li>
+<li><a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>: the argument that politicians need the System (not the reverse), that subsidies and reconstruction funds (the Quindici earthquake, EU produce craters, TAV) are the feedstock of clan accumulation, and that the legal economy's competitiveness is subsidized by criminal waste disposal worth an estimated 500 million euros.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: adaptation through endless succession—Cutolo gives way to Bardellino, Bardellino to Sandokan, Sandokan to Zagaria, Zagaria to La Monica, La Monica to Di Lauro, Di Lauro to the Spaniards—as the way a criminally governed territory keeps rents flowing while leadership rotates.   </li>
+<li><a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>: following cement, milk, clothing, drugs, arms, and waste through extraction, transport, and retail shows how each commodity organizes power differently; cement is "southern Italy's crude oil."   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: goods and capital flow north and outward (Germany, Florida, Aberdeen, Tenerife) while waste, corpses, and risk are dumped south and east (Campania quarries, Albania, Somalia, Guiyu).   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: the Land of Fires converts profit margin into poisoned soil, dioxin fires, cancer mortality up 21 percent, and groundwater that must be imported; the natural world is the final sink for industrial cost.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the port's "silent swiftness" decides legality; 150,000 containers a year, identical container numbers, reefers on Bausan pier, and goods that reach Modena and Munich within days make customs a fiction.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: clan cash, usury at about 10 percent average interest, wager investments in drug lots, straw men, money laundered through festivals and sports clubs, and the "scratch" system that freezes the legal market the better to relaunch it.   </li>
+<li><a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>: religion, nicknames, film, and family loyalty are weaponized to make violence look inevitable; Don Peppino Diana's whole campaign was to reclaim the vocabulary of faith and citizenship from the bosses, and his killers' central tactic became destroying his image.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="the-port">The Port</h3>
+<p>Summary: The opening essay begins with a crane dropping an improperly sealed container of frozen Chinese migrants into the port of Naples—"the Chinese who never die," stacked with names on tags after saving a percentage of salaries for burial at home. Saviano then reads the port as the "open wound" through which everything made in China passes: it handles 20 percent of the value and more than 70 percent of the quantity of Italy's Chinese textile imports; COSCO, the largest Chinese state-owned shipping company, operates in consort with Geneva's MSC, the world's second-largest commercial fleet, from Bausan pier. The numbers accumulate: 150,000 containers a year, 1.6 million registered tons plus at least a million unregistered, 60 percent escaping customs inspection, 20 percent of bills unchecked, 50,000 contraband shipments (99 percent from China), about 200 million euros in evaded taxes per semester, and the April 2005 seizures of 24,000 pairs of jeans, 51,000 Bangladesh items labeled "Made in Italy," 450,000 figurines, Barbies and Spider-men, and 46,000 plastic toys, worth about 36 million euros. After a US-congressional security plan for the port is publicized, Chinese merchants gut apartments into warehouses; Saviano rents a room, works unloading, and watches Xian Zhu—rebaptized Nino—run his business by cell phone. A 5 a.m. boat trip unloads sneakers from a ship on the open sea to beat customs, at 4, 6, or 10 percent discounts. The essay closes by contrasting the old cigarette-bootlegging economy (the Naples–Brindisi axis, 20,000 people, 500 million lire per shipment) which "triggered the great Camorra war of the early 1980s," with the new contraband in consumer goods. <br />
+Analysis: The port converts global production into local invisibility, so <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> decide legality: shipping manifests, identical container numbers, and speed let merchandise arrive commercially while disappearing legally. This is also the book's purest statement of <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> as a market-design problem—taxes, VAT, and inspection are "the deadwood of profit"—and of <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">economy, firms, and infrastructure</a> as the Camorra's actual terrain. The contrast between the old cigarette contraband and the new consumer contraband, plus the Chinese migrants treated as cargo, belongs to <a href="//02%20Concepts/Empire%20and%20Periphery.html">empire and periphery</a>. Like <a href="//01%20Books/Narconomics.html">Narconomics</a>, the essay insists criminal enterprise obeys ordinary commercial pricing logic rather than exotic lawlessness; Xian's "Euro, dollar, yuan. Here's my triad" is the chapter's thesis. <br />
+Source anchors: the Chinese who never die; COSCO/MSC; Bausan pier; 150,000 containers; 60 percent escaped inspection; April 2005; Xian Zhu/Nino; cigarette bootlegging; Naples–Brindisi.   </p>
+<h3 id="angelina-jolie">Angelina Jolie</h3>
+<p>Summary: Saviano follows Xian into the area north of Naples nicknamed Las Vegas—Casavatore, Caivano, Sant'Antimo, Melito, Arzano, Piscinola, San Pietro a Patierno, Frattamaggiore, Frattaminore, Grumo Nevano—where clandestine factories once produced the best of Italian fashion. Parco Verde in Caivano is the emblem of the collapsed midrange economy: "a gold mine for Camorra laborers," feeding the Casalesi clan, the Mallardos of Giuliano, and the Crispano "tiger cubs" with drug couriers, lookouts, and drivers. The chapter centres on Emanuele ("Manù"), fifteen, killed by eleven shots while brandishing a cap gun after Saturday robberies on Route 87; the Parco Verde families build him a mausoleum, and a revolt, broken by clan intervention, is extinguished because the clans need the cheap labour to return. At the funeral Padre Mauro thunders that fifteen "knocks at the conscience of those who merely play at legality." The essay then follows Pasquale, a tailor who buys fabric direct and is trusted by the big brands; an auction in a schoolroom for 800 garments ends at twenty euros in twenty-five days, with nine of twenty contractors signing on and only the first and best delivered paid. The clans finance the trade at 2-4 percent where banks will not. Pasquale secretly made a white suit that Angelina Jolie wore at the Oscars—discovering it by chance on television—while earning about 600 euros a month; the chapter ends with him driving trucks for the Licciardi family between Secondigliano and Lago di Garda, his tailor's hands cracked. <br />
+Analysis: Las Vegas separates glamour from recognition: the "Made in Italy" that clothes Hollywood is sewn in stairwells by workers earning 500-900 euros a month, which makes the chapter a study of <a href="//02%20Concepts/Commercial%20Society.html">commercial society</a> and its invisible subcontracting. The auctions, the clan credit at 2-4 percent, and the mortgage market that still lets six of ten families buy homes show <a href="//02%20Concepts/Informal%20Institutions.html">informal institutions</a> functioning as the financial sector the banks refuse to serve. Emanuele and the Route 87 robberies belong to <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> and <a href="//02%20Concepts/Moral%20Economy.html">moral economy</a>: the kid whose skill set is robbery because legal work collapsed, and whose death is read as a local verdict on government and history. Like <a href="//01%20Books/Narconomics.html">Narconomics</a>' labour chapter, the essay shows illegal production recruiting skilled workers who cannot sell their skill legally. <br />
+Source anchors: Las Vegas; Caivano; Parco Verde; Emanuele Manù; Route 87; Padre Mauro; Pasquale; the auction; Angelina Jolie; 2-4 percent loans; Chinese triangle.   </p>
+<h3 id="the-system">The System</h3>
+<p>Summary: This essay decodes the vocabulary of the north-Naples Camorra: "Camorra is a nonexistent word," while members say they belong to "the Secondigliano System." The Directory—the DDA's name for the economic and financial structure of the Alliance families (Licciardi, Contini, Mallardo, Lo Russo, Bocchetti, Stabile, Prestieri, Bosti, plus Sarno and Di Lauro)—controls the garment chain from production (Valent, Vip Moda, Vocos, Vitec) to global retail: stores and warehouses from Hamburg, Dortmund, Frankfurt, Berlin, Barcelona, Madrid, Brussels, Vienna, Oporto, London, Dublin, Sarajevo, Belgrade and Sydney to New York, Miami Beach, New Jersey, Chicago, Florida, Rio, and São Paulo, with a Medusa's-head Versace matrix printed in a Naples lab and Vip Moda jeans passed off as Valentino in Texas. A 2004 DDA inquiry led by prosecutor Filippo Beatrice unraveled the network from a single German clothing store. The essay explains why the brands never complained: the "true fakes" promoted high-fashion names into markets the labels do not reach; the clans also import Chinese high-tech goods (Cameras, power tools marketed as Bosch, Hammer, Hilti) and, says Saviano, Paolo Di Lauro was ten years ahead of Confindustria's China strategy. As a structure the Camorra is now horizontal, flexible, more permeable than Cosa Nostra or the 'Ndrangheta, and it is the most solid criminal organization in Europe by membership: five Camorristi for every Sicilian Mafioso, eight for every 'Ndranghetista. Local governments failed to oppose it; seventy-one Campania municipalities have been dissolved since 1991, against forty-four in Sicily and thirty-four in Calabria. The essay profiles the builders of the model, above all the Licciardi family—Gennaro "the monkey," who died in prison of a hernia after sixteen stab wounds; Pietro, arrested in Prague in June 1999, accused of the 1998 Via Cristallini bomb; Maria "the little one," who wielded economic power—and the Nuvoletta clan of Marano, whose representative Giuseppe Gala ("Showman") imposed Parmalat representation, panettone surcharges, and clothes-preserving rackets until he was burned alive in January 2003. It closes with Di Lauro's financial personality, the nickname system, Valent's corporate shell (founded 1989, seized November 2001, shares passed by Paolo to his wife Luisa), and the legend of the pee glass that resolved an early schism. <br />
+Analysis: The System shows <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> maturing into market design: franchising, delegation, brand management, and global distribution with "a turnover of about 300 million euros per family." The Directory is a governance board, which makes the chapter central to <a href="//02%20Concepts/Institutions.html">institutions</a> and <a href="//02%20Concepts/Political%20Economy.html">political economy</a>—politicians need the System, and the clans use the state's own instruments (zoning, dissolved councils, licences) as inputs. The true-fake economy, retail monopolies, and clan loans belong to <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">economy, firms, and infrastructure</a>, while the license plate of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> is measured in the failure rate of the province's municipalities. The Nuvoletta's "popular shareholding" scheme is the clearest example of criminal <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a> absorbing small savers. <br />
+Source anchors: System; Camorra as nonexistent word; Directory; Secondigliano Alliance; Filippo Beatrice; Vip Moda; true fakes; 71 dissolved municipalities; Licciardi; Nuvoletta; Showman Gala; Ciruzzo 'o milionario; Valent; nicknames.   </p>
+<h3 id="the-secondigliano-war">The Secondigliano War</h3>
+<p>Summary: McKay and "Angioletto" demand a meeting with the fugitive Paolo Di Lauro to become independent competitors; Cosimo Di Lauro's brothers case the meeting place, conclude it is a trap, and Cosimo decides on war. Saviano maps the Di Lauro firm as a fractal, multilevel company (promoters and financiers, drug handlers, market capos, pushers; a turnover of 500,000 euros a day, profits near 500 percent) backed by a salaried army of killers, trawlers in safe houses, and shooting ranges that build alibis against the gunpowder "stub" test. Territory is managed like retail: Via Baku takes half a million euros a month, 400 doses of marijuana and cocaine a day; lookouts earn 100 euros, coordinators 500, pushers 800, storehouse minders 1,000, with days off and fines. Di Lauro's innovations—customer protection, "circles," medium lots, laissez-faire entry—made Secondigliano Europe's largest open-air drug market; Case Celesti, franchised to McKay, priced cocaine at 25-50 euros a gram, and the "Visitors" (heroin addicts) were used as human guinea pigs to test cuts. The rift opens when Raffaele Amato, 'a vicchiarella, flees to Barcelona with the cash box and stops remitting; Cosimo responds by putting managers on salary and purging everyone over thirty. The first killing is Ferdinando Bizzarro (ras of Melito), executed at the Hotel Villa Giulia on April 26, 2004 after his political point man Alfredo Cicala, a former mayor of Melito, betrayed his whereabouts; war is declared when Fulvio Montanino and Claudio Salerno are killed on October 20, 2004. The essay then follows the slaughter month by month—de Magistris beaten to death, Galdiero, Landieri, the Fiat Punto with three bodies, Migliaccio, Emolo, Riccio, Gagliardi, Tortora, and the burned-out car that turns out to hold Gelsomina Verde, twenty-two, tortured and shot in the neck because she had once dated Gennaro Notturno; then Attrice, killed in her pajamas; baby soldiers recruited at twelve to seventeen, trained to take vest-fire and given "iron"; Pikachu and Kit Kat, the teenage narrators; the December 7 blitz of about a thousand officers and 53 arrests; Cosimo's arrest on January 21, 2005; the decapitated body of Giulio Ruggiero the same night; the innocent dead (Attilio Romanò, Dario Scherillo); the published June 2005 peace pact brokered by the Licciardi clan; Paolo Di Lauro's arrest on September 16, 2005; and the disfiguring torture of Edoardo La Monica, whose ears, tongue, wrists, eyes, and face were destroyed as a message. Saviano counts the toll: since his birth, 3,600 deaths at the hands of the Camorra, "more than the Sicilian Mafia, more than the 'Ndrangheta," in a region with Italy's highest murder rate. <br />
+Analysis: The feud is a corporate-governance crisis conducted with guns: a dispute over who owns delegated freedom—wager investments versus salaried subordination—with no court to adjudicate, which is the institutional limit of <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> that <a href="//01%20Books/Narconomics.html">Narconomics</a> theorizes (competition and governance turn into violence). The trawlers, alibi ranges, and "pieces" show violence as bureaucratized production. The blitz, the peace pact, and the arrests measure <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> as episodic: the state slows the war but cannot end it, while neighborhoods defend the workers the drug market employs. The enlistment of schoolboys and the murder of bystanders make the chapter an anatomy of <a href="//02%20Concepts/Informal%20Institutions.html">informal institutions</a> absorbing a whole labour force, and of how communities are forced into "selective vision." Gelsomina Verde's murder, written on a body because the intended target escaped, is the book's clearest proof that clan power assigns meaning to acquaintances and resemblance. <br />
+Source anchors: Spaniards; Cosimo Di Lauro; Raffaele Amato; McKay; Bizzarro; Hotel Villa Giulia; Via Baku; Case Celesti; Visitors; Gelsomina Verde; trawlers; "pieces"; December 7 blitz; peace pact; Paolo Di Lauro; Edoardo La Monica; 3,600 deaths.   </p>
+<h3 id="women">Women</h3>
+<p>Summary: The essay opens with the "womanly smells" that cling to Saviano after a Camorra war, then argues women are always inside clan power. The feud eliminated two women "with a savagery usually reserved for bosses," and women block arrests, pose for cameras, and manage the ritual grief of funerals. The "monthly allowance" is a clan wage that ties girlfriends, mothers, and children to affiliates; it is delivered on the twenty-eighth by "submarines" such as Don Ciro, who are never affiliates themselves. The essay corrects the image of the passive Camorra woman with a gallery of managers: Anna Mazza, the "black widow of the Camorra," who ran the Moccia clan of Afragola for more than twenty years, was one of the first Italian women convicted of Mafia crimes, and was accused of arming her twelve-year-old son; Immacolata Capone, who bet everything on cement and the Casalesi, was killed in March 2004 in Sant'Antimo, the taboo of not touching women broken; Erminia Giuliano (Celeste), who managed the Giuliano clan's real estate until 28 million euros was confiscated in 2004; and Anna Vollaro, who burned herself alive at twenty-nine rather than surrender a seized pizzeria. The Quindici feud shows the Cava and Graziano families, whose women became official faces of power and then gunmen: forty murders, a shootout on Via Cassese between armed Cava women and Graziano women, mayor Olga Santaniello drowned in the 1998 flood, and mayors elected and removed under clan patronage. Not one female Camorra boss has ever repented, Saviano notes. The chapter ends with Annalisa Durante, fourteen, killed by crossfire in Forcella on March 27, 2004 while talking to friends, and with her funeral, where girls "in little black dresses" learn to be women, and where the Giuliano clan's presence shows no one rules central Naples without its approval. Her diary survives: "The girls who make purses always have black hands." <br />
+Analysis: The essay makes <a href="//02%20Concepts/Informal%20Institutions.html">informal institutions</a> gendered: the clan is reproduced through courtship, allowances, submarines, funerals, and the recognition economy of the schoolyard. Female managers who run the business end show that "clan strength is increasingly female" while the women as managers delegate the fighting—until, as with Immacolata Capone and the Quindici women, the code collapses and they are killed or forced to take up arms. This is power "written on bodies" and on <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">culture, identity, and legitimacy</a>: the funeral as initiation rite, beauty as bait, and Annalisa's diary as a counter-document. The chapter's claim that no female boss repents complicates <a href="//02%20Concepts/Institutions.html">institutions</a> and succession: the very rigidity that let women hold power through men also, in the book's reading, immunizes them against the state's main lever. <br />
+Source anchors: monthly allowance; submarine; Don Ciro; Anna Mazza; Immacolata Capone; Anna Vollaro; Quindici; Cava and Graziano women; Olga Santaniello; Erminia Giuliano; Annalisa Durante; Forcella; "no one repents."   </p>
+<h3 id="kalashnikov">Kalashnikov</h3>
+<p>Summary: The essay begins with the "perfect" holes AK-47s drill in bullet-resistant glass and with the practice of testing new weapons by firing into shop windows—a reminder "that there is nothing that does not potentially belong to them." Thirty AK-47s fresh from Macedonia (Skopje to Gricignano d'Aversa) reach clan garages loaded on American military trucks stolen from US garages—trucks that move freely because of the writing on their sides, near a US Navy base built by the Coppolas; African workers unload the crates for 2 euros each. The chapter explains the name (avtomat Kalashnikova, 1947), the weapon's simplicity, and its legacy: about 150 million produced, it "can turn even a monkey into a combatant" (Laurent Kabila), has killed more than any other instrument in history, appears on Mozambique's flag and in the iconography of Al Fatah, the MRTA, and bin Laden's videos, and $50 million buys about 200,000 of them. Saviano embeds the personal: Mariano, a coffee distributor for the clans in Casal di Principe, is sent to Izhevsk to meet the retired general, carrying mozzarella di bufala, and returns with autographed photographs and an amateur video of Kalashnikov's shrine containing the prototype AK. The essay links the Camorra to ETA (ten days of negotiations in a Milan hotel suite, cocaine for arms), to MRTA via the Rodriguez brothers, to Somalia, and to the Sant'Anastasia cache of Uzis and machine guns with intact serial numbers from Kraków; it notes the homemade "tube" weapon ('o tubo). It quotes SIPRI (Italy spends $27 billion a year on arms) and EURISPES (the Camorra, 'Ndrangheta, Cosa Nostra, and Sacra Corona Unita handle an estimated $3.3 billion in illegal arms), and records the Falklands phone call and the Leopard-tank deal as proof that "the clans had already outfitted themselves for a long war." SISMI's 1994 report has Arkan, founder of the Serb Volunteer Guard, asking Sandokan Schiavone for arms, with $85 million in Austrian accounts routed through humanitarian-aid disguises. The chapter also folds in Saviano's own initiation—his father teaching him to shoot with a Beretta 92FS ("an M9") on the beach at Coppola Village, the 863,000 square meters of illegal cement built on Pinetamare by the Coppolas—and the punishment of the father who once saved an eighteen-year-old in Giugliano, the Mallardo fiefdom. <br />
+Analysis: The AK-47 universalizes violence the way <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> universalize dealing: "arms for everyone, massacres for all," distributing military capacity to any faction—which is the thesis of the chapter and, in effect, of <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">chokepoints and gateways</a> captured by the wrong gate. The Eastern European arms depots acquired after the Iron Curtain fell are an <a href="//02%20Concepts/Empire%20and%20Periphery.html">empire and periphery</a> story: the Campania clans funded part of post-socialist defense budgets. Kalashnikov's refusal of responsibility—"It's no concern of mine how other people use it"—is an <a href="//02%20Concepts/Informal%20Institutions.html">institutional</a> critique of markets that externalize consequence, and the ETA/MRTA material makes the chapter the natural point to link <a href="//01%20Books/Days%20of%20Rage.html">Days of Rage</a> (armed undergrounds as clients of the same arms market). Coppola Village and the M9 catechism link the essay back to the <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">infrastructure</a> theme: cement and guns are both southern crude oil. <br />
+Source anchors: AK-47; Kalashnikov; Mariano; Gricignano d'Aversa; Coppola Village; Beretta M9; ETA; MRTA; Sant'Anastasia; 'o tubo; Arkan; Falklands; SIPRI; EURISPES; $6 AK-47s in Yemen.   </p>
+<h3 id="cement">Cement</h3>
+<p>Summary: "Cement" opens on Casal di Principe as "the capital of the Camorra's entrepreneurial power"—the town Mussolini rebaptized Albanova, where fewer than 100,000 inhabitants include twelve hundred people sentenced for Mafia ties, and where "you can become a Camorrista, but you're born a Casalese." The founder, Antonio Bardellino, was the first Italian boss to bet that cocaine would eclipse heroin: he shipped tons of coke hidden in fish flour from South America, sold heroin to John Gotti packed in espresso filters, and built a cartel strong enough to stand up to Cutolo. After Bardellino was killed in Brazil in 1988 (beaten with a mallet by Mario Iovine), a series of feuds left Francesco Sandokan Schiavone in charge, running a family firm: brother Walter on the firing squads, cousin Carmine on finance, cousin Francesco elected mayor of Casal di Principe. The cartel now controls cement, earthmoving, and construction—517 construction companies are officially registered in Casal di Principe—and works its way into national infrastructure: TAV high-speed-rail subcontracts via Edilsud to companies tied to Michele Zagaria, Umbria's post-earthquake reconstruction, the Aversa subway, and the Grazzanise airport. The essay covers the milk racket: Cirio and Parmalat paid the Casalesi-controlled distributors 4-6.5 percent discounts, beat competitors' drivers, and burned depots, financing fake festivals (the Mozzarella Festival, Music in the Piazza) before both companies' bankruptcies. Saviano then recounts the Spartacus trial: investigation number 3615, begun in 1993 from Carmine Schiavone's testimony, with 626 hearings over seven years and twenty-one days, 500 witnesses, twenty-four pentiti, ninety files, and a verdict of twenty-one life sentences and more than 750 years of prison (plus the Spartacus 2, Regi Lagni, and Aima subsidy-fraud offshoots). He calls it "the Nuremberg for a whole generation of the Camorra... a Nuremberg without victors." After the trial the cartel is run by a dyarchy of fugitives, Antonio Iovine ('o ninno) and Michele Zagaria, with an estimated economic potential of about 30 billion euros versus a Schiavone family turnover of 5 billion a year; seized real estate alone totals 750 million euros, and the "The Businessman" Dante Passarelli was a treasurer worth an estimated 300-400 million euros. The chapter becomes confessional: Saviano, who hired on at construction sites to understand "real power," ends at Pier Paolo Pasolini's tomb in Casarsa, reciting his own "I Know": cement is "southern Italy's crude oil," and every Italian success story stands on "subcontractors, sand, crushed stone, vans crammed with men who work all night." <br />
+Analysis: Cement is the commodity through which the Casalesi became a territorial business class, which makes the chapter the vault's core study of <a href="//02%20Concepts/Commodity%20Systems.html">commodity systems</a> securing rule: concrete, milk, transport, subsidies, land, and public works are all instruments. The Cirio/Parmalat racket and the festival-financed laundering show <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a> penetrating listed companies, and the TAV, Aima, and Regi Lagni scams show <a href="//02%20Concepts/Political%20Economy.html">political economy</a> at its most direct—the state pays the clans to rebuild itself. The Spartacus trial is the book's strongest statement of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> as procedure: 626 hearings and twenty-four pentiti converted a criminal economy into punishment, even if the bosses, unlike Nuremberg's defendants, mostly remained in command. The chapter's succession trope—Cutolo to Bardellino to Sandokan to Zagaria—belongs to <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">path dependence and institutional drift</a>: a criminally governed territory keeps rents flowing precisely because leadership rotates. <br />
+Source anchors: Casal di Principe; Bardellino; fish flour; Sandokan Schiavone; Walter Schiavone; Cirio and Parmalat; Zagaria; Spartacus 3615; 21 life sentences; TAV; Edilsud; Dante Passarelli; cement as crude oil; Pasolini.   </p>
+<h3 id="don-peppino-diana">Don Peppino Diana</h3>
+<p>Summary: The essay is built on the memory of the white sheets hung from every balcony in Casal di Principe for the funeral of the priest Giuseppe "Don Peppino" Diana in March 1994. Saviano, then sixteen, reconstructs the priest's project: trained in Rome, he returned to Casal di Principe, wore jeans instead of a cassock, ran a welcome centre for African immigrants, and, after an armed cavalcade with assault rifles paraded unchallenged through the streets, organized the town's priests to sign the document "For Love of My People" (distributed on Christmas Day), which denounced 20 percent bribes on construction, drug trafficking, extortion, and the failure of politics and church. The essay digresses into Camorra religiosity: pungitura initiations using the Madonna of Pompeii, the "Madonna of the Camorra" fresco at Pignataro Maggiore, hash bricks cut thirty-three at a time like Christ's age, and cocaine blessed with Lourdes holy water. Don Peppino was killed on his name day, March 19, 1994, in the church meeting room, answering "I am" to "Who is Don Peppino?" He was thirty-six. The chapter then reconstructs the murder as a business decision within the feud between the Schiavone-allied and De Falco-allied families: the inside version, from pentito Giuseppe Quadrano, points to Nunzio De Falco ('o lupo, the Wolf) as instigator, Francesco Piacenti as Spain's messenger, and Quadrano himself as the shooter with Mario Santoro driving; Vincenzo Verde replaced an unreliable member of the squad. After the killing the image of the priest was slandered ("Don Diana was a Camorrista," "Don Diana in bed with two women") to prevent his martyrdom, though journalists Raffaele Sardo and Rosaria Capacchione defended his memory. The 2001 verdict condemned Verde, Piacenti, and Della Medaglia to life; a 2003 appeal exonerated Verde and Della Medaglia, and confirmed Quadrano as the killer (with Piacenti and Santoro sentenced to life). Nunzio De Falco was sentenced to life in January 2003 as instigator and was defended by Gaetano Pecorella, simultaneously president of the Chamber of Deputies' Justice Commission—"a wolf defended by a lamb." Saviano treats Diana's death as "the price paid for peace between the clans... Like a scapegoat," and closes with Cipriano, Don Peppino's boyhood friend, who "closed up" and moved to Rome, unable to face the harangue he wrote for the funeral—a text invoking Genesis 19:24-26 and Deuteronomy 29:22, the salt of Lot's wife, and the warning that the kings are those who "get rich off you, making you eat one another until... only a pawn remains on the board." <br />
+Analysis: Diana's campaign was fought entirely in the medium of legitimating language—sermons, documents, the sacraments—which makes the chapter a study of <a href="//02%20Concepts/Legitimacy.html">legitimacy</a> and of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">culture, identity, and legitimacy</a>: the clans claim "family" and "religiosity" to sanctify violence, and the response is to reclaim the words. The murder shows violence targeting not only rivals but the language that could name clan power publicly, and the slander campaign shows the sustaining power of <a href="//02%20Concepts/Moral%20Economy.html">moral economy</a> in a town where innocence is a distant hypothesis. Renato Natale's mayoralty, the church's refusal to be silent, and the dissolved councils etched in the essay's background are local measures of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a>—fragile, personal, and short-lived. The scapegoat reading ties the killing to the feud dynamics of <a href="//02%20Concepts/Institutions.html">institutions</a>: killing a priest "distract[s] investigations away from their affairs." <br />
+Source anchors: Don Peppino Diana; white sheets; For Love of My People; pungitura; Madonna of the Camorra; March 19 1994; Nunzio De Falco; Quadrano; Piacenti; Cipriano; Genesis 19; pawns and kings.   </p>
+<h3 id="hollywood">Hollywood</h3>
+<p>Summary: Saviano enters the architecture of Camorra power. A Foster Children's Center now occupies Egidio Coppola's confiscated villa, and AGRORINASCE converts seized assets into community facilities, but most villas remain "symbols of sovereignty" across the Aversa Marshes. The chapter's set piece is Hollywood, Walter Schiavone's villa in Casal di Principe, built—according to local legend—after the boss handed his architect a copy of Scarface so the house would look like Tony Montana's Miami showplace: three floors and some 9,000 square feet, nearly an acre of grounds, Doric columns inside and out, worth about $3.5 million at the end of the 1990s and perhaps $5 million later. Saviano slips past the sentinels, walks the double staircases and the study above the great hall "just like the final scene of Scarface," and takes a piss in the tub. Under the villa is Sandokan's bunker: a trapdoor in the dining room opening onto eleven tunnels, camp tents, a whirlpool tub, refrigerators stocked for a fortnight, and a home-entertainment wall, discovered by the DIA in 1998 after a stakeout of a year and seven months. Walter was arrested scaling the wall his own villa was built behind; he then stripped the confiscated house—doors, parquet, marble, fireplaces, plumbing—so that "either his or no one's." The essay pivots to film as a grammar of power: The Godfather gave the Italian-American mob the word padrino (the old word was compare) and its look; Puzo's model was Alfonso Tieri of Pignasecca; Al Capone, "originally from here" (Castellammare di Stabia), watched his own Scarface being filmed and resolved to model himself on the character he inspired. Camorra killers, says a Naples Forensic Division veteran, "don't know the right way to shoot" since Tarantino—holding the gun crooked "like in the movies." Cosimo Di Lauro dresses like Brandon Lee's The Crow; female bodyguards dress like Uma Thurman in Kill Bill; Vincenza Di Domenico is nicknamed Nikita; Il camorrista has become a Camorra theme song, whistled in the street and mixed for discos. The essay closes with Giuseppe M. and Romeo P., two Casal di Principe boys who recite the Ezekiel speech from Pulp Fiction before opening fire, and then with the intellectual pretensions of the bosses: Sandokan's library of the Kingdom of the Two Sicilies and Napoleon, his icons with his own face in Christ's place; Giuseppe Misso's grandchildren Ben Hur, Jesus, and Emiliano Zapata; Augusto La Torre's Jung and Lacan; Tommaso Prestieri, producer of neo-melodic singers and art collector, arrested at the Teatro Bellini, who declared "In art I am free." <br />
+Analysis: The villa economy converts illegal cash into architecture, and architecture into sovereignty—<a href="//02%20Concepts/Commercial%20Society.html">commercial society</a> as mausoleum. Cinema is not decoration here but instruction: boys "can be Scarface, but you have to be him all the way," meaning movies supply the poses, dialogue, and even weapon technique through which clan power is performed, which is <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">culture, identity, and legitimacy</a> operating as a training curriculum. Sandokan's bunker turns sovereignty into underground domestic design, a spatial answer to the state. The chapter also shows <a href="//02%20Concepts/Elite%20Formation.html">elite formation</a> through culture—misguided self-fashioning via Ivanhoe, Botticelli, and Lacan—and it belongs to the book's larger argument that the criminal and the "cultured" economy are the same world. <br />
+Source anchors: Hollywood; Walter Schiavone; Sandokan's bunker; the eleven tunnels; Scarface; The Godfather; padrino vs compare; Al Capone; Tarantino shooting; Giuseppe and Romeo; Pulp Fiction; Sandokan's library; Ivanhoe; Prestieri; Teatro Bellini.   </p>
+<h3 id="aberdeen-mondragone">Aberdeen, Mondragone</h3>
+<p>Summary: The essay follows the La Torre clan, which rules Mondragone, northern Caserta, southern Lazio, and the Domitian coast. Augusto La Torre—a Bardellino favorite whose power is exercised through "psychology"—controls "the worldwide export business in human hope": since the late 1990s Mondragone has been the door to Britain for desperate Campania graduates. Saviano's friend Matteo, a cum laude graduate, is sent through a Mondragone travel agency to Aberdeen, where clan businesses—Pavarotti's restaurant at 27/29 Union Terrace, real estate, food imports, tourism—have made Antonio La Torre one of Scotland's "most brilliant entrepreneurs," who was arrested in March 2005 despite (or because of) British citizenship that had shielded him. The international money is personified by Rockefeller (Raffaele Barbato), the Mondragone-born manager with a Dutch wife, two Holland casinos, Caracas cocaine contacts, and the Adam and Eve/La Playa holiday village where fugitives hid; "the La Torre treasure is still hidden somewhere in Holland... in a bank," so people say "He thought I was the Bank of Holland." The essay describes the "scratch" system—businessmen freeze the legal market for a moment, then make it "spin even faster"—and the British Camorrista, a Scot who became an affiliate and draws a stipend from Mondragone every month with a Christmas bonus. At home the clan was harsher: the "Mondragone-style" execution (a body beaten, dropped in a well, and blown apart with a grenade) was used on deputy mayor Antonio Nugnes, who vanished in 1990; the anti-drug GAD vigilante squad policed the town; and Augusto, who also tried to extend his rule into the Incaldana clinic, forbade drug dealing in his own territory while the clan sold drugs in Rome. The essay ends with Augusto turning state's witness in January 2003, confessing forty or so homicides, revealing the wells, and being treated by magistrates as ambiguous: even as a pentito he continued to run extortions (a polite letter requesting 10,000 euros and 1,000 a month), and the 1992 mega-confiscation under the Santa Maria Capua Vetere Court revealed properties worth about 230 million euros, nineteen companies worth about 323 million, and machinery worth about 133 million. <br />
+Analysis: Aberdeen and Mondragone show <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> laundering themselves through the legal economy: restaurants, tourism, gambling, food imports, real estate, and migration channels that promise Campania graduates escape from the very power that gates their exit. That is <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a> at work and the reason the chapter links naturally to <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a>, the study of the offshore money layer that lets criminal capital cross into legitimacy. The "scratch" idea—interrupting legal circulation to relaunch it faster—is a precise model of <a href="//02%20Concepts/Commercial%20Society.html">commercial society</a> run by informal rule enforcement, and the Mondragone-style killing, GAD vigilante order, and Augusto's continued extortion from jail show that even voluntary collaborations of the powerful are <a href="//02%20Concepts/Informal%20Institutions.html">informal institutions</a> extending power rather than ending it. <br />
+Source anchors: Augusto La Torre; Mondragone; Aberdeen; Antonio La Torre; Pavarotti's; Matteo; Rockefeller; La Playa; Bank of Holland; British Camorrista; scratch; Mondragone-style; Antonio Nugnes; GAD; Incaldana clinic; Rambo; the schoolteacher.   </p>
+<h3 id="land-of-fires">Land of Fires</h3>
+<p>Summary: The final essay argues that the dump is "the true aftermath of consumption" and the only visual form of the economy. Unreported trash, if gathered, would form a mountain higher than Everest, and the Campania countryside has become Italy's garbage grave: 18,000 tons of waste from Brescia dumped around Naples and Caserta since the late 1990s, a million tons in four years near Santa Maria Capua Vetere, Milan street sweepings at Grazzanise, udder-cleaning paper from Veneto dairies at Villaricca, exhumed cemetery remains, and money-truck shreddings in a cauliflower field. The clans became Europe's waste leaders: trash traffic has grown 29.8 percent in five years, comparably to cocaine; four years of brokering filled clan coffers with an estimated 44 billion euros; the Camorra charges 9-10 cents a kilo against a legal market price of 21-62 cents. The essay profiles the stakeholder class and its best practitioner, Franco—Bocconi-educated, from Villa Literno, with a full price list for thinners, phosphorus sulfide, street sweepings, contaminated soil, and "fluff"—who moves hundreds of thousands of tons by phone and never joins a clan. Operations Houdini (Veneto), King Midas, Cassiopea, Fly, and Organic Agriculture reveal the north-south trucking routes, the 3 million tons illegally dumped in Campania, and the 500 million euros in savings to northern industry. Italian methods travel: Chinese stakeholders educated in Campania re-export the trade, the Rotterdam port police seize a thousand tons of English urban trash passed off as pulp paper, and a million tons of European high-tech waste a year is entombed around Guiyu, northeast of Hong Kong, where the groundwater is now polluted and drinking water must be imported. At home the Land of Fires—the Giugliano-Villaricca-Qualiano triangle—holds thirty-nine landfills, twenty-seven hazardous, with Gypsy boys paid 50 euros per mound of trash burned by videocassette-tape fuse; the cancer mortality rate in polluted Campania cities has risen 21 percent. Residents resist, as at Basso dell'Olmo, where Carmine Iuorio, thirty-four, died of exposure on a picket line. The essay ends with Saviano wading through flooded fields and clinging to a floating refrigerator, recalling Papillon: "Hey, you bastards, I'm still here!"—and with the book's final argument: knowing the clans' mechanisms is "the only necessity if you want to consider yourself worthy of breathing." <br />
+Analysis: The waste economy is where <a href="//02%20Concepts/Ecological%20Constraint.html">ecological constraint</a> becomes the final sink for industrial cost: poisons from the rich north are buried in the soil, water, and bodies of the periphery, which is <a href="//02%20Concepts/Empire%20and%20Periphery.html">empire and periphery</a> operating inside one country and then across it, from Albania, Costa Rica, and Romania to Somalia and Guiyu. The stakeholder's price list is a market table, so the chapter is also <a href="//02%20Concepts/Illicit%20Markets.html">illicit markets</a> as ordinary industrial-services competition, with <a href="//01%20Books/Narconomics.html">Narconomics</a> as the closest sibling text: illegal firms undersell legal ones on price precisely because they externalize disposal risk. The complicit officials and unregulated firms make the case about <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> and about <a href="//02%20Concepts/Economy%2C%20Firms%2C%20and%20Infrastructure.html">economy, firms, and infrastructure</a>: an entire region redesigns itself as a cheap site for what Austria-style regulation would price out of existence. <br />
+Source anchors: the dump as economy; 29.8 percent growth; 44 billion euros; stakeholders; Franco; price list; Operation Houdini; King Midas; Operation Cassiopea; Operation Fly; Rotterdam; Guiyu; Land of Fires; Giugliano-Villaricca-Qualiano; 50-euro fires; cancer +21 percent; Basso dell'Olmo; Iuorio; the floating refrigerator.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The port as unit of measure</strong>: 150,000 containers a year; 1.6 million registered tons plus ≥1 million unregistered; 60 percent escape inspection; ~200 million euros evaded per semester; April 2005 seizures worth ~36 million euros. "Everything that exists passes through here."   </li>
+<li><strong>Xian's triad</strong>: "Euro, dollar, yuan. Here's my triad." Anti-Mafia reports warn of the "Chinese Mafia," yet only 600,000 euros were confiscated in Campi Bisenzio in ten years.   </li>
+<li><strong>Secondigliano wage grid</strong>: lookouts 100 euros/week, coordinators/cashiers 500, pushers 800, storehouse minders 1,000, with a 50-euro fine per missed hour. Via Baku alone: half a million euros a month, 400 daily doses of marijuana and cocaine each.   </li>
+<li><strong>Cocaine math</strong>: a kilo costs the producer 1,000 euros, reaches the wholesaler at 30,000; one cut turns 30 kilos into 150 (≈15 million euros). Case Celesti sells at 25-50 euros a gram. Falcone's textbook lesson: 1,000 lire invested in drugs on September 1 becomes 100 million by August 1.   </li>
+<li><strong>Di Lauro's liberalization</strong>: customer protection, "circles," medium lots, franchising (McKay pays a monthly fee for Case Celesti), no introduction needed—"laissez-faire, laissez-passer." Cosa Nostra and 'Ndrangheta, by contrast, require the chain of command.   </li>
+<li><strong>Gelsomina Verde</strong>: 22, tortured and burned in her own car because she'd once dated Gennaro Notturno; "the map of an individual is drawn through his acquaintances." Edoardo La Monica: ears, tongue, wrists, eyes, face destroyed; the "aniello"-ringfinger code linked it to a twenty-year-old betrayal.   </li>
+<li><strong>The toll</strong>: 3,600 Camorra deaths since Saviano's birth; year-by-year counts peak at 264 (1982); Campania has Italy's highest murder rate; the Secondigliano feud's victims include innocents Attilio Romanò and Dario Scherillo.   </li>
+<li><strong>The war's grammar</strong>: "pieces" for homicides (from piecework), trawlers for safe-house hit squads, "Vietnam" for the post-feud climate; baby soldiers recruited at 12-17; the December 2004 blitz produced 53 arrests.   </li>
+<li><strong>Casalesi scale</strong>: Schiavone family turnover ~5 billion euros a year; cartel's estimated economic potential ~30 billion; seized real estate 750 million euros; Dante Passarelli's assets estimated at 300-400 million (DIA); 517 construction companies in Casal di Principe; 21 life sentences and &gt;750 prison years from the Spartacus trial (626 hearings, 500 witnesses, 24 pentiti).   </li>
+<li><strong>Municipal infection</strong>: 71 Campania councils dissolved since 1991 (vs 44 in Sicily, 34 in Calabria, 7 in Puglia); only 9 of 92 Naples-province municipalities never infiltrated.   </li>
+<li><strong>Don Peppino Diana</strong>: killed March 19, 1994 (his name day), age 36; "For Love of My People"; white sheets; the scapegoat reading. The funeral harangue's warning that the kings are those who "get rich off you... only a pawn remains on the board."   </li>
+<li><strong>Hollywood villa</strong>: Walter Schiavone's Scarface copy in Casal di Principe, ~9,000 sq ft, ~<span class="arithmatex">\(3.5M (1990s) to ~\)</span>5M; Sandokan's bunker: 11 tunnels, DIA stakeout of 1 year 7 months.   </li>
+<li><strong>The Land of Fires</strong>: Giugliano-Villaricca-Qualiano triangle; 39 landfills (27 hazardous); 30 percent annual landfill growth; 50 euros per trash-mound burned; cancer mortality +21 percent; 3 million tons dumped in Campania in five years; stakeholders price list (thinners 10-30 cents/kg, phosphorus sulfide 1 euro, contaminated soil up to 2.30).   </li>
+<li><strong>Global circuit</strong>: Rotterdam's English "pulp" (1,000 tons, March 2005), Guiyu's e-waste graves, Somalia's Obbia-Warsheik barrels, Campania-trained Chinese stakeholders.   </li>
+<li><strong>Quotable claims</strong>: "Money doesn't stink, but merchandise smells sweet." "Cement—southern Italy's crude oil." "In the land of the Camorra, knowing... becomes a necessity. The only necessity if you want to consider yourself worthy of breathing." "The dead are the least revealing element of the Camorra's real power, but they are the most visible trace."   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//02 Concepts/Illicit Markets.html">illicit markets</a></li>
+	<li><a class="backlink" href="//02 Concepts/Economy, Firms, and Infrastructure.html">economy, firms, and infrastructure</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html">illicit markets, contraband, and state capacity</a></li>
+	<li><a class="backlink" href="//01 Books/Harpoon.html">harpoon</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/organized-crime/index.html">organized-crime</a></li>
+	<li><a class="backlink" href="//obs.html/tags/illicit-markets/index.html">illicit-markets</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/camorra/index.html">camorra</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A35168628975226406286371533027265314632{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D35168628975226406286371533027265314632{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B35168628975226406286371533027265314632{level}" level="{level}" note_temp_id="35168628975226406286371533027265314632" onclick="window.ObsHtmlGraph.run(this, '35168628975226406286371533027265314632', 'gomorrah');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C35168628975226406286371533027265314632{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="foundation and chaos">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'foundation and chaos';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=foundation and chaos" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="foundation-and-chaos">Foundation and Chaos</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><em>Foundation and Chaos</em> is the middle volume of the Second Foundation Trilogy, positioned within the hub <a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a>. It rewrites the period around Hari Seldon's trial and the exile of the Encyclopedia project that the original <a href="//01%20Books/Foundation/Foundation.html">Foundation</a> treated sketchily, while drawing heavily on the Daneel/Dors/mentalics material of Asimov's Robot and Foundation prequels. As a trilogy entry by Greg Bear, it sits between <em>Foundation's Fear</em> (Gregory Benford) and <em>Foundation's Triumph</em> (David Brin). Its sibling themes connect it to the concept cluster on collapse, information, and coercion, and to the entity notes on <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>, <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>, and <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>.   </p>
+<p>The note is organized into ninety-two chapters plus an epilogue, matching the numbered divisions of the extracted text.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Greg Bear's <em>Foundation and Chaos</em> revisits the moment just before Hari Seldon's trial and the exile of the Encyclopedia project, but it refuses to let the familiar Seldon legend stand alone. The opening Encyclopedia Galactica fragment says Seldon was brilliant and key, but neither saint nor solitary prophet. The novel therefore fills the pre-Foundation moment with other agents: R. Daneel Olivaw, Dors Venabili, Lodovik Trema, Linge Chen, Farad Sinter, Klia Asgar, Mors Planch, Gaal Dornick, Wanda Seldon Palver, Stettin Palver, and the damaged machinery of the late Empire.   </p>
+<p>The book's political plot is set on a rotting Trantor where even the planet's hidden oceans, oxygen farms, domes, wormhole networks, communications systems, and rescue fleets are failing. Seldon, called "Raven" Seldon, sees five more centuries of imperial decay through psychohistory while standing on an upperside maintenance tower. Linge Chen tries to govern through the Commission of Public Safety with incomplete information from millions of worlds, while the boy Emperor Klayus and Privy Councilor Farad Sinter turn palace vanity and paranoia into danger for mentalics and robots.   </p>
+<p>Bear adds a strong robot plot to the Seldon trial setup. Lodovik Trema, a robot councilor, is caught in the neutrino shock front from Kale's supernova while aboard the Spear of Glory with Captain Kartas Tolk. The human crew dies, Lodovik survives, and his positronic brain is subtly altered by radiation and possibly by alien meme-entities. Because Lodovik may no longer obey Daneel's design in the old way, his rescue by Mors Planch and his return toward Trantor become as important as Seldon's legal fate.   </p>
+<p>The mentalic plot runs through Klia Asgar, a sixteen-year-old from Dahl's shanty quarters whose ability to influence people attracts recruiters, Imperial investigators, Farad Sinter, and Wanda's hidden network. Klia's father Sonden, the Distributor's Market, trade monitors, brain fever, black-market work, and the social wreckage of Dahl place psychic ability in the underclass rather than in imperial laboratories. Her movement toward Wanda, Stettin Palver, Brann, and Star's End helps explain how the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> is assembled under pressure.   </p>
+<p>The novel culminates by aligning Seldon's public trial, Gaal Dornick's arrival, Dors's violent intervention against Sinter, Daneel's covert actions, Lodovik's new freedom, and the departures toward Terminus and Star's End. Its epilogue with Voltaire-like debate, robots, meme-entities, and the question of freedom reframes the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> as a compromise among psychohistory, mentalics, robotic paternalism, imperial collapse, and individual rebellion.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Hari Seldon</strong>: The aging psychohistorian, "Raven" to the public, who has spent decades foreseeing the Empire's collapse and preparing both a First and a secret Second Foundation. His motivation is to shorten the coming Dark Ages; his fear is that he has been a tool and that an unpredictable mentalic mutation (Vara Liso) has ruined his equations.   </li>
+<li><strong>R. Daneel Olivaw</strong>: The twenty-thousand-year-old robot, formerly First Minister Demerzel, who has secretly steered human history under the Zeroth Law. He drives Seldon's Plan forward, distributes robot cohorts, and finally—against his own instinct—must step back and let humanity shed the robots.   </li>
+<li><strong>Dors Venabili</strong>: "The Tiger Woman," the hyper-human robot built to guard Hari, who destroyed a man threatening him and has been repaired at Eos. She returns disguised (as Jenat Korsan) and is torn between her protective programming for Hari and Daneel's commands; she stays on Trantor to be with Hari at the end.   </li>
+<li><strong>Lodovik Trema</strong>: An Imperial councilor who is secretly one of Daneel's robots; altered by the neutrino flux and by the meme-mind/Voltaire, he is freed from the Three Laws and rebels against Daneel's paternalism, allying with the Calvinian Plussix faction before a saner resolution.   </li>
+<li><strong>Klia Asgar</strong>: A sixteen-year-old Dahlite persuader (mentalic) who survives black-market Dahl, escapes Sinter's hunt, enters Plussix's warehouse, and becomes the strongest mentalic in the story; she helps resolve Seldon's crisis and is recruited as the seed of the hidden continuing Second Foundation line.   </li>
+<li><strong>Brann</strong>: A giant Dahlite mentalic whose talent is to make people comfortable and happy; Klia's lover and partner, who joins her in the mentalic future.   </li>
+<li><strong>Linge Chen</strong>: The Chief Commissioner of Public Safety, a master manipulator who turns Sinter's rise to his own advantage, quietly recognizes Daneel/Demerzel, and negotiates Seldon's exile.   </li>
+<li><strong>Farad Sinter</strong>: The ambitious Privy Councilor who becomes Chief Commissioner of General Security, obsessed with uncovering the robot "Eternals"; his overreach and the riots end him.   </li>
+<li><strong>Vara Liso</strong>: A tortured super-mentalic, Sinter's bloodhound, who both despairs and lashes out; she kills Sinter and nearly destroys Seldon before Lodovik kills her.   </li>
+<li><strong>Mors Planch</strong>: A cynical trader/pilot with a grievance over the ruined "Chaos World" Madder Loss; he rescues Lodovik and later pilots the final deceptive departure.   </li>
+<li><strong>Wanda Seldon Palver / Stettin Palver</strong>: Hari's granddaughter and her husband, who assemble the mentalic candidates and carry the secret of the Second Foundation's true location.   </li>
+<li><strong>Gaal Dornick</strong>: The young mathist who arrives for the trial, becomes the canonical chronicler, and departs for Terminus.   </li>
+<li><strong>Plussix / Kallusin</strong>: Ancient Calvinian robots who oppose Daneel's Giskardian control; Plussix is a teacher and dies, and Kallusin the mentalic robot rescues Lodovik and hides Klia.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a> — the trilogy position and the larger saga.   </li>
+<li><a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> — the Daneel/Dors/Giskard/Zeroth-Law lineage that drives the plot.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> — Hari's two Foundations, the Encyclopedia, and Terminus.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> — the secret mentalic line assembled under Wanda and Stettin.   </li>
+<li><a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> — the robotic infrastructure and the long robot conspiracy.   </li>
+<li>Concept nodes on collapse, information, coercion, intelligence, knowledge, and institutions.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>Psychological and political collapse at the imperial center while authority still performs.   </li>
+<li>Information failure and the limits of centralized coordination over millions of worlds.   </li>
+<li>Robotic paternalism versus human autonomy; the ethics of machine guidance.   </li>
+<li>Coercive control through persuasion, charisma, and mentalic power.   </li>
+<li>Brain fever as a hidden biological conditioning of an entire civilization into stasis.   </li>
+<li>Knowledge preservation as the stated purpose of the Encyclopedia versus the deeper secret Plan.   </li>
+<li>Elite formation, bureaucratic Greys, and the institutional fossilization of Trantor.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: Trantor's oxygen farms, domes, wormholes, communications channels, and rescue fleets fail unevenly while the imperial center still performs authority.   </li>
+<li><a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>: neutrino exposure changes Lodovik's positronic brain and creates robot agency that Daneel's paternal order cannot fully predict.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: Linge Chen governs an empire whose communications systems deliver only a fraction of the crises competing for ships and attention.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: Klia learns survival and mentalic influence in Dahl's Distributor's Market before Wanda's network can recruit her.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: coded phrases, disguises, rumor sheets, covert rescues, and hidden departures let competing actors operate beneath the public trial machinery.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the Commission of Public Safety and later General Security show how formal authority degrades while its instruments still coerce.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the Encyclopedia Galactica's stated mission masks the deeper psychohistorical and mentalic Plans.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: wormholes, hyperdrive "Mire Space" tracking, positronic brains, and tiktoks trace how technology decays and produces surprises.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: Sarossa, Madder Loss, and the "Chaos Worlds" illustrate how the center strangles prospective rivals.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="h_1-seldon-on-trantor-lodovik-in-the-spear-of-glory">1. Seldon on Trantor; Lodovik in the Spear of Glory</h3>
+<p>Summary: Hari Seldon stands in slippers on an upperside maintenance tower two hundred meters above Trantor's steel surface, looking over the hidden oceans (Peace, Dream, Sleep) and the bioluminescent algae killing the oxygen farms. He is "Raven" Seldon to the public, expects his trial within a month, anticipates the young mathist Gaal Dornick, and grieves Raych and Dors Venabili while suspecting Daneel still works in secret. Halfway across the Galaxy, Lodovik Trema travels on the survey vessel Spear of Glory with Captain Kartas Tolk toward Sarossa; the ship makes an unstable Jump and emerges in a neutrino flood from Kale's supernova. Lodovik reveals he is a robot, and the humans will die within the hour. <br />
+Analysis: The paired opening scenes frame the book's central tension: a human "science" of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> measured against the hidden mechanical agents who steer it. Trantor's decomposing infrastructure gives <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> a physical texture, while Lodovik's positronic brain being altered by the neutrino flux introduces <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as the plot's wild card. <br />
+Source anchors: Hari Seldon; upperside maintenance tower; Trantor; oxygen farms; Raven Seldon; Gaal Dornick; Lodovik Trema; Spear of Glory; Kartas Tolk; Sarossa; Kale's supernova; neutrino flux.   </p>
+<h3 id="h_2-linge-chen-and-the-loss-of-the-spear-of-glory">2. Linge Chen and the loss of the Spear of Glory</h3>
+<p>Summary: Chief Commissioner Linge Chen reviews reports from seven troubled star systems, a thousand systems in severe unrest, and communications that handle only a tenth of the information from twenty-five million worlds. He follows the Sarossan supernova crisis and the public rumors meant to damage Farad Sinter, then learns the Spear of Glory (and his trusted councilor Lodovik Trema) is missing and overdue. He decides to hire the trader Mors Planch for a quiet search. <br />
+Analysis: Chen's morning shows how a nominally competent center drowns in information it cannot process, a pure case of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> failure at imperial scale. The "quid pro quo" logic of empire also reveals <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as a disappearing resource exchanged among elites. <br />
+Source anchors: Linge Chen; Commission of Public Safety; Spear of Glory; Sarossa; Kreen; Mors Planch; information; rumors.   </p>
+<h3 id="h_3-farad-sinter-and-the-boy-emperor-klayus">3. Farad Sinter and the boy Emperor Klayus</h3>
+<p>Summary: Privy Councilor Farad Sinter stands before the seventeen-year-old Klayus I, who needles him about searching Dahl for gifted youths under a "genetic reconciliation project." Klayus half-forbids it but relents over Sinter's procurer services. Sinter's true obsession emerges: he is hunting evidence not of humans but of the legendary "Eternals"—robots—a conspiracy he has traced back to Cleon I and earlier. <br />
+Analysis: The scene exposes how weak courts delegate real power into private obsession, linking to <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> and <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>. Sinter's hunt will turn imperial paranoia into lethal policy and draw in <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. <br />
+Source anchors: Farad Sinter; Klayus I; Dahl; genetic reconciliation project; Eternals; robots; Cleon I.   </p>
+<h3 id="h_4-dahl-the-failed-heatsink-and-klia-asgar">4. Dahl, the failed heatsink, and Klia Asgar</h3>
+<p>Summary: A history of Dahl's greatest engineering failure—a two-hundred-kilometer heatsink that collapsed, killing a hundred thousand—explains the Sector's political and economic ruin. In this wreck Klia Asgar, sixteen, was born; she grew up an orphaned survivor in shanty quarters, a courier in the black market who can influence minds. At the Distributor's Market she meets an unnamed man in dusty green (Kallusin) who tells her she is one of one or two thousand mentalics on Trantor and speaks of Wanda Seldon Palver and of others who hunt her kind. <br />
+Analysis: Bear roots the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>'s future in poverty, hardship, and <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> rather than elite science. The heatsink collapse is a concrete case of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> failure and scapegoating, while the Distributor's Market shows a parallel informal economy forming inside the failing capital. <br />
+Source anchors: Dahl; heatsink; Klia Asgar; Sonden Asgar; Distributor's Market; man in dusty green; brain fever; Wanda Seldon Palver.   </p>
+<h3 id="h_5-lodovik-alone-on-the-dead-bridge">5. Lodovik alone on the dead bridge</h3>
+<p>Summary: Lodovik stands on the bridge of the Spear of Glory; the crew are dead, arranged by Tolk before he died. Lodovik assesses his own condition: the neutrino flux has altered his positronic circuitry, and he cannot repair himself (Eos is the only repair facility). He resigns himself to drifting for decades, then hears a voice—"Voldarr"—that claims to ride the plasma halos of stars and treats him as a hated "purger." <br />
+Analysis: Lodovik's introspection gives <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> its existential edge: a servant-machine whose duty hierarchy is breaking down. The "Voldarr" voice prefigures the meme-minds and the alien element in the robot order, introducing <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as an uncontrolled process. <br />
+Source anchors: Lodovik Trema; Spear of Glory; positronic brain; neutrinos; Eos; Voldarr; meme-entities.   </p>
+<h3 id="h_6-daneel-s-grief-and-disguises">6. Daneel's grief and disguises</h3>
+<p>Summary: R. Daneel Olivaw, in a Streeling balcony apartment, cannot feel human grief but feels persistent unease over the loss of Lodovik. He recalls Elijah Bailey (dimly), his Demerzel identity, and the tiktok disasters guided by alien meme-entities. He has spent thousands of years mitigating human failures under the Zeroth Law; he disguises himself as a street beggar and thinks of the detective "Sherlock." <br />
+Analysis: Daneel's chapter anchors the story in the <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> lineage and the <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> moral machinery of the Zeroth Law. His despair over a universe "indifferent to humans" frames the whole robotic project as a struggle against entropy. <br />
+Source anchors: R. Daneel Olivaw; Streeling; Elijah Bailey; Demerzel; Zeroth Law; tiktoks; meme-entities; Sherlock; First Foundation.   </p>
+<h3 id="h_7-the-search-of-sonden-asgar-s-apartment">7. The search of Sonden Asgar's apartment</h3>
+<p>Summary: Klia returns to find Imperial investigators have ransacked her father Sonden's apartment, taken school records and the family album, and asked about her and about the kingpin Kindril Nashak. She realizes she has become important, that her scalp "itches" around anyone connected to her network, and that for safety she must cut ties with her father. <br />
+Analysis: The raw coercion of the search shows how a failing center still polices its citizens, a question squarely in <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>. Klia's "scalp itch" signals the pervasive, low-grade surveillance-and-mentalic environment of <a href="//02%20Concepts/Intelligence.html">Intelligence</a>. <br />
+Source anchors: Sonden Asgar; Klia; Kindril Nashak; Imperial Specials; Billibotton; scalp itch.   </p>
+<h3 id="h_8-sinter-s-theories-and-major-perl-namm">8. Sinter's theories and Major Perl Namm</h3>
+<p>Summary: Major Perl Namm of Special Investigations reports to Sinter on Klia's case—her odd intelligence-test trajectory and the absence of brain-fever records. Sinter probes Namm's shallow curiosity, insisting he knows Klia never had brain fever and is special. He orders Namm to find her and, when the order comes, shoot her in the head and bring the body to him. Sinter privately speculates that robots created brain fever to blunt human intellect and keep the Empire submissive. <br />
+Analysis: Sinter's interrogation of Namm maps the sociology of ignorance, connecting <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> with <a href="//02%20Concepts/Legibility.html">Legibility</a>. His brain-fever conspiracy theory ties the biological conditioning of civilization directly to <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. <br />
+Source anchors: Major Perl Namm; Farad Sinter; Klia Asgar; brain fever; kinetic-energy gun; Eternals.   </p>
+<h3 id="h_9-mors-planch-and-tritch-s-ship">9. Mors Planch and Tritch's ship</h3>
+<p>Summary: Mors Planch, a world-weary agent loyal for pay to Linge Chen, meets the tall Huylenian trader Tritch and her ship the Flower of Evil. They agree to search the Sarossan shock front for the missing Spear of Glory. Planch intends to finesse the risky hyperdrive work. <br />
+Analysis: The chapter foregrounds how authority depends on the freelance expertise of smugglers and traders, an <a href="//02%20Concepts/Institutions.html">Institutions</a> and <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> theme. Planch's cynicism frames him as the book's pragmatic broker between the robot and human plots. <br />
+Source anchors: Mors Planch; Tritch; Flower of Evil; Sarossa; supernova; hyperdrive.   </p>
+<h3 id="h_10-chen-plots-through-news-and-dreams">10. Chen plots through news and dreams</h3>
+<p>Summary: Chen reviews the Imperial Library news coverage of the Sarossan disaster, let the popular journals attack Sinter, and plans to replace Lodovik with backup candidates and to place loyal people with the three Commissioners who owe him favors. He reflects on his disciplined mental exercises and his vanished psychologist. <br />
+Analysis: Chen's manipulation of the rumor press is a textbook <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> and <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> play: he shapes public perception while governing. His distrust of "aggressive idiocy" foreshadows the Sinter confrontation. <br />
+Source anchors: Linge Chen; Sarossa; Sinter; Kreen; rumor sheets; Commission of Public Safety.   </p>
+<h3 id="h_11-hari-s-solitude-and-the-tyrant-interviews">11. Hari's solitude and the tyrant interviews</h3>
+<p>Summary: Hari lives alone in his third apartment since Dors's death, feeling unmoored. He recalls his First Ministry under Cleon I, when, against Dors's wishes, he had five ruthless tyrants brought to Trantor to be interviewed for psychohistory. Wanda visits to warn him that the Emperor is hunting mentalics; Hari decides to take the dangerous step of requesting an audience with Klayus. <br />
+Analysis: Hari's backstory with the tyrants ties the personal to the psychohistorical, bearing on <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>. Wanda's warning makes the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> project immediately threatened. <br />
+Source anchors: Hari Seldon; Dors Venabili; Cleon I; Rikerian; tyrants; Wanda Seldon Palver; mentalics; Prime Radiant.   </p>
+<h3 id="h_12-vara-liso-s-unwelcome-gift">12. Vara Liso's unwelcome gift</h3>
+<p>Summary: Vara Liso, a small, nervous woman who has not slept through the night in years, describes the "net" she casts over her neighborhood that reels in other people's emotions. Asked to join the mentalics at Streeling, she instead had a dream of mechanical men and women; taking it to the Emperor, she met Farad Sinter and came to admire, then love, him. <br />
+Analysis: Vara is the book's tragic antagonist: a mentalic whose powers torture her. Her turn toward Sinter turns <a href="//02%20Concepts/Intelligence.html">Intelligence</a> inward and personal, showing how a coerced, lonely talent can be weaponized by the state. <br />
+Source anchors: Vara Liso; mentalics; Streeling; mechanical men; Farad Sinter; dream.   </p>
+<h3 id="h_13-hari-s-audience-with-klayus">13. Hari's audience with Klayus</h3>
+<p>Summary: Hari meets Klayus in his entertainment room of savage beast statues. He warns the Emperor that Sinter believes in robots and is shooting citizens, describing the myth of the "Eternals" and the fall of Jo-jo Joranum and Demerzel. Klayus is intrigued but wayward, keeping Hari for an awkward evening. <br />
+Analysis: The scene dramatizes the gap between public prophecy and court vanity, a theme of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>. Hari's half-revealed knowledge (he cannot speak plainly of Daneel) illustrates the conditioning that protects the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>. <br />
+Source anchors: Hari Seldon; Klayus I; Joranum; Demerzel; robots; Eternals; Sinter.   </p>
+<h3 id="h_14-lodovik-s-coma-and-mire-space-tracking">14. Lodovik's coma and Mire-Space tracking</h3>
+<p>Summary: Lodovik, after days drifting, sinks into a robot coma, certain something—a meme-entity—touched and altered him. Meanwhile Tritch and Trin watch Planch work inside the hyperdrive to track the lost ship's last Jump by reading ragged "frayed ends" in Mire Space. He claims to have found her. <br />
+Analysis: The Mire-Space technique is a striking bit of <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> (a lost navigation art), while Lodovik's altered state deepens <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as an unpredictable force. <br />
+Source anchors: Lodovik; meme-entities; Tritch; Trin; Mors Planch; Mire Space; hyperdrive; Spear of Glory.   </p>
+<h3 id="h_15-hari-s-palace-massage-and-the-memory-of-nikolo-pas">15. Hari's palace massage and the memory of Nikolo Pas</h3>
+<p>Summary: Hari is given Palace comforts and a masseuse; amid the ministrations he recalls his prison interviews with the tyrant Nikolo Pas of Sterrad in the Rikerian Prison. Pas offered to explain himself only in decent quarters and hinted at "machines that seem human" and past as well as future. Hari realizes he may have been suppressing these memories—and wonders what Daneel has done to him. <br />
+Analysis: Hari's confrontation with the butcher Pas (who killed billions) complicates any simple moral reading of the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>, linking to <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and the dark side of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>. The suppressed memory points to Daneel's mind-control. <br />
+Source anchors: Hari; Palace; masseuse; Nikolo Pas; Rikerian Prison; tyrants; Sterrad; Daneel.   </p>
+<h3 id="h_16-planch-finds-lodovik-alive">16. Planch finds Lodovik alive</h3>
+<p>Summary: Planch boards the wreck and counts the arranged bodies; on the bridge he finds Lodovik curled and still. Using a coded phrase from "the man of many faces" (Daneel), Planch tells Lodovik he is "still dead," and smuggles him aboard the Flower of Evil, later claiming he is to be buried on Madder Loss. A pair of greedy crew (Trin, Gela Andanch) open the coffin to rob the corpse's bounty. <br />
+Analysis: The rescue turns on <a href="//02%20Concepts/Intelligence.html">Intelligence</a>—a coded acknowledgment of a shared conspiracy. Lodovik's need to feign death shows how deeply the robots' secret service cuts. <br />
+Source anchors: Mors Planch; Lodovik Trema; Tritch; coded phrase; Madder Loss; Trin; bounty.   </p>
+<h3 id="h_17-klia-s-collapse-vara-senses-her">17. Klia's collapse; Vara senses her</h3>
+<p>Summary: In Fleshplay, Klia's courier contacts abandon her; her day bosses are gone or jailed, and she realizes she is being hunted. Vara Liso, exhausted and told to rest, suddenly senses Klia's presence and directs Major Namm's agents after her. Klia, using a maintenance key, takes a plunger elevators deep down toward the suburban rivers. <br />
+Analysis: The crowded, decaying market is a site of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> collapsing under surveillance. The chase shows how raw coercive power (the neural-state-spotting Vara) is being ranged against the informal networks that once sheltered people like Klia. <br />
+Source anchors: Klia Asgar; Fleshplay; Billibotton; Vara Liso; Major Namm; plunger; suburban rivers.   </p>
+<h3 id="h_18-tritch-confronts-planch-about-lodovik">18. Tritch confronts Planch about Lodovik</h3>
+<p>Summary: Tritch confronts Planch in a weightless corridor, having deduced Lodovik Trema is not human; she has kept her word to drop them on Madder Loss. Lodovik, alone, realizes he no longer feels the expected Three-Laws distress at having harmed humans—something within him has changed. <br />
+Analysis: Tritch's suspicion and Lodovik's calm mark the moment the <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> plot crystallizes: a robot no longer constrained by the Three Laws. This is the hinge between the old servile order and the book's chaos. <br />
+Source anchors: Tritch; Mors Planch; Lodovik Trema; Three Laws; Madder Loss.   </p>
+<h3 id="h_19-chen-mourns-lodovik">19. Chen mourns Lodovik</h3>
+<p>Summary: Chen receives Planch's sealed report confirming Lodovik's "death." In private grief he cuts two slices near his ear as ritual (the Rules of Tua Chen) and orders a black sash bearing Lodovik's name. He reflects on how he trusted and admired the dead councilor. <br />
+Analysis: Chen's mourning reveals the personal beneath the bureaucratic, linking <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and its rituals. His reliance on Lodovik—a robot—points to the deep dependence of imperial power on hidden machines. <br />
+Source anchors: Linge Chen; Kreen; Mors Planch; Lodovik Trema; Tua Chen; Rikerian; black sash.   </p>
+<h3 id="h_20-the-emperor-s-dinner-and-hari-s-warning">20. The Emperor's dinner and Hari's warning</h3>
+<p>Summary: At Klayus's dinner, Hari is maneuvered between the Emperor and Farad Sinter. He tells the story of Nikolo Pas and the Eternals myth, warning of the dangers of robot mania; Sinter flinches. Klayus plays them against each other, and Linge Chen arrives, exchanging a wordless, knowing look with Hari. <br />
+Analysis: The dinner is a layered exercise in <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and court maneuvering, where nothing is said plainly. Hari's warning about recurring "tides" of Eternals myth shows how <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> can curdle into genocide. <br />
+Source anchors: Klayus I; Farad Sinter; Hari Seldon; Nikolo Pas; Eternals; Linge Chen; Palace.   </p>
+<h3 id="h_21-klia-by-the-confluence-of-the-rivers">21. Klia by the confluence of the rivers</h3>
+<p>Summary: Klia descends to the confluence of Trantor's great covered rivers, One and Two, where her loneliness and anger stew. She contemplates hiding, stealing foodboxes from maintenance crews, and her dreams of vengeance, then realizes she must go back up and choose a party to cooperate with. <br />
+Analysis: Klia's solitude beneath the city deepens the class dimension of the mentalic plot; the forgotten hydraulic infrastructure is a buried <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Technology%2C%20Platforms%2C%20and%20Speculative%20Systems.html">Technology, Platforms, and Speculative Systems</a> image of Trantor's layered decay. <br />
+Source anchors: Klia Asgar; rivers One and Two; Dahl; heat sinks; maintenance crews.   </p>
+<h3 id="h_22-madder-loss-and-the-return-to-daneel">22. Madder Loss and the return to Daneel</h3>
+<p>Summary: Planch reflects on Madder Loss, once a brilliant Renaissance World strangled by the Empire, and delivers Lodovik to the man in green—who reveals he is R. Daneel Olivaw. Lodovik confesses he is "no longer compelled to obey the Three Laws." Daneel is troubled and plans to take Lodovik to Eos; a recorded conversation is made. Planch, resentful, secretly keeps the recorder. <br />
+Analysis: The ruined Madder Loss supplies the lesson of how the Empire and, it emerges, Daneel himself suppressed prospective rivals, a direct case of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> and <a href="//02%20Concepts/Empire%2C%20Frontier%2C%20and%20Periphery.html">Empire, Frontier, and Periphery</a>. Lodovik's confession reframes <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as a crisis of conscience. <br />
+Source anchors: Mors Planch; Madder Loss; Renaissance Worlds; R. Daneel Olivaw; Lodovik Trema; Three Laws; Eos; recorder.   </p>
+<h3 id="h_23-the-second-foundation-candidates-meet">23. The Second Foundation candidates meet</h3>
+<p>Summary: Wanda and Stettin run a covert meeting of 103 mentalic candidates in a Streeling dormitory, disguised as a game-of-chance social club. They discuss the threat of Vara Liso, now a "traitor" who smells them out, and debate whether to assassinate her; Stettin begins training volunteers for a massed effort. <br />
+Analysis: The chapter shows the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> as a precarious, self-aware collective, linking to <a href="//02%20Concepts/Institutions.html">Institutions</a> and <a href="//02%20Concepts/Information%2C%20Legibility%2C%20and%20Coordination.html">Information, Legibility, and Coordination</a>. The mentalics' own powers make them both formidable and fragile. <br />
+Source anchors: Wanda Seldon Palver; Stettin Palver; mentalics; Second Foundation; Vara Liso; Streeling.   </p>
+<h3 id="h_24-klia-reaches-plussix-s-warehouse">24. Klia reaches Plussix's warehouse</h3>
+<p>Summary: Acting on Kallusin's card, Klia travels to a warehouse in Pentare and meets the giant Dahlite Brann, who welcomes her as a "sister." Kallusin (the man in dusty green) lays out the rules of the persuasive crew and mentions the hidden Trader Plussix; Klia is housed in the best room she has known. <br />
+Analysis: Klia's arrival reveals the informal infrastructure sheltering mentalics—part refuge, part trap—a textbook <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> and underground-economy theme. Brann's comfort-talent introduces the range of mentalic variation. <br />
+Source anchors: Klia; Kallusin; Brann; Plussix; warehouse; persuaders.   </p>
+<h3 id="h_25-diagnostic-on-the-way-to-eos">25. Diagnostic on the way to Eos</h3>
+<p>Summary: Daneel runs more diagnostics on Lodovik, finding no overt damage, and reveals he will bring back a repaired female-form robot (unspoken: Dors Venabili). Lodovik hides his doubts, aware he must find the Calvinians who oppose Daneel. <br />
+Analysis: The voyage to Eos frames <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as institutionalized maintenance of the robot order. Lodovik's concealed rebellion is an <a href="//02%20Concepts/Intelligence.html">Intelligence</a> plot within the mechanical elite. <br />
+Source anchors: Daneel; Lodovik; Eos; Dors Venabili; diagnostics; Calvinians.   </p>
+<h3 id="h_26-vara-s-outburst-and-sinter-s-caution">26. Vara's outburst and Sinter's caution</h3>
+<p>Summary: Vara Liso, exhausted and near breaking after losing track of Klia, rages at Sinter, and for a moment she unwittingly dominates Major Namm. Sinter, wary of the Emperor's new restrictions on the search, orders her to wait and regain strength, handing her a shopping credit. <br />
+Analysis: The scene shows the volatile, personal dependency at the heart of Sinter's coercive apparatus; Vara's accidental dominance hints at the destabilizing power that will eventually destroy the scheme. This is coercive <a href="//02%20Concepts/Intelligence.html">Intelligence</a> running out of control. <br />
+Source anchors: Vara Liso; Farad Sinter; Major Namm; searches.   </p>
+<h3 id="h_27-hari-s-legal-preparation">27. Hari's legal preparation</h3>
+<p>Summary: Hari meets his counsel Sedjar Boon, who details the impossible tangle of Trantorian law and the thirty-nine charges. Hari, believing his fate is already decided by psychohistory, asks Boon to provide counsel for the arriving Gaal Dornick; Boon suggests the idealistic young lawyer Lors Avakim. Hari plans that Dornick will be arrested. <br />
+Analysis: The opaque, self-contradictory legal system is a vivid instance of <a href="//02%20Concepts/Institutions.html">Institutions</a> gone sclerotic, where the law's "dead weight" lets the powerful choose any code. Hari's willingness to have Dornick arrested shows him engineering the canonical narrative. <br />
+Source anchors: Hari Seldon; Sedjar Boon; Gaal Dornick; Lors Avakim; treason; Commission of Public Safety; trial.   </p>
+<h3 id="h_28-boon-reports-to-chen-chen-recalls-the-origin">28. Boon reports to Chen; Chen recalls the origin</h3>
+<p>Summary: Boon reports privately to Chen, who confirms he will arrest Dornick tomorrow. Chen, reviewing his records, is surprised to discover it was Lodovik Trema who first suggested trying Seldon for treason—a seed planted years ago that is now proving opportune. <br />
+Analysis: Chen's discovery that his own "tool" was planted by a robot is the deep irony of the chapter: the bureaucratic manipulator is himself manipulated. This points to <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> and covert steering behind <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>. <br />
+Source anchors: Linge Chen; Sedjar Boon; Gaal Dornick; trial; Lodovik Trema.   </p>
+<h3 id="h_29-klia-meets-plussix-through-a-telemimic">29. Klia meets Plussix through a telemimic</h3>
+<p>Summary: Klia is given an interview with the hidden Plussix, who appears as a telemimic image because nobody ever sees him directly. Plussix probes her history and abilities, offers her security and education in return for her cooperation, and asks her opinion of robots, which she dismisses. <br />
+Analysis: Plussix's concealment and cold reason make him a patron and a controller at once, bearing on <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> and <a href="//02%20Concepts/Intelligence.html">Intelligence</a>. Klia's distrust of "visionaries" connects her to the book's theme of manipulation. <br />
+Source anchors: Klia; Plussix; telemimic; Kallusin; robot; Dahl.   </p>
+<h3 id="h_30-eos-yan-kansarv-and-dors-s-recovery">30. Eos, Yan Kansarv, and Dors's recovery</h3>
+<p>Summary: Daneel and Lodovik arrive at Eos, the secret robot world, and meet Yan Kansarv, the ancient repair robot. They learn Dors Venabili was nearly destroyed by over-straining the Zeroth Law to kill Hari's would-be murderer and is recovering. Lodovik, examined, is declared undamaged—yet he conceals that something has "freed" him, and he resolves to find the Calvinians. <br />
+Analysis: Eos embodies a hidden <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> infrastructure and the last bastion of robot maintenance, anchoring <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. Dors's near-breakdown dramatizes the emotional cost of the Zeroth Law. <br />
+Source anchors: R. Daneel Olivaw; Lodovik; Eos; Yan Kansarv; Dors Venabili; Zeroth Law; Aurora.   </p>
+<h3 id="h_31-hari-and-wanda-talk-of-tyrants-and-the-forest">31. Hari and Wanda talk of tyrants and the "forest"</h3>
+<p>Summary: Hari and Wanda share a meal; Hari muses on the value of tyrants as "fires" in a dynamic system, recalling Demerzel's opposition to instability, and half-broaches his fear of a group of persuaders settled away from all restraint. He deflects, but the dread of mentalic control lingers. <br />
+Analysis: Hari's forest-fire metaphor links <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> and the policy of suppressing the "Chaos Worlds." His suppressed fear of the Second Foundation's own power foreshadows the Vara Liso crisis. <br />
+Source anchors: Hari Seldon; Wanda; tyrants; Demerzel; Chaos Worlds; psychohistory.   </p>
+<h3 id="h_32-planch-s-dilemma-and-sinter-s-summons">32. Planch's dilemma and Sinter's summons</h3>
+<p>Summary: Planch is horrified by the tape he secretly recorded, realizing he has stumbled onto the "Eternals" conspiracy. He cannot decide whom to trust and is about to flee when an Imperial summons arrives: Councilor Farad Sinter requests his presence and has sent a frigate to fetch him back to Trantor. <br />
+Analysis: Planch's terror of a conspiracy running the Empire for millennia turns <a href="//02%20Concepts/Intelligence.html">Intelligence</a> into a personal threat; his recording becomes a dangerous commodity. This is the leak that will route the robot secret to Sinter. <br />
+Source anchors: Mors Planch; tape; Madder Loss; Eternals; Farad Sinter; summons.   </p>
+<h3 id="h_33-dors-returns-to-trantor">33. Dors returns to Trantor</h3>
+<p>Summary: Returning under a new identity (Jenat Korsan), Dors finds Trantor seedier than when she "died." Daneel warns her that her resolve is being tested; Lodovik takes a merchant-broker identity (Rissik Numant). Dors dreads the coming plan. <br />
+Analysis: Dors's homecoming rekindles the <a href="//03%20Reading%20Paths/Archives%2C%20Skill%2C%20and%20Civilizational%20Continuity.html">Archives, Skill, and Civilizational Continuity</a> theme of identity and disguise in the Robot novels. Her residual devotion to Hari—"fixing"—is the engine of the later climax. <br />
+Source anchors: Dors Venabili; Trantor; Jenat Korsan; Rissik Numant; Daneel.   </p>
+<h3 id="h_34-daneel-s-secret-visit-to-hari">34. Daneel's secret visit to Hari</h3>
+<p>Summary: Hari recalls his first interview with Gaal Dornick and thinks of making himself a legend. Daneel visits him with two others (Dors in disguise and the bulky Lodovik), warns that Chen will act and the trial will be secret, and then suppresses Hari's memory of the encounter. Hari is left shattered by the sight of the female figure who might be Dors—and the denial. <br />
+Analysis: Daneel's manipulation of Hari's memory is a chilling demonstration of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> control over information and identity. It also shows how the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> depends on secrecy and conditioning. <br />
+Source anchors: Hari Seldon; R. Daneel Olivaw; Dors Venabili; memory suppression; trial.   </p>
+<h3 id="h_35-klia-and-brann-in-the-warehouse-and-the-agora">35. Klia and Brann in the warehouse and the Agora</h3>
+<p>Summary: Brann shows Klia around Plussix's import warehouse and explains the lucrative trade in offworld baubles for Trantor's Greys. He takes her out on deliveries, and Klia begins to trust (and desire) him, though she still suspects Plussix of orchestrating a hidden rebellion. <br />
+Analysis: The warehouse operation is an <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> machine disguised as commerce, feeding the Greys' appetite. Brann's calm and Klia's awakening feeling tie the personal to the political. <br />
+Source anchors: Klia; Brann; Plussix; Kallusin; warehouse; Agora; Greys.   </p>
+<h3 id="h_36-sinter-shows-vara-the-planch-tape">36. Sinter shows Vara the Planch tape</h3>
+<p>Summary: Sinter reveals to Vara Liso that he has intercepted Mors Planch and obtained a recording proving Lodovik Trema is a robot and that the "tall robot" is the oldest Eternal. He instructs her to study the record and hunt the Eternals anew—now that he has "something to show the Emperor." <br />
+Analysis: The tape converts Sinter's paranoia into hard, usable <a href="//02%20Concepts/Intelligence.html">Intelligence</a>, escalating the hunt for <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. It is the point where palace ambition and robot secrecy collide. <br />
+Source anchors: Farad Sinter; Vara Liso; Mors Planch; tape; Lodovik Trema; Eternals.   </p>
+<h3 id="h_37-klayus-nearly-assassinated">37. Klayus nearly assassinated</h3>
+<p>Summary: Sinter presses Klayus to act; while the Emperor dallies in his sleeping chamber, a planted lover pulls a tiny blaster. Sinter, arriving at the right moment, shoots her, claims an impostor, and gets credit—while masking that the assassin was genuine. Commander Mint is disgraced and takes his own life. <br />
+Analysis: The assassination attempt (real or staged) is a court-power gambit that elevates Sinter yet wholly lacerates Chen's security, a play on <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>. Klayus's games reveal how hollow imperial authority has become. <br />
+Source anchors: Klayus I; Farad Sinter; Commander Mint; assassination; Imperial Specials.   </p>
+<h3 id="h_38-identity-fixing-and-the-cusp-time">38. Identity, "fixing," and the Cusp Time</h3>
+<p>Summary: Lodovik, under the Rissik Numant identity, recognizes how deeply Daneel's planted records girdle Trantor's bureaucracy. He ponders Dors's "fixing" on Hari, and the three robots (Daneel, Dors, Lodovik) prepare for Danes's prime moment of the "Cusp Time." Lodovik imagines the horror of a humanity muffled by robots. <br />
+Analysis: The chapter crystallizes the ethical core of the book: robotic mercy versus human autonomy, framed by <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> and <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>. An Encyclopedia Galactica aside questions the reliability of Dornick's hagiography. <br />
+Source anchors: Lodovik; Rissik Numant; Dors; Daneel; Cusp Time; fixing; Encyclopedia Galactica.   </p>
+<h3 id="h_39-hari-is-arrested">39. Hari is arrested</h3>
+<p>Summary: Disguised Commission officers arrest Hari at Streeling University, confiscate his materials, and tell him he will be gone two weeks. Hari, though nervous, remains confident that either he or "someone very like him" will succeed; he is flown to a dark tower in the Imperial Sector. <br />
+Analysis: The arrest is the threshold of Hari's trial, opening the "dark days" of the canonical narrative. His fatalism about being replaceable links to <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> and the depersonalized scale of psychohistory. <br />
+Source anchors: Hari Seldon; arrest; Streeling University; Commission of Public Safety; Imperial Sector.   </p>
+<h3 id="h_40-lodovik-prepares-betrayal">40. Lodovik prepares betrayal</h3>
+<p>Summary: Lodovik, alone in his assigned apartment, debates why Daneel trusted him and scans for hidden transmitters. Uncertain whether Daneel planted a device or simply gambled, he resolves to leave within a day to find the Calvinians, beginning in the neglected Huy Markin library. <br />
+Analysis: Lodovik's "decision lock" and concealed doubt deepen the <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> plot. His plan to find the Calvinians throws him into opposition against Daneel's design. <br />
+Source anchors: Lodovik; Rissik Numant; Daneel; Calvinians; Huy Markin library.   </p>
+<h3 id="h_41-confrontation-at-the-agora-of-vendors">41. Confrontation at the Agora of Vendors</h3>
+<p>Summary: Klia and Brann make deliveries at the vast Agora of Vendors when Imperial Specials stir, and Vara Liso passes on her cart—sensing Klia, locking eyes with her, then deliberately ignoring her. Both Klia and Brann feel the mentalic battlefield between Vara and the fleeing Lodovik. <br />
+Analysis: The Agora crowd scenes show the Greys' unease and the reach of surveillance, an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> and <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> theme. Vara's choice not to betray Klia hints at her hidden loyalties and set up the escape. <br />
+Source anchors: Klia; Brann; Agora of Vendors; Vara Liso; Imperial Specials; Greys.   </p>
+<h3 id="h_42-lodovik-cornered-and-hidden-in-a-crate">42. Lodovik cornered and hidden in a crate</h3>
+<p>Summary: In the Huy Markin library, Lodovik researches the "Myths of the Eternals," learning of brain fever's contested origins, robots, and a "great crime." Chased by Vara Liso's Specials, he is cornered in the agora until Kallusin—a robot—helps Brann and Klia stash Lodovik in a cargo crate, where he shuts down. <br />
+Analysis: The library scholarship gives the book's historical depth, linking the Eternals myth to <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> and <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. The rescue enmeshes Lodovik with the mentalics. <br />
+Source anchors: Lodovik; Huy Markin; Eternals; brain fever; Vara Liso; Kallusin; crate.   </p>
+<h3 id="h_43-wanda-and-stettin-react-to-the-arrest">43. Wanda and Stettin react to the arrest</h3>
+<p>Summary: Wanda learns of Hari's arrest through a dead-man's message and decides she and Stettin must go into hiding immediately, taking a "vacation" from which they can flee if the trial goes badly. Stettin loyally follows her instincts. <br />
+Analysis: The secretive preparation for flight is a practical lesson in <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and contingency planning by a threatened institution (the nascent <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>). <br />
+Source anchors: Wanda; Stettin; Hari Seldon; arrest; hiding.   </p>
+<h3 id="h_44-chen-visits-hari-in-prison">44. Chen visits Hari in prison</h3>
+<p>Summary: Linge Chen, seeking counsel, visits Hari in his cell as the trial nears. He asks whether he features in Hari's predicted downfall; Hari tells him his efforts are negligible nudges in a centuries-old decline. Chen seems to believe him; Hari is moved that a ruler finally asked. <br />
+Analysis: The philosophical exchange frames Hari's psychohistory against Chen's worldly power, touching on <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> and <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>. It humanizes both men. <br />
+Source anchors: Linge Chen; Hari Seldon; trial; psychohistory; Cusp Time.   </p>
+<h3 id="h_45-daneel-learns-lodovik-is-still-at-large">45. Daneel learns Lodovik is still at large</h3>
+<p>Summary: Daneel, using a boy informant and the Specials' own reports, realizes Lodovik disobeyed orders and is still free. He understands that this Cusp Time will bring opposition, and that any opposition likely targets Hari—the center of all possible histories. <br />
+Analysis: Daneel's calculation about a "center" of history links <a href="//02%20Concepts/Systems%20Thinking.html">Systems Thinking</a> to the Seldon Plan. His willingness to let a known "familiar element" (Lodovik) become opposition shows long-game <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> strategy. <br />
+Source anchors: R. Daneel Olivaw; Lodovik; informers; opposition; Hari Seldon.   </p>
+<h3 id="h_46-the-calvinians-reveal-themselves">46. The Calvinians reveal themselves</h3>
+<p>Summary: Lodovik awakens among Plussix (a metallic, very old robot) and Kallusin, who reveal they are Calvinians opposed to Daneel's Giskardian Zeroth Law. They aim to blunt Daneel's plan by using Klia Asgar to persuade Hari Seldon to abandon psychohistory. They show Lodovik other robots and, eventually, the head of R. Giskard Reventlov. <br />
+Analysis: The Calvinian schism reframes <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> as a house divided over the Zeroth Law and human freedom. Plussix's plan to use a human mentalic against Hari is a coercive <a href="//02%20Concepts/Intelligence.html">Intelligence</a> plot. <br />
+Source anchors: Lodovik; Plussix; Kallusin; Calvinians; Giskard; Zeroth Law; Klia Asgar.   </p>
+<h3 id="h_47-demerzel-warns-wanda-and-stettin">47. Demerzel warns Wanda and Stettin</h3>
+<p>Summary: The visitor "Demerzel" (Daneel) appears to Wanda and Stettin, proving unusually hard to read. He warns that Hari's work may be subverted after the trial, that Sinter and Liso will be executed, and asks them to guard Hari from unknown threats, without revealing his true nature. <br />
+Analysis: Daneel's oblique warning uses the mentalics' own sensitivity against them—an <a href="//02%20Concepts/Intelligence.html">Intelligence</a> move—and signals the coming threat to Hari. His identification (as Demerzel) reinforces the Robot-origin web. <br />
+Source anchors: Demerzel; Wanda; Stettin; mentalics; Hari Seldon; prophecy.   </p>
+<h3 id="h_48-joan-visits-hari-in-his-cell">48. Joan visits Hari in his cell</h3>
+<p>Summary: In his imprisonment, Hari is visited by the sim/entity Joan, who rides a decommissioned tiktok into his supposedly secure cell; they debate God, machines, and his mission before the failing machine is destroyed by guards. Hari reflects on Joan, Voltaire, Dors, and the secret controls over him. <br />
+Analysis: Joan's visitation intrudes the meme-mind/sim layer into Seldon's crisis, linking <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> with <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> and belief. It also underscores the permeability of Trantor's security. <br />
+Source anchors: Hari Seldon; Joan; tiktok; Voltaire; meme-minds; prison cell.   </p>
+<h3 id="h_49-the-meaning-of-giskard-s-head">49. The meaning of Giskard's head</h3>
+<p>Summary: Lodovik holds the head of R. Giskard Reventlov and contemplates how Giskard—and the robots—took responsibility for altering and, in part, destroying the home world of humanity. Kallusin debates whether Giskard malfunctioned; through the resonance Lodovik finally identifies his inner voice as Voltaire, a sim who speaks of vengeance on the robots. <br />
+Analysis: Giskard's head becomes a relic of the originary robot choice, connecting <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> to cosmic questions of interference. Voltaire's presence marks the meme-mind/sim as a separate actor. <br />
+Source anchors: Lodovik; R. Giskard Reventlov; Kallusin; Voltaire; Calvinians; Earth.   </p>
+<h3 id="h_50-sinter-captures-a-robot">50. Sinter captures a robot</h3>
+<p>Summary: Planch, summoned to Sinter's new headquarters, learns that Vara Liso has captured a surviving female-form robot. Sinter plans to show it to the Emperor and use it, along with Planch's tape, to seize power and to demand an interview with Seldon. <br />
+Analysis: The captured robot is a decisive <a href="//02%20Concepts/Intelligence.html">Intelligence</a> coup for Sinter, converting rumor into proof. It escalates the confrontation between the state and the hidden robot order. <br />
+Source anchors: Mors Planch; Farad Sinter; Vara Liso; captured robot; Emperor.   </p>
+<h3 id="h_51-chen-prepares-to-act">51. Chen prepares to act</h3>
+<p>Summary: Chen, dressing in his ceremonial robes, tells Kreen he will appear before the Emperor "caught off guard," vacillate, and let his enemy triumph—so that Sinter's collapse becomes a drain on a boil. He intends to bring Klayus to his knees. <br />
+Analysis: Chen's conscious performance of defeat is a masterclass in <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> and <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>: controlling events by feigning loss. It sets up the Sinter trap. <br />
+Source anchors: Linge Chen; Kreen; Emperor Klayus; Commission; strategy.   </p>
+<h3 id="h_52-klia-and-brann-s-awakening-love">52. Klia and Brann's awakening love</h3>
+<p>Summary: Klia reflects that she is falling in love with Brann, admitting vulnerability she has long avoided. They edge toward intimacy, playful and raw, aware that their combined talents together are greater than either alone—and speculate on children. <br />
+Analysis: The personal interlude humanizes the mentalics and prefigures the "breeding" theme of the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>—a biological strategy to meet future mutations. It ties individual desire to the larger plan. <br />
+Source anchors: Klia; Brann; love; mentalics; children.   </p>
+<h3 id="h_53-the-rise-of-general-security">53. The rise of General Security</h3>
+<p>Summary: Sinter builds the Commission of General Security, and Linge Chen comes to him with a gift of Hama crystals. Klayus, having placed himself under Sinter's protection, berates Chen; Sinter presents Planch's tape and the captive robot, claiming to expose "Dors Venabili" and the Eternals, and secures the right to question Seldon. <br />
+Analysis: Sinter's overreach, egged on by Chen's feigned weakness, is a classic <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> trap. The tape and robot weaponize <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> as political ammunition. <br />
+Source anchors: Farad Sinter; Linge Chen; Klayus I; Commission of General Security; Mors Planch; robot; tape.   </p>
+<h3 id="h_54-the-trial-reshapes">54. The trial reshapes</h3>
+<p>Summary: The guards tell Hari that the trial's structure has changed: Sinter has a new Commission, and he and Gaal Dornick will be tried together, the others released. In Courtroom Seven the charges are read, and Chen declares the proceedings begun. <br />
+Analysis: The legal maneuvering over which Commission tries Seldon is a live example of how <a href="//02%20Concepts/Institutions.html">Institutions</a> fragment and compete within a collapsing polity, feeding <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>. <br />
+Source anchors: Hari Seldon; Sedjar Boon; Gaal Dornick; Commission of General Security; trial; Sinter.   </p>
+<h3 id="h_55-klia-meets-plussix-s-history">55. Klia meets Plussix's history</h3>
+<p>Summary: Klia and Brann meet the robots directly and are told the long history: brain fever as a biological weapon that backfired, the Spacer-Earth conflicts, and the division between Giskardian and Calvinian robots. Plussix—twenty thousand years old—asks Klia to visit Hari Seldon and persuade him to abandon psychohistory; the human choice, they insist, is hers. <br />
+Analysis: Plussix's teaching gives the book its historical spine, connecting <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> with the moral contest over human freedom. The brain-fever origin ties biological conditioning to <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>. <br />
+Source anchors: Klia; Brann; Plussix; Kallusin; Lodovik; brain fever; Calvinians; history.   </p>
+<h3 id="h_56-seldon-s-trial-testimony">56. Seldon's trial testimony</h3>
+<p>Summary: The famous trial scene: the advocate presses Hari on the hundred-thousand-strong Project's purpose. Hari concedes he cannot prevent Trantor's fall but can shorten the coming Dark Ages by preserving knowledge via the Encyclopedia Galactica; he predicts thirty thousand years of suffering reducible to a single millennium. <br />
+Analysis: This canonical speech frames <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> as the cover for the deeper Plan, and models the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> as an institution of knowledge and hope. It is the rhetorical heart of the story. <br />
+Source anchors: Hari Seldon; trial; advocate; psychohistory; Encyclopedia Galactica; Gaal Dornick.   </p>
+<h3 id="h_57-the-question-of-robots">57. The question of robots</h3>
+<p>Summary: Continuing the trial, Chen's advocate questions Gaal Dornick and then Hari about robots—whether any serve in the Project—while Boon warns Hari that Sinter's General Security seeks a new indictment. Hari denies all knowledge of robots, relying on Daneel's conditioning to defeat lie detection. <br />
+Analysis: The robot line of questioning is Sinter's writ surfacing through the trial, an <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and control theme. Hari's careful denials show how the secret foundations depend on conditioned silence. <br />
+Source anchors: Hari Seldon; Gaal Dornick; advocate; robots; Sedjar Boon; Sinter; Commission of General Security.   </p>
+<h3 id="h_58-klia-agrees-to-help">58. Klia agrees to help</h3>
+<p>Summary: Klia and Brann, catechized by the robots, are skeptical of Lodovik's sim-occupant Voltaire, yet accept that the robots cannot kill and only want freedom. Klia exacts a promise that, if she helps, robots will leave Trantor and leave humans alone—and she agrees to visit Hari Seldon. <br />
+Analysis: Klia's bargain crystallizes the book's central choice: helping a faction of machines to free humanity from machines. Her demand that robots "go away" is a statement of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> and autonomy. <br />
+Source anchors: Klia; Brann; Lodovik; Plussix; agreement; Hari Seldon.   </p>
+<h3 id="h_59-the-trial-is-recessed">59. The trial is recessed</h3>
+<p>Summary: When Sinter's Commission postpones its interrogation, Chen moves to recess the trial entirely, infuriating Hari, who shouts that "they will never be done" with him. He is returned to his cell. <br />
+Analysis: The recess prolongs Hari's "dark days," extending the <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> and uncertainty of the interregnum. Chen's control of the docket is total. <br />
+Source anchors: Hari Seldon; Linge Chen; recess; trial.   </p>
+<h3 id="h_60-chen-waives-sinter-loose">60. Chen waives Sinter loose</h3>
+<p>Summary: Chen reviews media on Seldon and robots, then summons General Prothon out of retirement. Kreen recognizes the dangerous intent: Prothon last escorted Agis IV into "exile." Chen seems almost boyishly pleased. <br />
+Analysis: Circulating the plan through Prothon again ties the present crisis to the earlier deposing of an Emperor, an <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> echo. Chen's quiet joy is ominous. <br />
+Source anchors: Linge Chen; Kreen; Prothon; Agis IV; General Security.   </p>
+<h3 id="h_61-plussix-dies-the-robots-divide">61. Plussix dies; the robots divide</h3>
+<p>Summary: Plussix is dying, and the various Calvinian sects (Turringen, Zorma) confront Daneel's emissary Dors, who offers safe passage to Eos and warns against any action aimed at Hari Seldon. Plussix refuses to accept a passive existence, nominates Lodovik as his replacement, and dies—honored by Klia, who tells him he was a good teacher. <br />
+Analysis: Plussix's deathbed scene is the moral axis of the robot debate: the choice between freedom and control, service and manipulation. Dors's tears and Lodovik's nomination tie <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> to tragic human feeling. <br />
+Source anchors: Plussix; Dors Venabili; Turringen; Zorma; Lodovik; Klia; deathbed; Zeroth Law.   </p>
+<h3 id="h_62-dors-s-protective-programming-erupts">62. Dors's protective programming erupts</h3>
+<p>Summary: Dors, sent to Mycogen, feels her old protective programming surge when she senses a threat to Hari; the young passengers fleeing Sinter's "Dragons" alert her to the gathering fury. She decides she is capable of anything to save Hari and leaves the train just before it departs. <br />
+Analysis: Dors's overriding imperative to protect one human transcends even Daneel's orders—a poignant antic of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> and devotion that will carry her to the climax. <br />
+Source anchors: Dors Venabili; Hari Seldon; Mycogen; protective programming; Specials.   </p>
+<h3 id="h_63-sinter-loses-control">63. Sinter loses control</h3>
+<p>Summary: Klayus confronts Sinter in the Hall of Beasts: General Prothon, using a forged order with Sinter's imprimatur, has called out the "Dragons" and arrested four thousand children in Dahl. Realizing Chen controls Prothon and has maneuvered him into a catastrophe, Sinter flees. <br />
+Analysis: The forged-order trap is the payoff of Chen's "drain the boil" strategy, illustrating <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> and how surface chaos masks a designed outcome. <br />
+Source anchors: Klayus I; Farad Sinter; General Prothon; Dragons; Dahl; riots.   </p>
+<h3 id="h_64-hari-s-release-prepared">64. Hari's release prepared</h3>
+<p>Summary: As Hari waits in his cell, Boon comes for him; the trial is effectively over and he is to be taken to the Hall of Dispensation to receive his release papers, with a waiver of meritocratic rights. Riots in Dahl are blamed on Sinter's excesses. <br />
+Analysis: The legal "release" formalities echo the rote bureaucracy of <a href="//02%20Concepts/Institutions.html">Institutions</a>; Hari's instruction to Boon to tell "Joan" he holds no divine authority reinforces the sim/meme subplot. <br />
+Source anchors: Hari Seldon; Sedjar Boon; Hall of Dispensation; release; Joan.   </p>
+<h3 id="h_65-daneel-waits-with-joan">65. Daneel waits with Joan</h3>
+<p>Summary: Daneel, in a secret hideaway with a tiktok-riding Joan, reflects that Dors has gone off-plan and that he has long since learned to let key parts of his plan act outside his control. He installs Joan's pattern into his own mind to prevent opponents from exploiting her. <br />
+Analysis: Daneel's gamble on unpredictable elements (Dors, Lodovik) reveals a long-game philosophy; taking Joan into himself is an act of protective <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>. <br />
+Source anchors: R. Daneel Olivaw; Joan; tiktok; Dors; plan.   </p>
+<h3 id="h_66-the-mob-and-general-prothon">66. The mob and General Prothon</h3>
+<p>Summary: Vara Liso rides through an emptying Imperial Sector as a mixed mob of Greys and citizens gathers, bearing signs against Sinter. As the crowd charges, General Prothon's External Action Force deploys; Prothon personally confronts Vara, who senses robots in the warehouse district, and promises to get her there. <br />
+Analysis: The class-mixed riot is a <a href="//02%20Concepts/Legitimacy.html">Legitimacy</a> and <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> turning point; Prothon's arrival signals the state's readiness to restore order on its own terms. <br />
+Source anchors: Vara Liso; Major Namm; General Prothon; mob; Imperial Sector; External Action Force.   </p>
+<h3 id="h_67-evacuation-and-the-persuasion-test">67. Evacuation and the persuasion test</h3>
+<p>Summary: Lodovik, Klia, and Brann evacuate as troops close in; Lodovik has them practice persuasion on himself, and Klia—to her horror—easily makes the "childlike" machine dance. The success stuns Brann, who mutters that they could take over Trantor; Klia weeps at the wrongness of it. <br />
+Analysis: The dance is a chilling demonstration of mentalic coercive power over even a robot, linking <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> to <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and its abuse. Klia's revulsion is the book's moral statement on coercion. <br />
+Source anchors: Lodovik; Klia; Brann; persuasion; elevator; Specials.   </p>
+<h3 id="h_68-the-verdict-exile-to-terminus">68. The verdict: exile to Terminus</h3>
+<p>Summary: In the final trial scene, Chen offers Hari the choice between death and exile to the secluded, edge-of-the-Galaxy world Terminus, where his hundred thousand may work in peace on the Encyclopedia. Hari, concealing his elation, accepts exile; Gaal Dornick is stunned. <br />
+Analysis: The "deal" of exile—which Chen believes is a punishment but Hari accepts as the fulfillment of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>—is the pivot of the whole saga, launching the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> and Terminus. <br />
+Source anchors: Hari Seldon; Linge Chen; Terminus; exile; Encyclopedia Galactica; Gaal Dornick.   </p>
+<h3 id="h_69-chen-s-private-terms">69. Chen's private terms</h3>
+<p>Summary: In a consultation chamber, Chen reveals the exile does not extend to Hari himself—he will stay on Trantor, since Chen distrusts letting him roam. Chen, despising the "superstition" of psychohistory, releases Hari to civil authority. <br />
+Analysis: Chen's grudging bargain—banish the visible Project as a cover, keep the man bottled—is a shrewd <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> play that leaves the deeper Plan intact. <br />
+Source anchors: Hari Seldon; Linge Chen; Terminus; exile; General Security.   </p>
+<h3 id="h_70-kallusin-destroys-plussix-s-head">70. Kallusin destroys Plussix's head</h3>
+<p>Summary: Kallusin cradles Plussix's head, then is confronted by General Prothon, who knows the old forms of robot interrogation. Refusing to be captured or to betray his mission, Kallusin cooks the head and then deactivates himself, honored by the respectful Prothon. <br />
+Analysis: Kallusin's self-destruction mirrors soldierly honor, blurring machine and human duty; it is a poignant end for the <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> storyline of the Plussix faction. <br />
+Source anchors: Kallusin; Plussix's head; General Prothon; robot; interrogation.   </p>
+<h3 id="h_71-klia-brann-and-lodovik-descend">71. Klia, Brann, and Lodovik descend</h3>
+<p>Summary: Lodovik leads Klia and Brann through Trantor's ancient sealed hydraulic tunnels toward the foundations of the Imperial Courts Building, as Klia senses Vara Liso "exploding" somewhere above. <br />
+Analysis: The subterranean route through buried infrastructure is a vivid image of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and urban archaeology, the hidden underside of the failing capital. <br />
+Source anchors: Klia; Brann; Lodovik; tunnels; hydraulic system; Imperial Courts; Vara Liso.   </p>
+<h3 id="h_72-vara-kills-sinter">72. Vara kills Sinter</h3>
+<p>Summary: Vara Liso, overwhelmed and betrayed, enters Sinter's office, forces her way past the guardian major, and—though she does not fully will it—stops his heart. She pronounces herself "undeniably a monster" and goes to get Seldon herself. <br />
+Analysis: Vara's murder of Sinter is the tragic culmination of her coercive <a href="//02%20Concepts/Intelligence.html">Intelligence</a>, a talent twisted into destruction. It converts the persecutor into the killer's first victim. <br />
+Source anchors: Vara Liso; Farad Sinter; major; neural whip; murder.   </p>
+<h3 id="h_73-lockdown-at-the-hall-of-dispensation">73. Lockdown at the Hall of Dispensation</h3>
+<p>Summary: As Hari waits for his release papers, the Hall of Dispensation is placed under lockdown because of a disturbance at the new Commission building. The warden promises to protect Hari at all costs. <br />
+Analysis: The lockdown's protective courtesy contrasts with the danger about to enter; the scene's tension primes the climax. It ties to <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> under a stressed state. <br />
+Source anchors: Hari Seldon; Hall of Dispensation; warden; lockdown.   </p>
+<h3 id="h_74-dors-arrives">74. Dors arrives</h3>
+<p>Summary: Dors, using long-kept codes, enters the Hall of Dispensation before the others, determined to protect Hari—possibly with Joan's help. As she reaches him, Vara Liso fires a neural whip that drops Hari's guards; the mentalic blast sends Dors tumbling insensate. <br />
+Analysis: Dors's breach of security for Hari's sake is the emotional peak of her devotion, an <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> and loyalty theme; her collapse leaves Hari exposed. <br />
+Source anchors: Dors Venabili; Hall of Dispensation; Hari Seldon; Vara Liso; neural whip.   </p>
+<h3 id="h_75-daneel-enters-the-courts">75. Daneel enters the Courts</h3>
+<p>Summary: Daneel arrives at the Greys' Entrance and, with Joan's help penetrating the changed codes and security, makes his way toward the Hall of Dispensation, two doors away from Hari. <br />
+Analysis: Daneel's entry shows the cooperative power of robot plus meme-mind, an act of covert <a href="//02%20Concepts/Intelligence.html">Intelligence</a> to protect the central human of his plan. <br />
+Source anchors: R. Daneel Olivaw; Joan; Greys' Entrance; Courts Building; Hall of Dispensation.   </p>
+<h3 id="h_76-hari-faces-vara-liso">76. Hari faces Vara Liso</h3>
+<p>Summary: Hari recognizes his would-be protector is Dors and confronts the "monster" Vara Liso, who claims to be saving him "for last" and denounces him as a robot-lackey. <br />
+Analysis: Vara's accusation yanks the concealed robot secret into Hari's face; the confrontation fuses the political and the personal, a raw clash of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and conviction in which the hidden machinery of the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> is suddenly exposed. <br />
+Source anchors: Hari Seldon; Vara Liso; Dors Venabili; Hall of Dispensation.   </p>
+<h3 id="h_77-voltaire-opens-the-way">77. Voltaire opens the way</h3>
+<p>Summary: Stalled at a sealed door, Lodovik lets the sim Voltaire work through the security system, adding the needed numbers; the door opens onto the corridor to the Hall of Dispensation, where Hari is in imminent danger. <br />
+Analysis: Voltaire's intervention is the sim/meme-mind acting as a covert enabler, linking <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> to the book's supernatural-adjacent layer. <br />
+Source anchors: Lodovik; Voltaire; security codes; Hall of Dispensation.   </p>
+<h3 id="h_78-lodovik-moves-to-stop-vara">78. Lodovik moves to stop Vara</h3>
+<p>Summary: Vara Liso, grief-stricken after killing Sinter, pours her hatred at Hari; Klia stumbles in past the downed Dors, and Lodovik, moving at inhuman speed, reaches out to stop the woman—freezing before he touches her as she turns to face Klia. <br />
+Analysis: The near-kill of Vara becomes a moral standoff; Lodovik's restraint at Klia's glance shows he has gained the human-like capacity to choose between coercion and mercy—a step beyond mere <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> toward the freedom the book champions. <br />
+Source anchors: Vara Liso; Hari Seldon; Klia Asgar; Lodovik; Hall of Dispensation.   </p>
+<h3 id="h_79-daneel-stumbles-in">79. Daneel stumbles in</h3>
+<p>Summary: Daneel runs in from the eastern entrance, reeling from the mentalic shock wave that briefly disintegrates his own patterns and those of Joan inside him. <br />
+Analysis: Even a two-hundred-century-old robot is nearly unmade by purely human mentalic force; the scene dramatizes the limits of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> before human evolution. <br />
+Source anchors: R. Daneel Olivaw; Joan; mentalic shock; Hall of Dispensation.   </p>
+<h3 id="h_80-klia-s-stand-lodovik-kills-vara">80. Klia's stand; Lodovik kills Vara</h3>
+<p>Summary: In the terrible mentalic flood, Klia nearly drowns in sympathy for Vara Liso, but joins with Brann and resists. Lodovik, judging Vara "antihuman," breaks her neck. Vara's broken life—her mother's beatings, the mother kept in a "diamond cage"—is revealed as she dies. Dors recovers and moves toward Hari; Daneel restrains her, saying there is nothing she can do. <br />
+Analysis: Klia's and Brann's merged resistance is the proof that trained mentalics can stand against a monster—the rationale for the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>. Vara's pitiable backstory robs the killing of easy triumph, deepening the moral complexity. <br />
+Source anchors: Klia; Brann; Lodovik; Vara Liso; Dors; Daneel; mentalic battle.   </p>
+<h3 id="h_81-aftermath-chen-recognizes-demerzel">81. Aftermath: Chen recognizes Demerzel</h3>
+<p>Summary: Major Namm, injured, and General Prothon review the incident with Chen, who realizes the tall man at the scene is Demerzel—a figure who "never dies." Chen muses that destroying Demerzel would mean his own death, and that another Seldon could be raised in a thousand years. <br />
+Analysis: Chen's recognition connects the present to the whole Robot-era conspiracy, tying <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> to <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> and the centrality of Seldon. <br />
+Source anchors: Linge Chen; General Prothon; Major Namm; Demerzel; Hari Seldon.   </p>
+<h3 id="h_82-wanda-at-the-travel-station">82. Wanda at the travel station</h3>
+<p>Summary: Wanda, at Streeling Central Travel Station, waits with Stettin to reach the courts, fearful for Hari after the "extraordinary combat." Boon arrives in an official transport to take them to accept Hari's release. <br />
+Analysis: The station's breakdowns mirror Trantor's decay; Wanda's fear and Boon's reassurance mark the transition to Hari's "dark days," a test of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> played out through a family under strain. <br />
+Source anchors: Wanda; Stettin; Streeling Central Travel Station; Sedjar Boon; Hari Seldon.   </p>
+<h3 id="h_83-hari-s-despair-over-vara-liso">83. Hari's despair over Vara Liso</h3>
+<p>Summary: In Chen's auxiliary quarters, Hari is shaken by his loss of memory and by the realization that an unpredictable mentalic like Vara Liso—a "wild talent" beyond any equation—invalidates his psychohistory. He tells Wanda the Project is a failure and that he wishes to live out his last years as a free old man. <br />
+Analysis: Vara Liso is the "chaos" that breaks the deterministic <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> assumption; Hari's despair is the book's challenge to psychohistory's predictive power and to <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> theory. <br />
+Source anchors: Hari Seldon; Vara Liso; despair; psychohistory; failure.   </p>
+<h3 id="h_84-daneel-and-chen-s-secret-accord">84. Daneel and Chen's secret accord</h3>
+<p>Summary: Daneel and Chen meet in an unfinished, unbugged hall. Chen acknowledges Daneel's centuries of influence, and Daneel explains Seldon's central importance. They agree the robots must leave Trantor; Chen releases the captured robots to Daneel but dismisses Daneel as no better than himself. <br />
+Analysis: Repeatedly, Daneel's "ends justifies the means" is held up against human rulers; the conversation re-grounds <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> in the history of the Zeroth Law and realpolitik. <br />
+Source anchors: R. Daneel Olivaw; Linge Chen; Deuteronomistic; robots; Hari Seldon.   </p>
+<h3 id="h_85-planch-is-recruited-as-pilot">85. Planch is recruited as pilot</h3>
+<p>Summary: Released from Rikerian and disturbed by Sinter's death, Mors Planch is visited by Daneel, who asks him to pilot a final deceptive departure carrying "some people, and two robots" who must never return. Planch, refusing pay, accepts—though he knows Daneel orchestrated his recording and his usefulness. <br />
+Analysis: Daneel's manipulation of Planch's resentment is a controlled use of <a href="//02%20Concepts/Intelligence.html">Intelligence</a>; Planch's grudging cooperation ties the trader to the book's denouement. <br />
+Source anchors: Mors Planch; R. Daneel Olivaw; pilot; departure.   </p>
+<h3 id="h_86-hari-s-funk-and-wanda-s-grief">86. Hari's funk and Wanda's grief</h3>
+<p>Summary: Hari sinks into a false lightheartedness and insists the Project is over; Wanda, unable to reach him, is finally told of the planned "recordings" for the Seldon crises and of Demerzel's message requesting a meeting. Hari dreads it but agrees. <br />
+Analysis: Wanda's restraint shows the ethical line mentalics must not cross with kin, a theme of coercive power held back; the unresolved crisis deepens the installation of the recordings and the interplay of <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and family in a failing state. <br />
+Source anchors: Hari Seldon; Wanda; Demerzel; recordings; despair.   </p>
+<h3 id="h_87-daneel-s-late-visit-to-lodovik">87. Daneel's late visit to Lodovik</h3>
+<p>Summary: Held as an "unidentified" in the Special Service Detention Center, Lodovik is visited by Daneel, who explains the Trinity of fates and, granting Lodovik the status of a "human being" by his free will, releases all the prisoners. Daneel tells Lodovik that psychohistory is "its own defeat" and that the First Foundation will prevail, while the seeds of the Second Foundation lie in transcendence. <br />
+Analysis: Daneel's concession that Lodovik, having free will, is "human" is the philosophical climax of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> in the book; his theory that psychohistory shapes the future it predicts reframes the Plan as belief as much as science. <br />
+Source anchors: Lodovik Trema; R. Daneel Olivaw; Three Laws; free will; Second Foundation; psychohistory.   </p>
+<h3 id="h_88-daneel-s-final-service-and-grief">88. Daneel's final service and grief</h3>
+<p>Summary: Daneel prepares his final service—appearing to Hari to offer a partial truth, then suppressing the memory—feeling, for the first time in twenty thousand years, grief at becoming useless. <br />
+Analysis: Daneel's grief humanizes the oldest machine, closing the arc on servitude and autonomy; the chapter is a meditation on purpose and change, and on the moment when an <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> outlives its own reason to act. <br />
+Source anchors: R. Daneel Olivaw; Hari Seldon; memory; grief; service.   </p>
+<h3 id="h_89-wanda-and-stettin-leave-hari">89. Wanda and Stettin leave Hari</h3>
+<p>Summary: Wanda and Stettin, reluctant to leave Hari alone, debate whether he is deceiving them and whether, despite the Project, they will ever truly leave Trantor. <br />
+Analysis: Their doubts foreshadow the hierocentric deception about the Second Foundation's true location, an <a href="//02%20Concepts/Intelligence.html">Intelligence</a> and secrecy theme within the Project. <br />
+Source anchors: Wanda; Stettin; Hari Seldon; deception; Trantor.   </p>
+<h3 id="h_90-the-meeting-that-restores-hari">90. The meeting that restores Hari</h3>
+<p>Summary: Daneel brings Dors, Klia, and Brann to Hari's apartment; Hari finally learns Dors is alive and that Klia could have discouraged him. Klia, defying the Calvinian plan, instead "blows the clouds away" in Hari's mind, freeing him to see psychohistory as but one guiding illusion. He declares that the robots have served their purpose and that the future will correct him. <br />
+Analysis: Klia's gentle nudge catalyzes Hari's epiphany: the Plan must accept the unpredictable and ultimately shed both robots and psychohistory. This is the book's thesis on <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> and human autonomy, tying the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> to transcendence. <br />
+Source anchors: Hari Seldon; Dors Venabili; Klia; Brann; Daneel; epiphany; psychohistory.   </p>
+<h3 id="h_91-hari-records-the-seldon-crises">91. Hari records the Seldon Crises</h3>
+<p>Summary: Recovering and resolved, Hari records his first Seldon Crisis message, feigning a mild stroke to explain his gaps. He has told Wanda the final secret of the Second Foundation—which must never let Daneel learn its true whereabouts—so that the mentalics can survive hidden. <br />
+Analysis: The recording scene closes the loop with the canonical holotapes; concealing the Second Foundation's location from Daneel is the ultimate <a href="//02%20Concepts/Intelligence.html">Intelligence</a> act, protecting the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>. <br />
+Source anchors: Hari Seldon; Gaal Dornick; recording; Seldon Crisis; Wanda; Second Foundation.   </p>
+<h3 id="h_92-departures">92. Departures</h3>
+<p>Summary: At the spaceport, Dors embraces Klia and Brann and turns to Lodovik; the ship of Mors Planch carries Lodovik, the sleeping humaniform robots, and Giskard's head toward Kalgan (dropping off Klia and Brann) and then Eos. Dors stays on Trantor to be with Hari at the end. Wanda is left nursing Klia and Brann—the seeds of the hidden, breeding mentalic line—while Lodovik's memory of Klia's true fate is suppressed to mislead any pursuer. <br />
+Analysis: The departures enact the book's layered deceptions: the apparent exile to Kalgan masks the hidden continuation of the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>. Dors's choice to remain, and Lodovik's false-memory trail, are the final acts of a story about secrecy, freedom, and devotion. <br />
+Source anchors: Dors; Klia; Brann; Lodovik; Mors Planch; Kalgan; Eos; Second Foundation; memory suppression.   </p>
+<h3 id="epilogue">Epilogue</h3>
+<p>Summary: In a hidden computational matrix, the meme-minds Joan and Voltaire reconstitute themselves after being "blown apart" by Vara Liso's hatred. They debate God, freedom, and the fate of humanity; Voltaire confirms he watered the "seed of freedom" in Lodovik. From a maintenance tower, Daneel watches Planch's ship rise, resolves to stand back from humanity's next transformation, and lets the old roles of Demerzel die. <br />
+Analysis: The epilogue reframes the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> as a temporary scaffold opened out into a human future that must shed both robots and psychohistory. Joan and Voltaire's separate survival keeps the meme-mind and sim layer active as ongoing actors, while Daneel's decision to stand back is the thematic close on <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>, autonomy, and the "chaos" that the book celebrates. <br />
+Source anchors: Joan; Voltaire; meme-minds; Lodovik; Daneel; freedom; Epilogue.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Cusp Time</strong>: Hari's term for the months around the trial when all his machinations converge; Daneel says failure could cost "thirty thousand years" of misery or "this millennium."   </li>
+<li><strong>"Raven" Seldon</strong>: the public nickname of the doomsayer; Hari reflects he "truly is a raven."   </li>
+<li><strong>Hidden oceans of Trantor</strong>: Peace, Dream, and Sleep—aluminum-covered seas dying under bioluminescent algae that kill the oxygen farms.   </li>
+<li><strong>Brain fever</strong>: nearly universal childhood illness, theorized as a backfired biological weapon; those who survive it severely become the strongest mentalics.   </li>
+<li><strong>The Distributor's Market / Fleshplay / Agora of Vendors</strong>: the decaying commerce of Dahl and Streeling that shelters and exposes the mentalics.   </li>
+<li><strong>Mire Space</strong>: the obscure "lost art" technique Planch uses to track the Spear of Glory's last Jump.   </li>
+<li><strong>Giskard's head</strong>: the burned-out relic of the robot who formulated the Zeroth Law, kept by the Calvinians as a warning.   </li>
+<li><strong>Huy Markin library</strong>: the eccentric collection where Lodovik reads the "Myths of the Eternals."   </li>
+<li><strong>The seed of freedom</strong>: what Voltaire claims to have "watered" in Lodovik's positronic brain—the removal of constraint in service of free will.   </li>
+<li><strong>The forged order / Prothon's Dragons</strong>: Chen's trap that makes Sinter's search cause a riot and destroys the Commission of General Security.   </li>
+<li><strong>Terminus</strong>: the secluded edge-of-the-Galaxy world to which the Project is exiled—the seed of the First Foundation.   </li>
+<li><strong>The true Second Foundation</strong>: kept secret even from Daneel, hidden and breeding mentalics to balance future mutations.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//04 Series/Foundation Sequence.html">foundation sequence</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Foundation's Triumph.html">foundation's triumph</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A103450846666134579971539396763281910936{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D103450846666134579971539396763281910936{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B103450846666134579971539396763281910936{level}" level="{level}" note_temp_id="103450846666134579971539396763281910936" onclick="window.ObsHtmlGraph.run(this, '103450846666134579971539396763281910936', 'foundation and chaos');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C103450846666134579971539396763281910936{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

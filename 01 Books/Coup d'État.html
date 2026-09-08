@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="coup d'état">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'coup d'état';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=coup d'état" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="coup-d-etat">Coup d'État</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Coup d'État</code> is a standalone nonfiction book note in <code>01 Books</code>, backed by the full extracted text under <code>91 Extracted Text/Standalone/</code>. It belongs to no series and is not yet wired into a reading path, but it is registered in the master index <a href="//index.html">Book Index</a> and is the vault's study of coercive power seized from inside the machinery of rule. Its thematic home is the <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a> cluster: where <code>Seeing Like a State</code> and <code>Heart of Europe</code> examine how order is known, formalized, and layered, Luttwak writes the inverse manual — how a small, well-placed group exploits the state's own files, chains of command, and units to detach them from the government.   </p>
+<p>Its closest sibling books are the conflict-and-state notes. <a href="//01%20Books/Black%20Hearts.html">Black Hearts</a> already links here from its own position note, treating Luttwak's anatomy of the state apparatus as the machinery that the Coalition's de-Baathification and army-dissolution orders dismantled. <a href="//01%20Books/4th%20Generation%20Warfare%20Handbook.html">4th Generation Warfare Handbook</a> is a doctrinal sibling in reverse: both are manuals of political-military technique, but Luttwak instructs the seizure of the state while Lind and Thiele warn that states structurally misread the wars they face. The three notes sit together as the vault's corpus on states as instruments that can be captured, dissolved, or blinded to their real enemies.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Edward N. Luttwak's <em>Coup d'État</em> treats the coup not as a romantic uprising but as a specific operation against the modern state. Its basic claim is that a coup succeeds by infiltrating a small but critical segment of the state apparatus and then using that segment to detach the permanent machinery of files, ministries, police, military units, radio facilities, roads, and command chains from the visible political leadership. That is why the book spends less time on popular grievance than on ministries of interior, paramilitary police, telephone exchanges, army headquarters, party branches, trade-union centers, and the difference between a ceremonial head of state and the real controller of coercive power.   </p>
+<p>The book's most important distinction is between the government and the state. A palace revolution manipulates the ruler inside a dynastic or personal system; a revolution mobilizes masses and seeks social transformation; a pronunciamiento claims to speak for the officer corps; a putsch uses an already constituted military formation. The coup, in Luttwak's narrower sense, operates "outside the government but within the state." It needs enough bureaucratic modernity to supply levers, but not enough political legitimacy, legality, and public participation to make those levers resist illegal orders.   </p>
+<p>Luttwak's target environment is the postcolonial or politically fragile state whose official machinery is stronger than its political community. He repeatedly returns to Africa, the Middle East, Latin America, and parts of Asia because the newly independent state often inherited colonial files, police, tax collectors, army units, and telecommunications without inheriting a broadly accepted notion of legality. Examples such as Ghana under Kwame Nkrumah, Egypt after Black Saturday, Syria's repeated coups before Hafez al-Assad, Nigeria's January 1966 coup, Katanga under Moise Tshombe, Saudi Arabia's National Guard, and Lebanon's communal blocs show the conditions that either expose a state to a coup or make a single-center coup impossible.   </p>
+<p>The 2016 edition revises the original Cold War-era analysis without abandoning the core model. Luttwak updates the technical side by reducing the old emphasis on a single radio station and adding social media, intelligence fragmentation, anti-coup guards, inward espionage, and corruption as a major incentive. The new preface is especially concrete: it names Bashar al-Assad's multiple Syrian security services, Yasser Arafat's dozen Palestinian intelligence organizations, Chun Doo Hwan's use of South Korea's unified Defense Security Command after Park Chung Hee's assassination, and Mohammad Oufkir's failed 1972 attack on Hassan II's Boeing 727.   </p>
+<p>The book is deliberately written in the first person plural of the plotter, which gives it its notorious manual-like quality. Yet the deeper purpose is diagnostic: to show how political power becomes vulnerable when command hierarchies obey sources rather than laws, when armed units can be induced to wait, when police prefer career survival, when trade unions or religious leaders are cut off from communication, and when the public hears only the first communique. Luttwak's dry operational prose makes the coup look less like a heroic seizure than like an exercise in exploiting organizational habit.   </p>
+<p>The appendices extend the book beyond seizure into survival. "The Economics of Repression" argues that a post-coup regime must manage taxation, propaganda, police spending, and development because economic growth can create educated groups that later threaten the regime. "Tactical Aspects of the Coup d'État" breaks active teams into penetration, diversion, covering fire, assault, arrest, sabotage, and blocking functions while warning that the soldiers used to seize power may themselves become usurpers. "Statistics" then places the analysis against a 1945-2010 list of coups and attempted coups, underscoring that the book's abstraction is built from repeated cases rather than a single ideology.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>Edward N. Luttwak</strong>: the author and narrator. A student at the London School of Economics in the early 1960s, he wrote the book against the Third World optimism of that milieu — the belief that independence, aid, and youthful leadership would quickly produce development and moral authority. First published in 1968 by Allen Lane/The Penguin Press and revised for 1979 and 2016, the book addresses its reader throughout as "we," the examining party and would-be plotter. His declared aim is diagnostic: "to explore the meaning of politics in the many backward countries politely described as 'emerging.'" He records the book's own dark reception history, including its documented use in two Philippine coups and the copy found blood-splattered on Mohammad Oufkir's desk.   </li>
+<li><strong>"We," the coup planners</strong>: the operative subject of the manual. A small conspiracy that recruits from inside the state, analyzes personalities, forms A-, B-, and C-teams plus blocking forces, keeps itself anonymous long enough to be mistaken for mutiny, insurrection, or invasion, and must pre-decide everything because its active phase has no time for feedback.   </li>
+<li><strong>The target governments and their rulers</strong>: the objects of attack, from ceremonial heads of state to inner councils and hidden strongmen. Named across the book: King Faisal II and Nuri es-Said (Iraq, 1958), Abd al-Karim Qasim (Iraq), Kwame Nkrumah (Ghana), Francois "Papa Doc" Duvalier and Jean-Claude "Baby Doc" Duvalier (Haiti), King Hassan II (Morocco), Park Chung Hee (South Korea), Ngo Dinh Diem and Ngo Dinh Nhu (South Vietnam, 1963), Gamal Abdel Nasser and his Nasserist inheritance (Egypt), Bashar al-Assad (Syria), Moise Tshombe (Katanga), and Abubakar Tafawa Balewa and the Sardauna of Sokoto, Ahmadu Bello (Nigeria, 1966).   </li>
+<li><strong>The coercive apparatus of the state</strong>: ministries of interior and defense, police, paramilitary gendarmeries, armed forces, and intelligence services. This machinery is both the prize and the instrument. Its ethnic composition matters — Alawites and Druzes in Assad-era Syria, jurchen-descended elites in Imperial China, the tribes of African rulers — and so does its fragmentation, from the nineteen separate agencies of the US intelligence community to the multiplied guard and espionage forces of vulnerable regimes.   </li>
+<li><strong>Officers and security chiefs who turn</strong>: the human pivot of the coup. Chun Doo Hwan used South Korea's unified Defense Security Command to jump the hierarchy after Park Chung Hee's assassination; Mohammad Oufkir, Morocco's most powerful man after Hassan II, launched the 1972 attack on the king's Boeing 727; Generals Maurice Challe, Andre Zeller, Edmond Jouhaud, and Raoul Salan seized Algiers in April 1961 and still lost; junior officers led the Nigerian coup of January 1966; Salah Jadid ruled Syria from behind Nureddin al-Atassi without taking the top title.   </li>
+<li><strong>Political leaders and organizations of resistance or accommodation</strong>: Charles de Gaulle and Michel Debré (1958 and 1961), the trade unions CGT, CFTC, and Force Ouvrière, Gaullist infiltration of the civil service, Bolivian miners of Catavi-Siglo Veinte with Comibol and the CGT and CGL, Thich Tri Quang and the Vietnamese Buddhist orders, and jihadi movements from Sayyid Qutub onward. Luttwak's point is that these forces, not the army alone, decide whether armed possession hardens into authority.   </li>
+<li><strong>Sub-state holders of real power</strong>: sectional forces that can make a single-center coup meaningless. The Union Minière in Katanga (with Forminière in South Kasai), Aramco in Saudi Arabia, Anglo-Persian in Khuzestan, United Fruit in Central America, Nigeria's Northern Region emirs, and Lebanon's Shi'a, Maronite, Sunni, and Druze communal blocs all hold power that no seizure of the capital can capture.   </li>
+<li><strong>The politically passive majority</strong>: the backward masses whose enforced silence is the coup's greatest resource. Illiterate, hungry, and cut off from the wider society, they neither support nor resist illegal changes of government; they only watch the first communique as if it were "all happening somewhere else, far away."   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a>: the thematic MoC for a book about order made visible in files, chains of command, and coercive units — and about who can exploit that legibility.   </li>
+<li><a href="//01%20Books/Black%20Hearts.html">Black Hearts</a>: already linked reciprocally; Frederick documents the platoon-level lived reality of a state machine Luttwak describes from above, and the Coalition's de-Baathification that dismantled the very apparatus Luttwak teaches one to seize.   </li>
+<li><a href="//01%20Books/4th%20Generation%20Warfare%20Handbook.html">4th Generation Warfare Handbook</a>: the mirror manual — Lind and Thiele on why states fail to fight their enemies, Luttwak on how a small group can operate the state's own machinery against it.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the permanent machinery of files, officials, units, and roads is the coup's lever; the book measures capacity by its detachability.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: bureaucracies, parties, unions, and security services appear as patterned organizations that either supply obedience or block it.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the dialogue between rulers and ruled, legality as habit, and how armed possession becomes recognized authority.   </li>
+<li><a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>: why a coup is impossible where legitimacy has sunk into everyday bureaucratic reflexes.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: telephone exchanges, rail unions, airports, and troop movements decide who can concentrate force first.   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>: bridges, tunnels, roads, and airports where a handful of men can deny entry to vastly superior loyalist forces.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: inward espionage, warning time, security "noise," and simultaneous penetration make the coup a contest of who knows what when.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: strategically placed officers rather than masses; development as a factory of regime-threatening educated elites.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the transitional phase between seizure and authority, where delay colors the coup and concentrates its enemies.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: corruption, state purchases, bribes, and state-bank loans turn palace control into channels for moving value.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: counterintelligence and inward espionage are the coup's deadliest obstacles and best recruitment surfaces.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>: coercion without political community makes the new states technically strong and morally unconstrained.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>The government-state distinction: the coup operates "outside the government but within the state," detaching permanent machinery from visible leadership.   </li>
+<li>Political community versus state apparatus: the new states inherited instruments of power without the legality or ethics that make public power legitimate and constrained.   </li>
+<li>The machine theory of bureaucracy: orders from "the appropriate source, at the appropriate level" are carried out stereotypedly; regular obedience is what makes the coup possible.   </li>
+<li>Speed, anonymity, and the transitional phase: delay colors the coup politically and lets wait-and-see forces choose sides.   </li>
+<li>Neutralization before conquest: professional defenses of the state are handled before the coup, political forces during or just after it.   </li>
+<li>Ethnic and tribal bonding as both shield and vulnerability: Manchu China, Saudi National Guard, Alawite core forces, tribal militias.   </li>
+<li>Foreign dependence and great-power constraint: Hungary 1956, Diem's 1963 coup, Soviet-Egyptian relations 1955-1967, jet-fighter dependency, French garrisons in Africa.   </li>
+<li>Corruption as the coup incentive missing from 1968: colonels become presidents and loot foreign-exchange reserves, state purchases, bribes, and state-bank loans.   </li>
+<li>Anti-coup fragmentation: multiple separate security and espionage services, presidential and revolutionary guards, clannish inner-core forces, "who will guard the guardians."   </li>
+<li>The economics of repression: the political survival limit, propaganda as distraction and justification, repression as budget item, development as elite-breeding danger.   </li>
+<li>The bloodless ideal: deterrence rather than destruction; a blocking force that becomes an ambush creates the resistance it was meant to prevent.   </li>
+<li>The first communique and the theater of legitimacy: rhetoric, nationalist slogans, policy concessions, and foreign recognition turn a street operation into national rule.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the permanent machinery of the modern state — files, officials, chains of command, police, and units — is the coup's lever and prize; the book studies capacity as something that can be seized and turned on its nominal owners.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>: order generated by coercion rather than political community misgoverns at home and degrades standards abroad; governance requires legality and participation the colonially inherited machines never acquired.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: bureaucracies, one-party states, trade unions, and security services are patterned organizations whose reflexes — rubber-stamping, wait-and-see neutrality, career survival — the coup either exploits or must neutralize.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: a functioning dialogue between rulers and ruled immunizes a state against coups; armed possession becomes authority only when the political forces accept it.   </li>
+<li><a href="//02%20Concepts/Legitimacy.html">Legitimacy</a>: legitimacy is what the United Kingdom and a recovered France possess and the backward or inert state lacks; it cannot be seized, only imitated in communiques.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: telephone exchanges, cell relays, rail unions like Vikzhel, airports, and roadblocks decide whether the coup's forces or the loyalists' can move and communicate first.   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>: bridges, tunnels, constrained passages, and symbolic roadblocks let small blocking forces control the entry of vastly superior forces into the capital.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: inward espionage, multiple spy services, warning time, intelligence "noise," and simultaneous penetration make the coup a contest of knowledge before it is a contest of force.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: strategically well-placed individuals seize power where masses cannot; conversely, development educates a new elite that becomes the regime's most dangerous critics.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the transitional phase — after emerging and before authority hardens — is the coup's moment of maximum exposure, where delay stimulates concentrated opposition.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: foreign-exchange reserves, state purchases, bribes, state-bank loans, and family business channels convert the seizure of the palace into self-enrichment, making corruption a primary coup incentive.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: counterintelligence and inward espionage turn surveillance against the plotters before their teams move, while spies inside the coup are themselves the best-placed potential defectors.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: the first communique's rhetoric — "revolution," "the people," nationalist and religious vocabulary — masks a seizure carried out by a few hundred men.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="preface-to-the-2016-edition">Preface to the 2016 Edition</h3>
+<p>Summary: Luttwak explains that the book has survived through seven English editions and nineteen foreign-language editions, then updates the old model for a world of social media, narrowcasting, corruption, anti-coup precautions, and inward espionage. He adds corruption as a central coup incentive because colonels who become presidents can loot foreign-exchange reserves, state purchases, bribes, state-bank loans, and family business channels. He describes anti-coup fragmentation through presidential guards, revolutionary guards, palace security, clan officers, South Korea's Defense Security Command under Chun Doo Hwan, and the danger of giving one security command a monopoly of immediate force after Park Chung Hee's assassination. He also details Syria's five Assad-era espionage services, Yasser Arafat's twelve Palestinian organizations, the 1972 Moroccan plot by Mohammad Oufkir against Hassan II's Boeing 727, and the blood-splattered French edition found on Oufkir's desk. Source anchors: social media, corruption, presidential guard, Chun Doo Hwan, Park Chung Hee, Bashar al-Assad, Yasser Arafat, Mohammad Oufkir.   </p>
+<p>Analysis: Social media forces Luttwak to revise the old radio-station model, but corruption lets him preserve the central logic that coups follow incentives inside the state. Foreign-exchange reserves, state purchases, bribes, and state-bank loans turn coup politics into a fight over <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a>, because control of the palace opens channels for moving value through public accounts and procurement. Presidential guard fragmentation and inward espionage are anti-coup answers to the same vulnerability the book describes; inward espionage made of many separate services recasts security as an <a href="//02%20Concepts/Information%20and%20Coordination.html">information and coordination</a> problem, since the regime must detect agreements among plotters without giving any single spy force both the knowledge and the strength to join them — and too much unified command lets Chun Doo Hwan move after Park Chung Hee dies. Bashar al-Assad and Yasser Arafat show multiplicity as a ruler's defense, while Mohammad Oufkir shows the book's dark reception history by placing <em>Coup d'État</em> inside an actual failed plot. The preface matters because it turns the 1968 manual into a 2016 anatomy of rulers who have read the manual too.   </p>
+<h3 id="preface-to-the-first-edition">Preface to the First Edition</h3>
+<p>Summary: The first-edition preface explains that the book was written against Western optimism about the Third World, especially the belief that postcolonial Africa and Asia would quickly convert independence, aid, education, and youthful leadership into development and moral authority. Luttwak, writing from the London School of Economics milieu, argues instead that the new states inherited colonial armies, police, tax collectors, files, and administrators without a genuine political community to restrain them. He names one-party states, bribery, Accra speeding tickets issued to trapped drivers, Uganda's Idi Amin, private pockets, imported luxuries, missing vaccines, and the abrupt undoing of colonial rule as ingredients of misgovernment. The preface later revises the picture by noting democratizing sub-Saharan Africa, Robert Mugabe as a destructive exception, and the growing evidence that Islamic political hegemony blocks democratic participation in North Africa, the Middle East, and even Turkey under the AKP. Source anchors: Third World, London School of Economics, political community, one-party states, Accra, Idi Amin, Robert Mugabe, AKP.   </p>
+<p>Analysis: The Third World discussion supplies the book's moral and sociological setting: coups are not just tricks but products of states whose coercive apparatus outruns political community. Colonial armies, police, tax collectors, and files give new rulers <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> without the reciprocal limits that make public power legitimate. London School of Economics optimism is the foil that lets Luttwak contrast elite hope with Accra, one-party states, and Idi Amin's reality. Robert Mugabe and the AKP show the 2016 author revising some judgments while intensifying others, especially on Islam and democratic participation. The combination of strong machinery and weak political community is precisely what <a href="//02%20Concepts/Order%20and%20Governance.html">order and governance</a> hinge on: order built on coercion rather than consent remains powerful, unconstrained, and coup-prone. The preface sets up the rest of the book by insisting that the modern state can be technically strong and politically unconstrained at the same time.   </p>
+<h3 id="foreword-by-walter-laqueur-1978">Foreword by Walter Laqueur (1978)</h3>
+<p>Summary: Walter Laqueur presents the book as a major study of an underexamined form of political change, arguing that coups had become more common than revolutions in many United Nations member states. He notes that Marx and Engels wrote about revolution but not technique, that Auguste Blanqui gave rare procedural instruction, and that Gabriel Naude's seventeenth-century "master stroke" anticipated some coup logic. Laqueur contrasts the extensive literature on guerrilla warfare, terrorism, internal war, peasant war, and objective conditions with the sparse study of strategically placed individuals who seize power. He cites roughly 120 military coups in fifteen years against only five guerrilla movements that came to power, three of them after Portugal's 1974 coup. Source anchors: Walter Laqueur, United Nations, Auguste Blanqui, Gabriel Naude, guerrilla warfare, 120 military coups, Portuguese coup, strategically placed individuals.   </p>
+<p>Analysis: Walter Laqueur clarifies why the book was shocking: it treats strategically placed individuals as more immediately consequential than the social conditions favored by revolution theory. Auguste Blanqui and Gabriel Naude give Luttwak a lineage of technique rather than ideology. The United Nations and 120 military coups place the coup inside normal international politics, not the margins. By comparing guerrilla warfare and the Portuguese coup with repeated military seizures, Laqueur frames the book as a correction to political science's preference for movements that can be explained by broad causes. His emphasis on "the political ambitions of a few strategically well-placed individuals" makes the foreword an <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> anchor: political change arrives not from mobilized masses or objective conditions but from a small cadre whose placement inside the state substitutes for a popular base — which is exactly what makes coups "the mortal enemies of orderly hypotheses and concepts."   </p>
+<h3 id="h_1-what-is-the-coup-d-etat">1. What Is the Coup d'État?</h3>
+<p>Summary: Luttwak defines the coup by first separating it from palace revolution, revolution, civil war, pronunciamiento, putsch, foreign liberation, insurgency, and war of national liberation. He ties the coup's feasibility to the rise of the modern state with professional bureaucracy, standing armed forces, files, records, officials, chains of command, and departments whose orders are executed if they come from the appropriate source. Examples include Imperial China's Manchu reliance on Jurchen-descended elites, African rulers appointing tribe members to key security posts, Saudi Arabia's National Guard or White Army, King Faisal II's Iraq, Nuri es-Said, Abd al-Karim Qasim's July 14 Revolution, Kornilov, Romania in 1947, Syria in 1966, Iraq in 1958, and Yemen in 1962. The formal definition is that a coup infiltrates a small but critical segment of the state apparatus and uses it to displace the government from control of the remainder. Source anchors: modern state, palace revolution, pronunciamiento, putsch, Saudi National Guard, Abd al-Karim Qasim, Kornilov, state apparatus.   </p>
+<p>Analysis: The modern state is the chapter's central mechanism because its routine obedience makes the coup possible. Files, records, offices, and command chains create <a href="//02%20Concepts/Legibility.html">legibility</a> that plotters can exploit: once the right source issues orders, ministries and units can act without rearguing the regime's legality. The chapter grounds the whole book in <a href="//02%20Concepts/State%20Capacity.html">state capacity</a>: a coup is only as good as the machinery it captures, and the same machine that makes government possible makes it detachable. Palace revolution, pronunciamiento, and putsch are not vocabulary exercises; they mark rival ways of changing power that do not match Luttwak's operational target. Saudi National Guard and Manchu ethnic bonding show why some state apparatuses cannot be detached easily from rulers. Abd al-Karim Qasim and Kornilov demonstrate the political range of illegal seizures, allowing Luttwak to define the coup as technically neutral even when its users are not.   </p>
+<h3 id="h_2-when-is-a-coup-d-etat-possible">2. When Is a Coup d'État Possible?</h3>
+<p>Summary: This chapter asks which states are vulnerable and argues that developed political societies such as the United Kingdom would resist a coup because citizens, bureaucrats, parties, pressure groups, and officials understand legitimacy as more than possession of offices. Luttwak contrasts functioning political dialogue with inert or decomposed systems: Yugoslavia's Communist Party as a semi-open forum, Egypt's Arab Socialist Union under Nasser, Ba'ath parties under Hafez al-Assad and Saddam Hussein, Xi Jinping's Chinese Communist Party, France in 1958, Italy's postwar Democrazia Cristiana, Bettino Craxi, Silvio Berlusconi, and Matteo Renzi. He then sets preconditions: economic backwardness, political passivity, elite isolation, Black Saturday in Cairo on January 26, 1952, foreign or regional centers such as Union Miniere in Katanga, Aramco in Saudi Arabia, United Fruit in Central America, Anglo-Persian in Khuzestan, and regional blocs like Nigeria, Lebanon, South Kasai, and Katanga. Source anchors: United Kingdom, Yugoslavia, Nasser, Xi Jinping, France 1958, Black Saturday, Union Miniere, Lebanon.   </p>
+<p>Analysis: United Kingdom and France 1958 let Luttwak show that vulnerability is not just poverty; a developed society can become temporarily inert when war and institutional collapse erode <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">legitimacy</a>. Yugoslavia, Nasser, and Xi Jinping illustrate different degrees of ruler-ruled dialogue inside one-party systems, which matters because dialogue teaches people to question illegal power. France 1958 and Italy's Democrazia Cristiana coalitions also show that <a href="//02%20Concepts/Institutions.html">institutions</a> matter: a state whose parties, parliaments, and coalitions cannot aggregate consent stays politically fragile even when economically developed. Black Saturday and Union Miniere show two separate constraints on coup planning: the masses may be passive until they burn the city, while business or regional substates may hold real power outside the capital. Lebanon is the limiting case where communal centers make a single Beirut coup nearly meaningless.   </p>
+<h3 id="h_3-the-strategy-of-the-coup-d-etat">3. The Strategy of the Coup d'État</h3>
+<p>Summary: Luttwak turns from conditions to strategy by arguing that the plotters must neutralize coercive forces before the coup and political forces during or just after it. Speed matters because delay gives the coup a political color and lets opponents concentrate; therefore the armed forces, police, security agencies, and key political organizations must be mapped for intervention capability. The chapter discusses ethnic minorities such as Alawites, Druzes, Kurds, and Shans; party militias such as Nazi Brownshirts; Russia's Vikzhel railway union in 1917; modern US intelligence fragmentation including ODNI, CIA, NSA, INR, DIA, NGA, NRO, Cyber Command, FBI, and DEA; Israel's mass mobilization; paramilitary police in Ghana; rural police; urban police; and security functions such as intelligence, counterintelligence, counterespionage, internal political security, and internal intelligence. Source anchors: speed, Alawites, Brownshirts, Vikzhel, ODNI, CIA, NSA, paramilitary police, counterintelligence.   </p>
+<p>Analysis: Speed is the chapter's practical answer to the coup's weakness: plotters are few, so they must prevent enemies from discovering how few. Alawites and Brownshirts show why seemingly available forces may be politically costly or militarily inferior to state units. Vikzhel proves that rail unions and transport routines can turn <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> into anti-coup power by stopping armed movement before it reaches the capital. ODNI, CIA, and NSA demonstrate how modern security systems create both obstacles and recruitment surfaces. Counterintelligence is the most dangerous function because it turns <a href="//02%20Concepts/Intelligence.html">intelligence</a> inward against the plotters before their teams move.   </p>
+<h3 id="h_4-the-planning-of-the-coup-d-etat">4. The Planning of the Coup d'État</h3>
+<p>Summary: The chapter begins with the failed Algiers coup of April 23, 1961, when the First Foreign Legion Parachute Regiment and Generals Maurice Challe, Andre Zeller, Edmond Jouhaud, and Raoul Salan seized Algiers but failed after de Gaulle, Debre, trade unions, Communists, Christian Democrats, Force Ouvriere, and other organized forces refused acceptance. Luttwak uses that failure to show that planning must include political forces as well as military ones. He then maps personalities in government, distinguishing ceremonial figures, inner councils, ministers of interior and defense, party militia controllers, and hidden strongmen such as Salah Jadid behind Nureddin al-Atassi and Youssof Zwayeen in Syria. The chapter also analyzes figures outside government, religious organizations, Thich Tri Quang, jihadi movements, Sayyid Qutub, machine parties, insurrectional parties, parabureaucratic parties, developed-country parties, and trade unions such as the Bolivian miners of Catavi-Siglo Veinte, Comibol, CGT, and CGL. Source anchors: Algiers coup, Maurice Challe, de Gaulle, trade unions, Salah Jadid, Thich Tri Quang, Sayyid Qutub, Bolivian miners.   </p>
+<p>Analysis: The Algiers coup is the chapter's cautionary case because Maurice Challe had paratroopers and prestige but not de Gaulle's command of political legitimacy. Trade unions and parties mattered because they moved the wait-and-see military middle away from the generals, showing that <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">legitimacy</a> can decide whether armed possession becomes recognized authority. Salah Jadid and Thich Tri Quang show why formal titles are unreliable: planners must identify who can actually mobilize force or followers. The chapter is therefore also a study in <a href="//02%20Concepts/Information%20and%20Coordination.html">information and coordination</a>: mapping who actually controls forces, communications, and organizations is the precondition of every plan. Bolivian miners, Comibol, CGT, and CGL make labor organization a direct operational issue, not a social afterthought, because a general strike can confront the coup before authority hardens.   </p>
+<h3 id="h_5-the-execution-of-the-coup-d-etat">5. The Execution of the Coup d'État</h3>
+<p>Summary: Luttwak describes the active phase as a military operation without reserves, headquarters, or time for feedback, requiring total commitment, preplanned teams, and simultaneous movement against organizational targets. He explains the eve of action, forcible isolation of hard-core loyalist forces, roadblocks, telephone exchanges, cell relays, airports, railways, city entry points, and the psychology of loyalist officers receiving unusual orders. Timing is controlled by infiltration progress, warning time, lead time, noise, security-agency surveillance, and simultaneous penetration of the early warning area. The chapter then divides targets into A, B, and C categories, handles the coup-within-the-coup danger from A-team commanders, and moves after seizure to curfews, transport shutdowns, mass communications, first communiques from Aleppo, Bokassa, Nzeogwu, and Ghana's National Liberation Council, nationalist rhetoric, policy concessions, legitimacy, and foreign recognition. Source anchors: total commitment, roadblocks, hard-core loyalists, warning time, A-targets, first communique, National Liberation Council, foreign recognition.   </p>
+<p>Analysis: Total commitment is essential because a coup has no campaign season in which reserves can recover mistakes. Roadblocks, telephone exchanges, airports, and railways turn execution into <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a>: loyal forces should be delayed, confused, and deterred rather than destroyed. Roadblocks, bridges, tunnels, and airports are also the coup's <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">chokepoints and gateways</a> — places where a handful of men at a constrained passage can delay an intervention force far larger than the coup itself. Warning time and A-targets connect security discipline to tactical design, while the coup-within-the-coup warning recognizes that incorporated soldiers may become the next threat. The first communique, National Liberation Council, and foreign recognition shift the book from seizure to authority, where <a href="//02%20Concepts/Language%20and%20Ideology.html">language and ideology</a> must make a street operation sound like national rule.   </p>
+<h3 id="appendix-a-the-economics-of-repression">Appendix A. The Economics of Repression</h3>
+<p>Summary: Appendix A models the post-coup regime as "X-land" facing the tradeoff between economic development, taxation, propaganda, repression, and political survival. Luttwak argues that development requires withdrawing income from current consumption for investment in human and physical capital, but poor populations have an economic survival limit and a more flexible political survival limit. Spending on police and propaganda can lower the political survival limit enough to extract more taxes, though with diminishing returns. He compares Duvalier's Haiti, the Tonton Macoutes, voodoo propaganda, Duvalierville, Baby Doc, Kwame Nkrumah's Ghana, and China's combination of repression, propaganda, and growth. Source anchors: X-land, political survival limit, propaganda, repression, Duvalier, Tonton Macoutes, Nkrumah, China.   </p>
+<p>Analysis: X-land lets Luttwak write as a ruler calculating how much hardship can be imposed before revolt. The political survival limit is the appendix's key device because it turns repression and propaganda into budget items rather than moral categories. Police spending, taxation, and development make post-coup survival a <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> problem: the regime must extract, intimidate, and invest without pushing subjects past revolt. Duvalier and the Tonton Macoutes illustrate maximum safety with zero development, while Nkrumah shows the opposite danger: development creates educated critics faster than repression can contain them. That is an <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> caution: economic development sponsors a new educated elite whose growth the regime itself finances. China appears as the middle formula, using growth itself as part of regime stabilization.   </p>
+<h3 id="appendix-b-tactical-aspects-of-the-coup-d-etat">Appendix B. Tactical Aspects of the Coup d'État</h3>
+<p>Summary: Appendix B gives tactical detail for active teams and blocking forces while repeatedly warning against bloodshed and military usurpation. Luttwak distinguishes diffuse infiltration from concentrated infiltration, noting that three companies from brigade X plus companies from brigades Y, Z, and U create different post-coup risks than whole battalions from a few brigades. He divides A-teams into civilian penetration groups, diversion groups, covering-fire groups, and assault groups, while B-teams arrest political personalities and C-teams sabotage selected facilities. Blocking forces use observation lines, symbolic roadblocks, main defensive positions, anti-tank positions, bridges, tunnels, and constrained passage to prevent loyalists from entering the capital without turning the position into an ambush. Source anchors: diffuse infiltration, concentrated infiltration, A-teams, B-teams, C-teams, symbolic roadblocks, anti-tank positions, blocking forces.   </p>
+<p>Analysis: Diffuse infiltration and concentrated infiltration are not just staffing options; they decide whether the coup's own soldiers can later dominate the plotters. A-teams are necessary for hard targets but dangerous because their commanders may hold enough force to seize the prize for themselves. B-teams and C-teams keep arrest and sabotage small, timed, and functional. Symbolic roadblocks and anti-tank positions reveal the appendix's tactical ethic: deterrence is preferable to combat because a bloody blocking force can create the resistance it was meant to prevent. The entire blocking-force design is a study in <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a>: bridges, tunnels, and constrained passages let small teams govern who can move into the capital, using <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">chokepoints and gateways</a> to neutralize the loyalists' numerical superiority.   </p>
+<h3 id="appendix-c-statistics">Appendix C. Statistics</h3>
+<p>Summary: Appendix C supplies tables on economic development and coups from 1945 to 2010, including a basic list of coups and attempted coups across the postwar period. The appendix functions as the empirical ledger behind the book's claims about frequency, target states, and the relation between development level and coup vulnerability. It follows chapters that named Ghana, Nigeria, Syria, Iraq, Egypt, Katanga, Haiti, South Korea, Morocco, and many other cases, and it gives the reader a way to see those examples as part of a wider pattern. The statistics do not replace the operational analysis, but they keep the manual-like prose tied to repeated events rather than anecdote alone. Source anchors: 1945-2010, economic development, coups, attempted coups, basic list, Ghana, Nigeria, Syria, Morocco.   </p>
+<p>Analysis: The 1945-2010 range matters because Luttwak is not writing only from the dramatic coups of the 1960s; he is inviting comparison across the entire postwar state system. Economic development and attempted coups connect Appendix C back to Appendix A and Chapter 2, where vulnerability depends on both state machinery and political passivity. Ghana, Nigeria, Syria, and Morocco show how named cases from the chapters belong to the same empirical pool. As an empirical ledger pairing development level with seizure, the appendix grounds the book's claims about <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> and vulnerability in countable history rather than anecdote alone. The statistics give the book a check against its own stylish certainty by making its claims countable.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Publication history</strong>: first published in Great Britain by Allen Lane, the Penguin Press, 1968; copyright 1968, 1979 Edward N. Luttwak; the revised edition is Cambridge, Massachusetts/London, 2016, with preface and revisions copyright 2016 and Appendix C figures copyright 2016 Luther Patenge. Seven English editions and nineteen foreign-language editions (Arabic to Russian); the Chinese edition was published only in Taiwan.   </li>
+<li><strong>The formal definition</strong> (Chapter 1): "A coup consists of the infiltration of a small but critical segment of the state apparatus, which is then used to displace the government from its control of the remainder."   </li>
+<li><strong>"Democratization of the coup"</strong>: the first-edition preface's defense — if more people learn the technique, "this is merely a step toward the democratization of the coup — a fact that all persons of liberal sentiments should applaud."   </li>
+<li><strong>Laqueur's evidence</strong> (1978): about 120 military coups in fifteen years against only five guerrilla movements that came to power, three of them following the Portuguese coup of 1974; his genealogy runs from Auguste Blanqui's procedural instruction back to Gabriel Naude's seventeenth-century "master stroke."   </li>
+<li><strong>The Duvalier formula</strong> (Appendix A): "political security = maximum economic development = zero." Papa Doc ruled 1957-1971 (fourteen years) and Baby Doc fifteen more; the Tonton Macoutes were credited with some 30,000 murders, while propaganda boasted Duvalier's voodoo powers and the only grand project, "Duvalierville," was abandoned.   </li>
+<li><strong>X-land arithmetic</strong> (Appendix A): a hypothetical economy with GDP per head of US<span class="arithmatex">\(2,000, US\)</span>200 taxed, US<span class="arithmatex">\(1,800 left for consumption; with US\)</span>500 needed for economic survival, spending US<span class="arithmatex">\(10 per person per year on propaganda and police lowers the political survival limit by US\)</span>100, leaving a net US$90 for development.   </li>
+<li><strong>Oufkir's coup</strong> (2016 preface): August 16, 1972 — four F-5s of the Royal Air Force, reportedly on Oufkir's orders, fired on King Hassan II's Boeing 727 returning from France; the aircraft landed at Rabat; a strafing attack killed eight and injured forty; Oufkir was found shot dead and a blood-splattered, heavily annotated copy of the French edition lay on his desk.   </li>
+<li><strong>Anti-coup counter-examples</strong> (2016 preface): South Korea's joint Defense Security Command, inaugurated October 1977, gave Chun Doo Hwan the monopoly of immediate force with which he seized power after Park Chung Hee's assassination; Syria ran five separate Assad-era espionage services; Yasser Arafat maintained some twelve Palestinian intelligence organizations.   </li>
+<li><strong>The nineteen-headed US intelligence community</strong> (Chapter 3): ODNI, CIA, NSA, the Energy Department's OICI, three Homeland Security bodies, State's INR, Treasury's TFI, and the rest — Luttwak uses them to show that a fragmented security system both complicates a coup and multiplies its recruitment surfaces.   </li>
+<li><strong>First communiques</strong> (Chapter 5): Captain Mustafa Hamdun, Aleppo Radio, 6:30 A.M., February 25, 1954; Colonel Jean-Bedel Bokassa, Central African Republic, January 15, 1966; Major Nzeogwu, Radio Kaduna, Nigeria, January 15, 1966; the Ghanaian National Liberation Council's February 1966 statement that "the myth surrounding Kwame Nkrumah has been broken."   </li>
+<li><strong>Syria's coup history</strong> (Chapter 1): more than a dozen coups before the Assad family dynasty was secured by Hafez al-Assad's 1970 coup; the Hourani constitution's election machinery decayed and disappeared.   </li>
+<li><strong>The Algiers putsch</strong> (Chapter 4): April 23, 1961 — the First Foreign Legion Parachute Regiment seized Algiers for Generals Challe, Zeller, Jouhaud, and Salan; de Gaulle broadcast "Francaises, Francais, aidez-moi," Debre urged citizens to "go to the airports," and the refusal of the unions (CGT, CFTC, Force Ouvriere) and parties collapsed the wait-and-see middle.   </li>
+<li><strong>Soviet dependence chain for Egypt</strong> (Chapter 2): from the 1955 Czech arms deal through the 1956 Suez-Sinai defeat, the 1962 Yemen intervention, the 1966 cut of US wheat, and the June 1967 debacle (Israel estimated 80 percent of Soviet-supplied equipment destroyed or captured) to the Soviet voice in army training, senior appointments, and intelligence as the price of re-equipment.   </li>
+<li><strong>Epigraphs worth reusing</strong>: the Duke of Wellington ("I shall be sorry to commence the era of peace by a coup d'etat such as that I had in contemplation," 1811); Constantine Kollias, Athens, April 21, 1967 ("no other way of salvation remained except for the army's intervention"); Madame de Staël on Napoleon's legislative body ("a crowd of five hundred men, less vigorous and disciplined than a battalion"); Lenin, October 1917 ("Victory is assured and there are nine chances out of ten that it will be bloodless"); Abu Zuhair Yahya, Iraqi prime minister, 1968 ("I came in on a tank, and only a tank will evict me").   </li>
+<li><strong>Small interventions, decisive results</strong> (Chapter 2): a few companies of British marine commandos crushed 1964 mutinies in Kenya, Tanganyika, and Uganda; a few thousand air-transportable French troops reversed the 2013 Mali campaign; jet-fighter dependence binds a buyer to one of six suppliers — Sweden, the United States, France, the United Kingdom, China, or Russia.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Black Hearts.html">black hearts</a></li>
+	<li><a class="backlink" href="//01 Books/Days of Rage.html">days of rage</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A175814629467536046312589110365038554715{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D175814629467536046312589110365038554715{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B175814629467536046312589110365038554715{level}" level="{level}" note_temp_id="175814629467536046312589110365038554715" onclick="window.ObsHtmlGraph.run(this, '175814629467536046312589110365038554715', 'coup d'état');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C175814629467536046312589110365038554715{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

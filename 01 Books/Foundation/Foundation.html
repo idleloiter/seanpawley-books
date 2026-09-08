@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="foundation">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'foundation';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=foundation" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="foundation">Foundation</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><em>Foundation</em> is book one of the <a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a>, the first-published volume of Isaac Asimov's series and the anchor for the <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>. It establishes the sequence's founding premises: psychohistory, the fall of the Galactic Empire, the establishment of Terminus, the Seldon Crisis, and the pattern of institutional substitution by which the Foundation keeps surviving after the Empire stops being able to govern. It sits beside its sibling volumes in the series hub and connects thematically to the MoC <a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a> and the reading path <a href="//03%20Reading%20Paths/Speculative%20Governance%20and%20Future%20Orders.html">Speculative Governance and Future Orders</a>. In this vault it is the clear counterpoint to straightforward collapse studies: the same civilizational decline that breaks the Roman and Byzantine cores here becomes a controlled transfer of power from <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> to commerce.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><em>Foundation</em> is built as a sequence of political substitutions: Hari Seldon begins by replacing Imperial loyalty with mathematical foresight, Salvor Hardin replaces scholarly preservation with local statecraft, the mayors replace military weakness with religious control, the traders replace priestly authority with portable commerce, and Hober Mallow replaces both sermons and gunboats with economic dependence. The book does not follow one hero through a continuous plot. It follows the Foundation as an institution learning which instrument can still work after the Galactic Empire has begun losing administrative reach.   </p>
+<p>The opening on Trantor gives Seldon's Plan the shape of a legal trap. Gaal Dornick arrives from Synnax with a mathematics doctorate, sees the enclosed metal planet, meets Seldon at the Luxor Hotel, and learns that psychohistory predicts Trantor's destruction with statistical confidence rather than prophetic mysticism. The Commission of Public Safety, Linge Chen, Lors Avakim, and the treason proceedings all become part of Seldon's pressure campaign. Exile to Terminus looks like punishment for the Encyclopedia Galactica project, but the trial has actually moved one hundred thousand people to the edge of the Galaxy under a story the Empire can tolerate.   </p>
+<p>Once the narrative reaches Terminus, the book keeps exposing official explanations as obsolete. The Encyclopedists still believe in an academic mandate from Trantor, while Salvor Hardin notices that the Province of Anacreon has broken away, that Smyrno, Konom, and Daribow are now neighboring kingdoms, and that Terminus has almost no metals or military force. The Seldon Vault does not hand the Foundation a battle plan; it discredits the Board of Trustees' premise and confirms that survival, not the encyclopedia, is the first real assignment.   </p>
+<p>Hardin's solution in the Anacreon crisis is not courage in battle but institutional engineering. Atomic power is wrapped in priesthood, temples, rituals, and taboos so that the Four Kingdoms receive Foundation technology without receiving the capacity to control or reproduce it. Prince Wienis can seize a battle cruiser and imagine conquest, but the ship has been made dependent on technicians whose religious obedience runs back to Terminus. The Foundation wins because its weakness forces it to build control into the operating system of Anacreon's borrowed power.   </p>
+<p>The trader sections then show the same outward expansion after the religious method has begun to age. Limmar Ponyets in Askone does not convert a planet by preaching the Galactic Spirit; he bargains with Grand Master politics, Pherl's ambition, gold, gadgets, and a transmuter. The trader's loose morality is not ornamental color. It is how Foundation influence escapes official channels and enters worlds that would reject priests but accept useful machines, medical devices, and profitable deals.   </p>
+<p>Hober Mallow's Korell episode is the book's most elaborate test because it requires him to read both foreign evidence and domestic factional politics. Jorane Sutt and Publis Manlio want to preserve the religious system, while Mallow studies Commdor Asper, Lady Licia, Korellian foundries, nuclear blasters, the Spaceship-and-Sun, Onum Barr of Siwenna, and the limits of Imperial technology. His conclusion is narrow and concrete: Korell has old Imperial military support but not the small, maintainable nuclear economy that Foundation trade has installed. The resulting "war" is won by doing nothing military until Korell's factories and consumers prefer Foundation commerce to Commdor Argo's anti-Foundation policy.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Hari Seldon</strong>: the founder whose recorded and absent calculations drive every crisis. His motivation is to shorten the coming barbarism from thirty thousand years to one thousand by establishing two "scientific refuges" at opposite ends of the Galaxy. He achieves his ends through the trial and exile to Terminus, and thereafter appears only as a repeating Vault recording whose warnings the Foundation must obey.   </li>
+<li><strong>Gaal Dornick</strong>: a young mathematician from Synnax who is the reader's entry point into Trantor and the Seldon Project. His function is to record Seldon's Plan and the exile; his provincial confusion makes the enclosed center of the Empire legible before it is reduced to a statistical object.   </li>
+<li><strong>Salvor Hardin</strong>: mayor of Terminus City and first architect of Foundation statecraft. His motivation is survival of Terminus as a living society rather than an academic appendage. He engineers the coups against the Encyclopedists and later Anacreon's fleet, and repeatedly phrases his doctrine ("Violence is the last refuge of the incompetent"). He replaces military force with balance of power and then with religion.   </li>
+<li><strong>Limmar Ponyets</strong>: a free-lance trader and failed seminarian whose motivation is profit and personal loyalty to Eskel Gorov. He demonstrates that Foundation influence can travel by bribes, blackmail, and private ambition where priests are refused.   </li>
+<li><strong>Hober Mallow</strong>: Master Trader of Smyrno who rises from agent to mayor. His motivation is to defeat Korell and the underlying Empire by commercial dependence rather than war, and to break the priesthood's monopoly on Foundation control. He represents the culmination of the book's move from religion to commerce.   </li>
+<li><strong>Sef Sermak / Lewis Bort / Yohan Lee</strong>: the Terminus politicians on either side of the mayoral succession. Sermak and the Actionists demand forward military policy; Lee is Hardin's trusted lieutenant who runs the coup machinery.   </li>
+<li><strong>Jorane Sutt</strong>: secretary to the mayor, committed to the religious instrument. He bitterly resists the trading class, and his anti-Mallow campaign becomes the domestic half of the Korell crisis.   </li>
+<li>Supporting antagonists in the outer kingdoms — <strong>Lewis Pirenne</strong> (Encyclopedist chairman), <strong>Prince Wienis</strong>, <strong>King Lepold</strong> (Anacreon), the <strong>Grand Master</strong> and <strong>Pherl</strong> (Askone), <strong>Commdor Asper Argo</strong> and <strong>Lady Licia</strong> (Korell) — each embody one way that central or local power tries and fails to check the Foundation's methods.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a>: this is the foundational first volume of the series hub; it establishes psychohistory, the Seldon Crisis, Terminus, and the pattern later volumes attack and reverse.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>: the institutional subject of the whole book; every part traces another stage of how the Project survives and expands.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>: the companion Foundation at Star's End is revealed in Part I (Ch. 8) and Part III (Ch. 9), marking the division that later books exploit.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: the central geopolitical condition throughout — the interplay between Trantor's decaying center and the Periphery's breakaway kingdoms.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: the mechanism Hardin builds to bind Anacreon's borrowed power to Foundation control, and later the dying instrument Mallow replaces.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: the Askone episode shows bribery, blackmail, and private ambition moving banned devices where open trade cannot.   </li>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: Mallow's strategy turns dependence on goods into political control over Korell.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the Encyclopedia Galactica is the Foundation's cover story and the seed of its preservation mission.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The substitution of instruments</strong>: each crisis forces a new mechanism (statistical foresight, local politics, religion, trade, commerce) because the old one ages or is exposed.   </li>
+<li><strong>The appearance of strength versus actual capacity</strong>: Dorwin's empty eloquence, the Imperial navy's aged ships, and Anacreon's nuclear bluff all contrast with the Foundation's small, maintainable, usable power.   </li>
+<li><strong>Control through dependence</strong>: the Foundation wins not by defeating enemies at range but by making them unable to operate borrowed or purchased technology without it.   </li>
+<li><strong>The cost of official missions</strong>: the Encyclopedia is a fraud sheltering the real project; religious ritual is a facade the priesthood half-believes; trade is a cover for intelligence.   </li>
+<li><strong>Center versus periphery</strong>: the decline of legibility and administration from Trantor outward, and the rise of competence at the edge.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: Terminus becomes politically mature only when Hardin recognizes that Trantor's ceremonial authority no longer protects the exposed frontier, and each part calibrates how much the center can still do.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: Hardin wraps atomic expertise in priesthood, ritual, and taboo so Anacreon's rulers cannot separate technical power from sacred dependence on Terminus; Mallow then shows the method aging and being replaced.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: Ponyets converts banned Foundation devices into leverage through bribery, blackmail, and Pherl's private ambition inside an officially hostile jurisdiction.   </li>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: Mallow defeats Korell by making its factories and consumers depend on Foundation goods more deeply than its rulers can sustain political resistance.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the Encyclopedia Galactica is the Foundation's founding fiction and also its real preservation task; the book repeatedly measures the worth of accumulated knowledge against mere classification and stagnation.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the Foundation repeatedly builds real administrative leverage (coups, an interdict, economic dependence) out of weakness, because it cannot rely on raw military force.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<p>The extract divides the book into five Parts, each with its own resetting "Chapter N" sequence; the chapter markers are bare numbers in the body. There are 48 chapters in total: Part I has 8, Part II has 7, Part III has 9, Part IV has 6, Part V has 18.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-1-gaal-dornick-approaches-trantor">Part I: The Psychohistorians — Chapter 1: Gaal Dornick approaches Trantor</h3>
+<p>Summary: Gaal Dornick, a young mathematician from Synnax at the edge of the Blue Drift, crosses the Galaxy to join Hari Seldon's project. The chapter establishes the scale of the Empire — twenty-five million inhabited planets owing allegiance to Trantor — and Gaal's provincial awe as he waits for his first look at Trantor. The Spacing ship's officer deflects him; Gaal must wait to see the planet. <br />
+Analysis: Gaal's provincial confusion makes Trantor's scale readable before the story reduces that scale to a vulnerable statistical object. The old Empire's reach is everywhere ("no place in the Galaxy was [cut off from civilization]"), which already frames the coming fall as a matter of administrative reach: <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>. The Spaceship-and-Sun emblem on the officer's uniform is the first appearance of a symbol that will later betray the Empire's residue on Korell. <br />
+Source anchors: Gaal Dornick; Synnax; Blue Drift; Trantor; Spaceship-and-Sun; Hari Seldon.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-2-landing-on-the-metal-world">Part I: The Psychohistorians — Chapter 2: Landing on the metal world</h3>
+<p>Summary: Gaal lands on Trantor, passes through the Debarkation Building, takes a taxi to the Luxor Hotel, and sees nothing of sky. An inserted Encyclopedia Galactica entry explains Trantor: seventy-five million square miles of continuous city, over forty billion people, fed daily by fleets from twenty agricultural worlds, and therefore vulnerable to siege because it depends on the outer worlds for all necessities. <br />
+Analysis: The encyclopedia entry states explicitly why Trantor will fall: the impossibility of administering the vast Empire from one point and the planet's dependence on a single "jugular vein." This is the clearest early statement of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> and of the <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> irony that the Encyclopedia will be compiled against the very collapse it diagnoses. <br />
+Source anchors: Trantor; Debarkation Building; Luxor Hotel; 75,000,000 square miles; forty billions; agricultural worlds; jugular vein.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-3-the-observation-tower">Part I: The Psychohistorians — Chapter 3: The observation tower</h3>
+<p>Summary: Gaal visits the observation tower for open air and meets Jerril, a friendly Trantorian who is actually an agent of the Commission of Public Safety. He learns Trantor is tunneled a mile deep, is almost entirely enclosed under metal, and that natives call Seldon "Raven Seldon" because he keeps predicting disaster. Returning to his room, Gaal finds Hari Seldon himself waiting. <br />
+Analysis: Jerril's chatter first surfaces the ominous nickname "Raven Seldon" and the public resentment of the prediction, showing the Empire's center aware of but unwilling to face its own decline. The chapter contrasts the enclosed, admin-riddled metropolis with the exposed frontier from which Gaal comes, an early <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> contrast. <br />
+Source anchors: observation tower; Jerril; Commission of Public Safety; Raven Seldon; Trantor tunnels.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-4-the-demonstration">Part I: The Psychohistorians — Chapter 4: The demonstration</h3>
+<p>Summary: Seldon privately demonstrates psychohistory to Gaal, feeding in probabilities of assassination, viceregal revolt, economic depression, and declining exploration until the equations show Trantor's total destruction within three centuries at 92.5% probability. Gaal reasons that as Trantor specializes administratively it becomes more vulnerable and a greater prize. Seldon reveals that some results have leaked to the aristocracy, that he faces a 1.7% chance of execution, and that "all is taken into account." <br />
+Analysis: The demonstration is the book's clearest statement of the method and its limits — psychohistory predicts masses and statistics, not individuals. The 92.5% figure and Seldon's calm accounting of his own risk establish the deterministic frame the whole series inherits, tying the fall of the center to its <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> over-specialization. <br />
+Source anchors: Hari Seldon; psychohistory; 92.5%; Trantor destruction; Gaal Dornick; Commission of Public Safety.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-5-the-arrest">Part I: The Psychohistorians — Chapter 5: The arrest</h3>
+<p>Summary: Gaal is detained by the Commission of Public Safety and interrogated politely about Seldon's views and the date of Trantor's predicted destruction. His lawyer, Lors Avakim, arrives with a recorder that blanks the spy beam, explains that Seldon himself predicted the arrest and forced the Commission's hand, and gives probabilities: for the project over 99.9%, for Gaal himself 77.2%. Seldon is himself under arrest. <br />
+Analysis: The chapter shows the Plan working as a legal instrument: "Dr. Seldon's plans, which are laid out with the developed mathematics of over eighteen years, include all eventualities with significant probabilities." Gaal's detention, the manipulated trial timing, and the blanked spy beam are all deliberate steps by which <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> is exercised through prediction and legal maneuvering rather than force. <br />
+Source anchors: Gaal Dornick; Commission of Public Safety; Lors Avakim; recorder; probabilities; Seldon arrested.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-6-the-trial">Part I: The Psychohistorians — Chapter 6: The trial</h3>
+<p>Summary: The trial of Hari Seldon is held before the Commission of Public Safety, with Linge Chen as Chief Commissioner and the Advocate pressing the case. Seldon testifies that Trantor will lie in ruins within three centuries, that the fall of the galactic Empire cannot be stopped, that the coming dark ages would last thirty thousand years, and that his "100,000" project — really an Encyclopedia Galactica — will shorten the interregnum to a single millennium by preserving all knowledge. The Advocate's trap (proving the "hundred thousand" are too few to change history) plays directly into Seldon's answer: to minimize the effects of the destruction. <br />
+Analysis: The trial is where the Encyclopedia fraud is first publicly laundered: Seldon presents his staff as merely saving knowledge, and defines the interregnum problem with his "rotten tree-trunk" metaphor of doomed strength. This is the foundational statement of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> — accumulating and preserving science against anarchy — and reframes the whole book as a wager on preserving capacity at the periphery from a collapsing center. <br />
+Source anchors: trial; Linge Chen; Advocate; psychohistory; Encyclopedia Galactica; interregnum; thirty thousand years.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-7-the-choice-of-exile">Part I: The Psychohistorians — Chapter 7: The choice of exile</h3>
+<p>Summary: The second session is a private discussion, not a trial. Chen offers Seldon a choice between death and exile to Terminus, a planet at the edge of the Galaxy, on the theory that moving the project there will keep the Emperor's peace. Seldon weighs the threat — that killing him would hasten Trantor's fall to within fifty years — and accepts exile, which the reader later learns was his goal all along. <br />
+Analysis: Chen believes he is neutralizing a troublemaker by exiling him to a "secluded" frontier world; in fact he is handing Seldon exactly the isolated laboratory the Project needs. The scene is a study in <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as misdirection: the Empire uses its power to place its best thinker where he can best work against it, converting the center-periphery relation to Seldon's advantage. <br />
+Source anchors: Linge Chen; exile; Terminus; death or exile; edge of Galaxy; Emperor's peace.   </p>
+<h3 id="part-i-the-psychohistorians-chapter-8-the-plan-revealed">Part I: The Psychohistorians — Chapter 8: The Plan revealed</h3>
+<p>Summary: Seldon explains to Gaal that he engineered the exile two and a half years in advance, having prepared microfilms for departure. He reveals the Encyclopedia's true cover story and anticipates a companion Colony at the other end of the Galaxy ("Star's End"), a later revolt on Anacreon, and that he will die soon — leaving successors to carry out the Plan. The Foundation is placed under martial law with six months to leave. <br />
+Analysis: The chapter confirms the substitution thesis at the outset: Seldon does not prevent Trantor's fall, he hedges it by placing two seeds of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> at opposite ends of the Galaxy and letting the middle collapse. The explicit mention of the second Foundation at Star's End plants the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> division the series will develop. <br />
+Source anchors: Hari Seldon; Plan; microfilm; Star's End; Second Foundation; Anacreon revolt; martial law.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-1-the-board-of-trustees">Part II: The Encyclopedists — Chapter 1: The Board of Trustees</h3>
+<p>Summary: Fifty years later on Terminus, Lewis Pirenne, chairman of the Board of Trustees, presides over the Encyclopedia Foundation, which is a State-supported scientific institution under Imperial charter. Mayor Salvor Hardin presses Pirenne that the Periphery is breaking away — Anacreon's governor has made himself king — severing Terminus's trade and cutting off its imported metal. Pirenne insists the Emperor's protection makes politics "none of our business," while the Vault is due to open on the fiftieth anniversary. <br />
+Analysis: The chapter stages the collision of two theories of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Pirenne's faith in an Imperial charter versus Hardin's reading of the exposed frontier. Terminus's dependence on imported metal and its placement against the Four Kingdoms is the concrete <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> problem the Enlightenment-project premise cannot solve. <br />
+Source anchors: Lewis Pirenne; Board of Trustees; Salvor Hardin; Anacreon king; metal shortage; Vault; fiftieth anniversary.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-2-the-envoy-of-anacreon">Part II: The Encyclopedists — Chapter 2: The envoy of Anacreon</h3>
+<p>Summary: Anselm haut Rodric, envoy Extraordinary of Anacreon, arrives with ceremony. He publicly proposes a military base and "taxes," clearly seeking to parcel Terminus into landed estates, while probing for weakness. Hardin defuses the ploy and tests whether Anacreon still has nuclear power by mentioning plutonium; the envoy's confusion proves the Periphery has lost nuclear power entirely. <br />
+Analysis: Hardin reads his opponent's ignorance as evidence about infrastructure: "that Anacreon no longer has a nuclear-power economy... the rest of the Periphery no longer has nuclear power either." This inference — letting the enemy reveal the limits of his capacity — is the analytical method of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, and it converts a threat into a measure of the periphery's decline. <br />
+Source anchors: Anselm haut Rodric; Anacreon; military base; taxes; plutonium; loss of nuclear power; Four Kingdoms.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-3-the-board-and-the-vault">Part II: The Encyclopedists — Chapter 3: The Board and the Vault</h3>
+<p>Summary: Hardin, through his control of the Terminus City Journal and a mass meeting, forces himself a seat at the Board. He argues the Board's fixation on the Encyclopedia is exactly the Galaxy's disease — classifying the past instead of advancing — and declares "the Galactic Empire is dying." Jord Fara raises the possibility that the coming Vault opening is timed to a predictable crisis; Hardin privately recalls his psychological training under Alurin and concludes psychology is the key. <br />
+Analysis: Hardin names the intellectual stagnation that makes the periphery vulnerable, framing the fall as a failure to advance rather than a loss of territory. His suspicion that Seldon deliberately left no psychologists to "catch on" foreshadows the plan's secrecy and the informational design of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>. The Encyclopedia-as-classification critique is the book's sharpest statement about <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> that preserves without advancing. <br />
+Source anchors: Hardin; Board of Trustees; Jord Fara; Encyclopedia as stagnation; Galactic Empire dying; psychology; Alurin.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-4-lord-dorwin">Part II: The Encyclopedists — Chapter 4: Lord Dorwin</h3>
+<p>Summary: Lord Dorwin, Chancellor of the Empire, arrives — a foppish amateur archaeologist who has read all the old masters but never visits an actual site, preferring to "balance the disagreements" of dead authorities. Hardin questions him about a power-plant meltdown on Gamma Andromeda; Dorwin admits nuclear technicians are scarce and that the government's answer is to restrict nuclear power rather than train new men. <br />
+Analysis: Dorwin is the Empire's decay embodied — ornamental, ritualistic, allergic to firsthand evidence. His method (weighing authorities instead of investigating) is the state's whole epistemology, and his indifference to the technician shortage proves the center is losing competence. The chapter is a precise indictment of the stagnation Hardin described, and of an <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> where the core no longer understands its own machinery. <br />
+Source anchors: Lord Dorwin; archaeology; old masters; Gamma Andromeda meltdown; nuclear technicians; Emperor.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-5-the-ultimatum">Part II: The Encyclopedists — Chapter 5: The ultimatum</h3>
+<p>Summary: Anacreon delivers an ultimatum giving Terminus a week. Hardin applies symbolic logic (via Muller Holk) to the Empire-Anacreon treaty and to Lord Dorwin's recorded assurances and shows both are empty: the treaty gives the Empire no power over Anacreon, and Dorwin "didn't say one damned thing." Rejecting force — "Violence is the last refuge of the incompetent" — Hardin insists the Board must rely on itself rather than on Emperor or Seldon, and notes no first-class psychologists were ever allowed among the founders. <br />
+Analysis: The chapter is Hardin's most explicit argument for self-reliance: dismissing both the Imperial and the Seldonian as forms of "authority or the past." The treaty analysis and the recorded speech of Dorwin are intelligence work — turning diplomatic vapor into legible fact. It reorients <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> away from inherited authority and toward local judgment, and connects to the novel's recurring theme of official explanations dismantled by reading. <br />
+Source anchors: Anacreon ultimatum; symbolic logic; Muller Holk; treaty; Lord Dorwin's assurances; violence last refuge; psychology.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-6-the-coup-plotted">Part II: The Encyclopedists — Chapter 6: The coup plotted</h3>
+<p>Summary: Hardin and Yohan Lee finalize plans for a coup. Hardin reasons that the Board's authoritarian training — its certainty that the Emperor and the Board as his agents cannot be disobeyed — is the Foundation's best ally, because "they never had the capacity of really understanding what was up." Lee worries, and Hardin privately doubts whether Anacreon is all Seldon saw coming. <br />
+Analysis: The coup depends on the Board's blind spot: it cannot conceive of revolt against itself. Hardin's transfer of power is an exercise in <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> built on seizing the administrative levers of an organization that mistakes institutional hierarchy for security. Hardin's uncertainty about whether his reading of Seldon is right ("just a fumbler with a little training trying to outguess the greatest mind of the age") shows that even the Foundation's own statecraft is improvisation against a plan it only half-understands — the first hint of the tension between planning and improvisation that runs through the book. <br />
+Source anchors: Hardin; Yohan Lee; coup; Board's blindness; authoritarian training; uncertainty.   </p>
+<h3 id="part-ii-the-encyclopedists-chapter-7-the-vault-opens">Part II: The Encyclopedists — Chapter 7: The Vault opens</h3>
+<p>Summary: In the newly crowded Time Vault, Hari Seldon's recorded image appears and announces the truth: the Encyclopedia was always "a fraud," a cover to extract an Imperial charter, attract the hundred thousand, and keep them occupied until their retreat was cut off. The Foundation, Seldon explains, is one of two seeds of the Second Empire, and will face a series of crises forcing it down "one, and only one" path, with the first crisis now at hand — a small world of scientists threatened by barbarism, the "solution... obvious." Hardin's men, meanwhile, have taken control of the government. <br />
+Analysis: The Vault is the book's conversion point: it confirms that the Foundation's founding project was instrumental, and that survival is the real mandate. Seldon's warning that knowledge would expand future choices — hence no psychologists were allowed — makes the plan a scheme of staged ignorance. The chapter links <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> to <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> by exposing the Encyclopedia as bait for a deeper project, and it sets the "obvious" solution framework Hardin will fulfill by engineering dependence rather than war. <br />
+Source anchors: Time Vault; Hari Seldon; Encyclopedia a fraud; Second Empire; first crisis; solution obvious; Lee's coup.   </p>
+<h3 id="part-iii-the-mayors-chapter-1-the-actionist-ultimatum">Part III: The Mayors — Chapter 1: The Actionist ultimatum</h3>
+<p>Summary: Thirty years after the first crisis, Sef Sermak and the newly formed Actionist Party confront Hardin and demand his resignation or a forward military policy toward the Four Kingdoms. Hardin defends his thirty years of "appeasement" — giving the kingdoms science, trade, and education to make Terminus more valuable as a flourishing world than as a prize. He explains the balance of power and dismisses the priesthood as a minor "mummery" that got the barbarians to accept science. A coded message (Verisof returning) hints that events are breaking. <br />
+Analysis: Hardin's counter to the Actionists is the core of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> built from weakness: influence replaces force because Terminus cannot win a war. The chapter also frames the shift to <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — Hardin admits he started the priesthood "because the barbarians looked upon our science as a sort of magical sorcery," showing the religious instrument was never sacred, only convenient. <br />
+Source anchors: Salvor Hardin; Sef Sermak; Actionist Party; balance of power; Four Kingdoms; Yohan Lee; Verisof.   </p>
+<h3 id="part-iii-the-mayors-chapter-2-wienis-and-the-found-cruiser">Part III: The Mayors — Chapter 2: Wienis and the found cruiser</h3>
+<p>Summary: Hardin's ambassador to Anacreon, Poly Verisof, arrives in secrecy and reports that Prince Regent Wienis, uncle of the teenaged King Lepold, is eager to attack the Foundation. A derelict Imperial battle cruiser has been found and Wienis demands that the Foundation repair it and hand it over. Hardin orders the ship repaired and renamed the "Wienis," reasoning that the Anacreonian navy will never reach actual war and that the refusal/resolution must wait for the Seldon crisis to ripen. <br />
+Analysis: Hardin's refusal to "force the issue" is disciplined by his understanding of the Seldon Plan: as long as more than one course is possible, the crisis has not arrived. Giving Wienis the cruiser is a calculated gift designed to make Anacreon's attack inevitable and thereby predictable, a key instance of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as patience rather than aggression. <br />
+Source anchors: Poly Verisof; Wienis; King Lepold; Prince Regent; battle cruiser; Appeasement.   </p>
+<h3 id="part-iii-the-mayors-chapter-3-wienis-and-lepold-plan-war">Part III: The Mayors — Chapter 3: Wienis and Lepold plan war</h3>
+<p>Summary: On Anacreon, Wienis steers the young King Lepold toward war with the Foundation, appealing to dynasty and ambition and framing the attack as self-defense against a Foundation that withholds power and once humiliated the royal house. Lepold fears the "blasphemy" of attacking the Foundation and the god-king structure built on the Galactic Spirit; Wienis reveals that Lepold's divine status is useful precisely because it makes revolt impossible, then quietly threatens that hunting "accidents" can kill troublesome kings and uncles. <br />
+Analysis: Wienis uses religion as a tool of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> while secretly disbelieving it, a manipulation that shows how the Foundation's own religious system is already being turned. Lepold's fear of divine sanction is the same mechanism Hardin planted, now working in both directions. The succession intrigue (Wienis's sons next in line) shows dynastic fragility beneath the god-king facade. <br />
+Source anchors: Wienis; King Lepold; Nyak hunting; Galactic Spirit; divine right; god-king.   </p>
+<h3 id="part-iii-the-mayors-chapter-4-bort-reports-on-anacreon">Part III: The Mayors — Chapter 4: Bort reports on Anacreon</h3>
+<p>Summary: Back on Terminus, Actionist Lewis Bort reports to Sermak that a palace rebellion in Anacreon is impossible because the religion has made Lepold a god-king whom the people and priests genuinely revere. Bort describes the "religious" control of instruments and the pageantry; Sermak suspects Hardin of treason for arming Anacreon and then hears that Hardin himself is going to Anacreon. <br />
+Analysis: Bort's report makes the <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> system visible from the outside: its ethical content is fine, but its authoritarian structure is what fools future coups. The Actionists' reading of Hardin's trip as treason is the domestic distrust that Mallow will later weaponize differently; Hardin's real sin, per Bort, is that he "established monarch worship," consolidating a legitimacy he can no longer easily undo. <br />
+Source anchors: Lewis Bort; Sermak; god-king; religion; Verisof.   </p>
+<h3 id="part-iii-the-mayors-chapter-5-the-dawn-departure">Part III: The Mayors — Chapter 5: The dawn departure</h3>
+<p>Summary: Hardin leaves for Anacreon at dawn with Yohan Lee, after his impeachment was defeated 206 to 184 and the fifty-nine Actionists walked out of Council. Hardin instructs Lee to announce that a new Hari Seldon recording will come on March 14 bearing news of a "successfully concluded" crisis — a deliberate ruse to confuse the Actionists into postponing action until after the date. <br />
+Analysis: Hardin's use of a false Vault announcement is improvisation inside the Seldon framework: he cannot know the Vault will open, so he exploits expectation of it. This is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as information control — buying time by managing what the opposition believes — and shows that even the plan's promoters must guess. <br />
+Source anchors: Salvor Hardin; Yohan Lee; impeachment; Actionist Party; Seldon recording ruse.   </p>
+<h3 id="part-iii-the-mayors-chapter-6-the-coronation-interdict">Part III: The Mayors — Chapter 6: The coronation interdict</h3>
+<p>Summary: Hardin travels through Anacreon's twenty-five systems, arrives for Lepold's coronation, and is detained by Wienis in his private chambers. Wienis reveals that the fleet has already left to attack Terminus and that Hardin is a prisoner of war. Hardin counter-strikes at midnight: the planet goes under the interdict — every priest goes on strike, power, water, heat, and communications die except in the temples, and a mob surrounds the palace demanding Hardin's release and an end to the war. <br />
+Analysis: The interdict is the purest expression of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> converted into operational power. The Foundation cannot stop a single ship, but it can stop a planet's borrowed civilization by holding the priesthood. Anacreon's dependence on Foundation-trained ritual makes its entire nuclear economy a hostage, the "control built into the operating system" that defines Foundation leverage. <br />
+Source anchors: Wienis; coronation; interdict; priest strike; mob; Hardin prisoner.   </p>
+<h3 id="part-iii-the-mayors-chapter-7-aporat-curses-the-ship">Part III: The Mayors — Chapter 7: Aporat curses the ship</h3>
+<p>Summary: On the flagship Wienis, priest-attendant Theo Aporat, who helped repair the cruiser, uses the Foundation-installed hyperwave relay to curse the ship in the name of the Galactic Spirit. At the stroke of midnight the ship "dies" — lights, motors, and communications fail. Aporat seizes control, has Admiral Lefkin (Wienis's son) arrested, and forces him to order the fleet back to Anacreon. <br />
+Analysis: The chapter states the doctrine directly: "it is the chief characteristic of the religion of science that it works, and that such curses as that of Aporat's are really deadly." The Foundation's gift of the cruiser was not armed benevolence; it was a machine whose sacred/technical operation only the priesthood could run. This is <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> fused with <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: technical dependence expressed as divine command. <br />
+Source anchors: Theo Aporat; flagship Wienis; hyperwave relay; curse; Lefkin; Galactic Spirit.   </p>
+<h3 id="part-iii-the-mayors-chapter-8-the-horse-and-the-wolf">Part III: The Mayors — Chapter 8: The horse and the wolf</h3>
+<p>Summary: Lefkin's broadcast delivers an ultimatum — the navy returns, demands Wienis's imprisonment and trial before an ecclesiastical court. Wienis breaks down; Hardin recovers and tells the fable of the horse that lets a man saddle and bridle it to kill a wolf, then cannot free itself — "that same religion of science was their bridle and saddle." Wienis seizes a blaster, fires at Hardin, but Hardin's force-field (his own "aura") absorbs the shot; the recoil kills Wienis. <br />
+Analysis: The fable is the book's clearest statement of the substitution theme: the Four Kingdoms accepted a religion that made their kings divine, but the same mechanism put the "life blood of nuclear power" in the priesthood's hands. Hardin's "aura" is the counter-symbol to the king's divine one — real force versus stagecraft. This unifies <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> with <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as rival instruments of control. <br />
+Source anchors: Hardin; Wienis; fable of the horse; bridle and saddle; force-field aura.   </p>
+<h3 id="part-iii-the-mayors-chapter-9-the-second-vault">Part III: The Mayors — Chapter 9: The second Vault</h3>
+<p>Summary: Back on Terminus, the Time Vault opens for the second time and Seldon's recording confirms the second crisis is past, solved by "the Spiritual Power as against the Temporal" after the first was solved by balance of power. Seldon warns against overconfidence, notes that the spiritual power cannot attack in turn and that Regionalism/Nationalism will grow, and mentions the second Foundation at Star's End, leaving "nine hundred and twenty years of the Plan" ahead. <br />
+Analysis: Seldon's warning that spiritual power "cannot prevail" against Regionalism forecasts the trader/commercial substitution already building. The mention of <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> at Star's End marks the division the series will use, and the line "the problem is yours" hands the work to successors — the Foundation as an institutional project rather than any single character. <br />
+Source anchors: Time Vault; Hari Seldon; second crisis; Spiritual Power; Star's End; Second Foundation; 920 years.   </p>
+<h3 id="part-iv-the-traders-chapter-1-the-summons">Part IV: The Traders — Chapter 1: The summons</h3>
+<p>Summary: Free-lance trader Limmar Ponyets, alone in space, receives a confidential capsule via fellow trader Les Gorm: Eskel Gorov has been imprisoned on Askone for violating the ban on nuclear trade. Ponyets knows the secret that Gorov is not a trader but a Foundation agent. <br />
+Analysis: The chapter introduces the trader as the next instrument after the priesthood. Gorov's double identity as "Master Trader" who is secretly a Foundation agent shows that commerce is becoming a cover for state action — the earliest turn toward <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as an instrument of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>. <br />
+Source anchors: Limmar Ponyets; Les Gorm; Eskel Gorov; Askone; Foundation agent.   </p>
+<h3 id="part-iv-the-traders-chapter-2-bargaining-with-the-grand-master">Part IV: The Traders — Chapter 2: Bargaining with the Grand Master</h3>
+<p>Summary: Ponyets reaches Askone after two weeks of buffering through officials and warships. The Grand Master insists Gorov will die by gas for sacrilege, and refuses the Foundation's nuclear goods as lying "under the ancestral interdict." Ponyets, having claimed to be a trained "Tender of the Soul" or spiritual adviser, secures an interview with the prisoner. <br />
+Analysis: Askone's ancestor worship makes it a jurisdiction that rejects the <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> model outright, which is why the traders must improvise. Ponyets's false clerical role is a deliberate manipulation of religious categories to bypass an official prohibition — the first concrete gesture toward <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>. <br />
+Source anchors: Grand Master; Askone; ancestor interdict; death by gas; Tender of the Soul; Ponyets.   </p>
+<h3 id="part-iv-the-traders-chapter-3-gorov-s-mission">Part IV: The Traders — Chapter 3: Gorov's mission</h3>
+<p>Summary: In Gorov's cell, the condemned agent explains his mission: to sell nucleics to Askone by breaking resistance at one point, creating a "pronucleics faction at court." He wants Ponyets simply to ransom him with gold. Ponyets refuses to just collect him and instead decides to force a sale himself, arguing that a real trader, not a diplomat, is needed. <br />
+Analysis: Gorov states the theory of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as penetration — a single strategically placed sale alters local incentives ("if I could sell a penknife... to a nobleman, it would be to his interest to force laws that would allow him to use it"). Ponyets's willingness to risk everything "to make money" reframes the trader as the engine of the substitution, even ahead of the Foundation's official missionary program. <br />
+Source anchors: Eskel Gorov; nucleics; Askone; pronucleics faction; Ponyets.   </p>
+<h3 id="part-iv-the-traders-chapter-4-the-transmuter-show">Part IV: The Traders — Chapter 4: The transmuter show</h3>
+<p>Summary: Before the Grand Master and council, with the hostile favorite Pherl watching, Ponyets demonstrates a device that turns iron buckles into gold. Pherl denounces the gold as from a "poisoned source"; Ponyets convinces the Grand Master that the gold, given to ornament ancestral shrines, would be purified, and offers to hold it as an offering for thirty days under scrutiny. <br />
+Analysis: The transmuter is a con built to exploit <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> logic — Ponyets peddles desire (gold) against prohibition (nuclear abomination) and reframes the forbidden object as piety. His line about "the uses of a religious education" and the manipulation of the council's vanity is the trader method replacing the priest's. <br />
+Source anchors: Grand Master; Pherl; transmuter; iron to gold; ancestral shrines; thirty days.   </p>
+<h3 id="part-iv-the-traders-chapter-5-pherl-s-terms">Part IV: The Traders — Chapter 5: Pherl's terms</h3>
+<p>Summary: Alone with Pherl, Ponyets offers him the transmuter itself as a private source of wealth and power, appealing to his ambition to become Grand Master. Pherl, an "educated" and partly skeptical man, demands a guarantee and forces one-sided terms: Ponyets stays as hostage, Pherl pays only after a week's use in working order, or Gores will get the gas chamber. <br />
+Analysis: Ponyets deliberately courts Pherl's attention by the public show, then turns rivalry into an <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> deal conducted entirely outside official trade. The "guarantee" struggle shows the trader's leverage depends not on law (none exists for him) but on making Pherl's private interest outweigh official custom — the exact mechanism Gorov outlined. <br />
+Source anchors: Pherl; transmuter; Grand Mastership; guarantee; hostage.   </p>
+<h3 id="part-iv-the-traders-chapter-6-the-sale-that-works">Part IV: The Traders — Chapter 6: The sale that works</h3>
+<p>Summary: Gorov is released for five hundred pounds of gold, and Ponyets reveals the transmuter was a fake (rigged from a food-irradiation chamber, worthless at scale). His real profit: Pherl bought the entire cargo of nucleics at double price, paying in tin, because Ponyets blackmailed him with a microfilm-recorder secretly built into the transmuter that caught Pherl operating the forbidden machine. Gorov chides Ponyets's lack of morals; Ponyets shrugs and invokes Hardin. <br />
+Analysis: The chapter is the fullest working out of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: bribery, blackmail, and a manufactured threat move a mass of banned devices where open trade and religion both failed. Ponyets's line "What are the odds? You know what Salvor Hardin said about a sense of morals" ties the trader's loose ethics directly to the Foundation's substitution thesis, displacing the clergy as the carrier of influence. <br />
+Source anchors: Eskel Gorov; gold ransom; fake transmuter; microfilm-recorder; blackmail; tin; Pherl; Hardin's maxim.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-1-the-three-lost-ships">Part V: The Merchant Princes — Chapter 1: The three lost ships</h3>
+<p>Summary: Jorane Sutt, secretary to the mayor, summons Hober Mallow, Master Trader of Smyrno. Three armed Foundation trade ships have vanished within the Korellian Republic; nuclear power "can be conquered only by more nuclear power," so either Korell built its own or there is treason. Sutt dispatches Mallow to Korell as a trader with his eyes open. <br />
+Analysis: The mystery of the lost ships and the possibility of treason reopens the <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> problem that religion supposedly solved — a new enemy with nuclear power means the old instruments are failing. Mallow's Smyrnian outsider identity introduces the trust question that will drive the domestic half of the plot. <br />
+Source anchors: Jorane Sutt; Hober Mallow; Korellian Republic; three lost ships; nuclear power; Smyrno.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-2-the-primate-s-role">Part V: The Merchant Princes — Chapter 2: The primate's role</h3>
+<p>Summary: Sutt confers with Publis Manlio, who is both Foreign Secretary and Primate of the Church, Master of the Temples. Sutt argues the Foundation is "in the middle of a Seldon crisis" and that the traders are "too strong and too uncontrolled" — Outlanders educated apart from religion, with no hold on them. He enlists Manlio to lead a party that could combine the primacy and the mayoralty. <br />
+Analysis: The chapter names the domestic crisis directly: the trading class has grown beyond the religious control that kept it loyal. Sutt's plan to "put our own house in order" before the foreign threat reveals that <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> is becoming a political weapon of the priestly faction rather than a neutral instrument of the Foundation. <br />
+Source anchors: Jorane Sutt; Publis Manlio; Primate; Seldon crisis; traders; mayoralty.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-3-mallow-and-twer">Part V: The Merchant Princes — Chapter 3: Mallow and Twer</h3>
+<p>Summary: Mallow meets Jaim Twer, a supposed trader-politician pushing trader representation in the Council. Mallow reveals his secret mission and, invoking Hardin's "planning alone is insufficient; one must improvise as well," invites Twer to come with him to Korell. Twer agrees, claiming to be an old Outlander trader. <br />
+Analysis: The chapter quietly seeds the later revelation: Twer "never heard of a Seldon crisis," an impossibility for anyone with a real lay education, marking him as a planted agent. Mallow's improvisation doctrine is the trader supplement to Seldon's deterministic plan — <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as flexible opportunism inside rigid prediction. <br />
+Source anchors: Hober Mallow; Jaim Twer; trader representation; Seldon crisis; Far Star.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-4-the-missionary-trap">Part V: The Merchant Princes — Chapter 4: The missionary trap</h3>
+<p>Summary: At Korell, Mallow waits a week for an audience while suspicion mounts. A Foundation missionary, Jord Parma, is allowed aboard by the crew, but Mallow refuses to protect him and hands him to the mob, then disciplines his men for disobedience. Mallow reads the episode as a trap — a pilgrim planted to provoke an illegal act of aggression that would justify Korellian destruction of his ship; his calm refusal earns a delayed invitation from Commdor Asper. <br />
+Analysis: Mallow's refusal to be baited is rational statecraft when the missionary is legally out of bounds and the whole scene is staged. The improvisation test — who lets the "refugee" in, where a mob of thousands appears from a hundred miles away — is an intelligence read of the situation, showing <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as cold calculation over sentiment. <br />
+Source anchors: Korell; Commdor Asper; Jord Parma; missionary; trap; discipline; mob.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-5-the-commdor-s-audience">Part V: The Merchant Princes — Chapter 5: The Commdor's audience</h3>
+<p>Summary: Mallow meets Commdor Asper, a self-styled republican despot, and proposes trade without religion. He demonstrates a luminescent belt-and-necklace, then a line of household gadgets, and offers to retool Korellian factories at huge profit, insisting none of it requires priestly supervision. The Commdor is enticed but wary of the missionaries and of Askone's fate. <br />
+Analysis: Mallow's pitch is <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> made explicit: profit and dependence rather than conversion. His insistence that "religion would cut my profits" is the direct repudiation of the priesthood and the pivot from spiritual to economic control that Sutt fears and the book endorses. <br />
+Source anchors: Commdor Asper; trade without religion; luminescent jewelry; household gadgets; retooling; Askone.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-6-the-commdora">Part V: The Merchant Princes — Chapter 6: The Commdora</h3>
+<p>Summary: In private, the Commdora — Lady Licia, much younger, and daughter of an Imperial viceroy — clashes contemptuously with Asper. She taunts him about his vacillation and her powerful father, and when Asper gives her the luminescent belt and necklace, she is captivated. <br />
+Analysis: Lady Licia's Imperial parentage is the first concrete link from Korell's rulers back to the still-existing Empire, tightening the <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> thread. Her leverage over the Commdor (via her father's displeasure) sets up the geopolitical pressure Mallow will ultimately turn against Korell. <br />
+Source anchors: Commdora; Lady Licia; Commdor Asper; Imperial viceroy; belt and necklace.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-7-too-easy-an-entrance">Part V: The Merchant Princes — Chapter 7: Too easy an entrance</h3>
+<p>Summary: Mallow and Twer discuss the founders: entrance to the steel foundry has come too easily, which Mallow suspects means there will be nothing to see there. Twer notes there is almost no evidence of a functioning nuclear economy in Korell; Mallow points out that a nascent war economy would hide it in shipyards and foundries alone. <br />
+Analysis: The chapter frames the detective problem at the heart of the part: whether Korell's nuclear capacity is real or borrowed. Mallow's inference method — treat evidence about maintenance, supply, and industrial plant as primary — is the analytic core of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as intelligence. <br />
+Source anchors: Hober Mallow; Jaim Twer; steel foundry; nuclear economy; war economy.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-8-the-spaceship-and-sun">Part V: The Merchant Princes — Chapter 8: The Spaceship-and-Sun</h3>
+<p>Summary: In the foundry, Mallow demonstrates the nuclear shear, plane, and drill, cutting and joining steel with ease while the Commdor's court watches. Then he spots the bodyguards' hand weapons: nuclear blasters with the Spaceship-and-Sun of the Galactic Empire deeply etched on the butts. He realizes the Empire is still there and still reaching back into the Periphery. <br />
+Analysis: The foundry demonstration is Mallow's economic salesmanship; the blasters are the political discovery. The Spaceship-and-Sun links Korell's weapons to the Empire and reconfigures the enemy: not a backward republic but a client of a still-vast central power. This is the pivot from <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> to a geopolitical read of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>. <br />
+Source anchors: steel foundry; nuclear shear; plane; drill; bodyguard; blasters; Spaceship-and-Sun; Empire.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-9-sending-the-ship">Part V: The Merchant Princes — Chapter 9: Sending the ship</h3>
+<p>Summary: Two days out, Mallow makes Senior Lieutenant Drawt Acting Captain of the Far Star, giving him a microfilm report, a Time Capsule, and instructions to wait two months at a set location, deliver the report if the Foundation finds him, and head to Terminus only if Mallow does not return. Mallow then leaves in a lifeboat for Siwenna. <br />
+Analysis: Mallow's contingency planning — the encrypted report, the fixed rendezvous, the fallback to Terminus — is professional improvisation under uncertainty. The decision to investigate Siwenna on his own converts the trader mission into intelligence gathering, deepening the state-function commerce now serves and tightening the <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> thread that runs through the Korell inquiry. <br />
+Source anchors: Hober Mallow; Drawt; Far Star; microfilm; Time Capsule; lifeboat; Siwenna.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-10-onum-barr-of-siwenna">Part V: The Merchant Princes — Chapter 10: Onum Barr of Siwenna</h3>
+<p>Summary: On Siwenna, Mallow meets Onum Barr, an old Patrician of the Empire living in exile after Siwenna's ruin. Barr recounts how the province rebelled against its rebel viceroy Wiscard, was rewarded by an admiral's massacre, and now lives under a new viceroy who "dreams" of carving out an Empire in the Periphery and has married a daughter to a Kinglet there. Barr gives Mallow a forged passport and warns him of the tech-men who control the power stations. <br />
+Analysis: Barr's testimony is the detailed anatomy of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> in decay: rebellion, massacre, and the bleeding of a province's wealth, with ships "few enough" to protect the system. His hint of a viceroy married into the Periphery foreshadows Lady Licia and the Imperial origin of Korell's power. <br />
+Source anchors: Onum Barr; Siwenna; Patrician; Wiscard; viceroy; massacre; forged passport; tech-men.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-11-the-tech-man-and-the-shield">Part V: The Merchant Princes — Chapter 11: The tech-man and the shield</h3>
+<p>Summary: Mallow meets a corrupt, suspicious tech-man who guards Siwenna's nuclear generators. Mallow demonstrates a portable personal force-shield that stops the tech-man's blaster, astounding the technician (who insists no such shield exists and that a walnut-sized nuclear generator is impossible). The tech-man, seduced, takes the shield and agrees to let Mallow see the generators. <br />
+Analysis: The portable force-shield is the book's emblem of Foundation superiority: small, maintainable, and beyond Imperial science. Its impossibility to the hereditary tech-man caste shows <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> as a gap in capability and knowledge, not just territory — and bribery of a fallible gatekeeper is pure <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>. <br />
+Source anchors: tech-man; generators; portable force-shield; blaster; Siwenna; bribes.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-12-the-generators-throw">Part V: The Merchant Princes — Chapter 12: The generators throw</h3>
+<p>Summary: Mallow is taken through the powerhouse and sees the generators — huge, imperial-scale units that the tech-man insists "never break down" and "were built for eternity." Asked what happens if a vital part is blasted or fused, the tech-man says they retain no capacity to repair them. Mallow leaves; later the tech-man's shield goes dead and never glows again. <br />
+Analysis: The colossal Imperial generators that cannot be repaired encapsulate the whole argument of the part: Empire builds big and cannot fix; Foundation builds small and can replace. This is the lesson Mallow will apply to Korell — dependence on Foreign supply is the lever by which <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> defeats an enemy the Foundation could never outgun. <br />
+Source anchors: tech-man; powerhouse; generators; D-tube; Imperial scale; unrepairable.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-13-the-political-campaign">Part V: The Merchant Princes — Chapter 13: The political campaign</h3>
+<p>Summary: Back on Terminus, Mallow enlists Ankor Jael, a politico dismissed from the cabinet by Sutt, to win him a Council seat. Sutt visits and, having learned of Mallow's trade and wealth, threatens a murder trial over the abandoned priest. Mallow counters that surrendering an illegally present, staged priest was lawful and sensible; Jael warns that Sutt will not try to convict but to destroy Mallow's public standing. <br />
+Analysis: Mallow's money (from the Korell trade) becomes political capital, and Jael teaches him that "custom is higher than law" — a rule of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> in democratic dress. The scene sets the false-choice trap: legality alone will not save Mallow from the priestly faction's moral attack. <br />
+Source anchors: Ankor Jael; Council seat; Sutt; murder trial; priest; custom vs law.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-14-the-trial-and-the-tattoo">Part V: The Merchant Princes — Chapter 14: The trial and the tattoo</h3>
+<p>Summary: In the full Trial of Hober Mallow, the prosecution attacks him for abandoning the priest Jord Parma. Mallow admits every fact, then produces a Visual Record of the incident that reveals Parma's invisible tattoo — "KSP" for Korellian Secret Police. The priest was a staged impostor baiting the Foundation into illegal aggression. The case collapses and the crowd carries Mallow off shouting "Long live Mallow." <br />
+Analysis: The trial is the climactic demonstration of evidence as information technology: a Visual Record made under ultraviolet light exposes the Korellian Secret Police and turns the prosecution's morality play into farce. Mallow beats the priestly <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> faction not with force but with legibility — the very capacity for <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> the Foundation monopolizes. <br />
+Source anchors: Trial of Mallow; Visual Record; Jord Parma; KSP; Korellian Secret Police; ultraviolet; acquittal.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-15-the-plan-to-do-nothing">Part V: The Merchant Princes — Chapter 15: The plan to do nothing</h3>
+<p>Summary: Jael warns Mallow that mob enthusiasm fades; Mallow counters by planning the arrest of Manlio and Sutt and his own run for mayor and high priest simultaneously. He reveals Korell is obtaining ships from the Empire itself and that the crisis demands he hold both offices. His stated strategy for the coming war is "one hundred percent of nothing." <br />
+Analysis: Mallow's "do nothing" is the mature form of Hardin's nonviolence: patience until dependence does the work. The revelation that the Empire is Korell's supplier turns the crisis into a confrontation between Foundation scale and Imperial scale — <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> versus the obsolete big state. <br />
+Source anchors: Ankor Jael; arrest of Sutt and Manlio; mayor and high priest; Empire's ships; do nothing.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-16-asper-declares-war">Part V: The Merchant Princes — Chapter 16: Asper declares war</h3>
+<p>Summary: The Commdora, Licia, pressures Commdor Asper into war with the Foundation, goading him with her father's displeasure and the promise of Imperial reward. Asper, privately hating his wife and weary, finally decides: "there is war between Korell and the Foundation." <br />
+Analysis: The chapter shows war breaking out because a client ruler appeases an overbearing patronage structure — the Commdora as proxy for the <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> relationship. Asper's private contempt for Licia and her father sets up the fragility of the Imperial alliance Mallow will exploit. <br />
+Source anchors: Asper Argo; Lady Licia; war; Imperial viceroy; patronage.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-17-the-imperial-ship">Part V: The Merchant Princes — Chapter 17: The Imperial ship</h3>
+<p>Summary: The Foundation scout ship Dark Nebula encounters a Federation-class Imperial vessel with the Spaceship-and-Sun on its side. Its alarms blare and it prepares to run or fight while a hyperwave message storms back to the Foundation combining a plea for help with a warning of danger. <br />
+Analysis: The brief chapter dramatizes the scale mismatch — an Imperial "whale" against the Foundation's "minnow" — and delivers the external threat that ties the crisis to the Empire, not just Korell. It is the book's most direct image of <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> in military form. <br />
+Source anchors: Dark Nebula; Spaceship-and-Sun; Imperial ship; warning; hyperwave.   </p>
+<h3 id="part-v-the-merchant-princes-chapter-18-the-war-that-was-never-fought">Part V: The Merchant Princes — Chapter 18: The war that was never fought</h3>
+<p>Summary: Two years into Mallow's mayoralty, he explains to a skeptical Sutt his economic strategy: Korell's nuclear economy now depends on Foundation gadgets and small generators that the Empire cannot supply or replace. As the "little things" fail — knives, stoves, washing machines, then factory machinery — dissatisfaction rises among consumers and industrialists. Mallow argues the Empire builds colossal and cannot repair; the Foundation builds small and can replace, making trade "without priests" strong enough. Sutt, still demanding a return to missionary conquest, refuses compromise and is arrested. A closing encyclopedia entry records that after three years of "the most unfought war on record," Korell surrendered unconditionally and Mallow joined Seldon and Hardin. <br />
+Analysis: Mallow's doctrine is <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> risen to a complete political economy: dependence on small, replaceable, privately supplied goods outlasts both sermons and gunboats, and it works because the Empire's gigantic technology is economically sterile and morally obsolete. The arrest of Sutt confirms religion is "played out" in the Seldon scheme, replaced by economic control. The concluding entry makes the merchants, not the clergy or the military, the third great instrument of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>. <br />
+Source anchors: Hober Mallow; Jorane Sutt; economic dependence; generators; trade without priests; Korell surrender; unfought war; plutocracy.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Hari Seldon's trial</strong>: psychohistory predicts Trantor's ruin within three centuries at 92.5% probability and shortens the coming barbarism from thirty thousand years to one thousand; Seldon admits execution (over 1.7% risk) would have hastened Trantor's fall to fifty years.   </li>
+<li><strong>The twin Foundations</strong>: Seldon establishes a second Colony at "Star's End," the seed of the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>, mentioned in Part I and Part III.   </li>
+<li><strong>"Violence is the last refuge of the incompetent"</strong> — Hardin's recurring maxim, recited when he engineers the Vosian interdict and echoed by Mallow.   </li>
+<li><strong>The fable of the horse and the wolf</strong>: the Four Kingdoms accepted the religion that made their kings divine; that same religion was the bridle and saddle of Foundation control.   </li>
+<li><strong>"Control built into the borrowed machine"</strong>: the flagship Wienis is made operable only by Foundation-trained priests, so Aporat's "curse" literally kills it.   </li>
+<li><strong>The interdict</strong>: every priest on Anacreon striking simultaneously halts power, water, heat, and communications — a whole planet held hostage to its own borrowed civilization.   </li>
+<li><strong>The Spaceship-and-Sun</strong>: the Imperial emblem marks both the Foundation's corruption (handled by the Encyclopedists) and the true enemy — Korell's Imperial blasters reveal the Empire still reaches into the Periphery.   </li>
+<li><strong>"Trade without priests"</strong>: Mallow's doctrine, the commercial successor to <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>, that outlasts a declared war Korell could never sustain.   </li>
+<li><strong>"The most unfought war on record" (KORELL)</strong>: the Encyclopedia entry concluding Part V — surrender without battle, delivered by dependence on gadgets and generators only the Foundation can supply.   </li>
+<li><strong>The walnut-sized nuclear generator</strong>: Foundation miniaturization versus the Empire's unrepairable six-story colossi, the physical emblem of why the Foundation wins.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html">archives, skill, and civilizational continuity</a></li>
+	<li><a class="backlink" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html">memory, narrative, and knowledge preservation</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Forward the Foundation.html">forward the foundation</a></li>
+	<li><a class="backlink" href="//04 Series/Foundation Sequence.html">foundation sequence</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Foundation and Empire.html">foundation and empire</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Second Foundation.html">foundation/second foundation</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Foundation and Chaos.html">foundation and chaos</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/foundation/index.html">foundation</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A15999148567515562871175315043406890329{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D15999148567515562871175315043406890329{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B15999148567515562871175315043406890329{level}" level="{level}" note_temp_id="15999148567515562871175315043406890329" onclick="window.ObsHtmlGraph.run(this, '15999148567515562871175315043406890329', 'foundation');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C15999148567515562871175315043406890329{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

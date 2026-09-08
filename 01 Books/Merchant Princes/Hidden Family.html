@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="hidden family">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'hidden family';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=hidden family" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="hidden-family">Hidden Family</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>The Hidden Family</code> is the second volume of <a href="//04%20Series/Merchant%20Princes.html">Merchant Princes</a>, immediately following the events of book one and concluding on a cliff-edge that the series carries forward. It is the book in which the series' premise hardens from "a woman discovers she is a world-walking aristocrat" into a three-world economic and security problem: the medieval Gruinmarkt (world one, the Clan's home), the contemporary United States (world two), and the industrial-empire world of New Britain (world three), which Miriam discovers and then annexes as a business territory.   </p>
+<p>Thematically it sits in the vault's state-formation and political-economy cluster. It most directly feeds the shared concepts of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>, <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>, <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>, and <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, and it is the Merchant Princes volume that turns Miriam from fugitive into institutional actor. Its natural companions are the other volumes of the <a href="//04%20Series/Merchant%20Princes.html">Merchant Princes</a> sequence and the vault's maps of content for state order and for firms and finance.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Miriam Beckstein / Helge Thorold-Hjorth</strong>: an investigative journalist revealed as the long-lost daughter of the Clan's western line. Her motivation is survival, then autonomy: she wants proof of the conspiracy against her that will defeat the Clan's move to declare her incompetent, and she builds a legitimate import/export and patent business in New Britain ("world three") as both her power base and her defense. Her arc moves from running-and-hiding to presenting herself as a strategist before the Clan's assembly.   </li>
+<li><strong>Iris, later revealed as Patricia Thorold-Hjorth</strong>: Miriam's adoptive mother and, it emerges, her birth mother. A onetime radical-activist turned reclusive bookseller's wife, wheelchair-bound with multiple sclerosis, she disguised her daughter's bloodline for decades with forged papers and false adoption records. Her motivation is to keep Miriam out of the Clan's dynastic machinery until she can defend herself; she is the book's deepest reserve of covert skill, keeping a sawed-off shotgun under her chair and killing intruders without hesitation.   </li>
+<li><strong>Angbard Lofstrom</strong>: duke and head of Clan security. He takes personal responsibility for Miriam's induction, releases Olga into her care, and — once Matthias is exposed — accepts Patricia's return, clears the succession, and backs the rescue. Motivated by the survival of the Clan as an institution as much as by kinship.   </li>
+<li><strong>Matthias van Hjorth</strong>: Angbard's "keeper of secrets" and secretary, outer family. He schemes to replace Angbard at the head of Clan security, blackmails Roland with camera footage, and as the mechanism fails he runs: sending the "deep throat" CD and the FBI/DEA letters that expose the Clan's American money trail, then fleeing with bearer bonds and secrets.   </li>
+<li><strong>Roland</strong>: Clan guard and Angbard's security deputy, Miriam's lover. His motivation is divided between duty and love; Matthias's blackmail converts his private life into a lever, and the recoiling of that leverage is fatal.   </li>
+<li><strong>Brilliana d'Ost</strong>: Miriam's lady-in-waiting, planted on her by Angbard as a bodyguard. She world-walks, has formal combat training, and is the refuge and courier that keeps the two worlds of the plot connected. Her motivation is loyalty redeemed by escape from the Clan's "gilded poverty."   </li>
+<li><strong>Olga Thorold</strong>: Miriam's bodyguard-courier and closest ally in the Clan; wounded by the same assassins repeatedly. Her arc converts her from errant noble into invested partner, and she is the one who refuses to let the meeting's killing logic stand unchallenged.   </li>
+<li><strong>Esau / James Lee</strong>: a senior son of the New British Chinese merchant family, the sixth, "lost" branch. Motivated by filial obedience to the Eldest's standing death order against Patricia's line, he is the book's view inside the hidden family's power structure, culminating in the family tale of the abandoned ancestor.   </li>
+<li><strong>The Eldest (Great-Uncle) and Great-Uncle Huan</strong>: the Lee patriarchs who sit in the Yellow Room, keep the family's arms and talismans, and — crucially — begin to suspect that "the talent lies in the pattern instead of the bearer."   </li>
+<li><strong>Erasmus Burgeson</strong>: New Britain's pawnbroker, Marx-quoting Leveler quartermaster with an explosives cellar, the window through which Miriam buys identity, currency, and radical contacts. Motivated by revolutionary conviction and by the commercial logic of doing business with a bottomless source of gold.   </li>
+<li><strong>Lin Lee</strong>: a fifteen-year-old Lee family courier captured in Miriam's house, the living evidence of the sixth family's existence and the vehicle for the abandonment narrative that transforms the feud's meaning.   </li>
+<li><strong>Paulette O'Neill</strong>: Miriam's American partner-paralegal, who runs the company machinery, pores over patent law and museum catalogues, and supplies the operational brain on the United States side.   </li>
+<li><strong>Inspector Smith</strong>: of New Britain's Homeland Defense Bureau, the empire's policeman whose stakeout, bullion theories, and lost fourteen mark the state's uncomprehending pursuit of the consequences Miriam leaves behind.   </li>
+<li><strong>Sir Alfred Durant</strong>: New British motor industrialist, the brake-shoe customer who converts Miriam's patent play into a real company and offers to invest.   </li>
+<li><strong>Baron Oliver Hjorth and the dowager duchess Hildegarde</strong>: the internal opposition to Miriam's legitimacy on the Clan's own court, scheming (per Miriam's accusation) to have her declared incompetent or worse.   </li>
+</ul>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>Hidden Family</code> opens by making New Britain politically real before Miriam turns it into a business opportunity. King John Frederick's Imperial Intelligence Oversight Committee hears Sir Roderick, Lord Douglass, Lord Scotia, and the police reports about Levelers, illicit printers in Massachusetts, the western New Provinces, and New London, plus a plot against the Western Summer Palace at Monterey. The cabinet worries about poor grain harvests, bread prices, new taxes, French livres, ranters, reservists at Fort Victoria, and loyalty in local regiments. That opening matters because Miriam's later arrival with gold, patents, and revolutionary contacts does not happen in a blank alternate Boston; it happens in a paranoid empire already searching for foreign financing behind domestic unrest.   </p>
+<p>Miriam, Paulette, and Brilliana begin the book as fugitives trying to turn flight into organization. Paulette houses Brill in Boston, files company paperwork, opens bank accounts, and receives blood-money capital while teaching Brill about electricity, flush toilets, household chores, and twenty-first-century streets. Miriam, meanwhile, tests the assassin's locket and reaches a third North America, where Boston has steam cars, airships, English signs, pounds and shillings, paupers, police, sedition law, and Erasmus Burgeson's pawnbroker shop. The book's title becomes literal here: the hidden family is not merely a secret branch of the Clan, but a second world-walking lineage anchored in another industrial world.   </p>
+<p>The Lee family emerges as both kin and enemy. Esau is James Lee, a senior son in a New British Chinese merchant family whose elders preserve talismans, household shrines, armed retainers, and a grievance about abandonment by the eastern Clan. Their ancestor reconstructed the knotwork from memory after losing the first talisman, so his descendants travel between Gruinmarkt and New Britain rather than Gruinmarkt and Miriam's America. Stross turns a myth of betrayal into a technical error with political consequences: a wrong pattern created a separate route, a separate fortune, and a family memory strong enough to justify assassinations decades later.   </p>
+<p>Miriam's response is entrepreneurial and forensic. She works with Paulette on art arbitrage, parachutes, disk brakes, asbestos-resin brake shoes, electric motors, flash boilers, proportional fonts, and patents; she sets up an office in New Britain with Declan McHugh, Roger, Martin, Soames, Oswald, and a growing staff. She uses gold bars, identity papers, Burgeson's contacts, letters, and lawyers to build a local base while her American house, Iris's house, and the doppelganger warehouse prove unsafe. Her method is not to flee family politics but to create facts Angbard, Oliver Hjorth, Hildegarde, the Lees, and the New British police must react to.   </p>
+<p>The book's emotional center is Miriam's changing family knowledge. Iris is not merely a foster mother who hid a locket; she is Patricia Thorold-Hjorth, Miriam's birth mother, who escaped after Alfredo Wu and Joan were killed, survived a stabbing, met Morris through radical networks, and raised Miriam under false adoption papers. Angbard is ruthless, but he can also be forced to listen when Miriam exposes Matthias's private dossiers, forged moves, and link to the attackers. The relationship with Roland sharpens this conflict: his love is real enough to save her in Fort Lofstrom, but Matthias has already turned their affair into blackmail, and the cost of that vulnerability is lethal.   </p>
+<p>The climax turns a shareholder meeting into a trial of family history. Angbard calls Patricia, Olga, and Miriam before the Clan extraordinary meeting, lays out the attacks on Patricia and Alfredo, and lets Miriam explain the Lee talisman, New Britain, the wrong knot, the old murder campaign, and the commercial value of a new world. Matthias tries to escape by sending Paulette's <code>deep throat</code> CD to American FBI and DEA offices, then Fort Lofstrom becomes a trap with dead servants, a rear guard, and explosives. By the epilogue, Roland is dead, Inspector Smith is baffled by fourteen people vanishing from Burgeson's shop, and Miriam is hosting a New London motor-trade celebration for brake shoes with Angbard, Iris, Olga, Brill, and Paulette present. The victory is real but wounded: she has a business, allies, and recognition, but her route there has already cost lives.   </p>
+<p>The book's analytical spine runs underneath the plot. The Clan is presented as a rent-seeking transport monopoly whose wealth comes from moving drugs and precious metal across worlds — a business that, Miriam argues, is dying because anonymity is eroding. Her counter-model is value creation: shipping patents and ideas into Victorian-industrial New Britain, where an obsolete invention can be licensed for a fortune, and then using the profits to modernize the lesser-developed Gruinmarkt. The title's "hidden family" therefore doubles as the book's political science: secret, family-based institutions — the Clan and the Lees — control economic life through information asymmetries, and Miriam's project is to make them legible, tradeable, and finally normal.   </p>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Merchant%20Princes.html">Merchant Princes</a> — the series hub; this is volume two, and the book establishes the three-world cosmology (Gruinmarkt / United States / New Britain) on which later volumes build.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> — the Clan's drug and bullion traffic, Burgeson's black-market gold, the identity trade, and Miriam's uneasy entry into revolutionary finance.   </li>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> — Miriam's explicit counter-thesis to mercantilism: labor and ideas create value, not just transported goods; Smith, Marx, and the "car for every home" pitch.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> — the Clan's shareholder aristocracy and the Lee family's hidden court above Hanover Street as rival elite machines.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> — New Britain's political police, sedition acts and stakeouts, and the FBI/DEA exposure that Matthias detonates.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a> — law-firms, patents, acts of Parliament, identities, and succession rules as the real scaffolding of the plot.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> — the talisman knotwork as encoded knowledge, DNA fingerprinting for kinship, forged records, and the recovered family history.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> — the postal/courier service, bugged cameras, blackmail tapes, codes, and the mobile-phone network externality argument.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> — modernizing empire-facing New Britain against the backward Gruinmarkt; the periphery's dependence on imported machines.   </li>
+<li><a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a> and <a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a> — the book's two most natural atlas homes.   </li>
+<li><a href="//03%20Reading%20Paths/Illicit%20Markets%2C%20Contraband%2C%20and%20State%20Capacity.html">Illicit Markets, Contraband, and State Capacity</a>, <a href="//03%20Reading%20Paths/Commercial%20Society%2C%20Stagnation%2C%20and%20Institutional%20Drift.html">Commercial Society, Stagnation, and Institutional Drift</a>, and <a href="//03%20Reading%20Paths/State%20Formation%2C%20Legibility%2C%20and%20Informal%20Order.html">State Formation, Legibility, and Informal Order</a> — reading paths the book supports directly.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Family as firm, firm as polity</strong>: the Clan is organized as a shareholder partnership with a post office; the Lees as a household court with talismans instead of shares. Both are <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> machines that govern access to wealth.   </li>
+<li><strong>Mercantilism defeated by ideas</strong>: Miriam's running economics lecture — from the table-and-nails argument to "ship ideas, not cargo" — is the book's most explicit statement of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as a theory of growth.   </li>
+<li><strong>Legibility as exposure</strong>: gold sales, identity papers, and police stakeouts make Miriam visible to New Britain before her business is secure; <a href="//02%20Concepts/Legibility.html">Legibility</a> cuts both ways.   </li>
+<li><strong>The state's appetite for secrets</strong>: New Britain's sedition laws, the Homeland Defense Bureau, and the United States' FBI/DEA turn <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> into the book's real antagonist no less than the Lee family.   </li>
+<li><strong>What is being traded</strong>: bulk goods, gold, drugs, identities, patents, tapes, and persons all move; the book is a taxonomy of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> ranged against lawful firms.   </li>
+<li><strong>Knowledge as inheritance and weapon</strong>: knotwork designs, blood lines, DNA tests, dossiers, blackmail tapes, and forged adoption papers all carry the plot's load — <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> made lethal.   </li>
+<li><strong>Legitimacy assembled in a room</strong>: the extraordinary meeting converts testimony, genetics, and record into <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>, the book's answer to what counts as valid rule.   </li>
+<li><strong>Path dependence and drift</strong>: the wrong knot "should" abort, but institutions adapt to error; <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> explains why the feud can outlive its cause.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: the book advances this concept by detailing a working smuggling economy — black-market gold (bullion ownership reserved for the crown), identity fabrication, seditious printing, and the Clan's drug-money transport — and by showing its fragility once anonymity erodes.   </li>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: the conceptual heart of the book. Miriam articulates, in the mercantilist-rejection dialogues, that labor and knowledge, not stored commodities, create value, and she operationalizes it through patents, licensing, and a brake-shoe company.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: two rival elite factories — the Clan's shareholder council and the Lee household behind the Ames-room facades — both produce and reproduce status, arms, and loyalty across generations.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: New Britain's police fortress, sedition law, and "pigeons"; the United States' FBI/DEA as the state apparatus that Matthias arms against the Clan; the book stages a contest over who can use a state's violence.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: firms require acts of Parliament, identities are deeds posted with inns of court, patents are applications, and succession is a meeting: Miriam makes institutions the terrain of the plot.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: the Clan is ultimately a communications network — couriers, lockets, tattoos, code books, and bugged cameras — and the book argues its real edge is message transmission, ending with the mobile-phone network-externality analogy.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the talisman system is stored knowledge that can be tattooed or photographed; family, DNA, and archive collectively let Miriam reconstruct the lost sixth family's story.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the extraordinary meeting, witness testimony, genetic fingerprinting, the dowager's outburst, and the changed designation of Angbard's successor all show legitimacy assembled procedurally.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: New Britain is an Atlantic empire whose industrial century came late; the medieval Gruinmarkt is its economic periphery, modernized by importing "intermediate" technology rather than American overkill.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: the book's clearest statement of diffusion: disk brakes, asbestos-resin shoes, flash boilers, batteries, parachutes, and the deliberate "obsolescence" cycle of a drip-fed R&amp;D department.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<p><strong>Granularity chosen:</strong> chapter-level. The extract contains five titled Parts (Business Plans; Point of Divergence; Capitalism for Beginners; StakeOut; MeltDown), each subdivided into one to three titled chapters, plus a titled Epilogue (the same structure as the book's Table of Contents at the end of the extract). Each division below is therefore one extract chapter, with its Part named in the heading — thirteen chapters plus the epilogue, covering every division in reading order.   </p>
+<h3 id="part-1-business-plans-learned-counsel">Part 1: Business Plans — Learned Counsel</h3>
+<p>Summary: The opening moves from John Frederick's New Britain cabinet — Sir Roderick's reports of Leveler cells, illicit printers in Massachusetts/the western New Provinces/New London, the Monterey plot, French livres, poor grain, bread prices, rearousal of ranters, Fort Victoria reserves — to Angbard and Matthias reviewing the failed attacks on Miriam (Helge) and Olga. Angbard demands tissue samples, photographs, and FBI database checks, and hears how Hildegarde's shipping-company sublease left the New Tower and parts of the palace undoppelgängered. In Boston, Miriam brings Brilliana to Paulette, opens a company account with a fifty-thousand-dollar draft, writes Paulette up as director and company secretary, and leaves Brill learning electricity, dishwashers, and a servantless household. Miriam then tests the assassin's locket (fails), warns Angbard by courier on the train, and at the Science Museum food court tells Iris the whole story; Iris presses her to trust no one, and the two lockets are shown to carry different designs.   </p>
+<p>Analysis: John Frederick and Sir Roderick make New Britain a <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> regime before Miriam arrives: sedition, bread prices, and coups justify surveillance and mobilization. Angbard and Matthias turn a <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> failure (the undoppelgängered wing) into a suspected political trap, foreshadowing the mole. Paulette's "blood money" and the two-locket comparison locate the story's engine in <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> — the trade in money, identities, and travel — from the first pages.   </p>
+<p>Source anchors: John Frederick; Sir Roderick; Lord Douglass; Lord Scotia; Levelers; Monterey; French livres; Angbard; Matthias; Hildegarde; New Tower; doppelgänger; Paulette; Brilliana; fifty-thousand-dollar draft; Iris; two lockets; Science Museum.   </p>
+<h3 id="part-1-business-plans-pawnbroker">Part 1: Business Plans — Pawnbroker</h3>
+<p>Summary: The locket does not work in America, so Miriam plans a two-stage crossing: from Paulette's backyard into the Gruinmarkt wilderness, traveling between coaching houses with a Dahon folding mountain bike, night-vision goggles, a sewing machine, and an overlocker for period-appropriate clothing. With Brill as her dupe-companion she crosses, spends a harsh night at a post house near Hasleholm, and midway along the road separates, emerging into a third Boston — left-side traffic, steam cars with chimneys, airships, painted ads like "BUY EDISON'S ROSE PETAL SOAP," pounds, shillings, police, an Aliens and Sedition Act, and no beggars. A policeman directs her to Erasmus Burgeson's pawnshop, where she sells pearls and then a quarter-kilo gold bar, negotiates barter credit, acquires Alfred's Annals of the New British and the banned Marx (The Hanoverian Exodus Reconsidered), buys a sewing room's worth of clothing, and secures an agreement to supply two gold bars per visit in exchange for pounds and, later, false identity papers.   </p>
+<p>Analysis: The physical kit — bicycle, goggles, folded gear — makes <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> the individual's escape hatch rather than the Clan's monopoly. Burgeson's shop is a miniature <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: gold, pawned identities, banned books, and the promise of papers are all negotiated price by price, and Miriam's "how honest you aren't" line marks her entry into a market the state tries to reserve to itself. The gold bar, meanwhile, has already begun to enter <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> — pounds are big currency, shillings are dollars, and price discovery is happening in real time.   </p>
+<p>Source anchors: assassin's locket; Hasleholm; post house; Dahon folding bike; night-vision goggles; overlocker; steam cars; airships; "BUY EDISON'S ROSE PETAL SOAP"; Erasmus Burgeson; pearls; gold bar; Alfred's Annals of the New British; Marx; Aliens and Sedition Act; identity papers.   </p>
+<h3 id="part-2-point-of-divergence-history-lesson">Part 2: Point of Divergence — History Lesson</h3>
+<p>Summary: Matthias and Esau — Esau now outed as James Lee, an operative of the "lost" family — meet beside the Clan founder's relics and air their quarrel: Matthias wanted Miriam co-opted as Angbard's heir, while Esau's sanctified elders have held an unrepealed order, thirty-three years old, to kill the line of Patricia; the botched attacks killed the wrong woman. Matthias wants her usable; Esau wants her dead, and only converges on cooperation. Miriam and Brill return from the third world on the folding bike, and Miriam's photographs and dictaphone evidence prove "world three" to Paulette. Iris, meeting Miriam in the museum food court, floats the idea that someone covered Miriam's trail for decades, that the old Clan civil war may have been started by outsiders, and that the hidden assassins are relatives rather than random gangsters. Paulette and Brill supply operational tricks — henna temporary tattoos carrying the knotwork, and the clan rumor of tattoos shaved onto the scalp in reverse for escape from captivity — while Miriam researches patent history and rents an office near Cambridgeport.   </p>
+<p>Analysis: Matthias and Esau's negotiation over a life is <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> in miniature: two elites deciding who may be promoted, used, or killed to manage succession. The henna and scalp tattoos are pure <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> — knowledge physically embedded for escape and messaging. Iris's "started by outsiders" hypothesis reframes the whole feud, and the patent-law digressions set up <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as Miriam's chosen weapon: she will trade designs, not merely contraband.   </p>
+<p>Source anchors: Matthias; Esau; James Lee; Founder's relics; elders' order; wrong woman; night-vision goggles; folding bike; photographs; dictaphone; Iris; civil war; henna tattoos; scalp tattoos; patent law; Cambridgeport office.   </p>
+<h3 id="part-2-point-of-divergence-cleaning-the-air">Part 2: Point of Divergence — Cleaning the air</h3>
+<p>Summary: Miriam crosses into the wooded lot behind the new office, blazes trees, and rides the henna-tattoo trick to a clean entry into the third world, edging the raw logistics of world-walking — weight, volume, splitting headaches, the two-and-a-half-ton-per-week ceiling of the Clan's postal trade. Over wine she and Brill argue economics: the mercantilist pitfall of "shipping goods from a fixed pie," Adam Smith's labor theory of value, the table-worth-more-than-timber example, and Miriam's plan to "ship ideas around" and patent them locally. Brill responds with a blazing critique of Clan life — gilded poverty, bride-price, dead siblings, "post-colonial guilt" — and declares she will never go back if she can help it. Miriam discovers the empty mansion Blackstones (1923 plaque), rides the tram into Sunday Boston, and visits Burgeson's private flat, where the King Street thief-taker's questions are covered, a DVD player changes his mind about her credibility, and she pitches her inventions — document binder, brake mechanism, wood screw, electric cell, antibiotic, aircraft engine. She moves into the Brighton Hotel suite and composes her reconnaissance report on prices, legal status of women, and the primitive local intellectual-property framework.   </p>
+<p>Analysis: The mercantilism-rejection dialogue is the book's most explicit statement of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> — value is created by labor and ideas, and trade need not be zero-sum. The "ship ideas, not cargo" plan and the invention pitch show <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as a deliberate rent-extraction strategy. Identity, property, and marriage law are the scaffolding Miriam must navigate, which makes <a href="//02%20Concepts/Institutions.html">Institutions</a> — deeds, passports, patents, competency — the real constraint set she is learning to exploit.   </p>
+<p>Source anchors: henna tattoo; blazes; Blackstones; tram; Roundgate interchange; Erasmus Burgeson; King Street thief-taker; DVD player; inventions list; Brighton Hotel; mercantilism; Adam Smith; Marx; patents.   </p>
+<h3 id="part-2-point-of-divergence-gold-bugs">Part 2: Point of Divergence — Gold Bugs</h3>
+<p>Summary: At the Brighton Hotel Miriam reads The London Intelligencer — impeachment proposals, letters of marque, the Teloptic Wireless Company — and visits lawyer Bates (Charteris, Bates and Charteris) to post her identity papers as the widow Fletcher: a "competent adult" per New Britain's laws, with a replacement birth certificate from nonexistent Shreveport authorities and a passport petition. Bates explains that only the crown may own bullion, that companies each require an act of Parliament (buying a debt-free shell costs about seventy pounds), and that a patent agent, Hinchliffe, can be retained. Shopping and Burgeson's confession follow: he is a convinced Marxist ("for which they hanged him"), a Leveler quartermaster with a cellar full of explosives, and — after watching Miriam's DVDs — a believer in her world; he offers his "undivided attention" as an ally. Paulette proposes the museum-catalogue scheme: buying Old Masters that "history" destroyed (World War II losses, forgeries' impossible provenance) as the light, legal, hugely valuable return cargo. Miriam records the knotwork difference between the two lockets — one arc threads over rather than under — as evidence for the lost-family hypothesis, then returns through the snow to Brill's hut and the Cambridgeport office. Messages from Roland and Iris are waiting; Iris has gone, her house shows a dead man in the Dumpster, a sawed-off shotgun wound, a replaced back door; Miriam's own house proves strip-searched and booby-trapped behind the front door, and the research disk and pink shoebox are gone.   </p>
+<p>Analysis: Bullion law, corporate charters, and patent applications are <a href="//02%20Concepts/Institutions.html">Institutions</a>-as-plot-device, but the price of gold propels <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> too — a pound in the bank is two hundred dollars, an ounce is ten pounds at the mint, and black-market arbitrage is the whole game. The art scheme and the brake business frame the legal alternative as <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: value repatriation through fungible claims. The raid on Iris's and Miriam's homes, police stakeout potential, and the re-keyed door turn <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> menacing: whoever entered knows about the Clan and the disk.   </p>
+<p>Source anchors: Brighton Hotel; The London Intelligencer; Bates; Charteris, Bates and Charteris; widow Fletcher; competent adult; Shreveport; bullion; act of Parliament; patent agent Hinchliffe; Erasmus Burgeson; Leveler quartermaster; Marx; museum catalogues; Old Masters; two lockets; knotwork; Iris's Dumpster corpse; booby trap; pink shoebox; The Beggar's Opera CD.   </p>
+<h3 id="part-3-capitalism-for-beginners-interrogations">Part 3: Capitalism for Beginners — Interrogations</h3>
+<p>Summary: Part 3 opens inside the Lee power structure, at Irongate in the Appalachians: James Lee walks Hanover Street past anti-Chinese insults, enters the tenement palace behind Ames-room facades, and is processed through armed majordomos into the Yellow Room before the Eldest and Great-Uncle Huan. There the assassination campaign is audited: the uncle who is "a strong right hand," the elders' standing order, brothers Kim and Wu who failed to return with their talismans, and the Eldest's chilling instruction — find the woman, obtain a Clan talisman, compare patterns, and "attempt to use it": "if the talent lies in the pattern instead of the bearer, we are all in terrible danger." Back in America, Miriam confronts Roland at the Marriott: Olga has been shot (pistol, close range), the Dumpster corpse and booby-trapped house are real, and she refuses his safe-house protection. At Boston Medical Center Olga is recovering and hands over the assassin's locket — identical to the one worn by Margit's killer, while the other attackers had none — and Miriam warns her not to return to Fort Lofstrom, where killers can reach even doppelgängered rooms. Miriam then strong-arms the phone chain past Matthias to Angbard, extracts a million-dollar supplemental credit line, and alerts him that there is a mole in his staff.   </p>
+<p>Analysis: The Yellow Room and the Lee guards render the rival claim to family power as <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> — a hidden court that mirrors the Clan while adapting to New Britain's racism and police culture. The Eldest's speculation about pattern-versus-bearer makes the talisman the strategic object, tying the plot's violence to <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: whoever holds and reads the right pattern commands access. The stacked betrayals — the undoppelgängered wing, the warehouse bomb, Olga's shooting — are the visible surface of an <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> security apparatus now hunting its own principals.   </p>
+<p>Source anchors: Irongate; Hanover Street; Ames rooms; Yellow Room; Eldest; Great-Uncle Huan; James Lee; talismans; Kim and Wu; pattern-versus-bearer; Marriott suite; Roland; Olga; Boston Medical Center; Margit; assassin's locket; Angbard; Matthias; million-dollar credit line; mole.   </p>
+<h3 id="part-3-capitalism-for-beginners-agreements">Part 3: Capitalism for Beginners — Agreements</h3>
+<p>Summary: Two weeks on, Miriam is established in New Britain: the Bridge Park Lane house purchase is closing, ten pounds of 23-carat gold has flowed to Burgeson, and she has attended Friendly Party meetings, assessing the ban-democracy agenda she half-endorses while funding radicals — "smuggling gold to undermine a despotic monarchy" as she rationalizes the irony with the Clan's heroin model. The chapter's centerpiece is the Brighton dining-room pitch to Sir Alfred Durant, the motor industrialist, and Bates: cam-phase brake samples already tested, chrysotile-epoxide chemistry in hand, the disk-brake design on CAD, royalties plus exclusive rights on the table, and the sweeping commercial vision — "the band brake and the wheel brake will be ancient history within two years" and one car in every two homes. She rents the engineering shop, runs her lab with Roger grinding chrysotile and testing epoxide resins, and then receives Inspector Smith of the Homeland Defense Bureau, who interrogates her about Burgeson, threatens that "a single woman running a business full of strapping young men" is a suspect citizen, and pushes her to inform. She composes an anonymous warning for Burgeson on the inkjet printer (unidentifiable by typeface or fingerprints) and has Roger deliver it — crossing, as she reflects, into active collusion with the Leveler quartermaster.   </p>
+<p>Analysis: The Durant meeting stages <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as contract: patents, royalties, licensing, exclusivity, and a founding investment convert Miriam's invisible arbitrage into a real firm. Smith's uninvited "good citizen" interview is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> in its oppressive everyday form — the political policeman choosing favorites and trading in threats. The technology itself, delayed diffusion of disk brakes and epoxide resins, exemplifies <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as a rent-earning gap between worlds, and the anonymous letter shows Miriam learning to wield the state's own instrument (anonymous exposure) against it.   </p>
+<p>Source anchors: Brighton Hotel; Bridgedale Park Lane; Burgeson; gold; Friendly Party; Levelers; Sir Alfred Durant; Bates; disk brakes; chrysotile; epoxide; Roger; engineering shop; Inspector Smith; Homeland Defense Bureau; inkjet printer; anonymous warning.   </p>
+<h3 id="part-3-capitalism-for-beginners-snark-hunting">Part 3: Capitalism for Beginners — Snark Hunting</h3>
+<p>Summary: Back in Cambridge, Miriam confronts the low-grade domestic war: Paulette reports Brill is well, visiting Olga in hospital and once losing a tail; the possibility that Brill is an agent planted by Angbard sits unresolved. Miriam showers, broods over her rage at the Dumpster, and listens to an answering machine where Angbard announces — believing her — that Olga is released into her care until Beltaigne and that the hunt for Iris continues. Olga and Brill arrive and Olga demands a role ("Where do I sign? Do you want it in blood?"); Miriam enlists her as a courier for the world-three business. That evening she rekindles the affair with Roland over dinner and spends the night; in the morning Roland confesses that Matthias has cameras and has been blackmailing him with footage of them — Roland's position in Fort Lofstrom, once secret, has been photographed. Miriam dissects the pattern: it is not about her or Roland, but about Angbard — Matthias wants advancement, recognition, power, control of Clan security, despite being outer family — and he is likely in league with the world-three assassins, making Angbard the real target.   </p>
+<p>Analysis: The camera footage and blackmail turn personal intimacy into <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> weaponized: surveillance captured where no door could. The inverted deduction — "I'm not the target. You're not the target. Angbard is the target" — converts a private scandal into an intra-elite powerplay, which is <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> reasoning from the inside. Roland's brokenness under blackmail and Miriam's refusal to sacrifice a child to the Clan's dynastic propositions frame the cost of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> ambitions: succession in this family is bought with personal exposure.   </p>
+<p>Source anchors: Paulette; Brill; Olga; Angbard's message; Cambridge office; waterfront dinner; Marriott suite; Roland; Matthias; cameras; blackmail tapes; "Angbard is the target"; outer family; world three.   </p>
+<h3 id="part-4-stakeout-tip-off">Part 4: StakeOut — Tip Off</h3>
+<p>Summary: Inspector Smith briefs a dozen constables in a New Britain police fortress to stake out the suspected French-linked smuggler and Leveler financier, tying her gold to the cracked Godwinite press and the hunt for Burgeson. Miriam brings Olga through to the New Britain house under the guise of a visiting cousin: a flat-panel monitor, medicines, clothing, pistols, and a heavy block of gold go into the safe behind the bed; the office tour introduces Declan McHugh and the lab of Roger, Martin, Soames, Oswald, furnaces, jars, a lathe, and chemical work. At Holmes Alley, Burgeson — sick, emaciated — warns that strangers, including a Chinee-looking man, have been asking about Blackstones, and that Oscar the free librarian has been hanged; Olga spots the same watcher and the two women escape through the cellar tunnels. That night Miriam packs off the servants, lays smoke-bomb traps, and, with Brill and Olga armed in the dark, ambushes the housebreakers the Lees sent: a firefight, one intruder shot, police whistles closing in, and the escape world-walk into the snowy Gruinmarkt with a prisoner — Lin, a weeping kid. Brill finally admits she is Angbard's agent, and delivers the book's most confounding revelation: Iris keeps a sawn-off shotgun taped under her wheelchair and gunned down intruders at her back door; the Clan's "cleaners" had to tidy the mess.   </p>
+<p>Analysis: The stakeout paperwork and Smith's "pigeon" language make Miriam's money visible to the state before her business is legal — <a href="//02%20Concepts/Legibility.html">Legibility</a> as exposure. The police fortress and the travel warrant that would falsify nothing anchor <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as a brute fact of the world she has entered. The firefight, in turn, is the Lee family's raid on the emerging firm, an act of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> violence against a competitor, while Brill's confessional and Iris's shotgun reveal the information shadows that have surrounded Miriam from the beginning.   </p>
+<p>Source anchors: Inspector Smith; police fortress; constables; stakeout; Godwinite press; Flat-panel monitor; Olga; Declan McHugh; Roger; Martin; Soames; Oswald; furnace; lathe; Holmes Alley; Burgeson; Oscar; cellar tunnels; Blackstones; smoke bombs; Lin; firefight; Brill's confession; Iris's shotgun; night-vision goggles; world-walk.   </p>
+<h3 id="part-4-stakeout-facing-the-music">Part 4: StakeOut — Facing The Music</h3>
+<p>Summary: In the frozen Gruinmarkt hunting cabin, the prisoner is processed: Lin Lee, younger than eighteen, weeping, terrified of the Clan's interrogators, carrying the second-version locket. Miriam tells Olga the truth she has reconstructed — the attackers are blood relatives from the missing western branch, the "sixth family" — and then calls Roland for a safe house and a full DNA (DQ alpha) comparison against the Clan, and calls Angbard to demand he call an extraordinary general meeting in four days, on the understanding that Iris must be there. Miriam manufactures a New London hotel alibi for the night of the break-in, withstands Inspector Smith's second visit (she "was in New London at four in the morning"), and takes the phone call where Sir Durant agrees to proceed — exclusive brake rights, and a suggested hundred-thousand-pound investment. Burgeson's gift book arrives, proof he survived the thief-takers; Olga arrives to accompany her. The chapter ends in a dinner-table argument about Lin: Miriam refuses to sanction his execution — "there's been too much killing" — and illustrates her philosophy of the Clan with the mobile-phone argument: the value of a network is proportional to the squares of its members, and the Clan's real edge is transmitting messages, not moving cargo.   </p>
+<p>Analysis: DNA typing and the assembled kinship question turn genealogy into evidence — <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> doing forensic work. The extraordinary meeting is likewise a procedural institution, <a href="//02%20Concepts/Institutions.html">Institutions</a> as arbitration of blood and money. Miriam's mobile-phone and network-externalities analogy is the book's sharpest statement of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> applied to the Clan itself: trade and communication expand value where feuds destroy it, so her strategic preference is to buy peace with the arrow of commerce.   </p>
+<p>Source anchors: hunting cabin; Lin Lee; second locket; DNA; DQ alpha typing; extraordinary meeting; alibi; New London; Inspector Smith; Sir Durant; exclusivity; hundred thousand pounds; Burgeson's book; Olga; mobile-phone analogy; network externalities; killing.   </p>
+<h3 id="part-4-stakeout-extraordinary-meeting">Part 4: StakeOut — Extraordinary meeting</h3>
+<p>Summary: Miriam and Olga ride the steam train toward Niejwein, and the chapter is carried by the long dialogue in which Miriam teaches Olga the economic argument in full: mercantilism's fixed-pie fallacy, labor creating value, education as the multiplier, agricultural reform freeing hands for industry, and the three-world strategy of channeling New British industrial wealth back into modernizing the Gruinmarkt. They arrive at the medieval city — walls, stench, open gates, poor peasants — and reach the Hjorth palace, where Kara greets them and Angbard is in residence; and where, in a side chamber, Iris sits alive beside the thrones. The revelations cascade: nobody kidnapped Iris; she called Angbard for help after the attack; she is Patricia Thorold-Hjorth, Miriam's birth mother; Alfredo Wu, her father, and Joan, her maid, were killed, and she survived a stabbing and a hospital convalescence before meeting Morris, the underground newspaperman who forged the false birth certificates and adoption papers that hid them. The dowager's "poker hand" treatment of Patricia is recounted. Miriam bargains for Roland's pardon and the burning of Matthias's tapes unwatched, then descends to the dungeon, where she finds Lin Lee beaten by the guards. There Lin tells the abandonment tale: the loyal-sons agreement, the ancestor's western trading post, years as a bond servant, the loss of the first talisman, the wrongly re-created knot, and the meetings at which "never did they come" — and Miriam sees the betrayal-for-a-legacy myth dissolve into a technical error. She offers to send him home carrying a cease-fire and terms.   </p>
+<p>Analysis: The train-track economics lecture is <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> as a plan of action against the material squalor of a periphery — Miriam wants to "bring civilization with me," railing against <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> dependence. Patricia's narrated escape — forged identities, the radical underground railroad, hospital disguises — is <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> as survival craft. The dungeon interview with Lin converts family myth into fact-checkable history, the basis for the book's peace: the "betrayal" was a misdrawn knot, and the feud has been feeding on an archival error ever since.   </p>
+<p>Source anchors: steam train; mercantilism; Adam Smith; education; agriculture; industrial revolution; Niejwein; Hjorth palace; Kara; Angbard; Iris; Patricia Thorold-Hjorth; Alfredo Wu; Joan; Morris; false adoption papers; dowager; Roland's pardon; Matthias's tapes; dungeon; Lin Lee; bond servant; talisman; cease-fire.   </p>
+<h3 id="part-5-meltdown-escape-plans">Part 5: MeltDown — Escape Plans</h3>
+<p>Summary: At Fort Lofstrom, Matthias takes in the wireless order shutting down the postal service for the extraordinary meeting, then intercepts his own arrest order — "ARREST MATTHIAS VAN HJORTH... CHARGES OF TREASON" — removes the anonymous "deep throat" CD and three addressed letters (to FBI and DEA offices) from the safe, and begins his exit. The extraordinary meeting fills the palace ballroom: Angbard introduces the case — Patricia and Alfredo attacked thirty-two years ago, the genetic fingerprinting of Helge, the assassination campaign, the fomenting of the civil war — and Patricia is wheeled in by Brill, trading barbs with Oliver Hjorth and the dowager until the dowager's own outburst confirms her; Olga testifies in sequence; then Miriam gives the full account: her job loss, the shoe box, the locket, world three, the wrong knot, the Lee family, the abandoned-founder narrative, her New Britain venture and its patents — and the demonstration that anyone of the Clan can travel there with a Lee talisman. DNA confirms the sixth family. Recess; in the reception, Mors Hjalmar, the Clan's American attorney, circulates; Miriam confronts Baron Oliver and the dowager in a set-piece duel of accusations about the plan against her mother's line, and Angbard warns her what the assembly cost him.   </p>
+<p>Analysis: The letters Matthias sends make <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> the instrument of an insider: he will detonate the FBI/DEA on the Clan when he can no longer control it internally. The meeting itself is <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> performed — testimony, genetics, record, and the dowager's fury assembling Marina's claim — precisely the machinery Miriam could not access earlier in the book. The drug-money trade that Matthias exposes is the <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> substrate on which the whole edifice rested, and the chapter makes clear that legitimacy in this polity has always been underwritten by it.   </p>
+<p>Source anchors: Matthias; Fort Lofstrom; postal shut-down; arrest order; deep throat CD; FBI; DEA; extraordinary meeting; Angbard; Patricia; Brill; Olga; Helge's testimony; wrong knot; sixth family; DNA; New Britain; Mors Hjalmar; Baron Oliver Hjorth; dowager duchess; reception.   </p>
+<h3 id="part-5-meltdown-going-postal">Part 5: MeltDown — Going Postal</h3>
+<p>Summary: Matthias flees through the Fort Lofstrom post office on a courier's back, exits in Boston, and from a BMW phones the Judas call that hands the Clan's Belmont hub to the federal agents, then vanishes with bearer bonds and Clan secrets. Roland, besieged in Boston as the FBI/DEA raid crashes in, sends the courier Poul for help, plans a sub-basement collapse defense, then crosses back to find the post room destroyed by a claymore and Poul dead; Sullivan stays to guard the armory. The meeting resumes: Miriam wins her motions — the New Britain venture recognized as a Clan subsidiary, the sixth family's handling assigned to it — delivers her great speech on the obsolescence of the Clan's business ("the fat times will be over"), Angbard changes his designated successor to Patricia, and Oliver's incompetency motion is shot down; then Roland and Brill burst in with the betrayal news and the siege. The security summit plans a rescue by way of New London, Burgeson's cellar tunnels, and the Fort's rear. Fourteen cross from the shop into the wine cellars, Miriam shoulders the pain of successive crossings, discovers the servants' corpses in the cold store, and is taken by Matthias's rear guard — "nice pony" — who wants a million dollars and a ride out; Olga and a wounded Roland intervene, the gunman dies, and Roland is fatally shot; Brill doses Miriam into darkness.   </p>
+<p>Analysis: The federal raid turns <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> into the story's decisive weapon — the state Matthias aims at the Clan and the escape route the Clan's rescue uses through it. The postal service, courier routes, and weight books throughout the book are its real infrastructure, <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> as both the Clan's fortune and, once betrayed, its Achilles heel. The Judas call and the planted rear guard show <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> at its most destructive: an insider's knowledge of physical geography, codes, and timing converted into a demolition plan.   </p>
+<p>Source anchors: Matthias; post office; courier; BMW; Judas call; Belmont; FBI; DEA; Roland; Sullivan; Poul; claymore; extraordinary meeting; motions; New Britain subsidiary; obsolescence speech; Patricia as successor; security summit; New London; Burgeson's cellars; wine cellars; cold store corpses; rear guard; "nice pony"; Olga; Roland's death; Brill.   </p>
+<h3 id="epilogue">Epilogue</h3>
+<p>Summary: Inspector Smith learns that fourteen people — "nine coves and five queans" — entered Burgeson's shop and never emerged; Jobson, his Defense Bureau agent, has also vanished. The thief-taker reports no blood, no struggle, no bodies, and no hollow chambers per Mister Moore's sound-echo apparatus, and Smith promises Sir Roderick's fury and his own hunt for the woman. Weeks later, in New London, Miriam hosts the Brighton Hotel celebration for the Durant Motor Company's new safety brakes, greeting Lord and Mrs. Macy, Sir Durant, board-of-trade and motor-trade guests, and visitors arriving in new Otto cars. Brill keeps her company while Miriam grieves Roland and resists the neat sorting of "true love," marriage, or widowhood after gunfire. The revolving door brings Olga with Angbard and Iris, and then Paulette — the Clan, the recovered family, the American partner, and the New Britain enterprise reunited under the gaslight — and Miriam dares to hope the worst is behind her.   </p>
+<p>Analysis: Inspector Smith, Jobson, and Sir Roderick keep the imperial state in the frame after the clan action: <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> has not understood world-walking but has identified Miriam's circle, and the vanishings give it a reason to keep watching. The Brighton launch is Miriam's venture moving from paperwork to public life, a passage from <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> fronts into the respectable surface of <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> — safety brakes, Otto cars, board-of-trade guests. That Brill, Angbard, Iris, Olga, and Paulette assemble at all marks the scene as a provisional alliance, an exercise in <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> across three worlds, with Roland's absence the price the ledger still records.   </p>
+<p>Source anchors: Inspector Smith; Jobson; fourteen; nine coves and five queans; Mister Moore's sound-echo apparatus; Sir Roderick; Brighton Hotel; Durant Motor Company; safety brakes; Otto cars; Lord Macy; Sir Durant; Brill; Olga; Angbard; Iris; Paulette; gaslight; Roland's absence.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>"World three" Boston shorthand</strong>: left-side traffic, steam cars with chimneys, airships, painted ads ("BUY EDISON'S ROSE PETAL SOAP"), pounds and shillings, streetcar tickets at fourpence, the Aliens and Sedition Act — and "no beggars."   </li>
+<li><strong>The gold arbitrage equation</strong>: a quarter-kilo bar that cost "nearly three thousand dollars" in America sells for roughly £69 in a single-bar settlement at Burgeson's — ten pounds down, the balance on a promissory note by noon — while a two-bar consignment goes for £200; a sixteen-Troy-ounce brick, worth about $3,350 here, fetches roughly £200 black-market in New Britain; and a pound runs about two hundred dollars, not hundreds.   </li>
+<li><strong>Bullion law</strong>: ownership of bullion is reserved to the crown; the mint pays only £10/oz — hence the black market and Erasmus's promise of £200 for two bars.   </li>
+<li><strong>Company law</strong>: every corporation requires an act of Parliament; a private member's bill runs ≥£50; a debt-free shell company costs ~£70 — a line to quote for why institutions drive the plot.   </li>
+<li><strong>World-walking physics as economics</strong>: "two and a half tons a week" is the Clan's ceiling; weight and volume, not distance, set the tariff — and ideas weigh nothing.   </li>
+<li><strong>The wrong knot</strong>: the ancestor's reconstructed pattern threads one arc over instead of under, opening New Britain instead of America — the betrayal-for-a-legacy myth reduced to a technical error.   </li>
+<li><strong>The Eldest's whistleblower line</strong>: "if the talent lies in the pattern instead of the bearer, we are all in terrible danger."   </li>
+<li><strong>Escape technique</strong>: henna temporary tattoos of the knot, and the rumor of tattoos shaved onto the scalp in reverse so a prisoner can "shave in a mirror and escape."   </li>
+<li><strong>Dossier-as-blackmail</strong>: Matthias's hidden cameras in Fort Lofstrom and his tapes of Miriam and Roland — the inner-family surveillance state turned on its own lovers.   </li>
+<li><strong>The "deep throat" CD and the FBI/DEA letters</strong> — Matthias's exit bomb exposing the Clan's American money trail.   </li>
+<li><strong>The lost-folder political lexicon</strong>: "pigeon" (surveillance target), "nine coves and five queans," "Mister Moore's sound-echo apparatus," "Alfred's Annals of the New British."   </li>
+<li><strong>Miriam's pitch</strong>: "a car for every home"; one car per thirty-two people in New Britain; band brake and wheel brake "ancient history within two years."   </li>
+<li><strong>The protagonist's thesis in one line</strong>: "The real edge the Clan has got is its ability to transmit messages" — the mobile-phone network-externality argument.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//04 Series/Merchant Princes.html">merchant princes</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/hidden-family/index.html">hidden-family</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A16938038505862356032942338322426568664{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D16938038505862356032942338322426568664{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B16938038505862356032942338322426568664{level}" level="{level}" note_temp_id="16938038505862356032942338322426568664" onclick="window.ObsHtmlGraph.run(this, '16938038505862356032942338322426568664', 'hidden family');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C16938038505862356032942338322426568664{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

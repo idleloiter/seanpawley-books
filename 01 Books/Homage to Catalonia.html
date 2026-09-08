@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="homage to catalonia">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'homage to catalonia';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=homage to catalonia" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="homage-to-catalonia">Homage to Catalonia</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note is backed by the local extraction of George Orwell's memoir of the Spanish Civil War and sits inside the vault's <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> reading path, where it supplies the eyewitness-against-official-narrative test that the path asks of every other book. In the wider Orwell corpus it is the hinge between the empire and poverty reportage of <a href="//01%20Books/Burmese%20Days.html">Burmese Days</a> and <a href="//01%20Books/Down%20and%20Out%20in%20Paris%20and%20London.html">Down and Out in Paris and London</a> and the anti-totalitarian synthesis of <a href="//01%20Books/Nineteen%20Eighty-Four.html">Nineteen Eighty-Four</a>, and it shares the memoir-into-politics register of <a href="//01%20Books/Shooting%20an%20Elephant.html">Shooting an Elephant</a>. Analytically it sits beside <a href="//01%20Books/The%20True%20Believer.html">The True Believer</a> (mass-movement psychology facing an eyewitness's refusal to generalize) and <a href="//01%20Books/The%20Leveller%20Revolution.html">The Leveller Revolution</a> (a popular-republic tested and defeated by the party machinery it helped create). Its natural hub is <a href="//00%20Maps%20of%20Content/War%2C%20Revolution%2C%20and%20Civilizational%20Breakdown.html">War, Revolution, and Civilizational Breakdown</a>, with strong ties to <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a> and <a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a>.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Orwell builds <em>Homage to Catalonia</em> as a movement from immediate bodily experience into political explanation and then back into lived memory. The book opens not with a thesis about the Spanish Civil War but with the Italian militiaman in the Lenin Barracks, the red and black flags in Barcelona, the commandeered trams, the collectivized cafes, and the sudden disappearance of ordinary class deference. That opening matters because Orwell's later distrust of Communist press accounts is rooted in this first contact with people and places: the POUM militia, the Anarchist atmosphere in Catalonia, the Ramblas, the barracks, the teenage recruits, the shortage of rifles, and the felt reality of a city where workers seemed briefly to have seized public life.   </p>
+<p>The front-line chapters refuse the clean drama of conventional war writing. At Barbastro, Sietamo, Alcubierre, Monte Pocero, Monte Trazo, Huesca, Torre Fabian, and La Granja, Orwell keeps returning to mud, lice, firewood, bad Mausers, dud cartridges, mule-stables, sentry duty, and the absurdly distant Fascist positions across ravines or orchards. His military narrative is organized around anticlimax: the enemy is often less urgent than candles, tobacco, boots, and sleep. Yet this anticlimax is not evasive. It lets him show how the POUM militia actually functioned, why its equality between officers and men could coexist with chaos, and why a badly armed workers' army could still hold a line while the Popular Army was forming behind it. The militia's "foretaste of Socialism" is one of the book's few unguarded affirmations, and it stands in explicit contrast to the class reassertion Orwell later watches return to Barcelona, a contrast that links <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> to <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>.   </p>
+<p>The book's central turn comes when Orwell returns from the Aragon front to Barcelona after 115 days in the line. The city that had greeted him with <em>salud</em>, blue overalls, collectivized shops, and Anarchist notices has become a place of smart suits, reopened restaurants, armed police, food queues, censored newspapers, and hostility toward the party militias. The Barcelona May Days are narrated first from the roof of the Poliorama and the POUM buildings near the Cafe Moka, where Orwell sees confusion, boredom, hunger, accidental bravery, and localized restraint rather than a plotted insurrection. Appendix II later revisits the same events as a disputed public record, setting his limited eyewitness knowledge against the Daily Worker, Inprecor, John Langdon-Davies, and the official story of a POUM-Fascist plot. The whole handling of the May Days is an exercise in <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: Orwell concedes he saw only his own neighbourhood, then insists that this limited sight still lets him contradict many of the lies published at a distance.   </p>
+<p>Orwell's politics in the book are inseparable from the institutional details he tracks. Appendix I names the CNT, FAI, UGT, PSUC, POUM, JCI, JSU, AIT, Caballero, Negrin, the Generalidad, the Communist Party, Soviet arms, the International Brigades, and the Popular Front not as a glossary but as the machinery that redirects the war. He argues that Franco's revolt had been met by a workers' revolution in Catalonia and eastern Spain, that the Communists became the anti-revolutionary force inside the Republican camp because Soviet arms gave them leverage, and that calls for military efficiency often meant transferring power from unions and local committees to police, ministries, and a conventional army. This is a study of <a href="//02%20Concepts/Institutions.html">Institutions</a> dissolving a revolutionary <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> in the name of winning the war, and of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> doing the administrative work of the purge.   </p>
+<p>The later chapters join personal injury to political persecution. Orwell is shot through the throat near Huesca, passed through Sietamo, Barbastro, Lerida, and Tarragona hospitals, and then returns to Barcelona weak, voiceless, and still expecting legal categories to mean something. Instead he finds the POUM suppressed on 15-16 June, Andres Nin disappeared, Bob Smillie dead in a Valencia prison, Georges Kopp arrested despite a letter from General Pozas, hotel rooms searched in an Ogpu-Gestapo style, and militiamen forced to hide or sleep outdoors. The escape through Port Bou works as a bitter reversal of the opening: in December looking proletarian made a person respectable in Catalonia; by June looking bourgeois is the safest disguise. The chapter-by-chapter record builds toward the conclusion Orwell states explicitly in Chapter XII: that the "Trotskyist" label had become a way of eliminating dissent in which the law was what the police chose to make it.   </p>
+<p>The closing pages do not convert the Spanish experience into simple disenchantment. Banyuls, Perpignan, Paris, and southern England sharpen rather than soften Spain's memory: the goatskin water-bottle, the tiny Aragonese oil lamp, the smell of trenches, the mountain dawns, Barcelona food queues, the red and black flags, and the faces of militiamen remain more real than the peaceful English landscape of cricket posters, red buses, and milk on doorsteps. Orwell explicitly warns the reader about his own partisanship and mistakes, but the warning is not a retreat from judgment. It is the standard by which he asks readers to judge every other account of the Spanish war, especially accounts written far from the barricades or dependent on party ministries.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<p><strong>George Orwell (author-narrator)</strong> - An English volunteer who joins the POUM militia within a day of arriving in Barcelona in late December 1936. He serves roughly 115 days on the Aragon front, is wounded through the throat in late May or early June, and ends the book on the run from police after the POUM is suppressed. His role is that of the honest but self-flagellating eyewitness: he repeatedly concedes his own political ignorance, mistakes, and partisanship even as he insists his testimony is more reliable than press accounts written at a distance.   </p>
+<p><strong>Benjamin (Levinski)</strong>: a Polish Jew, born about twenty-five, who speaks French as his native language and commanding the forward position when Orwell arrives. A short, pale, eager figure known for pulling Orwell's head down in the raid, he is later gazetted captain. He embodies the improvised officer world that the militia system produces and that the state later criminalizes.   </p>
+<p><strong>Georges Kopp</strong>: the stout Belgian <em>comandante</em> who becomes Orwell's commander and close friend. A civil engineer in civilian life, he has broken Belgian law to fight Fascism, prevents bloodshed in the May Days at the Cafe Moka, and is arrested after the POUM is suppressed despite carrying a letter of confidence from General Pozas. His jail cell visit is one of the book's emotional centres.   </p>
+<p><strong>Bob Smillie</strong>: the twenty-two-year-old grandson of the miners' leader; "perhaps the best of the bunch" among the English ILP contingent at Monte Trazo. Arrested at the frontier for "carrying arms" (two harmless souvenir grenades), he dies in Valencia prison, officially of appendicitis, a death Orwell refuses to settle.   </p>
+<p><strong>Andres Nin</strong>: the POUM leader after Maurin's capture, one-time secretary to Trotsky, arrested 15 June, transferred to Valencia and Madrid, and reported shot in prison by the secret police. He becomes the symbol of the framed leader.   </p>
+<p><strong>Joaquin Maurin</strong>: an early POUM leader who warned the Cortes of Franco's impending revolt and was taken prisoner by the Fascists; believed shot for a time.   </p>
+<p><strong>John McNair</strong>: the ILP representative in Barcelona who braves armed Anarchist patrols to bring Orwell's wife and the POUM group Lucky Strikes during the May fighting, then goes into hiding and is falsely announced arrested after Orwell flees.   </p>
+<p><strong>Salas</strong>: Chief of Police (or Commissar for Public Security) whose three lorry-loads of Assault Guards seized the CNT-run Telephone Exchange on 3 May 1937, the incident that started the May Days.   </p>
+<p><strong>Companys</strong>: the Catalan President, said to have laughed that the Anarchists would put up with anything shortly before the seizure of the Telephone Exchange.   </p>
+<p><strong>Caballero and Negrin</strong>: the Left-wing Socialist Premier in office in late 1936-37, replaced by the Right-wing Socialist Negrin in May 1937; the transition marks the swing against the revolution.   </p>
+<p><strong>Prieto, Irujo, Zugazagoitia, Ortega y Gasset, Prat Garcia</strong>: Republican ministers and officials who, according to Orwell, repudiated the espionage charges against the POUM - Prieto as Minister of National Defence, Irujo as Minister of Justice (who called the signed Nin document "valueless", i.e. a forgery), Zugazagoitia as Minister of the Interior.   </p>
+<p><strong>James Maxton and John McGovern, MPs</strong>: leaders of the British delegations that went to Spain in August and December 1937 to investigate the POUM charges and Nin's disappearance.   </p>
+<p><strong>The Italian militiaman</strong>: unnamed, first met in the Lenin Barracks before joining the militia; the book's emblem of the revolutionary moment that "later events have obliterated."   </p>
+<p><strong>Societies and polities</strong>: The <strong>POUM</strong> (Partido Obrero de Unificacion Marxista) is Orwell's militia and the dissident-Communist party later suppressed; the <strong>PSUC</strong> is the Communist-controlled Catalan party and the <strong>UGT</strong> the Socialist unions aligned with it; the <strong>CNT-FAI</strong> are the Anarcho-Syndicalist unions and their political organ; the <strong>ILP</strong> is the British Independent Labour Party that sent the English contingent; the <strong>Generalidad</strong> is the semi-autonomous Catalan government; the <strong>Popular Army</strong> is the "non-political" reorganized army that displaces the militias; the <strong>Assault Guards</strong> (local and Valencian) and <strong>Carabineros</strong> are the rear police forces far better armed than the front-line troops.   </p>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling/kindred books</strong> (per <code>06 Plans/book-affinity.md</code>, [high]): <a href="//01%20Books/Nineteen%20Eighty-Four.html">Nineteen Eighty-Four</a> (official narrative, fabricated record, the purge logic that 1984 later generalizes), <a href="//01%20Books/Shooting%20an%20Elephant.html">Shooting an Elephant</a> (Orwell's memoir-into-politics register and imperial comparison), <a href="//01%20Books/The%20True%20Believer.html">The True Believer</a> (mass-movement psychology against the eyewitness's refusal to generalize), <a href="//01%20Books/The%20Leveller%20Revolution.html">The Leveller Revolution</a> (a popular-republic tested and then defeated by the party machinery it helped create).   </li>
+<li><strong>Reading path</strong>: <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> - this book is the eyewitness-with-limited-sight test applied to a fabricated official record.   </li>
+<li><strong>Maps of Content</strong>: <a href="//00%20Maps%20of%20Content/War%2C%20Revolution%2C%20and%20Civilizational%20Breakdown.html">War, Revolution, and Civilizational Breakdown</a>; <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a>; <a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a>.   </li>
+<li><strong>Key concepts</strong>: <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>, <a href="//02%20Concepts/Institutions.html">Institutions</a>, <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>, <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>.   </li>
+<li><strong>Extracted source</strong>: <a href="//not_created.html" class="nonexistent-link">Extracted text</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The eyewitness against the official record</strong>: limited, flawed, first-hand testimony weighed against confident accounts manufactured at a distance.   </li>
+<li><strong>The revolution reversed</strong>: the workers' seizure of public life in December dissolving into class reassertion, food queues, and police power by May-June.   </li>
+<li><strong>Military stagnation as political evidence</strong>: mud, lice, firewood, and bad rifles reading the weakness of the state better than communiques.   </li>
+<li><strong>How a political label becomes coercion</strong>: "Trotskyist" as a category that does the work of arrest, censorship, and purge.   </li>
+<li><strong>The militia as a moral economy</strong>: equality of pay, rations, and "comrade" as a temporary working model of socialism, and its destruction.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Orwell treats revolutionary speech ("Comrade", "Salud", "thou") and then the "Trotskyist" smear as lived forces - the first makes a workers' city legible, the second makes dissent criminal without a demonstrated act.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the book tracks capacity being rebuilt through ministries, police, conscription, and the Popular Army while being deliberately withheld from the front, where Anarchist troops got few Russian arms.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the May Days are a governed emergency in which the government both seizes the Telephone Exchange and later manages the narrative of a "fifth-column rising."   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: POUM, PSUC, CNT-FAI, UGT, the Generalidad, the Popular Army, and the secret police function as the machinery that redirects the war and then destroys the wartime revolution.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: equality of rations and pay at the front, the hospital thefts and kindnesses, olive-oil queues, and the bread adulterated with rice all test who owes whom protection and dignity.   </li>
+<li><a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: in a war where the records "do not exist," an eyewitness's partial, self-confessedly flawed account becomes the preservation of what party propaganda tries to erase.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="chapter-i">Chapter I</h3>
+<p>Summary: Orwell arrives in late December 1936 at the Lenin Barracks in Barcelona and fixes the opening memory on an Italian militiaman with reddish-yellow hair, a leather cap, and a puzzled stare at a map. He describes a city where the Anarchists are still powerful, the Ramblas carry revolutionary songs, churches have been gutted, shops and cafes are marked as collectivized, bootblacks paint their boxes red and black, and people say "Comrade" and "Salud" instead of "Señor" or "Buenos dias." The chapter then moves into militia training: centurias, sections, the old cavalry barracks, women still drilling, piecemeal uniforms, no usable rifle instruction, boys from Barcelona, the absent machine-gun lesson, Williams's wife helping with kit, and the train leaving for Aragon at under twenty kilometres an hour. Source anchors: Italian militiaman; Lenin Barracks; red and black; collectivized cafes; centuria; no rifles; Williams's wife; Aragon train.   </p>
+<p>Analysis: The Italian militiaman gives Orwell a human test for everything that follows: the book will judge parties and newspapers against faces, gestures, and conduct. The collectivized cafes and revolutionary greeting make <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> visibly embodied - speech itself ("Comrade", "Salud", "thou") is the revolution's sign. The centuria and the men who cannot load a rifle show <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> collapsing at the exact moment of the workers' triumph, while the basketful of bread thrown away each meal beside the civilian bread-queues makes <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> concrete. The illiterate militiaman buying and laboriously spelling out a revolutionary ballad is also Orwell's clearest close-up of <a href="//01%20Books/The%20True%20Believer.html">The True Believer</a>'s mass-movement psychology, and it is a measure of how far he has yet to travel from this naive sympathy. Williams's wife and the Aragon train join private intimacy to public mobilization, so the departure for the front already carries the mixture of comedy, disorder, courage, and material shortage that defines Orwell's account of the POUM militia.   </p>
+<h3 id="chapter-ii">Chapter II</h3>
+<p>Summary: The new recruits pass through Barbastro, Sietamo, and Alcubierre on the way to the line before Saragossa, encountering villages damaged by shell-fire, mud roads two feet deep, mule-stables full of chaff and refuse, and Fascist deserters who look much like the militiamen themselves. Orwell receives an 1896 German Mauser with a corroded barrel, watches fifty cartridges issued to men who scarcely know how to use rifles, and marches in a ragged centuria with dogs, a POUM-branded mascot, Georges Kopp on a black horse, and a red flag. At the hilltop position he meets Benjamin, sees the Fascist trench seven hundred metres away across a ravine, watches a boy injure himself with a blown rifle bolt, and fires his first shot at a human being. Source anchors: Barbastro; Sietamo; Alcubierre; 1896 Mauser; POUM dog; Georges Kopp; Benjamin; seven hundred metres.   </p>
+<p>Analysis: Barbastro, Sietamo, and Alcubierre translate the revolution from Barcelona spectacle into rural filth, cold, and ruined infrastructure. The 1896 Mauser, fifty cartridges for men who cannot load a rifle, and seven hundred metres establish a recurring military fact recorded under <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: men are being asked to fight with weapons and distances that make effective fighting nearly absurd. The Fascist deserters indistinguishable from themselves and the anti-clerical villages begin the book's account of how <a href="//02%20Concepts/Institutions.html">Institutions</a> and everyday loyalties survive even when the state does not, and Georges Kopp and Benjamin introduce the improvised officer world that later becomes legally vulnerable. The POUM dog and the self-inflicted casualty keep Orwell's first combat experience from becoming heroic theatre.   </p>
+<h3 id="chapter-iii">Chapter III</h3>
+<p>Summary: Orwell defines winter trench life on the Saragossa front by the order of real priorities: firewood, food, tobacco, candles, and only then the enemy. He describes Monte Pocero as a landscape of POUM, PSUC, Anarchist, and Fascist flags on hilltops, Robres in the plain, the Pyrenees in the distance, night patrols through ravines, a recovered red flag torn up for cleaning-rags, and adolescent guards who fall asleep in the cold. The chapter also pauses to defend the militia system: officers and privates draw the same pay, eat the same food, use "Comrade," rely on class loyalty rather than punishment, and hold the line despite bad rifles, old mortars, scarce ammunition, freezing mud, rats, candles measured in inches, and constant scrounging for wild rosemary or reeds. Source anchors: firewood first; Saragossa front; Monte Pocero; Robres; class loyalty; equal pay; wild rosemary; three inches of candle.   </p>
+<p>Analysis: Firewood first is not a joke but Orwell's method for stripping war down to what governs daily behavior. Monte Pocero, Robres, wild rosemary, and three inches of candle show that the front is an economy of tiny necessities rather than a map of victories. Equal pay and class loyalty make <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> militarily real: the same boys who frustrate him by sleeping on guard also prove that a workers' army can persist without the discipline of fear. The passwords of the period ("Cultura - progreso", the illiterate sentry fumbling "Cataluña - heroica") belong under <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>, where a word cannot be remembered unless it is understood. And the four trench-mortars never fired and one machine-gun per fifty men are the material record of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> withheld from Anarchist troops, which Appendix I later explains as deliberate policy.   </p>
+<h3 id="chapter-iv">Chapter IV</h3>
+<p>Summary: After three weeks Orwell joins the English ILP contingent at Monte Trazo with Williams, Ramón, Bob Smillie, and Spanish machine-gunners in a limestone position from which Saragossa appears as a distant string of lights. The enemy is closer than before, perhaps three or four hundred yards away, with machine-gun loopholes, German NCOs reported by deserters, a dead Moor in no-man's-land, patrols through wooded neutral ground, and dawns seen after sleepless guard duty. The chapter also studies trench propaganda: POUM and PSUC positions shout at Fascist conscripts through megaphones, promise buttered toast, answer "Viva Franco," receive the news of Malaga from Fascist leaflets, and later see an abortive nighttime "attack" turned in newspapers and radio into a heroic battle with cavalry and tanks. Source anchors: Monte Trazo; ILP contingent; Bob Smillie; Saragossa lights; megaphone; buttered toast; Malaga; cavalry and tanks.   </p>
+<p>Analysis: Monte Trazo lets Orwell compare English volunteers, Spanish comrades, and Fascist conscripts without converting them into types. The megaphone and buttered toast matter because persuasion becomes a weapon where rifles do little, and they prepare the book's later concern with propaganda that travels farther than bullets. The fall of Malaga and the false report of cavalry and tanks make <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> unstable: even a tiny, noisy exchange can inflated into a battle by institutions needing morale or mythology. The shouted slogans themselves, and the newspapers' manufactured "heroic English" defence, are a lesson in <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> that Orwell says taught him "to read the war news in the papers with a more disbelieving eye" - the book's governing turn.   </p>
+<h3 id="chapter-v">Chapter V</h3>
+<p>Summary: East of Huesca, Orwell spends late March in another stretch where almost nothing happens: the line is twelve hundred metres from the enemy, March weather mixes snow-water, mud, blue sky, violets, cherry buds, and stray bullets, and La Granja serves as store, headquarters, and cook-house under badly aimed Fascist shelling. Patrols listen for church bells and motor-horns, men crawl through abandoned orchards and maize fields, potatoes are lifted under machine-gun risk and traded for coffee, and rumors of battles keep the troops asking why they do not attack. The only substantial action is the failed attack on the Manicomio, where German POUM Shock Troopers take the disused asylum but lose it when supporting troops fail and ambulances jolt the wounded toward Sietamo; the chapter then turns to lice, tobacco shortage, Monflorite hospital, Torre Lorenzo, Torre Fabian, primitive harrows, anti-clerical graves, and the silent construction of 1,200 metres of trench near Casa Francesa. Source anchors: Huesca; La Granja; church bells; potato patch; Manicomio; Shock Troopers; Monflorite; Casa Francesa.   </p>
+<p>Analysis: Huesca and La Granja extend the book's insistence that waiting is a form of war with its own evidence: food routes, shell quality, potatoes, and medical theft reveal the condition of the Republican line better than communiques do. The Manicomio and Shock Troopers prove that courage is not enough when <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> fail, while Monflorite, Casa Francesa, and the primitive harrows draw the surrounding peasant world into the war. The stolen camera at Monflorite hospital and the potato patch traded against coffee belong to <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> - shortage rewires what people owe one another. And the twelve hundred metres of trench dug in a single night, planned with "brilliant" Spanish organization, is Orwell's counter-example proving that <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> can flare up even in this broken war.   </p>
+<h3 id="chapter-vi">Chapter VI</h3>
+<p>Summary: Benjamin asks for fifteen volunteers for a night raid near Torre Fabian, and Orwell joins a mixed English and Spanish party commanded by Jorge Roca and Benjamin while Kopp explains the plan in rain and darkness. The men carry Mexican cartridges, bayonets, three bombs each, and no white armlets, then crawl through mud, irrigation ditches, two lines of Fascist wire, and a firelit parapet where Jorge is wounded, Benjamin fires his automatic pistol, and Orwell wrestles with bomb pins before entering the position. Inside they find smashed dug-outs, a missing machine-gun, ammunition boxes, Fascist bombs, an enormous telescope, wounded men including Douglas Thompson, Patrick O'Hara bandaging under fire, Bob Smillie throwing a dud bomb, Douglas Moyle passing a working one, Paddy Donovan ordering withdrawal, the ammunition box dragged through crossfire, and the later search for Jorge and Hiddlestone. Source anchors: fifteen volunteers; Torre Fabian; Jorge Roca; Mexican cartridges; inner wire; missing machine-gun; enormous telescope; Hiddlestone.   </p>
+<p>Analysis: Fifteen volunteers, Torre Fabian, Jorge Roca, and the inner wire give the book its closest sustained account of combat, but the scene remains messy rather than glorious, squarely inside <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>. The missing machine-gun and enormous telescope reveal the poverty of Orwell's army: loot is judged by whether it can make the line function, an <a href="//02%20Concepts/Institutions.html">Institutions</a> test of what a weapon-starved force values. Hiddlestone, Bob Smillie, Douglas Moyle, and Patrick O'Hara turn the raid into a test of small acts under pressure, where courage appears as running back, carrying ammunition, bandaging wounded, or trying not to shoot one's own side - the moral economy of the militia under fire rather than any individual heroics.   </p>
+<h3 id="chapter-vii">Chapter VII</h3>
+<p>Summary: As spring turns the front warmer, Orwell records cherries on bullet-chipped trees, wild roses at Torre Fabian, quail nets, Andalusian neighbors who may not know whether they are Anarchists or Communists, sunstroke among the English, mosquitoes, rats, snipers' platforms, and the failure to cut the Jaca road. After 115 days in the line he leaves on 25 April, reflecting that his service has seemed futile because he has scarcely fought, yet has immersed him in a militia community where tens of thousands live at roughly the same level. The chapter names the militia system as a local foretaste of Socialism: no privilege, no boss-fear, little snobbery, the word "comrade" attached to conduct, and memories of Ramón snoring, Kopp thumbing his nose at a bugle-call, Bill Chambers singing at La Granja, and an Andalusian sentry answering a Fascist song across no-man's-land. Source anchors: wild roses; Andalusians; Jaca road; 115 days; foretaste of Socialism; Ramón; Bill Chambers; 25 April.   </p>
+<p>Analysis: Wild roses, Andalusians, and the Jaca road keep the chapter grounded in the last days of front-line stagnation, but 115 days gives Orwell enough distance to judge what the militia has done to him. The foretaste of Socialism makes <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> embodied rather than doctrinal: it depends on Ramón, Bill Chambers, equal rations, shared danger, "comrade," and the absence of ordinary English class gestures. Orwell's claim that snobbishness, money-grubbing, and fear of the boss "had simply ceased to exist" is a direct statement of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> - a temporary working model of the classless society. The passage is also the book's closest link to <a href="//01%20Books/The%20Leveller%20Revolution.html">The Leveller Revolution</a>: a popular egalitarianism that is real while it lasts but that the machinery of party and state is about to dismantle. By leaving on 25 April just before Barcelona erupts, Orwell marks the end of the period in which equality could still feel like a daily fact.   </p>
+<h3 id="chapter-viii">Chapter VIII</h3>
+<p>Summary: Orwell compares returning from the front to arriving from Mandalay at Maymyo, because Barcelona after three and a half months feels like a different climate from the dirty, crowded, singing train from Barbastro. The city has lost the revolutionary appearance he knew in December: smart suits, elegant women, cars, Popular Army officers with pistols, waiters in boiled shirts, food queues, reopened brothels, smuggled Lucky Strikes at ten pesetas, beggars near the Ramblas, and "Buenos dias" replacing "Salud." He wants a revolver, negotiates for a tiny .26 automatic, considers leaving the POUM for the International Column through a Communist friend, waits for marching boots, and watches tension rise through Roldan Cortada's funeral, CNT-UGT killings, Puigcerda, Figueras, Tarragona, the cancelled 1 May demonstration, and the struggle between CNT weapons and PSUC-controlled police. Source anchors: Mandalay; Maymyo; Popular Army officers; ten pesetas; .26 automatic; Roldan Cortada; Puigcerda; 1 May.   </p>
+<p>Analysis: Mandalay and Maymyo give Orwell a sensory way to show that Barcelona has changed before he fully explains why, and the Burma comparison is the book's direct bridge to <a href="//01%20Books/Shooting%20an%20Elephant.html">Shooting an Elephant</a>: empire teaches him how a place's atmosphere can be replaced before its inhabitants admit it. Popular Army officers with pistols, ten pesetas for smuggled cigarettes, and the .26 automatic expose <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: rear police and officers have weapons and money while front-line militia lack both, a class reassembling itself. The reassertion of "Buenos dias" over "Salud" is a <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> marker of the revolution receding, while conscription and "We need a Popular Army" stencils show <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> being rebuilt around a hierarchy the militia had briefly suspended. Roldan Cortada, Puigcerda, and 1 May place the coming street fighting inside a sequence of provocations and cancelled rituals.   </p>
+<h3 id="chapter-ix">Chapter IX</h3>
+<p>Summary: On 3 May Orwell hears of trouble at the Telephone Exchange, then sees Anarchist youths with red and black handkerchiefs firing near the Ramblas and follows an American doctor to the Hotel Falcon and the POUM Comite Local. The chapter follows the May fighting from street level and from the Poliorama roof: rifles are scarce, John McNair brings Lucky Strikes through armed patrols, barricades rise from cobblestones and sandbags, the Cafe Moka is held by Assault Guards, Kopp prevents a bomb fight by disarming himself, the Hotel Colon machine-gun dominates Plaza de Cataluna, the Telephone Exchange flies Catalan and Anarchist flags, and the POUM has only twenty-one rifles, one defective, with a few bombs. Hunger, boredom, suspicion, spy mania, sardines, oranges, the arrival of Valencian Assault Guards, the smuggling of long Mausers down trouser legs, the censorship of La Batalla, and the anti-POUM swastika cartoon lead Orwell to refuse the International Column. Source anchors: Telephone Exchange; Hotel Falcon; John McNair; Cafe Moka; Kopp; Hotel Colon; twenty-one rifles; Valencian Assault Guards.   </p>
+<p>Analysis: Telephone Exchange, Cafe Moka, Hotel Colon, and the Poliorama roof let Orwell describe the May Days as localized confusion rather than the planned POUM rising later alleged in the press - an eyewitness corrective that the path <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> treats as the core of the book. The seizure of the exchange is an act of <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: a government both starts an armed clash and, as Orwell later shows, fixes the official story. Kopp and John McNair supply evidence of individual conduct inside the chaos: one prevents unnecessary shooting, the other crosses dark streets for cigarettes. The twenty-one rifles and the Valencian Assault Guards make the balance of power concrete, explaining why the workers' defeat can be read from flags, rations, weapons, and which buildings remain barricaded - the material of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>. The censorship of La Batalla and the swastika cartoon belong under <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: even before the fighting ends, the label that will justify the purge is being stamped onto the POUM. This is Orwell's first direct glimpse of the machinery <a href="//01%20Books/Nineteen%20Eighty-Four.html">Nineteen Eighty-Four</a> later turns into the Ministry of Truth.   </p>
+<h3 id="chapter-x">Chapter X</h3>
+<p>Summary: Three days after the Barcelona fighting, Orwell returns to Huesca with his idealism damaged by newspaper abuse and the sense that the Caballero Government will fall to a Negrin government with stronger Communist influence. He still argues that Franco, Hitler, the feudal landlords, and clerico-military reaction are worse than the Popular Front, but Bob Smillie's arrest at the frontier shows how the rear is turning against POUM witnesses. Back at the right-angle salient near the captured redoubt, Orwell acts as teniente in the 29th Division, hears of Benjamin becoming captain and Kopp becoming major, patrols against better-manned Fascist trenches with tin cans on the wire, snipes from tall grass, and at five in the morning is shot through the throat; Harry Webb bandages him, comrades take his watch, revolver, torch, and knife, and he passes through Sietamo, Barbastro, Lerida, Tarragona, hospital trains, a Dutch Communist, Italian troops from Guadalajara, butter-muslin wound cages, and the cheerful diagnosis of a paralyzed vocal cord. Source anchors: Caballero Government; Bob Smillie; teniente; 29th Division; five o'clock; Harry Webb; Lerida; paralyzed vocal cord.   </p>
+<p>Analysis: The Caballero Government and Bob Smillie keep politics present even when the chapter returns to the front, showing that danger now comes from both Fascist snipers and Republican police. Teniente, 29th Division, and the deliberate denial of commissions above major keep Orwell inside the same improvised military system he has defended, while confirming <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> re-centralizing through rank and the Popular Army. The evacuation through Sietamo, Barbastro, Lerida, and Tarragona, where the wounded are jolted on broken roads and bandaged only at the end, is an institutional record of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: kindness and incompetence coexist (the militiamen giving a week's tobacco to a wounded comrade, the Dutch Communist befriending him), and shortage decides who survives. The chapter also traces how <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> degrades war itself - "every war suffers a kind of progressive degradation," because "individual liberty and a truthful press are simply not compatible with military efficiency."   </p>
+<h3 id="chapter-xi">Chapter XI</h3>
+<p>Summary: In Barcelona after the wound, Orwell finds the May fighting's aftermath in rumors, censorship, armed Valencian Assault Guards, sandbagged PSUC buildings, crammed jails, scarce bread adulterated with rice, almost no tobacco, mounted police controlling olive-oil queues, and a small-change shortage that prevents poor women from buying food. He stays at the Sanatorium Maurin near Tibidabo with Williams, Stafford Cottman, Arthur Clinton, and other wounded men, takes electrical treatment at the General Hospital, and decides with his wife to return to England because his voice is gone and the political air has become poisonous. To obtain discharge papers he travels through Sietamo, Barbastro, Monzon, and Lerida, sees Kopp carrying General Pozas's letter for an engineering appointment, gets stamped as "declared useless" by the 29th Division, returns through Spanish back streets and wine shops, and reaches the Hotel Continental only to be warned that the POUM has been suppressed, Andres Nin arrested, the Hotel Falcon turned into a prison, Kopp seized, Orwell's papers and diaries taken, and his POUM card dangerous enough to tear up. Source anchors: Sanatorium Maurin; Tibidabo; olive-oil queues; General Pozas; declared useless; Hotel Continental; Andres Nin; POUM card.   </p>
+<p>Analysis: Sanatorium Maurin and Tibidabo place bodily recovery inside a city that is itself becoming a trap, while the olive-oil queues controlled by mounted Assault Guards and the small-change shortage show how political repression and ordinary scarcity occupy the same streets - <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> and <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> converging. General Pozas and "declared useless" show the absurd collision between military legality and police power: Kopp's official mission cannot protect him, and Orwell's discharge papers may both save and incriminate him. Hotel Continental, Andres Nin, and the torn-up POUM card turn <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> and <a href="//02%20Concepts/Institutions.html">Institutions</a> into a reign of terror in which, as Orwell states, the law is "what the police chose to make it." The "Trotskyist" accusation that Orwell was "guilty" of regardless of any act, and the framing of the POUM as a Fascist plot, are the clearest statement of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> in the book and the direct seed of <a href="//01%20Books/Nineteen%20Eighty-Four.html">Nineteen Eighty-Four</a>'s treatment of the label that justifies the purge.   </p>
+<h3 id="chapter-xii">Chapter XII</h3>
+<p>Summary: Wanted by police, Orwell spends dawn waiting for cafes to open, sees Anarchist barber notices still on walls, finds POUM flags replaced by Republican flags, notices Assault Guards in POUM doorways, and meets front-line POUM militiamen sleeping near the bootblacks because their homes have been raided. He and his wife meet McNair and Cottman at the British Consulate, learn Bob Smillie has died in Valencia prison, visit Kopp in a filthy shop-floor jail, see amputees and even a twelve-year-old prisoner, try to recover Kopp's Ministry of War letter through a smart little officer and the Chief of Police's office, and endure the knowledge that the recovered letter changes nothing. The escape requires sleeping in grass, hiding in public baths and restaurants, looking bourgeois, help from the British consul, a missed Port Bou train, a friendly CNT restaurant-keeper, passports stamped before the suspect card index catches them, the frontier into France, Banyuls, Perpignan, a newspaper falsely announcing McNair's arrest, tobacco and tea with milk, and finally England's sleep among cricket posters, red buses, and blue policemen. Source anchors: bootblacks; British Consulate; Bob Smillie; Kopp's letter; Chief of Police; Port Bou; Banyuls; red buses.   </p>
+<p>Analysis: The bootblacks and Republican flags show the revolution's public signs inverted, while the British Consulate and Port Bou make escape depend on class appearance, passports, and police inefficiency rather than innocence - <a href="//02%20Concepts/Legibility.html">Legibility</a> as danger in reverse, since "to look bourgeois was the one salvation." Bob Smillie and Kopp's letter give Orwell two versions of useless justice: one dead in prison, the other documented as loyal and still trapped, both showing <a href="//02%20Concepts/Institutions.html">Institutions</a> whose formal record no longer protects anyone. The recovered letter that "changes nothing," the police who search everything but never the bed, and the card-index that misses McNair's name show an authoritarianism that is effective and incompetent at once - <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as both terrifying and makeshift. The little officer who shakes Orwell's hand outside the Chief of Police's office is Orwell's emblem of the Spanish "generosity" that survives the purge, the counterweight to the era's <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>. Banyuls and red buses close the narrative by making peaceful France and England feel morally unreal beside Spain, which is why Orwell's final warning about partisanship does not cancel his testimony but defines its limits.   </p>
+<h3 id="appendix-i">Appendix I</h3>
+<p>Summary: Appendix I explains the party struggle that Orwell had ignored when he arrived with ILP papers and joined the POUM rather than the PSUC almost by accident. It reconstructs the war from 18 July 1936: Franco's mutiny backed by aristocracy and Church, workers demanding arms, peasants seizing land, factories and transport collectivized, churches wrecked, local committees and workers' patrols formed, the CNT-FAI dominant in Catalonia, the UGT and Caballero in government, and the Generalidad partly displaced by the Central Committee of Anti-Fascist Militias. Orwell then traces the counter-revolutionary pressure: Soviet arms from Russia, Mexico's limited aid, the Communist Party's rise through the PSUC and International Brigades, foreign capital such as Barcelona Traction, the expulsion of the POUM, Negrin replacing Caballero, the dissolution of workers' patrols, seizure of the Telephone Exchange, the break-up of the militias into the Popular Army, and the Communist insistence that Spain fight for bourgeois democracy rather than workers' control. Source anchors: 18 July; CNT-FAI; Generalidad; Soviet arms; Barcelona Traction; Negrin; Telephone Exchange; Popular Army.   </p>
+<p>Analysis: 18 July, CNT-FAI, and the Generalidad supply the historical basis for what Orwell first saw in Barcelona: the workers' city was not costume but the residue of actual seizures of arms, land, transport, and police functions. Soviet arms, Barcelona Traction, Negrin, and the Popular Army explain <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> returning through ministries and Communist-aligned institutions that dismantle that residue. The appendix is also an exercise in <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a> - foreign capital, Russian arms, and the collective ownership of transport decide who governs - and in <a href="//02%20Concepts/Institutions.html">Institutions</a>, since the POUM/PSUC/CNT-FAI/UGT alignment of forces is the true map of the war. Orwell's thesis that the Communists stood "upon the extreme Right" inside the Popular Front, an "alliance of enemies" fated to end with one partner swallowing the other, is the clearest institutional argument he makes, and it parallels <a href="//01%20Books/The%20Leveller%20Revolution.html">The Leveller Revolution</a>'s account of a popular revolution consumed by the very machinery it helped build. The description of the party as a mass movement recruiting the middle class and disciplining loyalty belongs to the psychology of <a href="//01%20Books/The%20True%20Believer.html">The True Believer</a>. Throughout, the claim that "the war and the revolution are inseparable" is shown to be the stake the Communist policy of efficiency sacrificed.   </p>
+<h3 id="appendix-ii">Appendix II</h3>
+<p>Summary: Appendix II returns to the Barcelona May Days to separate Orwell's eyewitness account from later party stories. He describes the immediate cause as Salas sending three lorry-loads of Assault Guards to seize the CNT-run Telephone Exchange on 3 May 1937, amid orders to surrender weapons, armed police expansion, resentment over wealth and poverty, and a belief that the PSUC and Assault Guards were attacking workers' buildings. The fighting runs through barricades until 6-7 May, with CNT-FAI-POUM forces in working-class districts, police and PSUC in central positions, six thousand Valencian Assault Guards arriving, about four hundred killed and a thousand wounded officially reported, and the episode used to control Catalonia, break the militias, and suppress the POUM. Orwell then dissects Communist and pro-Communist versions in the Daily Worker, Inprecor, Frente Rojo, John Langdon-Davies, the Spanish Embassy in Paris, Frank Pitcairn, and the News Chronicle, rejecting tales of POUM tanks, 75-mm guns in Plaza de Espana, monarchist flags, Friends of Durruti as POUM-controlled, and a Fascist plot tied to Franco, Hitler, Berlin, invisible ink, or 200 confessions; he cites Maxton, McGovern, Prieto, Irujo, Zugazagoitia, Ortega y Gasset, Prat Garcia, Andres Nin, Joaquin Maurin, Gorkin, Trotsky, the ILP, SAP, John Strachey, and Oswald Mosley to define and challenge the charge of "Trotskyist." Source anchors: Salas; 3 May 1937; six thousand Assault Guards; Daily Worker; Inprecor; 75-mm guns; Maxton; Trotskyist.   </p>
+<p>Analysis: Salas, 3 May 1937, and six thousand Assault Guards give Appendix II its factual spine: Orwell treats the May Days as an armed clash produced by policing decisions and accumulated fear, not as a scripted coup. The Daily Worker's self-contradictory accounts, Inprecor's shifting "50 POUM members," and the fabricated tanks and 75-mm guns on Plaza de Espana show how false detail manufactures a public record for readers who do not know Barcelona's streets or the POUM's actual arms - the central case of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> in the vault. Orwell's own method, acknowledging that the "necessary records do not exist" and that he saw only his neighbourhood, is exactly the <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> standard: limited eyewitness evidence that yet contradicts the confident lie. The "Trotskyist" label, defined in three senses so that a party can be slandered without being guilty in any defined one, makes <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> coercive - a word that prevents argument, justifies secret-police action, and splits the anti-Fascists who still need to fight Franco. The fabrication of a plot followed by "200 confessions" that "have never been heard of again" is the direct anticipation of <a href="//01%20Books/Nineteen%20Eighty-Four.html">Nineteen Eighty-Four</a>'s Newspeak and doublethink, and its institutional counterpart is <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> managing a catastrophe through narrative.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>115 days</strong>: Orwell's exact time in the front line before his return to Barcelona (Chapter VII; "I had been a hundred and fifteen days in the line").   </li>
+<li><strong>The foretaste of Socialism</strong>: "the prevailing mental atmosphere was that of Socialism"; snobbishness, money-grubbing, and fear of the boss "had simply ceased to exist" (Chapter VII).   </li>
+<li><strong>The real weapon was the megaphone</strong>: "on this front and at this period of the war the real weapon was not the rifle but the megaphone" (Chapter IV).   </li>
+<li><strong>Firewood first</strong>: "firewood, food, tobacco, candles and the enemy. In winter on the Saragossa front they were important in that order, with the enemy a bad last" (Chapter III).   </li>
+<li><strong>The 1896 Mauser</strong> and fifty rounds; four trench-mortars with fifteen rounds each, never fired; one machine-gun per fifty men; the "FAI bomb" said to be "impartial" (Chapters II-III).   </li>
+<li><strong>Twenty-one rifles</strong> in the POUM Executive Building during the May Days, "one of them defective" (Chapter IX).   </li>
+<li><strong>6-7 May</strong> and official figures of about <strong>400 killed and 1000 wounded</strong> for the Barcelona fighting (Appendix II).   </li>
+<li><strong>3 May 1937</strong>: Salas sent "three lorry-loads of armed Assault Guards" to seize the CNT-run Telephone Exchange.   </li>
+<li><strong>15-16 June</strong>: the POUM suppressed, Nin arrested, Hotel Falcon converted into a prison (Chapter XI).   </li>
+<li><strong>"To look bourgeois was the one salvation"</strong> - the reversal of the opening's proletarian respectability (Chapter XII).   </li>
+<li><strong>The paralyzed vocal cord</strong> - a wound through the throat that the doctors said would never recover the voice, and which did; Orwell's five-months-after note that his forefinger was still numb (Chapter X).   </li>
+<li><strong>The telescope</strong>: "an enormous telescope... of at least sixty or seventy magnifications" captured in the raid and then abandoned; "The thought of losing that beautiful bit of loot worries me even now" (Chapter VI).   </li>
+<li><strong>Companys</strong>: "the Catalan President... declared laughingly a few days earlier that the Anarchists would put up with anything" (Appendix II).   </li>
+<li><strong>The epigraph</strong>: Proverbs xxvi. 4-5, the two "answer not a fool" verses Orwell prints before the narrative - a warning about the difficulty of replying to propagandists.   </li>
+<li><strong>The appendix placement</strong>: Appendix I "Formerly Chapter V of First Edition" and Appendix II "Formerly Chapter XI of First Edition" - the division structure of this Penguin edition differs from the 1938 First Edition (which had numbered chapters in different positions).   </li>
+<li><strong>The errata self-corrections</strong>: Orwell's own listed Errata (the republican flag, the 75% brothels claim, "Civil" vs "Assault" Guards) are printed at the end, reinforcing his insistence that his mistakes be visible.   </li>
+<li><strong>"I hope they found some butter for the Duchess of Atholl"</strong>: Orwell's sardonic reply to the Duchess's claim that Barcelona hotels were "extremely comfortable," which he quotes in Chapter XI as proof that English travellers "do not really believe in the existence of anything outside the smart hotels."   </li>
+<li><strong>Mañana</strong> as the "one Spanish word that no foreigner can avoid learning" (Chapter I), and the traintimes that depart too early or too late as the running joke of Spanish war logistics.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Burmese Days.html">burmese days</a></li>
+	<li><a class="backlink" href="//01 Books/Days of Rage.html">days of rage</a></li>
+	<li><a class="backlink" href="//01 Books/A Fable.html">a fable</a></li>
+	<li><a class="backlink" href="//01 Books/Shooting an Elephant.html">shooting an elephant</a></li>
+	<li><a class="backlink" href="//01 Books/Down and Out in Paris and London.html">down and out in paris and london</a></li>
+	<li><a class="backlink" href="//02 Concepts/War, Crisis, and Collapse.html">war, crisis, and collapse</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/homage-to-catalonia/index.html">homage-to-catalonia</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A200535579999014934464568028238307276093{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D200535579999014934464568028238307276093{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B200535579999014934464568028238307276093{level}" level="{level}" note_temp_id="200535579999014934464568028238307276093" onclick="window.ObsHtmlGraph.run(this, '200535579999014934464568028238307276093', 'homage to catalonia');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C200535579999014934464568028238307276093{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

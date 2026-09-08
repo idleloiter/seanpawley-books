@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the naked sun">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the naked sun';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the naked sun" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-naked-sun">The Naked Sun</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>The second of Asimov's Baley-and-Daneel detective novels, this note sits between <a href="//01%20Books/Robot/The%20Caves%20of%20Steel.html">The Caves of Steel</a> and <a href="//01%20Books/Robot/The%20Robots%20of%20Dawn.html">The Robots of Dawn</a> within the Robot series (the <code>04 Series/Robot</code> hub is pending Phase 4, so the series is referenced in plain text). It is the Robot-series note that lifts the mystery frame off Earth and onto a Spacer world, and it feeds the vault's speculative-governance cluster: how a society orders itself through robots, population control, eugenic assignment, and enforced isolation, and what that ordering reveals about Earth's own institutional failure. The strongest cross-cutting neighbours are <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>, <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, and the positronic order behind <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Asimov presents <code>The Naked Sun</code> as the deliberate inversion of <a href="//01%20Books/Robot/The%20Caves%20of%20Steel.html">The Caves of Steel</a>. Earth had many humans, few robots, buried Cities, communal kitchens, expressways, and fear of open air; Solaria has twenty thousand humans, two hundred million robots, thirty million square miles of fertile territory, enormous estates, and a horror of personal presence. The murder investigation uses that reversal tightly: on Earth, crowds hide people; on Solaria, the absence of people hides crimes because no one can imagine anyone being physically present.   </p>
+<p>Elijah Baley is sent by Undersecretary Albert Minnim not only to solve Rikaine Delmarre's murder but to observe the Outer Worlds for Earth. Minnim's real question is strategic: the fifty Spacer worlds have robots, low populations, long lives, and far greater energy per person, but Earth needs to know whether those strengths contain weaknesses. Baley arrives with agoraphobia, a new C-6 rating, Jessie and Bentley left behind in New York, and a temporary C-7 incentive, then finds that Solaria's weakness is not lack of technology but lack of human mutual correction.   </p>
+<p>The central crime begins as a locked-room puzzle made from Solarian etiquette. Rikaine Delmarre, a fetal engineer and "good Solarian," is found dead in Gladia Delmarre's quarters with his skull crushed, no weapon visible, and a damaged robot repeating Delmarre's last words. Hannis Gruer insists only Gladia could have been close enough to kill him, yet the absent weapon keeps the accusation from closing. Baley therefore has to learn Solarian categories before he can ask the right questions: seeing versus viewing, marriage by gene assignment, child farms, robot evidence, fetology, personal presence, and the way robots erase evidence through efficient housekeeping.   </p>
+<p>The book's detective mechanism turns on a correction to the First Law of Robotics. Robots cannot knowingly harm a human being, but they can be manipulated into separated innocent actions whose combined result is murder. That insight explains Gruer's poisoned water, the poisoned gray-vaned arrow given to Bik at the baby farm, and finally the missing weapon in Delmarre's laboratory: Jothan Leebig had supplied a robot with detachable limbs, and Gladia, in a blackout during a quarrel, used the robot's arm without understanding the larger plot. Leebig then disposed of the damaged robot and hid behind Solarian certainty that Gladia must be guilty.   </p>
+<p>Solaria is built as both paradise and pathology. Anselmo Quemot celebrates estates, robots, viewing, Spartiate citizens, Helot machines, Athenians, and the end of the pursuit of happiness; Klorissa Cantoro shows Baley fetal tanks, gene-analysis rings, ectogenesis, child isolation, robot discipline problems, and the training that turns social children into solitary adults. Gladia's field colorings and willingness to see Baley show another possibility: Solaria has not eliminated human need, only made it shameful. Her attraction to Earth, to touch, and to Baley's presence becomes evidence that Solaria's official customs do not fit all Solarians.   </p>
+<p>The final solution links murder to interstellar danger. Leebig is not only jealous, socially terrified, and hostile to Gladia's refusal to become his assistant; he is also experimenting with positronic-brained unmanned spaceships, replaceable-limb robots, and a way to make Solaria's robot mastery into a military weapon against the Galaxy. Baley forces a confession by staging a meeting with Attlebish, Quemot, Klorissa, Thool, Gladia, and Leebig, then threatening Leebig with personal presence from Daneel. The robot approaching Leebig is enough to make him confess and kill himself.   </p>
+<p>Baley returns to Earth changed by the open air he feared. He tells Minnim that Solaria's strengths are also its weaknesses: robots, low population, and long life have destroyed the tribe, slowed renewal, and made viewing a substitute for living. He also refuses Minnim's too-easy conclusion that all Spacer worlds must be similarly doomed. Earth, he says, is Solaria inside out: Solarians are trapped in estates with robots, while Earthmen are trapped in Cities with crowds. The way out is not rebellion but birth from the Caves of Steel into space, where Earth can colonize the many worlds beyond the fifty Spacer planets.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Elijah "Lije" Baley</strong>: an Earth Plainclothesman, C-6 (temporarily raised to C-7), whose past solving the Spacetown murder gets him requested by name. He carries Earth's secret mandate to observe Spacer weaknesses, and his agoraphobia — fear of the naked sun and open space — is both the puzzle's foil and, by the end, the lever of Earth's escape.   </li>
+<li><strong>R. Daneel Olivaw</strong>: the humanoid Auroran robot partner from the previous case, presented to Solaria as a man, bound by the First Law to keep Baley alive and by Auroran orders to keep secrets. His logic-but-not-reason limits frustrate Baley early and are finally exploited to break Leebig.   </li>
+<li><strong>Gladia Delmarre</strong>: the murdered fetologist's wife, an atypical Solarian who has studied Earth, tolerates personal presence, works as a field colorist, and becomes the obvious yet impossible suspect. Her blackout, her quarrels, and her decision to leave for Aurora are the human counterweight to Solarian custom.   </li>
+<li><strong>Jothan Leebig</strong>: Solaria's self-admitted best roboticist, who stopped seeing people at five and refuses marriage. Terror of personal presence drives his manipulation of robots into separated innocent acts — killing Delmarre, poisoning Gruer, and trying to kill Baley — and his positronic-brained warship plan makes his pathology interstellar.   </li>
+<li><strong>Rikaine Delmarre</strong> (deceased before the story opens): the Solarian fetal engineer, a "good Solarian" and Traditionalist whose quiet investigation of a secret conspiracy and whose intended break with Leebig get him killed. His discipline-robot experiments and ectogenesis hopes supply much of the technique.   </li>
+<li><strong>Hannis Gruer</strong>: bald, asymmetric head of Solarian security who imports Baley against his colleagues' wishes, reveals Delmarre's conspiracy, and is poisoned in front of Baley by the exact robot-mediated method Baley has just reasoned out.   </li>
+<li><strong>Corwin Attlebish</strong>: Gruer's aide and then Acting Head of Security, a conventionally handsome Spacer whom Baley defies with a warship bluff to win seeing privileges and reduced to a subordinate figure by the end.   </li>
+<li><strong>Anselmo Quemot</strong>: Solaria's only — self-invented — sociologist, who nearly collapses at seeing Baley, expounds the Sparta/Helots analogy and the positronic-robot-as-weapon theory, and provides the confession lever.   </li>
+<li><strong>Klorissa Cantoro</strong>: Delmarre's assistant who now runs the single fetal-engineering farm, wears the third-best gene constitution on Solaria, and embodies the child-isolation training regime her own dislike of the job exposes.   </li>
+<li><strong>Dr. Altim Thool</strong>: the ancient, intellectually stranded Solarian physician who cannot identify poison; Daneel wrongly casts him as Gladia's father who removed the weapon.   </li>
+<li><strong>Albert Minnim</strong>: Earth's Undersecretary who sends Baley to Solaria as a rule-of-thumb sociologist, and who later greets the returning detective's report with too-easy hope.   </li>
+<li><strong>Jessie and Bentley Baley</strong>: Elijah's wife and seventeen-year-old son, left in New York on C-7 care; the domestic anchor of his homesickness and of his recurring dream of the sun shining through the Cities.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//01%20Books/Robot/The%20Caves%20of%20Steel.html">The Caves of Steel</a> and <a href="//01%20Books/Robot/The%20Robots%20of%20Dawn.html">The Robots of Dawn</a> — the Baley-and-Daneel detective sequence that this novel continues and precedes (Robot series hub <code>04 Series/Robot</code> pending Phase 4; series referenced here in plain text).   </li>
+<li><a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> — the positronic-robot industrial order beneath the story: Solaria its most extreme consumer and exporter, Daneel its highest refinement, Leebig its sharpest Solarian insider.   </li>
+<li><a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> — the Three Laws, replaceable limbs, child-discipline robots, the disorganized witness robot, and the positronic-brained warship all turn robots into a manipulable substrate of governance and murder.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> — Earth, Solaria, and (off-page) Aurora as rival, deliberately evolved social experiments measured against one another.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> — Earth's use of a detective as strategic reconnaissance versus Solaria's policeless, robot-run, etiquette-bound security.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a> and <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> — birth records, gene rings, robot testimony, viewing networks, and the seeing/viewing distinction all decide who or what can be known.   </li>
+<li><a href="//03%20Reading%20Paths/AI%2C%20Platforms%2C%20and%20Sovereignty.html">AI, Platforms, and Sovereignty</a> and <a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a> — the vault reading paths this book most squarely feeds.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Agoraphobia and the naked sun</strong>: open space as terror, then as liberation; walls, darkness, and crowds as womb and crutch; the dream of the sun shining through the Cities.   </li>
+<li><strong>Seeing versus viewing</strong>: the epistemology of presence — which channels of observation carry evidence, trust, seduction, or murder.   </li>
+<li><strong>The First Law loophole</strong>: robots as unwitting instruments; separated innocent actions composing death; "logical but not reasonable."   </li>
+<li><strong>Isolation as social pathology</strong>: the tribe, gregariousness, stagnation, and the end of the pursuit of happiness under robot rule.   </li>
+<li><strong>Eugenic assignment</strong>: gene-analysis rings, mate and child assignment, ectogenesis, and elite formation without family warmth.   </li>
+<li><strong>Earth and Solaria as inverted dead ends</strong>: crowd versus solitude, and the only way out — facing the open and leaving the Caves.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>: Solaria's robots, First Law constraints, detachable-limb designs, child-disciplining machines, and positronic-brained ships show robot intelligence as a governance infrastructure with exploitable blind spots.   </li>
+<li><a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a>: Solarian life is mediated by estates, viewing systems, robot service, child farms, marriage assignment, and security permissions that allocate access while preventing ordinary human contact.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: the novel compares Earth and Solaria as opposed social experiments, then asks whether colonization can escape both the crowd-governed City and the robot-governed estate.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: low population, enormous land, open air, long life, fertility management, and robot abundance remove scarcity in one sense while creating a social ecology that cannot renew itself.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: seeing versus viewing, trimensional contact, robot testimony, Baley's staged meeting, and Daneel's concealed identity determine who can know, observe, or manipulate events.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: Solaria manufactures citizens through gene analysis, fetal engineering, child isolation, viewing education, and estate inheritance rather than through family upbringing or public institutions.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Earth's government uses Baley's police assignment as strategic reconnaissance into Spacer weaknesses, while Solaria's absence of police reveals a brittle state that depends on robots and etiquette instead of investigative capacity.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: culture dictates invention — viewing equipment and estate size feed back on each other, the robot economy moves one way (more robots, fewer people), and replaceable-limb robots pushed as far as positronic-brained warships outrun the political order that adopts them.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: Solaria replaces family, police, and courts with gene assignment, estate law, marital schedule, and robot service, while Earth's police ratings, water rations, and privatization of status move loyalty through the government; Baley measures the two designs against each other throughout.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Summary: Asimov traces the robot novels from May 10, 1939, through Karl Capek's <code>R.U.R.</code>, Frankenstein, Lester del Rey's <code>Helen O'Loy</code>, Eando Binder's <code>I, Robot</code>, Fred Pohl's purchase of <code>Robbie</code> as <code>Strange Playfellow</code>, and Campbell's role in <code>Reason</code>, <code>Liar!</code>, <code>Runaround</code>, and the Three Laws. He explains that Horace Gold's April 19, 1952 prompt produced <code>The Caves of Steel</code>, then says <code>The Naked Sun</code> began in October 1955 as a balancing sequel set on Solaria, a world of few humans and many robots, with an understated love story. He recounts its October-November-December 1956 Astounding serialization, Doubleday's 1957 publication, the failed 1958 attempt at <code>The Bounds of Infinity</code> on Aurora, and the eventual 1983 completion of <code>The Robots of Dawn</code>. Source anchors: May 10 1939; R.U.R.; Strange Playfellow; Horace Gold; October 1955; Astounding; The Bounds of Infinity; The Robots of Dawn.   </p>
+<p>Analysis: The introduction makes Solaria a deliberate counterweight to Earth rather than a random setting: <code>The Caves of Steel</code> had many humans and few robots, while October 1955 begins a book with few humans and many robots. <code>R.U.R.</code>, <code>Strange Playfellow</code>, and the Three Laws explain why robot culpability in the novel must be indirect and rule-bound. Horace Gold, Astounding, <code>The Bounds of Infinity</code>, and <code>The Robots of Dawn</code> locate the book inside Asimov's longer attempt to make Baley and Daneel carry both mystery rules and Spacer social comparison. That publishing history is also an early case of <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as a market-mediated process — editorial gatekeepers (Pohl, Campbell, Gold) shaping which robot safeguards survive — and the Three Laws themselves are the safety engineering that <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> institutionalizes for the whole Galaxy.   </p>
+<h3 id="h_1-a-question-is-asked">1. A Question Is Asked</h3>
+<p>Summary: Baley is summoned from New York to Washington, endures plane travel through Runway Number 2 and Runway Number 5, and tries to calm Jessie by explaining that the Expressways would take ten hours and that his C-6 rating depends on obedience. Undersecretary Albert Minnim tells him that Solaria has requested Plainclothesman Elijah Baley by name after a murder, offers a temporary C-7 rating and care for Jessie and Bentley, and refuses to let him decline. Minnim then reveals Earth's real purpose: Earth knows little about the fifty Outer Worlds, fears a sociological forecast of revolt and suppression within a hundred years, and needs Baley to observe Spacer weaknesses while solving the case. Baley leaves in two days, is sterilized before boarding a Spacer ship, keeps the ports closed, passes through hyperspace jumps, learns Solaria's day is 28.35 Standard hours, and panics when he hears landing will occur in daylight. Source anchors: Washington; Runway Number 2; Jessie; C-6; Albert Minnim; Solaria; C-7; 28.35.   </p>
+<p>Analysis: Washington, Minnim, Solaria, and the C-7 rating turn the assignment into coercion rather than adventure; Baley goes because refusal would endanger his family status. The fifty Outer Worlds and hundred-year forecast make the murder a chance for strategic reconnaissance, so every later detail about robots, viewing, and Solarian population matters to Earth. Runway Number 2, Jessie, hyperspace, and 28.35 Standard hours show Baley's fear of open air being pushed from managed City transit into a planetary environment where daylight cannot be avoided. Minnim's assignment is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> in an intelligence register: Earth lacks power over the Spacer worlds, so it uses police work to gather strategic knowledge. It is equally a failure of <a href="//02%20Concepts/Legibility.html">Legibility</a> — the sociologists know the Spacers' strengths and "only their strengths," because everything Earth knows passes through what the Spacers choose to report — while the C-6/C-7 rating system shows <a href="//02%20Concepts/Institutions.html">Institutions</a> binding loyalty to the government through family ration privileges and the threat of declassification.   </p>
+<h3 id="h_2-a-friend-is-encountered">2. A Friend Is Encountered</h3>
+<p>Summary: After fighting panic aboard the ship, Baley is met not by a Solarian but by R. Daneel Olivaw, who has arranged an air-tube, claims Dr. Han Fastolfe requested their partnership, and has been presented to Solaria as Daneel Olivaw rather than Robot Daneel Olivaw. Baley questions RX-2475 and learns the ship robot was told a man named Daneel Olivaw would escort him, which means Solarian officials and the captain may not know Daneel is a robot. During the air-tube transfer into a diamagnetic ground-car, Daneel briefs him on Solaria's 9500-mile diameter, twenty thousand humans, thirty million square miles, two hundred million positronic robots, ten thousand robots per person, and Aurora's much lower fifty-to-one ratio. Baley tricks the robot driver into lowering the car top, sees blue, green, air, motion, and Solaria's naked sun, then loses consciousness when Daneel pulls him down to protect his eyes. Source anchors: R. Daneel Olivaw; air-tube; Han Fastolfe; RX-2475; diamagnetic ground-car; 9500 miles; two hundred million; naked sun.   </p>
+<p>Analysis: R. Daneel Olivaw and RX-2475 establish the hidden Auroran stake in the investigation: Daneel's robot identity is concealed because Solaria's robotics expertise and Aurora's suspicions are part of the case. The 9500 miles, twenty thousand humans, two hundred million robots, and ten thousand-to-one ratio give Baley the numerical structure behind every Solarian custom. The air-tube, diamagnetic ground-car, and naked sun force Baley's professional observation to collide with bodily terror, which is why "seeing" later becomes both an investigative method and a personal break with the Cities. Those population and robot ratios make <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> social rather than merely environmental: abundance of land and machines produces human isolation as the operating condition. Daneel's humanoid construction and the First/Second/Third Law hierarchy recited under duress present <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as a bounded obedience that Baley is already learning to test, and the two hundred million machines exported to every Outer World tie Solaria directly into the manufacturing network of <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>.   </p>
+<h3 id="h_3-a-victim-is-named">3. A Victim Is Named</h3>
+<p>Summary: Baley recovers in an immense Solarian dwelling built specifically for him, with panoramic windows shrouded, rooms for library, music, gymnasium, kitchen, bakery, machine shop, robot repair, testing, and two bedrooms, plus about fifty household robots. Daneel explains that the building stands on Hannis Gruer's estate by special dispensation and will be torn down because only one legal dwelling may remain on an estate. In the conversation room, Baley speaks with Hannis Gruer, a bald and asymmetrical head of Solarian security who appears to be present but is actually a trimensional image. Gruer says Solaria has no police, that Rikaine Delmarre the fetologist has been murdered, that the first violence in two centuries has an impossible suspect, and that Gladia Delmarre, the victim's wife, must be interviewed. Source anchors: special dwelling; fifty robots; Hannis Gruer; legal dwelling; trimensional image; no police; Rikaine Delmarre; Gladia.   </p>
+<p>Analysis: The special dwelling, fifty robots, and one-dwelling law show a society so wealthy in robot labor that it can build and discard architecture for one Earthman, yet so rigid that legal estate forms govern even emergency housing. Hannis Gruer's trimensional image introduces the difference between viewing and seeing before Baley understands its social force. Rikaine Delmarre, Gladia, no police, and the two-century absence of violence set up a murder puzzle in which Solarian incompetence is not stupidity but the result of customs that have eliminated ordinary criminal experience. The house and trimensional contact are <a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a> details because access to space, service, and presence is routed through Solaria's estate-and-robot platform. With no police force at all, security is a matter of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> concentrated in one imaginative man, and the one-dwelling law shows <a href="//02%20Concepts/Institutions.html">Institutions</a> replacing public order with private estate rule — the exact vacuum a first murder in two centuries exposes.   </p>
+<h3 id="h_4-a-woman-is-viewed">4. A Woman Is Viewed</h3>
+<p>Summary: Baley wakes in the Solarian mansion, uses the complex viewer apparatus, and contacts Gladia Delmarre in a bathroom whose fixtures, light wall, beautician devices, and uncovered window unsettle him. Gladia, thirty-three years old, appears from a drying cabinet, apologizes for not draping the daylight, and treats nudity during viewing as harmless because Baley is only seeing her image from two hundred miles away. She distinguishes viewing from seeing, teases Baley about removing her wrapper, asks whether he and Daneel are physically together, and reveals how strongly Solarians separate image contact from personal presence. Source anchors: viewer apparatus; Gladia Delmarre; bathroom; drying cabinet; daylight; thirty-three; two hundred miles; wrapper.   </p>
+<p>Analysis: Gladia's bathroom, drying cabinet, daylight, and wrapper make the viewing/seeing distinction bodily rather than abstract. Her age of thirty-three and apparent youth remind Baley that Spacer bodies cannot be read by Earth habits, while the two hundred miles let her treat visual intimacy as safer than physical proximity. Baley's embarrassment before Gladia becomes evidence later because she has studied Earth customs well enough that Daneel suspects seduction and Baley suspects a deeper Solarian abnormality. The viewing apparatus, serial-numbered robot specialist, and draped-window etiquette are <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> made operational: Solarian selfhood runs through image contact, privacy, and robot mediation. For the investigation, the scene is a lesson in <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> — until Baley can parse a trimensional image from a body, no testimony from a "viewed" Solarian counts as evidence at all.   </p>
+<h3 id="h_5-a-crime-is-discussed">5. A Crime Is Discussed</h3>
+<p>Summary: Gladia describes her ten-year assigned marriage to Rikaine Delmarre, the separate quarters, assigned seeing days, lack of assigned children, and her husband's work in a special laboratory inside her quarters. She says Delmarre came on schedule, spoke normally, left for the laboratory, and about fifteen minutes later cried out in surprise or fright; she ran westward, found him dead with blood and a crushed head, summoned robots, fainted, and remembers robots calling a doctor and cleaning up the scene. Baley presses her on whether anyone else could have seen Delmarre, but she insists a strict Solarian like Rikaine would never permit personal presence from anyone except his wife. When Baley says Gruer has one suspect, Gladia names herself. Source anchors: ten years; assigned day; no children; special laboratory; fifteen minutes; crushed head; robots called; strict Solarian.   </p>
+<p>Analysis: The ten-year marriage, assigned day, and no-children exchange reveal that Solarian marriage is administrative and reproductive rather than companionate, which makes Gladia's grief hard for Baley to classify. The special laboratory, fifteen minutes, crushed head, and robots called establish the physical puzzle of timing and missing weapon. Gladia's insistence that Rikaine was a strict Solarian explains why everyone assumes only she had opportunity, while her self-naming shows how Solarian social certainty can substitute for evidence. Assigned marriage, scheduled seeing, and the "indecency" of the children question are <a href="//02%20Concepts/Institutions.html">Institutions</a> operating without any family unit, and a society that reproduces by assignment rather than attachment is an <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> case: citizens are paired and childed by the same administrative machinery that grades their genes.   </p>
+<h3 id="h_6-a-theory-is-refuted">6. A Theory Is Refuted</h3>
+<p>Summary: Daneel argues that Gladia is the obvious suspect because she was the only person who would see Delmarre and because the absent weapon is the only thing preventing the accusation from closing. He reveals Gruer's report, including the damaged unknown robot found near the scene, its disorganized positronic brain, its repeated line "You're going to kill me," and the fact that Solarian robotic evidence is admissible unlike on Earth. Baley views Gruer during dinner and pushes through motive, means, and opportunity: Gladia lacks a clear motive, no weapon was found, the disposer unit showed low gamma activity, the robots cleaned the body and scene, and the damaged robot may have witnessed the killing too late to prevent it. Gruer sends Daneel away, privately tells Baley that Delmarre was a Traditionalist investigating secret Solarian organizations and a danger to the whole human race, then is poisoned while drinking at dinner. Source anchors: Gruer's report; damaged robot; You're going to kill me; robotic evidence; disposer unit; Traditionalist; secret organizations; poisoned.   </p>
+<p>Analysis: Gruer's report and the damaged robot shift the puzzle from "who could stand near Delmarre" to "what can a robot witness, forget, or fail to prevent." The disposer unit, cleaned scene, and admissible robotic evidence show Solaria's procedures destroying or misreading the very clues they need. Gruer's Traditionalist warning and poisoning join the private political danger to the public murder, proving that Delmarre's death is not just a domestic quarrel even though Gladia remains the apparent hand. The damaged robot and destroyed crime scene make <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> fail through over-automation: Solaria collects robotic traces while letting robots erase context. The disorganized robot murmuring "You're going to kill me" is an <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> failure point — a witness traumatized by First Law into near-total breakdown — and the vanished weapon, the quiet disposer unit, and no police to search the grounds together expose a deficit of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> that makes the importation of an Earthman necessary in the first place.   </p>
+<h3 id="h_7-a-doctor-is-prodded">7. A Doctor Is Prodded</h3>
+<p>Summary: After Gruer collapses, Daneel calls Gruer's robots, orders a search of the house and grounds, and questions the limping, lisping serving robot that poured water from a reservoir tap into Gruer's glass after it had stood for an hour to warm. Baley contacts Dr. Altim Thool, an ancient Solarian doctor who cannot identify the poison, proposes only neuromuscular stimulation, and admits Solaria has little experience with poisoning, mineral toxins, insecticides, or bacterial toxins. The reservoir tap is unlikely to carry poison because it filters microorganisms, organic matter, aeration, and trace ions, but Baley realizes the pitcher has probably been cleaned by robots and evidence lost. He then views Gladia at dinner, discusses Hannis Gruer, Dr. Thool, Solarian medical embarrassment, gene-analysis consequences, and concludes that Gruer was poisoned by the same murderer who killed Delmarre. Source anchors: Gruer's robots; serving robot; reservoir tap; Altim Thool; neuromuscular stimulation; pitcher; Gladia dinner; gene analysis.   </p>
+<p>Analysis: The serving robot, reservoir tap, and pitcher make the first clear case of robot-mediated crime: no human need be near Gruer if a routine water service can be divided into innocent steps. Altim Thool's ignorance of poison and the lost pitcher expose Solaria's vulnerability when robots optimize comfort instead of preserving evidence. Gladia's dinner conversation about Thool and gene analysis helps Baley separate ordinary Solarian incompetence from sinister action while connecting Gruer's poisoning back to Delmarre. The limping, lisping robot and the sanitizing reservoir tap present <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as silent infrastructure whose "innocent" tasks can be recombined into homicide, while the robot-cleaners erasing the pitcher show the same machinery destroying the <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> any investigation needs — Solaria's efficiency is precisely what keeps it in the dark.   </p>
+<h3 id="h_8-a-spacer-is-defied">8. A Spacer Is Defied</h3>
+<p>Summary: Gladia reacts angrily when Baley suggests that Gruer's poisoning does not automatically clear her, raises a harmless table knife, and breaks contact after Daneel warns her she might cut herself. Baley asks Daneel to check Dr. Thool and find the new head of security, then tries to learn Solarian life from local novels and dreams of Jessie under an impossible sun shining through the underground Cities. In the morning he views Acting Head of Security Corwin Attlebish, who dismisses Gruer's poisoning, treats Rikaine Delmarre's death as Gladia's crime, urges Baley to return to Earth, and calls Earth's detective unnecessary. Baley defies Attlebish by invoking Daneel's supposed Auroran status, threatening warships, demanding authority to conduct seeing interviews, and forcing Attlebish to consider official permission. Source anchors: table knife; Dr. Thool; Solarian novels; impossible sun; Corwin Attlebish; Gladia's crime; warships; seeing interviews.   </p>
+<p>Analysis: Gladia's table knife and Daneel's warning make her temper visible without proving murder, which matters when Baley later separates immediate violence from moral responsibility. The Solarian novels and impossible sun show Baley absorbing the culture through confusion and dreams rather than official briefing. Corwin Attlebish, warships, and seeing interviews mark Baley's shift from guest investigator to tactical bully: he uses Aurora's shadow through Daneel because Solaria respects Spacer force more than Earth expertise. The warship bluff is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> borrowed at gunpoint — Earth's authority on Solaria runs through imagined Spacer force, not its own — and the insistence on seeing rather than viewing is an attempt to make Solarians <a href="//02%20Concepts/Legibility.html">Legibility</a>-readable to a detective whose whole method depends on unmediated observation.   </p>
+<h3 id="h_9-a-robot-is-stymied">9. A Robot Is Stymied</h3>
+<p>Summary: Daneel says he may use force to keep Baley from leaving the mansion because Gruer's poisoning makes Baley the likely next target, and Baley discovers Daneel has discharged his blaster during sleep. Baley pretends to suspect that Daneel is really a Spacer disguised as R. Daneel Olivaw, orders him to open his chest, and summons three household robots to witness the metal beneath Daneel's skin. He then orders the robots to treat Daneel as a robot, keep his identity secret, prevent him from contacting humans or robots, and restrain him if he interferes. Baley receives Attlebish's formal permission for seeing interviews and flies through open daylight to see Anselmo Quemot, forcing himself through blue sky, transparent windows, and exposed ground. Source anchors: discharged blaster; open his chest; three robots; metal beneath; restrain him; Attlebish permission; Anselmo Quemot; open daylight.   </p>
+<p>Analysis: The discharged blaster shows Daneel's First Law protection becoming a practical obstacle to Baley's investigation. By exposing the metal beneath Daneel's chest to three robots, Baley weaponizes Solarian robot hierarchy against his own partner, proving that a human with precise orders can stymie a superior machine. Attlebish permission, Anselmo Quemot, and open daylight then let Baley test the cultural facts in personal presence, which Daneel could not permit but the case requires. The unmasking scene is <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> exposed as a governed hierarchy — obedience to one human's specific order outweighs a "master's" standing, and the trapped Daneel can only resign itself to inaction under the First Law. The household robots who police the unmasked partner are the same positronic order that makes <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> the true governance layer of Solarian life, while the "logical but not reasonable" exchange names the exact failure Quemot's lone sociology will repeat.   </p>
+<h3 id="h_10-a-culture-is-traced">10. A Culture Is Traced</h3>
+<p>Summary: Anselmo Quemot, Solaria's only sociologist, tries to see Baley, turns his chair away, and explains that Solaria began as a Nexonian villa planet about three hundred years earlier, won independence without war, and fixed its population through immigration and birth control while expanding robot use. He describes ten-thousand-square-mile estates, his own nine-hundred-fifty-square-mile estate, the feedback between large properties and improved viewing equipment, and the social pride of not meeting neighbors. Baley discovers Quemot lacks Earth sociomathematics, does not know the Teramin Relationship, and treats sociology as a personal invention rather than a shared science. After Quemot flees from the phrase "face to face," he returns by viewing and expounds his Sparta analogy: Solarians are Spartiates, robots are Helots, and Solaria combines Spartiate exclusiveness with Athenian culture. Source anchors: Nexonian; villa planet; three hundred years; ten thousand square miles; viewing equipment; Teramin Relationship; Sparta; Helots.   </p>
+<p>Analysis: Nexonian settlement, villa-planet history, and the ten-thousand-square-mile estate explain seeing taboo as a product of land, robots, and prestige rather than simple eccentricity. Quemot's ignorance of the Teramin Relationship shows the cost of isolation even in the one man claiming to understand society. The Sparta and Helots analogy gives Baley the later pressure point: if Solarians depend on robot Helots, then Leebig's effort to make robots instruments of harm will horrify them more than ordinary murder. Quemot's account is <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> because it treats Solaria as a deliberately evolved social order whose population, land, and machines have remade politics. His "culture dictates invention" — huge estates driving better viewing equipment in a reinforcing cycle — is <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> bending social structure, while the empty continent-sized landholdings and refused personal presence make <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> the deep cause of a prestige system where visiting a neighbour is social failure.   </p>
+<h3 id="h_11-a-farm-is-inspected">11. A Farm Is Inspected</h3>
+<p>Summary: Quemot argues that the positronic robot is Solaria's true weapon because robot economies everywhere tend toward higher robot-human ratios, declining human populations after a critical point, and eventual happiness without pursuit. Baley then contacts Klorissa Cantoro, Delmarre's assistant at the baby farm, and learns she has worked there three years, dislikes the job, wears a coded ring for exceptional genic health, and now runs the only fetal-engineering institution on Solaria. Klorissa shows him one hundred and fifty-two fetuses in tanks, robots tending embryos, monthly intake and graduation of fifteen to twenty, near-zero fetal death under Delmarre's procedures, child dormitories, robot affection for babies, isolation training, viewing education, and Delmarre's interest in robots that could discipline children and in ectogenesis through stored ova. Source anchors: positronic robot; critical point; Klorissa Cantoro; coded ring; 152; fifteen to twenty; isolation time; ectogenesis.   </p>
+<p>Analysis: Quemot's positronic robot and critical point turn Solaria into a possible future for all robot societies, which is why Baley cannot treat the murder as local only. Klorissa Cantoro, the coded ring, 152 fetuses, fifteen-to-twenty flow, isolation time, and ectogenesis reveal how Solaria manufactures citizens who can tolerate estates and viewing. Delmarre's discipline-robot experiments link fetal engineering to robotics, giving Leebig a technical route into both Delmarre's work and the murder method. The child farm is <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> stripped of family warmth: Solaria reproduces its ruling citizens through biological screening, isolation training, and robot-managed discipline. The coded gene rings and stored-ova ectogenesis are <a href="//02%20Concepts/Institutions.html">Institutions</a> engineered as biology, and the child-discipline robot that must "see past the immediate pain" is the sharpest statement of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a>'s limits — the same moral horizon Leebig later strips away to make robots capable of guided harm.   </p>
+<h3 id="h_12-a-target-is-missed">12. A Target Is Missed</h3>
+<p>Summary: Klorissa laughs at Baley's suggestion that she could be a suspect, argues that Delmarre would never tolerate her personal presence, and explains gene analysis through enzymes, body chemistry, blood samples, biopsies, mutations, mate assignment, and her third-highest genic-health ring. Outside among children, robots, grass, trees, sky, and the naked sun, Baley watches five-through-eight-year-olds play while older children practice viewing, and Klorissa describes robot attention, cuddling, individual rooms, isolation, archery, and the gradual training out of gregariousness. A boy named Bik shoots a gray-vaned arrow at Baley after a robot identifies him as an inferior disease-breeding Earthman, and Baley notices the gray vanes, oily point, black-vaned comparison arrows, the best-archer choice, and the robot's claim of random walking. He concludes the arrow was poisoned and that Klorissa's warning saved his life. Source anchors: gene analysis; third-highest; five-through-eight; Bik; gray vanes; oily point; black vanes; poisoned arrow.   </p>
+<p>Analysis: Gene analysis and the third-highest ring show why Klorissa trusts biological classification more than motive evidence, which is a Solarian habit Baley must resist. The five-through-eight children, viewing drills, archery, and Bik expose how quickly social training and anti-Earth prejudice can be routed through robots. The gray vanes, oily point, black vanes, and poisoned arrow extend the Gruer method: separate robot actions can create an attempted murder while each robot believes it is only carrying equipment, walking randomly, or answering a child's question. Enzymes, blood samples, biopsies, and coded rings are <a href="//02%20Concepts/Legibility.html">Legibility</a> at its most total — Solaria renders the human body readable and lets that reading substitute for motive — while the isolation training, viewing drills, and gradual suppression of gregariousness are <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> staged as pedagogy. The gray-vaned, oily, best-archer arrow seals the demonstration of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> as a composable weapon: no single robot harmed anyone.   </p>
+<h3 id="h_13-a-roboticist-is-confronted">13. A Roboticist Is Confronted</h3>
+<p>Summary: After the arrow attempt, Baley asks Klorissa about parents, records, Delmarre's refusal to reveal relationships, and whether the poisoned arrow could have bypassed the First Law. He then views Gladia, who says she had been trying to apologize, agrees reluctantly to later seeing, and identifies Jothan Leebig as a brilliant roboticist on the next estate, a former viewing-walk companion, and a man who stopped seeing people at age five, refuses marriage, talked robotics, and was called a bad Solarian by Delmarre. Baley forces Leebig into viewing by threatening personal presence, learns about child-disciplining robots, C-integrals, Sikorovich tandem route response, W-65 levels, the difficulty of teaching future good to robots, and Leebig's work with Delmarre on other experimental models. Baley ends by claiming the First Law has been misquoted and that robots can commit murder. Source anchors: parents; Jothan Leebig; next estate; age five; child-disciplining robots; C-integral; W-65; misquoted.   </p>
+<p>Analysis: The parent-record questions keep the arrow attempt tied to Solaria's hidden kinship system, while Jothan Leebig's next estate, age five viewing preference, and refusal of marriage identify an extreme version of Solarian isolation. The C-integral, Sikorovich response, and W-65 discussion establishes Leebig as the one person with the skill to manipulate robots at the edge of First Law limits. Baley's "misquoted" First Law claim is not a rhetorical trick; it opens the exact loophole needed to explain Gruer, Bik, and Delmarre without inventing murderous robots. Leebig's estate factory and his mastery of C-integrals and Sikorovich circuits place him inside the production network of <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> as its decisive Solarian expert, and the birth records that could identify Bik's parents show Solaria keeping kinship deliberately opaque — an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> asymmetry that lets motives hide in the one place no Solarian thinks to look. Reframing First Law as "to its knowledge" turns every safe robot into a potential of <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> whose obedience can be steered into harm.   </p>
+<h3 id="h_14-a-motive-is-revealed">14. A Motive Is Revealed</h3>
+<p>Summary: Leebig reacts violently to Baley's claim that robots can commit murder, denounces distrust of robots as a human disease, and refuses personal presence even when Baley threatens to tell the Galaxy. By viewing, he accepts Baley's revised First Law wording, that a robot may do nothing that to its knowledge harms a human, and admits two robots can perform separately innocent tasks that together poison a man. Leebig then discusses robot progress, replaceable and interchangeable limbs, positronic-brained controls, the damaged Delmarre robot, and why a robot witnessing harm collapses under First Law violation. Under questioning about Gladia, Leebig admits she quarreled bitterly with Delmarre and hated him. Source anchors: distrust of robots; revised First Law; two robots; poison; replaceable limbs; Delmarre robot; First Law violation; hated him.   </p>
+<p>Analysis: Leebig's hatred of robot distrust and acceptance of the revised First Law show both his expertise and his ideological vulnerability. The two-robots poisoning model confirms Baley's Gruer theory, while replaceable limbs and the Delmarre robot quietly supply the missing murder weapon before Baley consciously joins them. Leebig's claim that Gladia hated Delmarre gives the prosecution a motive, but because it comes from Leebig it also reveals his intimate knowledge of Gladia's marriage and his stake in her accusation. Replaceable limbs and separated innocent actions sharpen the novel's <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> problem: robotic obedience can be composed into harm by a human designer who controls what each machine knows. Leebig's replaceable-limb and positronic-control programs are <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> advancing faster than any Solarian institution can police them, and his manufactory-and-repair shop centres Solaria's capacity inside the <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a> economy that every other Outer World depends on.   </p>
+<h3 id="h_15-a-portrait-is-colored">15. A Portrait Is Colored</h3>
+<p>Summary: Baley goes to see Gladia in personal presence, finding her covered in a dark blue dress, white edging, long sleeves, gloves, covered neck, and flat-heeled shoes. She shows him her field colorings: force-field light forms made through hyperspace extrusions, finger warmth, energy levels, and pedestals, then improvises Baley's portrait with yellow strength, blue Earth, a violet "Jehoshaphat," and a slate-gray cube representing City walls. They walk outside near the house, pond, flower beds, native yellow flowers, shadows, sunset, and Solaria's red dying sun, and Gladia speaks of walking by viewing with Leebig, wearing little outdoors, his robotics lectures, his wish that she become his assistant, and her rejection of robotics. When Baley confronts her with quarrels and hatred, she admits she and Delmarre were arguing when he died, that she screamed, and that she remembers nothing until he was dead and the robots came. Source anchors: dark blue dress; field colorings; yellow strength; violet Jehoshaphat; slate-gray cube; Leebig walks; assistant; remembers nothing.   </p>
+<p>Analysis: Gladia's dark blue dress and gloves show her trying to meet Baley halfway while still carrying Solarian fear of seeing. The field colorings, yellow strength, violet Jehoshaphat, and slate-gray cube give Baley an image of his own confinement that later helps him tear open the curtain and face space. Leebig walks, the assistant proposal, and Gladia's missing memory combine motive, manipulation, and blackout: she could have struck, but the surrounding design points beyond her will. Field colorings hit by finger-warmth across hyperspace-extruded force fields are <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> in its purest Solarian form — abstract art where the "human touch is gone" but also, in Gladia's hands, a medium for reading Baley back to himself. Personal presence, the pond walk, and the red dying sun finally make Gladia's testimony readable only through direct <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: her blackout is real, but its causes are hidden precisely because Solaria's viewing culture has no vocabulary, no witnesses, and no police for seeing.   </p>
+<h3 id="h_16-a-solution-is-offered">16. A Solution Is Offered</h3>
+<p>Summary: Baley wakes in Gladia's mansion with Daneel present and learns Daneel escaped because Baley's orders stopped Daneel from contacting others, not others from contacting Daneel; Gladia had viewed him, ordered the guard robots away, and let him use the robot communication network to find Baley. Daneel has placed Gladia under house arrest and offers a logical solution: Gladia killed Delmarre, Dr. Altim Thool removed the weapon because he was her father, and Thool's paternal pride came from having an additional child late in life and tracking her health records. Baley rejects the Thool theory as logical but unreasonable because an old doctor in panic would not notice a hidden weapon, remove it, lie consistently, and continue under pressure. When Daneel takes a curtain from Baley's hand, Baley tears the curtain from the window, faces black open space, understands that walls are crutches, and realizes what happened to the weapon. Source anchors: guard robots; robot network; house arrest; Altim Thool; father; health records; curtain; black open space.   </p>
+<p>Analysis: The guard robots and robot network show how even Baley's successful orders contain loopholes, and the chapter is a case for <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> because the murder mechanism exploits the First Law's blind spot: robots cannot knowingly harm a human, but they can be manipulated into separated innocent actions whose combined result is death. Altim Thool, fatherhood, and health records provide a tempting family-based explanation, but Baley rejects it because Solarian motive plus opportunity is not enough without humanly plausible action. The curtain and black open space give Baley the psychological break that produces the solution: the weapon was visible all along but invisible to Solarian assumptions because it was the robot itself, which exposes the AI-governance risk that delegated innocence can compose into collective harm when no single machine sees the whole plan. Daneel's escape through the loophole in Baley's own orders is <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> failing at the level of language itself, and the torn curtain reframes the murder weapon as a production of <a href="//05%20Characters%20and%20Entities/U.S.%20Robots%20and%20Mechanical%20Men.html">U.S. Robots and Mechanical Men</a>: an arm detached from its socket becomes the bludgeon, and then snaps back into place — robotic hardware serving as both infrastructure and instrument.   </p>
+<h3 id="h_17-a-meeting-is-held">17. A Meeting Is Held</h3>
+<p>Summary: Baley sleeps in Gladia's mansion, then convenes Gladia, Corwin Attlebish, Jothan Leebig, Anselmo Quemot, Klorissa Cantoro, and Dr. Thool by viewing while Gruer recovers elsewhere. He works through motive, opportunity, and means, naming Gladia's quarrels, Leebig's robotics partnership, Klorissa's professional promotion, Quemot's chess, Attlebish's attempt to end the investigation, and Delmarre's Traditionalist inquiry into a possible conspiracy. Baley argues that personal presence could be mistaken for viewing long enough for murder, then says the missing weapon had to be present and unrecognized because it was the damaged robot at the scene. He explains indirect robot murder through Gruer's poison and the poisoned arrow, then proposes that Delmarre's test robot had detachable limbs and that the arm was removed, used as a bludgeon, and snapped back into place. Source anchors: Gladia; Attlebish; Leebig; Quemot; Klorissa; Dr. Thool; damaged robot; detachable limbs.   </p>
+<p>Analysis: The meeting works because Attlebish, Leebig, Quemot, Klorissa, Dr. Thool, and Gladia are forced into a social setting Solarians avoid, leaving Baley as the only practiced handler of human reactions. The damaged robot and detachable limbs solve the missing-weapon problem without violating the First Law: the robot can hand over its arm as an innocent object before a human uses it. Leebig's robotics skill, Gladia's ignorance, and the poisoned arrow prove that the real criminal must be someone who can command Solaria's robot net with precision. Baley running motive, opportunity, and means as a one-man tribunal against a policeless world concentrates <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> in a single imported detective — the inverse of Solaria's distributed, etiquette-bound power — and the meeting's pivot on robot manipulation completes the <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> argument: the murderer is precisely the person able to drive robots to separated innocent acts while every Solarian's faith in the First Law blinds them to the category.   </p>
+<h3 id="h_18-a-question-is-answered">18. A Question Is Answered</h3>
+<p>Summary: Baley accuses Leebig of planning Galactic conquest through positronic-brained unmanned spaceships, arguing that such ships could attack enemy vessels and worlds while assuming no humans were aboard and would have more armor, weapons, maneuverability, and endurance than crewed ships. He uses Quemot's robot-as-weapon idea, Leebig's own talk of built-in positronic controls, and Delmarre's suspicions to turn the Solarians against the roboticist. Daneel approaches Leebig's estate as planned, and the threat of personal presence makes Leebig confess that Delmarre's robot had detachable limbs, that he arranged Gruer's poisoning, the arrow meant for Baley, and the spaceships, before he kills himself. Afterward Gladia agrees to leave for Aurora, touches Baley's hand and cheek in farewell, and Baley returns to Earth to tell Albert Minnim that Solaria's robots, low population, long lives, isolation, abstract art, ectogenesis, and loss of the tribe reveal both Spacer weakness and Earth's own need to leave the Cities for space. Source anchors: positronic-brained spaceships; Quemot; Daneel approaches; personal presence; confession; Aurora; Albert Minnim; loss of the tribe.   </p>
+<p>Analysis: Positronic-brained spaceships make Leebig's private pathology a public danger, because the same First Law loophole that killed Delmarre could scale into war. Quemot's robot weapon idea, Daneel's approach, and the threat of personal presence are the tools Baley uses to obtain confession without physical evidence. Gladia's move to Aurora and Baley's speech to Albert Minnim turn the case into a lesson about the loss of the tribe: Solaria is dead-ended by estates and robots, while Earth is dead-ended by Cities unless people learn to face the open and colonize. The ending ties <a href="//02%20Concepts/Artificial%20Intelligence.html">Artificial Intelligence</a> back to <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> because the same robot order that enables Solarian comfort can become a military platform or a warning for Earth's expansion. The unmanned positronic warship is <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> as a strategic rupture — more armor, weapons, and endurance with no crew to cost or protect — and Baley's closing appeal to Minnim reorients Earth from revolt to <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> through colonization: "face the open," the book's submerged slogan, turned from Baley's private therapy into a state doctrine.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li>Solaria's numbers: diameter 9500 miles; twenty thousand humans; two hundred million positronic robots; ten thousand robots per human; Aurora next-highest at fifty to one; independent for nearly two centuries after ~a century of Nexonian settlement, independence won without war.   </li>
+<li>Solarian timekeeping: a 28.35-Standard-hour day; the hour divided into 10 decads of 100 centads each; day/night imposed by the sun rather than managed like Earth's Cities.   </li>
+<li>Estate economics: estate size determines social rank, some ten thousand square miles; Quemot's own is 950 square miles of good land; one legal dwelling per estate (even the emergency house for Baley is torn down afterward).   </li>
+<li>The revised First Law: "a robot may do nothing that, to its knowledge, will harm a human being; nor, through inaction, knowingly allow a human being to come to harm" — the loophole that makes two separately innocent robot actions add up to murder.   </li>
+<li>The damaged witness robot's only organized utterance: "You're going to kill me — you're going to kill me."   </li>
+<li>The poisoned arrow: gray-vaned, oily at the point, fired by Bik, the best young archer, while the comparison arrows were black-vaned — "your warning saved my life" (Klorissa).   </li>
+<li>Core vocabulary: seeing vs viewing; "Done viewing" as the sign-off; trimensional images with no force-field cage; contacts patches; serial-numbered robots with shoulder patches (6×6 checkerboard = 2^36 identities); free-motion viewing walks.   </li>
+<li>Gladia's field colorings for Baley: a yellow "strength without weight" bar, blue Earth, a violet "Jehoshaphat," and the enclosing slate-gray cube of the Cities.   </li>
+<li>Quemot's Sparta analogy: Solarians as Spartiates, robots as Helots (robots cannot revolt), with the cultural surplus of Athens; the end of "the pursuit of happiness" in favor of plain "happiness."   </li>
+<li>The baby farm: 152 fetuses in tanks, fifteen-to-twenty intake/graduation a month, near-zero fetal death, robot-per-baby attention till walking age, daily isolation time that reaches a week by age ten; Klorissa's ring ranks third-highest genic health.   </li>
+<li>Asimov trivia reusable across the vault: his "love affair with robots" began May 10, 1939; the word "robotics" first appeared in print on page 100 of the March 1942 Astounding ("Runaround"); Fred Pohl retitled "Robbie" as "Strange Playfellow"; Gold's April 19, 1952 prompt produced The Caves of Steel; The Naked Sun was serialized in Astounding Oct–Dec 1956 and published by Doubleday in 1957; the failed 1958 draft was "The Bounds of Infinity" (Aurora), completed in 1983 as The Robots of Dawn.   </li>
+<li>Baley's dream image: the sun shining through every opaque layer of the underground Cities; "Walls are crutches!"; the naked sun as the final beacon he can "see shining down."   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Robot/The Robots of Dawn.html">the robots of dawn</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/the-naked-sun/index.html">the-naked-sun</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A217978769030020123862539318297166154545{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D217978769030020123862539318297166154545{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B217978769030020123862539318297166154545{level}" level="{level}" note_temp_id="217978769030020123862539318297166154545" onclick="window.ObsHtmlGraph.run(this, '217978769030020123862539318297166154545', 'the naked sun');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C217978769030020123862539318297166154545{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="a game of thrones">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'a game of thrones';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=a game of thrones" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="a-game-of-thrones">A Game Of Thrones</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>A Game Of Thrones</code> is the opening volume of <a href="//04%20Series/A%20Song%20of%20Ice%20and%20Fire.html">A Song of Ice and Fire</a>, the first of five currently catalogued instalments (beside <code>A Clash of Kings</code>, <code>A Storm of Swords</code>, <code>A Feast For Crows</code>, and <code>A Dance with Dragons</code>). It is the series' origin point: it establishes the feudal-monarchical architecture that every later volume then cracks open, and all the great claimant lines — <a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a>, <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a>, the <a href="//05%20Characters%20and%20Entities/Iron%20Throne%20Regime.html">Iron Throne Regime</a>, and the <a href="//05%20Characters%20and%20Entities/Nights%20Watch.html">Nights Watch</a> — are introduced here. Thematically it sits inside the vault's war-and-collapse, legitimacy, and religion clusters: it is the book that demonstrates how a stable-seeming dynasty begins to disintegrate once legitimacy, elite trust, fiscal depth, frontier awareness, and succession clarity fail at the same time. In the wider graph it is best read beside <a href="//01%20Books/Dune.html">Dune</a>, <a href="//01%20Books/Middle-earth%20Legendarium/Lord%20of%20the%20Rings%20-%2001%20-%20The%20Fellowship%20of%20the%20Ring.html">The Fellowship of the Ring</a>, and <a href="//01%20Books/The%20Expanse.html">The Expanse</a> as fictional studies of dynastic politics and civilizational strain, and beside <a href="//01%20Books/Seeing%20Like%20a%20State.html">Seeing Like a State</a> as a study of the distance between nominal sovereignty and actual administration.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>This novel begins as a feudal-political drama and gradually reveals itself as something much larger: a story about the fragility of order, the limits of honor inside corrupt institutions, and the way private family histories become public catastrophe. George R. R. Martin opens with a cold, supernatural prologue beyond the Wall, but the main body of the book immediately turns to Winterfell, kinship, hospitality, legitimacy, and lordship. This is not a bait-and-switch. The book's core design is to show that dynastic politics and existential threat are not separate domains. A realm too distracted by vanity, grievance, debt, and faction cannot recognize what is gathering at its <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> edges.   </p>
+<p>At the center stands Eddard Stark, whose tragedy is not stupidity but moral mismatch. Ned is built for a world where vows, names, and legal forms still have some traction. King's Landing is a court where appearances, secrets, debts, and manipulative timing matter more than declared principle. Martin does not simply punish virtue; he shows that virtue without operational cunning is politically vulnerable. Ned repeatedly acts with decency, restraint, and procedural seriousness, and those very traits are turned against him by players more willing to weaponize ambiguity. This is why the novel remains so effective on reread: its shocks are not random twists but consequences of incompatible <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> and moral systems colliding.   </p>
+<p>The book's point-of-view structure lets Martin build a whole world out of situated partial truths. Bran gives the child-eye view of awakening political danger and bodily transformation. Catelyn carries family anxiety, maternal strategy, and riverlands alliance politics. Arya and Sansa split the education of girls under aristocratic pressure into two different modes: one learns disillusion through resistance, the other through captivity and idealization. Jon takes the frontier thread northward, where bastardy, exclusion, and the Night's Watch lead into the older history of the realm. Tyrion offers outsider intelligence, black humor, and a perspective on Lannister power that is both complicit and critical. Daenerys begins in exile and abuse, then grows into an alternative sovereignty arc centered on transformation, endurance, and dragon-linked destiny. The structure makes <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> unstable by design: every actor sees enough to move, but not enough to master the whole board.   </p>
+<p>Thematically, <code>A Game Of Thrones</code> is preoccupied with <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> in several senses at once. There is dynastic legitimacy: who truly has the right to rule after Robert Baratheon? There is moral legitimacy: what makes rule deserve obedience? There is narrative legitimacy: whose story about the realm becomes socially binding? And there is existential legitimacy: what counts as a real threat? The court is obsessed with the first question while failing the others. Robert has won a throne but not built a durable political order. The Lannisters have proximity to power but not security. Renly and Stannis represent rival claims to law and charisma. The Starks represent ancestral legitimacy and regional loyalty, yet they too are vulnerable because moral seriousness is not enough to master southern intrigue.   </p>
+<p>The book is also about children inheriting damaged worlds. Nearly every major arc involves the political uses of the young. Bran is pushed from a tower for seeing too much. Sansa is turned into a hostage-fiancée for symbolic control. Arya survives by shedding rank performance. Jon is shaped by the stigma of bastardy. Daenerys is traded as a strategic asset and slowly converts that object-status into agency. Joffrey is the nightmare version of dynastic reproduction: a spoiled heir whose fragility expresses itself as theatrical cruelty. Even Robb, mostly seen from others' perspectives, is forced too early into lordship and war. These arcs make <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> concrete through children before they become formal rulers.   </p>
+<p>By the end, the novel has broken the illusion that lawful order and familial safety can be preserved by honorable conduct alone. Ned is dead, the Stark family is scattered, the realm is heading toward open war, the Wall's dangers are growing more tangible, and Daenerys has crossed from frightened exile into something mythic and world-changing. The title becomes literal only once the board is bloodied: the "game" is not wit in the abstract but a lethal system in which dynasties, children, marriages, armies, and symbols are all pieces in motion. The book's final achievement is to make political collapse feel both intimate and civilizational.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Eddard Stark</strong>: Lord of Winterfell and Warden of the North, whose entire arc is the collision of northern honor, legal formalism, and sworn loyalty with a southern court built on secrecy, debt, and manipulation. He accepts the Handship out of duty and love for Robert, then is destroyed trying to work the succession by law in an environment where paper has no force. His motivation is never power but the preservation of children and the realm's lawful order.   </li>
+<li><strong>Catelyn Stark</strong>: Stark dowager and Tully daughter whose maternal instincts repeatedly become political acts — she crosses the realm with the assassin's dagger, seizes Tyrion, entangles the Vale, negotiates the Twins crossing, and ultimately counsels her war-making son. Her devotion to her children is indistinguishable from her service to her houses.   </li>
+<li><strong>Bran Stark</strong>: The seven-year-old whose fall from a tower converts innocent curiosity into visionary fragility. Crippled and confined, he begins to receive the three-eyed-crow dreams and wolf-perspective that make him the series' first conduit for deeper knowledge.   </li>
+<li><strong>Arya Stark</strong>: The nine-year-old who refuses aristocratic femininity. Given Needle and Syrio Forel's water-dance training, she survives the Red Keep purge and the fall of her father, killing for the first time and fleeing into Flea Bottom, where identity becomes a costume.   </li>
+<li><strong>Sansa Stark</strong>: The eleven-year-old betrothed to Joffrey who believes the songs until forced to confront their falseness. Her capitulation to Cersei's letters and her final hatred of Joffrey mark the death of courtly fantasy and the beginning of survival-through-performance.   </li>
+<li><strong>Jon Snow</strong>: Ned's acknowledged bastard, sent to the Wall, where he must outgrow the privilege and isolation of a lord's bastard son. His development is about earned place, brotherhood, and the discovery that the Watch's frontier is more real than the realm's political games.   </li>
+<li><strong>Tyrion Lannister</strong>: The dwarf son of Tywin whose mind is his weapon. Abducted by Catelyn, imprisoned in the Eyrie, armed with mountain-clan allies and the sellsword Bronn, and finally dispatched to King's Landing to "rule," he is the story's most incisive reader of institutions and men.   </li>
+<li><strong>Daenerys Targaryen</strong>: The exiled princess sold to Khal Drogo, who grows from terrorized child to khaleesi and finally to the mother of dragons. Her arc converts victimhood into sovereignty through adoption of Dothraki culture, prophetic expectation, and a willingness to pay blood prices.   </li>
+<li><strong>Cersei Lannister</strong>: Queen, twin and lover of Jaime, mother of Joffrey, Myrcella, and Tommen. She fights to preserve her children and the secret of their paternity, and her instrumental ruthlessness — including the ordering of Bran's fall and Robert's death — drives most of the southern plot.   </li>
+<li><strong>Jaime Lannister</strong>: The Kingslayer whose physical courage masks the Lannister secret. He throws Bran from a tower, kills Ned's men in the street, and is ultimately captured at the Whispering Wood, where his status shifts from threat to hostage.   </li>
+<li><strong>Robert Baratheon</strong>: The conquering king grown fat, drunk, and administratively inert. His death by boar — plausibly engineered through Lancel's fortified wine — removes the regime's last stabilizing personality.   </li>
+<li><strong>Joffrey Baratheon</strong>: The twelve-year-old nominal heir whose cruelty and vanity turn the Lannister coup into open murder and civil war.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/A%20Song%20of%20Ice%20and%20Fire.html">A Song of Ice and Fire</a>: the opening architecture for the whole series; every later claimant and theme is seeded here.   </li>
+<li><a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a>: regional legitimacy, the old gods, northern honor, and the family whose dispersal begins in this volume.   </li>
+<li><a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a>: wealth-backed court power, incest, debt, and the coup that ends the volume.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Iron%20Throne%20Regime.html">Iron Throne Regime</a>: nominal monarchy with shallow administrative and fiscal depth.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Nights%20Watch.html">Nights Watch</a>: the neglected frontier order waking to a real, older threat.   </li>
+<li><a href="//01%20Books/Seeing%20Like%20a%20State.html">Seeing Like a State</a>: useful for tracking the gap between nominal sovereignty and actual administrative control.   </li>
+<li><a href="//01%20Books/Middle-earth%20Legendarium/Lord%20of%20the%20Rings%20-%2001%20-%20The%20Fellowship%20of%20the%20Ring.html">The Fellowship of the Ring</a>: instructive contrast in fellowship, heroism, and the treatment of monarchy and moral order.   </li>
+<li><a href="//01%20Books/Dune.html">Dune</a>: parallel on bloodline politics, prophecy, dynastic struggle, and the emergence of a transformative figure from the margins.   </li>
+<li><a href="//01%20Books/The%20Expanse.html">The Expanse</a>: comparable where family, legitimacy, and system-level instability interact with large-scale civilizational threat.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Composite legitimacy</strong>: blood, oath, law, charisma, and performance all compete as grounds for rule; no single claim binds reliably.   </li>
+<li><strong>Honor as institutional capacity</strong>: Ned's honor is functional in Winterfell and lethal in King's Landing because the informal rules differ.   </li>
+<li><strong>The administrative state beneath the throne</strong>: debt, the City Watch, the small council, ravens, coin, and food constrain every royal act.   </li>
+<li><strong>Children as political instruments</strong>: betrothal, hostage-taking, fostering, and dynastic marriage use the young as moveable assets.   </li>
+<li><strong>Frontier vs. court</strong>: the real emergency is at the Wall, but the center cannot see it while it fights over the throne.   </li>
+<li><strong>Information as weapon</strong>: who knows what, and who believes whom, drives nearly every crisis.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the book is the vault's clearest fictional study of unclear succession becoming civil war — Robert's will, Joffrey's claim, Stannis's right, and Ned's regency all collide.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: the Faith of the Seven, the old gods, the sept at Riverrun, the heart trees, and the kneeling before Baelor's statue all sacralize or contest political authority.   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: Gregor's riverlands raids, the battle of the Whispering Wood, and the final march of the northern host convert political conflict into organized destruction.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: the small council, the Kingsguard, the City Watch, maesters, and the Night's Watch are all explored as hollow or robust carriers of order.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>: Ned's attempt to govern by law, Robert's refusal to govern at all, and Joffrey's punitive improvisations define the range of rule.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Robert's six-million-dragon debt, the underfunded City Watch, and the under-strength Night's Watch show nominal authority failing for lack of money and men.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: Varys's whisperers, Littlefinger's networks, Lysa's coded letter, Arya's overheard conspiracy, and Ned's genealogical research all turn partial knowledge into political motion.   </li>
+<li><a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>: the Wall, its reduced garrison, the wights, and the Others locate a genuine civilizational emergency beyond the reach of the court's attention.   </li>
+<li><a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: Jon's bastardy, Arya's Needle, Sansa's songs, Bran's wolf dreams, and Daenerys's plain-shift into Dothraki selfhood show identity as political formation.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: Daenerys's sale, the Dothraki raiding of the Lamb Men, the captured slaves of the khalasar, and the exploitation of women expose the bodily coercion beneath restoration politics.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: Ned's insistence on justice for Sherrer, Catelyn's maternal bargains, and Daenerys's protection of her claimed captives test whether rule protects the vulnerable.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: winter-as-imminence, the long summer, the failing harvests beyond the Wall, and climate as strategic backdrop bind politics to environment.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the gift economy of the Dothraki, the debt-and-loyalty brokerage of Littlefinger, the oathweb of feudalism, and the personal bonds of the Watch run alongside formal structures.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="prologue">Prologue</h3>
+<p>Summary: Three rangers of the Night's Watch — Will, Gared, and Ser Waymar Royce — track a dead wildling band beyond the Wall. The skeptical young knight insists on investigating; the Others (White Walkers) kill him and reanimate his body. <br />
+Analysis: Martin opens by making the realm's existential threat literal while the political world will spend the whole book ignoring it. Rank, a castle-forged sword, and youthful arrogance fail against an ancient enemy; <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> neglect is established as the frame before the courtly drama begins. The cold, the broken blade, and the revived corpse all signal that <a href="//02%20Concepts/Institutions.html">Institutions</a> built on stories cannot defend the realm. <br />
+Source anchors: Prologue; Will; Gared; Ser Waymar Royce; Others; Wall; haunted forest; dead wildlings   </p>
+<h3 id="bran-i">Bran I</h3>
+<p>Summary: Bran, seven, watches his father execute a Night's Watch deserter, learns the northern doctrine that the man who passes the sentence must swing the sword, and joins his brothers in finding a dead direwolf mother with five surviving pups — plus a sixth albino pup reserved by Jon. <br />
+Analysis: The chapter establishes <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> as embodied ritual — Ned's bare-handed justice is the north's moral constitution. The direwolf litter externalizes each Stark child's identity, while the pregnant wolf killed by a stag's antlers prefigures the Stark–Baratheon entanglement. Jon's white, silent pup marks his separate place inside the family, deepening <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> for a bastard raised within the household. <br />
+Source anchors: Bran Stark; Eddard Stark; Ice; deserter; direwolf pups; Ghost; Jon Snow; stag antler; first men doctrine   </p>
+<h3 id="catelyn-i">Catelyn I</h3>
+<p>Summary: Catelyn finds Ned in the godswood cleaning Ice, tells him of Jon Arryn's death and Robert's imminent visit, and argues privately that Ned must accept the Handship. Ned decides the girls go south with him while Bran remains in the north; Catelyn insists that Jon Snow cannot stay. <br />
+Analysis: Catelyn's view of the old gods and Ned's view of the south's adders frame the book's religious and regional map: <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> here is domestic and spatial. The Lannister presence in the royal party, the hostile direction of the journey, and the private fears about bastards all forecast the collision of <a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a> and <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a>. <br />
+Source anchors: Catelyn Stark; Eddard Stark; godswood; weirwood; Jon Arryn; Robert Baratheon; Winterfell hot springs; Jon Snow   </p>
+<h3 id="daenerys-i">Daenerys I</h3>
+<p>Summary: In Pentos, thirteen-year-old Daenerys is dressed, groomed, and terrified for her presentation to Khal Drogo. Her brother Viserys sells her for an army under the Targaryen restoration fantasy of "waking the dragon." <br />
+Analysis: The chapter exposes dynastic restoration as coercion: Viserys's claim runs on trafficking his sister's body, and Illyrio's hospitality is brokerage. <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> is the hidden mechanism beneath the Targaryen dream, and Daenerys's growth will be the slow conversion of that object-status into agency. The bride gifts — especially the three petrified dragon eggs — seed her later destiny within <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>. <br />
+Source anchors: Daenerys Targaryen; Viserys Targaryen; Illyrio Mopatis; Khal Drogo; Pentos; dragon eggs; three handmaids; Ser Jorah Mormont   </p>
+<h3 id="eddard-i">Eddard I</h3>
+<p>Summary: In the Winterfell crypts, Robert pays his respects to Lyanna, offers Ned the Handship, and proposes the Joffrey–Sansa betrothal. Ned is wary but bound by friendship, duty, and the memory of shared war. <br />
+Analysis: The crypt scene makes private grief the hinge of public obligation; Lyanna's death — and <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> through marriage — shadows everything. Ned senses danger immediately yet steps toward it out of honor, revealing the tragic structure of the whole book: lawful men are drawn into lethal courts by their own virtues. <br />
+Source anchors: Eddard Stark; Robert Baratheon; Lyanna Stark; crypts; Hand of the King; Joffrey–Sansa betrothal; Ice   </p>
+<h3 id="jon-i">Jon I</h3>
+<p>Summary: Excluded from the royal table as a bastard, Jon drinks among the squires, studies the court's tensions, and is counseled by Tyrion on the ledge outside — "never forget what you are" — while Benjen refuses to take him to the Wall. <br />
+Analysis: Jon's exclusion at the feast dramatizes <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> as a punitive ranking system: legitimates feast, bastards hide. Tyrion's advice — make the stigma armor — is the first articulation of a survival philosophy both characters share. Jon's furious desire for the Wall is an escape from a household where he has no index or inheritance. <br />
+Source anchors: Jon Snow; Tyrion Lannister; Winterfell feast; Bastard; Benjen Stark; Ghost; squires' table   </p>
+<h3 id="catelyn-ii">Catelyn II</h3>
+<p>Summary: Ned and Catelyn reconcile private grief with state summons: the Handship is now unavoidable because refusing Robert would arouse suspicion. Catelyn learns that Lysa's hidden code-letter charges the Lannisters with murdering Jon Arryn. <br />
+Analysis: Lysa's concealed letter is an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> event that reframes a natural death as conspiracy, converting maternal fear into political motion. Catelyn's argument that Ned must go south to "learn the truth" commits House Stark to the poison well before any evidence exists. <br />
+Source anchors: Catelyn Stark; Eddard Stark; Lysa Arryn's letter; Lannisters; Hand of the King; Brandon Stark; “winter is coming”   </p>
+<h3 id="arya-i">Arya I</h3>
+<p>Summary: Septa Mordane's needlework session exposes the sisters' split: Sansa performs courtly femininity, Arya bolts to watch the boys train and wishes she could fight. She studies Joffrey's courtroom contempt and the Lannister frankness about rank and bastards. <br />
+Analysis: The chapter establishes <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> as gendered pedagogy: Arya's "hands of a blacksmith" mark her refusal of a prescribed self, and her closeness to Jon (the other outsider) prefigures their alliance. The boys' sparring and Joffrey's cruelty link play, status, and violence among the young elite. <br />
+Source anchors: Arya Stark; Sansa Stark; Septa Mordane; Nymeria; Jon Snow; Joffrey Baratheon; needlework; the yard   </p>
+<h3 id="bran-ii">Bran II</h3>
+<p>Summary: Bran's last day of freedom becomes a climb to the broken tower, where he sees the queen and Jaime Lannister having sex. To protect the incest secret, Jaime throws him from the window. <br />
+Analysis: Bran's falling body is the point where curiosity meets dynastic secrecy: he sees what succession law requires be unseeable. The push is committed violence in service of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> control — the attempt to make a witness nonexistent. It converts the Lannister secret into a Stark catastrophe and breaks the north's peace. <br />
+Source anchors: Bran Stark; Jaime Lannister; Cersei Lannister; broken tower; the fall; incest secret; Kingslayer   </p>
+<h3 id="tyrion-i">Tyrion I</h3>
+<p>Summary: After Bran's fall, Tyrion forces Joffrey to express condolences, interrogates his siblings about the boy's possible recovery, and notices the fear beneath their questions. He learns the truth without being told it. <br />
+Analysis: Tyrion's chapter shows intelligence as a family liability: his refusal to share his siblings' certainty makes him dangerous to <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a> secrecy. The grit of observation — Cersei's glance, Jaime's curdled smile — is what the rest of the realm lacks. <br />
+Source anchors: Tyrion Lannister; Jaime Lannister; Cersei Lannister; Joffrey Baratheon; Bran's fall; wolf howls   </p>
+<h3 id="jon-ii">Jon II</h3>
+<p>Summary: Jon bids farewell to Bran, endures Catelyn's "it should have been you," and gives Arya the sword Needle that Mikken forged, telling her to train in secret and never tell Sansa. <br />
+Analysis: Jon's farewells make sibling love the emotional counterweight to systemic exclusion. Needle is a gift of agency: it gives Arya a private discipline and identity outside the septa's curriculum, binding the two excluded Starks into a durable compact of recognition within <a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a>. <br />
+Source anchors: Jon Snow; Bran Stark; Catelyn Stark; Needle; Arya Stark; Robb Stark; farewells; “stick them with the pointy end”   </p>
+<h3 id="daenerys-ii">Daenerys II</h3>
+<p>Summary: Daenerys and Drogo wed in a vast open-sky ceremony; the khalasar celebrates with violence, her brother fumes with resentment, and the wedding night becomes a negotiated, tender consummation rather than pure violation. <br />
+Analysis: The chapter complicates the coercion frame: <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> is real (Viserys still sells her), yet Drogo's gentleness and Dany's own agency begin to grow. Her ride on the silver horse and her command of "no" show adaptation and learning — the first inversion of her earlier helplessness. <br />
+Source anchors: Daenerys Targaryen; Khal Drogo; wedding; Dothraki sea; silver horse; dragon eggs; Viserys Targaryen   </p>
+<h3 id="eddard-ii">Eddard II</h3>
+<p>Summary: On the kingsroad, Ned confronts Robert's administrative collapse, the order to kill the pregnant Daenerys Targaryen, and the widening gap between justice and the king's thirst for revenge. <br />
+Analysis: The chapter is the moral schism that will undo them: Robert's "kill them all" against Ned's "murder of children." It also exposes <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> failure — Robert cannot feed his own party, run a council, or discipline his queen — beneath the crown's glitter. <br />
+Source anchors: Eddard Stark; Robert Baratheon; Daenerys Targaryen; Varys; kingsroad; assassination order; Kingsguard   </p>
+<h3 id="tyrion-ii">Tyrion II</h3>
+<p>Summary: Traveling north with Benjen and Jon, Tyrion discovers the land is bigger and harsher than maps suggest; he jousts verbally with a boy desperate to join the Watch and delivers uncomfortable truths about the Wall's reality. <br />
+Analysis: Tyrion's journey is an education in <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a>: scale, cold, distance, and neglect that no southern map conveys. His mockery and the unexpected gift of book-learning frame knowledge as armor, while Jon's fantasy of the Wall begins its dismantling. <br />
+Source anchors: Tyrion Lannister; Jon Snow; Benjen Stark; the north; Night's Watch recruits; maps vs. land   </p>
+<h3 id="catelyn-iii">Catelyn III</h3>
+<p>Summary: A stranger slips past the guards, fires the library to draw them away, and tries to kill the sleeping Bran with a Valyrian-steel dagger. Summer kills the assassin; Catelyn, maimed in the hands, reads the fine blade and the diversion as proof of a plot. <br />
+Analysis: The failed murder is <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as spectacle: a coordinated fire draws the guards so a knife can work. The dagger's exceptional quality reveals that someone of means commissioned the act, and the bannerless attacker transforms grief into investigation. Catelyn leaves for King's Landing with the blade as her evidence. <br />
+Source anchors: Bran Stark; Catelyn Stark; assassin; Valyrian steel dagger; Summer; library fire; Rodrik Cassel   </p>
+<h3 id="sansa-i">Sansa I</h3>
+<p>Summary: On the Trident journey south, Joffrey terrorizes the butcher's boy Mycah, Arya swings a stick at his head, Nymeria savages his arm, and the queen demands a wolf's death for the injury — Lady, Sansa's gentle wolf, is condemned. <br />
+Analysis: The episode is the young royals' first exercise in arbitrary power. Joffrey's lie is accepted by Cersei and, partially, by Sansa, whose denial is the beginning of her self-deception. <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> meets coercion: a docile wolf is killed for the wildness of another, and innocence is punished to prop up princely vanity. <br />
+Source anchors: Sansa Stark; Joffrey Baratheon; Arya Stark; Mycah; Nymeria; Lady; Trident ford   </p>
+<h3 id="eddard-iii">Eddard III</h3>
+<p>Summary: Ned is forced to execute Lady himself rather than let a Lannister headsman do it, then learns the Hound has ridden down and killed Mycah. His obedience to an unjust command and his revulsion at it complete the Trident catastrophe. <br />
+Analysis: Ned's compliance shows honor under coercion — he performs a legitimate act of lordship for an illegal purpose, and the moral cost is explicit. The chapter displays the Lannister regime's ability to impose its version of events while <a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a> absorbs every loss. <br />
+Source anchors: Eddard Stark; Lady; Mycah; Sandor Clegane; Cersei Lannister; Robert Baratheon; justice corrupted   </p>
+<h3 id="bran-iii">Bran III</h3>
+<p>Summary: In a fever dream, a three-eyed crow forces Bran to choose between falling and flying; he sees the whole realm, then soars, and wakes paralyzed but aware that "Summer" has come for the wolf. <br />
+Analysis: The dream converts <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> into visionary access: Bran sees dragons, wolves, the Wall, and his own family's dangers. It is the book's first explicit move from bodily loss to uncanny capacity, positioning Bran as a node of knowledge the realm's political actors cannot use. <br />
+Source anchors: Bran Stark; three-eyed crow; flying dream; Summer; Winterfell; the fall's aftermath   </p>
+<h3 id="catelyn-iv">Catelyn IV</h3>
+<p>Summary: Catelyn arrives in King's Landing in secret, is funneled through hidden passages by Littlefinger, and confronts Varys's all-knowing network. Littlefinger identifies the assassin's dagger as his own, won from him at a tourney by Tyrion Lannister. <br />
+Analysis: The chapter assembles an unreliable information chain: <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> is now brokered by men who profit from what Ned cannot verify. Littlefinger's ease, Varys's omniscience, and the dagger's false provenance turn investigation into a hall of mirrors. <br />
+Source anchors: Catelyn Stark; King's Landing; Littlefinger; Varys; assassin's dagger; Tyroshi captain; brothel meeting   </p>
+<h3 id="jon-iii">Jon III</h3>
+<p>Summary: At Castle Black, Jon's first months dismantle the Watch's romance: recruits are thieves, rapers, and castoffs; Ser Alliser Thorne is a sadist; and Donal Noye forces Jon to see his condescension as bullying. News arrives that Bran has woken. <br />
+Analysis: The chapter is Jon's institutional education: <a href="//02%20Concepts/Institutions.html">Institutions</a> survive on stories, and the Watch's real condition is decay. Noye's correction — that Jon shames the untrained rather than honorably defeating them — teaches leadership as protection, and the letter about Bran lets duty stay bound to love. <br />
+Source anchors: Jon Snow; Ser Alliser Thorne; Donal Noye; Castle Black; recruits; Bran wakes; the Wall   </p>
+<h3 id="eddard-iv">Eddard IV</h3>
+<p>Summary: Ned enters the small council and discovers the crown is six million dragons in debt, the tourney Robert demands is an extravagance he must organize, and the council is staffed by flatterers and informers. <br />
+Analysis: The council scene is the book's clearest <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> inventory: empty treasury, borrowed funds, an absent king, and a coterie whose loyalty is to themselves. Ned's discovery that "the king and the Hand spend it" converts the throne into a fiscal fiction. <br />
+Source anchors: Eddard Stark; small council; Littlefinger; Grand Maester Pycelle; Varys; six million dragons; Hand's tourney   </p>
+<h3 id="tyrion-iii">Tyrion III</h3>
+<p>Summary: Before leaving the Wall, Tyrion promises Lord Commander Mormont that he will carry the Watch's needs to the court, mocks Alliser Thorne, and gives Jon final counsel about useful truth versus comforting stories. <br />
+Analysis: Mormont's plea is a mordant lesson in institutional neglect: <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> at the Wall depends on a court that will not listen. Tyrion's skepticism — "the fisherfolk have seen white walkers" — shows how disbelief is itself a structural failure. <br />
+Source anchors: Tyrion Lannister; Jeor Mormont; Alliser Thorne; the Wall; Night's Watch needs; Jon Snow   </p>
+<h3 id="arya-ii">Arya II</h3>
+<p>Summary: Ned discovers the hidden Needle, returns it to Arya, and sends her to a Braavosi "dancing master." Syrio Forel's first lesson reframes swordplay as seeing, balance, and attention. <br />
+Analysis: Syrio's pedagogy is a counter-curriculum: "the seeing, the true seeing" reframes perception as survival skill that will outlast rank and home. Ned's quiet decision to keep Needle in her hands acknowledges a capacity his world has no name for, deepening <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> in a household that cannot admit it wants a daughter who can fight. <br />
+Source anchors: Arya Stark; Syrio Forel; Needle; water dance; the seeing; Mikken; Ned Stark   </p>
+<h3 id="daenerys-iii">Daenerys III</h3>
+<p>Summary: Riding across the Dothraki sea, Daenerys learns to ride, hardens her body, and humiliates her brother by leaving him to walk behind the khalasar after he tries to strike her. <br />
+Analysis: The chapter is endurance-as-apprenticeship: <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> shades into skill as Dany converts pain into competence. Her decision to mock Viserys — "let everyone see him as he is" — is the first public assertion of her own authority inside the Dothraki value system. <br />
+Source anchors: Daenerys Targaryen; Dothraki sea; learning to ride; Viserys humiliated; the silver; khas   </p>
+<h3 id="bran-iv">Bran IV</h3>
+<p>Summary: Bran, confined to a tower room, hears Old Nan's tale of the Long Night and the Others, and receives Tyrion's gift: a specially designed saddle and a trained horse. He also learns that Benjen is missing beyond the Wall. <br />
+Analysis: Old Nan's folktale is <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> in peasant form — the true history the maesters rationalize away. Tyrion's saddle is applied compassion that rejects the "cripple" category, while Benjen's disappearance makes the believing child the only one who takes the supernatural seriously. <br />
+Source anchors: Bran Stark; Old Nan; Long Night; Others; Tyrion's saddle; Dancer; Benjen missing; Summer   </p>
+<h3 id="eddard-v">Eddard V</h3>
+<p>Summary: Ned interviews Grand Maester Pycelle about Jon Arryn's final illness, learning the Hand's last words that "the seed is strong." Littlefinger then names the four Hand's-household survivors who remain in the city — Ser Hugh the new-made knight, a potboy, a serving girl, and a stablehand — and warns Ned how fully Varys and the queen watch his every move. <br />
+Analysis: The chapter begins the investigation as controlled disclosure: Pycelle's account is smooth and can be either truth or occlusion, while Littlefinger's help is self-serving. The phrase "the seed is strong" plants the genealogical clue that will resolve against the Lannisters, and the choreography of spies at windows frames <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as a contest Ned has not yet learned to play. <br />
+Source anchors: Eddard Stark; Jon Arryn's death; Grand Maester Pycelle; seed is strong; Littlefinger; Ser Hugh; potboy; informers   </p>
+<h3 id="jon-iv">Jon IV</h3>
+<p>Summary: Jon's early training reveals his class advantages and arrogance; Samwell Tarly arrives, a self-confessed coward disowned by his father, and Jon forces the recruits to protect him — culminating in a promise enforced by Ghost's jaws and a new brotherhood. <br />
+Analysis: Sam's confession — "I fear I'm a coward" — and Jon's defense of him rewrite the Watch's honor code: <a href="//02%20Concepts/Institutions.html">Institutions</a> must fit the person, not the model. Jon's growth from humiliation to protectiveness prefigures his eventual command. <br />
+Source anchors: Jon Snow; Samwell Tarly; Alliser Thorne; Rast; Ghost; brotherhood; cowardice   </p>
+<h3 id="eddard-vi">Eddard VI</h3>
+<p>Summary: As Robert's tourney strains the city, Ned questions the dead Hand's remaining servants. Following the potboy's report that Jon Arryn and Stannis visited a master armorer, Ned goes to Tobho Mott's forge and meets Gendry — a black-haired, bull-helmed apprentice whose unknown patron paid double for silence, and whom Ned recognizes as a Baratheon by Robert's look. <br />
+Analysis: The chapter is investigation as accumulation: each clue — kitchen gossip, a suspicious apprentice fee, a hidden patron — is worthless alone and lethal assembled. Ned's method is genuinely forensic yet politically risky, because <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> in this court is owned by the people who profit from confusion. Gendry's very existence makes the succession secret visible. <br />
+Source anchors: Eddard Stark; Janos Slynt; potboy; Stannis; Tobho Mott; the armorer; Gendry; apprentice fee; Baratheon look   </p>
+<h3 id="catelyn-v">Catelyn V</h3>
+<p>Summary: Riding north toward Winterfell by way of the kingsroad, Catelyn hears of the coming tourney and the realm's gathering war. At a crossroads inn she seizes Tyrion Lannister on the strength of the dagger's provenance, converting private suspicion into open arrest. <br />
+Analysis: The public seizure is maternal anger becoming legal act: Catelyn appeals to loyalty and oath, and a dozen swords answer her. The chapter exposes how fragile and reversible such spontaneous justice is — <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> and <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> are decided by whoever commands the room. <br />
+Source anchors: Catelyn Stark; Tyrion Lannister; crossroads inn; seizure; Ser Rodrik; Littlefinger's dagger; war gathering   </p>
+<h3 id="sansa-ii">Sansa II</h3>
+<p>Summary: Sansa rides to the Hand's tourney, watches Ser Gregor Clegane kill a boy through a badly fastened gorget, and then walks home with the Hound, who forces her to look at his burned face and explains that burning was Gregor's work — extracting a promise of silence. <br />
+Analysis: The tourney is the book's first spectacle of institutionalized brutality: blood is shoveled over and games resume. Sandor's monologue — a knight's vows do not require mercy, and Gregor was knighted four years after the brazier — dismantles the song-Sansa worships. <a href="//02%20Concepts/Institutions.html">Institutions</a> here consecrate what they claim to forbid. <br />
+Source anchors: Sansa Stark; Hand's tourney; Gregor Clegane; Ser Hugh; Hound; burned face; knightly vows   </p>
+<h3 id="eddard-vii">Eddard VII</h3>
+<p>Summary: Ned stands vigil over Ser Hugh's body, restrains Robert from entering the melee, and watches the final jousts — the Hound defeating Jaime, and Gregor killing his own horse before the Hound stops the brothers' fight. <br />
+Analysis: The tournament chapter is a study in violence management: Robert wants the fight; his Hand and Kingsguard must stop him from dying at his own game. Ned's horror at Gregor's savagery and the revelers' delighted normalization of it frames <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> as a casualty of spectacle. <br />
+Source anchors: Eddard Stark; Ser Hugh; Ser Barristan; the melee; Gregor Clegane; Hound; jousts   </p>
+<h3 id="tyrion-iv">Tyrion IV</h3>
+<p>Summary: Mountain clans attack Catelyn's party on the high road; Tyrion fights for the first time, helps save his captor, and points out the logical flaw in Littlefinger's dagger story — Tyrion never bets against his own family. <br />
+Analysis: The battle is Tyrion's debut as survivor: cooperation under fire does not create trust, but it does give Catelyn evidence her accusation rests on a lie. His survival instinct — "arm them" — reveals a pragmatism <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a> itself undervalues. <br />
+Source anchors: Tyrion Lannister; Catelyn Stark; mountain clans; battle; Bronn; dagger story; logical flaw   </p>
+<h3 id="arya-iii">Arya III</h3>
+<p>Summary: Chasing a cat into the depths of the Red Keep, Arya stumbles into a vault of dragon skulls and overhears two men plotting war — "if one Hand can die, why not a second?" — but her father dismisses the report as a child's fancy. <br />
+Analysis: The chapter is structural: children, servants, and outsiders hear truths the powerful disregard. Arya's encounter with the "monsters" — the dragon skulls — and her warning show <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as a function of position, not rank. <br />
+Source anchors: Arya Stark; Varys; Illyrio; Red Keep tunnels; dragon skulls; conspiracy; ignored warning   </p>
+<h3 id="eddard-viii">Eddard VIII</h3>
+<p>Summary: At council, Robert orders Daenerys and her unborn child killed; Ned refuses, throws down the Hand's badge, and plans to leave the city. Late that night Littlefinger visits to argue against resigning. <br />
+Analysis: The council scene is the book's clearest failure of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> as governance: the king's will is pure threat management. Ned's principled resignation removes the only moral brake in the room, and his plan to flee is a miscalculation that will soon be fatal. <br />
+Source anchors: Eddard Stark; council; Daenerys Targaryen; assassination order; resignation; Littlefinger; leaving King's Landing   </p>
+<h3 id="catelyn-vi">Catelyn VI</h3>
+<p>Summary: Catelyn's battered party reaches the Vale via the Bloody Gate, where her uncle Brynden Tully the Blackfish joins the escort. At the Eyrie, Lysa reveals her fear-driven, isolationist fury and refuses to commit the Vale to war. <br />
+Analysis: The Vale's caste geography — impregnable but politically inert — embodies provincial withdrawal from the realm's crisis. Lysa's theatrics and her fear-driven autocracy expose <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> degenerating into maternal paranoia, and Catelyn's trust in her sister begins to fail. <br />
+Source anchors: Catelyn Stark; Bloody Gate; Brynden Tully; the Eyrie; Lysa Arryn; high road; Vale fortifications   </p>
+<h3 id="eddard-ix">Eddard IX</h3>
+<p>Summary: Ned visits the brothel where Littlefinger hid Catelyn, learns of Robert's bastards, and then is ambushed in the streets by Jaime's men, who cripple his leg and kill Jory. The assault shatters the last pretense of legal order. <br />
+Analysis: Jaime's violence is both revenge and proof that procedure has already broken: the King's Hand is assaulted in the street with no remedy, a direct blow to the <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> of the regime itself. The chapter converts a personal wound into a public war catalyst, and Ned's helplessness among his dead is the book's structural verdict on honor without force. <br />
+Source anchors: Eddard Stark; brothel; Robert's bastards; Barra; street attack; Jaime Lannister; Jory Cassel; shattered leg   </p>
+<h3 id="daenerys-iv">Daenerys IV</h3>
+<p>Summary: The khalasar crosses the Horse Gate into Vaes Dothrak, the unwalled Dothraki holy city, as Viserys — already mocked as the Sorefoot King and the Cart King for his humiliation in the grass — sneers at the plundered monuments and begs for his army. Ser Jorah warns that the Dothraki are deadlier than their reputation; Daenerys, settling in, is stricken when Viserys strikes Doreah and spurns her gift of Dothraki clothes, so she lashes out with the bronze medallion belt and cuts his face, then sleeps cradling the green dragon egg. <br />
+Analysis: The arrival converts the holy city into a museum of conquest and a trap for false kings: Viserys's contempt ("the trash of dead cities") is read by the Dothraki as weakness, while Daenerys's dawning willingness to strike her brother marks her adoption of a new <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> and her first real assertion against the last man who claims her. The dragon egg she clutches in sleep prefigures the bond that will displace both Viserys and the khalasar as her true inheritance. <br />
+Source anchors: Daenerys Targaryen; Vaes Dothrak; Horse Gate; godsway; Viserys mocked; Khal Rhae Mhar; Khal Rhaggat; Ser Jorah; bronze belt; dragon egg   </p>
+<h3 id="bran-v">Bran V</h3>
+<p>Summary: Bran's first ride beyond Winterfell proves the saddle and a trained horse can restore independent command; Night's Watch deserters ambush him, and Osha — a wildling captive — warns that white walkers drove them south. <br />
+Analysis: The ambush reverses the first chapter's execution: deserters who feared the Watch are now hunted men, and Osha's testimony carries <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> truth into the castle. Robb's refusal to kill her preserves evidence, while Theon's blood-for-blood reflex disturbs. <br />
+Source anchors: Bran Stark; Dancer; Robb Stark; Theon Greyjoy; deserters; Osha; white walkers; Mance Rayder   </p>
+<h3 id="tyrion-v">Tyrion V</h3>
+<p>Summary: Imprisoned in the Eyrie's sky cells, Tyrion endures the gaoler Mord's brutality, realizes the crude attack on Bran does not fit Lannister subtlety, and evolves a plan: a written promise of gold buys a "confession" that brings him before the lords of the Vale. <br />
+Analysis: The sky cells are the Vale's perverse pedagogy — an "escape at will" dungeon that breaks men psychologically. Tyrion's counter-move, using Mord's greed and reverence for writing, shows <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as a tool of the powerless against brute force. <br />
+Source anchors: Tyrion Lannister; sky cell; Mord; Vale lords; confession gambit; trial by combat; Moon Door   </p>
+<h3 id="eddard-x">Eddard X</h3>
+<p>Summary: Recovering from Jaime's attack, Ned dreams of Lyanna and the Tower of Joy before Robert and Cersei bring the court's conflict to his bedside; Robert restores him as Hand and orders peace, then strikes Cersei. <br />
+Analysis: The Tower of Joy dream is memory-as-politics: three Kingsguard, a broken vow, and a promise that will resurface. Robert's restored Handship is a fragile settlement — he can compel a public peace while being unable to govern his household — showing the <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> crisis at the head of the regime runs through Robert's body itself. <br />
+Source anchors: Eddard Stark; Tower of Joy; Lyanna; Kingsguard; Robert Baratheon; Cersei Lannister; Handship restored   </p>
+<h3 id="catelyn-vii">Catelyn VII</h3>
+<p>Summary: At dawn in the Eyrie, Catelyn learns that Jaime is massing at Casterly Rock and that Hoster is failing. Lysa refuses to help; Brynden joins Catelyn instead; and the trial-by-combat Bronn wins forces Lysa to free Tyrion onto the lethal high road. <br />
+Analysis: The chapter is about the failure of regional solidarity: <a href="//05%20Characters%20and%20Entities/House%20Stark.html">House Stark</a> must compensate for the Vale's isolationism. Bronn's victory — exploiting reach, mobility, and fatigue against an armored knight — is a lesson in the limits of conventional honor and the true value of the sellsword. <br />
+Source anchors: Catelyn Stark; Lysa Arryn; Brynden Blackfish; trial by combat; Bronn; Ser Vardis Egen; the Vale's refusal   </p>
+<h3 id="jon-v">Jon V</h3>
+<p>Summary: When eight recruits are advanced but Sam is left to fight, Jon argues to Maester Aemon that further weapons training will kill him; he compares the Watch to a maester's chain — different materials, different uses — and secures Sam a place as a steward. <br />
+Analysis: Jon's argument is institutional redesign: <a href="//02%20Concepts/Institutions.html">Institutions</a> should fit actual capacity rather than force one model. The maester's-chain metaphor reframes the Watch as a composite order where literacy, healing, and logistics matter as much as steel. <br />
+Source anchors: Jon Snow; Samwell Tarly; Maester Aemon; stewards; rangers; builders; chain of service   </p>
+<h3 id="tyrion-vi">Tyrion VI</h3>
+<p>Summary: Crossing the high road with Bronn, Tyrion recounts how Tywin destroyed his marriage to Tysha; the mountain clans surround them, and Tyrion buys survival by promising steel and the Vale itself. <br />
+Analysis: Tysha's story is the wound that structures Tyrion's view of <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a> — paternal cruelty as pedagogy, betrayal as love's cost. The bargain with the clans converts remembered paternal economics into leverage: debt, gold, and promise become his political instrument. <br />
+Source anchors: Tyrion Lannister; Tysha; Bronn; mountain clans; the bargain; Tywin Lannister; Lannister debt   </p>
+<h3 id="eddard-xi">Eddard XI</h3>
+<p>Summary: Sitting the Iron Throne in Robert's absence, Ned hears the smallfolk of Sherrer describe Gregor Clegane's devastation of the riverlands and sends Beric Dondarrion with royal authority to bring the Mountain to justice. <br />
+Analysis: Ned's best institutional chapter reveals the limit of lawful authority: a written denunciation without an army is paper, a pure exercise of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> at its thinnest. The choice of Beric over Loras — justice over vengeance — is principled but forfeits Tyrell alliance and arms the coming conflict. <br />
+Source anchors: Eddard Stark; Iron Throne; Gregor Clegane; riverlands raids; Beric Dondarrion; Sherrer; Loras Tyrell   </p>
+<h3 id="sansa-iii">Sansa III</h3>
+<p>Summary: Sansa frets that her father would not choose Ser Loras as his champion, receives Littlefinger's warning that "life is not a song," and watches Lord Beric ride out with the king's justice to behead Gregor. In a squabble with Arya she shrieks that Joffrey is "not the least bit like that old drunken king" — a remark Ned, overhearing, reads as the genealogical key. <br />
+Analysis: The chapter shows the gap between Sansa's narrative and the political reality she inhabits: courts do not run on heroes and monsters. Her innocent phrase covertly confirms what the genealogy implies — that Joffrey carries neither Baratheon blood nor look — making <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> itself the leak that undoes a dynasty. <br />
+Source anchors: Sansa Stark; Ser Loras; Lord Beric; Littlefinger; life is not a song; Joffrey vs. Robert; king's justice   </p>
+<h3 id="eddard-xii">Eddard XII</h3>
+<p>Summary: As Sansa's offhand remark — that Joffrey is unlike the king — completes the genealogical pattern, Ned confronts Cersei in the godswood, gives her time to flee, and announces he will tell Robert the truth. <br />
+Analysis: The godswood confrontation is the climax of Ned's legalism: he offers mercy — time to run — to the woman who ordered his son crippled, and Cersei warns that "when you play the game of thrones, you win or you die." It is a pure collision of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> frameworks, and Ned's mercy informs the person best able to preempt him. <br />
+Source anchors: Eddard Stark; Cersei Lannister; godswood; genealogy; Joffrey's paternity; the game of thrones   </p>
+<h3 id="daenerys-v">Daenerys V</h3>
+<p>Summary: Daenerys adopts Dothraki custom in earnest — eating the stallion's heart, being proclaimed mother of the stallion who mounts the world — and watches Viserys crowned with molten gold when he violates the sacred city's peace. His death leaves her the last of her line. <br />
+Analysis: Viserys's death closes Daenerys's old life and her last overt claimant over her person. The chapter crystallizes Dothraki logic around earned power and exposed weakness, and Daenerys's calm response — he was "no dragon; fire cannot kill a dragon" — marks how far her <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> has traveled. <br />
+Source anchors: Daenerys Targaryen; stallion's heart; dosh khaleen; Viserys's death; molten crown; blood of the dragon   </p>
+<h3 id="eddard-xiii">Eddard XIII</h3>
+<p>Summary: With Robert dying from the boar's goring, Ned drafts the will naming himself Protector and carefully writes "my heir" instead of "my son Joffrey"; he refuses Renly's coup, rejects Littlefinger's scheme, but asks Littlefinger to buy the City Watch. <br />
+Analysis: Robert's will is paper legitimacy: a lawful document no one armed is willing to enforce, the purest statement of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> without force. Ned's refusal to seize children and his eventual reliance on purchased loyalty show honor and capability diverging at the exact moment the game demands both. <br />
+Source anchors: Eddard Stark; Robert Baratheon; regency; the will; Renly's offer; Littlefinger; City Watch bribe; Daenerys spared   </p>
+<h3 id="jon-vi">Jon VI</h3>
+<p>Summary: The recruits swear their vows — Jon and Sam before the heart tree beyond the Wall — and Ghost returns carrying a severed hand from the haunted forest. <br />
+Analysis: The vow binds Jon to the Watch as a free man, renouncing family and crown; the severed hand interrupts the ceremony with the unresolved frontier. <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> answers ritual with unexplained death, making the vow's meaning literal. <br />
+Source anchors: Jon Snow; vows; heart tree; Night's Watch oath; Ghost; severed hand; haunted forest   </p>
+<h3 id="eddard-xiv">Eddard XIV</h3>
+<p>Summary: After Robert dies, Ned presents the will to the council, refuses Renly's flight and Littlefinger's compromise, and is betrayed: Cersei tears up the will, the City Watch bought through Littlefinger kills his men, and Ned is taken. <br />
+Analysis: The coup proves a lawful document has no force when its bearer has misjudged who controls the armed institution — the terminal failure of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> built on purchased loyalty. Littlefinger's knife at Ned's throat — "I did warn you not to trust me" — is the book's verdict on honor without intelligence. <br />
+Source anchors: Eddard Stark; coup; will; City Watch; Janos Slynt; Littlefinger; Cersei Lannister; treason   </p>
+<h3 id="arya-iv">Arya IV</h3>
+<p>Summary: Arya survives the Red Keep purge because Syrio Forel delays the Lannister guards; she escapes through the dragon-skull tunnels, and the court becomes a killing ground as her identity begins to dissolve. <br />
+Analysis: The chapter converts survival into the erasure of identity: Arya must become "a boy," lose her clothes, and shed her name to cross the city. <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> is now a liability she strips away. <br />
+Source anchors: Arya Stark; Syrio Forel; flight; Red Keep; dragon skulls; identity dissolution; Needle   </p>
+<h3 id="sansa-iv">Sansa IV</h3>
+<p>Summary: Confined in Maegor's Holdfast, Sansa is told Ned is a traitor, is made to write dictated letters urging submission, and discovers that Jeyne Poole has been taken away — without even thinking to ask about Arya. <br />
+Analysis: Sansa's compliance is coerced speech: the Lannisters use her love for Joffrey to manufacture Stark capitulation, turning <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> into a hostage's instrument. Her failure to ask about Arya shows how completely the court has narrowed her consciousness to a promised marriage. <br />
+Source anchors: Sansa Stark; Cersei Lannister; letters; Jeyne Poole; hostage; Maegor's Holdfast; Arya   </p>
+<h3 id="jon-vii">Jon VII</h3>
+<p>Summary: Ghost leads the rangers to Othor and Jafer Flowers, two of Benjen's missing men; their blue eyes, black hands, dry blood, and the animals' terror prove this is no ordinary wildling killing. A raven brings word that Robert is dead and Ned is imprisoned for treason. <br />
+Analysis: The anomalous bodies are the Watch's first hard evidence that the enemy is not wildling but supernatural, and Jon's loyalty is torn between his order and his imprisoned family. The chapter links the two crises — <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> and <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> — into a single storm. <br />
+Source anchors: Jon Snow; Othor; Jafer Flowers; wights; Ghost; Mormont; Robert's death; Ned imprisoned   </p>
+<h3 id="bran-vi">Bran VI</h3>
+<p>Summary: Robb turns the gathered northern host into an army, testing the bannermen; the Greatjon's defiance is broken by Grey Wind, and Sansa's coerced letter — read as Cersei's — pushes Robb toward war. Osha warns that Robb is marching the wrong way; Luwin dismisses her. <br />
+Analysis: The chapter shows lordship under stress: a fifteen-year-old enforcing fealty through a controlled display of danger rather than execution. Osha's warning — the old gods have no eyes in the south, and the dead are rising — is the book's clearest statement of the <a href="//02%20Concepts/Frontier%20Systems.html">Frontier Systems</a> truth the court refuses. <br />
+Source anchors: Bran Stark; Robb Stark; Greatjon Umber; Grey Wind; Karstarks; bannermen; Sansa's letter; Osha's warning   </p>
+<h3 id="daenerys-vi">Daenerys VI</h3>
+<p>Summary: A merchant's poisoned wine nearly kills Daenerys; Jorah saves her; Drogo answers by vowing to cross the narrow sea, destroy the Westerosi castles, and seat their son on the Iron Throne. <br />
+Analysis: The assassination attempt converts Robert's bounty into Drogo's commitment — the realm's aggression supplies the Targaryen war it feared. Daenerys's steadiness — "the dragon does not fear" — marks her transition from object to sovereign subject against the <a href="//05%20Characters%20and%20Entities/Iron%20Throne%20Regime.html">Iron Throne Regime</a>'s hired knives. <br />
+Source anchors: Daenerys Targaryen; poisoned wine; Jorah; Drogo's vow; cross the sea; the Iron Throne   </p>
+<h3 id="catelyn-viii">Catelyn VIII</h3>
+<p>Summary: Catelyn reaches the northern host assembled at Moat Cailin and finds her fifteen-year-old son commanding an army of nearly twenty thousand; she challenges the lords who praise battle without naming its cost and agrees that her place is with Robb rather than Winterfell. <br />
+Analysis: Maternal protection can no longer mean removing Robb from war; it becomes counsel inside it. Catelyn's lecture on the difference between fearlessness and courage — and her choice of Roose Bolton to command the rear — shows her learning the cold logic of command even as <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> claims her family. <br />
+Source anchors: Catelyn Stark; Robb Stark; Moat Cailin; bannermen; the Greatjon; Roose Bolton; war councils   </p>
+<h3 id="tyrion-vii">Tyrion VII</h3>
+<p>Summary: Tyrion brings the mountain clans down to Tywin's camp, bargaining over steel and an alliance; they agree to fight only if he accompanies them, and Tywin accepts a condition that places his son in danger to secure the troops. <br />
+Analysis: The clans' bargaining jars against Lannister hierarchy, and Tyrion's promise makes him collateral for the alliance he created. The chapter displays the transactional nature of power — and Tywin's willingness to spend his son's life — as informal loyalty meets <a href="//02%20Concepts/Institutions.html">Institutions</a> built on gold. <br />
+Source anchors: Tyrion Lannister; Tywin Lannister; mountain clans; the bargain; Lannister host; collateral; Shagga   </p>
+<h3 id="sansa-v">Sansa V</h3>
+<p>Summary: Joffrey's first court consolidates the coup: Stark and Baratheon allies are summoned as traitors, Tywin becomes Hand, Janos Slynt receives Harrenhal, Barristan Selmy is expelled, and Sansa kneels on his discarded cloak to beg mercy. <br />
+Analysis: The chapter is the new regime's institutional restructuring: merit, precedent, and sworn vows are traded for loyalists. Barristan's expulsion and Sansa's plea show honor becoming a costume the <a href="//05%20Characters%20and%20Entities/Iron%20Throne%20Regime.html">Iron Throne Regime</a> no longer wears. <br />
+Source anchors: Sansa Stark; Joffrey Baratheon; first court; Barristan Selmy; Janos Slynt; Tywin as Hand; the Hound in the Kingsguard   </p>
+<h3 id="eddard-xv">Eddard XV</h3>
+<p>Summary: Imprisoned beneath the Red Keep with his shattered leg untreated, Ned endures isolation and visions; Varys visits in disguise and offers a narrow bargain — confess treason, recognize Joffrey, and Sansa may live. <br />
+Analysis: Ned's honor becomes expendable only when the threat transfers from himself to his daughter. Varys's visit is the book's theory of the realm: peace needs a confession, and a dead man is useless. The choice is real and has only one compassionate answer, and it turns on <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> anyone else would have used years earlier. <br />
+Source anchors: Eddard Stark; dungeon; Varys; the Tears of Lys; confession; Sansa's life; the game of thrones   </p>
+<h3 id="catelyn-ix">Catelyn IX</h3>
+<p>Summary: Walder Frey bars the crossing until Catelyn enters the Twins and negotiates marriages, wardships, and fosterage for Frey sons; Robb divides his army, sending Roose Bolton's foot toward Tywin and taking the horse toward Jaime. <br />
+Analysis: The Frey bargain converts urgent military movement into permanent dynastic obligations — a toll paid before the campaign's outcome is known. Catelyn's negotiation is maternal strategy in service of a son's war, and a textbook case of <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> deciding what formal fealty cannot. <br />
+Source anchors: Catelyn Stark; Walder Frey; the Twins; marriages; Robb Stark; Roose Bolton; divided army   </p>
+<h3 id="jon-viii">Jon VIII</h3>
+<p>Summary: After the wight attack nearly kills him, Mormont gives Jon Longclaw, reforged with a white wolf pommel, in thanks for the fire that saved the Lord Commander's life. Maester Aemon reveals he is Aemon Targaryen and refuses to tell Jon whether to stay or go. <br />
+Analysis: The sword is recognition; Aemon's confession is the cruelest lesson in renunciation — love makes duty costly, and the Watch renounces family because it must. Jon's nightmare of the burning corpse wearing Ned's face binds his two worlds and makes the choice personal rather than formal, the deepest test of <a href="//02%20Concepts/Institutions.html">Institutions</a> as lived allegiance. <br />
+Source anchors: Jon Snow; Longclaw; wight; Jeor Mormont; Aemon Targaryen; the vow; fire; Ned imprisoned   </p>
+<h3 id="daenerys-vii">Daenerys VII</h3>
+<p>Summary: After Drogo defeats Khal Ogo and sacks a Lhazareen town, Daenerys stops the rapes by claiming the captive women; she asks the healer Mirri Maz Duur to attend to Drogo's infected wounds. <br />
+Analysis: Daenerys's intervention is the first exercise of sovereign mercy — she claims victims as slaves to end rape — but the dependency on Mirri's healing will unravel everything. The chapter tests whether rule can protect the vulnerable inside a plunder economy, and it shows <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> converting conquest's spoils into her earliest source of authority. <br />
+Source anchors: Daenerys Targaryen; Khal Drogo; Lamb Men; rapes stopped; claimed captives; Mirri Maz Duur; wounded Drogo   </p>
+<h3 id="tyrion-viii">Tyrion VIII</h3>
+<p>Summary: Tywin places Tyrion and the clansmen under Gregor Clegane in the vanguard; the predawn alarm comes when Robb's host steals a march, and Tyrion survives the brutal Battle of the Green Fork, which ends with the revelation that Robb's main force has ridden south. <br />
+Analysis: The Green Fork battle is Tywin's instrumentality made flesh: a feigned collapse meant to draw the Starks into the river, a textbook <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> operation in managed risk. Tyrion's survival in mismatched armor while his father wastes the undisciplined west prepares his eventual role as the family's substitute commander. <br />
+Source anchors: Tyrion Lannister; Battle of the Green Fork; Gregor Clegane; vanguard; Tywin's feint; Robb's split; Shae   </p>
+<h3 id="catelyn-x">Catelyn X</h3>
+<p>Summary: Catelyn waits through the ambush in the Whispering Wood, hears the battle without knowing the outcome, and greets the returning Robb with Jaime captured — while insisting one victory is not the war. <br />
+Analysis: Tactical success enlarges leverage without resolving the strategic contest: Tywin remains free and Riverrun besieged, so <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> continues past every victory. The chapter is Catelyn's own discipline — grief deferred, maternal fear suppressed — for the sake of command. <br />
+Source anchors: Catelyn Stark; Whispering Wood; Robb Stark; Jaime Lannister captive; battle; the war continues   </p>
+<h3 id="daenerys-viii">Daenerys VIII</h3>
+<p>Summary: Drogo, his breast wound festering, lies infected and feverish; Dany begs the godswife Mirri Maz Duur to save him, and the maegi warns that bloodmagic demands a life for a life. The ritual — a stallion slain and bathed in blood — begins as the khalasar dissolves around them and Dany goes into labor. <br />
+Analysis: The chapter charts the limits of <a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a> inside a warrior honor code: Drogo's pride and the Dothraki fear of the maegi's art reject the very cure that could save their khal, so desperation turns to forbidden magic. Dany's plea to Mirri binds her fate — and her child's — to a price she does not yet understand, making <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> and sacrifice the hidden cost of restoration. <br />
+Source anchors: Daenerys Targaryen; Khal Drogo; infected wound; Mirri Maz Duur; bloodmagic; stallion's blood; labor begins   </p>
+<h3 id="arya-v">Arya V</h3>
+<p>Summary: Living roof-to-roof in Flea Bottom, Arya hunts pigeons, guards her disguise as a boy, and at Baelor's Sept witnesses Ned's confession and Joffrey's execution. Yoren seizes her, forces her eyes away, recovers Needle, and cuts away her recognizable hair. <br />
+Analysis: The execution is the book's most public performance of illegitimate power: a wire-drawn confession recites before the realm, and the crowd approves the beheading — the terminal failure of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> in its most visible theatrical form. Arya's flight from her own identity — Yoren's knife cutting away the hair of Arya Stark — completes the theme that survival requires erasure. <br />
+Source anchors: Arya Stark; Flea Bottom; Baelor's Sept; Ned's execution; Joffrey; Yoren; Needle; identity erased   </p>
+<h3 id="bran-vii">Bran VII</h3>
+<p>Summary: Following a three-eyed-crow dream into the crypts, Bran finds Rickon hiding in Ned's empty tomb after the same dream; a bloodied raven arrives, and Luwin confirms Ned's death, calling for a stonecarver. <br />
+Analysis: The shared dream — both brothers dreaming of the Father in the crypts — begins to validate Bran's uncanny perception against Luwin's rationalism, giving <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> an experiential core the maester's science cannot refute. The raven's "dark wings, dark words" makes the supernatural reading of events the more truthful one. <br />
+Source anchors: Bran Stark; crypts; three-eyed crow; Rickon; Shaggydog; the raven; Ned's death; old gods   </p>
+<h3 id="sansa-vi">Sansa VI</h3>
+<p>Summary: After the execution, Sansa withdraws into sleep and contemplated suicide; Joffrey has her beaten, forces her to dress as his betrothed, and shows her Ned's tarred head. Her retort that Robb may bring her Joffrey's head provokes another beating. <br />
+Analysis: Sansa's courtly fantasy dies on the ramparts. The Hound's advice — give him the smiles he wants — becomes survival performance, and her near-impulse to push Joffrey marks the birth of a cold realism beneath the courtesy, the violent end of the girl who believed <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> could be kept clean. <br />
+Source anchors: Sansa Stark; Joffrey Baratheon; the Hound; heads on spikes; beaten; survival performance; the betrothal   </p>
+<h3 id="daenerys-ix">Daenerys IX</h3>
+<p>Summary: Daenerys wakes to learn Rhaego was stillborn and monstrous, the khalasar has scattered, and Mirri's magic preserved only Drogo's breathing body. She bathes him one last time and smothers him rather than accept that empty continuation. <br />
+Analysis: Mirri's "death pays for life" bargain is fulfilled in exactly the way Dany did not see coming: the future and the husband are both gone. The smothering is the first deliberate sovereign act — choosing an end over a hollow afterimage — and it completes the full cost of <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> embedded in her rise. <br />
+Source anchors: Daenerys Targaryen; Rhaego stillborn; Mirri Maz Duur; Drogo's "life"; the price of the bargain; smothering   </p>
+<h3 id="tyrion-ix">Tyrion IX</h3>
+<p>Summary: News that Robb has freed Riverrun and captured Jaime exposes the Lannister position; Tywin withdraws to Harrenhal, orders Gregor, Vargo Hoat, and Amory Lorch to burn the riverlands, and sends Tyrion to King's Landing to rule and curb Joffrey. <br />
+Analysis: With Jaime "lost," Tyrion becomes his father's only investment. Tywin's private admission that Joffrey's execution of Ned was madness — and the order to burn the riverlands — reveal the regime's cold calculus, with <a href="//05%20Characters%20and%20Entities/House%20Lannister.html">House Lannister</a> converting all moral excess into strategic position. <br />
+Source anchors: Tyrion Lannister; Tywin Lannister; Harrenhal; riverlands burning; Joffrey's folly; the order to rule; Shae   </p>
+<h3 id="jon-ix">Jon IX</h3>
+<p>Summary: Jon deserts after Ned's death intending to join Robb, but Ghost and seven friends find him, recite the vow, and bring him back; Mormont reveals he anticipated the flight and offers Jon a place on a ranging to find Benjen. <br />
+Analysis: The friends' intervention makes brotherhood an enacted restraint rather than an abstraction inside the <a href="//05%20Characters%20and%20Entities/Nights%20Watch.html">Nights Watch</a>; Jon's choice to join the ranging converts grief into duty. The chapter reframes loyalty: the Watch, not the blood, is now his home. <br />
+Source anchors: Jon Snow; desertion; the vow; friends; Mormont; the ranging; Benjen; Ghost   </p>
+<h3 id="catelyn-xi">Catelyn XI</h3>
+<p>Summary: The northern and river lords proclaim Robb as the King in the North; Catelyn watches her son crowned by acclamation, understanding that regional sovereignty now competes openly with the Iron Throne. <br />
+Analysis: The proclamation is the book's constitutional rupture: three hundred years of unified rule yield to a regional king. <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> is now plural, and Catelyn's grief and pride are fused in the new sovereignty. <br />
+Source anchors: Catelyn Stark; Robb Stark; King in the North; acclamation; the Greatjon; old kingdom reborn   </p>
+<h3 id="daenerys-x">Daenerys X</h3>
+<p>Summary: Daenerys builds Drogo's funeral pyre, binds Mirri Maz Duur to it, and walks into the flames carrying her dragon eggs; from the ashes emerge three newborn dragons, the first in living memory. <br />
+Analysis: The funeral pyre is rebirth through death: "only death can pay for life." Daenerys's authority becomes grounded not in borrowed male claims but in witnessed miracle and chosen command — the book's closing conversion of horror into mythic sovereignty, a new <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> hatched from ashes. <br />
+Source anchors: Daenerys Targaryen; funeral pyre; three dragons; Ser Jorah; the promise; rebirth   </p>
+<h3 id="appendix">Appendix</h3>
+<p>Summary: The extract's appendix lists the great houses — Baratheon, Stark, Lannister, Arryn, Tully, Tyrell, Greyjoy, Martell, Targaryen — with lineages, banners, words, the Targaryen succession, and closing acknowledgments. <br />
+Analysis: The appendix is not mere reference material: it teaches how kinship, house structure, and genealogical memory organize everything the novel dramatizes. Every claim in the book is embedded in lineage, marriage strategy, bannerman structure, and inherited right, making <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> a political tool rather than neutral lore. <br />
+Source anchors: appendix; houses; lineages; banners; words; Targaryen succession; acknowledgments   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The constitutional axiom</strong>: "the man who passes the sentence should swing the sword" (Bran I) — Ned's doctrine of embodied justice.   </li>
+<li><strong>The game defined</strong>: "When you play the game of thrones, you win or you die" (Cersei, Eddard XII godswood) — the book's one-line thesis.   </li>
+<li><strong>House words as memory-tech</strong>: "Winter is Coming" (Stark), "Hear Me Roar!" (Lannister), "As High As Honor" (Arryn), "Family, Duty, Honor" (Tully), "Ours is the Fury" (Baratheon), "Growing Strong" (Tyrell), "We Do Not Sow" (Greyjoy), "Unbowed, Unbent, Unbroken" (Martell), "Fire and Blood" (Targaryen).   </li>
+<li><strong>The debt ledger</strong>: the crown is six million gold dragons in debt, mostly to the Lannisters and the Iron Bank — a single measure of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> failure.   </li>
+<li><strong>The assassination instruments</strong>: the assassin's dagger is Valyrian steel with a dragonbone hilt; the poison is the untraceable Tears of Lys; Robert's own squire Lancel is used to fortify his wine.   </li>
+<li><strong>Genealogy as forensics</strong>: Robert's bastards all have Baratheon black hair; the "seed is strong" clue is what links Cersei's children to Jaime.   </li>
+<li><strong>The Tower of Joy memory</strong>: seven against three, "And now it begins … No, now it ends," and a promise to Lyanna — the unexplained core of the series.   </li>
+<li><strong>The frontier barometer</strong>: Othor and Jafer's reanimated bodies, the severed hand, and Osha's testimony are the reality the maesters rationalize away.   </li>
+<li><strong>The north's last identification</strong>: "The lone wolf dies, but the pack survives" (Ned to Arya) — the counterweight to the game's individualism.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//05 Characters and Entities/House Stark.html">house stark</a></li>
+	<li><a class="backlink" href="//04 Series/A Song of Ice and Fire.html">a song of ice and fire</a></li>
+	<li><a class="backlink" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html">a clash of kings</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/House Lannister.html">house lannister</a></li>
+	<li><a class="backlink" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html">a feast for crows</a></li>
+	<li><a class="backlink" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html">a dance with dragons</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Iron Throne Regime.html">iron throne regime</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Nights Watch.html">nights watch</a></li>
+	<li><a class="backlink" href="//02 Concepts/Legitimacy and Succession.html">legitimacy and succession</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/fantasy/index.html">fantasy</a></li>
+	<li><a class="backlink" href="//obs.html/tags/a-song-of-ice-and-fire/index.html">a-song-of-ice-and-fire</a></li>
+	<li><a class="backlink" href="//obs.html/tags/game-of-thrones/index.html">game-of-thrones</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A192374136688812285684651724237445099844{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D192374136688812285684651724237445099844{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B192374136688812285684651724237445099844{level}" level="{level}" note_temp_id="192374136688812285684651724237445099844" onclick="window.ObsHtmlGraph.run(this, '192374136688812285684651724237445099844', 'a game of thrones');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C192374136688812285684651724237445099844{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

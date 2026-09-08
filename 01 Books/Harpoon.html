@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="harpoon">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'harpoon';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=harpoon" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="harpoon">Harpoon</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Harpoon</code> is a standalone nonfiction book note in the books layer, backed by a local extracted text. In <code>06 Plans/book-affinity.md</code> it belongs to the <strong>Institutions of informal power</strong> thematic cluster, alongside <code>Gomorrah</code>, <code>Narconomics</code>, <code>Lucifer's Banker</code>, and <code>Taliban</code>. Its resolved sibling/kindred target set is <a href="//01%20Books/Narconomics.html">Narconomics</a>, <a href="//01%20Books/Biohazard.html">Biohazard</a>, <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a>, and <a href="//01%20Books/Gomorrah.html">Gomorrah</a> — each an account of power exercised through money, secrecy, or parallel structures rather than through formal state institutions. The book feeds two reading paths directly, <a href="//03%20Reading%20Paths/Illicit%20Markets%2C%20Contraband%2C%20and%20State%20Capacity.html">Illicit Markets, Contraband, and State Capacity</a> and <a href="//03%20Reading%20Paths/Intelligence%2C%20Warning%2C%20and%20Institutional%20Self-Deception.html">Intelligence, Warning, and Institutional Self-Deception</a>, and sits under the <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a> and <a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a> maps of content. Its load-bearing concepts are Financial Infrastructure, Illicit Markets, State Capacity, Chokepoints and Gateways, Informal Institutions, and Empire and Periphery.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>Harpoon</code> tells the story of an Israeli campaign that treated terrorist money as an operational target rather than as background logistics. The book opens in the West Bank (Part I, "The Palestinians"), moves to Lebanon, Iran, and global narcotics finance (Part II, "The Party of God and the Devil's Portfolio"), and closes on the institutional afterlife of the method (Part III, "Legacy") plus an Afterword. Nitsana Darshan-Leitner and Samuel M. Katz center the book on Meir Dagan, first as Ariel Sharon's Gaza-era commando and later as Mossad director, and on the small classified Israeli task force whose randomly chosen code name became Harpoon. The book's controlling image is Dagan's claim that money is the oxygen that lets terrorism breathe: suicide vests, safe houses, martyr stipends, forged documents, rocket inventories, and social-service networks all require bank accounts, couriers, charities, taxes, exchange houses, or criminal proceeds.   </p>
+<p>The first third of the book moves from Palestinian suicide terrorism into the machinery that paid for it. The kidnapping and murder of Border Guard sergeant Nissim Toledano in Lod, the da'wa networks around Hamas clinics and schools, the Afula, Hadera, Beit Lid, Dizengoff Center, Dolphinarium, Sbarro, Park Hotel, and Hebrew University attacks, and the documents seized in Operation Defensive Shield are used to make a practical point: terror finance is not a metaphor. It is a chain of named institutions and people, including Arab Bank, the Holy Land Foundation, the Saudi Committee for the Support of the Al Quds Intifada, Musa Abu Marzook, Ibrahim Hamed, Abdullah Barghouti, and Arafat's aides such as Fuad Shubaki and Mohammed Rashid.   </p>
+<p>The book's middle sections explain how Harpoon moved between intelligence work, diplomacy, and law. Uri L., Lavi S., Shai U., COGAT, the Shin Bet, A'man, the Israel Police, the Tax Authority, Customs, the Bank of Israel, the Foreign Ministry, and the Mossad appear not as scenery but as parts of a shared machine for converting bank records into pressure. The book is especially specific about the legal turn: Dagan and Uri recognize that American victims, the 1992 Anti-Terrorism Act, the PATRIOT Act, Shurat HaDin, Nitsana Darshan-Leitner, Gary Osen, Robert Tolchin, and cases such as Linde, Licci, and Sokolow can make banks pay a cost that Israeli aircraft or commandos cannot impose without diplomatic fallout.   </p>
+<p>The second half widens from Hamas and the Palestinian Authority to Hezbollah, Iran, Lebanon's banks, and narco-finance. The 2006 Second Lebanon War becomes a test of whether money itself can be attacked in wartime: Dagan presses for strikes on Bayt al-Mal, Al Baraka, Fransabank, Middle East Africa Bank, and a prominent banking family's residence. Later chapters follow Salah Ezzedine's al-Mustathmir fraud, Ghazi Atef Nasser al-Din's Venezuelan and Syrian drug route, Hezbollah's West African cocaine corridors through Accra and Beirut, the Lebanese Canadian Bank, the Gauss malware, Munir Z., Nasser al-Waer, Alfa, and the American Treasury and DEA officers who slowly turn Israeli financial intelligence into sanctions, indictments, forfeiture actions, and civil suits.   </p>
+<p>The narrative repeatedly contrasts two operational instincts: follow the money long enough to expose networks, or block it immediately to stop attacks. Philip Rosenberg's CIA FINO view favors tracking transactions to find the larger organism; Dagan, the Shin Bet, and Harpoon often prefer seizure, disruption, bombing, designation, litigation, or targeted killing when named victims and imminent violence are involved. The book does not present one pure doctrine. It shows a toolkit that shifts from the West Bank to Beirut, Dubai, Caracas, Damascus, West Africa, New York courts, SWIFT, and ISIS oil fields, depending on which instrument can damage the financial artery most directly.   </p>
+<p>The afterword turns the campaign into an institutional legacy. Arab Bank is found liable in Brooklyn, the PA and PLO lose in the Sokolow trial, Dagan dies of cancer after a controversial final public life, and the battlefield moves toward social media platforms used by Hamas, Hezbollah, ISIS, and lone attackers. The book's final claim is concrete rather than theoretical: the same reasoning that pursued Arab Bank wire transfers, Haniyeh's suitcases, LCB correspondent accounts, and ISIS oil trucks can be applied to Facebook, Twitter, Google, YouTube, and other digital services when those services become operational infrastructure for recruitment, praise, command, or fundraising.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<p><strong>Israeli principals and Harpoon's core.</strong>   </p>
+<ul>
+<li><strong>Meir Dagan</strong> (born Meir Huberman, 1945–2016): the book's protagonist and organizing figure. Emigrated from Poland via Novosibirsk at age five, raised in Bat Yam, grandson of Rabbi Dov Ehrlich, whose 1944 murder photograph haunted him; conscripted in 1963, rejected by Sayeret Mat'kal, joined the 35th Paratroop Brigade, fought in 1967 and 1973, commanded Sayeret Rimon in Gaza under Sharon, ran the South Lebanon liaison unit Ya'kal, served as the chief of staff's counterterrorism advisor and head of the Operations Brigade, became deputy then head of the Prime Minister's Counterterrorism Bureau, and was Sharon's campaign manager in 2001. Sharon placed him at the head of Harpoon (2001–02), then appointed him the tenth Mossad director (2002–2011). Motivation: "money is the oxygen that allowed terror to breathe"; his doctrine — strip the dollar, dinar, and euro from hostile organizations — drives every operation in the book.   </li>
+<li><strong>Uri L.</strong>: the COGAT officer who first authored intelligence briefings on Hamas's da'wa finances in 1992 and who became Dagan's deputy, the unit's diplomatic networker, and Shurat HaDin's liaison. With Shai U. he is one of the "U2s." Combinations of warmth, pressure, and meticulous preparation are his tradecraft.   </li>
+<li><strong>Shai U.</strong>: Shin Bet counterterrorism and counterintelligence officer since 1984, nicknamed "the Illusionist," who ran the Latin and South American desk (2001–2004) before joining Harpoon as head of operations/deputy chief. He ran the recruitment of Adnan the banker, provided the affidavit on Martyrs Foundation account 108987 in Licci, and after the unit's decline became general manager of an Israeli soccer club.   </li>
+<li><strong>Lavi S.</strong>: COGAT intelligence officer and master Arabist, later head of the Ministry of Defense's Palestinian Affairs Division; a Harpoon analyst who articulated the cradle-to-grave logic of da'wa. He personally requested bank managers open their doors during the Green Lantern raids.   </li>
+<li><strong>Uri Bar-Lev</strong>: former combat engineer officer, founder of Duvdevan under Ehud Barak and of Jerusalem's Unit 33; the Israeli police attaché in Washington who sanitized Harpoon intelligence into DEA/FBI cooperation on Hezbollah narcotics.   </li>
+</ul>
+<p><strong>The legal front.</strong>   </p>
+<ul>
+<li><strong>Nitsana Darshan-Leitner</strong>: attorney from Kiryat Ono, Bar-Ilan University-educated, who petitioned against Mahmoud Abu Abbas in 1994 and co-founded Shurat HaDin (the "letter of the law"), modeled on the Southern Poverty Law Center, with Mordechai Haller and her husband Aviel Leitner. Motivation: to make terror-finance litigation a legal arm of the war. Co-author of the book.   </li>
+<li><strong>Samuel M. Katz</strong>: co-author, editor of the interviews and operational reconstruction.   </li>
+<li><strong>Gary Osen</strong>: New Jersey attorney who filed the first civil Anti-Terrorism Act suit against the Arab Bank in Brooklyn in July 2004. <strong>Robert Tolchin</strong>, <strong>David Strachman</strong>, <strong>Mordechai Haller</strong>, <strong>Roy Kochavi</strong>, and <strong>Kent Yalowitz</strong> (lead trial counsel in Sokolow) round out the litigator cast.   </li>
+</ul>
+<p><strong>The adversaries and their money men.</strong>   </p>
+<ul>
+<li><strong>Yasir Arafat</strong>: PLO chairman and PA president, presented as the head of a corrupt oligarchy who kept personal control of the PA's accounts through tattered notebooks; his revenue sources included a 5 percent income tax, extortion, criminal proceeds, and a $50 million payment from Saddam Hussein. His enablers were Mohammed Rashid (economic advisor and investment partner), Yossi Ginossar (former Shin Bet officer turned conduit), and Ozrad Lev, using Bank Leumi account 80-219000 and Banque Lombard Odier.   </li>
+<li><strong>Hamas</strong>: founded 1987 by Sheikh Ahmed Yassin; its political wing controls the Izzedine al-Qassam Brigades and a da'wa infrastructure funded through the Holy Land Foundation, Interpal, the al-Aqsa Foundation, and Gulf donors. Key figures: Musa Abu Marzook, Mohammed Salah, Saleh al-Aruri, Yehiya Ayyash, Ibrahim Hamed, Abdullah Barghouti, Abbas al-Sayyid, Ismail Haniyeh, Mahmoud al-Mabhouh, Mohammed el-Ghoul, and the West Bank kidnap cell of Hussam and Marwan Qawasmeh and Amer Abu Aisha.   </li>
+<li><strong>Palestinian Islamic Jihad (PIJ)</strong>: founded by Dr. Fathi Shiqaqi, funded substantially by Iran; after Shiqaqi's killing in Malta, stipends stopped because the account details died with him.   </li>
+<li><strong>Hezbollah</strong>: "The Party of God," Iran's Lebanese proxy, run by Sheikh Hassan Nasrallah, with finance centered on Bayt al-Mal and Yousser Company for Finance and Investment. Its violent special-operations wing was commanded by Imad Mughniyeh; its financiers and fixers in the book are Salah Ezzedine, Ghazi Atef Nasser al-Din, Chekry Harb "El Taliban", and Ayman Joumaa.   </li>
+<li><strong>Venezuelan state actors</strong>: Hugo Chávez's and Nicolás Maduro's officials, especially Interior Minister Tareck El Aissami, convert state resources — passports, diplomatic pouches, the Caracas–Damascus–Tehran "Aeroterror" flights — into Hezbollah logistics.   </li>
+</ul>
+<p><strong>American and international counterterrorism-finance officials.</strong>   </p>
+<ul>
+<li><strong>Stuart A. Levey</strong>: Treasury's first Under Secretary for Terrorism and Financial Intelligence (2004), architect of OFAC designations of Bayt al-Mal and Yousser, and Harpoon's principal American partner. <strong>David S. Cohen</strong>: Levey's successor, later deputy director of the CIA, who built an ISIS-focused financial task force on Harpoon's model. <strong>Philip Rosenberg</strong>: economist who headed the CIA's Financial Intelligence Operations unit (FINO) and advocated following rather than foiling. <strong>Jimmy Gurulé</strong> and <strong>Juan Zarate</strong> also appear as Treasury figures. On the law-enforcement side, the DEA's Operation Titan/Pegasus work is carried by unnamed agents and Assistant U.S. Attorneys.   </li>
+</ul>
+<p><strong>The banks and their leaders.</strong>   </p>
+<ul>
+<li><strong>Arab Bank</strong>, founded 1930 by <strong>Abdul Hameed Shoman</strong> in British-mandate Palestine and run after 1974 by <strong>Abdul Majid Shoman</strong> (Arafat's personal banker), presented as the central Palestinian-money institution: 278 branches in 27 countries, roughly $35 billion in assets, a 5 percent "Support the al-Aqsa Intifada fee," and the pipeline for the Saudi Committee's payments to bomber families.   </li>
+<li><strong>Lebanese Canadian Bank (LCB)</strong>, the Beirut institution with 35 Lebanese branches and a Montreal office that wire-cleared drug money for Hezbollah through New York correspondents.   </li>
+<li><strong>Salam Fayyad</strong>, PA Finance Minister and former Arab Bank regional manager, and <strong>Adnan</strong> (pseudonym), the West Bank banker turned informant, illustrate the banker-as-gatekeeper spectrum.   </li>
+</ul>
+<p><strong>The major victims remembered by the book.</strong>   </p>
+<ul>
+<li>Nissim Toledano, Alisa Flatow, Daniel Wultz, Aaron Ellis, Ella Abukasis, Scott Goldberg, the Schijveschuurder family, the Unger family, and the IDF/security personnel and American students killed at the Hebrew University — the human cost that makes each financial lead legally and morally usable.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<p>Book-to-book (from <code>06 Plans/book-affinity.md</code>, one-way where genuinely engaged):   </p>
+<ul>
+<li><a href="//01%20Books/Narconomics.html">Narconomics</a>: reads drug organizations as firms whose financing obeys market logic; the structural-economic companion to Harpoon's operative account of narco-terror. Engaged in Chapters 13 and 19.   </li>
+<li><a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a>: the offshore, secrecy-layer view of money plumbing; corresponds to Harpoon's correspondent-banking and designation campaign. Engaged in Chapters 16 and 19.   </li>
+<li><a href="//01%20Books/Gomorrah.html">Gomorrah</a>: parallel-state organized crime as a capitalist firm — the nearest structural analogue to Hezbollah's state-within-a-state. Engaged in Chapter 15.   </li>
+<li><a href="//01%20Books/Biohazard.html">Biohazard</a>: state secrecy around coercive programs and the intelligence-warning axis; a genuine sibling for the clandestine Iran campaign and TFTP secrecy of Chapter 18.   </li>
+</ul>
+<p>Concept links (path-qualified, canonical):   </p>
+<ul>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>   </li>
+<li><a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a>   </li>
+</ul>
+<p>Maps of content and reading paths:   </p>
+<ul>
+<li><a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a>   </li>
+<li><a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a>   </li>
+<li><a href="//00%20Maps%20of%20Content/Linkage%20Atlas.html">Linkage Atlas</a>   </li>
+<li><a href="//03%20Reading%20Paths/Illicit%20Markets%2C%20Contraband%2C%20and%20State%20Capacity.html">Illicit Markets, Contraband, and State Capacity</a>   </li>
+<li><a href="//03%20Reading%20Paths/Intelligence%2C%20Warning%2C%20and%20Institutional%20Self-Deception.html">Intelligence, Warning, and Institutional Self-Deception</a>   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Money as oxygen</strong>: the recurring claim that a terrorist system dies when its finance is cut, tested from the deportation of the 415 to Haniyeh's suitcases and Hamas's payroll couriers.   </li>
+<li><strong>Follow vs. foil</strong>: Philip Rosenberg's FINO doctrine of tracking money to map the organism versus Dagan/Harpoon's preference for seizure, designation, bombing, litigation, and targeted killing. The book presents the tension as unresolved doctrine.   </li>
+<li><strong>Financial isolation as asymmetric statecraft</strong>: OFAC designation, sanctions, correspondent-banking jurisdiction, SWIFT exclusion, and civil suits as substitutes for troops and aircraft.   </li>
+<li><strong>The courts as a battlefield</strong>: Anti-Terrorism Act treble damages, foreign sovereign immunity carve-outs, and the risk calculus of banks deciding whether a fee is worth a lawsuit.   </li>
+<li><strong>Corruption and parallel states</strong>: Arafat's oligarchic PA, Hezbollah's state-within-a-state, and Hamas's da'wa as governance structures that rival formal state institutions.   </li>
+<li><strong>Narco-terror convergence</strong>: criminal revenue — cigarette smuggling, cocaine, Ponzi fraud — becoming the operational backbone of a political-religious movement.   </li>
+<li><strong>Chokepoints and the rising cost of sanctioned flows</strong>: when wires close, cash moves via suitcases, couriers, money changers, and tunnels, raising the price of every dollar delivered.   </li>
+<li><strong>Interagency coordination and secrecy</strong>: the roundtable as an invention, the price of sharing sanitized intelligence, and the Mossad's culture of "neither confirm nor deny."   </li>
+<li><strong>The migration of the method</strong>: West Bank → Beirut → Dubai → Caracas → West Africa → New York courts and SWIFT → social media platforms.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: banks, wire transfers, correspondent clearings, and the SWIFT network are treated as terrain to be surveilled, seized, bombed, or dismembered; the book's central advance is that the plumbing itself is the target.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: the cigarette, cocaine, and Ponzi revenue streams that fund Hamas and Hezbollah, analyzed as a continuous criminal enterprise rather than exceptional behavior.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Harpoon's roundtable and the U.S. Treasury apparatus show what a state can do when agencies are compelled to cooperate around money.   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>: the correspondent account in New York, the Accra–Beirut air corridor, and SWIFT exclusion each show a single node whose pressure cuts a flow.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: da'wa, money changers (halfanim), hawaladars, and unlicensed charities operate as parallel financial systems outside formal banking.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: Venezuela and West Africa become peripheral territories of a Hezbollah/Iran criminal empire, while sanctions isolate sovereign states at their financial periphery.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the paid supply chain — recruiters, trainers, guides, chemicals, stipends, trucks, tunnels — behind a single bomber, rocket, or payroll delivery.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: FINO, Unit 8200, HUMINT, SIGINT, and FININT converge on the financial record as a source and a target.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: sanitized intelligence-sharing across agencies and nations, and the human and technical assets (Gauss, Munir Z.) that make records usable.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>: Anti-Terrorism Act litigation, correspondent-bank jurisdiction, and state-liability verdicts act as governance-by-courtroom.   </li>
+<li><a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a>: the final turn — social media platforms as the next chokepoints to be lawyered into accountability.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="author-s-note">Author's Note</h3>
+<p>Summary: The authors introduce Harpoon as a book about a new and unconventional method of fighting terrorism — financial warfare against extremist organizations, their leadership, and the rogue regimes that support them — set in Israel's espionage and counterterrorism world. The concept was initiated and developed by the members of a secret unit in Israel's intelligence services, a small band of innovators whose name, Harpoon, stayed classified for nearly twenty years; the note claims Israel's financial-war precedent was the one the United States followed after September 11, 2001. The concept is credited largely to Meir Dagan, who realized that "money was the oxygen that allowed terror to breathe" and wanted to suffocate every dollar, dinar, and euro from the organizations dedicated to killing innocent civilians. The note is signed by both authors, July 2017. <br />
+Analysis: The Author's Note frames <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> as an operational battlefield equal to raids, arrests, and interrogations, which is why a lawsuit or a Treasury designation counts as the same kind of act as a Shin Bet arrest. By collapsing spies, lawyers, and bankers into one causal chain, the note prepares the reader for the book's central wager: cut the oxygen and the organism suffocates. The classified-for-twenty-years framing also flags that virtually the entire account rests on anonymous interviews that the book cannot independently verify. <br />
+Source anchors: financial warfare; Meir Dagan; money is oxygen; Harpoon classified; July 2017.   </p>
+<h3 id="preface-high-value-targets">Preface: High-Value Targets</h3>
+<p>Summary: The preface opens in late March 2016 with U.S. Army Night Stalkers of the 160th Special Operations Aviation Regiment ferrying a capture-or-kill force into ISIS-held Syria against Abd al-Rahman Mustafa al-Qaduli, also known as Haji Imam — a fifty-nine-year-old former Mosul physics teacher, al-Qaeda in Iraq veteran, Camp Bucca detainee, deputy to Abu Bakr al-Baghdadi, Treasury-designated Specially Designated Global Terrorist, and $7 million Rewards for Justice target. The assault force killed al-Qaduli and his bodyguards and recovered phones and effects. The chapter links the raid to Defense Secretary Ash Carter and Joint Chiefs chairman General Joseph Dunford, and to the May 2015 Delta Force raid that killed ISIS oil chief Abu Sayyaf and captured his computers and notebooks. Its closing claim is that the blueprint for America's war on terror money was drawn in the West Bank some twenty years earlier by Meir Dagan. <br />
+Analysis: By opening on a financier rather than a battlefield commander, the preface argues that managing money now carries the same targeting weight as ordering attacks. Camp Bucca, Rewards for Justice, and the Abu Sayyaf raid bind prison history, formal U.S. designation, and battlefield exploitation into a single method for attacking <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> revenue such as ISIS oil. The Israeli first-mover claim also lets the book present itself as an origin story for the American system rather than merely a history of one unit. <br />
+Source anchors: Night Stalkers; Haji Imam; Camp Bucca; Rewards for Justice; Abu Sayyaf; Ash Carter; Joseph Dunford; ISIS oil.   </p>
+<h3 id="chapter-1-the-tourists-from-the-windy-city">Chapter 1: The Tourists from the Windy City</h3>
+<p>Summary: On December 13, 1992, Nissim Toledano, a twenty-nine-year-old Border Guard sergeant in Lod, was knocked down, beaten, handcuffed, and taken in a 1973 red Subaru by four young Palestinians who called themselves the Secret Squad and acted "on spec" to prove themselves to a local Hamas commander. The kidnappers sent Toledano's police ID to a Red Crescent office in El-Bireh and demanded the release of Hamas founder Sheikh Ahmed Yassin; Rabin refused to negotiate, raids swept the West Bank and Gaza, and Bedouin girl Fatma Abu Dahuk found Toledano's mutilated body near Kfar Adumim. Israel deported 415 Hamas and PIJ leaders to Marj al-Zuhur in southern Lebanon, where they were schooled by Hezbollah and Iran. In January 1993 Palestinian-American car salesman Mohammed al-Hamid Khalil Salah arrived from Chicago via Ben-Gurion with Mohammed Jarad and was arrested by Jerusalem's Unit 33 carrying $97,000; Salah confessed the cash was Hamas money allocated through instructions from Musa Abu Marzook and moved by money changers (halfanim), and that an earlier August 1992 trip had delivered $96,000 to Saleh al-Aruri in Hebron. <br />
+Analysis: Toledano's murder lets the book open on a victim rather than an abstraction, and the deportation of the 415 turns Hamas's structures — leaders, prisons, accountants, stipends — into the actual target. The money changers and charity wires Salah describes are <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> that underpin terror finance, while Rabin's raids show <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> being mobilized against an economy as much as against fighters. The Chicago arrival is the book's first proof that the United States operates as an ATM for Hamas. <br />
+Source anchors: Nissim Toledano; 1973 red Subaru; Secret Squad; Sheikh Ahmed Yassin; El-Bireh; Fatma Abu Dahuk; Marj al-Zuhur; Mohammed Salah; Musa Abu Marzook; Saleh al-Aruri; halfanim.   </p>
+<h3 id="chapter-2-da-wa">Chapter 2: Da'wa</h3>
+<p>Summary: The chapter contrasts the September 13, 1993 Rabin–Arafat handshake on the White House lawn with COGAT warnings, voiced first by Uri L. and Lavi S., that Hamas's da'wa (the "call to the believers") was building a cradle-to-grave civilian infrastructure — clinics, mosques, schools, food banks, religious education, money changers, transnational IOUs, and barter arrangements — funded from abroad via the Holy Land Foundation (Richardson, Texas), Interpal (London), the al-Aqsa Foundation (Germany), Gulf donors, and mosque collection jars across the United States. Hamas is presented as a 1987 creation of Sheikh Ahmed Yassin, its military wing (the Izzedine al-Qassam Brigades) directed by its political wing. The chapter then recounts Meir Dagan's biography: born Meir Huberman on January 30, 1945 aboard a train fleeing Poland; raised in Novosibirsk and Bat Yam; grandson of Rabbi Dov Ehrlich, whose 1944 photograph before his murder by the Germans Dagan kept his whole life; rejection from Sayeret Mat'kal; service in the 35th Paratroop Brigade, 1967 and 1973, the 1982 Lebanon command, the Ya'kal liaison unit; the creation of Sayeret Rimon in Gaza under Ariel Sharon; and his 1992 meeting with Uri after Operation Destruction of Leaven. <br />
+Analysis: Da'wa matters because it converts charity into infrastructure: the same networks that feed families can pay fighters, so <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> like the Holy Land Foundation and Interpal are inseparable from the Qassam Brigades' budget. Dagan's biography explains his receptiveness to Uri's thesis — Sayeret Rimon taught him to read clinics, schools, and mosques as parts of a hostile system. The White House handshake makes the blindness costly: the peace process could run in parallel with Hamas's account books, leaving <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> as the one contested layer neither side had formally claimed. <br />
+Source anchors: White House handshake; COGAT; da'wa; Holy Land Foundation; Interpal; al-Aqsa Foundation; Izzedine al-Qassam Brigades; Meir Dagan; Rabbi Dov Ehrlich; Sayeret Rimon; Operation Destruction of Leaven.   </p>
+<h3 id="chapter-3-closed-accounts">Chapter 3: Closed Accounts</h3>
+<p>Summary: The chapter follows the suicide-bombing escalation after Hamas's first city bombing in Afula on April 6, 1994 (Yehiya Ayyash's car device: seven gas cylinders, grenades, 1,100 rusty nails), the Hadera bus bombing, the No. 5 bus bombing at Dizengoff Circle (October 19, 1994, twenty-two dead), Beit Lid Junction (January 22, 1995, double bombing, twenty-three dead), Kfar Darom (April 9, 1995), and the death of American student Alisa Flatow. It tracks PIJ founder Dr. Fathi Shiqaqi to Malta under the Libyan passport name Ibrahim Shawish, his killing in Sliema on October 29, 1995 (attributed to the Mossad's Kidon unit), Ramadan Abdullah Shalah's succession, and the aftermath in which PIJ stipends and salaries stopped because Shiqaqi took the account secrets to his grave. It then covers Rabin's assassination, Shimon Peres's creation of the Prime Minister's Counterterrorism Bureau (with Ami Ayalon and Dagan as his deputy), Netanyahu's election, Dagan's promotion to head the bureau, and the killing of "the Engineer" Ayyash in early January 1996 by a booby-trapped Motorola phone, followed by the Jaffa Road and Dizengoff Center bombings. <br />
+Analysis: The killing of a leader such as Shiqaqi demonstrates that financial knowledge is an organizational choke point: PIJ salaries and stipends collapsed when the account details died with him. This makes <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> a target of assassination practice, not merely of auditing. The enforced Afula–Dizengoff sequence shows that bombers are the end of a paid supply chain, which is the observation Dagan converts into doctrine: close the accounts and the campaigns stop. <br />
+Source anchors: Afula; Yehiya Ayyash; Hadera; Dizengoff Circle; Beit Lid Junction; Alisa Flatow; Fathi Shiqaqi; Ibrahim Shawish; Kidon; Ramadan Shalah; Motorola phone; Counterterrorism Bureau.   </p>
+<h3 id="chapter-4-the-head-of-the-table">Chapter 4: The Head of the Table</h3>
+<p>Summary: Dagan builds a financial-intelligence roundtable whose monthly meetings would draw the IDF, military intelligence, the Israel Police, the Ministry of Finance, the Israel Tax Authority, Customs, COGAT, the Bank of Israel, the Foreign Ministry, the prime minister's legal adviser, the Mossad, and the Shin Bet — all of which resisted at first, with Shin Bet chief Ami Ayalon among those who hoped Dagan would give up. The chapter details Arafat's corrupt PA, the Area A cities (Hebron, Jericho, Bethlehem, Qalqilya, Tulkarm, Nablus, Jenin, Ramallah), the July 30, 1997 Mahane Yehuda double bombing, Lavi's account of da'wa as a cradle-to-grave system, Netanyahu's 1999 election loss to Ehud Barak, the failed Camp David talks of July 2000, Sharon's September 28, 2000 Temple Mount visit that ignited the al-Aqsa intifada, and Sharon's landslide election. At the first National Security Council meeting Dagan arrives late and tells Sharon, "Wherever I sit is the head of the table"; Sharon then names him commander of the new task force, which a computer program randomly codenames Harpoon, reporting directly to the prime minister's office. <br />
+Analysis: The financial-intelligence roundtable is the book's institutional invention — <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> reconfigured so that Area A knowledge, bank supervision, tax data, and espionage sit in one room around money rather than in separate agency mandates. Mahane Yehuda, Camp David, and the Temple Mount are the shocks that convert da'wa and PA corruption into operational targets. "Wherever I sit is the head of the table" becomes the book's shorthand for an authority that rested entirely on Sharon's personal backing. <br />
+Source anchors: financial intelligence roundtable; Area A; Mahane Yehuda; Camp David; Temple Mount; Wherever I sit; Harpoon; head of the table.   </p>
+<h3 id="chapter-5-khalas">Chapter 5: Khalas</h3>
+<p>Summary: Sharon orders Dagan at the Sycamore Ranch to target Arafat's personal fortune — "strip him of everything" — and Harpoon's first mission becomes Arafat's money. The chapter inventories Arafat's revenue: extorted Arab-state contributions, a 5 percent tax on Palestinian earnings, international stipends, extortion and criminal proceeds, investments, and the $50 million from Saddam Hussein for backing Iraq's invasion of Kuwait, managed through Swiss accounts, Parisian real estate, Ramallah's BMW and Mercedes dealerships, Bank Leumi account 80-219000 in Tel Aviv, an Arab Bank account in Ramallah, and his enablers Yossi Ginossar, Ozrad Lev, Mohammed Rashid, and Banque Lombard Odier in Geneva. Harpoon's first operation is a sting that defrauded Arafat and Rashid of more than $100 million through a fake Latin American investment firm. The chapter closes with the June 1, 2001 Dolphinarium discotheque bombing, the August 9, 2001 Sbarro bombing by Izzedine al-Masri with Ahlam Tamimi's involvement, the Schijveschuurder family deaths, American victims Judith Greenbaum and Chana Nachenberg, the September 11 attacks, Palestinian celebrations in Ramallah, and Bush's refusal to meet Arafat. <br />
+Analysis: By targeting Arafat's fortune, the Sycamore Ranch order turns corruption into a national-security target rather than a moral complaint. Bank Leumi 80-219000, Yossi Ginossar, and Mohammed Rashid show why <a href="//02%20Concepts/Intelligence.html">Intelligence</a> cannot rely on raids alone: the money is entangled with the peace process, foreign donors, and Israeli intermediaries. Dolphinarium and Sbarro supply the evidence that private lawsuits and bank records may be the only politically usable way to make Arafat's system pay. <br />
+Source anchors: Sycamore Ranch; Arafat; Bank Leumi 80-219000; Yossi Ginossar; Ozrad Lev; Mohammed Rashid; Banque Lombard Odier; $100 million sting; Dolphinarium; Sbarro; Ahlam Tamimi; Schijveschuurder.   </p>
+<h3 id="chapter-6-money-kills">Chapter 6: Money Kills</h3>
+<p>Summary: The chapter opens in March 2002 after 361 Israelis had been killed in seventeen months of intifada, with the Café Moment bombing, the Valley of Thieves sniper attack, and the March 27, 2002 Passover Massacre at Netanya's Park Hotel (thirty dead, 140 wounded). Sharon mobilizes twenty thousand reservists and the IDF's Operation Defensive Shield enters Jenin, Bethlehem, Nablus, Qalqilya, and Ramallah, besieging Arafat at the Muqata and finding in Fuad Shubaki's nearby office Russian machine guns, RPGs, suicide vests, counterfeit shekels, and counterfeit dollars. The chapter itemizes the paid supply chain behind each bomber — recruiters, trainers, quartermasters, explosive engineers, guides, indoctrination staff, safe houses, "martyr" videos, family stipends — and ties Hamas commander Abbas al-Sayyid to the Park Hotel device and to $13,000 monthly transfers into his Arab Bank account in Tulkarm, revealed in his May 12, 2002 Kishon Prison interrogation. It also covers the Karine-A seizure in Operation Noah's Ark and the funding streams of Iran and the Saudi Committee for the Support of the Al Quds Intifada. <br />
+Analysis: The chapter justifies its title by costing out an operation: the bomber is cheap; the system that produces him is not. Those budgets make terror finance a <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> problem, where rent, chemicals, guides, and stipends must travel through identifiable accounts such as al-Sayyid's Arab Bank transfers. Operation Defensive Shield's seized files convert previous theory into evidence, so <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> becomes a read-in, targetable layer of what was once treated as background. <br />
+Source anchors: Passover Massacre; Park Hotel; Operation Defensive Shield; Muqata; Fuad Shubaki; counterfeit shekels; Karine-A; Operation Noah's Ark; Abbas al-Sayyid; $13,000; Kishon Prison; Saudi Committee.   </p>
+<h3 id="chapter-7-blood-money">Chapter 7: Blood Money</h3>
+<p>Summary: The chapter stages Harpoon's human tradecraft as Uri L. and Shin Bet officer Shai U. ("the Illusionist") run a lunch meeting with Adnan, a West Bank banker who lives in an Area A villa, holds wanted men's accounts, and does business with Israeli banks. Using binders, the noon sun, lemonade with mint, and bladder pressure, they turn the banker into an informant. The chapter then profiles the Amman-based Arab Bank: founded in British-mandate Palestine in 1930 by Abdul Hameed Shoman (1890–1974), headquartered on Prince Shaker Street, run after 1974 by his son Abdul Majid Shoman, Arafat's personal banker; 278 branches in 27 countries, roughly $35 billion in assets, twenty-two branches in fifteen Palestinian cities; a 5 percent "Support the al-Aqsa Intifada fee" on employee salaries; and the Saudi Committee's roughly two hundred thousand transactions directing more than $90 million into Arab Bank accounts that paid pensions and family stipends — including to the families of Dolphinarium bomber Sa'id Houtari and Sbarro bomber Izzedine al-Masri. <br />
+Analysis: Adnan's recruitment shows <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> working through a banker's fear of losing a villa rather than through warrants. The Arab Bank then scales the problem from one man to a regional institution whose history, branches, and prestige are the cover for blood money. Houtari and al-Masri make "blood money" literal: <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> pays bomber families through an institution that also serves ordinary customers. <br />
+Source anchors: Adnan; Shai U.; Illusionist; Uri L.; Arab Bank; Abdul Hameed Shoman; Abdul Majid Shoman; Prince Shaker Street; Saudi Committee; Sa'id Houtari; Izzedine al-Masri; 5 percent fee.   </p>
+<h3 id="chapter-8-operation-green-lantern">Chapter 8: Operation Green Lantern</h3>
+<p>Summary: Israeli analysts chart the Hamas command-and-income structure — cells, cellular logs, family and mosque ties, and Arab Bank accounts — around Ibrahim Hamed, the Ramallah commander and relative of Khaled Meshal, linking him to the Café Moment bombing, the Rishon Le'Tzion billiard hall bombing, the Pi Glilot fuel-depot plot, and the Silwan Gang of Death. After the July 31, 2002 Hebrew University cafeteria bombing in the Frank Sinatra Building (nine dead, including Americans Marla Bennett, Benjamin Blutstein, David Gritz, Janis Coulter, and Dina Carter; one hundred wounded), Dagan presses the bank campaign against resistance rooted in Jordan-related diplomacy and in the 2003–2004 meetings with Arab Bank managers and PA Finance Minister (and former Arab Bank manager) Salam Fayyad. The American legal lever is set up: the PATRIOT Act, FISA, Under Secretary Jimmy Gurulé's Treasury powers, and a "Show Me the Money" analysis tying dollar wires from Iran into Arab Bank accounts that served eleven designated terrorists and terror organizations, including Sheikh Ahmed Yassin, Osama Hamdan, the Holy Land Foundation, al-Salah, Interpal, and the al-Aqsa Foundation. <br />
+Analysis: Ibrahim Hamed lets the chapter connect a single commander to Arab Bank accounts and multiple attacks rather than treating each bombing as isolated. American deaths at Hebrew University bring the PATRIOT Act and U.S. jurisdiction into the fight, turning <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> into a weapon. Salam Fayyad and the designated-charity list expose the overlap among official Palestinian finance, charitable finance, and actionable terrorist finance — the seam <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> enforcement is built to pry open. <br />
+Source anchors: Ibrahim Hamed; Hebrew University; Frank Sinatra Building; Marla Bennett; Salam Fayyad; Show Me the Money; PATRIOT Act; FISA; Jimmy Gurulé; al-Salah; Interpal; al-Aqsa Foundation.   </p>
+<h3 id="chapter-9-the-letter-of-the-law">Chapter 9: The Letter of the Law</h3>
+<p>Summary: Dagan concludes that neither Israel nor the International Court at The Hague can compel banks to answer for terror finance, so the answer lies in the 1992 U.S. Anti-Terrorism Act (sponsored by Chuck Grassley and Edward Feighan, born of the Achille Lauro and the murder of Leon Klinghoffer, the hijacking of Pan Am Flight 73, and the Pan Am 103 bombing over Lockerbie), whose section 2333(a) creates treble-damages civil suits for Americans injured by international terrorism. The chapter introduces Nitsana Darshan-Leitner of Kiryat Ono and Bar-Ilan University, her 1994 petition against Muhammad Zaidan/Mahmoud Abu Abbas over the Achille Lauro, the founding of Shurat HaDin (modeled on the Southern Poverty Law Center) with Mordechai Haller, her husband Aviel, and Roy Kochavi, Harpoon's liaison role played by Uri and Shai, the January 17, 2002 Armon David Hall attack in Hadera that killed Black Hebrew singer Aaron Ellis, and Gary Osen's July 2004 Brooklyn filing against Arab Bank — followed by an American mass-tort gold rush into terror-victim litigation. <br />
+Analysis: <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> goes adversarial here: the courtroom becomes a venue where bank secrecy, terror stipends, and foreign assets can be fought over instead of merely surveilled. The Anti-Terrorism Act and Klinghoffer provide a weapon built for Americans harmed abroad, which is why Darshan-Leitner and Shurat HaDin become operational partners who never become government agents. Osen's Arab Bank filing turns Harpoon's intelligence into a civil complaint — the mechanism the rest of the book keeps returning to. <br />
+Source anchors: Anti-Terrorism Act; Chuck Grassley; Achille Lauro; Leon Klinghoffer; Pan Am 103; Nitsana Darshan-Leitner; Kiryat Ono; Shurat HaDin; Mordechai Haller; Roy Kochavi; Southern Poverty Law Center; Aaron Ellis; Armon David Hall; Gary Osen.   </p>
+<h3 id="chapter-10-the-higher-cost-of-murder">Chapter 10: The Higher Cost of Murder</h3>
+<p>Summary: The chapter opens with the Passover 2006 tourism revival and Tel Aviv's Neve Sha'anan neighborhood before the Rosh Ha'Ir Shawarma restaurant on Salomon Street — hit first by a malfunctioning PIJ bomb on January 19, 2006, then again on April 17, 2006, killing security guard Benjamin Haputa, Lior Anidzar, and sixteen-year-old American Daniel Wultz, in the last catastrophic suicide bombing of the intifada. It measures the decline: forty-seven suicide bombings in 2002, seventeen in 2004, nine in 2005, credited to Shin Bet and A'man intelligence, the separation barrier, "cutting the grass" decapitation, and Harpoon's financial pressure. It then follows Hamas's Ismail Haniyeh trying to move a $40 million Iranian advance in twenty-five suitcases from Tehran via Sudan, Egypt, and Sinai to the Gaza border, where the IDF refused entry; the Arab League deposited the remaining $35 million in the Cairo Amman Bank, which Shurat HaDin froze using the $116 million Unger family judgment against Hamas. The chapter closes with Stuart Levey's U.S. Treasury delegation meeting Harpoon at Ramat HaSharon on February 14, 2005, then Sharon's Gaza disengagement, the launch of Kadima, Sharon's stroke, and Olmert's overt support for Harpoon. <br />
+Analysis: Rosh Ha'Ir and Daniel Wultz keep the declining lethality honest, but the chapter's real subject is how <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> re-emerge when banks stop cooperating: Haniyeh's suitcases and the Sinai smuggling route are the expensive, risky alternatives to wire transfers. By freezing the $35 million with the Unger judgment, <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> becomes an instrument of war that replaces a battlefield seizure with a court order. <br />
+Source anchors: Rosh Ha'Ir Shawarma; Daniel Wultz; Benjamin Haputa; security barrier; cutting the grass; Ismail Haniyeh; 25 suitcases; Cairo Amman Bank; Unger judgment; Stuart Levey; Ramat HaSharon; Kadima.   </p>
+<h3 id="chapter-11-the-party-of-god">Chapter 11: The Party of God</h3>
+<p>Summary: The chapter opens in Meir Dagan's Mossad office on July 12, 2006 — his pipe, glass of tea with lemon, shelves of books, family photographs, and the Rabbi Dov Ehrlich photograph — while the G-8 meets at Strelna and Israel still reels from Gilad Shalit's kidnapping of June 25, 2006. Hezbollah's diversionary rocket barrage near Zar'it and an IED/anti-tank ambush on two IDF vehicles kill eight soldiers and leave reservists Ehud Goldwasser and Eldad Regev abducted, triggering the thirty-four-day Second Lebanon War. The chapter reconstructs Lebanon's Shiite underclass, the Palestinian armed presence after the 1970–71 Jordanian civil war, Musa al-Sadr's 1978 disappearance in Libya, Iran's revolution, Operation Peace for Galilee, the 1982 Tyre bombing, Nasrallah's bunker, Olmert, Amir Peretz, and Dan Halutz, more than one million Israelis in shelters, rockets assembled at al-Hameh near Damascus and shipped through the Beka'a Valley, and the August 5, 2006 missile that killed Fadia Jumaa and her daughters Sultana and Samira in Arab al-Aramsa. It ends with Dagan's successful demand that the IAF bomb Lebanon's banks: a dozen Bayt al-Mal offices, Al Baraka, Fransabank, and the Middle East Africa Bank branches, plus the residence of a prominent banking family, together incinerating close to $100 million in currency. Two weeks later Hezbollah sought a cease-fire, out of cash. <br />
+Analysis: The July 12 opening shifts the book from Palestinian terror finance to a state-like opponent, but the conclusion reframes the war as a test of whether <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> itself can be bombed. Goldwasser, Regev, and the Jumaa women keep the account anchored in abducted soldiers and murdered civilians rather than in strategy alone. Hezbollah's cash-and-carry logistics meant that destroying the banks — partly a message to the Lebanese that their institutions could not shelter the Party of God — broke its ability to pay. <br />
+Source anchors: July 12, 2006; Zar'it; Ehud Goldwasser; Eldad Regev; al-Hameh; Beka'a Valley; Fadia Jumaa; Bayt al-Mal; Al Baraka; Fransabank; Middle East Africa Bank; G-8; Shalit.   </p>
+<h3 id="chapter-12-greed">Chapter 12: Greed</h3>
+<p>Summary: The chapter quantifies the Second Lebanon War — Israeli direct damage near $3.5 billion, a 37 percent tourism drop, $1.4 billion in lost Chamber of Commerce revenue, more than two thousand homes destroyed — and Lebanon's roughly 1,400 dead, a million displaced, and about $2.8 billion in destruction — before Hezbollah's Iranian-funded Wa'ad (Promise) reconstruction, with marble floors, German sedans, and Nasrallah's pledge to rebuild by 2010, buys back loyalty. It introduces Salah Ezzedine of Maaroub, the self-made village boy with a Roman-palace home, gold pinky ring, Hezbollah travel agency, Hadi Nasrallah-named publishing house and radio station, and friendships with Hassan Nasrallah, Sheikh Hassan Fadlallah, and Imad Mughniyeh, who became the distributor of portions of Hezbollah's "clean money." In 2007 Ezzedine founded al-Mustathmir, promising 40 to 60 percent returns on investments his Gulf partners claimed lay in steel, diamonds, titanium, zirconium, Iranian gold, Eastern European oil, Gambian iron, Chinese leather, Brazilian poultry, and Gulf construction. When his Dubai-based partners vanished in August 2009 — Hussein Haj Hassan's $200,000 check bounced — usable losses passed $1 billion, roughly ten thousand Shiite investors were ruined, and Hezbollah counterintelligence arrested Ezzedine as he tried to flee; the Lebanese prosecutor charged him only with negligent bankruptcy. <br />
+Analysis: Wa'ad shows how <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> and political legitimacy interlock: Hezbollah buys loyalty after the war, and Ezzedine's scheme feeds on the same cash culture. The chapter's wager is that greed is the movement's weak point — a Ponzi that evaporates Hezbollah's money converts the "clean money" economy into a public moral crisis. Whatever actor ran the scam, the book treats the collapse itself as the victory rather than any conviction. <br />
+Source anchors: Wa'ad; Salah Ezzedine; Maaroub; Hadi Nasrallah; Hassan Fadlallah; Imad Mughniyeh; al-Mustathmir; 60 percent returns; Dubai; Hussein Haj Hassan; Abu Madoff; negligent bankruptcy.   </p>
+<h3 id="chapter-13-the-cocaine-jihadis">Chapter 13: The Cocaine Jihadis</h3>
+<p>Summary: The chapter moves Hezbollah's criminal finance to the Americas. CSIS warns that Hezbollah operates out of Canada, and Operation Smokescreen follows Iredell County, North Carolina cigarette purchases — the ATF, FBI Joint Terrorism Task Force, Secret Service, INS, IRS, and Diplomatic Security Service executed eighteen warrants in July 2000 in an $8 million scheme that moved low-tax cigarettes to Michigan; ringleader Mohammed Yusef Hammoud drew a 155-year sentence. Shai U.'s South American desk (2001–2004) leads the reader to Maicao, Colombia, the Mosque of Omar Ibn al-Khattab, the Tri-Border Area (Ciudad del Este, Puerto Iguazu, Foz do Iguacu), and Margarita Island, and to the Black Market Peso Exchange used to clean cocaine profits. The central figure is Ghazi Atef Nasser al-Din, the Venezuelan-based Lebanese who, with partner Fawzi Kana'an, worked with Tareck El Aissami, Nicolás Maduro, and Kais Obeid of Hezbollah's Unit 1800, gained a Venezuelan diplomatic post in Damascus, and used the Caracas–Damascus–Tehran "Aeroterror" flights to move drugs and cash under diplomatic cover; the DEA and Israeli police began cooperating against the pipeline. <br />
+Analysis: Operation Smokescreen and Hammoud show the criminal base-layer — small tax arbitrage — scaling into material support, which is the core of <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> as the book treats them. Maicao and the Tri-Border Area show a network of periphery ports and weak states feeding Hezbollah. Venezuela's turn from permissive territory to state tool — passports, diplomatic pouches, Aeroterror flights — displays <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> in reverse: a weak state extends a terrorist "empire's" reach. The economics of cartel-turned-movement explain the comparison to <a href="//01%20Books/Narconomics.html">Narconomics</a>, which reads cartels as firms governed by market logic rather than ideology. <br />
+Source anchors: CSIS; Operation Smokescreen; Mohammed Yusef Hammoud; Maicao; Mosque of Omar Ibn al-Khattab; Tri-Border Area; Margarita Island; Black Market Peso Exchange; Ghazi Atef Nasser al-Din; Fawzi Kana'an; Tareck El Aissami; Nicolas Maduro; Kais Obeid; Unit 1800; Aeroterror.   </p>
+<h3 id="chapter-14-follow-the-money">Chapter 14: Follow the Money</h3>
+<p>Summary: Uri Bar-Lev, the one-legged former combat engineer who founded Duvdevan under Ehud Barak and created Jerusalem's Unit 33, enters as Israel's law enforcement attaché in Washington, D.C. — the cigar-smoking bridge between Harpoon and the DEA, FBI, Secret Service, IRS enforcement, and U.S. Marshals. The chapter describes how sanitized Harpoon intelligence flows through the Israeli embassy, how DEA and Israeli police officers compare Hezbollah drug cases, and how pressure on the Venezuelan route pushed Hezbollah into West Africa (Sierra Leone, Cote d'Ivoire, Senegal, Gambia, Guinea-Bissau, Mauritania, and attempted footholds in Nigeria). Cash flows through Accra's airport and Beirut's Hariri International (Middle East Airlines), hawaladars, exchange houses, and U.S. front companies that buy and export used cars. The common denominator is the Beirut-based Lebanese Canadian Bank (LCB), with thirty-five Lebanese branches, a Montreal office, and net assets near $5 billion, wired into major U.S. banks in New York. <br />
+Analysis: Bar-Lev and Duvdevan connect Israeli street-level practice to Washington law enforcement, which is how Harpoon intelligence reaches the DEA without exposing sources — the trust architecture of financial counter-espionage. West Africa shows Hezbollah adapting its <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> distribution when one corridor closes: airports, hawaladars, and used cars replace bank wires, and weak states become the route. Accra–Beirut and the New York correspondent channel make the LCB the <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> that ties cocaine, cars, and dollar clearing into one targetable node — <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> logic in which a periphery network uses the financial core against itself. <br />
+Source anchors: Uri Bar-Lev; Duvdevan; Unit 33; DEA; West Africa; Accra; Middle East Airlines; hawaladars; used vehicles; Lebanese Canadian Bank; 35 branches; Montreal.   </p>
+<h3 id="chapter-15-malware-and-moles">Chapter 15: Malware and Moles</h3>
+<p>Summary: The chapter surveys intelligence disciplines — IMINT, SIGINT, ELINT, HUMINT, cyberwarfare, A'man's Unit 8200 and its alumni (Check Point founder Gil Shwed, Waze's Avishai Abrahami, Palo Alto Networks' Nir Zuk, and the founders of NICE Systems) — before examining the U.S.–Israeli split over "follow or foil," personified by Philip Rosenberg, head of the CIA's Financial Intelligence Operations unit (FINO). It details Hezbollah's Bayt al-Mal treasury and the Yousser Company for Finance and Investment, Stuart Levey's fall 2006 OFAC designations of both, the freighter whose "refrigerators" were eighteen anti-aircraft radar systems, and the LCB's thirty-five branches and Montreal office. The chapter reports on the Gauss malware discovered in Lebanon's banking sector (roughly 2,500 infected computers, a cousin of Stuxnet and Flame), Harpoon's asset Munir Z., a fraud-detection auditor inside the LCB whose information exposed account trails to IRSO (the Islamic Resistance Support Organization) and its al-Manar fundraising, Nasser al-Waer's penetration of IRSO in Nabatieh, Alfa cellular operatives, Treasury sharing, and Munir Z.'s reported arrest, torture, and execution by Hezbollah. <br />
+Analysis: Unit 8200 and Gauss show that the war on Hezbollah's money includes cyber access, not only couriers and subpoenas, which expands <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> into code. Rosenberg's follow-or-foil dispute is the book's clearest statement of the two doctrines: the CIA wanted to watch money to map the organism; Dagan wanted to damage Bayt al-Mal, Yousser, and the LCB. Munir Z. and IRSO make <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> lethal — usable records come from human assets who can be killed — while Hezbollah's state-within-a-state criminal structure is why <a href="//01%20Books/Gomorrah.html">Gomorrah</a>, the account of a parallel-state crime firm, is the closest sibling to this chapter. <br />
+Source anchors: Unit 8200; Philip Rosenberg; FINO; Bayt al-Mal; Yousser; OFAC; Gauss; Munir Z.; IRSO; Nasser al-Waer; Alfa; Stuart Levey.   </p>
+<h3 id="chapter-16-lawyers-guns-and-money">Chapter 16: Lawyers, Guns, and Money</h3>
+<p>Summary: The chapter follows the legal afterlife of the Lebanese Canadian Bank, the Arab Bank, and the Palestinian Authority. Families of northern Israeli victims (including Michael Fuchs, Rabbi Chaim Kaplan, and Karene Erdstein) sue the LCB and American Express Bank in New York over dollar wires through correspondent accounts; the case Licci v. American Express Bank reaches the New York Court of Appeals, where Judge Victoria Graffeo asks whether banks will now have to ask what the money is for, and the November 20, 2012 decision holds that using a New York correspondent account alone confers jurisdiction. The chapter details Shai U.'s affidavit on Martyrs Foundation account 108987, the case Linde v. Arab Bank filed in Brooklyn in 2004 over twenty-four Hamas attacks (Park Hotel, Bus No. 19, Sbarro, Cafe Moment, the downtown Jerusalem double bombing), the bank's $24 million 2005 Treasury fine, and Sokolow v. Palestinian Authority, filed by Darshan-Leitner, Haller, and David Strachman for eleven American families tied to Hebrew University, Jaffa Street, King George Street, and Bus No. 19, with Force 17 and the al-Aqsa Martyrs Brigade as the payroll defendants. <br />
+Analysis: <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> becomes jurisdictional exposure here: a Lebanese bank is hauled into Manhattan through correspondent clearings, exactly the chokepoint the book has been building toward. Martyrs Foundation account 108987 shows a single account detail converting Shai U.'s intelligence into litigation evidence. The movement from designated terrorists, to state sponsors, to banks, to a sovereign's payroll (Force 17) makes the money layer of terror justiciable — the hidden-plumbing dynamic analyzed in <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a>, where offshore structures exist precisely to sever acts from accountability. <br />
+Source anchors: Licci; American Express Bank; Martyrs Foundation 108987; New York Court of Appeals; Victoria Graffeo; Linde; Arab Bank; $24 million fine; Sokolow; Force 17; al-Aqsa Martyrs Brigade.   </p>
+<h3 id="chapter-17-we-cannot-confirm-or-deny">Chapter 17: We Cannot Confirm or Deny</h3>
+<p>Summary: The chapter returns to Dagan's Mossad as a service defined by direct action and nonconfirmation, listing the reported deaths of Ghalib Awali (Beirut, July 2004), Ezzedine Sobhi Sheikh Khalil (Damascus, September 26, 2004), Mahmoud al-Majzoub (Sidon, May 26, 2006), and Imad Mughniyeh (Damascus, February 12, 2008). It focuses on Mahmoud al-Mabhouh, born in Gaza in 1960, commander of Hamas's secret Unit 101, who as "part accountant, part purchasing agent" managed Iranian and Hezbollah funding for Hamas after escaping via Rafah to Egypt, Libya, Algeria, Sudan, and Damascus. Mabhouh's biography ties together the 1989 kidnappings and murders of Avi Sasportas and Ilan Saadon, Yassin's orders, the Karine-A/Operation Noah's Ark interdiction, Flotilla 13, Qassam, Grad, and Fajr rockets, Sderot rockets and the death of Ella Abukasis, and the money-and-weapons pipeline from Iran through Sudan to Gaza. The chapter reconstructs the January 19–20, 2010 Dubai operation at the al-Bustan Rotana (Room 230), after an earlier failed November 2009 poison attempt, and its aftermath: twenty-seven suspects, cloned European passports, Dubai police chief Dahi Khalfan's extensive CCTV compilation, and the diplomatic fallout. <br />
+Analysis: The Mossad's willingness to kill puts a floor under Harpoon's methods: <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> and <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> merge in Mabhouh, a banker-buyer-smuggler whose death froze Hamas's pipeline for four years. The Dubai hit is the book's most explicit demonstration that moving money had become as high-risk as building a bomb. The passport scandal, in turn, shows that direct action against the money layer carries a diplomatic price that litigation usually avoids. <br />
+Source anchors: Ghalib Awali; Imad Mughniyeh; Mahmoud al-Mabhouh; Unit 101; Avi Sasportas; Ilan Saadon; Karine-A; Ella Abukasis; Qassam; Grad; Fajr; al-Bustan Rotana; Dubai; Dahi Khalfan.   </p>
+<h3 id="chapter-18-the-final-victories-of-an-old-soldier">Chapter 18: The Final Victories of an Old Soldier</h3>
+<p>Summary: The chapter moves between Dagan's last period as Mossad director and the American global financial-tracking architecture. It describes the CIA's post-9/11 Terrorist Finance Tracking Program (TFTP), which ran through the Belgian SWIFT network used by roughly 7,800 financial institutions moving more than eleven million transactions a day; the program's CIA side run by Philip Rosenberg and its Treasury side by Stuart Levey, with NSA participation. It cites the successes of catching Hambali/Riduan Isamuddin after the Bali bombings and Uzair Paracha's $200,000+ laundering; the June 2006 New York Times, Washington Post, and Los Angeles Times disclosures and the European backlash; TFTP's later use in the Boston Marathon case and IRGC al-Quds plots; and the campaign to disconnect Iranian banks from SWIFT (Lázaro Campos's comments) that preceded the July 2015 Joint Comprehensive Plan of Action. It also covers the covert campaign against Iran's scientists (the killings of Masoud Alimohammadi and Majid Shahriari, the attempted killing of Fereydoon Abbasi, the El-Baradei framing plot), Dagan's opposition to an Israeli strike on Iran, and his January 2011 retirement from the Mossad. <br />
+Analysis: TFTP and SWIFT are the American version of Harpoon at global scale, making <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> a surveillance asset as well as a target. Excluding Iran's banks from SWIFT makes the network a <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> weapon — the coercion Dagan preferred to military action. The Iran campaign's secret programs, official denial, and internal intelligence-warning fights are why <a href="//01%20Books/Biohazard.html">Biohazard</a>, a study of state secrecy around covert programs, is a genuine sibling here. <br />
+Source anchors: TFTP; SWIFT; 7,800 institutions; Philip Rosenberg; Stuart Levey; Hambali; Uzair Paracha; Boston Marathon; IRGC; Lázaro Campos; JCPOA; Alimohammadi; Shahriari; Abbasi; El-Baradei; retirement.   </p>
+<h3 id="chapter-19-operation-pegasus">Chapter 19: Operation Pegasus</h3>
+<p>Summary: Tamir Pardo, born 1953 in Tel Aviv to Turkish and Serbian parents, replaces Dagan as the eleventh Mossad director in January 2011; the chapter sketches his paratrooper service, Sayeret Mat'kal communications role at Entebbe, Shaldag service, electronic-intelligence career, and time as Dagan's deputy, then records the July 23, 2011 death of Iranian scientist Darioush Rezaei. As the core Harpoon veterans depart, the story pivots to the American pursuit of the Lebanese Canadian Bank. Operation Titan (2006–2007) targets Chekry Harb ("El Taliban") in Bogota, connecting Hezbollah, cocaine cartels, and FARC across 370 wiretaps and 700,000 conversations, a planned 950-kilogram shipment via Aqaba, Syria, and Lebanon, and the October 3, 2008 arrests with $23 million seized. Ayman Joumaa, born 1964 in Qaraoun in the Beka'a Valley, works with Los Zetas and the Sinaloa cartel through the Hassan Ayash and Ellissa exchange houses and LCB wires to U.S. used-car businesses, laundering as much as $200 million per month. The chapter ends with FinCEN's February 10, 2011 action, Joumaa's November 2011 Eastern District of Virginia indictment, the December 2011 SDNY civil forfeiture action, the LCB's shutdown, its assets passing to SGBL, and a $102 million penalty. <br />
+Analysis: Pardo marks continuity, but Operation Titan and Chekry Harb show the Americans now driving a case Harpoon helped define. Joumaa and the LCB connect cartels, exchange houses, used cars, and Hezbollah into an <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a> machine large enough for FinCEN to isolate — the entry point to <a href="//01%20Books/Narconomics.html">Narconomics</a>, which reads cartels as multinationals, and <a href="//01%20Books/Lucifer%27s%20Banker.html">Lucifer's Banker</a>, which reads the offshore money layer as the enabling plumbing. The $102 million penalty converts years of wiretaps and Treasury pressure into institutional punishment — <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a> logic applied to a bank. <br />
+Source anchors: Tamir Pardo; Darioush Rezaei; Operation Titan; Chekry Harb; El Taliban; FARC; Aqaba; Ayman Joumaa; Los Zetas; Sinaloa; Hassan Ayash Exchange; FinCEN; $102 million; SGBL.   </p>
+<h3 id="chapter-20-money-in-the-crosshairs">Chapter 20: Money in the Crosshairs</h3>
+<p>Summary: The chapter opens with Hussam Qawasmeh of Hebron planning a Shalit-style kidnapping with nephew Marwan Qawasmeh and Amer Abu Aisha — two vehicles, two M16s, two pistols, safe houses, and roughly $65,000 funded through the al-Nur Foundation from Gaza. On June 12, 2014, Naftali Frenkel, Gilad Shaer, and Eyal Yifrah are taken at Gush Etzion Junction; Shaer's call to the police number 100 is recorded, and the bodies are found on June 30, leading to Operation Brother's Keeper and then Protective Edge. The chapter then follows Hamas payroll courier Mohammed el-Ghoul with $13 million in four suitcases from the Sinai town of El Arish, an Etisalat SMS, a tunnel into Rafah, and a transfer into a BYD sedan that an AH-64D Longbow destroyed with a Hellfire missile, scattering singed $100 bills over Gaza City and helping end the war within forty-eight hours. It closes on David S. Cohen's reported 2015 CIA black-site task force modeled on Harpoon, ISIS's seizure of Mosul's Central Bank, its oil revenue (60 percent of Syria's and 10 percent of Iraq's production), Nuun-marked Christian homes, Operation Tidal Wave II, the destruction of ISIS's roughly $50 million monthly oil profit, the January 2016 Mosul cash strike incinerating close to $45 million, and lawsuits against Facebook, Twitter, Google, and YouTube after attacks in Tel Aviv, Brussels, Paris, Istanbul, Orlando, and San Bernardino. <br />
+Analysis: Qawasmeh's budget shows the book's thesis absorbed by the other side — kidnapping requires cash, cars, guns, and safe houses. El-Ghoul's delivery makes the strike itself the answer: a Hellfire against payroll money stops a war faster than a tank column, the book's most concrete proof that <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a> is a battlespace. Tidal Wave II and the social-media lawsuits extend the same logic — oil trucks and platforms are both revenue and legitimacy channels, which is why <a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a> becomes the next chokepoint the book wants lawyered. <br />
+Source anchors: Hussam Qawasmeh; Marwan Qawasmeh; Amer Abu Aisha; Gush Etzion Junction; al-Nur Foundation; Operation Brother's Keeper; Protective Edge; Mohammed el-Ghoul; El Arish; Hellfire; David S. Cohen; Mosul; Operation Tidal Wave II; Nuun; Facebook.   </p>
+<h3 id="afterword-legacy">Afterword: Legacy</h3>
+<p>Summary: The afterword measures Harpoon's afterlife and Dagan's death. In September 2014 a Brooklyn jury finds the Arab Bank liable for supporting Palestinian terrorism — the first bank ever held liable in such a civil suit — for 297 plaintiffs after a five-week trial, following the bank's 2005 $24 million Treasury fine; Gary Osen warns that terrorist groups thrive because banks turn a blind eye. On February 23, 2015, a Southern District of New York jury finds the PLO and Palestinian Authority liable in Sokolow on all twenty-four counts covering attacks from 2001 to 2004 that killed thirty-three and wounded close to five hundred, awarding $218.5 million, automatically tripled to $655.5 million under the Anti-Terrorism Act. The afterword then follows Dagan's liver cancer, his transplant in Minsk, his public opposition to an Israeli strike on Iran, his death on March 17, 2016 at age seventy-one, the Rosh Pina funeral attended by Netanyahu, Rivlin, and Yossi Cohen, and the turn toward lawsuits over Facebook, Twitter, and other social media services used by Hamas, Hezbollah, and ISIS. <br />
+Analysis: The Arab Bank and Sokolow verdicts are the book's proof-of-concept: <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> converts intelligence and victim testimony into an enforceable cost. Moving from private banks to a sovereign's payroll in Sokolow and then to platforms shows the method's elasticity — anything that carries the money, legitimacy, or recruitment of an organization can be made to bear cost. Dagan's death is the elegy that lets the method outlive him, and social media is framed as the next <a href="//02%20Concepts/Platform%20Governance.html">Platform Governance</a> battlefield. <br />
+Source anchors: Brooklyn jury; Arab Bank; 297 plaintiffs; Gary Osen; $24 million; Sokolow; $218.5 million; $655.5 million; Kent Yalowitz; liver cancer; Minsk; March 17, 2016; Rosh Pina; Yossi Cohen; social media.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li>Dagan's formula: money is "the oxygen that allowed terror to breathe"; Harpoon would "suffocate every dollar, dinar, and euro" from organizations dedicated to killing civilians.   </li>
+<li>Harpoon's name was randomly generated by a computer program; the unit stayed classified for nearly twenty years.   </li>
+<li>"Wherever I sit is the head of the table" — Dagan's reply after arriving late to Sharon's first National Security Council meeting.   </li>
+<li>Arab Bank: founded 1930 by Abdul Hameed Shoman; Prince Shaker Street HQ designed to evoke the Kaba; 278 branches in 27 countries and roughly $35 billion in assets; a 5 percent "Support the al-Aqsa Intifada fee"; about two hundred thousand transactions and more than $90 million moved via the Saudi Committee.   </li>
+<li>Arafat's financial cues: a 5 percent tax on Palestinian income, $50 million from Saddam Hussein, Swiss accounts, Paris real estate, Bank Leumi account 80-219000, and a Palestinian passport numbered "One."   </li>
+<li>Harpoon's first operation: a fake Latin American investment firm that relieved Arafat and Mohammed Rashid of more than $100 million.   </li>
+<li>"Show Me the Money": analysis tying Arab Bank accounts to eleven designated terrorists and terror organizations.   </li>
+<li>Second Lebanon War: the IAF bombed a dozen Bayt al-Mal offices, Al Baraka, Fransabank, Middle East Africa Bank branches, and a banking family's residence; close to $100 million in currency went up; Hezbollah sought a cease-fire two weeks later after running out of cash.   </li>
+<li>Salah Ezzedine as "Abu Madoff": al-Mustathmir promised 40–60 percent returns; a bounced $200,000 check to Hussein Haj Hassan; roughly ten thousand Shiite investors; losses over $1 billion; a charge of negligent bankruptcy.   </li>
+<li>Gauss: roughly 2,500 Lebanese banking computers infected; reportedly the first nation-state malware attack on banks.   </li>
+<li>Munir Z.: the LCB fraud-detection auditor whose intelligence exposed Hezbollah account trails; subsequently executed by Hezbollah.   </li>
+<li>Licci v. American Express Bank (November 20, 2012): a New York correspondent account is a sufficient contact to confer jurisdiction over a foreign bank.   </li>
+<li>Arab Bank Brooklyn verdict of September 2014: the first bank held civilly liable for aiding terror, 297 plaintiffs. Sokolow: $218.5 million in damages, trebled to $655.5 million over twenty-four counts.   </li>
+<li>TFTP/SWIFT: about 7,800 institutions and more than eleven million transactions a day; the program was disclosed in June 2006 by the New York Times, Washington Post, and Los Angeles Times.   </li>
+<li>The el-Ghoul strike: $13 million in four suitcases destroyed by an AH-64D Longbow Hellfire; a January 2016 coalition strike incinerated close to $45 million in ISIS cash in Mosul, with ISIS's oil income estimated at about $50 million a month beforehand.   </li>
+<li>Dagan: died March 17, 2016 at age seventy-one; buried at Rosh Pina; Yossi Cohen's eulogy: "he taught us to take chances and to take responsibility."   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Gomorrah.html">gomorrah</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A232111765878133193184237264228687169409{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D232111765878133193184237264228687169409{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B232111765878133193184237264228687169409{level}" level="{level}" note_temp_id="232111765878133193184237264228687169409" onclick="window.ObsHtmlGraph.run(this, '232111765878133193184237264228687169409', 'harpoon');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C232111765878133193184237264228687169409{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="auschwitz report">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'auschwitz report';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=auschwitz report" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="auschwitz-report">Auschwitz Report</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Auschwitz Report</code> belongs with the vault's work on <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, <a href="//02%20Concepts/Legibility.html">Legibility</a>, <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>, and <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>. It also stands beside <a href="//01%20Books/Survival%20in%20Auschwitz.html">Survival in Auschwitz</a>, <a href="//01%20Books/If%20This%20Is%20A%20Man%20-%20The%20Truce%20%28Abacus%2040th%20Anniversary%29.html">If This Is A Man - The Truce</a>, and other books in the vault that ask how institutions record suffering, how bureaucratic systems metabolize human beings, and what it means to bear witness with precision rather than rhetoric. As a first-hand administrative and medical study of a labour camp attached to an industrial corporation, it is anchored to the vault's <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> entity and belongs on the <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> reading path.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>Auschwitz Report</code> is unusual because it is simultaneously testimony, medical documentation, and an early experiment in Primo Levi's later style. The extract begins not with the report itself but with editorial framing about Levi and Leonardo De Benedetti as survivors of Buna-Monowitz and later co-authors of a concise but devastating account of camp conditions. That framing matters because it clarifies what kind of document follows. This is not memoir shaped chiefly by retrospective emotion, nor is it a neutral clinical paper detached from experience. It is a hybrid form in which survival knowledge, medical observation, and documentary urgency reinforce each other.   </p>
+<p>The book's central achievement is its conversion of atrocity into disciplined description without draining it of horror. The extract repeatedly demonstrates how the camp system worked through a combination of administrative order and human expendability. Deportees are counted, sorted, shaved, clothed, marched, triaged, and medically evaluated, yet every one of those procedures is embedded in degradation, scarcity, violence, and calculated waste. The result is a portrait of a system that appears organized on the surface while actually functioning through mass neglect and disposable labor.   </p>
+<p>The report is especially important because it documents Monowitz from inside the labor-camp regime rather than only from the extermination-center perspective. It shows the connection between industrial production, camp medicine, work discipline, malnutrition, and periodic selection for death. The extract makes plain that this was not a chaotic side-effect of war. It was a structured environment in which hygiene, treatment, and administrative procedures were rationed according to the labor value of prisoners rather than according to any recognizable medical ethic. The report was written in 1945, at the request of the Russian Command of the camp for Italian ex-prisoners at Katowice and submitted to the government of the USSR, which was gathering medical testimony from every liberated doctor.   </p>
+<p>For this vault, the text matters not only as Holocaust testimony but as an analytical study of institutional inversion. Systems that should protect life instead classify, exploit, and destroy it. Medical categories become tools of management. The visual appearance of order conceals infestation, crowding, and physical collapse. Written in a controlled style, the report reveals how bureaucratic systems can render atrocity legible to themselves while simultaneously erasing the human meaning of what they are doing.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<p>This is a nonfiction document: an institutional-medical report rather than a memoir, and its principal "characters" are authors, authorities, and populations.   </p>
+<ul>
+<li><strong>Primo Levi (1919–1987)</strong> — Turinese chemist, prisoner number 174517, co-author. Arrested in December 1943 after a brief period as an antifascist partisan in the val d'Aosta, he was deported from Fossoli on the same convoy as De Benedetti and selected for labour at Monowitz. Gordon identifies his hand in the report's opening and closing parts: the train journey and arrival, living and work conditions, and the selections and gas chambers at the end. The report was Levi's very first published piece of writing of any kind, and it fed directly into <em>If This Is a Man</em>.   </li>
+<li><strong>Leonardo De Benedetti (1898–1983)</strong> — Turinese physician and surgeon, prisoner number 174489, co-author. Arrested in December 1943 near Como with his wife Jolanda after failing to reach Switzerland, deported from Fossoli, and selected for labour; his wife was murdered on arrival at Auschwitz. Too old, by camp logic, even to be there, and never able to find work as a doctor, he was placed on death lists for the gas chambers four times during his months in the camp and was saved each time by French or Polish prisoner-doctors. His medical training informed the strictly clinical sections of the report (the six pathologies and the infirmary account). After liberation he ran the Katowice camp infirmary and later returned to a medical practice in Turin at the heart of a survivor network; Levi memorialized him in two 1983 pieces included in this volume.   </li>
+<li><strong>The Monowitz-Buna labor camp system (Auschwitz III)</strong> — a satellite of the central Auschwitz-Birkenau complex, about 8 kilometres away, run with the collaboration of IG Farben through its 'Buna-Werke' industrial subsidiary. Set up towards the middle of 1942 to supply construction labour, it held 10,000–12,000 prisoners against a normal capacity of 7,000–8,000, the majority Jews of every European nationality with a small minority of German and Polish criminals, Polish 'politicals', and 'saboteurs'. The report describes it as a typical 'Arbeits-Lager': marching to work at the double, fixed roll-calls, manual labour, rationed food and clothing, an inadequate hospital, and monthly selections.   </li>
+<li><strong>The Fossoli convoy of deportees</strong> — 650 Jews of both sexes and all ages, the oldest over eighty and the youngest a baby of three months, loaded into locked cattle trucks on 22 February 1944. Only twenty-four of the 650 survived. On arrival the company was split into three groups; the children, infirm, and old were apparently taken straight to the gas chamber at Birkenau and slaughtered the same evening.   </li>
+<li><strong>The deportees and survivors as subjects</strong> — the camp population whose hygiene, illness, work, and deaths the report inventories: the emaciated and oedematous, the phlegmon and diphtheria cases, the scabies patients who worked while infested, the 'Muslims' singled out in the selections, the unnamed prisoner-doctors who saved De Benedetti four times, the infirmary orderlies who beat and bartered with patients, the Sonderkommando of Birkenau, and finally the thousand incapacitated prisoners left behind and the roughly eleven thousand dragged onto the death march.   </li>
+<li><strong>The Soviet authorities</strong> — the archive to which the report was addressed. It was drafted in the spring of 1945 on the request of the Russian Command of the concentration camp for Italian ex-prisoners at Katowice, where De Benedetti and Levi stayed for nearly four months, and submitted to the government of the USSR; Moscow requested similar reports from all doctors liberated from the camps. The editor notes the report's touches of pro-Soviet rhetoric, unsurprising given who commissioned it.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>: the report's central entity. It is a first-hand, administrator's-eye study of that regime — sorting on arrival, numbering, clothing, food, work, infirmary practice, selections, and the gas chambers as connected parts of one labor system.   </li>
+<li><a href="//01%20Books/Survival%20in%20Auschwitz.html">Survival in Auschwitz</a>: the report is that memoir's direct precursor. The chapter 'Ka-Be' is a sustained reworking of the report's hospital sections; the description of the October 1944 selections feeds the chapter 'October 1944'; and the report's closing lines on the days of limbo before liberation anticipate the diary sequence 'The Story of Ten Days' with which <em>If This Is a Man</em> ends.   </li>
+<li><a href="//01%20Books/If%20This%20Is%20A%20Man%20-%20The%20Truce%20%28Abacus%2040th%20Anniversary%29.html">If This Is A Man - The Truce</a>: the paired Levi edition. De Benedetti appears in <em>The Truce</em>, which recounts the Katowice period and the long picaresque journey home (March–October 1945) that followed directly from the report's commissioning; Levi writes that by the time they reached Turin they were "bound together as one".   </li>
+<li><a href="//01%20Books/Biohazard.html">Biohazard</a>: a sibling vault note on how dangerous biological substances and their human costs are managed as organizational problems, read usefully against the report's epidemiology of a camp deliberately organized against health.   </li>
+<li><a href="//01%20Books/Days%20of%20Rage.html">Days of Rage</a>: a sibling vault note on organized political violence and the institutional responses to it, adjacent to the report's portrait of state-organized destruction.   </li>
+<li><a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a>: the report's home reading path, where official record and survivor testimony coincide and conflict.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: linked through the report's small transactions of survival — soup bartered by orderlies, blood donated for a fortnight's rest, bread stored on dressing benches smeared with blood and pus.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The single continuum of administration and murder.</strong> Diagnosis, labor allocation, infirmary discharge, and selection for the gas chambers are described as one operating procedure, never as separate events. Monowitz depended on Birkenau as its disposal mechanism.   </li>
+<li><strong>Appearance versus reality.</strong> Painted blocks, swept floors, clean beds nearest the door, an infirmary "small, certainly, but complete in almost every department": visible order is institutional theater. "The rules of hygiene were completely ignored, apart from what little was necessary to keep up appearances."   </li>
+<li><strong>Rationing as a system of depletion.</strong> Calories, clothing, soap, medicine, water, and space are meted out so that the body is consumed as a temporary energy source rather than sustained; scarcity is built into the system, not a wartime accident.   </li>
+<li><strong>The report as method.</strong> Clinical enumeration, irony, and grotesque physical detail do the work of moral indictment without abstraction or sensationalism. The translator insists "nothing in it is a metaphor."   </li>
+<li><strong>Testimony under time pressure.</strong> Drafted in 1945 for the Soviet authorities, the report is a document of immediate postwar knowledge-gathering; forgotten for decades, it was recovered in 1993. Its survival is part of its subject.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: Monowitz is presented as a labor regime in which productivity, punishment, and exterminability are intertwined; work at the double, roll-calls, depleted food, and the threat of uselessness consume prisoners as labor units.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a>: the camp reduces people to numbers, diagnoses, work assignments, and selection categories, showing the violent side of administrative simplification — even the "radical prophylactic" dispatch of syphilitics, tuberculars, and malarial cases to the gas chambers.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the Nazi system demonstrates that capacity is not inherently humane; an efficient apparatus can be built for exploitation and murder, and IG Farben's Buna-Werke shows corporate and state capacity fused at the point of production.   </li>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: the text records both the bodily collapse engineered by camp conditions — dystrophies, oedema, diarrhoea that killed in days, muscles wasting away — and the tiny margins through which survival remained possible, including De Benedetti's four escapes from the selection list.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the report is an effort to hold on to detail before it disappears, and in Levi's case it becomes part of the laboratory out of which later testimony emerges; its later recovery by Alberto Cavaglion in 1993 shows how easily such records are lost.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: camp medicine appears as a degraded form of emergency administration, where scarcity and triage are harnessed to a murderous system rather than to rescue; the infirmary is closer to "an antechamber of death" than to a curing station.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the locked cattle trucks, the daily six- or seven-kilometre marches, roll-calls, sorting, rationing, and even the crematoria at Birkenau (nine ovens, four openings, two thousand corpses a day) are throughput systems moving men and material through institutional pipelines.   </li>
+<li><a href="//02%20Concepts/Moral%20Economy.html">Moral Economy</a>: the report's small economies of scarcity — blood donated for a fortnight's hospital rest, bread, soup, injured possessions circulating from confiscated luggage — show value and decency distorted but not abolished under engineered deprivation.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Summary: The introduction, by editor Robert S. C. Gordon, frames the book through the liberation of Auschwitz and the biographies of Leonardo De Benedetti and Primo Levi. On 27 January 1945 the Soviet Red Army liberated what was left of the Auschwitz network; the first part encountered was Buna-Monowitz (Auschwitz III), run by the Nazis in collaboration with IG Farben, where until days earlier 12,000 enslaved labourers, mostly Jews, had been held and where several hundred sick and dying had been left by the retreating SS. The framing reconstructs the two men's route from Fossoli to Auschwitz, their improbable survival in Monowitz, their period with the Soviet-controlled camp at Katowice, and the eventual publication history of the report. It situates the text not merely as a historical artifact but as a product of survival, collaboration, and urgent postwar documentation — drafted at the request of the Katowice Command and submitted to the government of the USSR. Source anchors: 27 January 1945; Red Army; Buna-Monowitz; Auschwitz III; IG Farben; 12,000 enslaved labourers; Katowice; USSR; publication history.   </p>
+<p>Analysis: The liberation of Auschwitz, Fossoli, Monowitz, and Katowice matter because the introduction defines the report as a document made in the unstable interval between survival and public record: written for the Soviet authorities in the spring of 1945, it is commissioned testimony rather than retrospective memoir. De Benedetti and Levi matter as collaborators whose knowledge came from damaged bodies and immediate observation, not archival distance, and whose account of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> is among the earliest administrative records of the camp. The publication history also matters because the introduction frames survival as contingent and fragile, undermining any moralized reading of endurance as simple strength or merit.   </p>
+<h3 id="two-survivors">Two Survivors</h3>
+<p>Summary: This section focuses on Levi and De Benedetti as specific men shaped by different forms of knowledge and the same machinery of persecution. The extract emphasizes their arrest in December 1943 in different parts of the mountains north and west of Turin, their arrival at Fossoli, and their deportation together from Fossoli on 22 February 1944, arriving in Auschwitz on the 26th — probably in the same cattle-truck. Of the 650 people crowded into that train at Fossoli, only twenty-four survived; De Benedetti's wife, separated from him on arrival, was murdered by gas within hours, as were 525 others. Both men were "fortunate" (their word) to be selected for labour, disinfected, tattooed, and numbered 174489 (De Benedetti) and 174517 (Levi). The section traces how their later lives diverged: Levi, sick with scarlet fever as the camp was evacuated, was left behind while his companion Alberto was taken on the death march and never returned; De Benedetti survived four selections for the gas chambers, saved by prisoner-doctors. Source anchors: arrest; December 1943; Fossoli; 22 February 1944; 26 February 1944 arrival; 650 people; twenty-four survivors; 525 gassed; tattoo; 174489; 174517; scarlet fever; Alberto; four selections; death march.   </p>
+<p>Analysis: Levi, De Benedetti, arrest, deportation, and selection for labor matter because the report's authority comes from men processed by the same machinery they describe. The aftermath of liberation and their later lives matter because this writing turns survival into <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> under extreme time pressure: its precision is not bureaucratic coolness but the precision of men who know that truth can disappear if it is not fixed quickly and exactly. De Benedetti's four escapes from the death list, like Levi's scarlet fever at evacuation — an episode the editor attributes to "extraordinary circumstance" and "immense luck" — make <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> the section's governing fact: survival depended on margins too small and lucky to ground any moral hierarchy of the saved and the drowned.   </p>
+<h3 id="auschwitz-report-form-and-significance">Auschwitz Report: Form and Significance</h3>
+<p>Summary: The editorial discussion of the report itself explains that it was written "four-handedly" (<em>a quattro mani</em>), with De Benedetti's medical training informing the strictly clinical sections (the six pathologies and, probably, the workings of the infirmary) and Levi's later recognizable prose visible in the sections on transport, living conditions, and selections. The extract argues that the report is a precursor and workshop for <em>If This Is a Man</em>, quoting parallels: the report's account of the October 1944 selections feeds the chapter 'October 1944'; the lines about the days of limbo before liberation anticipate 'The Story of Ten Days'; and the chapter 'Ka-Be' is a sustained reworking of the hospital sections, allowing the reader to watch "the characteristic style of If This is a Man being forged". Gordon reads the report as a whole — rooted in the "scientific" presentation and analysis of medical data, the language of the laboratory report he knew as a chemist — as "the founding moment, the ur-document" of Levi's "still, small voice", the closing lines being tied separately to <em>If This Is a Man</em>'s final diary sequence rather than to the voice itself. Beyond style, Gordon argues the report matters as history (it names "the annihilation of the European Jews" at a moment when the figure had not yet crystallized), as a document of Nazi medicine (set beside Nyiszli, Lifton's <em>The Nazi Doctors</em>, and Amis's <em>Time's Arrow</em>), and as proof of the lifelong friendship between the two authors — Levi and De Benedetti lived a block apart in Turin for almost forty years, visited Auschwitz together in 1965, deposed on Mengele and Bosshammer, and gave interviews recording Piedmontese survivors. The chapter closes with Sebald's notion of the "concrete memory" of medical reports and Saul Bellow's description of Levi's books as "necessary". Source anchors: four-handedly; De Benedetti's medical training; Levi's prose; Ka-Be; October 1944; Story of Ten Days; annihilation of the European Jews; Nyiszli; The Nazi Doctors; Time's Arrow; Sebald; concrete memory; necessary; friendship; block apart in Turin; Auschwitz 1965; Mengele; Bosshammer; Piedmontese survivors.   </p>
+<p>Analysis: The four-hander composition, De Benedetti's medical training, and Levi's prose matter because the report is a document about method as well as content. Transport, living conditions, selections, and <em>If This Is a Man</em> show how calm, structured description defeats the camp's tendency to blur individual suffering into mass death, which makes the report central to <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: form itself becomes a survival tool. Its place beside <a href="//01%20Books/Survival%20in%20Auschwitz.html">Survival in Auschwitz</a> and <a href="//01%20Books/If%20This%20Is%20A%20Man%20-%20The%20Truce%20%28Abacus%2040th%20Anniversary%29.html">If This Is A Man - The Truce</a> is genetic, not merely thematic — the later books rewrite this document's sentences. As a study of camp medicine it also belongs to <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>, showing how systematically medical procedure can be inverted; and the essay's framing of the report as "a missing piece in the mosaic" of Nazi-medicine writing ties the volume to the vault's concern with how institutions record — or fail to record — the violence they administer.   </p>
+<h3 id="biographical-note">Biographical Note</h3>
+<p>Summary: The editorial Biographical Note condenses both men's lives. De Benedetti was born in Turin in 1898, served in the medical corps in the Great War (spending six months in Murmansk in 1918), graduated in medicine from Turin University in 1923, and worked as a general practitioner outside Turin in the 1920s and 1930s. He married Jolanda Debenedetti in 1928, lost his job in 1938 under the Fascist anti-Semitic Racial Laws, and after a failed attempt to reach Switzerland was arrested and deported in 1943; after the war he worked as a doctor in Turin and was active in survivor circles until his death in October 1983, aged eighty-five. Levi was born in Turin in 1919, graduated in chemistry from Turin University in 1941, joined a partisan group in 1943, was arrested and deported to Auschwitz, and on returning married Lucia Morpurgo and took up industrial chemistry until the mid-1970s. He published <em>If This Is a Man</em> in 1947 (republished 1958, followed by <em>The Truce</em>, <em>The Periodic Table</em>, <em>The Wrench</em>, <em>If Not Now, When?</em>, <em>Other People's Trades</em>, and <em>The Drowned and the Saved</em>), and died in 1987. The note directs readers to Angier's and Thomson's biographies. Source anchors: Turin; 1898; 1919; Murmansk; 1923; Racial Laws; Jolanda; Lucia Morpurgo; If This Is a Man; The Drowned and the Saved; October 1983; 1987; Angier; Thomson.   </p>
+<p>Analysis: The biographical coordinates matter because they fix the double standpoint of the report: the doctor who was barred from his profession by the Racial Laws and the young chemist whose professional idiom (the laboratory report) would frame an entire literature of testimony. Both routes into the camp — the anti-Semitic legislation of 1938 and the round-ups of 1943 — are stages of the bureaucracy that fed <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>. For <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>, the note is also evidence that the two men remained each other's custodians of memory for forty years after the liberation.   </p>
+<h3 id="note-on-the-texts-translator-s-note-and-acknowledgements">Note on the Texts, Translator's Note, and Acknowledgements</h3>
+<p>Summary: The editorial apparatus records the afterlife of the report. It was originally published as 'Rapporto sull'organizzazione igienico-sanitaria del campo di concentramento per ebrei di Monowitz (Auschwitz – Alta Silesia)' in the Turin medical journal <em>Minerva Medica</em> on 24 November 1946, pages 535–44, in the original-research section alongside articles on thrombosis, jaundice, and brucellosis. It "seems to have passed without notice and was, for all intents and purposes, forgotten"; only in 1993, after both authors had died, was it uncovered by the Turinese historian Alberto Cavaglion and republished in the proceedings of a 1991 Turin conference (<em>Il ritorno dai Lager</em>), then included in the 1997 edition of Levi's complete works. The two Levi essays on De Benedetti appeared in <em>La Stampa</em> (21 October 1983) and <em>Ha Keillah</em> (December 1983). Judith Woolf's Translator's Note explains that she attended to two voices — "a young man who would become a great writer" and "a middle-aged one who would quietly return to being a good doctor" — and observes that "the language of medicine cracks and finally breaks down" against the camp's deliberate squalor; "nothing in it is a metaphor." The glossary exists because "human beings were condemned to die from diarrhoea and diphtheria and invasive ulcers as deliberately as they were condemned to die by gas." Source anchors: Minerva Medica; 24 November 1946; pp. 535–44; Alberto Cavaglion; Il ritorno dai Lager; 1991; Opere 1997; Judith Woolf; nothing is a metaphor; cracks and finally breaks down; La Stampa; Ha Keillah.   </p>
+<p>Analysis: The publication history is itself an episode in <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: a damning primary document fell silent for nearly half a century and had to be archaeologically recovered, showing that even testimony produced on official request can be lost without intermediaries like Cavaglion. The translator's insistence that "nothing in it is a metaphor" is the report's central claim to authority — it is a fidelity standard that ties the volume to <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> (records that can be sorted, shelved, and forgotten) and to the vault's broader question of how institutions preserve or discard their own evidence.   </p>
+<h3 id="purpose-and-provenance-the-report-s-commissioning">Purpose and Provenance: The Report's Commissioning</h3>
+<p>Summary: The report's own opening frames its origin. The writers state that they are publishing in Italy a document they submitted to the government of the USSR on the request of the Russian Command of the concentration camp for Italian ex-prisoners at Katowice, where they were inmates after their liberation by the Red Army towards the end of January 1945. The Moscow government requested similar reports from all doctors, of whatever nationality, liberated from the camps; their original report was required to concentrate exclusively on the operation of medical services at Monowitz, and to it they have added "some information of a general nature." The opening frames the subject directly as "the annihilation of the European Jews" — the title Raul Hilberg would give his monumental history in 1961. Source anchors: Katowice Command; government of the USSR; Italian ex-prisoners; end of January 1945; Moscow; medical services; annihilation of the European Jews; general nature.   </p>
+<p>Analysis: The commissioning frame makes the report an instrument of the postwar knowledge-gathering machine: the Soviet state wanted doctors to turn the camps into legible data, and <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> here runs through <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> — testimony produced inside an official archive bureaucracy. The report is simultaneously a <a href="//02%20Concepts/Legibility.html">Legibility</a> document: it renders the internal operation of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> readable to an external power, which is exactly what makes it forensic rather than merely elegiac.   </p>
+<h3 id="deportation-and-arrival">Deportation and Arrival</h3>
+<p>Summary: The report's opening reconstruction of the journey from Fossoli to Auschwitz is brutally concrete. The writers left the concentration camp at Fossoli di Carpi (Modena) on 22 February 1944 with a convoy of 650 Jews of both sexes and all ages — the oldest over eighty, the youngest a baby of three months, many already ill (a seventy-year-old struck by a cerebral haemorrhage before departure was loaded on anyway and died en route). The train was of cattle trucks, locked on the outside, each crammed with over fifty people; many brought luggage because a German warrant officer had "kindly" advised them to bring warm clothes, money, and jewellery — advice which "concealed a crude trap". The journey lasted exactly four days, in intense cold (morning pipes were sheathed in ice from condensation), with thirst quenchable only by snow gathered at halts under sub-machine-gun surveillance. At each halt food was distributed truck by truck — bread, jam, cheese, but "never water or anything else to drink". Sleep was impossible among the luggage; the floor was soaking wet with no straw. Arriving at about 9 p.m. on 26 February 1944, the passengers were cleared by SS men armed with pistols and batons and forced to abandon their luggage. The company was divided into three groups: ninety-five young and apparently able-bodied men; twenty-nine young women; and the most numerous group of children, the infirm, and the old — of whom "there is reason to believe" they were taken straight to the gas chamber at Birkenau that same evening. Source anchors: Fossoli di Carpi; 22 February 1944; 650; over eighty; three months; cerebral haemorrhage; cattle trucks; locked; fifty; warrant officer; crude trap; four days; ice; snow; sub-machine-guns; bread, jam, cheese; no water; 9 p.m.; 26 February 1944; three groups; ninety-five; twenty-nine; gas chamber at Birkenau.   </p>
+<p>Analysis: Fossoli, Auschwitz, locked cattle trucks, and no water matter because the camp system begins before the camp proper; transport already degrades and sorts. Luggage confiscated, labor utility, and the gas chambers make <a href="//02%20Concepts/Legibility.html">Legibility</a> murderous: administrative categories, bodily appearance, and labor potential become the basis of life-and-death decisions, with the "kindly" advice of the warrant officer exposed as a sorting mechanism. The same sequence also exposes <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> without moral constraint — a system seeing only what can be used and discarding the rest — and it grounds <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: the ninety-five young men were not saved by humanity but requisitioned by <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> as labor units.   </p>
+<h3 id="monowitz-and-the-buna-werke">Monowitz and the Buna-Werke</h3>
+<p>Summary: The report describes Monowitz itself, the camp "administratively dependent on Auschwitz" and about 8 kilometres from it, set up towards the middle of 1942 to provide labour for the construction of the 'Buna-Werke' industrial complex, a subsidiary of IG Farbenindustrie intended for large-scale production of synthetic rubber, synthetic gasoline, dyestuffs, and coal by-products. The zone occupied a rectangular area of about 35 square kilometres; its production cycle was never initiated, its August 1944 starting date repeatedly postponed by air raids and sabotage by Polish civilian workers until the German evacuation. The camp housed ten to twelve thousand prisoners against a normal capacity of seven to eight thousand men, mostly Jews of every European nationality plus German and Polish criminals, Polish 'politicals', and 'saboteurs'. Monowitz was a typical 'Arbeits-Lager': every morning the population filed out in ranks "to the sound of a band playing military marches", covering up to six or seven kilometres at a rapid pace, almost at a run, and submitted to roll-calls of one to three hours before and after work in whatever weather. Arrival processing is described: immediate disinfection, total and painstaking depilation, a night locked in the shower room — "with their feet in the water that trickled from the pipes and ran over the floor" — and in the morning a Lysol rub-down, a hot shower, and a naked run through the snow to the changing room. Source anchors: 8 kilometres; mid-1942; Buna-Werke; IG Farbenindustrie; synthetic rubber; 35 square kilometres; never initiated; air raids; Polish sabotage; 10–12,000; 7–8,000; Arbeits-Lager; band; six or seven kilometres; roll-call; depilation; Lysol; naked into the snow.   </p>
+<p>Analysis: This is the operational core of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>: a labor camp disciplined by corporatism (IG Farben) whose factory never produced anything, making the camp's industrial purpose entirely symbolic of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> fused with private enterprise. The daily movements — band-led marches, counted roll-calls, timed arrivals, systematic processing of arrivals — are pure <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: men moved, counted, cleaned, and issued like inventory. The arrival sequence (depilation by scissors, razors, clippers; Lysol rub-downs; the shivering wait) shows how <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> begins with the erasure of identity and the numbering of bodies.   </p>
+<h3 id="clothing-hygiene-and-the-appearance-of-order">Clothing, Hygiene, and the Appearance of Order</h3>
+<p>Summary: The report's description of Monowitz clothing, bed assignments, disinfection, underwear exchange, and vermin exposure is one of its most revealing sections. The winter outfit was a striped woollen jacket, trousers, cap, and overcoat plus a shirt, cotton underpants, foot-cloths, a pullover, and wooden-soled boots; many foot-cloths and underpants had been made from the <em>tallit</em>, the sacred Jewish prayer shawl, "retrieved from the luggage of some of the deportees and made use of in this way as a mark of contempt". By April the thick clothing was withdrawn, and in the autumn of 1944 the winter garments could not be redistributed at all, so prisoners faced the winter of 1944–45 in summer clothes, only a small minority receiving gabardine raincoats. Spare clothes were forbidden; underwear was changed every thirty, forty, or fifty days, "not actually clean... but simply disinfected by steam", often reduced to rags and stained; there was no laundry; even cloth and handkerchiefs were forbidden. The boots were handmade in the camp from confiscated footwear, unsuitable for marches "however short", and the cause of epidermal foot ulcers. Appearances were maintained: paths were swept, block exteriors painted, floors washed daily, the three-storey bunks (the 'castles') aligned, blankets smooth — but blocks housing 150 to 170 people always held not less than 200, often 250, so two men slept in almost every bed, and the cubic capacity was below the minimum needed even for respiration. Only the pallets "most in view" — the lower tiers nearest the entrance, reserved for the camp's minor hierarchs — were decent. Thousands of bed bugs and fleas lived in the 'castles' despite nitrogen-mustard fumigation every three or four months; against lice a "war to the death" was waged through nightly 'louse inspections' to avert petechial typhus, with whole dormitories stripped, Lysol showers, and nights spent naked awaiting steam-disinfected clothes. Despite the "astonishing" disregard for hygiene, and a significant percentage of prisoners sharing mess tins and spoons unwashed, "rapidly spreading epidemics never broke out". Source anchors: winter outfit; tallit; mark of contempt; foot-cloths; autumn 1944; gabardine; thirty, forty or fifty days; steam; no laundry; boots; wooden soles; epidermal ulcers; appearances; 150–170; 200–250; cubic capacity; castles; bed bugs; fleas; nitrogen mustard; louse inspection; petechial typhus; epidemics never broke out; mess tins.   </p>
+<p>Analysis: Monowitz clothing, bed assignments, disinfection, and underwear exchange matter because the appearance of order masks the reality of breakdown. Vermin exposure, injurious boots, and bedding near the entrance show <a href="//02%20Concepts/Legibility.html">Legibility</a> as institutional theater: cleanliness exists where it can be displayed, not where it can protect life, and visible control legitimizes a system built on hidden ruin. The desecration of the <em>tallit</em> and the running of the hygiene regime as a war on lice rather than a protection of people make the section a study of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>'s deeper logic — efficiency directed against its own subjects, in which the astonished absence of epidemics reads as luck, not management.   </p>
+<h3 id="food-work-and-exhaustion">Food, Work, and Exhaustion</h3>
+<p>Summary: Although the extract presents these matters in dispersed fashion, the report makes clear that labor, malnutrition, and exhaustion formed a single regime. The rations: 350 grams of bread on four days, 700 on the other three (a daily average of 500 grams, heavily padded with dross and sawdust); 25 grams of margarine (six days, later reduced to three) with about 20 grams of sausage or a spoonful of jam or soft cheese; a litre of tasteless turnip or cabbage soup at noon and a slightly thicker litre in the evening with a few potatoes, peas, or chickpeas, rarely shreds of meat; and half a litre of unsweetened ersatz coffee morning and evening (saccharin on Sundays). There was no drinking water at Monowitz — the running water in the washrooms "was river water, which arrived at the Camp neither filtered nor sterilized" and was "highly dubious", clear in appearance but yellowish and metallic-sulphurous. Soap was rationed to a single, sandy, non-lathering 50-gram bar per month; there were no towels, so prisoners ran naked back to their blocks whatever the weather. Showers were required two or three times a week. The work was manual labour "all very demanding and unsuited" to the prisoners; almost none worked in their civilian trade — "neither of the present writers were able to work in the hospital or in the chemical laboratory of the 'Buna-Werke'" (a claim the editor refutes for Levi, who worked in the Buna laboratory in the winter of 1944) — and heavy outdoor labour in snow, rain, and sun was done at the double, without breaks except an hour at midday, "woe betide anyone who was caught being inactive". The body was thus managed as a temporary energy source, not sustained as a human organism. Source anchors: 350/700 grams; dross; sawdust; 25 grams margarine; 20 grams sausage; turnip soup; litre; ersatz coffee; saccharin; no drinking water; river water; 50-gram soap; no towels; two or three showers; manual labour; at the double; Buna-Werke laboratory; no breaks; temporary energy source.   </p>
+<p>Analysis: Labor, malnutrition, exhaustion, long marches, roll-calls, and inadequate food matter because Monowitz was not simply a prison camp with bad conditions: it was a <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> machine calibrated to consume people as temporary energy sources, and the report documents the metabolism explicitly — calories in, work out, reserves run down. Diet, clothing, marching, exposure, and punishment lowered bodily resilience while demanding continued output, so work never separated from debilitation or from selection for death. As <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>, the rationing table (grams per day per category, days per week per item) shows an accounting system whose meticulousness serves depletion rather than subsistence, and whose collateral detail — sawdust in the bread, river water unfit to drink, soap that disintegrates — completes the portrait of invested organization and calculated neglect.   </p>
+<h3 id="the-characteristic-pathologies-of-the-camp">The Characteristic Pathologies of the Camp</h3>
+<p>Summary: The report's medical core classifies the diseases of Monowitz into six groups: (1) dystrophic diseases, (2) diseases of the gastrointestinal apparatus, (3) diseases due to cold, (4) infective diseases, general and cutaneous, (5) conditions requiring surgery, and (6) work-related conditions. The diet, deficient in fats, animal protein, and vitamins, produced dystrophies in almost all prisoners from their first weeks: rapid emaciation, oedemas of the lower limbs and sometimes the face, chronic skin infection (boils, leg ulcers, phlegmons that would not heal — "turbid sores with a lardaceous base" that resisted even silver nitrate), muscular atrophy, and diarrhoea. Vitamin deficiency syndromes like scurvy or polyneuritis "did not occur... in a typical and fully developed form" — because, the authors remark grimly, "the average life expectancy of the majority of prisoners was too short". Gastrointestinal disease centred on diarrhoea: sudden, furious (from five or six to twenty or more evacuations a day), frequently fatal, aggravated by hunger-driven scavenging of potato peelings, raw cabbage leaves, and rotten potatoes from kitchen refuse; the standardized treatment was a twenty-four-hour total fast, a special diet, albumin tannate and charcoal tablets, and in grave cases "five drops (!) of tincture of opium" with Cardiazol. Diseases due to cold dominated the respiratory score: bronchitis, pneumonia, broncho-pneumonia "the order of the day even during the summer", treated with cold compresses, a few antipyretic tablets, and sulphonamides in "totally inadequate doses"; frostbite had no treatment "apart from amputation". Infective diseases included scarlet fever, chickenpox, erysipelas, diphtheria — the latter with a death rate of 100 per cent for lack of serum — and a mixed isolation ward where patients contracted new infections from one another; scabies patients were treated with Mitigal rub-downs at night while continuing to work among the uninfested; and syphilitics, tuberculars, and malarial cases were "immediately dispatched to Birkenau and eliminated there in the gas chambers": "It cannot be denied that this was a radical prophylactic method!" Surgery was real and regular — partial gastrectomy, pyloroplasty, appendectomies, rib resections, orthopaedic work — with blood transfusions from "recently arrived deportees who were still in good general shape", who volunteered because a donation earned a fortnight's hospital rest and special rations, so offers "were always very numerous". The most frequent operations were for phlegmons, drained and re-drained with no treatment to stimulate healing and no dressings that held; otitis with mastoid complications was common. No research operations took place at Monowitz, the authors believe — unlike the Auschwitz hospital's castration and cross-gender grafting experiments they mention in passing. Finally, the report's single work-related case closes the survey: in August 1944 the men of the 'Chemical Commando' handled sacks of a phenolic powder that bonded to their sweating skin, and sun exposure produced intense burning, strong pigmentation, and extensive desquamation in about fifty men over three weeks — none of whom was admitted to hospital. The authors admit they cannot give "precise data" on disease frequency, since neither ever entered the hospital except as a patient. Source anchors: six groups; dystrophies; emaciation; oedema; lardaceous; silver nitrate; muscular atrophy; scurvy; polyneuritis; life expectancy; diarrhoea; five or six to twenty; potato peelings; albumin tannate; charcoal; opium; Cardiazol; bronchitis; pneumonia; cold compresses; sulphonamides; amputation; scarlet fever; chickenpox; erysipelas; diphtheria; 100 per cent; isolation ward; scabies; Mitigal; syphilis; tuberculosis; malaria; radical prophylactic; gas chambers; phlegmons; otitis; mastoid; blood transfusion; fortnight's rest; Chemical Commando; phenolic; desquamation; precise data; except as a patient.   </p>
+<p>Analysis: Malnutrition, oedema, diarrhoea, tuberculosis, labor intensity, contaminated clothing, and overcrowding matter because they turn the camp into an epidemiological structure rather than only a moral horror. Levi and De Benedetti show how routine conditions manufacture <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> at the bodily level: collapse was neither accidental nor exceptional — it was engineered and then <em>managed</em> by a medical apparatus — while survival depended on tiny margins inside conditions designed to deplete. The dystrophy entry's plain observation that prisoners did not survive long enough to show scurvy, and the surgical entry's market in blood (donation exchanged for rest), are the clinical arm of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>: medicine subordinate to labor accounting. The remark that syphilis, tuberculosis, and malaria patients were dispatched to Birkenau as "a radical prophylactic method" is the report's most corrosive irony — <a href="//02%20Concepts/Legibility.html">Legibility</a> applied to diagnosis itself, where a disease category becomes a death sentence.   </p>
+<h3 id="the-infirmary-and-hospital-organization">The Infirmary and Hospital Organization</h3>
+<p>Summary: The account of medical organization is devastating precisely because it is so measured. Before a hospital existed, "there were no medical services and the sick had no possibility of getting treatment", but worked "until they collapsed from exhaustion"; confirmation of death was carried out by two non-doctors who beat the fallen man with ox sinews until he moved — in which case he resumed work — or was declared dead and taken to the crematorium. Then an out-patient clinic was established, where a man not recognized as ill "would immediately receive severe corporal punishment from the SS"; later blocks were set aside as an infirmary which gradually expanded into: clinics for general medicine, general surgery, ENT, and ophthalmology; a dental surgery; a ward for infective surgical cases; a general clinical ward with a nervous-and-mental section equipped with "a small electric shock therapy apparatus"; a ward for infectious diseases and diarrhoea; a recuperation ward ('Schonungs-Block') for dystrophic and oedematous patients; physiotherapy with quartz and infrared lamps; and a chemical, bacteriological, and serological research unit — but no X-ray machines, so patients were dispatched to Auschwitz for radiology. The description might suggest a hospital "small, certainly, but complete in almost every department and efficiently run"; in reality there were serious deficiencies: no waiting-room, so patients queued outdoors in the evening whatever the season, entering clinics barefoot over floors soiled with blood and pus; every pallet shared by two patients whatever their disease, the patients naked for lack of shirts, the blankets and palliasses "absolutely filthy, stained with blood and pus and often with faeces"; meals served in shifts from receptacles rinsed in a bucket of cold water; in the 'Schonungs-Block', two hundred patients sharing six basins washed once a day, and bread stored overnight on a dressing bench "always smeared with blood and pus"; admission required a second cursory examination; ward rounds were conducted with patients standing while the doctor made his round "without personally going up to the patients' beds"; dressings were changed only every third day and secured with paper bandages that tore apart in hours; punishments of twenty-five forceful blows with a rubberized tube or balancing on a narrow stool were routine; and "the rules of hygiene were completely ignored, apart from what little was necessary to keep up appearances." Source anchors: no medical services; ox sinews; crematorium; corporal punishment; list of services; Schonungs-Block; electric shock; X-ray; Auschwitz; two patients per pallet; naked; blood and pus; six basins; paper bandages; twenty-five blows; narrow stool; keep up appearances.   </p>
+<p>Analysis: The infirmary, operations, triage, scarce medicines, labor logic, chronic prisoners, and the shifting line between care and disposal matter because medicine inside the camp is both real and corrupted. The section turns <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> inside out: emergency administration, diagnosis, and scarcity management serve an exterminatory order, and the hospital is closer to "an antechamber of death" than to a curing station — as the editor frames it, a place "of mistreatment, neglect and meaningless regulation, of torture and violence meted out by its nurses". It also clarifies <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> by showing administrative competence without moral constraint: the bureaus, wards, and procedures exist, the staff are organized, and all of it is arranged against the patient. The beatings and the market in patients' soup tie the account to <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, whose discipline reaches into the sickbed itself under <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>.   </p>
+<h3 id="medication-scarcity-and-improvisation">Medication, Scarcity, and Improvisation</h3>
+<p>Summary: The report's discussion of medicines underscores both extreme scarcity and absurd inconsistency. Medication "was reduced to a minimum": there was a little aspirin, a little Pyramidon, a little Prontosil (the only sulphonamide), a little sodium bicarbonate, a few phials of Coramine and caffeine; there was no camphorated oil, no strychnine, no opium (apart from a small quantity of tincture), no belladonna or atropine, no insulin, no expectorants, no salts of bismuth, no Epsom salts, no pepsin, no hydrochloric acid; the purgatives were represented only by Purgatin. There were reasonable quantities of hexamethylenetetramine, medicinal charcoal, and albumin tannate, plus soluble evipal and ethyl chloride for anaesthesia — the latter "widely used even for minor interventions, such as lancing a boil". Every so often the dispensary was given "new blood" by the arrival of new convoys, when various quantities of the most disparate products — "many of them useless" — were discovered in the confiscated luggage of the new arrivals; "but all in all, requirements were always far in excess of supply." The staff were recruited entirely from among the deportees: doctors were chosen, subject to examination, from those who declared medical degrees, with priority to speakers of German or Polish, and their services were rewarded with improved rations, clothing, and footwear; the orderlies and nurses "were picked without any criterion of previous professional experience", generally striking physical specimens who owed their positions (naturally "very much sought after") to friendships and connections. While the doctors displayed "a reasonable competence and a certain degree of civility", the auxiliary staff "distinguished themselves by their ignorance of, or contempt for, every hygienic, therapeutic and humanitarian principle", bartering part of the patients' soup and bread in exchange for cigarettes and clothing, beating patients for trivial offences, and expelling bread-stealers from the hospital with twenty-five blows. Source anchors: aspirin; Pyramidon; Prontosil; sodium bicarbonate; Coramine; caffeine; no strychnine; no opium; no insulin; Purgatin; hexamethylenetetramine; charcoal; albumin tannate; evipal; ethyl chloride; confiscated luggage; far in excess of supply; doctors; examinations; German or Polish; improved rations; orderlies; physical specimens; barter; twenty-five blows.   </p>
+<p>Analysis: Basic drugs missing, tiny amounts, useful pharmaceuticals, confiscated belongings, inadequate treatment, and built-in scarcity matter because small gestures of treatment are embedded within plunder and deprivation — the confiscated luggage of newly murdered arrivals is what periodically re-stocks the pharmacopoeia, so relief and predation share one pipeline. The section sharpens the contrast between knowledge as healing capacity and institutions that neutralize that capacity, which is exactly the inversion inside <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: medicine survives only in fragments inside a system organized against health. The staffing account, where competence is a reward (better rations) and brutality is a sinecure, completes <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>'s corruption under <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>.   </p>
+<h3 id="selection-the-sonderkommando-and-the-gas-chambers">Selection, the Sonderkommando, and the Gas Chambers</h3>
+<p>Summary: Toward the end, the report returns to the larger death system to which Monowitz was connected. Patients with chronic disease, stays longer than about two months, or frequent relapses were sent "to Birkenau and there eliminated in the gas chambers", as were tuberculosis, syphilis, and malaria cases and "those too depleted to be able to work". About once a month the "selection of the Muslims" (the camp term for prisoners depleted to the point of surrendering, derived from the idea of 'Kismet') took place in the wards: the most physically broken down filed naked before the doctor in charge of medical services, who "judged the general condition of each one with a superficial glance, instantly deciding their fate"; a few days later a medical captain of the SS, director general of medical services in all the subsidiary camps, gave a second, more thorough examination, and "it was only a lucky few who were removed from the list". One of the authors was included among the 'Muslims' no fewer than four times and escaped each time through the intervention of prisoner-doctors. In October 1944 the selection was extended from the wards to all the 'blocks'; it was the last such selection, since afterwards the gas chambers at Birkenau were demolished — but 850 victims were selected that day, eight of them Italian Jews. The report then describes the Birkenau installation: a new crematorium, inaugurated in February 1943, with a waiting room, a 'shower room' with fake shower fittings and signs ("Wash thoroughly, because cleanliness is health"), and ovens around a central chimney — nine ovens with four openings each, capacity two thousand corpses a day; victims were handed a piece of soap and a towel to make the deception credible; Zyklon B, labelled "For the destruction of all kinds of vermin", was dropped through the ceiling valve; a Special Commando, segregated and working in two shifts day and night, carried the corpses to the ovens, while another squad cut the hair and extracted the gold teeth of those slaughtered immediately on arrival, and the ashes were scattered on fields as fertilizer. The report says the Special Commando members "were picked from amongst the worst criminals, convicted of serious and bloody crimes" — an error the editor corrects: they were typically young Jewish men, racial victims like the authors themselves. Source anchors: chronic; two months; relapses; Muslims; Kismet; naked; superficial glance; medical captain; lucky few; four times; October 1944; 850; eight Italian Jews; last selection; February 1943; waiting room; shower room; cleanliness is health; soap and towel; Zyklon B; vermin; nine ovens; 2,000 corpses; Special Commando; two shifts; worst criminals; hair; gold teeth; fertilizer.   </p>
+<p>Analysis: Monowitz, chronic illness, burdens, Birkenau, gas chambers, infirmary policy, and labor allocation matter because the report prevents any false separation between labor camp and death camp: administrative medicine, work assignments, and bodily classification tie <a href="//02%20Concepts/Legibility.html">Legibility</a> to extermination, with the "superficial glance" of the selecting doctor the purest form of administrative reading. Monowitz depended on Birkenau as an ultimate disposal mechanism, so the report reveals murder as a system of linked institutions rather than a single site or moment — <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> and the crematoria function as one through-put chain, the ovens' rated capacity in corpses per day completing <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> as engineering. The gas chamber's shower-room signage ("Wash thoroughly, because cleanliness is health") is the same institutional theater the report documents in the block and the infirmary, and the false claim about the Sonderkommando's origin is a deliberate, honest erasure: as the editor notes, survivors at the edge of the machine misread even their own history in 1945.   </p>
+<h3 id="evacuation-death-march-and-liberation">Evacuation, Death March, and Liberation</h3>
+<p>Summary: The report's final movement covers the camp's end. In late 1944 orders came that all doctors were to be released from their commandos and employed in the hospital; a month's training and a theoretical course on camp medicine began in early January 1945, only to be broken off in mid-January by the overwhelming Russian offensive in the Kraków–Katowice–Wrocław direction, before which the German forces fled. The Monowitz camp was evacuated along with the others in the region; the Germans dragged about 11,000 prisoners with them, who marched some seventy kilometres on foot with provisions of a kilogram of bread, 75 grams of margarine, 90 grams of sausage, and 45 grams of sugar, were then loaded onto trains that reached no destination, and — according to information received from someone who escaped — were "almost all slaughtered by bursts of machine-gun fire a few days later" when the escorting soldiers realized they were surrounded by the Red Army; many, "perhaps three or four thousand," had already stopped on the road, overcome by fatigue. About a thousand incapacitated, sick, or convalescent prisoners were left behind under SS men "who had been ordered to shoot them before leaving"; the order was not carried out, and "it is to this alone that the present writers owe the fact that they are still alive" — one kept to give medical aid to the patients, the other because he was convalescent. The Germans had stripped the hospital of every drug and surgical instrument ("there was no longer so much as an aspirin tablet, a pair of forceps or a gauze dressing"), the water mains had been destroyed in an air raid, and many patients died from lack of treatment, food, and water. Only the chance discovery of a cache of potatoes buried in a nearby field enabled "the least enfeebled" to feed themselves until the Russians arrived "and made generous provision for the distribution of food". Source anchors: late 1944; January 1945; Russian offensive; Kraków-Katowice-Wrocław; 11,000; seventy kilometres; one kilogram of bread; 75 grams margarine; 90 grams sausage; 45 grams sugar; machine-gun fire; surrounded; three or four thousand; a thousand; shoot them; order not carried out; stripped; aspirin; forceps; gauze; water mains; air raid; cache of potatoes; Russians arrived.   </p>
+<p>Analysis: The evacuation completes the report's picture of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> running to its terminus: prisoners are marched to exhaustion with rations specified to the gram, packed into trains that go nowhere, and machine-gunned when the escort computes that escape is impossible — men managed as cargo until they become a liability. The authors' survival is attributed to an order not being carried out, to depletion (being too sick to march), and to a buried cache of potatoes, which makes <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a> starkly material: the same weakness that condemned most of their companions to the death march left the thousand behind alive, and the same starvation that killed their ward-mates made the potato cache a liberation. That Levi and De Benedetti themselves owed their lives to administrative failure (the shooting order never executed) is the report's final, quiet rebuttal to any reading of survival as moral desert, and it roots the whole document in <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>'s final act of calculated abandonment and murder.   </p>
+<h3 id="in-memory-of-a-good-man">In Memory of a Good Man</h3>
+<p>Summary: Levi's memorial essay, published in the Turin newspaper <em>La Stampa</em> on 21 October 1983, the month of De Benedetti's death, is the book's tribute to "Nardo". Levi sketches the man — "delightfully ugly", big crooked nose, bushy blond eyebrows, "a way all of his own of taking part in a conversation" — and his character: patient, affectionate, quietly courageous, "more in endurance than in action". He recounts how, in the autumn of 1943, De Benedetti tried to cross into Switzerland with a group of relatives but "the Swiss guards were unyielding, admitting only the elderly and the children along with their parents", so the rest were escorted back "into the hands of the Fascists and the Germans". They met at Fossoli, were deported together, and "from then on we did not part from each other again until our return to Italy in October 1945". In the Lager his wife "was immediately put to death"; because he declared himself a doctor but knew no German, "he shared the common fate: labouring in the mud and the snow"; his injured feet swelled and carried him to the infirmary, where SS doctors put him on the list for death by gas four times, "but fortunately his professional colleagues, the French or Polish prisoner-doctors of the infirmary, intervened: four times they managed to have his name crossed off." Levi's tribute to what sustained him is explicit: "frail but not broken by the brutal life of the Lager, mildly and calmly aware, a friend to everyone, incapable of rancour, without anguish and without fear". On the disordering journey home, his "infectious capacity for hope" and "zeal as a medical practitioner with no medicines" served not only the few Auschwitz survivors but "a thousand other Italian men and women"; and for almost forty years after their return to Turin he lived "single in registry office terms but in reality surrounded by a multitude of friends". Source anchors: La Stampa; 21 October 1983; Nardo; delightfully ugly; Switzerland; the elderly and the children; Fossoli; deported together; wife immediately put to death; no German; mud and snow; four times; French or Polish prisoner-doctors; infirmary; frail but not broken; incapable of rancour; a thousand other Italian men and women; forty years.   </p>
+<p>Analysis: The essay makes De Benedetti a concrete case of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: physically the least equipped man in the camp — too old, weak, out of condition — he survived four death lists because a community of prisoner-doctors repeatedly crossed his name off, and the portrait's point is precisely that his survival was collective before it was personal. The repeated crossing-out is also an inversion within <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>: the small, fragile acts of resistance inside the medical apparatus that the report elsewhere chronicles as degraded and corrupted. The essay is Levi's own act of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>, fixing the friend's character, courage, and the moral meaning of a life spent "entering fully into your problems" against the erasure the camp attempted.   </p>
+<h3 id="leonardo-de-benedetti">Leonardo De Benedetti</h3>
+<p>Summary: The volume closes with Levi's obituary of De Benedetti, published in the local Jewish community magazine <em>Ha Keillah</em> in December 1983. De Benedetti died suddenly on 16 October 1983 in the Jewish Rest Home where he had lived for several years, aged eighty-five; he had been the municipal doctor of Rivoli, was arrested in 1943 "while trying to leave the country", and was deported to Auschwitz, where he lost his wife. In the Lager "his status as a doctor was not recognized; he spent almost a year there, enduring hunger, cold, fatigue and alienation with a rare serenity and strength of mind which communicated itself to anyone who had occasion to speak with him". Liberated in January 1945 by the Soviet army, he organized an infirmary in the transit camp at Katowice with scarce resources but great zeal, treating everyone gratis — "not only Italian ex-prisoners but also foreign ones came to him, as did many Polish townsfolk and even some Soviet soldiers". After "a long and adventurous journey of repatriation", he settled in Turin, resumed practice, and "was the hard-working and highly esteemed doctor of the Rest Home" until, at eighty, he retired; he kept receiving visits and answering letters with "punctilious care" until his last days. Levi's final sentence: "He was a brave and gentle man who had been an invaluable help to many while never asking for help from anyone." Source anchors: Ha Keillah; December 1983; 16 October 1983; Jewish Rest Home; Rivoli; 1943; Auschwitz; wife; status as a doctor not recognized; serenity; Katowice; gratis; Polish townsfolk; Soviet soldiers; repatriation; Turin; eighty; punctilious; brave and gentle man.   </p>
+<p>Analysis: The obituary is an act of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> from the other side of a shared history: where the report preserves the camp's institutions, these closing pages preserve the friend whose life the report could not name, and the two documents together make the volume a record of institutional murder and of individual goodness under it. De Benedetti's three recoveries — as camp doctor at Katowice, as municipal doctor of Rivoli, and as tender of the survivor network — remake, in miniature, the kind of resilience the report so relentlessly documented being destroyed, and his "rare serenity" stands as the human counterweight to <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a>'s account of the depleted body and the broken will.   </p>
+<h3 id="glossary-of-medical-and-pharmaceutical-terms-and-bibliography">Glossary of Medical and Pharmaceutical Terms and Bibliography</h3>
+<p>Summary: The volume's back matter consists of Judith Woolf's glossary of the period's medical and pharmaceutical vocabulary and the bibliography used in compiling it. The glossary maps the report's pharmacopoeia and pathology: Prontosil, the first sulphonamide, discovered by Gerhard Domagk in 1935 and manufactured by Bayer, part of the IG Farben conglomerate, Germany's progress from synthetic dyes to pharmaceuticals being the same corporate story as the Buna-Werke; Panflavin, the lozenges on which diphtheria sufferers were left — "in effect, the diphtheria sufferers at Monowitz who were given Panflavin were being treated for a killer disease with throat pastilles"; the <em>Muselmann</em> word, whose early-twentieth-century European association of Muslims with 'Kismet' (destiny) gave the camp its dark joke about the fatalism of the depleted; oedema as "famine, prison or war oedema"; phlegmon as inflammation of subcutaneous tissue leading to invasive abscesses; and the drugs of the infirmary — albumin tannate, Mitigal, Cardiazol, Ichthyol, Collargol, Pellidol, Purgatin. The bibliography ranges across Blackwell's and Butterworths' nursing and medical dictionaries, Churchill Livingstone's dictionary of nursing, Hayes's <em>Industry and Ideology: IG Farben in the Nazi Era</em>, Cornwell's <em>Hitler's Scientists</em>, and Martindale's pharmacopoeia. Source anchors: glossary; Judith Woolf; Prontosil; Domagk; Bayer; IG Farben; Panflavin; pastilles; Muselmann; Kismet; oedema; phlegmon; albumin tannate; Mitigal; Ichthyol; Industry and Ideology; Hitler's Scientists; Martindale; Bibliography.   </p>
+<p>Analysis: The glossary is a deliberate instrument of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: it fixes the exact material vocabulary of the Monowitz infirmary — the drugs that existed in "reasonable quantities" and the diseases that killed — so that the report's clinical detail remains legible to readers who have no 1940s pharmacopoeia. Its editorial notes are themselves evidence: the Panflavin entry, the Prontosil/Bayer link, and the <em>Muselmann</em> etymology reveal how deeply the corporate, pharmaceutical, and linguistic infrastructure of <a href="//05%20Characters%20and%20Entities/Monowitz-Buna%20Labor%20Regime.html">Monowitz-Buna Labor Regime</a> threaded through everyday life, and how the terms of <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>'s victims entered even their own vocabulary as a form of administered exhaustion.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<p><code>Auschwitz Report</code> matters because it demonstrates that atrocity can be documented with extraordinary discipline without becoming cold. The book records not only suffering but the institutional forms through which suffering was organized. For a vault concerned with how systems work, this is crucial: it shows how transportation, labor management, medicine, hygiene policy, and record-keeping can all be folded into a regime of dehumanization, and how state and corporate capacity (the Katowice Command's request, IG Farben's plant) can be pressed into the service of destruction. It also captures an early stage in Primo Levi's development as a witness: the report shows the emergence of a style that would later become one of the twentieth century's clearest instruments for thinking about evil, responsibility, and the deformation of social systems. Read alongside later testimony, it becomes both document and workshop — a site where the language of survival first hardens into durable witness, and where, as Gordon and Woolf argue, the calm language of the laboratory proves "essential" (Bellow's word) precisely because "nothing in it is a metaphor."   </p>
+<p>Concrete retrieval cues and load-bearing figures:   </p>
+<ul>
+<li><strong>The numbers that survive the prose</strong>: 650 deported from Fossoli, 24 survivors, 525 killed within hours of arrival; ninety-five young men selected for labor, twenty-nine young women, the remainder to Birkenau; 10,000–12,000 prisoners against a capacity of 7,000–8,000; blocks built for 150–170 holding 200–250; 500 gram daily bread average padded with sawdust; underwear changed every thirty-forty-fifty days; soap one 50-gram bar per month; 850 selected in the October 1944 round (eight of them Italian Jews); the crematoria's rated capacity of 2,000 corpses a day; 11,000 on the death march; seventy kilometres on foot; provisions of 1 kg bread, 75 g margarine, 90 g sausage, 45 g sugar; three or four thousand dying on the road; a thousand left behind.   </li>
+<li><strong>The two prisoner numbers</strong>: De Benedetti 174489, Levi 174517, tattooed after selection for labor at Monowitz on 26 February 1944.   </li>
+<li><strong>Signature details</strong>: bread, jam, and cheese distributed daily on the train convoy "but never water"; the tallit recycled into foot-cloths "as a mark of contempt"; "five drops (!)" of tincture of opium; diphtheria's 100 per cent mortality for lack of serum; the syphilitic, tubercular, and malarial dispatched to Birkenau as "a radical prophylactic method"; the "superficial glance" that decided the 'Muslim' selections; gas chambers disguised with soap, towel, and the sign "Wash thoroughly, because cleanliness is health"; the confirmation of death by ox-sinew beatings; bread stored on dressing benches smeared with blood and pus; blood donated for a fortnight's hospital rest; the Chemical Commando's three weeks at the phenolic sacks; the buried cache of potatoes that carried the last thousand to liberation.   </li>
+<li><strong>The report's honest errors (per the editor)</strong>: the claim that neither author worked in the Buna chemical laboratory (Levi did, in the winter of 1944); the claim that the Sonderkommando were drawn from the worst criminals (they were typically young Jewish men); and the "radical prophylactic" formula, which is irony doing the work of testimony.   </li>
+<li><strong>The 1946 to 1993 gap</strong>: published in <em>Minerva Medica</em> on 24 November 1946, forgotten, and recovered by Alberto Cavaglion in 1993, then included in the 1997 <em>Opere</em> — a standing reminder of how easily even commissioned testimony disappears.   </li>
+<li><strong>The friendship</strong>: Villa in Turin a block apart for almost forty years; joint visits to Auschwitz in 1965; joint deposition for the Mengele extradition attempts and the 1971 Bosshammer trial; shared oral-history interviews in the 1980s — the report as both a document and a bond.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html">coercive labor, commodity systems, and extraction</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html">monowitz-buna labor regime</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html">testimony, war memory, and broken official narratives</a></li>
+	<li><a class="backlink" href="//02 Concepts/Knowledge Preservation.html">knowledge preservation</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/testimony/index.html">testimony</a></li>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/holocaust/index.html">holocaust</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/medicine/index.html">medicine</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A80441528575229477149221736237494444515{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D80441528575229477149221736237494444515{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B80441528575229477149221736237494444515{level}" level="{level}" note_temp_id="80441528575229477149221736237494444515" onclick="window.ObsHtmlGraph.run(this, '80441528575229477149221736237494444515', 'auschwitz report');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C80441528575229477149221736237494444515{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

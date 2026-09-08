@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="god emperor of dune">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'god emperor of dune';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=god emperor of dune" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="god-emperor-of-dune">God Emperor of Dune</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note is part of the Dune Chronicles series hub <a href="//04%20Series/Dune%20Chronicles.html">Dune Chronicles</a>, the narrative continuation of the <a href="//01%20Books/Dune/Children%20of%20Dune.html">Children of Dune</a> volume in which the child Leto accepted the sandtrout skin. It sits directly after the first trilogy — <a href="//01%20Books/Dune.html">Dune</a>, <a href="//01%20Books/Dune/Dune%20Messiah.html">Dune Messiah</a>, and <a href="//01%20Books/Dune/Children%20of%20Dune.html">Children of Dune</a> — and before the final pair, <em>Heretics of Dune</em> and <em>Chapterhouse: Dune</em>. It is the pivot of the series where Leto II's Golden Path becomes an imperial system rather than a personal transformation, and it is the patient background against which all book-4 questions about centralized rule, stagnation, and the survival-of-humanity bargain are answered.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>God Emperor of Dune</code> takes place more than 3,500 years into Leto Atreides II's rule, after the child who accepted the sandtrout skin in <a href="//01%20Books/Dune/Children%20of%20Dune.html">Children of Dune</a> has become a hybrid body: a human face and hands set into a pre-worm mass carried on an Ixian Royal Cart. Arrakis has become Rakis, the old planetwide desert has been reduced to the protected Sareer, the Kynes Sea and Idaho River cut through once-dry geographies, and Museum Fremen preserve gestures whose original necessities have vanished. The book asks what kind of civilization results when a prescient ruler deliberately uses stagnation, monopoly, ritual, and fear to prevent humanity from remaining capturable by a single future.   </p>
+<p>Leto's Empire is a hydraulic despotism built on melange rather than irrigation water. He controls spice allotments to the Bene Gesserit, keeps the Spacing Guild dependent, tolerates Ixian devices while fearing Ixian invention, keeps the Tleilaxu chastened through repeated Duncan Idaho gholas, and uses CHOAM and the weakened Great Houses inside a system where he is "the only spectacle remaining in the Empire." Leto's Peace is not benevolent calm. It is enforced tranquility designed to produce a future hunger for movement, risk, dispersion, and unpredictability.   </p>
+<p>The novel's structure is a documentary interleaving: Brian Herbert's INTRODUCTION, the Hadi Benotto/Dar-es-Balat translation apparatus, the running body narrative, three "FROM THE ORAL HISTORY" archival blocks, and a closing minority report. The first archival block — the Welbeck Abridgment of year 3508 — is a Bene Gesserit assessment of the Empire broken into sub-sections (Fish Speakers, Priesthood, Breeding Program, Economics, Great Houses, Family Life, Transport/Guild, the God Emperor, the Ixians, the Museum Fremen, the Tleilaxu). The second is Sister Chenoeh's secret posthumous account of Leto's ancestral-memory awakening and the pharaonic model. The third opens on Hwi Noree's summons at the Festival at Onn.   </p>
+<p>The novel's central relationships test whether anything can still surprise the God Emperor. Moneo Atreides serves as majordomo, sire of Siona and descendant of Ghanima and Harq al-Ada, and exhausted interpreter of Leto's commands. Siona Atreides steals journals from the Citadel, survives the D-wolves in the Forbidden Forest, and carries the genetic invisibility to prescience that Leto has spent millennia breeding. The latest Duncan Idaho arrives as the old Atreides moral reflex in a new ghola body, recoils from the Fish Speakers, discovers the lost humanity under Leto's system, and becomes the companion Siona will need after the tyrant's death.   </p>
+<p>Hwi Noree is the Ixian move that succeeds by not looking like a weapon. Bred from the line of Malky, she is designed to attract Leto precisely because she can meet him without calculation, and her gentleness exposes the remaining human vulnerability in the worm-god. Leto knows the Ixians and Guild may be using Hwi, but he accepts the trap because love, unlike rebellion, lets him experience a choice he cannot reduce to surveillance. His wedding journey to Tuono, where he weds Hwi by the Old Fremen ritual, therefore becomes both personal consummation and the opening for Siona, Duncan, and Nayla to break the bridge over the Idaho River.   </p>
+<p>The ending completes the Golden Path by destroying the body that made it possible. Nayla obeys Siona because Leto commanded her to obey; the lasgun cuts the bridge, Hwi and Moneo fall, the Royal Cart plunges into water, and the sandtrout leave Leto's dying body to begin the return of worms. In the cave below the broken bridge, Leto tells Siona and Duncan that nobody will find Siona's descendants because the Oracle cannot see her. The scattering, Famine Times, Ixian navigation machines, Tleilaxu vats, Church censorship, and Dar-es-Balat journals all flow from that gift: a humanity too dispersed and too opaque ("arafel," the cloud-darkness of holy judgment) for any future tyrant, oracle, or machine to gather in one hand.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Leto Atreides II (the God Emperor)</strong>: a hybrid being — human face, hands, and memories set into a pre-worm mass carried on an Ixian Royal Cart — who has ruled for roughly 3,500 years. His motivation is the Golden Path: to force humanity into dispersion and prescience-opacity so that no single future tyrant, oracle, or machine can ever again corral the whole species into one determinable future. He is the center of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>.   </li>
+<li><strong>Siona Atreides</strong>: Moneo's daughter (of the Harq al-Ada line, not Ghanima's), leader of the rebel cell that steals Leto's journals and charts. She is the breeding-program achievement Leto has sought for millennia: a human invisible to prescience, genetic carrier of "a new kind of mimesis." She motivates the plot by testing Leto, surviving his desert trial, and acting as the instrument through which his death proceeds.   </li>
+<li><strong>Duncan Idaho (the latest ghola)</strong>: the newest in the recurring line of Tleilaxu-made gholas kept as Commander of the Royal Guard for nearly sixty years. He carries the old Atreides moral reflex, recoils from the Fish Speaker order, discovers the lost humanity beneath Leto's system, and is the companion who will carry the spice hoard at Sietch Tabr forward after Leto's death.   </li>
+<li><strong>Moneo Atreides</strong>: Leto's majordomo, the father (sire) of Siona and a descendant of Ghanima and Harq al-Ada, and the exhausted interpreter who has spent a lifetime translating the God Emperor's commands into survival. He spies on everything for Leto, loves his rebellious daughter, and dies at Tuono in the bridge collapse.   </li>
+<li><strong>Hwi Noree</strong>: the Ixian ambassador and niece of Malky, bred to reach Leto where machines cannot. Her gentleness and love expose the remaining human vulnerability in the worm-god and make her the channel through which the Ixian "trap" of the wedding journey succeeds.   </li>
+<li><strong>Nayla</strong>: a Fish Speaker of legendary strength and absolute faith, wired with an Ixian device she believes God implanted. Her obedience is the mechanism Leto uses to route his own assassination through Siona's command — she fires the lasgun that breaks the bridge.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li>Series hub: <a href="//04%20Series/Dune%20Chronicles.html">Dune Chronicles</a>   </li>
+<li>Sibling books: <a href="//01%20Books/Dune.html">Dune</a>, <a href="//01%20Books/Dune/Dune%20Messiah.html">Dune Messiah</a>, <a href="//01%20Books/Dune/Children%20of%20Dune.html">Children of Dune</a>   </li>
+<li>Key entities: <a href="//05%20Characters%20and%20Entities/House%20Atreides.html">House Atreides</a>, <a href="//05%20Characters%20and%20Entities/Paul%20Atreides.html">Paul Atreides</a>, <a href="//05%20Characters%20and%20Entities/Bene%20Gesserit.html">Bene Gesserit</a>, <a href="//05%20Characters%20and%20Entities/Fremen%20Society.html">Fremen Society</a>, <a href="//05%20Characters%20and%20Entities/Spacing%20Guild.html">Spacing Guild</a>   </li>
+<li>Core concepts: <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>, <a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>, <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>, <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, <a href="//02%20Concepts/Ecology%2C%20Resources%2C%20and%20Constraint.html">Ecology, Resources, and Constraint</a>   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Golden Path as enforced stagnation</strong>: how deliberate centuries of peace are weaponized to force a future of mobility and risk.   </li>
+<li><strong>Hydraulic despotism through melange</strong>: control of a life-dependent flow as the mechanism of centralized power.   </li>
+<li><strong>The prescient ruler's limit</strong>: why an oracle can see everything yet must engineer descendants whom it cannot see.   </li>
+<li><strong>Breeding, heredity, and the denial of artificial genetics</strong>: Leto's rejection of Tleilaxu gene surgery as a chosen pathway to randomness.   </li>
+<li><strong>Religion bound to a body</strong>: priesthood and obedience fused to the Royal Cart, the Fish Speakers, and ritual speech.   </li>
+<li><strong>Museum culture and lost authenticity</strong>: Fremen identity preserved as performance without its ecological basis.   </li>
+<li><strong>Archives, censorship, and contested memory</strong>: the struggle over Dar-es-Balat journals versus Church and Oral History.   </li>
+<li><strong>Technology tolerated but feared</strong>: Ixian invention and Guild-Ix navigation machines as the threat to the spice-prescience order.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: Leto imposes millennia of stagnation to create Siona's prescience-invisible descendants and force humanity toward the Scattering.   </li>
+<li><a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>: Leto's melange hoard disciplines the Bene Gesserit, Guild, Great Houses, and CHOAM economy through controlled allotments and rationing.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: the Fish Speakers bind ritual, military force, and obedience directly to Leto's body rather than to an independent priesthood.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: Ixian navigation machines and the Guild-Ix project threaten the spice-and-prescience system by making movement possible without Guild Navigators.   </li>
+<li><a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: Dar-es-Balat preserves journals that later readers must compare against censored histories, cults, and post-Leto myths.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: a civilization deliberately slimmed into legible, managed, immobile form as a strategy of order.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a> / <a href="//02%20Concepts/Ecology%2C%20Resources%2C%20and%20Constraint.html">Ecology, Resources, and Constraint</a>: the reduction of Fremen life to museum performance once the ecology that formed it is gone.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Summary: Brian Herbert's introduction recalls visiting Frank and Beverly Herbert in Port Townsend during the summer of 1980, seeing a draft of <code>God Emperor of Dune</code> open near page 516, and hearing Frank describe it as a new kind of love story. He places the novel after the first trilogy of <code>Dune</code>, <code>Dune Messiah</code>, and <code>Children of Dune</code>, and before <code>Heretics of Dune</code>, <code>Chapterhouse: Dune</code>, and the planned <code>Dune 7</code> later completed with Kevin J. Anderson as <code>Hunters of Dune</code> and <code>Sandworms of Dune</code>. The introduction names Leto Atreides II, the 3,500-year reign, the Golden Path ("the survival of humankind, nothing more nor less"), Port Townsend, the Library of Congress, C-9 security clearance, <code>The White Plague</code>, Beverly Herbert, and Frank Herbert's habit of attacking unexamined linguistic and cultural assumptions. Source anchors: Port Townsend; Beverly Herbert; Leto Atreides II; 3,500 years; Golden Path; Library of Congress; The White Plague; Dune 7.   </p>
+<p>Analysis: Port Townsend and Beverly Herbert make the introduction intimate before it becomes literary history, because Brian Herbert ties the manuscript's "love story" label to Frank Herbert's household rather than to a marketing category. Leto Atreides II, 3,500 years, and Golden Path identify the central change from the earlier trilogy: the charismatic hero problem has become an immortal holy tyrant problem, running through <a href="//04%20Series/Dune%20Chronicles.html">Dune Chronicles</a>. Library of Congress, The White Plague, and Dune 7 show Frank Herbert's method at two scales, detailed research for particular mechanisms and long-range series planning for the consequences of Leto's imposed peace.   </p>
+<h3 id="hadi-benotto-and-the-stolen-journals">Hadi Benotto and the Stolen Journals</h3>
+<p>Summary: The documentary opening shifts to Hadi Benotto announcing discoveries at Dar-es-Balat on Rakis: ridulian crystal paper, the Stolen Journals, the Guild Key, an Ixian dictatel, a hidden storehouse, a primitive no-room or Ixian Globe, and microbubble recordings labeled as Leto II speaking in Paul Muad'Dib's voice. Rebeth Vreeb reads from the first translated page, where Leto calls himself the book of fate, relearns the name Leto, claims to hold all the threads, and describes ancestral memories of sword deaths, birthing beds, baby smiles, and lives from extinct planets. The section then drops into the opening chase, where Ulot, Kwuteg, and Siona run through the Forbidden Forest from D-wolves after stealing Citadel charts and sealed journals; of the eleven runners who began, nine die as Siona exfiltrates the sealed packet across the river. Source anchors: Hadi Benotto; Dar-es-Balat; ridulian crystal; Ixian dictatel; no-room; Rebeth Vreeb; Siona; D-wolves; Stolen Journals.   </p>
+<p>Analysis: Hadi Benotto, Dar-es-Balat, ridulian crystal, and Ixian dictatel turn <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> into a contested political problem before the reader meets the living God Emperor. The no-room matters because the hidden storehouse protects Leto's testimony from the censored future that will reconstruct him and prefigures the anti-prescient concealment he breeds through Siona. Rebeth Vreeb, Siona, and D-wolves connect archive to action: the journals are not neutral documents, because Siona's theft and the wolf chase make Leto's words part of rebellion, testing, and survival, echoing the <a href="//05%20Characters%20and%20Entities/Fremen%20Society.html">Fremen Society</a> endurance that the Museum Fremen only ape.   </p>
+<h3 id="the-welbeck-fragment">The Welbeck Fragment</h3>
+<p>Summary: A brief dialogue credited to the "Welbeck Fragment," reputedly authored by Siona Atreides, records Siona being visited secretly by her father Moneo at the Fish Speakers' School at the Festival City of Onn, when she was still in her teens, as Moneo warns her that she risks destruction. Source anchors: Welbeck Fragment; Siona; Moneo; Fish Speakers' School; Onn.   </p>
+<p>Analysis: The Welbeck Fragment introduces Siona and Moneo in their defining conflict before the main narrative expands it: a daughter raised to test the God Emperor and a father whose service to that God Emperor makes warning her a betrayal of his own position. The setting at the Fish Speakers' School ties both to the breeding-and-order apparatus of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>, since Moneo's warning is the first sign that the line Leto has bred may outlive the obedience he commands.   </p>
+<h3 id="from-the-oral-history-the-state-of-the-empire">From the Oral History: The State of the Empire</h3>
+<p>Summary: The first "FROM THE ORAL HISTORY" block is the Welbeck Abridgment's assessment of the Empire in the year 3508 of Lord Leto's reign, from the Bene Gesserit Chapter House Archives. Sisters Chenoeh and Tawsuoko confirm the execution of nine historians who disappeared into the Citadel in year 2116, burned on pyres of their own published works; Leto is quoted as destroying them because they "lied pretentiously" and as sparing innocent mistakes because he is "not overly fond of creating martyrs." Chenoeh reports running beside the Royal Cart on the Royal Road, where Leto accuses the Sisterhood of trying to suborn his Fish Speakers, comments on the "closures—doors, latches, locks" of Onn's landscape, and warns that breeding for a defined genetic goal produced Paul Atreides and then himself as the wild card, adding "I have achieved Siona" without explanation. Source anchors: Welbeck Abridgment; Chenoeh; Tawsuoko; nine historians; Royal Road; Chapter House; Fish Speakers; Siona; predation.   </p>
+<p>Analysis: The Welbeck Abridgment and Chapter House frame this section as hostile intelligence, which makes Chenoeh and Tawsuoko valuable because they observe Leto while knowing he expects observation. The nine historians show how Leto controls public memory by punishing pretentious falsehood while avoiding martyrdom when it would create useful drama, a theory (Leto as "predator") attributed to Reverend Mother Syaksa. Royal Road, Fish Speakers, and Siona connect Bene Gesserit surveillance to Leto's breeding victory: he lets the Sisterhood see enough to fear the plan, but not enough to stop the daughter who will disappear from prescience, directly reversing the <a href="//05%20Characters%20and%20Entities/Paul%20Atreides.html">Paul Atreides</a> failure of the Kwisatz Haderach program described as the trigger of the wild card.   </p>
+<h3 id="the-fish-speakers">The Fish Speakers</h3>
+<p>Summary: The Fish Speakers subsection reports that Leto's female legions elect three representatives from each planetary garrison for the Decennial Festival on Arrakis, exclude adult males, and maintain consort lists where only a few names descend from Duncan Idaho gholas. The Bene Gesserit note failed efforts to ally with the Fish Speakers, Leto's selective increases in garrison size on Bene Gesserit, Ixian, and Tleilaxu home planets (but not Spacing Guild monitors), and his effort to emphasize nonmilitary missions that increase local admiration, respect, and gratitude. Source anchors: Fish Speakers; Decennial Festival; Duncan Idaho; garrison size; Ixian; Tleilaxu; Spacing Guild.   </p>
+<p>Analysis: Fish Speakers and Decennial Festival show that Leto's army is ritualized and empire-wide, not simply a palace guard, making the corps a <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> instrument of order as much as a fighting force. Duncan Idaho and the Ixian/Tleilaxu garrison increases reveal why the corps matters to the breeding plan and to strategic pressure: the Duncans carry old Atreides traits, while garrison enlargement deploys admiration and surveillance on the home worlds most likely to threaten Leto's machines, gholas, or spice monopoly.   </p>
+<h3 id="priesthood">Priesthood</h3>
+<p>Summary: The Priesthood subsection says there have been few changes beyond natural deaths and replacements, and that officers and consorts with ritual duties remain limited by the requirement to consult Arrakis before any important action. Reverend Mother Syaksa and others think the religious character of the Fish Speakers is slowly being devolved. Source anchors: Priesthood; Reverend Mother Syaksa; Arrakis; Fish Speakers; religion; Royal Cart.   </p>
+<p>Analysis: Priesthood and Reverend Mother Syaksa show the Bene Gesserit trying to measure <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> as an institution, while Leto's devolution of the Fish Speakers' religious character makes that measurement incomplete. Arrakis and the Royal Cart keep sacred authority physically centered on Leto, which prevents the Qizarate-style drift that followed Paul Muad'Dib: Leto turns belief into immediate obedience rather than an independent clerical bureaucracy.   </p>
+<h3 id="breeding-program">Breeding Program</h3>
+<p>Summary: The Breeding Program subsection records that Leto continues to exclude the Bene Gesserit from his breeding work, that Fish Speaker monitors "weed out" births he rejects, and that the Sisterhood struggles to maintain enough Reverend Mothers under stringent controls. The report notes Leto's warning about defined genetic goals, his unexplained reference to Siona, and the possibility that randomness is built into his plan. In the story body, this program includes Siona's prescience-invisible inheritance, Moneo as an Atreides descendant of Ghanima and Harq al-Ada, repeated Duncan Idaho gholas, Fish Speaker consorts, and Leto's refusal to use Tleilaxu gene surgery or artificial insemination. Source anchors: Breeding Program; Reverend Mothers; Siona; Moneo; Harq al-Ada; Duncan Idaho; Tleilaxu; Fish Speaker.   </p>
+<p>Analysis: Breeding Program and Reverend Mothers show Leto taking the Sisterhood's oldest instrument and denying them access to its results. Siona and Moneo prove that the program has already produced operational people, one invisible to Leto's oracle and one trained to serve the oracle's body. Duncan Idaho, Tleilaxu, and Fish Speaker explain why Leto insists on sexual reproduction rather than laboratory control: the chance combinations and lived loyalties are the point of the plan, not inefficiencies to be removed — an anti-<a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> gambit built on deliberate randomness.   </p>
+<h3 id="economics">Economics</h3>
+<p>Summary: The Economics subsection shows the Bene Gesserit under conservation pressure because Leto denies increased melange allotments, forcing reduced ritual use of spice and higher fees for Great House female schooling. It reports a CHOAM Star Jewels cartel that offsets losses on Giedi Prime, notes ponji rice reserves and whale fur holdings, and treats solvency as a political condition under spice rationing. Source anchors: Economics; melange allotment; CHOAM; Star Jewels; Giedi Prime; ponji rice; whale fur; Great House.   </p>
+<p>Analysis: Economics and melange allotment make Leto's tyranny concrete through <a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a> rather than speeches. CHOAM, Star Jewels, Giedi Prime, ponji rice, and whale fur show the Bene Gesserit behaving like a financial institution under rationing, which is exactly why spice works as the hydraulic substance of Leto's despotism. Great House schooling fees expose a feedback loop: Leto squeezes the Sisterhood, the Sisterhood charges elites more, and aristocratic culture becomes another channel through which his spice monopoly disciplines the Empire.   </p>
+<h3 id="great-houses">Great Houses</h3>
+<p>Summary: The Great Houses subsection reports that thirty-one former Great Houses suffer economic disaster during the reporting period and only six remain at House Minor status. Five of the six survivors are deeply involved in the Star Jewel project, all six are heavy CHOAM investors, and the lone exception holds a diversified portfolio including antique whale fur from Caladan. The report treats this as a continuation of a thousand-year trend in which the old houses melt into the background, leaving Leto's centralized rule, Fish Speaker order, and managed economics where Landsraad power once operated. Source anchors: Great Houses; thirty-one; House Minor; Star Jewel; CHOAM; whale fur; Caladan; Landsraad.   </p>
+<p>Analysis: Great Houses and thirty-one give the decline a count, which matters because Leto's Peace is not merely ideological; it has steadily destroyed the economic base of rival aristocracy, reworking <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> around the center. House Minor, Star Jewel, CHOAM, whale fur, and Caladan show the few survivors adapting as investors and collectors rather than independent political powers. Landsraad appears here mostly as absence, because the world Duncan Idaho remembers has been replaced by a managed order in which noble names survive only if their portfolios do.   </p>
+<h3 id="family-life">Family Life</h3>
+<p>Summary: The Family Life subsection reports that household patterns have become more homogeneous across planets, except for the Guild, Fish Speakers, Royal Courtiers, Tleilaxu Face Dancers, and the Bene Gesserit themselves. Reverend Mother Syaksa explains the trend through hydraulic despotism, comparing melange dependence to earlier control of irrigation water, arable land, hydrocarbon fuels, coal, petroleum pipelines, and electrical distribution networks. The section also notes Leto's phrase that he is the only spectacle remaining in the Empire and speculates that he may be increasing dependence on spice by treating aging as a disease suppressed by melange, possibly even by introducing a new disease only melange can suppress. Source anchors: Family Life; hydraulic despotism; melange; Guild; Face Dancers; petroleum; electricity; only spectacle.   </p>
+<p>Analysis: Family Life and hydraulic despotism connect household sameness to resource control, showing that Leto has pushed ordinary living into predictable forms, a mechanism of <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> exercised through daily life. Melange, petroleum, and electricity make the historical comparison explicit: whoever controls a life-dependent flow can centralize obedience without constant battlefield violence. Guild, Face Dancers, and only spectacle mark the exceptions and the center, because specialized institutions retain unusual family forms while Leto absorbs public imagination that might otherwise attach to local customs or rival leaders.   </p>
+<h3 id="transport-guild">Transport/Guild</h3>
+<p>Summary: The Transport/Guild subsection reports that the three-mode transportation system once peculiar to Arrakis — on foot with suspensor-borne pallets, by ornithopter in the air, or off-planet by Guild transport — is coming to dominate more and more planets of the Empire, with Ix the primary exception. It attributes this to planetary devolution into sedentary and static lifestyles, to the attempt to copy the Arrakis pattern, to generalized aversion to things Ixian, and to the Fish Speakers promoting the pattern to reduce order-keeping. Over the Guild's part in the trend hangs the absolute dependence of Guild Navigators upon melange, so the Sisterhood keeps close watch on the joint Guild-and-Ix effort to develop a mechanical substitute for the Navigators' predictive talents. Source anchors: Transport/Guild; three-mode transport; ornithopter; Guild Navigators; melange; Ix; mechanical substitute.   </p>
+<p>Analysis: Transport/Guild makes explicit the <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> threat that runs throughout the book: a <a href="//05%20Characters%20and%20Entities/Spacing%20Guild.html">Spacing Guild</a> dependent on melange is captive to Leto's hoard, but a mechanical navigation substitute would break that dependence and let humanity move outside spice control. The spread of the three-mode transport system shows Leto's order reproducing itself as infrastructure and habit, while Fish Speaker promotion of the pattern reveals the army acting as an agent of standardization rather than mobility — legibility and control in transport form.   </p>
+<h3 id="the-god-emperor">The God Emperor</h3>
+<p>Summary: The God Emperor subsection reports small changes in Leto's body, uncertainty about his aversion to water, continuing business with Ix for Royal Cart parts, increased surveillance of Ix, the arrival of a new Duncan Idaho ghola from the Tleilaxu, possible computer use, and the central role of his prescience in political control. The Bene Gesserit refuse to knowingly threaten Leto's person or discernible plan, repeating the pleas that he tell them if they threaten him and tell them his plan so they may help. Source anchors: God Emperor; water; Ix; Royal Cart; Duncan Idaho; Tleilaxu; prescience; Siona.   </p>
+<p>Analysis: God Emperor, water, and Royal Cart reduce the divine image to bodily dependencies, which is essential because Leto's death arrives through water and a sabotaged vehicle, exposing the fragility beneath <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>. Ix and Tleilaxu show his calculated tolerance for dangerous suppliers: he needs their machines and Duncan Idaho gholas but keeps both under pressure. Prescience, described as "the mainstay of his political control," defines the limit of his power under <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: the whole political order rests on foresight until Leto creates a descendant line that can step outside it — the achievement he names as Siona.   </p>
+<h3 id="the-ixians">The Ixians</h3>
+<p>Summary: The Ixians subsection reports that Ix and the Guild are pursuing a mechanical substitute for Guild Navigator prescience, and that Ix is sending Hwi Noree to Leto's court as a new ambassador. Hwi is identified as the niece of Malky, Leto's former boon companion, and the report suspects that both Hwi and Malky were genetically designed for official use. Source anchors: Ixians; Guild; Hwi Noree; Malky; ambassador; mechanical substitute.   </p>
+<p>Analysis: Ixians and Guild make <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> the threat Leto fears most: a navigation machine would weaken spice control and let humanity move without Guild dependence. Hwi Noree, Malky, and the embassy show the subtler Ixian invention, a person bred to reach Leto where machines cannot — a perfect counterpoint to the machine threat because it proceeds as affection rather than technology.   </p>
+<h3 id="the-museum-fremen">The Museum Fremen</h3>
+<p>Summary: The Museum Fremen subsection describes these Fremen descendants as paid informants whose lives no longer resemble those of their ancestors, even though they flawlessly perform old rituals and imitate Fremen ways under Fish Speaker influence. They are a major budget item for the Sisterhood because their demands for payment increase and the Sisterhood dares not antagonize them. Source anchors: Museum Fremen; Fish Speaker; informants; rituals; Fremen ways.   </p>
+<p>Analysis: Museum Fremen expose <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> after Leto removes the ecology that formed the old <a href="//05%20Characters%20and%20Entities/Fremen%20Society.html">Fremen Society</a>: they can reproduce signs of desert identity but not the conditions that made those signs necessary, reducing authentic culture to paid performance. That they are also the Sisterhood's major source of reliable information makes culture itself a commodity within <a href="//02%20Concepts/Commodity%20Systems.html">Commodity Systems</a>, since even the remnants of Fremen-ness are bought and monetized in the managed order.   </p>
+<h3 id="the-tleilaxu">The Tleilaxu</h3>
+<p>Summary: The Tleilaxu subsection says the new Duncan Idaho ghola should not surprise the Bene Gesserit, because the Tleilaxu remain chastened after one attempt to alter the original cellular nature and psyche. It also reports a renewed Tleilaxu proposal for a joint venture to produce a totally female society without males, which the Sisterhood rejects with its usual polite negative. Source anchors: Tleilaxu; Duncan Idaho; Bene Gesserit; female society; gholas.   </p>
+<p>Analysis: Tleilaxu and Duncan Idaho keep Leto connected to the past he both needs and manipulates, since each ghola restores an <a href="//05%20Characters%20and%20Entities/House%20Atreides.html">House Atreides</a> loyalty that can still judge him. Bene Gesserit and female society reveal a rivalry over reproduction, with the <a href="//05%20Characters%20and%20Entities/Bene%20Gesserit.html">Bene Gesserit</a> rejecting Tleilaxu artificiality while Leto pursues sexual breeding through Fish Speakers and Duncans — a deliberate refusal of the laboratory-made future the Tleilaxu embody.   </p>
+<h3 id="main-narrative-i-siona-s-rebellion-and-the-new-duncan">Main Narrative I: Siona's Rebellion and the New Duncan</h3>
+<p>Summary: The main body narrative follows Siona's rebellion, the arrival of a new Duncan Idaho ghola, and Nayla's secret report to Leto warning of Siona's avowed intent to give the stolen books to the Bene Gesserit, the Guild, and the Ixians. Leto interviews Duncan in the Citadel crypt, reveals the pre-worm body and Fish Speaker command, and sees the Duncan approach carrying an Ixian lasgun in his briefcase with the apparent intent to end the Imperium; Leto lets the confrontation proceed as a controlled test. (The earlier "small explosive ... What a surprise!" is a memory of a prior Duncan from years before, not the current weapon.) Moneo descends to the crypt to grieve the loss of another Duncan and remarks on the crypt holding "mostly the Duncans and the products of my breeding program." Siona holds a rebel meeting with nineteen of her fellows in a storage chamber, and Moneo spars with Leto over Siona's fate. Nayla carries an Ixian device in her head she believes God implanted, swears to obey, and is sent back to the rebels under orders to obey Siona. Source anchors: Siona; Duncan Idaho; Moneo; Nayla; Citadel; crypt; rebel meeting; Ixian lasgun.   </p>
+<p>Analysis: Duncan Idaho and Moneo give Leto two human mirrors: Duncan judges him by old <a href="//05%20Characters%20and%20Entities/House%20Atreides.html">House Atreides</a> loyalty, while Moneo has spent a lifetime translating the God Emperor's commands into survival. Nayla reveals the vulnerability Leto uses — absolute faith in his word — and the mechanism that will route his own death through Siona. The crypt scene makes explicit that Leto's "ancestors" are mostly Duncans and the products of a breeding program, linking the rebellion directly to <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> and to Leto's claim that he shapes dreams as carefully as actions.   </p>
+<h3 id="from-the-oral-history-chenoeh-s-secret-account">From the Oral History: Chenoeh's Secret Account</h3>
+<p>Summary: The second "FROM THE ORAL HISTORY" block is Sister Chenoeh's account, found among her papers after her death, in which she withholds these words from her report while secreting them to be found later, per Leto's explicit command. On a short peregrination Chenoeh asks Leto how he acquired memories like a Reverend Mother; he explains that he and his twin sister Ghanima were awakened in the womb into ancestral memories — what the Sisterhood calls Abomination — and that he overcame the overwhelming ancestral horde through "the persistence of the pharaonic model." Source anchors: Chenoeh; Oral History; Ghanima; ancestral memories; Abomination; pharaonic model; spice.   </p>
+<p>Analysis: Chenoeh's secret account deepens <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> by showing that even the God Emperor's own memory-machine is a burden — awakened ancestral lives that threaten to command him, tamed only by the pharaonic model of rule. The Abomination reference ties Leto to the <a href="//05%20Characters%20and%20Entities/Bene%20Gesserit.html">Bene Gesserit</a>'s worst fear and to the working of the spice in the womb, making his divinity a genetic inheritance from <a href="//05%20Characters%20and%20Entities/Paul%20Atreides.html">Paul Atreides</a> and Chani rather than a choice, and explaining the inner "hordes" that speak throughout his journals.   </p>
+<h3 id="main-narrative-ii-the-festival-the-outing-and-the-hunt">Main Narrative II: The Festival, the Outing, and the Hunt</h3>
+<p>Summary: Much against his will, Idaho is taken at dawn by Fish Speaker pilot Inmeir with Siona to "a safe place," and at Siona's insistence they divert to the village of Goygoa, where Inmeir reveals her true orders take Siona to the Citadel. Separately, Leto tests Siona alone: Moneo dresses her for the desert and departs, and Leto leads her on foot across the Sareer with no exit but the crossing, sustaining her through melange laced into her dried food and spice-essence from the flaps beside his face; she sees the extinction alternative on the Golden Path and eventually joins Duncan in climbing the barrier Wall. Leto experiences the seduction of living only in the past and the fear that the dream-state he has created may trap him ("the hunter is caught in his own net"), and reflects that he gives humanity "enduring eons of enforced tranquility" whose memory will warn them to seek quiet security with caution thereafter. Source anchors: Idaho; Siona; Inmeir; Goygoa; desert test; Sareer; barrier Wall; enforced tranquility; melange-essence.   </p>
+<p>Analysis: The outing and the desert test turn <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> into a personal trial: Siona survives where the Museum Fremen could not, proving she belongs to the future Leto is breeding rather than the display culture he has preserved. The Goygoa diversion and Inmeir's orders show the Fish Speaker command structure bending around Siona, while Leto's interior fear that the hunter is caught in his own net reveals the fragile, self-consuming center of the imperial system he built.   </p>
+<h3 id="from-the-oral-history-hwi-noree-and-the-festival">From the Oral History: Hwi Noree and the Festival</h3>
+<p>Summary: The third "FROM THE ORAL HISTORY" block opens on Hwi Noree, interrupted in late evening of the Festival's third day by a summons from the Lord Leto to the depths of Onn. Her assistant Othwi Yake reports that Fish Speakers are slaughtering Face Dancers throughout the City, apparently in response to a Tleilaxu attempt on the God Emperor's life which was "totally without effect." She meets the Fish Speaker messenger and the Reverend Mother Anteac, and obeys the summons. Source anchors: Hwi Noree; Onn; Festival; Othwi Yake; Face Dancers; Tleilaxu; Anteac; summons.   </p>
+<p>Analysis: This archival block positions Hwi Noree at the hinge of the plot: the Tleilaxu's failed attempt and the Fish Speaker massacre of Face Dancers establish both the vulnerability of Leto's person and the explosiveness of the courts he manages through <a href="//05%20Characters%20and%20Entities/Bene%20Gesserit.html">Bene Gesserit</a>, <a href="//05%20Characters%20and%20Entities/Spacing%20Guild.html">Spacing Guild</a>, and Ixian intermediaries. The summons draws Hwi into the center where her gentleness will undo Leto's defenses, connecting the archival record to the reel of the wedding journey and the coming bridge assassination.   </p>
+<h3 id="main-narrative-iii-the-wedding-journey-tuono-and-the-bridge">Main Narrative III: The Wedding Journey, Tuono, and the Bridge</h3>
+<p>Summary: Leto receives Hwi Noree as the Ixian ambassador, whose gentleness and love expose the remaining human vulnerability in the worm-god, and he accepts the trap she represents because love lets him experience a choice he cannot reduce to surveillance. His wedding journey to Tuono, where he weds Hwi Noree by the Old Fremen ritual — dressing her in the real stillsuit and robe of a Fremen bride and using Ghani's water rings — becomes both personal consummation and the opening for Siona, Duncan, and Nayla to break the bridge over the Idaho River. Nayla, obeying Leto's command to obey Siona, fires the lasgun that cuts the bridge; Hwi and Moneo fall, the Royal Cart plunges into water, and the sandtrout leave Leto's dying body to begin the return of worms. In the cave below the broken bridge, Leto tells Siona and Duncan that nobody will find Siona's descendants because the Oracle cannot see her, gives them "a new kind of time without parallels," and tells them the spice is deep in Sietch Tabr. He dies, saying the Ixians can make the machines but no longer make "arafel"; Siona declares "I'm the new Atreides." Source anchors: Hwi Noree; Royal Road; wedding journey; Tuono; Old Fremen ritual; Ghani's water rings; Nayla; bridge; Idaho River; Royal Cart; sandtrout; Sietch Tabr; arafel.   </p>
+<p>Analysis: The wedding journey and the bridge turn <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> into geography: the road built for imperial procession becomes the trap, the desert preserve gives way to water, and the old sietch conceals the spice reserve that bridges Leto's death to the Scattering he has designed. Hwi's role proves that love is the one thing the oracle cannot forecast and command, while Nayla's obedience makes the assassination an act of worship rather than rebellion. The cave scene delivers Leto's gift — prescience-invisible descendants scattered so far that "no oracle can see her" — completing the anti-<a href="//02%20Concepts/Technological%20Change.html">Technological Change</a> and anti-centralization logic of the Golden Path.   </p>
+<h3 id="dar-es-balat-minority-report">Dar-es-Balat Minority Report</h3>
+<p>Summary: The closing Dar-es-Balat minority report accepts that the majority will screen, edit, and censor Leto's journals, but argues that history and science require comparison among the journals, myths, Oral History, Guard Bible, Holy Books of the Divided God, Duncan Days, Thousand Sons of Idaho, Nine Daughters of Siona, Sister Chenoeh's cult, Judas/Nayla, the Scattering, the Famine Times, Ixian Navigation Machines, Tleilaxu vats, and the Rakian Reservation's poor sandworms. The minority insists that no Ixian machine can do what Duncan and Siona's descendants have done: populate so many universes that no one person can know them and no oracle can find all of humankind. It ends by asking whether Leto II might be reawakened through the pearls of awareness and by quoting Lon Bramlis that humanity is the fountain of surprises. Source anchors: Dar-es-Balat; Oral History; Guard Bible; Nine Daughters of Siona; Scattering; Ixian Navigation Machines; Tleilaxu vats; pearls of awareness; Lon Bramlis.   </p>
+<p>Analysis: Dar-es-Balat, Oral History, and Guard Bible show that Leto's death produces competing archives, which fits a ruler who tried to shape dreams as carefully as actions — the fruits of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> treated as a political battleground. Nine Daughters of Siona and Scattering prove that the Golden Path worked in the concrete sense Leto intended: descendants now exist beyond prescient capture, political census, and central extinction. Ixian Navigation Machines, Tleilaxu vats, and pearls of awareness identify the new post-Leto problem, because machines, manufactured flesh, and possible worm-memory all survive as tools that future institutions will again try to control.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Golden Path definition</strong>: "The Golden Path … is the survival of humankind, nothing more nor less." (Leto.)   </li>
+<li><strong>Leto's gift to Siona</strong>: "I give you a new kind of time without parallels … I give you the Golden Path."   </li>
+<li><strong>Arafel</strong>: "the cloud-darkness of holy judgment"; Leto's claim that the Ixians can make the machines but "no longer can make arafel."   </li>
+<li><strong>Siona's self-definition</strong>: "I'm the new Atreides"; "I am different, but still I am what he was."   </li>
+<li><strong>Only spectacle</strong>: "I am the only spectacle remaining in the Empire."   </li>
+<li><strong>Predation, not martyrdom</strong>: Leto destroys historians who "lied pretentiously" but avoids making martyrs because "drama is one of the targets of my predation."   </li>
+<li><strong>Hydraulic despotism</strong>: RM Syaksa's theory that melange dependence repeats the historical control of irrigation water, petroleum, coal pipelines, and electrical grids — a "disease" for which melange is the treatment.   </li>
+<li><strong>The rebellion's cost</strong>: of the eleven runners who began the flight across the Sareer, nine died (Radi, Aline, Ulot, Setuse, Inineg, Onemao, Hutye, Memar, Oala).   </li>
+<li><strong>Transport standardization</strong>: the three-mode system (foot/suspensor, ornithopter, Guild) spreading empire-wide, with Ix the exception, and the Fish Speakers promoting it to ease order-keeping.   </li>
+<li><strong>Pharaonic model</strong>: Leto tames the overwhelming "Abomination" of ancestral memories through "the persistence of the pharaonic model."   </li>
+<li><strong>Nayla's device</strong>: the Fish Speaker believes God implanted an Ixian-linked device in her head; it routes her obedience into the assassination.   </li>
+<li><strong>Ending symbols</strong>: the sandtrout leaving Leto's body in the river; the hidden spice at "Tabur," the old Sietch Tabr, that Duncan will find; "pearls of awareness" as a possible reawakening of Leto.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Dune/Children of Dune.html">children of dune</a></li>
+	<li><a class="backlink" href="//01 Books/Dune/Dune Messiah.html">dune messiah</a></li>
+	<li><a class="backlink" href="//04 Series/Dune Chronicles.html">dune chronicles</a></li>
+	<li><a class="backlink" href="//01 Books/Dune.html">dune</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/god-emperor-of-dune/index.html">god-emperor-of-dune</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A155538472685413707050138776348138269154{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D155538472685413707050138776348138269154{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B155538472685413707050138776348138269154{level}" level="{level}" note_temp_id="155538472685413707050138776348138269154" onclick="window.ObsHtmlGraph.run(this, '155538472685413707050138776348138269154', 'god emperor of dune');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C155538472685413707050138776348138269154{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

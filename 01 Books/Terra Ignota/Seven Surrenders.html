@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="seven surrenders">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'seven surrenders';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=seven surrenders" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="seven-surrenders">Seven Surrenders</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note sits inside the series hub <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a> as the second volume of Ada Palmer's four-book Terra Ignota sequence: the direct continuation of <code>Too Like the Lightning</code> and the immediate prelude to <code>The Will to Battle</code> and <code>Perhaps the Stars</code>. Where the first volume introduced the peaceful Hive order as already dependent on concealment, <code>Seven Surrenders</code> is the volume in which hidden bargains, secret assassinations, buried succession pacts, and suppressed theology burst into public view simultaneously, so the neutrality narrative of the order collapses into open crisis.   </p>
+<p>Thematically the book is one of the vault's richest citizens of <a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a>: it stress-tests institutional design, legitimacy, elite brokerage, and surveillance through a plot that turns each governance mechanism into a crime scene. Readers coming from the reading path <a href="//03%20Reading%20Paths/Speculative%20Governance%20and%20Future%20Orders.html">Speculative Governance and Future Orders</a> will recognize the same questions Palmer tests elsewhere: how much public honesty can a stable order absorb, and what happens when the informal institutions holding a formal order together are disclosed. The note's primary analytic neighbors in the graph are the concept notes on <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>, <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>, <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>, and <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Mycroft Canner</strong>: the condemned murderer of the Mardi bash', kept alive as a Familiaris and Servicer on the authority of Apollo Mojave's note and MASON's law. Across the book he serves as narrator, translator for Jehovah, investigator, messenger, and witness; his motivation is debt-driven service that visits and revisits the question of whether his own reconstruction of Providence was ever correct. His arc ends with the revelation that he was wrong about the plan he thought he had understood.   </li>
+<li><strong>J.E.D.D. Mason (Jehovah Epicurus Donatien D'Arouet Mason)</strong>: the polylaw who holds offices in every Hive and believes He is a God from another universe trapped in human flesh. He drives the crisis by ordering the O.S. truth revealed, issues the interim constitution for the Cousins, is assassinated and resurrected, and ends the book commanding the sides of the coming war. His motivation is His need to understand and find the God of this universe, whom He first approaches through Bridger.   </li>
+<li><strong>Carlyle Foster</strong>: the Cousin sensayer whose dominant arc is emancipation from manipulation. Dominic breaks her faith in her Clockmaker God, Thisbe exposes her years as Julia's spy, and she finally arrests her own mentor Julia Doria-Pamphili, pays for it with the revelation of her true parentage, and becomes a witness whose testimony cracks O.S. open.   </li>
+<li><strong>Bridger</strong>: the thirteen-year-old who can make toys and images real. Raised in secret by Mycroft, Thisbe, the Major, and the toy soldiers, he wields resurrection potions and animated proxies, including the Sniper Doll that kills Jehovah. His motivation is the unbearable weight of a power he cannot control; he resolves to erase himself rather than let the world become a war story, transforming into Achilles Mojave.   </li>
+<li><strong>Ojiro Cardigan Sniper</strong>: the Humanist pentathlete and living doll, kidnapped by Dominic and Julia and later radicalized. As the Thirteenth O.S. it assassinates Jehovah on the Rostra, broadcasts Madame's conspiracy to the world, and ends the book leading the "Hiveguard" against unification.   </li>
+<li><strong>Thisbe Saneer</strong>: the smelltrack "witch" of the Saneer-Weeksbooth bash', who made Mycroft part of the household and can compel bodies with chemical tricks she passes off as magic. She is arrested for the murders of her former lovers but first delivers the evidence about Bridger that unlocks the Pet Registry thread.   </li>
+<li><strong>Ockham Saneer</strong>: the twelfth O.S., head of the assassination household. He surrenders with dignity, stands trial to force the question of whether following Hive orders was criminal, and passes the O.S. title to Sniper.   </li>
+<li><strong>Dominic Seneschal</strong>: Jehovah's sensayer, raised by Madame as a weapon of seduction and abuse. He engineers Carlyle's fall, pursues Sniper across Romanova after the assassination, and is made the Mitsubishi's successor-designate by Andō precisely because he is a contradiction too self-destructive to hold power.   </li>
+<li><strong>Cornel MASON</strong>: the Masonic Emperor, adoptive father of Jehovah. He forces the Apollo confession from Mycroft, confronts Madame about the conspiracy, and accepts the responsibility of sheathing his son in imperial law. His motivation is the preservation of his Empire and his love for Apollo.   </li>
+<li><strong>Ektor Carlyle Papadelias</strong>: the centenarian Commissioner General who pursues Mycroft like a lifework and who, by tracing the Pet Registry trick, finally discovers Saladin Canner and coordinates the arrests that break O.S.   </li>
+<li><strong>Madame D'Arouet (Joyce Faust)</strong>: the Blacklaw madam of the Paris salon and mother of Jehovah. Her role is the systemic one: she "resurrected the weapons" of gender, seduction, and religion, and let an army of spurned lovers destroy her rivals. She admits to MASON that she shaped the great change without planning its specific horrors.   </li>
+<li><strong>Saladin Canner</strong>: Mycroft's ba'sib and lover, presumed dead but hidden by the Pet Registry dog trick. Captured at Madame's, he becomes her legal "dog" and student, adopting her version of Cynic detachment.   </li>
+<li><strong>Tully Mardi (Tully Mojave)</strong>: the Mardi survivor who preaches that war is inevitable and that the peace was bought with hidden murder. After the Rostra blood he allies with Sniper and turns the coming conflict into a war between Hive independence and unification.   </li>
+<li><strong>Casimir Perry / Merion Kraye</strong>: Europe's Prime Minister, secretly the banished lover of Danaë and schemer for revenge. His exposure of O.S. and the sacking of Brussels make him the crisis's individual engine.   </li>
+<li><strong>Supporting powers of the salon</strong>: Bryar Kosala, Vivien Ancelet (the Anonymous and the Censor), King Isabel Carlos II, Felix Faust, Hotaka Andō Mitsubishi, Ganymede and Danaë de la Trémoïlle, Heloïse, Martin Guildbreaker, Julia Doria-Pamphili, Felix's sister Joyce, the Utopian Mushi Mojave, and the toy soldier lieutenant the Major are each given distinct motivations around the same question — which Hive, office, or love will survive the disclosure.   </li>
+</ul>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Ada Palmer structures <code>Seven Surrenders</code> as Mycroft Canner's authorized continuation of the 2454 crisis, but the permission page is itself part of the story: Romanova, the Cousins, the Masonic order, the Sensayers, Mitsubishi, Spain, and Brill's Institute all appear as institutions trying to control how much truth can be released. The Latin license phrase "nihil obstet" becomes a prayer rather than a stamp, because Jehovah Epicurus Donatien D'Arouet Mason asks the Powers to let the public learn what they have hidden about O.S., Madame D'Arouet, the Canner murders, Bridger, and the approaching war. The book therefore begins by turning censorship, legal permission, and theological speech into evidence that the old Hive order can no longer keep its private mechanisms private.   </p>
+<p>The immediate plot begins with Sniper's own restricted chapter, where Ojiro Cardigan Sniper describes Mycroft's body, hat, scars, Servicer status, and place inside the Saneer-Weeksbooth bash'. Sniper's testimony also exposes Dominic Seneschal and a sensayer abusing Sniper as a paralyzed "doll," which ties celebrity, sexuality, Sensayer power, Blacklaw violence, and Madame's antique household into one transaction. From there the book follows the failure of the assassination machine called O.S.: Ganymede de la Trémoïlle, Ando Mitsubishi, Casimir Perry, Ockham Saneer, Cato Weeksbooth, Thisbe Saneer, and the Mitsubishi set-sets are no longer a hidden safety system but a trail that Papadelias, Martin Guildbreaker, Carlyle Foster, and Sniper can follow.   </p>
+<p>Carlyle Foster becomes one of the volume's main detectors. Dominic's religious assault at Madame's forces Carlyle to confront Deism, gender, Sensayer ethics, and their own obedience to Julia Doria-Pamphili. Thisbe then humiliates Carlyle with smelltrack chemicals and a fake suicide, but Mommadoll, Boo, and Stander-Y give Carlyle enough steadiness to call Papadelias. Carlyle's later arrest of Julia matters because it is not only a police maneuver; it is a priest choosing to betray the teacher who taught them to spy, manipulate parishioners, and treat the Cousins' Feedback Bureau as a private lever.   </p>
+<p>Jehovah Mason's chapters move the book from conspiracy into metaphysics without leaving politics behind. Carlyle hears Jehovah describe Himself as a God from another universe, trapped in human senses, language limits, time, and misunderstanding. Bridger then meets Jehovah in Romanova after the Sniper doll shoots Him, and Jehovah's death and return give Him proof that His own universe persists while His body dies. The book makes that theological revelation inseparable from succession law, because Madame's old pregnancy, Spain's paternity, MASON's adoption of the Porphyrogene, Ando's false-father rumor, and the status of Familiaris Candidus explain why one Youth can inherit or be offered authority across all seven Hives.   </p>
+<p>The middle and late chapters also disclose what Mycroft did and why Apollo Mojave matters. At Apollo's tomb, MASON forces Mycroft to admit that Apollo's Iliad is not merely a storybook but a plan for war, written from the Mardi bash's fear that a future struggle over terraformed Mars would be worse if humanity had forgotten war entirely. Mycroft did not kill Apollo because he misunderstood Apollo's brilliance; he killed Apollo because Apollo meant to bring war forward. This confession reframes Bridger, who has been raised on Apollo's Iliad, not as a harmless miracle child but as a child whose imagination may be turning the world into the war story he fears.   </p>
+<p>The title becomes literal in the "Seven Surrenders" chapter, where the Humanists, Cousins, Masons, Mitsubishi, Europeans, Gordians, and Utopians all yield pieces of sovereignty under pressure from Madame's long preparation, Sniper's revelations, O.S.'s exposure, Jehovah's claims, and the need to keep society functioning. Brody DeLupa tries to speak as the Anonymous and dissolve the Humanists; Ancelet exposes himself as the real Anonymous; the Cousins accept an interim constitution that Heloise frames through the banned vocabulary of the feminine; Europe is decapitated by Perry-Kraye's attack on Brussels; Ando offers the broken Mitsubishi directorship to Dominic; and MASON faces whether Jehovah will be successor. Palmer's narrative logic is cumulative: each surrender is not a tidy political transfer but a forced improvisation after a hidden dependency becomes public.   </p>
+<p>The ending refuses the rescue that Mycroft expects. Bridger, cornered in the Sniper Doll Museum after animating a Sniper doll and after the world has seen what he can do, decides his powers should not exist in him. He turns himself into the Major, now revealed as Achilles Mojave, a living composite of Homeric Achilles, World War soldier, and Apollo's future-war hero. The miracle of resurrection and universal repair is lost, but a veteran who knows how to fight every war remains. Mycroft's last prayer asks present and future readers to judge carefully before choosing sides, because the volume ends not with peace restored but with Jehovah, Achilles, Sniper, the Cousins, Europe, Mitsubishi, and the Hiveguard positioned for <code>The Will to Battle</code>.   </p>
+<h2 id="major-linkages">Major linkages</h2>
+<p>The book is the axis on which the whole series turns, so its strongest links run outward to the series hub and to the concept notes that explain why political order becomes fragile when its hidden layer is disclosed:   </p>
+<ul>
+<li><a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a> — volume 2; the hub note describes this as the volume where "hidden bargains and interpretive conflict begin to overwhelm the neutrality narrative of the order."   </li>
+<li><a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a> and <a href="//03%20Reading%20Paths/Speculative%20Governance%20and%20Future%20Orders.html">Speculative Governance and Future Orders</a> — the vault-level homes for the book's institutional stress-testing.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> — the salon at Madame's, O.S., the Anonymous's control of the CFB, and Dominic's and Julia's sensayer networks are the book's central subject: public form resting on unpublicized private machinery.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> — the Anonymous's succession, the Porphyrogene adoption, Familiaris Candidus, Spain's legitimacy, and the moving of Hive power through a single heir.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — sensayers, Deism, Providence, the Nietzschean/Nihilist "nihil obstet" prayer, and the theology that makes Bridger and Jehovah proofs of God's existence.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> — the seven surrenders show an order redesigning itself under crisis; O.S. shows governance outsourced to murder.   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> — the book argues the peace was always war-deferred, then stages the collapse that opens war.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> — trackers, the CFB, the Canner Device, the set-sets, and the leaked recordings make information both the peace's substrate and its weapon.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a> — the Pet Registry and deleted data points show the state categorizing people in ways that both hide and reveal.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> — gendered pronouns, the banned feminine vocabulary of the Cousins, Mycroft's <code>nihil obstet</code>, and Jehovah's polyglot thought.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> — how Madame, Brill's Institute, the Mitsubishi Directorate, and the Anonymous groom successors.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> — Mars as the terraformed frontier whose future war cannot be governed from Earth.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> — interim constitutions, freezes, coups, and emergency substitutions are the book's practical vocabulary.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> — the Servicer program and its hidden mercy are federal law transmuted into the language of obligation and debt.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The price of disclosure</strong>: every chapter tests whether an institution can survive the truth about the mechanism that held it together; the book's thesis is that the old order cannot, and improvisation must replace concealment.   </li>
+<li><strong>Informality under the formal order</strong>: O.S., the CFB's voice, the salon's grooming, and the Anonymous's editing are all unpublicized institutions doing what the Hives cannot admit they do.   </li>
+<li><strong>Legitimacy as a manufactured resource</strong>: succession, parentage, the Porphyrogene, the Anonymous, and the Sensayers are all shown as pieces of a system that produces legitimacy rather than discovering it.   </li>
+<li><strong>Theology and governance as one problem</strong>: Bridger's and Jehovah's miracles force the world to absorb a fact it cannot integrate; the book never lets the theology detach from who rules.   </li>
+<li><strong>Language as a battlefield</strong>: the revival of gendered pronouns and the feminine vocabulary of the Cousins is presented as the recovery of a legitimate language that the Hive world had silenced.   </li>
+<li><strong>War as the hidden gravitational center</strong>: Tully, the Mardis, Apollo, and finally Sniper all insist the three-hundred-year peace merely deferred war; the question is not whether war comes but what kind.   </li>
+<li><strong>Mercy and debt as coercion</strong>: Mycroft's familiarate, Carlyle's vow, and the Servicer Program all convert mercy into obligation, which the characters can neither refuse nor repay.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the book argues that the golden age was run by three invisible institutions — O.S. (murder as balance), the Anonymous's control of the CFB (letter-sorting as policy), and Madame's salon (seduction as statecraft) — and that all begin to fail the moment their formality is lost.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the anonymous succession rules, the Porphyrogene adoption, the Familiaris Candidus exemption, the Andō/Spain father-rumor, and the interim nominees for Mitsubishi and the Humanists let the crisis install and uninstall leaders through legal fiat rather than election.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: the sensayer system's abuse (Julia and Dominic), the Deist crisis of faith, the proof value of Bridger, and Jehovah's self-understanding as God all show theology being used to confer or withhold legitimacy.   </li>
+<li><a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>: the seven surrenders are a study in how an order dissolved by its own dependencies improvises replacements — interim constitution, proxy in extremis, emergency imperial succession, and a caretaker censor's freeze.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a>: the tracker system, the Pet Registry, and the deleted data points make people legible to the state in ways that generate both control and blindness; Mycroft's dog-trick becomes both his refuge and Saladin's exposure.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: from smuggling the Seven-Ten list to the leaked Alexandria recording, information is the crisis's fuel, and the characters' power is measured by who can see, edit, or release the record.   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: the book's counter-thesis to the Hive peace is that the peace was a deferred war; the chapter where Jehovah is shot and resurrected is the point where collapse becomes open war.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Mycroft's <code>nihil obstet</code>, Heloïse's recovered feminine vocabulary, and the agonized pronouns for Carlyle show the series using language as both ideology and evidence.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: every surrender is an improvised governative invention — the Cousins' interim Assembly, the Humanists' no-confidence vote, Spain's emergency takeover, and the censor's twelve-month freeze.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: Madame's grooming of Dominic, Danaë, and Jehovah; Faust's Brain-bash' selection; and Andō's stewardship of the Directorate all show elites being deliberately produced rather than naturally rising.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: Mars's terraforming is the horizon against which Apollo and the Mardis planned war, making the future frontier the justification for present violence.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: the Servicer program and Mycroft's familiarate make redemption itself a labor contract, and the book refuses to resolve whether that mercy is justice or another cage.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="chapter-the-first-nihil-obstet">Chapter the First: Nihil Obstet</h3>
+<p>Summary: Mycroft opens by distinguishing the old censorship formula "Nihil Obstat" from Jehovah Mason's "nihil obstet," a prayer that Romanova, the Cousin Chair, the King of Spain, the Sensayers' Conclave, the Censor, and Brill's Institute will not prevent the book. He names Jehovah Epicurus Donatien D'Arouet Mason by many titles, including Tribune, Porphyrogene, Prince, Tenth Director, Tai-Kun, Xiao Hei Wang, Jed, Jagmohan, and Micromegas, and places Madame D'Arouet's Paris upbringing beside Cicero and Seneca's sacrifices for Rome. The chapter says the cost of disclosure falls on Jehovah and those dearest to Him, but the pain of ten billion people demanding answers requires publication. It turns the permissions page into a battlefield between Providence, censorship, and public need. Source anchors: Nihil Obstat; Jehovah Mason; Romanova; Cousin Chair; King of Spain; Sensayers' Conclave; Madame D'Arouet.   </p>
+<p>Analysis: Nihil Obstat, Jehovah Mason, and Madame D'Arouet make the opening a legal and religious threshold rather than a preface. Romanova, the Cousin Chair, the King of Spain, and the Sensayers' Conclave are not neutral authorities here; their permission shows how many <a href="//02%20Concepts/Institutions.html">Institutions</a> must be implicated before Mycroft can tell the truth, and the licit machinery of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> is revealed as censorship by another name. The prayer formula also marks the book's method: <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> is invoked in Latin to authorize a political document, and <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> turns a licensing stamp into theology. The repeated title-list for Jehovah Mason prepares the later succession crisis, because one person is already named through offices belonging to several Hives before the book explains how those offices became connected — which is the core of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> in this series.   </p>
+<h3 id="chapter-the-second-sniper-s-chapter">Chapter the Second: Sniper's Chapter</h3>
+<p>Summary: A restriction order from the Conclave of Sensayers, the Cousins' Legal Commission, Ordo Quiritum Imperatorisque Masonicorum, and Commissioner General Ektor Carlyle Papadelias fences off this section. Sniper describes Mycroft Canner's stoop, oversized Servicer uniform, brown hat from Dominic Seneschal, scars, starvation-thin body, and the "True Mycroft" beneath the slave persona, then explains how Eureka Weeksbooth and Ockham Saneer brought Mycroft into the Saneer-Weeksbooth bash' after the capture. The chapter revisits the Mardi murders, Mycroft's claim to have proved that an individual can choose evil, and Sniper's own love for that spectacle. Sniper then recounts being kidnapped on March 27, drugged, paralyzed in a Lifedoll box, given by Dominic to a masked sensayer in payment for the Cousin Carlyle Foster, and forced into a scene that reveals sensayer power, celebrity, and Madame's grooming as one transaction. Source anchors: Sniper; Mycroft Canner; Dominic Seneschal; Eureka Weeksbooth; Ockham Saneer; Lifedoll box; masked sensayer; Carlyle Foster.   </p>
+<p>Analysis: Sniper, Mycroft Canner, and Dominic Seneschal give the book its first direct evidence that the pretty public order has private predators inside it. The Servicer's uniform and the Lifedoll box are <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> made intimate: Mycroft is bound to obligation, Sniper to objecthood, both wearing a labor of the body that no wage can discharge. Eureka Weeksbooth and Ockham Saneer place Mycroft inside the same household that runs O.S., so Sniper's eroticized description doubles as intelligence about the assassin cell's internal bonds — a <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> portrait of the peace's hidden governance. The abuse of Sniper by Dominic and the sensayer also shows <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> being weaponized: gender is called a "universal language," celebrity is leveraged into access, and the Conclave's religious counsel is exposed as a trafficking network inside <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>.   </p>
+<h3 id="chapter-the-third-o-s">Chapter the Third: O.S.</h3>
+<p>Summary: The chapter moves into the hidden operating room of O.S., where Ganymede de la Trémoïlle, Ando Mitsubishi, Casimir Perry, Ockham Saneer, and the Saneer-Weeksbooth bash' discuss whether to call a hit as the Cousins' Feedback Bureau scandal threatens to destroy the Cousins. Perry pushes for killing Darcy Sok and several CFB staff to protect the Hive balance, while Ando admits that Toshi Mitsubishi inserted Darcy Sok into Masami Mitsubishi's Seven-Ten list to weaken the Cousins, though not to trigger the theft. Ganymede and Ando argue over Perry's disclosure of O.S. to European coalition allies, the Canner Device, and the danger that the Masons plus Cousins may pass 50 percent of the population. The scene shows O.S. as a joint Humanist, Mitsubishi, and European murder system already fraying because its partners do not trust one another. Source anchors: O.S.; Darcy Sok; CFB; Casimir Perry; Ando Mitsubishi; Ganymede; Seven-Ten list; Canner Device.   </p>
+<p>Analysis: O.S., Darcy Sok, and the CFB make the assassination system look less like a philosopher-king's emergency tool and more like an improvised boardroom conspiracy. O.S. operates as an <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institution</a>: Casimir Perry's fear of a Masonic majority, Ando Mitsubishi's use of the Seven-Ten list, and Ganymede's possessiveness over "my assassins" turn private bargains among rival leaders into killings that public law cannot authorize or review. The balancing of populations, votes, and shares is the vocabulary of <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> reduced to arithmetic, and the leaders' trust tests show <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> at work among a few who groom one another. The Canner Device dispute also plants the technological vulnerability Papadelias will later exploit when tracker tricks, pet registry records, and set-set traces converge — an early sign of how <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> becomes the crisis's weapon.   </p>
+<h3 id="chapter-the-fourth-providence">Chapter the Fourth: Providence</h3>
+<p>Summary: Mycroft watches Carlyle Foster enter Madame's Paris house after Dominic sends a false invitation in Sister Heloïse's name, while Mycroft is trapped four stories above by doors, footmen, and the limits of his Servicer access. The narrative recalls Mycroft's first post-trial return to Madame's, when seventeen-year-old Dominic controlled access to Jehovah, lectured Mycroft about Enlightenment politics, and displayed lions, leopards, a wolf bitch, theologians, Calvin, Ramanuja, and Augustine as part of his power theater. In the present, Dominic appears in a Dominican habit before Carlyle, forces the sensayer to vomit, takes control of Carlyle's religious file, and attacks Carlyle's Deism as a cowardly Clockmaker faith. Dominic reveals that Bridger has no navel, proof of a miracle, and the Utopian Voltaire Seldon interrupts to retrieve the Canner Device while the religious session is redrawn around Carlyle staying. Throughout, Mycroft openly changes Carlyle's pronoun to "she" and reflects on gender residue, Danae, chivalry, and the old feminine associations still living under the Hive world's neuter language. Source anchors: Carlyle Foster; Madame's; Sister Heloïse; Dominic; Deism; Clockmaker God; Dominican habit; Voltaire Seldon; Canner Device; no navel.   </p>
+<p>Analysis: Carlyle Foster, Dominic, and Deism turn the book's political secrets into spiritual coercion. Madame's and Sister Heloïse matter because Carlyle is trapped by a forged pastoral invitation, so Sensayer trust becomes the instrument of capture — a demonstration of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> operating as a machinery of domination rather than counsel. The Clockmaker God and Dominican habit let Dominic name Carlyle's faith with surgical accuracy, while Mycroft's pronoun shift ties Carlyle's vulnerability to the book's later claim that the Cousins cannot explain themselves without recovering the banned vocabulary of gender. That recovery is a <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> argument: the neuter language is not neutrality but an enforced silence that leaves the old gender script intact and weaponizable. The scene is thus a double exposure of <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> — the culture used against people while the identity language claims to have ended it.   </p>
+<h3 id="chapter-the-fifth-if-anybody-in-the-world-can">Chapter the Fifth: If Anybody in the World Can</h3>
+<p>Summary: Bridger closes Apollo's Iliad and declares he wants to rescue Mycroft from Madame's cage. The chapter unfolds in the safe house where the toy soldiers — Pointer, Nostand, and Lieutenant Aimer — have just been freed from Dominic by "Operation Ariadne," a forty-seven-second extraction coordinated by the Major with Bridger at the teleport controls. The Major refuses to sanction a rescue attempt, arguing Mycroft is trapped by choice, not chains, but Bridger insists on at least going to talk Mycroft into leaving. Interrupted by paranoid Croucher, the Major then runs a full equipment check — winged sandals, invisibility cloak, force-field generator, Thor's belt, Excalibur, phaser, teleporter, X-ray specs, mirrors, wands, healing and resurrection potions, paper and markers, and Apollo's Iliad — and quietly allows the boy to plan his first real mission. The chapter ends with Bridger insisting he could not cope if he lost Mycroft, and the Major reminding him that the Iliad is not the most important thing in the world: Bridger himself is. Source anchors: Bridger; Apollo's Iliad; Operation Ariadne; the Major; Croucher; Mommadoll; resurrection potion; talaria.   </p>
+<p>Analysis: Bridger, the Major, and Apollo's Iliad make this the volume's quietest war-planning scene: a fantasized rescue is being rehearsed as the model for wielding world-shaping power. The equipment list turns <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> into a child's inventory — teleportation, resurrection, force fields — and the characters understand its political weight, as when Bridger frets over who will run hospitals or govern newly resurrected populations. The Major's insistence that Bridger "not be like us" glosses <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: the toy soldiers are veterans of imagined wars, and the anxiety that runs under the chapter — that the child's power and imagination may already be making war real — is the fear Mycroft will state plainly later. The scene also anchors the book's Providence: <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> appears as the claim that the miracle was meant for a purpose only hiding will reveal, even as the characters cannot yet see what <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a>'s larger plan is.   </p>
+<h3 id="chapter-the-sixth-the-room-where-mycroft-canner-died">Chapter the Sixth: The Room Where Mycroft Canner Died</h3>
+<p>Summary: The chapter returns to the scene after Mycroft's capture thirteen years earlier, when the Seven Powers debate whether the world's most infamous murderer must die at Madame's salon. The Anonymous explains that Mycroft had identified the Anonymous in 2435; Bryar Kosala grieves among the leaders; Felix Faust values Mycroft as a rare specimen; MASON invokes Apollo Mojave's note asking mercy; Mushi Mojave speaks for Utopia's reluctant obedience to Apollo's will. Jehovah, still a child, calls Mycroft "benign" and orders the Servicer sentence, while MASON remembers Apollo's pending Familiaris appointment and uses it to make Mycroft both Familiaris and Servicer instead of a public execution victim. Saladin appears in a second cage, captured by Dominic, and Mycroft's confession that the Mardis planned war — "they were war historians" — is forced out under MASON's hands, before the Emperor takes Apollo's weapon-filled coat and spares its keeper. Mycroft signs with Laurel Mardi's crayon, receives Apollo's Iliad, and lives under the command to finish the work of Apollo, Geneva, Aeneas, Mercer, Kohaku, Jie, and Leigh. Source anchors: Mycroft Canner; Anonymous; Bryar Kosala; Apollo Mojave; Mushi Mojave; Familiaris; Servicer; Saladin; Cannergel; Apollo's coat.   </p>
+<p>Analysis: Mycroft Canner, Apollo Mojave, and Familiaris explain the legal fiction that has shaped the whole series: Mycroft is alive because Apollo's note and MASON's law made him useful property. Bryar Kosala and Mushi Mojave provide opposed kinds of mercy, one humanitarian and one obedient to Apollo's last request, while the Anonymous and Felix Faust supply institutional motives for keeping such a mind — elite bargains that fit the vault's view of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> as something the powerful manufacture for the world. The Servicer sentence binds Mycroft's narration to <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, because every later service is measured against the murdered Mardis' lost work. The salon itself, where the Seven gather to cheat their own laws, is the book's most concentrated portrait of <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the formal powers are themselves organized underneath by an unpublicized household that decides who dies, who lives, and who rules.   </p>
+<h3 id="chapter-the-seventh-treason">Chapter the Seventh: Treason</h3>
+<p>Summary: On March 28, a postman delivers Sniper back to the Saneer-Weeksbooth bash'house in a doll box, still drugged from its kidnapping; Lesley, Ockham, and Cato take in the celebrity as a crime scene. Ockham convenes an O.S. house vote at 23:14 UT on whether the bash' should obey Casimir Perry's order to carry out the Harper Morrero hit while Martin Guildbreaker's investigation is live; Lesley, Sniper, Thisbe, a Typer twin, and one set-set divide over risk, while Thisbe dismisses the danger by insisting that J.E.D.D. Mason — whom she calls Andō's child and the unofficial "Tenth Director" — can be controlled. Cato Weeksbooth, sensing excess heat inside the ancient car Mukta, realizes there is a spy aboard, and Ockham pulls the intruder out: Carlyle Foster, who used sensayer access, overheard the Spanish-language proceedings in full, and is now a threat the bash' cannot kill. Thisbe claims her — "Leave Carlyle to me" — and carries the shaking sensayer down to her room. Source anchors: Lesley; Sniper; Ockham; house vote; Harper Morrero; Thisbe; Cato; Mukta; Carlyle; J.E.D.D. Mason.   </p>
+<p>Analysis: Ockham, Mukta, and the house vote turn the novel's secret government into a miniature polity: the O.S. bash' deliberates about whether to obey its Hive masters exactly as a state might, and the answer splits along the same lines as the larger crisis. This is <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> shown at one generation deep — the assassins are simultaneously instruments of and parties to the Hive system, and Ockham's "We are O.S." ethos makes loyalty to the Hive a private religion. The Thisbe–Carlyle handoff shows how the revealed conspiracy starts to cannibalize its own operatives, while the rumor that J.E.D.D. Mason is Andō's child and a "Tenth Director" previews the <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> machinery by which one person already holds office in every Hive. The chapter is also an early test of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: the system that preserved peace is deciding whether any threat to its own secrecy justifies escalating the violence that keeps the peace.   </p>
+<h3 id="chapter-the-eighth-no-rest-for-the-virtuous">Chapter the Eighth: No Rest for the Virtuous</h3>
+<p>Summary: In the flower trench behind the bash'house, Thisbe forces Carlyle to stop lying and confesses the truth of her own life: she is Julia Doria-Pamphili's spy, trained to win trust and refer parishioners into Julia's network, and she has lured around a hundred people into it, including this bash'. Thisbe dismantles Carlyle's self-justifications — the Fisher G. Gurai scarf was a lie, the fallen-monk fable even more so — and then performs her witch act: a trick-edged knife, a fake recorded suicide, smelltrack-driven bodily compulsion, and claims of omniscience, leaving Carlyle certain she is now Thisbe's puppet. Afterward Mommadoll, Boo, and Stander-Y (Bridger's spy squad) find Carlyle, feed her milk and cookies, and reveal that Bridger has no navel and scarred thumbs — proof he was never born — which restores Carlyle's metaphysical confidence. Recognizing that Thisbe's omniscience was a bluff of details she could not know, Carlyle calls Commissioner General Papadelias and reports an attempted murder. Source anchors: Carlyle; Thisbe; Julia Doria-Pamphili; Fisher G. Gurai; smelltrack; witch; Mommadoll; Stander-Y; Boo; no navel.   </p>
+<p>Analysis: Carlyle, Julia Doria-Pamphili, and the trench scene make this the chapter where the sensayer's identity is unmade and remade. Julia's network is <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> in its corrupt form: pastoral intimacy converted into surveillance and access, and Carlyle's "pimping" history is the same mechanism that ran the CFB and the salon. Thisbe's witch performance is <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> weaponized — the appearance of omniscience is enough to compel obedience — while Mommadoll and Stander-Y supply the counter-evidence: food, spying, and ordinary observation. The no-navel revelation repositions <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> as genuine theology again, because a child who was never born forces the Deist's God to act. The chapter closes with Carlyle's first free act — the call to Papadelias — which is notable because the review of privacy and vows shows <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> depending on individuals deciding which secrets may end.   </p>
+<h3 id="chapter-the-ninth-the-visitation">Chapter the Ninth: The Visitation</h3>
+<p>Summary: Bridger teleports invisibly into the cage at Madame's where Mycroft sleeps in Apollo's Griffincloth coat beside the wounded Saladin, and for a moment Mycroft mistakes the visitor for Apollo Mojave come to absolve him. Bridger offers to rescue Mycroft and Saladin by teleportation, but Mycroft refuses unless the child urgently needs him, and instead spends the night explaining why his power must be planned: resurrection potions, extra people, new Earths, the Censor's predictions, hospitals and aid workers, the Anonymous, the Humanists, Europeans, Mitsubishi, and Utopians all require coordination. Mycroft tells Bridger that the real question is not "Why me?" but "Why now?" — why the miracle arrived in 2440 when Jehovah Mason is alive — and that Jehovah may be here because Bridger is here. Bridger resists the idea that God would make a miracle for one person, and Mycroft, refusing to speak about Jehovah directly, charges the child to watch Him from afar and form his own judgment. Bridger finally naps against the bars, watched by Saladin, who asks whether he should kill the child. Source anchors: Bridger; Saladin; Apollo Mojave; resurrection potion; teleportation; crisis planning; Censor; Jehovah Mason; Providence.   </p>
+<p>Analysis: Bridger, resurrection potion, and Jehovah Mason move the book from exposing crimes to deciding what miracles are for. Bridger's sober inventory of knock-on effects — where will the extra people live, who will own the new Earths, who will run the teleporters — is <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> at the level of a child, and it forecasts the political economy of the miraculous that the rest of the series will struggle to administer. The "Why now?" question anchors <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> in the plot: Mycroft reads Providence as a coordination problem, not a private blessing, and he withholds his own opinion from Bridger precisely so the child can form an independent One. Saladin's whispered murder offer, meanwhile, is a reminder of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>, the violent alternate reading of the same providence, and of how close the book keeps both interpretations to each other.   </p>
+<h3 id="chapter-the-tenth-stalin-in-one-weekend">Chapter the Tenth: Stalin in One Weekend</h3>
+<p>Summary: Martin Guildbreaker sits in the Utopian Transit Network hall while a hired Cartesian set-set sifts old accident records and, on live data, instinctively tries to delete a "point" it thinks is a tension — which the Utopians reveal was Harper Morrero, a person the O.S. sets would kill. The set-set confesses it has been finding deleted points: eighty-one murders initially, then a rate of 9.1, rising to 9.4 deaths per year, reaching back to 2210 — 2,204 victims total, five a year fed naturally into crash statistics. Papadelias reads the names aloud (the Greenpeace–Mitsubishi merger enabled by a death in 2392, the Olympian–Hollyworld merger in 2262), and the numbers force even Jehovah, watching through Martin's tracker, to confront the horror that the world's peace was purchased. Martin's move to bait the O.S. sets into a kill attempt on Harper Morrero, and Papa's demand for a confession, leads to the transcript of Papadelias's call to Carlyle, who supplies the recording of the O.S. meeting and is told the shadow-system's true name. The long fifth day of Mycroft's history ends. Source anchors: Martin Guildbreaker; set-set; Harper Morrero; deleted points; 2,204; Utopian Transit Network; Papadelias; confession; recording.   </p>
+<p>Analysis: The set-set's "points" are <a href="//02%20Concepts/Legibility.html">Legibility</a> made terrifying: in the transit and tracker databases, a human life is a data point that a prediction machine can mark for deletion to relieve systemic tension. The statistics — 2,204 deaths over 244 years — convert <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> into arithmetic, and the episode is the book's clearest demonstration that coordination, not malice, built the peace. The "Stalin in one weekend" line measures the scale: the deaths are small next to the World Wars, yet they are the price every Hive paid silently. The chapter also makes <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> the engine of investigation: the set-set's accidental disclosure, the leaked names, the recorded confession, and Papa's insistence on a testimony all show the crisis as a war over who owns the record. Its conclusion that a peace bought by such means may collapse the moment it is public is the volume's central claim about <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>.   </p>
+<h3 id="chapter-the-eleventh-providence-chooses-left">Chapter the Eleventh: Providence Chooses Left</h3>
+<p>Summary: Sniper, shirtless for its fans, walks Felix Faust through the Spectacle City of Ingolstadt and tries to draw the Brillist Headmaster into confirming its suspicions about J.E.D.D. Mason: multiple offices in every Hive, the "Tenth Director" rumor, and the question of who Faust's next Brain-bash' will be. Faust deflects each probe, and at a fork Sniper chooses left. The path leads to Tully Mardi, preaching from a church step on how economic determinism flatters past peoples who felt only hunger and unease, how war is the human norm after three hundred supposedly settled years, and how a spark — a Hive riot, a set-set revenge, a Cannerist idol — could light it. Sniper steps up beside the warmonger, declaring that it loves its chosen Hive, would fight and kill for it, and hopes history puts them on the same side; a stunned Tully accepts its hand and asks to be called "Tully Mojave." Source anchors: Sniper; Felix Faust; Brill's Institute; Ingolstadt; J.E.D.D. Mason; Brain-bash'; Tully Mardi; Rosaceae; Providence; left.   </p>
+<p>Analysis: Faust and Sniper's walk is a masterclass in how <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> is managed: a celebrity interrogates the head of the Institute that claims to know the psyche, and Faust's evasions reveal the elite's habit of declining to name what they know. Tully's speech is the book's most direct statement of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: the peaceful century reads as a bubble, and the "us and them" that elections and sports merely channel is waiting for a spark. Sniper's declaration that it would kill for its chosen Hive converts <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> into a covenant of the blood, transforming Hive membership from a convenience into an allegiance. The "left" itself is the novel's joke about providence and free will — Mycroft notes that in a kinder world Sniper would have turned right — tying the chapter's politics back to the book's claim that even small choices are shaped by a plan the actors cannot see.   </p>
+<h3 id="chapter-the-twelfth-snakes-and-ladders">Chapter the Twelfth: Snakes and Ladders</h3>
+<p>Summary: Julia Doria-Pamphili calls Hiroaki Mitsubishi in Togenkyo and finds Danaë's ten half-set-set ba'sibs — Masami, Toshi, Jun, Ran, Sora, Michi, Harue, Nao, and Setsuna — reeling from Darcy Sok's attack at the CFB. Julia warns them that their revenge against Lorelei Cook, Kosala, and the CFB has made them visible now that Minor's Law no longer protects the oldest siblings, and that whoever is hunting the Canner prototype may be one of their own. Carlyle, hiding in Julia's closet, records the call, steps out to confront Julia about the Pythagorean set-sets, the CFB's manipulation, and Julia's exploitation of Darcy Sok, and threatens blackmail to save the Cousins. When Julia refuses, Carlyle brings in Papadelias, who arrests the Conclave Head on multiple charges; Julia's parting gift is the revelation that Danaë Mitsubishi is Carlyle's mother, born from Andō's bargain with Ganymede twenty-eight years earlier, making Carlyle's own body part of the political bargain that bound the Humanists and Mitsubishi together. Source anchors: Julia Doria-Pamphili; Hiroaki Mitsubishi; set-sets; Darcy Sok; CFB; Pythagorean set-sets; Carlyle; Papadelias; Danaë Mitsubishi; Minor's Law.   </p>
+<p>Analysis: Julia Doria-Pamphili, Hiroaki Mitsubishi, and the set-set brood connect the Cousin crisis to Mitsubishi's engineered children. Darcy Sok and the CFB show the mechanism by which a humanitarian Hive can be manipulated through its own <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> machinery — feedback is filtered to produce policy — and Julia's parishioner network is the same apparatus run through <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>. Carlyle's recorded evidence turns Sensayer intimacy back against its master, which makes her <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> challenge to her teacher the personal version of the book's systemic one. The maternity revelation is the cruelest stroke: Carlyle's birth was engineered as a guarantee, so her body becomes <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>'s debt, and her attempt to act on her own is immediately re-colonized by the bargain that created her.   </p>
+<h3 id="chapter-the-thirteenth-rose-tinted-daydream">Chapter the Thirteenth: Rose-Tinted Daydream</h3>
+<p>Summary: Madame compares her revolution to the Renaissance, and the chapter opens with Casimir Perry entering the Salon de Sade for his first evening "upstairs" as a client of the inner circle. Felix Faust plays host alone with Perry while the other Powers are delayed by crisis, and Mycroft's footnotes run through Petrarch, Laura, Juliet, Helen, Cleopatra, Beatrice, Abelard's Heloïse, and de Sade to explain how Madame uses timeless beauty and gender as political materials. One by one the Powers arrive — Kosala raging about the Anonymous's thirty-year control of the CFB, the Anonymous's manikin, Ganymede with Danaë and Andō, Spain, and finally MASON with Madame — and then Jehovah announces that the illusion that the human race is capable of peace is over, revealing O.S.'s 244 years and 2,204 victims before the assembled leaders. When Mycroft confirms that Ganymede is a murderer and Danaë faints, Carlyle (in a monk's habit) reveals herself, and the tangled Merion Kraye revenge is exposed: Kraye, Perry's true identity, was banished for assaulting Danaë, is the real father of Carlyle, and admits to stealing the Seven-Ten list to burn the world down. Kraye seizes Ganymede and hurls them both through the window; Sniper, arriving to save its President, catches them as the world's cameras broadcast the scene. Source anchors: Madame; Renaissance; Casimir Perry; Salon de Sade; Felix Faust; Petrarch; Kosala; Anonymous; Jehovah; 2,204; O.S.; Merion Kraye; Danaë; Carlyle; Sniper.   </p>
+<p>Analysis: Madame, Renaissance, and Salon de Sade are not decorative period references; they define her political technology as the deliberate revival of older cultural scripts — <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> used as a weapon, with gender the revival's sharpest edge. In this salon the hidden order's presumptions are broken: the revelation of O.S. before the Powers is the moment the <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> of the peace become ungovernable, because the People who ran the assassination are now among the people who run the Hives. Casimir Perry/Kraye matters because Europe is about to be destroyed by a person who wanted belonging from that same antique theater; his revenge is the <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a> gone wrong. Jehovah's flat sentence — that the peace was made of murder — is the book's strongest statement of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>, and the falling, dust-suspension through the glass is the physical form of the system's descent into open conflict.   </p>
+<h3 id="chapter-the-fourteenth-the-suicide-of-cato-weeksbooth">Chapter the Fourteenth: The Suicide of Cato Weeksbooth</h3>
+<p>Summary: After the exposure, the Saneer-Weeksbooth bash' watches the night's media in Cielo de Pájaros: Brody DeLupa uses the Rostra to hold Europe's whole Parliament complicit in O.S., while the Europeans Goodall, Kovács, and Korhonen have already gone public to save themselves. Ockham tells Sniper and Lesley the household's future: he will stand trial as Prospero, the O.S. title passes to Sniper as the thirteenth O.S., and Lesley will run with the fugitive celebrity to rebuild the Humanists' underground. Cato Weeksbooth breaks, insisting it is over and they all deserve judgment; Sniper pins the weeping Mad Science Teacher to the floor, rejects his self-pity with the rebuke that he did the killing anyway, straps him to a table leg, and leaves him a choice: stand trial with the others, or come on the run and keep doing the work. The chapter ends with the sixth day spending itself into the seventh. Source anchors: Ockham; Sniper; Lesley; DeLupa; O.S.; Cato Weeksbooth; trial; Thirteenth O.S.; Wish List.   </p>
+<p>Analysis: Ockham's decision to stand trial and Sniper's assumption of the title are <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> at the household scale: even an outlaw institution needs a successor, and it preserves itself by legal martyrdom and public charisma. DeLupa's argument that every Humanist Parliamentarian was complicit converts <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> into collective guilt, dragging democracy into the assassination's accounting. Sniper's rebuke of Cato — that the reluctant killer is the worst of them, because he did it anyway — is the book's ethical mirror image of Mycroft's own guilt. The Wish List hovering over the scene, a Hive-wide catalog of wished-for deaths, shows how <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> spread beyond the bash': the public's jokes were in fact a census of murderous fantasy that the assassination system answered.   </p>
+<h3 id="chapter-the-fifteenth-the-most-important-person-in-the-world">Chapter the Fifteenth: The Most Important Person in the World</h3>
+<p>Summary: On March 29, Martin Guildbreaker and Papadelias raid the Saneer-Weeksbooth bash'house. Ockham formally surrenders his gun to Martin at 22:21 UT, accepting relief, and the police secure Cato (gagged, tied to a table leg), Eureka Weeksbooth, and one Typer twin, while Lesley, Thisbe, Sniper, Sidney Koons, and the other twin are missing; the Salekhard backup facility has meanwhile been destroyed in revenge for the Brillist Giller Edison. Papadelias blasts into Thisbe's room with gas masks and stun guns, arrests her for the murders of Luca Cormor, Quinn Prichard, and Alex Limner, and matches smelltrack residue on Carlyle Foster, Revere, and the crashed car that killed Aki Sugiyama's fiancé. Thisbe produces Private Croucher, a plastic soldier brought to life, who warns that Bridger's powers, Apollo's Iliad, and the adults around the child may be turning the world into war. From the Pet Registry dog trick Papa immediately infers the truth: Mycroft's "dog" was Saladin Canner, the lost ba'sib and accomplice whose body was never found, and Mycroft's own pacemaker trick has let him vanish, leaving his tracker on another Servicer. Source anchors: Papadelias; Martin Guildbreaker; Ockham; Cato; Thisbe; smelltrack; Private Croucher; Bridger; Pet Registry; Saladin Canner; pacemaker.   </p>
+<p>Analysis: The raid is the moment the hidden state's own tools are turned against it. The Pet Registry trick demonstrates <a href="//02%20Concepts/Legibility.html">Legibility</a> in both directions: the state's categories made a human being legible as a dog, hiding Saladin for twenty years, yet the same durable record is what gives Papadelias the thread back to him. Thisbe's smelltrack is <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> as coercion, traceable by the same science it exploited, while Croucher is its supernatural counterpart — a forced confession of a miracle the commissioners cannot process. The arrest list, which now reaches Ganymede, Andō, Danaë, Perry, and the Mitsubishi board, is the legal net spreading from the bash' to the Hives themselves, converting the private <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> portrait of the book into an open public record and the material of <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a>.   </p>
+<h3 id="chapter-the-sixteenth-deo-erexit-deus">Chapter the Sixteenth: Deo Erexit Deus</h3>
+<p>Summary: Carlyle goes to the chapel in Avignon seeking Chagatai and finds MASON waiting downstairs while Jehovah is upstairs, with guards frisking her and Caesar discoursing on Crown Prince Leonor, birth-caused harm, and whether he adopted Jehovah because the Emperor needs a companion who is neither subject nor enemy. Upstairs, Jehovah sits before an altarpiece of Christ crowning Mary and asks Carlyle for help understanding the God who made such portraits of Himself. Jehovah describes infancy, language acquisition, time, His other universe, His divine identity as the only God of that cosmos, His inability to act by pure Will in this one, and the strangeness of inhabiting human flesh, while Carlyle works through whether two universes with two monotheistic Gods can be believed. The conversation is interrupted when Jehovah judges they are increasing the cumulative total of human pain; Carlyle is reclaimed by her bash', and Jehovah sends MASON to Romanova, where rain offers a hiding place for Mycroft at Apollo's grave. Source anchors: Carlyle; Chagatai; MASON; Avignon; altarpiece; Crown Prince Leonor; Jehovah; other universe; monotheistic Gods.   </p>
+<p>Analysis: Carlyle, Chagatai, and Avignon place the theological interview in a domestic Masonic setting, where Caesar waits because a priest does not — the hierarchy of the household inverted by the claim of the God inside it. Jehovah's description of language as a cage of words One cannot escape, and of time as an alien direction that destroys and swallows, is <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> pushed to its limit: a divine mind reduced to monoglot signs. The conversation gives Carlyle a vocabulary to report that Jehovah's claims are not ordinary delusion, which is why it matters to <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — the book's theology and its politics cannot be separated, because whether this man is God changes who may inherit the Hives. MASON, meanwhile, frames the succession machinery around the chapel in miniature, and his candid account of why he adopted Jehovah makes the adoption part of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>'s intimate economy.   </p>
+<h3 id="chapter-the-seventeenth-the-rape-of-apollo">Chapter the Seventeenth: The Rape of Apollo</h3>
+<p>Summary: MASON finds Mycroft in the rain at Apollo's tomb in Romanova, where the Servicer has slipped his tracker to mourn despite parole — the chapter's narration is framed as the words of a dead man. Caesar demands Apollo's Iliad and forces Mycroft to admit it is not just a storybook but Apollo Mojave's plan for a war meant to soften a later one, when the terraforming of Mars is complete in 250 years. Mycroft explains that Apollo and the Mardis were war historians who believed veterans were needed, that Apollo openly chose to make the war come even if the others would not, and that Apollo had already drawn first blood on Caesar himself behind the Rostra in 2426. Apollo's coat, Mycroft reveals, is a simulation of one year into the war — the people it makes invisible died within the first twelve months by Apollo's prediction. Mycroft confesses he has refused the selfish miracle: Bridger could bring Apollo back, but a resurrected Apollo would start the war again, and he has deliberately kept Apollo dead every day since. The chapter ends with Caesar threatening to kill Saladin if Mycroft ever slips his tracker again, and the news that Bridger is lost, alone, after a police action at the doll museum. Source anchors: Apollo's tomb; MASON; Apollo's Iliad; Mars; Mardi bash'; war plans; Apollo's coat; Bridger; Seine Mardi; trial by combat.   </p>
+<p>Analysis: Apollo's tomb, Apollo's Iliad, and Mars make Apollo's death the hinge between Utopian hope and calculated violence. The Mars horizon — a fertile new world outside Earth's politics — drags <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> into the frame: the frontier war the Hives refuse to plan for is the reason Apollo planned one himself. MASON's grief and the "second battle" confession show how personal legitimacy is built: the Emperor who cannot love without reserve is bound to the same plan he must destroy. Mycroft's admission that he keeps Apollo dead is the book's sharpest moral formulation — mercy and murder indistinguishable when resurrection is on the table — and it re-founds <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> on Providence, the plan the murderer cannot see. The chapter leaves Bridger as the unresolved cipher at the center of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>, the arsenal in a child's pocket that the whole universe is racing to reach.   </p>
+<h3 id="chapter-the-eighteenth-aristotle-and-alexander">Chapter the Eighteenth: Aristotle and Alexander</h3>
+<p>Summary: Tully Mardi takes the Rostra before the emergency Senate session as the stock market freezes and Servernic violence spreads, naming the Salekhard deaths, the Servicer lynchings, the Mitsubishi headquarters guard's death, and "Cannerism" as signs that war is already surfacing. Jehovah interrupts to bring Mycroft onto the Rostra, presenting the Servicer Program's mercy as proof that humanity can change; Kosala defends Mycroft's thirteen years of service, but Tully produces the leaked Alexandria recording of MASON, the Censor, and J.E.D.D. Mason sharing secrets days earlier. As the world watches, Sniper — hidden on a rooftop across the Forum — shoots Jehovah through the head with an explosive bullet, and in the chaos reveals itself as the Thirteenth O.S., broadcasting that the assassin was protecting the Hive system from a coup engineered by J.E.D.D. Mason and his mother Joyce Faust (Madame). Dominic pursues Sniper across the invisible Griffincloth paths of the rooftops in a blade duel while the transit network collapses; then Bridger descends invisibly, pours the resurrection potion over Jehovah, and the God returns from the dead with the word "Permanebam" — I continued. Bridger flees from the stunned crowd, Mycroft suffers a heart attack from the pacemaker trick, and the chapter ends with the racing, desperate demand to gather the world's leaders around the resurrected heir. Source anchors: Tully Mardi; Rostra; Censor; Servicer Program; Alexandria recording; Sniper; assassination; Dominic; Griffincloth; resurrection; Bridger; "I continued."   </p>
+<p>Analysis: Aristotle and Alexander frames the chapter: the epigraph's forged letter about Philip and the birth of his son asks whether the world gets its Alexander when its Aristotle is present — and the answer here is that the philosopher-king arrives after the wound. The Rostra sequence stages <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> in public: a Tribune lies dead, an assassination names the successor a coup, and the crowd is forced to decide whether mercy or murder legitimizes rule. Sniper's rooftop manifesto is <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> defended as the freedom of separate Hives against unifying monarchy, while Jehovah's resurrection turns <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> from a claim into an event the crowd cannot fully believe. The collapse of the transit network in the same hour makes <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> the substrate of the disaster: the world's mobility and its television were both managed by the very parties who were assassinating their way to the future, and the scale of the halt shows how fragile the coordinated order was — the exact argument of <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>.   </p>
+<h3 id="chapter-the-nineteenth-seven-surrenders">Chapter the Nineteenth: Seven Surrenders</h3>
+<p>Summary: Over five hours the world's Hives give way one by one while Sniper's evidence floods the net. Brody DeLupa tries to dissolve the Humanists by pretending to speak as the Anonymous, but Papadelias and the Anonymous stop him; Deputy Censor Vivien Ancelet exposes himself as the Anonymous, resigns both offices, freezes the Senatorial proportioning for twelve months, and files to join the Humanists so an emergency election can make him President. Heloïse appears as Jehovah's Proxy In Extremis and gives the Cousins an interim constitution grounded in the banned feminine vocabulary — nurturing, motherly, sisterly duty — while Kosala steps down as Chair under the flood of uncorrupted letters. In Brussels, missiles strike Parliament during Perry-Kraye's confession, killing most of Europe's officials including Crown Prince Leonor, so King Isabel Carlos II takes emergency control. The Utopians' Mushi Mojave formally surrenders to Madame with hostages, the Moon declared off-limits, and the future itself ceded; the Mitsubishi Directors are arrested and Andō proposes Dominic Seneschal as successor, steering it toward a caretaker who cannot hold power. A final flashback returns to Madame's pregnancy, King Isabel Carlos II's paternity, MASON's adoption of Jehovah as Porphyrogene, the invented Andō father-rumor, and the creation of the Familiaris Candidus office that lets one Youth belong to all the Powers. Source anchors: Seven Surrenders; Brody DeLupa; Anonymous; Ancelet; Heloïse; interim constitution; Brussels; Perry-Kraye; Spain; Mushi Mojave; Utopia; Mitsubishi; Dominic Seneschal; Madame; Porphyrogene; Familiaris Candidus.   </p>
+<p>Analysis: Seven Surrenders, Anonymous, and Heloïse show institutional collapse as a chain of speeches and emergency substitutions, which is the heart of <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the governing bodies themselves must improvise continuity in the moment their legitimacy breaks. The turn on <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> is total — every Hive must identify who can speak after its hidden governors lose authority, from Ancelet's public self-exposure to Spain's resurrection of royal charisma and Andō's cynical installation of Dominic. Heloïse's speech is the series' clearest argument that the Cousins' identity was always <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> — a silent feminine vocation the neuter world could not name — which makes the interim constitution a linguistic re-founding. The Utopian and Mitsubishi surrenders expose the hidden structure: elites who had bargained with Madame now find their whole bargain annulled, and <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> emerges as the actual constitution, with <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> (Mars and the Moon) ceded as the future's price.   </p>
+<h3 id="chapter-the-twentieth-i-was-wrong">Chapter the Twentieth: I Was Wrong.</h3>
+<p>Summary: Mycroft wakes restrained in a Utopian hospital after a heart attack and surgery that replaced the pacemaker he rewired at fourteen to slip his tracker onto other Servicers. Papadelias tells him there have been four coups: Ancelet has exposed himself as the Anonymous, the Mitsubishi Directors are arrested, the Cousins are remaking their government, and Europe's government has been assassinated while Spain takes interim control — and that the office of Anonymous has been urged on Mycroft. Dominic lies bandaged after riding outside Sniper's car to Antwerp, Julia survives a bullet through the heart, and Papa shows Mycroft that the actual assassin of Jehovah was a living Sniper Doll animated by Bridger. Madame arrives with Felix Faust; MASON asks whether she planned the crisis, and she answers that she did not plan it but shaped its creatures; Saladin appears as Madame's legal dog and new student of her Cynic arts; and Jehovah returns from death speaking mixed languages that Mycroft translates as relief that His universe survived His body's death. Jehovah's command is that the truth be told so the world may choose its side, and that Sniper must die — and He corrects Mycroft: "Mycroft, you are wrong." There is no plan that guarantees rescue. Source anchors: Mycroft; Utopian hospital; Papadelias; pacemaker; four coups; Dominic; Julia; Sniper Doll; Bridger; Madame; Saladin; Felix Faust; Jehovah; "I was wrong."   </p>
+<p>Analysis: Mycroft, pacemaker, and Utopian hospital make the narrator's body part of the plot machinery: the same trick that preserved his secrecy nearly kills him and can no longer function — his own compromise with <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> is finally priced. Papadelias's account of four coups is <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> in real time, each replacement a bet on who can hold a broken Hive, while the Mazgnalist "I was wrong" reframes the whole book: conviction, not evidence, misled the narrator, and Providence offered no promises. Madame's admission to MASON that she only "resurrected the weapons" of gender and seduction — and let an army of spurned lovers do the rest — is the novel giving its <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> a first cause. Jehovah's resurrection as translation and relief ("I continued") closes the theological arc, and the command that Sniper must die sets up <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a>'s next volume by turning the restored God into a warlord who will no longer refuse a killing.   </p>
+<h3 id="chapter-the-twenty-first-hero">Chapter the Twenty-First: Hero</h3>
+<p>Summary: Mycroft leaves the hospital for the Sniper Doll Museum, moving in while the toy soldiers' communications are dead and Mommadoll, Stander-G, and others are endangered. In the darkened museum an animated Sniper Doll wearing a Servicer uniform guards the room where Bridger is hiding; Mycroft uses his knowledge of Sniper's habits, a toy grenade, and a plea that will sound like a death-toll to get past it. Bridger refuses to come out, says the whole world has seen him, and reveals the dreadful conclusion he has drawn: he may have altered even Mycroft into a fantasy caretaker, and the world is turning into Apollo's war story because his own fear is making it real. As Mommadoll and the Major revert to toys across the city, Bridger erases himself by transforming into the Major — now named Achilles Mojave — who remembers Troy, the World Wars, and Apollo's future war as three full lives, and takes up Excalibur, potions, and Hermes's sandals as the legacy. Achilles turns to the distraught Mycroft with the order: take me to Romanova, have the allies assembled, and teach them to fight our war, because the one mercy left is a veteran who has already fought every war. Source anchors: Sniper Doll Museum; Bridger; Mycroft; Mommadoll; the Major; Achilles; Excalibur; resurrection potion; Apollo's war; Lyrnessus; Patroclus.   </p>
+<p>Analysis: Sniper Doll Museum, Bridger, and Achilles turn the lost miracle into the book's harsh replacement gift. Bridger's self-diagnosis — that he may have invented even Mycroft's kindness, and that his fear is turning the world into a war story — converts <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> into a child's catastrophic power over narrative: representation itself becomes weaponizable, which is the series' deepest statement of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>. The transformation into Achilles is not a resurrection but a substitution: the universe trades a god-like child for a soldier who has already died in every war, so the coming conflict gains at least one competent teacher. The scene's grief is the grief of <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> overtaken by strategy — the miracle must be surrendered because peace can no longer be the goal — and Achilles's opening orders to "call your Servicers, they are closer to a ready army than anything else on Earth" are the staff officer pivot that ends the volume and opens <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a>'s war.   </p>
+<h3 id="chapter-the-twenty-second-last-prayer">Chapter the Twenty-Second: Last Prayer</h3>
+<p>Summary: Mycroft closes by saying he has fulfilled Jehovah's command to tell the truth about himself, Jehovah, Madame, the Powers, Bridger, resurrection, and Achilles Mojave. Three months after beginning this history, the trials have begun: MASON's black hand is outstretched, the Cousins have been reborn as peacemakers, Dominic holds the Mitsubishi together by the skin of his teeth, and more souls every day flock to the bull's-eye flag of the "Hiveguard" who follow Ojiro Cardigan Sniper, Thirteenth O.S. Jehovah refuses to ban the bull's-eye flag because honesty matters even without peace, but Achilles fears that a brawl, a street fight, or a hate-speaking word will trigger open war. Mycroft asks contemporary readers not to hate Cornel MASON, Ancelet, Kosala, Ockham, or Ganymede without judgment, and asks future readers beneath Utopia's strange skies to pray that Providence's gift of Achilles may help the world survive. Source anchors: Last Prayer; Jehovah; Achilles Mojave; MASON; Cousins; Hiveguard; Sniper; Dominic; the war.   </p>
+<p>Analysis: Last Prayer, Achilles Mojave, and Hiveguard set the bridge to the next book by naming the sides rather than pretending the crisis is over. MASON, Cousins, and Sniper show the new order's three immediate poles — imperial command, humanitarian repair, and armed defense of the Hive system — while Dominic's caretaker Mitsubishi and Jehovah's resurrection stand on the question of who will (or should) rule. Jehovah's refusal to suppress the bull's-eye flag matters because the God who wants peace will not purchase it by hiding symbols, an argument that <a href="//02%20Concepts/Order%20and%20Governance.html">Order and Governance</a> must live on honesty rather than concealment. Mycroft's closing prayer makes the reader a party to the selection of sides, which is <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> as civic instruction: the book's final word is that judgment, not revelation, must decide the war that the seven surrenders have made inevitable.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>The prayer license</strong>: "Nihil obstat" was the old imprimatur of King and inquisitor; Jehovah's "nihil obstet" is a prayer ("Let nothing prevent it") to every institution guarding humanity — Romanova, the Cousin Chair, Spain, the Sensayers' Conclave, the Censor, Brill's Institute.   </li>
+<li><strong>Sniper's titles</strong>: "Ojiro Cardigan Sniper, Thirteenth O.S., May 23rd, 2454" — the chapter is restricted by four bodies and ends with Sniper both swearing to kill Jehovah and explaining O.S.'s founding logic (a calculated death can redirect history better than a battle).   </li>
+<li><strong>The assassination account</strong>: O.S. = the Saneer-Weeksbooth Set-Set Transit System Three-Hive Secret Alliance; head always initials O.S., back twelve generations to Orion Saneer; 2,204 victims in 244 years (9.1/year rising to 9.4).   </li>
+<li><strong>The house vote</strong>: convened at 23:14 UT on March 28, with an odd number of votes — one Typer twin, one set-set, and "Ockham decides."   </li>
+<li><strong>The Pet Registry dog trick</strong>: Bridger is registered as Thisbe's "dog"; Mycroft used the same trick for Saladin, which is how Papa finally realizes the lost ba'sib is alive after twenty years.   </li>
+<li><strong>"Benign means something which can do no harm"</strong>: the child Jehovah's eight-year-old judgment that turned Mycroft from execution into a Familiaris-and-Servicer sentence; MASON printed the Familiaris appointment Apollo had requested nine days earlier.   </li>
+<li><strong>Apollo's coat as simulation</strong>: the utopian coat shows Earth one year into Apollo's predicted war; the people it makes invisible are those Apollo thought would die in the first twelve months.   </li>
+<li><strong>"Second battle"</strong>: Apollo drew first blood on MASON behind the Rostra on August 22, 2426, the same day he told the Mardis he would make his war; Mycroft calls his own fight with Apollo the first and only true battle, and MASON corrects him.   </li>
+<li><strong>The resurrection word</strong>: "Permanebam — I continued," Jehovah's first word after the resurrection potion; proof for Him that His own universe survives His flesh's death.   </li>
+<li><strong>The seven surrenders</strong>: Humanists (Ancelet to the rescue / dissolved by public confession), Gordian (Faust's Brain-bash' choice), Cousins (Heloïse's interim constitution), Europe (Brussels destroyed, Spain's emergency), Utopia (Mushi's surrender over Mars), Mitsubishi (Andō's chosen caretaker Dominic), Masons (MASON's black hand outstretched toward the Porphyrogene).   </li>
+<li><strong>The father-rumor machinery</strong>: Spain's paternity hidden by a rival rumor that Andō is the father; Familiaris Candidus, the office created for Apollo, is the socket that lets one Youth hold all the Hives' trust.   </li>
+<li><strong>The weapons list of the "la reine des droles"</strong>: Madame admits she only "resurrected the weapons" — sex, gender, religion — and let the Eighteenth-Century-style aristocracy of her cast-offs destroy itself; her army of spurned lovers did the rest.   </li>
+<li><strong>The bull's-eye and the Hiveguard</strong>: Sniper's followers rally under a bull's-eye flag; Jehovah refuses to ban it, decreeing that Earth will have honesty "if we cannot have peace."   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Terra Ignota.html">01 books/terra ignota</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A54081813487132352059495602440220906747{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D54081813487132352059495602440220906747{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B54081813487132352059495602440220906747{level}" level="{level}" note_temp_id="54081813487132352059495602440220906747" onclick="window.ObsHtmlGraph.run(this, '54081813487132352059495602440220906747', 'seven surrenders');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C54081813487132352059495602440220906747{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

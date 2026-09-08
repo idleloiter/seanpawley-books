@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="biohazard">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'biohazard';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=biohazard" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="biohazard">Biohazard</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><em>Biohazard</em> sits in the security-warning and institutional self-deception cluster of the vault as an insider account of a concealed state program. Ken Alibek's testimony belongs alongside strategic-institutions studies such as <a href="//01%20Books/The%20Wizards%20of%20Armageddon%20%28Stanford%20Nuclear%20Age%20Series%29.html">The Wizards of Armageddon</a> (which likewise dissects a targeting-and-deterrence priesthood) and near speculative warning texts such as <a href="//01%20Books/The%202020%20Commission%20Report%20on%20the%20North%20Korean%20Nuclear%20Attacks%20Against%20the%20United%20States.html">The 2020 Commission Report</a>, which imagine the failure modes of preparedness. Conceptually it is a central reference for <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> redirected into covert mass harm, for <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> as a production problem, and for <a href="//02%20Concepts/Intelligence.html">intelligence</a> and verification failure, and it maps most directly onto the reading path <a href="//03%20Reading%20Paths/Intelligence%2C%20Warning%2C%20and%20Institutional%20Self-Deception.html">Intelligence, Warning, and Institutional Self-Deception</a>. It is a standalone nonfiction memoir in the vault, not part of a series.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Ken Alibek structures <em>Biohazard</em> as both confession and system map. He opens not with abstract doctrine but with tethered monkeys on an island in the Aral Sea, a yellow-brown aerosol cloud descending from a shattered bomblet, and Soviet technicians in protective suits recording how anthrax, tularemia, Q fever, brucellosis, glanders, and plague kill their test animals. That image sets the pattern for the rest of the book: every strategic claim is tied to a place, a production line, a military office, a fermenter, or a real death. Alibek’s authority comes from having supervised those tests and then risen to first deputy chief of Biopreparat between 1988 and 1992.   </p>
+<p>The book’s central claim is not merely that the Soviet Union cheated on the 1972 Biological Weapons Convention, but that it built an enormous, technically ambitious, institutionally distributed offensive program while publicly promising the opposite. Biopreparat sits at the centre of that arrangement, but Alibek shows repeatedly that it functioned only because it was joined to the Fifteenth Directorate of the army, the VPK, Gosplan, the Soviet Academy of Sciences, the ministries of Agriculture and Health, the KGB, and senior political figures in the Kremlin. The system survives by coded cables, cover identities, post office box numbers, dual-purpose equipment, and compartmentalised expertise. A physician can work on mass murder, he argues, if the state translates murder into quotas, reactors, test ranges, and promotions.   </p>
+<p>Alibek also makes the Soviet story legible through biography. The young Kanatjan Alibekov leaves Tomsk medical training for Omutninsk, learns how nutrient media, seed stock, pH, fermenters, and hot-zone procedures work, and slowly becomes the sort of scientist who can improve brucellosis yields, weaponise tularemia in Building 107, and help calculate how much dry anthrax is needed to load an SS-18. The memoir matters because it shows how excitement, prestige, housing, military rank, and scientific challenge can overwhelm scruples. His moral break is gradual. It passes through the Sverdlovsk anthrax accident, the pressure to create new strains, the deaths of colleagues like Nikolai Ustinov, the absurdity of staged openness during Western visits, and finally the August 1991 coup, when he decides the political order protecting the program is itself rotten.   </p>
+<p>The middle of the book is especially strong on technical escalation. Alibek traces how old aerosol methods and egg-based smallpox production gave way to Brezhnev’s 1973 Enzyme decree, to genetic engineering at Obolensk and Lyubuchany, to giant plants at Stepnogorsk and Omutninsk, and to viral work at Vector in Koltsovo. Specific agents recur for distinct reasons: anthrax because of strategic tonnage and dry-form production; plague and tularemia because their virulence could be improved; smallpox because India-1 and later reactor-based mass production offered a civilization-scale terror weapon; Marburg because Variant U emerged from Nikolai Ustinov’s death and became more useful precisely because it passed through a human body. The system is always trying to move from what it already knows how to make toward something more stable, more resistant, more deliverable, or easier to conceal.   </p>
+<p>The late chapters widen the threat beyond the Soviet Union. Pasechnik’s defection, the 1991 reciprocal visits to Lyubychany, Obolensk, Vector, and Leningrad, and Alibek’s own debriefings show how hard it is for outsiders to prove anything in biology, even when they already suspect the truth. The final chapters on Iraq, Cuba, India, Russian sales, the Aum Shinrikyo attempts in Tokyo, the American Type Culture Collection, and post-Cold War biodefense argue that the knowledge created in Soviet labs did not disappear with the Soviet state. That is why the closing move toward first responders, BIDS detectors, vaccine stockpiles, and the Biological Weapons Convention’s inspection problem feels so bleak. Alibek’s warning is not that secret biology once existed, but that the relevant techniques, equipment, and trained people are now scattered widely enough that the old bipolar containment is gone.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>Ken Alibek (Kanatjan Alibekov)</strong>: the memoirist and main witness. A Kazakh-born physician recruited through Tomsk medical training in 1975, he rises through Omutninsk, Berdsk, Stepnogorsk, and Moscow to first deputy chief of Biopreparat (1988–1992). His motivation is at first professional: prestige, military rank, scientific challenge, housing, and the honorific cover of "biological defense." His arc is the gradual moral break chronicled through Sverdlovsk, the pressures to create new strains, Nikolai Ustinov's death, the staged Western visits, and finally the August 1991 coup, after which he resigns from the Communist Party and Biopreparat and defects to the United States, where he becomes a debriefing source and biodefense advocate.   </li>
+<li><strong>Biopreparat (The System)</strong>: the civilian pharmaceutical cover agency at the center of the offensive network, coordinating more than forty research, testing, and manufacturing sites across Russia and Kazakhstan. It is the institutional protagonist: a bureaucracy that converts mass murder into quotas, fermenters, test ranges, promotions, coded cables, and cover identities. Verified internally by secrecy and externally by the fiction of civilian vaccine production.   </li>
+<li><strong>The Fifteenth Directorate and military chain of command</strong>: the army's chemical-biological arm (including the Biological Group of the General Staff Operations Directorate) that drives strategic weaponization, from the SS-18 anthrax arming decision to the target-capacity plans for plague, tularemia, glanders, and smallpox. Motivated by strategic parity and delivery-system integration.   </li>
+<li><strong>Soviet laboratory complex (Vector/Koltsovo, Obolensk, Stepnogorsk, Omutninsk, Zagorsk, Pokrov, Lyubuchany, Berdsk, Chekhov, Leningrad)</strong>: the research and production system of scientists and engineers described through its key figures — Lev Sandakchiev at Vector, Nikolai Ustinov (Marburg victim, origin of Variant U), Yevgeny Lukin (smallpox reactor production), Vladimir Pasechnik (Leningrad defector), Yury Ovchinnikov (architect of the Enzyme decree). Scientists are motivated by scientific excitement, state funding, career reward, and, for the dissident minority, eventual refusal.   </li>
+<li><strong>The KGB and the intelligence apparatus (First Main Directorate, Fifth Directorate role)</strong>: the security-oversight layer that guards facilities, controls what subordinates and outsiders may know, conducts indoctrination, tails Western visitors, and treats the program's knowledge as a state asset.   </li>
+<li><strong>The Soviet political center</strong>: from Lavrenty Beria's postwar 1946 Sverdlovsk program and Brezhnev's 1973 Enzyme decree through Gorbachev, Valery Bykov, and Yury Kalinin inside the Kremlin. Senior leaders sign decrees and approve budgets that keep the offensive program alive while perestroika rhetoric claims reform.   </li>
+<li><strong>The post-Soviet proliferation ecosystem</strong>: Cuba, Iraq, India, Iran, Russian officials such as Vilen Matveyev selling dual-use machinery, the American Type Culture Collection as a strain source, and Aum Shinrikyo — actors motivated by capability acquisition after state control collapses.   </li>
+<li><strong>American biodefense institutions</strong>: Fort Detrick, USAMRIID, the CDC, CBIRF, NEST, the First Responders Program, and BIDS — late to recognize the threat, then building preparedness while hampered by decades of underestimation and the difficulty of verifying biological programs.   </li>
+<li><strong>Western inspectors and intelligence officers</strong>: including Chris Davis and the British and American teams on the reciprocal visits, who motivate a new chapter of detection and warning, and whose failure to prove the program underscores the book's verification theme.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the master concept for why the program could be enormous yet hidden — ministries, the VPK, Gosplan, the Academy of Sciences, and the KGB coordinated around an illegal goal.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the SS-18 four-hundred-kilogram anthrax calculation, Stepnogorsk scaling, fermenter and milling constraints, and vaccine-reactor bottlenecks.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: Enzyme genetics, India-1 smallpox, Variant U Marburg, and reactor production as military upscaling of biology.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: Pasechnik's defection, Alibek's debriefing, the KGB's counter-espionage inside the program, and Western collection failures.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the biodefense closing chapters on detection, vaccines, BIDS, and treaty enforcement.   </li>
+<li><a href="//03%20Reading%20Paths/Intelligence%2C%20Warning%2C%20and%20Institutional%20Self-Deception.html">Intelligence, Warning, and Institutional Self-Deception</a>: the reading path this book most directly feeds — warning is possible but chronically late, and institutions work to suppress what they cannot prove.   </li>
+<li><a href="//01%20Books/The%20Wizards%20of%20Armageddon%20%28Stanford%20Nuclear%20Age%20Series%29.html">The Wizards of Armageddon</a>: sibling text on the nuclear targeting priesthood and the institutions that made catastrophic strategic programs legible from inside.   </li>
+<li><a href="//01%20Books/The%202020%20Commission%20Report%20on%20the%20North%20Korean%20Nuclear%20Attacks%20Against%20the%20United%20States.html">The 2020 Commission Report</a>: sibling text imaging preparedness failure after a catastrophic attack on American soil.   </li>
+<li>Other concepts linked from the chapter-by-chapter analyses below: <a href="//02%20Concepts/Legibility.html">Legibility</a>, <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>, <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>, <a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>, <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Deception as infrastructure</strong>: the 1972 Biological Weapons Convention signature alongside stockpiled anthrax, plague, and smallpox; coded cables, post office boxes, cover identities, and staged openness as the system's operating system.   </li>
+<li><strong>State capacity turned to harm</strong>: how a sophisticated command economy can organize an illegal mass-production program that rivals the nuclear complex and employs tens of thousands.   </li>
+<li><strong>Production as the real bottleneck</strong>: the book keeps returning to fermenters, seed stock, dry-form milling, containment buildings, and stockpiling quotas rather than to individual pathogens.   </li>
+<li><strong>Technological escalation feeding on catastrophe</strong>: Sverdlovsk, Ustinov's death, and the urge to make new strains show how accident and moral shock become research opportunities.   </li>
+<li><strong>Scientific motivation and moral drift</strong>: how medical training, prestige, promotion, and the "biological defense" cover language made mass murder feel like patriotic science.   </li>
+<li><strong>Verification failure</strong>: why outsiders cannot prove a biological program even when they suspect it; reciprocal visits, inspection theater, and the long debriefing problem.   </li>
+<li><strong>Proliferation after the state</strong>: the post-Soviet circulation of scientists, equipment, and knowledge to rogue states and non-state actors, dissolving bipolar containment.   </li>
+<li><strong>Warning and preparedness</strong>: delayed detection, first-responder limits, vaccine scarcity, and the gap between program knowledge and institutional response.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: Biopreparat is a case of high state capacity redirected into concealed mass harm, with ministries, planners, military directorates, and laboratories coordinated around an illegal program.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a>: the Sverdlovsk cover story, coded institutes, post office boxes, and staged Western visits show how states can falsify the public record while preserving internal operational knowledge.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: Enzyme, Vector, India-1 smallpox, Variant U Marburg, and genetic engineering show biological innovation being absorbed into military escalation rather than public health.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the SS-18 anthrax calculation, Stepnogorsk scaling, fermenters, milling, and vaccine-reactor bottlenecks make biological warfare a production problem as much as a laboratory problem.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: Pasechnik's defection, reciprocal visits, debriefings, and inspection failures show the difficulty of coordinating verification when the underlying evidence is dispersed, technical, and deliberately hidden.   </li>
+<li><a href="//02%20Concepts/Illicit%20Markets.html">Illicit Markets</a>: the post-Soviet circulation of trained scientists, equipment, pathogens, and dual-use machinery turns the old state program into a proliferation ecosystem.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: the biodefense chapters link biological attack to delayed detection, first-responder preparedness, vaccine scarcity, BIDS, USAMRIID, and the Biological Weapons Convention's weak enforcement problem.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Biohazard — extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="prologue">Prologue</h3>
+<p>Summary: Alibek opens on an island in the Aral Sea where one hundred monkeys are tied to posts, a metal sphere bursts overhead, and a mustard-colored cloud drifts down carrying anthrax, tularemia, Q fever, brucellosis, glanders, or plague while men in biological protective suits take notes. He identifies himself as the supervisor of those tests in the 1980s and early 1990s, then explains that from 1988 to 1992 he served as first deputy chief of Biopreparat, the Soviet state pharmaceutical cover for a forty-site offensive network in Russia and Kazakhstan linked to the Ministry of Defense, the ministries of Agriculture and Health, the Soviet Academy of Sciences, the Communist Party Central Committee, and the KGB. The prologue then states the book’s two large claims: Moscow signed the 1972 Biological Weapons Convention while stockpiling hundreds of tons of anthrax and dozens of tons of plague and smallpox near Moscow, and the later danger comes not only from Russia’s past stockpiles but from the spread of this knowledge to rogue states and terrorist groups. Source anchors: Aral Sea, one hundred monkeys, Biopreparat, 1988 to 1992, Biological Weapons Convention, hundreds of tons of anthrax   </p>
+<p>Analysis: The Aral Sea and the one hundred monkeys matter because Alibek begins by making the reader watch testing rather than diplomacy; the Soviet program is defined first by experimental killing, not by policy language. Biopreparat and the 1988 to 1992 date range matter because they locate his testimony at the top of the system, which is why later descriptions of Moscow, Stepnogorsk, or Vector carry evidentiary force instead of sounding secondhand. The Biological Weapons Convention and the claim about hundreds of tons of anthrax establish the book’s main mechanism of deception: the same state that signed the ban simultaneously built the <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> it publicly renounced.   </p>
+<h3 id="army-headquarters">Army Headquarters</h3>
+<p>Summary: In late winter 1988 Alibek is summoned by black Volga to army headquarters on Frunze Street and taken through coded doors into the Fifteenth Directorate, where Lieutenant General Vladimir Lebedinsky introduces him to colonels from the Biological Group of the General Staff Operations Directorate. They ask him to calculate how long it would take to fill ten SS-18 warheads with dry anthrax, using seed stocks held at Penza, Kurgan, and Stepnogorsk and the fermenters available in the production plants, and Alibek estimates ten to fourteen days for roughly four hundred kilograms. The chapter then shifts from the meeting room to the pathogenic logic of anthrax itself, including incubation, the “eclipse” phase, pulmonary collapse, and the claim that one hundred kilograms in optimal atmospheric conditions could kill up to three million people in an American city. Source anchors: Frunze Street, Fifteenth Directorate, Vladimir Lebedinsky, SS-18, Penza Kurgan Stepnogorsk, three million people   </p>
+<p>Analysis: Frunze Street and the Fifteenth Directorate matter because they show the offensive program operating directly inside the military command structure rather than at the margins of Soviet science. Lebedinsky and the SS-18 calculation are crucial because they collapse the distance between laboratory work and strategic delivery; Alibek is not merely culturing bacteria but helping adapt intercontinental missiles for mass biological attack. Penza, Kurgan, and Stepnogorsk make that adaptation concrete by tying the warhead plan to real stocks and real fermenters, while the three-million estimate explains why the colonels treat <a href="//02%20Concepts/Logistics%20and%20Throughput.html">production throughput</a> as a practical military problem instead of a moral abyss.   </p>
+<h3 id="rebirth-island">Rebirth Island</h3>
+<p>Summary: Set at the Aral Sea testing ground in 1982, this chapter opens with Tmu Tarakan — “Place of Darkness” — the Muscovite joke-name for Rebirth Island, a tear-shaped speck fifty miles off the Kazakh shore to which Biopreparat teams traveled every April for four or five months of weapon testing. The chapter explains the apparatus that made the tests read as science: the letter-and-number codes for agents (plague L1, tularemia L2, brucellosis and anthrax L3 and L4, glanders L5, melioidosis L6; smallpox N1, Ebola N2, Marburg N3, Machupo N4), aerosol dispersal in bomblets exploded upwind during inversions, and the Q50 measure of particles needed to infect half the people in a square kilometer. It then tracks Kalinin’s takeover of Biopreparat in 1979 after a failed Five-Year Plan that produced no new weapon in four years, his empire-building that quintupled staff between 1975 and 1980, and his June 1981 appointment of Alibek as deputy director of Omutninsk to “turn our tularemia project around.” The climax is the first tularemia test Biopreparat ever ran on Rebirth Island: a vaccine-resistant strain obtained from a European institute, five hundred monkeys ordered from Africa, twenty bomblets filled at Omutninsk, and a 1982 test team headed by Generals Anatoly Vorobyov and Lebedinsky in which nearly all the immunized monkeys died. The Ministry of Defense then rejects the weapon, claiming the blood samples in affected monkeys were not tested correctly — a technical lapse by Vorobyov that the Fifteenth Directorate uses to humble its upstart rival; the next year a dry-format variant passes a meticulous retest and enters the arsenal. Afterward all test materials are incinerated and the island swept clean of every biological trace, and open-air testing stops in 1992. Source anchors: Tmu Tarakan, Rebirth Island, Aral Sea, Kalinin Biopreparat takeover 1979, tularemia vaccine-resistant strain, five hundred monkeys, twenty bomblets, General Anatoly Vorobyov, Ministry of Defense rejection, 1983 dry-form, Q50   </p>
+<p>Analysis: Rebirth Island matters because the tularemia test turns biological warfare into a production-and-verification problem rather than a moral one: the monkeys, the bomblets, and the Q50 target make killing measurable, and the ministry’s rejection turns on correct laboratory procedure, not on regret. The episode is a compact demonstration of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a>, from five hundred imported monkeys and twenty filled bomblets to the dry-form retest that finalizes a weaponizable recipe. Kalinin’s takeover and his rivalry with the Fifteenth Directorate show how <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> is built through bureaucratic competition, with the civilian Biopreparat using its cover and its results to force its way into the weapons establishment, and the incineration of all test evidence prefigures the erasure of the program’s history that Alibek reconstructs in later chapters.   </p>
+<h3 id="military-medicine">Military Medicine</h3>
+<p>Summary: This chapter is the book’s early history of the Soviet program. It opens with Alibek’s undergraduate epidemiology assignment at Tomsk, set against the Battle of Stalingrad in 1942: a mysterious tularemia outbreak that struck German panzer troops in huge numbers but not the opposing Soviet forces, with Soviet cases appearing only within about a week of the German onset. When Alibek suggests to his professor, the stony Colonel Aksyonenko, that the pattern indicates deliberate Soviet dissemination, Aksyonenko orders him to forget the theory — but later a retired lieutenant colonel who had worked at the secret Kirov bacteriological facility tells Alibek that a tularemia weapon was developed in Kirov in 1941 and used. From that lesson the chapter reconstructs the longer history out of faded Ministry of Defense reports and the testimony of old-timers: the 1928 Revolutionary Military Council decree converting typhus into a battlefield weapon under the GPU; the Leningrad Military Academy’s powdered and liquid typhus aerosols; Solovetsky Island, where the large laboratory compound was built by prison labor and case reports suggest human experiments with melioidosis, plague, and glanders; the 1941 evacuation of both sites by train through Gorky and on to Kirov; the capture of the Japanese Water Purification Unit 731 in Manchuria in September 1945, whose blueprints and assembly-plant designs under Shiro Ishii convinced Stalin to order Lavrenty Beria to build a new program, established at Sverdlovsk in 1946; the transfer to the Fifteenth Directorate under Yefim Smirnov, and Marshal Zhukov’s 1956 announcement of Soviet biological-weapons capability; the Ministry of Agriculture’s anti-livestock and anti-crop program code-named “Ecology”; and the Alma-Ata Biokombinat factory across the street from Alibek’s childhood apartment, which he later learns had made anti-crop and anti-livestock agents until the early 1960s. Source anchors: Stalingrad 1942, tularemia, Tomsk, Colonel Aksyonenko, Kirov 1941, 1928 decree, typhus, Leningrad Military Academy, Solovetsky Island, evacuation to Gorky and Kirov, Unit 731, Shiro Ishii, Lavrenty Beria, 1946 Sverdlovsk, Yefim Smirnov, Ecology, Biokombinat   </p>
+<p>Analysis: Military Medicine matters because it establishes the depth of Soviet offensive capability before Biopreparat existed, showing that the program was not a Cold War invention but a continuous effort from the 1920s onward, supervised since 1928 by the state-security organs and later by the Fifteenth Directorate — a history of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> converting an epidemic disease into an instrument of war through decree, prison labor, and captured foreign blueprints. Solovetsky Island and its human case reports tie that history to the <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> and penal-system setting in which early Soviet biological research was built. The chapter also exposes the fragility of the historical record: because so much was burned or left deliberately vague, Alibek has to assemble the account from summaries, veterans’ memories, and a single headstone — an exercise in <a href="//02%20Concepts/Knowledge%20Preservation.html">knowledge preservation</a> over a program that worked hard to erase its own traces.   </p>
+<h3 id="the-enzyme-project">The Enzyme Project</h3>
+<p>Summary: This chapter locates the Soviet genetics push inside the damage done by Trofim Lysenko and the later intervention of Yury Ovchinnikov, who persuaded Brezhnev and the military that gene-splicing could rescue Soviet biology and modernize biological warfare. After Watson and Crick, cloning, and Western recombinant work exposed the Soviet lag, Ovchinnikov wins support for the 1973 Enzyme decree, which launches Biopreparat, targets tularemia, plague, anthrax, glanders, smallpox, Marburg, Ebola, Machupo, Junin, and VEE, and funds new sites at Leningrad, Omutninsk, Obolensk, Lyubuchany, Chekhov, and Vector. Alibek emphasizes the scale of the response: harmless simulants like Bacillus thuringiensis and Serratia marcescens are tested in the Novosibirsk region, the Moscow Metro, and the Pacific, while Gosplan and the VPK pour close to a billion dollars annually into a system employing about sixty thousand people at its peak. The chapter also contains the recruitment episode that drew Alibek into the program: in April 1975, two months before he graduated from the Tomsk Medical Institute, a polite white-haired colonel from the human resources division of Biopreparat interviews him, saying only that he works for an organization attached to the Council of Ministers involved in “biological defense.” Excited at the prospect of Moscow, Alibek joins four other epidemiology-specializing classmates, only to learn at graduation that he is assigned not to Moscow but to a post office box — Omutninsk, near Kirov — where one friend jokes that no one survives such programs more than a couple of years. Source anchors: Trofim Lysenko, Yury Ovchinnikov, Brezhnev decree, Obolensk, Vector, sixty thousand people, April 1975, white-haired colonel, Council of Ministers, biological defense, post office box, Omutninsk, four classmates   </p>
+<p>Analysis: Trofim Lysenko matters because Alibek frames Enzyme as a response to a specifically Soviet scientific disaster; the weapons program becomes one of the state’s methods for forcing biology back into global relevance. Yury Ovchinnikov and the Brezhnev decree are central because they redirect <a href="//02%20Concepts/Technological%20Change.html">technological change</a> into militarized channels, making advanced molecular work politically legible by connecting it to strategic parity. Obolensk, Vector, and the sixty-thousand-person workforce show the decree’s real effect: not a single laboratory initiative, but an empire of research cities, test sites, and production plants large enough to rival parts of the Soviet nuclear complex. The recruitment episode matters because it shows how <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> pulls talent in through prestige and selective revelation: the phrase “biological defense” and the Council of Ministers aura make secrecy feel like honor, and the post office box order to Omutninsk binds Alibek to the machinery before he fully understands its purpose.   </p>
+<h3 id="lab-work">Lab Work</h3>
+<p>Summary: Alibek’s first years at Omutninsk expose the bodily cost and everyday routine of the program: anti-allergy pills, damaged skin, endless vaccinations against anthrax, plague, and tularemia, and training in the East European Scientific Branch of the Institute of Applied Biochemistry, where more than ten thousand people live behind fences and electric barriers. He describes KGB indoctrination sessions, learning to prepare nutrient media and seed stock, entering hot zones in respirators and “space suits,” building confidence under the amused eye of Svetlana, and eventually helping construct a microbiology lab from scratch at Berdsk with imported American, Japanese, Czech, and French equipment. The chapter also records the program’s construction labor: prisoners from a nearby labor camp, doing hard time of ten years or more, are bused in daily with shovels and cement mixers as the principal construction force for new biological facilities, under a secret contract between Biopreparat and the Ministry of Internal Affairs, laying the foundations for the pilot plant that became Building 107. That practical knowledge becomes his first real achievement when he and Vladimir Rumyantsev improve the growth medium for brucellosis using yeast extract, vitamins, and other stimulators, earning him promotion, marriage to Lena, and greater confidence in his own place inside the system. Source anchors: Omutninsk, KGB, space suits, Svetlana, Berdsk, brucellosis, labor-camp prisoners, Ministry of Internal Affairs, Building 107 foundations   </p>
+<p>Analysis: Omutninsk and the KGB sessions matter because they show how technical training and political justification are fused from the beginning; the recruit learns aseptic procedure and treaty-denial in the same institutional breath. The space suits and Svetlana matter because the memoir insists on the banality of the workbench: fascination with microscopes, pipettes, and cultures helps normalize the hidden purpose of the facility. Berdsk and the brucellosis project are decisive because they give Alibek professional success inside the system, built on imported American, Japanese, Czech, and French equipment; once his scientific skill produces a better weaponizable medium and is rewarded with rank, family stability, and praise, moral unease becomes much harder for him to act on — an absorption of <a href="//02%20Concepts/Technological%20Change.html">technological change</a> into the state's covert research economy. The labor-camp prisoners building the new facilities tie the program to the <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> economy, showing how penal labor literally constructed the hidden weapons capacity that scientists like Alibek rose to manage.   </p>
+<h3 id="building-107">Building 107</h3>
+<p>Summary: Returning to Omutninsk in 1980, Alibek finds the new tularemia pilot plant known as Building 107, a spotless gray three-story structure built on the “box-within-a-box” principle so that the deadliest organisms cannot reach the countryside. He details its architecture: an outer Zone One of administrative offices and noninfectious laboratories, an inner Zone Two of hot labs, storage vaults, animal cages, and sixteen- and twenty-ton fermenters, and a central Zone Three of steel centrifuges, drying and milling machines, with its own negative-pressure air supply and hydrogen-peroxide decontamination. The chapter turns on a night accident in March 1983: a drop in pressure in the pipeline feeding a tularemia room has left a puddle of the milky-brown concentrated culture on the floor, and Alibek enters, disinfects his way out in hydrogen peroxide, and reports the incident to the Omutninsk KGB chief, Savva Yermoshin. The report rockets up the chain and by the next morning Kalinin is screaming at him about a building “leaking tularemia into the ground,” and General Lev Klyucherov is sent to investigate. During the visit Alibek comes down with chills and fever — infected by brushing his face while removing his mask — and secretly administers a self-prescribed crash dose of three times the customary tetracycline, recovering within days and covering up both the spill and his infection. Source anchors: Building 107, box-within-a-box, Zone One, Zone Two, Zone Three, March 1983 tularemia spill, Savva Yermoshin, Kalinin, Lev Klyucherov, tetracycline crash dose   </p>
+<p>Analysis: Building 107 matters because the chapter shows the biological weapons plant as a production architecture — the box-within-a-box layering, the negative-pressure air system, and fermenters and milling machines that make mass output possible — and because the March 1983 spill tests how that machinery behaves under failure. The accident exposes the program’s <a href="//02%20Concepts/Crisis%20Governance.html">crisis governance</a> limits: a routine containment break becomes a political event as it moves from the KGB detachment up to Kirov, Moscow, and Kalinin, and the cover-up that follows — Alibek quietly medicating himself with a triple tetracycline dose and treating his own near-fatal exposure as an administrative secret — shows that concealment is built into the response to every accident, exactly as it was at Sverdlovsk.   </p>
+<h3 id="accident-at-sverdlovsk">Accident at Sverdlovsk</h3>
+<p>Summary: Alibek revisits the 1979 anthrax release at Sverdlovsk, where an accident at the military facility known as Compound 19 killed civilians downwind and forced the Soviet state into a prolonged campaign of concealment. He recounts the way official explanations blamed tainted meat, the way military and public-health systems sealed records and intimidated local doctors, and the way the disaster haunted later safety procedures across The System. The chapter treats Sverdlovsk as both public tragedy and bureaucratic lesson: every later warning memo, every secrecy reflex, and every panicked internal discussion about accidents at Stepnogorsk, Vector, or elsewhere is measured against the political shock of this one leak. Source anchors: Sverdlovsk, Compound 19, anthrax release, tainted meat, local doctors, 1979   </p>
+<p>Analysis: Sverdlovsk and Compound 19 matter because they provide the book’s clearest case of an offensive program injuring the population it claims to defend. The tainted-meat cover story and the pressure on local doctors show the standard Soviet response to institutional failure: preserve the program first, explain the dead later, and if necessary falsify the <a href="//02%20Concepts/Legibility.html">legibility</a> of the whole epidemiology. The 1979 date matters because it turns later chapters about safety, Ustinov, and Western visits into echoes of a known catastrophe; the system’s secrecy after Sverdlovsk is not theoretical but learned through a disaster that nearly exposed everything.   </p>
+<h3 id="progress">Progress</h3>
+<p>Summary: Set at Stepnogorsk in 1983–87, this chapter is named for the Progress Scientific and Production Association, the pesticide-and-fertilizer enterprise in northern Kazakhstan onto which the Kazakhstan Scientific and Production Base was tacked in 1982, one of six biowarfare facilities designed to be mobilized in wartime. Under a 1982 Brezhnev decree, Alibek — officially the association’s deputy director but secretly its “war commander” — is ordered to replace Sverdlovsk as a munitions plant and build the world’s most efficient assembly line for weaponized anthrax, centered on Anthrax 836, a 1953 Kirov strain: seed-stock vaults, mother cultures, fermenters, Tula-made dairy centrifuges, stabilizer additives, and bottling-style filling machines. He constructs Building 600, the largest indoor testing facility in the Soviet Union, with explosion-proof and animal-testing chambers. The chapter runs two storylines in parallel: the production drive, which by 1987 results in anthrax three times as potent as Sverdlovsk’s (five kilograms of Anthrax 836 reaching half the people in a square kilometer, against fifteen kilograms for the old weapon), Stepnogorsk’s two tons a day, Rebirth Island tests that take Sverdlovsk Compound 19 off the roster, and the claim that this made the Soviet Union the world’s first industrial-scale biological weapons producer; and the KGB counterintelligence thread, where Lieutenant Colonel Anatoly Bulgak, the facility’s security commander, subjects Alibek to an October 1983 confrontation over personnel lists. That thread triggers a flashback to the 1978 Berdsk interrogation by KGB officer Kuznetsov, who tried to recruit Alibek as an informer, and extends to a Moscow reprimand by counterintelligence chief Vladimir Dorogov over Alibek’s unauthorized hiring, and to the “headache” of the civilian camouflage engineer Markin, who flees to Gorky and is reportedly drowned. By 1986 more than nine hundred people work at the plant. Source anchors: Progress Scientific and Production Association, Stepnogorsk, 1982 Brezhnev decree, Anthrax 836, Building 600, Anatoly Bulgak, Kuznetsov, Vladimir Dorogov, Markin, Q50, biological superpower   </p>
+<p>Analysis: Progress matters because unlike a literary metaphor, the title is the name of an actual institution, and the chapter’s argument is that production is the real weapon: the manufacturing technique — not the strain alone — is what can be hard to develop, and Stepnogorsk’s assembly line of fermenters, centrifuges, additives, and filling machines is what makes anthrax deliverable at scale. That makes the chapter the book’s core statement of <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> in biological warfare, from the five-kilogram-per-square-kilometer Q50 figure to two tons of output a day. The Bulgak and Dorogov storyline shows the factory operating inside the KGB’s counterintelligence order, where every director answers to a shadow chain of command leading to Lubyanka, and where even a successful manager can be humiliated with a signed confession — an anatomy of the <a href="//02%20Concepts/Intelligence.html">intelligence</a> and surveillance machinery that both enabled and policed the program.   </p>
+<h3 id="smallpox">Smallpox</h3>
+<p>Summary: Alibek traces Soviet smallpox work from the postwar Virological Center at Zagorsk and the Pokrov plant, where workers infected chicken embryos and sealed eggs with paraffin, to the acquisition of the virulent India-1967 strain after a Soviet team and KGB agents responded to outbreaks in India. He explains why the military valued smallpox enough to maintain an annual stockpile of twenty tons, how the weapon’s morbidity and person-to-person spread made it strategically attractive, and how Soviet aerosol experiments with India-1 cut incubation in monkeys to one to five days, narrowing the window for vaccination. The chapter then follows the modernization drive: as Biopreparat and Glavmikrobioprom fall under a new superministry headed by Valery Bykov, Gorbachev’s Five-Year Plan lists smallpox as a “special item” and funds a 630-liter viral reactor at Vector in Koltsovo, near Novosibirsk. After his transfer to Moscow in September 1987 Alibek is assigned to supervise the new smallpox weapon, and Lev Sandakchiev recruits Colonel Yevgeny Lukin, the Fifteenth Directorate’s smallpox-production expert at Zagorsk, through an excruciating Kalinin interview. In December 1990 a new smallpox aerosol is tested in Vector’s explosive chambers, and Alibek calculates that the production line in the newly constructed Building 15 at Koltsovo could manufacture eighty to one hundred tons of smallpox a year, while young Vector scientists develop genetically altered strains for the process. The chapter also argues against Western complacency by stressing the scarcity of vaccines, the absence of routine immunization, and the difficulty of containing an attack in a commuter city like New York. Source anchors: Zagorsk, Pokrov, India-1967, India-1, twenty tons, Gorbachev Five-Year Plan, 630-liter viral reactor, Yevgeny Lukin, Building 15 Koltsovo, eighty to one hundred tons, New York   </p>
+<p>Analysis: Zagorsk and Pokrov matter because they show that Soviet smallpox work was not speculative; it had dedicated facilities, labor-intensive egg-and-conveyor methods, and regular stockpiling discipline. India-1967 and India-1 are crucial because they turn a public-health episode into a weapons breakthrough, demonstrating how international disease control and secret military collection could operate simultaneously. The modernization arc is equally central: the 630-liter reactor, the recruitment of Lukin as production manager, and the Building 15 line rated at eighty to one hundred tons a year show the program scaling a contagious virus into industrial output — an agent maintained and multiplied only by disciplined <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> — while the genetically altered strains pursued at Vector point the same <a href="//02%20Concepts/Technological%20Change.html">technological change</a> toward ever more stable and resistant forms.   </p>
+<h3 id="vector">Vector</h3>
+<p>Summary: At Vector in Koltsovo in 1988, Alibek watches the viral program under Lev Sandakchiev. The chapter centers on the team of Nikolai Ustinov, which is pushing Marburg, a hemorrhagic fever virus obtained in the 1970s and considered one of the most dangerous agents in the arsenal because so little is known about it. Ustinov accidentally injects himself with a concentrated Marburg culture through a glove box while steadying a guinea pig with a gloved hand; the hurried rush of antiserum from the Zagorsk viral center arrives too late, and after nearly three weeks of hemorrhagic agony — during which he twice records the progress of his own disease — he dies, and his corpse must be disinfected, welded into a metal box, and buried without Moscow sending a single condolence. No one is allowed to stop working. Samples taken from his organs prove the virus passed through a human body has become more virulent and stable; the strain is renamed Variant U, a joke Ustinov would have appreciated. Sandakchiev reports in late 1989 that Variant U has been weaponized, and it is tested at Stepnogorsk, the only available remote site once Obolensk and Omutninsk are ruled out, where all twelve monkeys contract the virus and die within three weeks, so that by early 1990 the weapon is ready for the Ministry of Defense. The pathologist “V,” who pricked himself during Ustinov’s autopsy, follows him to the grave. The chapter closes on the wider viral race: Ebola cultivation is solved by the end of 1990, and Zagorsk scientists are finalizing new Lassa fever and monkey pox weapons. Source anchors: Vector, Koltsovo, Lev Sandakchiev, Nikolai Ustinov, Marburg, Zagorsk antiserum, Variant U, Stepnogorsk test, twelve monkeys, pathologist V, Ebola, Lassa fever   </p>
+<p>Analysis: Vector and Koltsovo matter because they are the point where the Soviet system moves decisively into high-consequence viral weapons rather than relying mainly on bacteria. Nikolai Ustinov and the Marburg accident are essential because Alibek shows how pressure, haste, and inadequate safeguards can turn a scientist’s death into a research opportunity inside this bureaucracy: the strain recovered from his body is more useful precisely because it passed through him, and the system's response is to rename it in his honor, weaponize it, and push the whole lab on through the funeral. The chapter demonstrates how <a href="//02%20Concepts/Technological%20Change.html">technological change</a> feeds on catastrophe rather than recoiling from it, while the safety circulars that flood the facilities — issued without admitting the incident that caused them — echo the Sverdlovsk pattern of learning secrecy from disaster.   </p>
+<h3 id="the-institute-of-ultra-pure-biopreparations">The Institute of Ultra-Pure Biopreparations</h3>
+<p>Summary: This chapter follows Vladimir Pasechnik’s Leningrad institute, where the official work on ultra-pure equipment and fermentation technology masks contributions to the weapons system and eventually leads to Pasechnik’s 1989 disappearance in France. Nikolai Frolov alerts Alibek that Pasechnik has not returned, exposing the defection that will later give the West one of its first authoritative pictures of the Soviet biological warfare network. The section also underscores how specialized institutes that seem technical and peripheral are actually indispensable, since fermenters, milling systems, and purity controls determine whether pathogens can be produced, stabilized, and integrated into the larger program. Source anchors: Vladimir Pasechnik, Leningrad, Nikolai Frolov, France, defection, ultra-pure equipment   </p>
+<p>Analysis: Pasechnik and Leningrad matter because this is where the book’s inward-looking institutional narrative begins to leak outward into international politics. Nikolai Frolov and the France trip are important because the defection is first experienced inside Biopreparat as an administrative shock, not as a geopolitical headline, which shows how vulnerable the whole secrecy structure is to one senior scientist leaving — a defection that becomes a major <a href="//02%20Concepts/Intelligence.html">intelligence</a> windfall for the West. The focus on ultra-pure equipment demonstrates that apparently supporting institutes are not secondary at all; their technical niches make offensive work possible while also giving the program civilian cover.   </p>
+<h3 id="bonfire">Bonfire</h3>
+<p>Summary: In the windowless auditorium of Building One at Obolensk in November 1989, a month after Pasechnik’s defection, Alibek joins more than fifty senior scientists and military officials for the annual review of the closed-city research complex, where a young scientist reports on Project Bonfire — an ambitious genetic-engineering program that had dragged on for some fifteen years under the brilliant, cantankerous molecular biologist Igor Domaradsky. The chapter explains the project’s roots: Soviet Academy biologists duplicated the genes for human regulatory peptides with toxic properties, including what they called myelin toxin, which in large quantities damages the myelin sheaths protecting the nerve fibers of the brain and spinal cord. Yury Ovchinnikov and Rem Petrov drafted a paper to the Central Committee arguing that weapons based on compounds produced naturally in the human body were not prohibited by the Biological Weapons Convention, and funding was approved. Domaradsky, deputy director of Obolensk from 1973, developed plasmid-transfer techniques, using Bacillus thuringiensis to create tetracycline-resistant anthrax and plague, while a parallel project, Metol, pursued antibiotic-resistant strains; his failures to deliver a “triple-resistant” tularemia and his feud with the autocratic Fifteenth Directorate general Nikolai Urakov led to his demotion. At the 1989 conference, Obolensk scientists report the breakthrough: myelin toxin genes successfully inserted into Yersinia pseudotuberculosis, producing in a rabbit test two diseases at once — paralysis from toxin alongside pseudotuberculosis symptoms — and then into Yersinia pestis, laying the groundwork for a toxin-plague weapon. The KGB prizes mood-altering peptides that work without leaving a trace pathologists can find. Urakov as final speaker tells the hall, “We have overachieved, as usual.” Others report a genetically altered anthrax resistant to five antibiotics and a new drug-resistant glanders strain, at a facility housing about four thousand scientists and technicians with an annual budget of nearly $10 million. Source anchors: Obolensk, Project Bonfire, Igor Domaradsky, myelin toxin, Yersinia pseudotuberculosis, Yersinia pestis, Metol, Nikolai Urakov, November 1989, Rem Petrov   </p>
+<p>Analysis: Bonfire matters because it shows the Soviet program using genetic science to build a new category of weapon — not a hardened version of a known disease but a synthetic agent based on compounds the human body itself produces, in phases that stay invisible to an autopsy. The myelin toxin transfer into Yersinia pseudotuberculosis and then Yersinia pestis is a concrete picture of <a href="//02%20Concepts/Technological%20Change.html">technological change</a> being absorbed into military escalation: a Nobel-grade biotechnological discovery is converted into weapons production, while the same discovery that could have advanced neurology is classified top secret. The chapter also maps the institutional machinery that made such work possible — the Central Committee route to funding, the closed city, the four-thousand-strong workforce, and the roughly $10 million annual budget spent on Western equipment — a demonstration of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> scaled to an entire research province. The BWC loophole used to justify Bonfire is the same legal surface that lets the whole program claim civilian cover.   </p>
+<h3 id="the-first-main-directorate">The First Main Directorate</h3>
+<p>Summary: Alibek links Biopreparat more explicitly to the intelligence services and the wider state-security apparatus, showing how foreign collection, secrecy, and internal control sustained the weapons network. The chapter details how KGB officers, military commanders, and civilian managers overlapped in practice, whether in tracking Western technology, guarding facilities, or deciding what outsiders and even Soviet subordinates were permitted to know. The title also marks Alibek’s growing realization that biological weapons were not just a military science problem but a state-security ecosystem in which information itself was treated as a strategic asset. Source anchors: First Main Directorate, KGB, foreign collection, guarded facilities, Western technology, state-security   </p>
+<p>Analysis: The First Main Directorate matters because it expands the explanatory frame beyond laboratories; Alibek is showing that the program persists because secrecy and <a href="//02%20Concepts/Intelligence.html">intelligence</a> are built into its operating logic. The KGB and foreign collection matter because Soviet biological capacity does not develop in isolation; it feeds on imported equipment, stolen insight, and constant monitoring of what the West knows. Guarded facilities and tight information control make the chapter important inside the book’s structure, since they explain why so many later scenes, from Pasechnik to the Western visits, are battles over controlled access rather than open verification.   </p>
+<h3 id="inside-the-kremlin">Inside the Kremlin</h3>
+<p>Summary: Moving upward from labs and institutes, Alibek describes how decisions about funding, concealment, and program direction reached the Kremlin, where Gorbachev, Bykov, Kalinin, and other officials negotiated the future of the weapons system amid perestroika. The chapter emphasizes that senior leaders were not simply deceived innocents; they signed decrees, approved budgets, and sometimes tried to balance reformist rhetoric with continued offensive capability. Alibek’s own reading of secret planning documents and his growing disillusionment at headquarters make clear that the political center understood enough to keep the system alive while limiting what the public or foreigners might learn. Source anchors: Kremlin, Gorbachev, Bykov, Kalinin, perestroika, secret planning documents   </p>
+<p>Analysis: The Kremlin matters because it prevents the reader from blaming the whole program on isolated generals or rogue scientists; the highest political level remained entangled in decisions about budget and continuation, making the program a deliberate exercise of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> from the center. Gorbachev, Bykov, and Kalinin matter because they represent different modes of accommodation: reform, bureaucratic adaptation, and institutional preservation. The secret planning documents show the mechanism by which elite ambiguity works in the book: leaders can speak publicly of reform while privately authorizing the continuity of precisely the capabilities they appear to be limiting.   </p>
+<h3 id="visitors">Visitors</h3>
+<p>Summary: After the Soviet Union, the United States, and Great Britain reach a trilateral agreement in October 1990 to organize reciprocal visits to suspected biological warfare facilities — a response to the Biological Weapons Convention’s lack of inspection provisions — Alibek is made to host the Western delegations. Kalinin, who refuses to expose military sites, orders Alibek to decide which Biopreparat facilities could be “sacrificed”; the choices are Obolensk, Vector, Lyubychany, and Pasechnik’s former institute in Leningrad, which had already been stripped of most evidence of biowarfare research. The American and British delegation assembles outside the Soviet Foreign Ministry at seven in the morning on Monday, January 15, 1991, and Alibek escorts it through Lyubychany and Obolensk while the KGB team under Savva Yermoshin tails every movement and Biopreparat tries to waste time with slow buses, speeches, lunches, vodka, and quarantine warnings. Chris Davis and the British group quickly see through much of the performance, pointing to suspicious buildings at Obolensk, testing locked rooms with flashlights, and noticing oversized fermenters and jetstream milling equipment that no ordinary vaccine program requires. The Soviet side responds with improvised lies about lost keys, broken light bulbs, defensive explosive testing, milled salt, and scientific hospitality, and Alibek ends the chapter both proud of the temporary concealment and aware that the visitors have left more suspicious than reassured. Source anchors: October 1990 trilateral agreement, January 15 1991, Savva Yermoshin, Chris Davis, Lyubychany, Obolensk, Vector, milled salt   </p>
+<p>Analysis: The October 1990 trilateral agreement and the January 15, 1991 arrival matter because the visit is staged as a security operation from the first bus ride; hospitality and surveillance are inseparable, and Kalinin's choice of which facilities to show is itself a map of what the program cannot admit. Chris Davis, Lyubychany, and Obolensk are crucial because they show the limits of managed openness: the Westerners cannot prove enough, but they can read clues well enough that the façade never fully works. The “milled salt” line and the locked-room episode do important work in the book because they turn verification into an <a href="//02%20Concepts/Information%20and%20Coordination.html">information and coordination</a> problem, with Alibek forced to act as interpreter, host, liar, and reluctant witness all at once.   </p>
+<h3 id="three-days">Three Days</h3>
+<p>Summary: During the August 1991 coup, Alibek wakes to <em>Swan Lake</em> on every television channel, learns that the GKChP has sidelined Gorbachev, sees tanks moving through Moscow, visits the White House where Boris Yeltsin’s supporters build barricades, and then discovers that many around Kalinin want Biopreparat to issue support for the putschists. Instead, at Biomash he helps organize a mass staff meeting of more than four hundred employees, openly calls the coup a putsch, and sends a proclamation of support for Gorbachev and Yeltsin while also tendering resignation letters from both the Communist Party and Biopreparat. The chapter culminates in Kalinin’s extraordinary private visit, where he half confesses, half bargains, and tries to keep Alibek from leaving while the coup collapses and opportunists across the system prepare to rewrite their loyalties. Source anchors: Swan Lake, GKChP, White House barricades, Boris Yeltsin, four hundred employees, Kalinin’s visit   </p>
+<p>Analysis: Swan Lake and the GKChP matter because the coup compresses the whole Soviet political order into a recognizable emergency code that every citizen understands, making Alibek’s choice immediate rather than theoretical. The White House barricades and Boris Yeltsin are crucial because they give him a visible alternative center of <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">legitimacy and succession</a>, one strong enough to break the aura of inevitability around Kalinin and the military bureaucracy. The four hundred employees and Kalinin’s visit show how the crisis rearranges institutional life: for once, the official chain of command is unstable enough that a proclamation, a refusal, or a resignation can have genuine weight inside the weapons complex.   </p>
+<h3 id="fort-detrick">Fort Detrick</h3>
+<p>Summary: Set in Frederick, Maryland, in December 1991, this chapter is the Soviet counter-visit, the reciprocal tour that repays the Western delegation's January visit. Colonel Charles Bailey, deputy commander of USAMRIID, prepares his managers by staging a role-playing exercise in which one group pretends to be the incoming Soviet delegation. Alibek, initially left off the list by Kalinin, joins the thirteen-man Soviet mission as the senior Biopreparat representative, with the Fifteenth Directorate's Colonel Nikifor Vasiliev and a GRU colonel who is told to claim he works for the Ministry of Health, alongside Grigory Shcherbakov, Lev Sandakchiev, and General Nikolai Urakov. Before departure the delegation is briefed at army headquarters with GRU maps and satellite photos pointing at a circular test chamber at USAMRIID and “weapons containers” at Pine Bluff. They land in Washington on December 11, 1991, and learn their passports now belong to an extinct country as the Commonwealth of Independent States agreement dismembers the Soviet Union. At Fort Detrick they find the circular building contains only a pile of road salt (Vasiliev tastes it); an officer breaks protocol and pulls tiles from a lab ceiling; and an anthrax operation has two specialists against the Soviet Union's two thousand. The tour then covers the US program's history (Camp Detrick, Project Whitecoat, Nixon's 1969 renunciation) and visits Dugway under Colonel Frank Cox, where Sandakchiev declares, “They're doing nothing here”; Pine Bluff, now an FDA facility doing immunosuppressive research on mice; and the Salk vaccine center at Swiftwater. On the bus at Pine Bluff, Colonel Zukov bolts to inspect a structure and climbs a water tower to the amusement of the American escorts; in Little Rock, the delegation happens on Bill Clinton announcing his presidential candidacy and receives "Arkansas Travelers" diplomas signed by Governor Clinton; and in Washington, escorted on the final tour by Defense Department official Lisa Bronson, Alibek asks whether, with his experience, he could find a job in America — "If you know English," she answers. Source anchors: Fort Detrick, USAMRIID, Charles Bailey, December 1991, GRU briefing, Vasiliev, salt pile, Dugway, Pine Bluff, Zukov water tower, Bill Clinton, Salk Center, Lisa Bronson   </p>
+<p>Analysis: Fort Detrick matters because the counter-visit is the mirror image of the January tour, and it exposes the two powers' mutual suspicion: the Soviet delegation arrives primed by GRU intelligence to believe the circular chamber and the containers hide weapons, only to find road salt, a disused FDA facility, and a functioning vaccine center. The chapter is a study in <a href="//02%20Concepts/Intelligence.html">intelligence</a> and institutional self-deception — the briefer's surveillance photos and Kalinin's parting order to "come back with evidence that the Americans are making weapons" drive the delegation to see offense everywhere, echoing the book's larger theme that the Soviet program was a hostage of Kremlin politics. The visit also marks Alibek's dawning realization that America's program was actually scrapped after 1969, and, landing as the USSR dissolves, it begins his personal separation: the offhand question to Lisa Bronson plants the emigration that the Communist Prospekt and Debriefing chapters will carry forward.   </p>
+<h3 id="communist-prospekt">Communist Prospekt</h3>
+<p>Summary: Set in the months after the Soviet collapse, the chapter opens with Gorbachev’s resignation on December 25, 1991, and the lowering of the hammer-and-sickle flag. Alibek, an officer of an empire that no longer exists, resigns from the army on January 13, 1992, seventeen years after his junior lieutenant’s commission. Kalinin attaches a falsified “summary” to Alibek’s report on the US visit, claiming the observations proved an American weapons program, and recommends that Russia’s offensive research continue; Alibek writes a second resignation letter from Biopreparat. Their final confrontation erupts in Kalinin’s office — Kalinin calls him a traitor and throws the letter back — and Alibek hands in his passes at the personnel office. Unemployed for the first time in twenty years, he becomes the Moscow representative of a Kazakh bank, deals in Kazakhstan oil, and is watched by surveillance teams and bugged telephones. On April 11, 1992, Yeltsin signs a decree banning offensive biological research, cutting defensive programs by 50 percent and dissolving the Fifteenth Directorate. A Kazakh Defense Ministry official, Mikhail Safrygin, then offers him command of a new medical-biological directorate running Stepnogorsk, with a promotion to major general; the unnamed official behind the offer promises the rank in exchange for obedience, and when Alibek refuses — invoking the 1972 Biological Weapons Convention — he is threatened with the Stalin-era phrase “consorting with foreigners.” Alibek concludes Kalinin set the whole offer up to keep him and the Kazakh facilities under control. Savva Yermoshin delivers a veiled KGB warning that he will never be allowed to leave Russia with his family. Communist Prospekt is the street of his parents’ apartment in Almaty, where his mother, hearing the story of surveillance and the Kazakh offer, gives her blessing and tells the family story of her own father’s arrest and death in a Stalinist prison. The chapter ends with the escape: a businesswoman friend contacts Lisa Bronson in Washington, and the family slips out through the Almaty apartment, Domodedovo, and the night drive to Sheremetevo, deceiving the KGB watchers onto the plane. Source anchors: Gorbachev resignation, January 13 1992 army resignation, Kalinin confrontation, Kazakh bank, Yeltsin April 1992 decree, Safrygin, Stepnogorsk, medical-biological directorate, Communist Prospekt Almaty, Yermoshin, Lisa Bronson, escape via Malta and New York   </p>
+<p>Analysis: Communist Prospekt matters because it turns the book’s whole subject into a question of personal continuity: the apparatus does not disappear with the Soviet Union. Kalinin’s falsified report and the Kazakh offer to revive Stepnogorsk under a new flag show the weapons system trying to reconstitute itself, and by refusing the major general’s rank Alibek finally breaks with a career built on <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> — the state organs that once rewarded him now threaten him with the same words that sent people to prison under Stalin. The chapter is the memoir’s strongest treatment of <a href="//02%20Concepts/Collapse%20and%20Resilience.html">collapse and resilience</a>: the Soviet state collapses, yet its elite networks, surveillance practices, and biological capabilities prove resilient, reappearing inside the Yeltsin bureaucracy and the Kazakh Defense Ministry. The surveillance, the tapped phones, and the veiled warning from Yermoshin show that the same control machinery operates across state boundaries, so that leaving requires deception rather than permission.   </p>
+<h3 id="debriefing">Debriefing</h3>
+<p>Summary: In the United States Alibek is pulled into long intelligence sessions where he must convert seventeen years of compartmentalized Soviet experience into a coherent picture for officials who have never seen The System from inside. The chapter stresses the challenge of translating post office boxes, code names, ministries, and production quotas into something Western agencies can test, believe, and act on without access to the same archives or personnel. It also shows the emotional strain of becoming both witness and instrument, expected to supply certainty about a hidden world while still sorting his own guilt and memory. Source anchors: United States, seventeen years, The System, code names, ministries, archives   </p>
+<p>Analysis: The United States and the seventeen-year span matter because debriefing is not just intelligence extraction; it is the forced reassembly of a career built in fragments. The System, code names, and ministries are crucial because they were designed to diffuse understanding, which means Alibek must actively reverse the logic of compartmentalization to make himself useful. Archives matter because they mark what is missing from his testimony; he can provide insider structure and firsthand events, but the difficulty of proving every hidden connection makes <a href="//02%20Concepts/Information%20and%20Coordination.html">information and coordination</a> part of the threat he is trying to explain.   </p>
+<h3 id="buyers-and-sellers">Buyers and Sellers</h3>
+<p>Summary: Alibek broadens the problem from Soviet institutions to an emerging global market in know-how, equipment, pathogens, and trained personnel, discussing Cuba, Iraq, India, Iran, Russian officials such as Vilen Matveyev, and the transfer of fermenters, air-purification systems, and other dual-use machinery. He describes how the Soviet Union trained foreign scientists annually in genetic engineering and molecular biology, how Cuba received interferon-related material and later appeared capable of its own advanced work, how Iraq pursued fermentation equipment under cover of single-cell protein, and how even the American Type Culture Collection could supply dangerous strains to bad actors. The chapter closes with Aum Shinrikyo’s failed anthrax and botulinum attempts and Larry Harris’s plague order in Ohio, showing that state and non-state acquisition channels are now entangled. Source anchors: Vilen Matveyev, Cuba, Iraq, single-cell protein, American Type Culture Collection, Aum Shinrikyo   </p>
+<p>Analysis: Vilen Matveyev and the Russian equipment deals matter because Alibek wants to show that proliferation is not a metaphor; specific veterans of the Soviet system remained in positions where they could move useful machinery or advice abroad. Cuba, Iraq, and the single-cell-protein cover reveal how familiar Soviet disguises survived in the post-Soviet <a href="//02%20Concepts/Illicit%20Markets.html">illicit market</a>, especially around fermentation and filtration technology. The American Type Culture Collection and Aum Shinrikyo are crucial because they shift the reader from rogue states to broader vulnerability: once pathogens, catalogs, and trained people circulate widely enough, the boundary between military program and opportunistic acquisition becomes dangerously thin.   </p>
+<h3 id="biodefense">Biodefense</h3>
+<p>Summary: Alibek closes by warning that a biological attack in Washington, Boston, or New York might only be recognized after the first deaths, then surveys the American response through Executive Order 12938, the First Responders Program, USAMRIID, the CDC, CBIRF, NEST, the BIDS detection system, vaccine stockpiles, and repeated attempts to strengthen the Biological Weapons Convention with inspections. He lists the agents most likely to appear in a future arsenal, from anthrax, plague, tularemia, glanders, Q fever, and botulinum toxin to smallpox, VEE, Lassa fever, Marburg, Ebola, Machupo, and Junin, emphasizing that only a fraction of weaponizable diseases are currently treatable. The chapter ends on the mismatch between spending, detectors, and preparedness on one hand, and the secrecy, delay, and diffusion of real biological attacks on the other. Source anchors: Executive Order 12938, First Responders Program, USAMRIID, BIDS, Biological Weapons Convention, Marburg and Ebola   </p>
+<p>Analysis: Executive Order 12938 and the First Responders Program matter because Alibek wants to show that the United States has finally integrated public health into national security, but only after years of dangerous inattention. USAMRIID and BIDS are important because they represent real progress in diagnostics and response while also illustrating the narrowness of current detection compared with the wide agent menu he has just described. The Biological Weapons Convention and the repeated references to Marburg and Ebola tie the ending back to the start of the book: international law, stockpiles, and <a href="//02%20Concepts/Crisis%20Governance.html">crisis governance</a> plans still lag behind the practical knowledge already demonstrated by Soviet work with exactly those catastrophic agents.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Aral Sea prologue</strong>: one hundred monkeys tethered in parallel rows on a bleak island; a bomb bursts seventy-five feet above; a mustard-colored aerosol kills them with anthrax, tularemia, Q fever, brucellosis, glanders, or plague.   </li>
+<li><strong>Biopreparat basics</strong>: the civilian pharmaceutical cover for more than forty offensive sites in Russia and Kazakhstan; Alibek was first deputy chief 1988–1992; called "The System."   </li>
+<li><strong>The 1972 Biological Weapons Convention irony</strong>: Moscow signed while stockpiling hundreds of tons of anthrax and dozens of tons of plague and smallpox near Moscow.   </li>
+<li><strong>SS-18 anthrax estimate</strong>: four hundred kilograms of dry anthrax to fill ten warheads; ten to fourteen days using seed stocks at Penza, Kurgan, and Stepnogorsk; one hundred kilograms could kill up to three million people in an American city in optimal conditions.   </li>
+<li><strong>Enzyme decree (1973)</strong>: Brezhnev's secret program launched by Yury Ovchinnikov after the Lysenko disaster; founded Biopreparat; peak workforce over sixty thousand; close to a billion dollars authorized as late as 1990.   </li>
+<li><strong>Recruitment shorthand</strong>: white-haired Biopreparat colonel, post office box orders, "biological defense" as the cover phrase, Omutninsk as the first posting, Svetlana teaching hot-zone confidence.   </li>
+<li><strong>Sverdlovsk 1979</strong>: Compound 19 anthrax accident, downwind civilian deaths, the tainted-meat cover story, and intimidating local doctors into silence.   </li>
+<li><strong>Smallpox markers</strong>: Zagorsk and Pokrov egg-based production; India-1967 strain acquired in 1967, codenamed India-1; twenty-ton annual stockpile order; one-to-five-day aerosol incubation in monkeys; Building 15 at Koltsovo rated at eighty to one hundred tons a year.   </li>
+<li><strong>Variant U</strong>: the Marburg strain recovered after Nikolai Ustinov's self-injection death in 1988 was more virulent and stable; it killed all twelve test monkeys at Stepnogorsk.   </li>
+<li><strong>Pasechnik</strong>: Leningrad instrument-institute head whose 1989 defection in France first abroad exposed the offensive program to the West.   </li>
+<li><strong>Visitors, January 1991</strong>: reciprocal US/British tours of Lyubychany, Obolensk, Vector, and Leningrad; the "milled salt" cover story and the locked-room flashlight search by Chris Davis's delegation.   </li>
+<li><strong>Three Days (August 1991)</strong>: <em>Swan Lake</em> on all channels, GKChP coup, White House barricades, four hundred Biomash employees in a staff meeting, resignation from the Communist Party and Biopreparat, Kalinin's private farewell-bargain visit.   </li>
+<li><strong>Post-Soviet proliferation</strong>: Vilen Matveyev equipment sales, Cuba's interferon material, Iraq's single-cell-protein cover for fermentation equipment, the American Type Culture Collection as a strain catalog, Aum Shinrikyo's Tokyo attempts, Larry Harris's plague order in Ohio.   </li>
+<li><strong>Biodefense apparatus</strong>: Executive Order 12938, First Responders Program, USAMRIID, CDC, CBIRF, NEST, BIDS detectors, and the BWC inspection problem; only a fraction of weaponizable diseases currently treatable.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Auschwitz Report.html">auschwitz report</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html">collapse, resilience, and civilizational survival</a></li>
+	<li><a class="backlink" href="//01 Books/Hoover.html">hoover</a></li>
+	<li><a class="backlink" href="//02 Concepts/Technological Change.html">technological change</a></li>
+	<li><a class="backlink" href="//02 Concepts/Knowledge Preservation.html">knowledge preservation</a></li>
+	<li><a class="backlink" href="//01 Books/Harpoon.html">harpoon</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/soviet-union/index.html">soviet-union</a></li>
+	<li><a class="backlink" href="//obs.html/tags/biowarfare/index.html">biowarfare</a></li>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/security/index.html">security</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A186575683910561538071943851053077754042{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D186575683910561538071943851053077754042{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B186575683910561538071943851053077754042{level}" level="{level}" note_temp_id="186575683910561538071943851053077754042" onclick="window.ObsHtmlGraph.run(this, '186575683910561538071943851053077754042', 'biohazard');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C186575683910561538071943851053077754042{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

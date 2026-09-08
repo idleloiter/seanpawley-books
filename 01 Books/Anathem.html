@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="anathem">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'anathem';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=anathem" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="anathem">Anathem</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Anathem</code> is one of the vault's strongest books for thinking about knowledge institutions, civilizational reset, metaphysics, and the relation between contemplative life and crisis governance. It belongs in active dialogue with books about state simplification, scientific inquiry, and high-level theory under political pressure. It sits naturally beside its author's other speculative engineers of world-systems — most directly <a href="//01%20Books/Seveneves.html">Seveneves</a>, and, as a meditation on how technical elites try to control what a culture may believe and remember, it echoes <a href="//01%20Books/Snow%20Crash.html">Snow Crash</a> and <a href="//01%20Books/The%20Diamond%20Age.html">The Diamond Age</a>. As a story about a cloistered order that becomes decisive in a planetary emergency, it rewards comparison with the institutional and civilizational logic of <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a> and <a href="//04%20Series/The%20Expanse.html">The Expanse</a>, and it can be used as a hub within <a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a>.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Neal Stephenson's <code>Anathem</code> is a philosophical science fiction novel disguised at first as a cloister novel. Its setting, Arbre, appears initially to be an alternate world organized around concents: quasi-monastic intellectual communities separated from the secular world by avouts, rituals, temporal disciplines, and hierarchies of contemplation. That structure can seem merely ingenious or baroque on first contact, but it quickly becomes clear that Stephenson is using the concent system to stage much larger questions. What sort of institutions preserve difficult thought across civilizational cycles? What happens when societies repeatedly alternate between praxic expansion and catastrophic backlash? How should theoretical communities respond when reality itself begins forcing them back into history?   </p>
+<p>The protagonist, Erasmas, begins in a deliberately narrow epistemic frame. He knows his local concent of Saunt Edhar, its habits, its people, and its jokes, but not much of the broader world. This is one of the book's best structural choices. Stephenson makes the reader learn Arbre at the same pace Erasmas does, so that the book's philosophical vocabulary and historical depth feel discovered rather than merely explained. The result is that each expansion of scope matters. What starts as a story of eccentric intellectual life becomes a planetary emergency story and then a polycosmic one without losing coherence.   </p>
+<p>At the heart of the novel is the tension between theoretical purity and worldly necessity. The mathic world exists because earlier ages of technological exuberance repeatedly produced disaster. Arbre's society has therefore evolved institutions meant to protect long-horizon thought from short-term political and commercial capture. Yet those same institutions risk becoming inert, ceremonial, or merely self-protective unless reality presents them with a problem only they can solve. The arrival of the alien "Geometers" in orbit and the successive revelations around cosmology, consciousness, and the polycosmic order force exactly that kind of reckoning. The theors and avout are suddenly not detached custodians of old knowledge but active participants in planetary survival.   </p>
+<p>This is also a novel about language as worldmaking. Stephenson gives Arbre its own vocabulary not for ornamental difficulty alone, but because naming practices encode social theory. The distinction between mathic and saecular, the terms for orders and disciplines, the history of apert and avouts, even the word "anathem" itself all make institutional assumptions visible. As in Orwell, but at a far more system-building scale, language here is inseparable from political and metaphysical structure.   </p>
+<p>The philosophical content of the novel is substantial without being merely expository. Stephenson plays with Platonism, many-worlds or polycosmic reasoning, epistemology, geometry, logic, and the problem of consciousness. But the book is not a treatise with characters attached. It is specifically interested in what kinds of personalities, disciplines, and friendships make abstract understanding possible. Orolo's role is central here. He is not just a wise mentor. He represents the danger and necessity of thinking past institutional comfort. His curiosity makes him disruptive long before it makes him prophetic.   </p>
+<p>The later movement of the novel, once travel widens and the emergency becomes explicit, gives <code>Anathem</code> a strong civilizational-planning dimension. Stephenson is fascinated by how technical knowledge, metaphysical vision, military necessity, and bureaucratic structure interact under pressure. The concent system turns out to be not merely a weird remnant of Arbre's past but one of its best survival mechanisms. The book therefore belongs with vault texts on state capacity and collapse not because it is a conventional politics book, but because it asks what social forms can keep intelligence alive across disasters.   </p>
+<p>By the end, <code>Anathem</code> has shifted from enclosed scholastic world to planetary and trans-cosmic action without sacrificing its original concerns. The deepest payoff is that contemplation and engagement are not opposites. On Arbre, at least in the best version of the mathic tradition, contemplation is preparation for the rare moments when thought has to enter history with full force.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Erasmas (Raz)</strong>: The first-person narrator, a young fraa of the Decenarian math of Saunt Edhar. He begins wanting understanding, belonging, and a place in the Edharian order; as his world expands he wants responsible action. His arc moves from cloistered apprentice to witness and builder of the new order at the future Concentration of Saunt Orolo.   </li>
+<li><strong>Orolo</strong>: Erasmas's mentor and the book's clearest model of disciplined, destabilizing intelligence. He wants truth regardless of institutional convenience, secretly observing the sky, and is ultimately Thrown Back or made a Feral — yet his example drives the plot and, via the "sacrifice"/Voco scene, the evacuation of Saunt Edhar.   </li>
+<li><strong>Fraa Jad</strong>: A century-spanning Hundreder of great age (he has reached Chapter Nine of the Book) and strange perceptual powers; he embodies the layered, patient perspective of the oldest mathic orders and becomes a key interpreter of the polycosm.   </li>
+<li><strong>Jesry</strong>: A brilliant, competitive fellow avout and childhood friend of Erasmas; a capable theor and eventual leader whose competence carries the emergency work; Erasmas both admires and flags Jesry's opportunism.   </li>
+<li><strong>Arsibalt</strong>: Erasmas's loyal, physically large friend and the intrepid explorer of Shuf's Dowment's cellars; a steady intellectual companion whose dowment becomes a center of post-crisis spiritual work.   </li>
+<li><strong>Cord</strong>: Erasmas's "sib" (from the same aging cohort/vale), a taashma fighting companion who accompanies him across Arbre; her practical, military competence grounds the travelers.   </li>
+<li><strong>Tulia</strong>: A suur of Saunt Edhar, intellectually sharp, who loses her Edharian place to Erasmas and later becomes an operative entangled with the Saecular Power and its information systems.   </li>
+<li><strong>Ala</strong>: A suur of the New Circle order at Saunt Edhar and Erasmas's faltering lover; their relationship is strained by his leaving her behind.   </li>
+<li><strong>Sammann</strong>: An information-specialist operative (of the Counter-Earth "Cousins") whose jeejah-driven data work makes him an invaluable but unsettling traveling companion.   </li>
+<li><strong>Barb</strong>: Erasmas's pet bird-like creature — unruly, averse to change — and a running comic anchor who travels with him to the end.   </li>
+<li><strong>The concent system itself / the maths and orders (Edharians, New Circle, Reformed Old Faanians, Lorites, Sconics)</strong>: function almost as character-level institutions, trying to preserve thought while repeatedly being forced to justify their existence to a saecular power.   </li>
+<li><strong>The saecular powers (the Panjandrums, Warden of Heaven, Madame Secretary Ignetha Foral, Artisan Flec)</strong>: want order, security, and usable expertise, but often fail to understand the conditions under which real theorical insight is produced.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//01%20Books/Seeing%20Like%20a%20State.html">Seeing Like a State</a>: useful for comparing knowledge simplification, institutional legibility, and the preservation of complex thought under pressure.   </li>
+<li><a href="//01%20Books/Godel%2C%20Escher%2C%20Bach-An%20Eternal%20Golden%20Braid.html">Gödel, Escher, Bach</a>: strong connection on consciousness, formal systems, self-reference, and the pleasures of intellectual structure.   </li>
+<li><a href="//01%20Books/Terra%20Ignota/Too%20Like%20the%20Lightning.html">Too Like the Lightning</a> and the <a href="//04%20Series/Terra%20Ignota.html">Terra Ignota</a> sequence: useful comparison on philosophical worldbuilding, institutional orders, and civilizational redesign.   </li>
+<li><a href="//04%20Series/Orthogonal%20Trilogy.html">Orthogonal Trilogy</a>: relevant for speculative physics and high-concept explanatory architecture.   </li>
+<li><a href="//04%20Series/The%20Expanse.html">The Expanse</a>: useful for comparing crisis response, scientific interpretation, and the interaction between deep-time systems and human institutions.   </li>
+<li><a href="//01%20Books/Seveneves.html">Seveneves</a>: same author and the same taste for turning hard physics, orbital mechanics, and institutional survival into planetary-scale drama.   </li>
+<li><a href="//01%20Books/The%20Diamond%20Age.html">The Diamond Age</a> and <a href="//01%20Books/Snow%20Crash.html">Snow Crash</a>: same author's earlier treatments of language, ideology, and how technical orders try to control belief.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>Institutional preservation of thought.   </li>
+<li>Civilizational reset and backlash against dangerous knowledge.   </li>
+<li>Theory versus praxis.   </li>
+<li>Language as embedded social philosophy.   </li>
+<li>Mentorship, friendship, and inquiry.   </li>
+<li>Polycosm / many-worlds metaphysics.   </li>
+<li>Knowledge communities under emergency.   </li>
+<li>The cost of institutional rigidity in the face of real change.   </li>
+<li>The reentry of preserved intelligence into history.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><strong>The concent / the mathic world</strong>: Quasi-monastic communities on Arbre in which "avout" (fraas and suurs) submit to the Cartasian Discipline to protect long-horizon theorics from saecular capture.   </li>
+<li><strong>Apert</strong>: The aut in which a math opens its gates for ten days so avout can go extramuros and saeculars may enter; recurs on cycles of one, ten, hundred, or thousand years (the last being Millennial Apert).   </li>
+<li><strong>The Anathem</strong>: An aut by which an incorrigible fraa or suur is ejected from the math and sequestered; also an archaic word for a poetic invocation of Our Mother Hylaea — a deliberate play on anthem/anathema.   </li>
+<li><strong>The Discipline and the Book</strong>: The Cartasian Discipline regulates mathic life; the "Book" is a tome of sanctioned nonsense used as exponentially harder penance (Chapter Five is digits of pi; higher chapters are years of toil).   </li>
+<li><strong>The Reconstitution, sacks, and Terrible Events</strong>: Arbre's history of civilizational collapse and rebuilding; the Third Sack eliminated Lineages; the Reconstitution fixed the dating system (A.R.).   </li>
+<li><strong>The Praxic Age and the synax</strong>: An earlier, tech-ebullient age; the synax was destroyed, and the current world lives in its aftermath. Era of the Harbingers.   </li>
+<li><strong>The Hylaean Theoric World and Protism</strong>: The Platonic-seeming realm of theoretical entities; Protism asserts such entities exist independently of minds but are perceivable by them. Central to the "Variance" — the apparent incommensurability of old and new physics.   </li>
+<li><strong>The polycosm / many-worlds</strong>: The multiverse structure underlying causation and consciousness that the avout must grasp to interpret the Geometers and the incidents.   </li>
+<li><strong>The Geometers</strong>: The alien observers in orbit around Arbre whose intervention drives the emergency; they operate on principles that force a reassessment of Protism.   </li>
+<li><strong>The Counter-Earth / Cousins / Laterrans</strong>: Other populated worlds and their peoples — the basis of the final, larger civilizational picture.   </li>
+<li><strong>The Reticulum / reticule</strong>: From a netlike bag to an optical grid to the world-spanning network of communicating syntactic devices (joorsh, jeejahs, fotnmnjab); an ur-example of how Arbre evolved a global information infrastructure.   </li>
+<li><strong>The Convox</strong>: A rare planetary convocation of avout, normally held only at Millennial Apert, after a sack, or at the Saecular Power's request; the crisis turns one into an emergency governance body.   </li>
+<li><strong>The Teglon</strong>: The famous hard geometry problem — tiling a regular decagon with seven shapes — worked on at Orithena and across Arbre for generations; a symbol of transmitted difficulty.   </li>
+<li><strong>The Lorites / Saunt Lora</strong>: The order that believes every idea has already been thought and so catalogs prior thought to keep theors from reinventing wheels.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="preface-note-to-the-reader-and-chronology">Preface: Note to the Reader and Chronology</h3>
+<p>Summary: The prefatory material explains the book as set on a planet, Arbre (pronounced roughly "Arb"), not Earth; explains the translation strategy (Arbran units rendered into old Earth units, coined words based on Earth languages, species swapped for approximate Earth equivalents); and gives a sparse chronology from Cnoüs and his daughters Deät and Hylaea, through the founding and destruction of Orithena, the Golden Age of Ethras, the Bazian Empire, the Old Mathic Age of Saunt Cartas, and on toward the Reconstitution. It asks the reader to treat vocabulary as meaningful structure rather than decorative strangeness. Source anchors: Arbre; Note to the Reader; Chronology; Orithena; Ethras; Bazian Empire; Saunt Cartas; Reconstitution; Cnoüs. <br />
+Analysis: The reader-facing Note is itself an act of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Stephenson insists that the coinages are not ornament but a translation of a genuinely different conceptual vocabulary. The chronology frames Arbre as a world repeatedly cycling through intellectual breakthrough, disaster, reform, and institutional rebuilding — the deep-time rhythm on which the whole concent system depends. This is the vault's best single warning to read the novel's terms as institutions rather than flavor.   </p>
+<h3 id="part-1-provener">Part 1 — Provener</h3>
+<p>Summary: Part 1 opens the concent of Saunt Edhar through Erasmas's routines, the Discipline, the Decenarian order, Apert, and the first exposure of the mathic world to extramuros life — beginning with Orolo's pointed, quasi-liturgical interview of an artisan, Flec, about whether his neighbors "burn one another alive" and whether his people drug themselves into contentedness. The vocabulary of extramuros, avout, fraa, suur, saeculars, and Anathem immediately makes language carry institutional memory, while the architecture of the concent turns walls, gates, clocks, and rituals into a social technology for protecting theorical work. Orolo's observations and Erasmas's first encounters with the outside world show that the separation between mathic and saecular life creates both freedom and blindness. Source anchors: Erasmas; Saunt Edhar; Discipline; Decenarian order; Apert; extramuros; Orolo; avout; Flec; blithe; Allswell. <br />
+Analysis: Saunt Edhar matters because it turns <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> into built environment rather than sentiment: the Discipline, Decenarian order, Apert, and avout vocabulary regulate who can see whom, when knowledge can circulate, and how long a community can maintain inquiry without surrendering to fashion or panic. Stephenson also uses extramuros language to show <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> at work; the words Erasmas inherits classify outsiders before he understands them and make institutional separation feel natural. Orolo's mocking catalogue of saecular religion (prayer, sacrifice, dead-pet afterlives) previews the novel's serious interest in <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: belief, legitimacy, and the structures that police certainty recur all the way to the epilogue's rule that "Deolaters are welcome as long as they're not certain they're right."   </p>
+<h3 id="part-2-apert">Part 2 — Apert</h3>
+<p>Summary: Part 2 (Apert) opens with the Decennial Apert itself — the first day of 3690 — when the Day, Unarian, and Decenarian Gates swing open at sunrise to the ringing of bell-changes and the descent of the clock's weights before the assembled avout, momentarily blurring the line between the mathic and the extramuros. A half-dreamed foreboding of a wrong orrery and a mis-synced clock foreshadows the deeper anomaly. The section also widens the institutional frame by explaining the Ita, the Praxic Age, the Harbingers, the Terrible Events, and the status of syntactic devices inside a society that remembers technological disaster (the synax) as a constitutional problem. The history behind the mathic orders makes the concent look less like retreat and more like a compromise after repeated civilizational shocks. Erasmas learns that old information technologies did not simply disappear; they survive as regulated memory, specialized labor, taboo, and suspicion. Source anchors: Apert; Decennial Apert; Day Gate; Unarian and Decenarian Gates; orrery; clock; Ita; Praxic Age; Harbingers; Terrible Events; synax; syntactic devices; Erasmas; mathic orders; regulated memory. <br />
+Analysis: The Ita and syntactic devices expose the institutional bargain behind Arbre's <a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: the Praxic Age, Harbingers, and Terrible Events teach society to quarantine powerful tools instead of celebrating innovation as automatic progress. Regulated memory gives the mathic orders a reason to exist, but it also assigns the Ita a subordinate technical role that preserves operational competence while denying them full legitimacy. This is <a href="//02%20Concepts/Technology%2C%20Platforms%2C%20and%20Speculative%20Systems.html">Technology, Platforms, and Speculative Systems</a> read as an arms-control regime: Erasmas sees a system that channels technical capacity through social constraint exactly because the same capacity once wrecked the world.   </p>
+<h3 id="part-3-eliger">Part 3 — Eliger</h3>
+<p>Summary: Part 3 (Eliger) centers on Erasmas's long penance under the Warden Regulant, copying out and memorizing the nonsense of the Book from a penance cell whose barred views only magnify his isolation. From that cell he decodes the bells and hears the aut of Eliger itself — the rite by which a fid joins an order — as Jesry is inducted into the Edharians and Ala into the New Circle. The section also brings Orolo's eccentricity into institutional conflict: the starhenge is sealed off, the Inquisitors arrive, and the orbiting anomaly — the hole in the sky, the would-be "Geometers" ship — begins to convert private theorical unease into a public problem. Erasmas starts to understand that his mentor's disobedience may reveal something the official structure cannot yet admit. Source anchors: Erasmas; Eliger; Warden Regulant; penance cell; the Book; Jesry; Ala; starhenge; Inquisitors; observations of the sky; orbiting anomaly; Geometers. <br />
+Analysis: Orolo forces the first real test of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> in the novel. His observations of the sky and the orbiting anomaly produce information that the official structure cannot absorb without admitting that its routines lag behind reality. The Warden Regulant and the penance/Book show the cost of that lag: Saunt Edhar can preserve inquiry, but it can also punish the curiosity — and the <a href="//02%20Concepts/Information%20Theory.html">Information Theory</a>-style interpretation of an anomalous signal — that would let Erasmas and others coordinate around an emerging threat. The episode is the novel's first demonstration that an institution built to keep knowledge safe can also keep dangerous knowledge out.   </p>
+<h3 id="part-4-anathem">Part 4 — Anathem</h3>
+<p>Summary: Part 4 (Anathem) mixes Erasmas's apprenticeship — frustration over tangency of hypersurfaces, practice at Shuf's Dowment, and the informal social world of Orolo's students and rivals — with the book's darkest institutional event: Statho calls out "Orolo" and the aut of Anathem is performed, in which the incorrigible theor is stripped of his bolt, chord, and sphere before the whole concent and Thrown Back/sequestered as a Feral, walked out through the Day Gate in a gunny sack and an orange emergency blanket. In the aftermath Erasmas helps reconstruct Orolo's story piece by piece — how he stole mead to buy a speelycaptor, set up a hidden vineyard observatory, and photographed an object in polar orbit, evidence that what orbits Arbre is "not a natural object. It was made and put there by humans." Source anchors: Erasmas; Anathem; Orolo; Thrown Back; Feral; Statho; Warden Regulant; hypersurfaces; knee-huggers; Arsibalt; Shuf's Dowment; speelycaptor; polar orbit; observatory; sequestered. <br />
+Analysis: The hypersurfaces problem, Orolo's knee-huggers, and Erasmas's apprenticeship make the mathic world credible because knowledge moves through practice before it becomes doctrine. This section thickens the local mechanics of <a href="//02%20Concepts/Institutions.html">Institutions</a> and <a href="//02%20Concepts/Systems%20Thinking.html">Systems Thinking</a>: disciplined thinking depends on correction, informal status, and repeated frustration inside a community that treats abstraction as shared work, while Shuf's Dowment shows how a single building can accrete generations of habit and legend. The chapter's deepest point is that even a cloistered order is a living social system, not a clean rulebook.   </p>
+<h3 id="part-5-voco">Part 5 — Voco</h3>
+<p>Summary: Part 5 (Voco) uses lineage, dowment, bolt, chord, sphere, and the Baud Iconography to show that even a world formally dedicated to abstraction has property, inheritance, prestige, and gossip; the secret circulation of Orolo's forbidden photomnemonic tablet through Arsibalt's cellar vault shows trust operating against the Discipline. The section culminates in the aut of Voco — the rare rite in which the Saecular Power "Evokes" avout away from the math — when Statho, to the concent's shock, reads out not one but six names: Jesry, Suur Bethula, Fraa Athaphrax, Fraa Goradon, Suur Ala of the New Circle, and the absent Orolo, who "is no longer among us." Jesry, Ala, and the others walk out through the screen and out of Erasmas's life. Source anchors: Erasmas; Voco; Evoked; Jesry; Ala; Bethula; Athaphrax; Goradon; Orolo; Statho; Saecular Power; lineage; dowment; bolt; chord; sphere; Baud Iconography; photomnemonic tablet. <br />
+Analysis: Lineage and dowment reveal <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> inside the supposedly rule-bound concent. Bolt, chord, sphere, and Baud Iconography turn property and prestige into stories that avout can deny, joke about, or exploit, but not escape. Erasmas's education therefore includes more than theory: he learns how status, inheritance, and rumor shape who gets attention and which forms of preserved knowledge acquire institutional weight — a study in <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> as much as in epistemology, and a reminder that the Third Sack reforms that destroyed Lineages only displaced, never dissolved, hierarchy.   </p>
+<h3 id="part-6-peregrin">Part 6 — Peregrin</h3>
+<p>Summary: Part 6 reaches back to Orithena, the Peregrin, the Golden Age of Ethras, and the old Dialogs to connect Erasmas's present crisis with a much deeper history of destruction, wandering, and intellectual survival. It also stages the departure from Saunt Edhar as an emergency grows: the avout gird for a Convox and the evacuation begins. The ancestral memory of a temple destroyed and theors dispersed gives the novel one of its strongest images of knowledge after catastrophe. The section makes clear that mathic institutions do not merely store answers; they store arguments about how communities survive when their homes and patrons vanish. Source anchors: Erasmas; Orithena; Peregrin; Golden Age of Ethras; Dialog; theors; Convox; evacuation; destruction; intellectual survival. <br />
+Analysis: Orithena and the Peregrin make <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> historical and traumatic. The Dialogs and the Golden Age of Ethras survive because theors turn destruction and wandering into portable forms of memory, not because institutions remain intact forever. Erasmas's present crisis echoes that pattern, and the book's deepest claim here is lodged in <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: physical buildings and current order are fragile, but a community that has learned how to narrate its own survival can carry its knowledge across the wreck of any single institution — which is exactly what the departure and the coming Convox test.   </p>
+<h3 id="part-7-feral-and-the-reticulum">Part 7 — Feral and the Reticulum</h3>
+<p>Summary: Part 7 brings reticules, optical grids, syntactic devices, and communicating instruments into the foreground as the novel moves from cloistered thought toward coordinated response, and it sends Erasmas north with Cord, Sammann, and the unsettling Ganelial Crade to track the now-Feral Orolo into the mountains. The changing meanings of reticule trace a long drift from material object to networked communication, which matters because Arbre's current crisis requires people trained for seclusion to operate through technical systems and shared signals. Erasmas's world keeps expanding from local discipline into distributed action. Source anchors: Erasmas; Orolo; Feral; reticule; reticulum; optical grids; syntactic devices; jeejah; Cord; Sammann; Crade; distributed action. <br />
+Analysis: Reticule condenses the book's interest in <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>. Optical grids, syntactic devices, and the reticulum show that coordination depends on media as much as insight, especially when Arbre's crisis forces Erasmas and other avout to leave local discipline behind. This is the novel's clearest case for <a href="//02%20Concepts/Technology%2C%20Platforms%2C%20and%20Speculative%20Systems.html">Technology, Platforms, and Speculative Systems</a> as infrastructure: every new communication layer carries older metaphors and older institutional anxieties, and the very word "reticule" is a fossil record of that drift from bag to grid to globe-spanning network.   </p>
+<h3 id="part-8-orithena-and-ecba">Part 8 — Orithena and Ecba</h3>
+<p>Summary: Part 8 turns travel into intellectual enlargement as Erasmas and his companions drive and sail south across more of Arbre's geography and social variety — dense fauxburbs, ancient farmland, and finally the Sea of Seas and the Island of Ecba, past the naked mountain of Saunt Rambalf and toward the southern science. The journey forces the avout to test their assumptions against roads, settlements, strangers, logistics, and saecular institutions that do not organize themselves around mathic time. The widening itinerary matters because the anomaly no longer belongs to a single concent; it requires the travelers to interpret a whole civilization while moving through it. Source anchors: Erasmas; companions; south; Ecba; Sea of Seas; Saunt Rambalf; Arbre; roads; settlements; saecular institutions; anomaly. <br />
+Analysis: The southward journey corrects the reader's and Erasmas's scale: the roads, settlements, and strangers make Arbre harder to reduce to Saunt Edhar's categories, underscoring <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> as an enormous variation field rather than a single institution. The chapter's value is less a new governance mechanism than a demonstration that any preserved knowledge must be tested against the actual, unruly breadth of the civilization that hosts it — friction and all — before it can coordinate a response to the Geometers.   </p>
+<h3 id="part-9-inbrase-and-the-convox">Part 9 — Inbrase and the Convox</h3>
+<p>Summary: Part 9 centers the Convox, a planetary gathering of avout normally reserved for Millennial Apert, aftermaths of sack, or extraordinary requests from the Saecular Power. Erasmas arrives in a balloon suit at Tredegarh's Precipice to protect the assembled avout and Panjandrums from alien germs. The anomaly now forces mathic orders, dispersed concents, and political authorities into the same emergency process. Stephenson uses the Convox to show how long-separated experts become legible to one another and to the state only when crisis supplies a shared agenda and a deadline. Source anchors: Erasmas; Convox; Tredegarh; Precipice; Panjandrums; Millennial Apert; sack; Saecular Power; anomaly; mathic orders; dispersed concents. <br />
+Analysis: The Convox gives <code>Anathem</code> its clearest <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> mechanism. The Saecular Power cannot solve the anomaly alone, so it convenes avout, mathic orders, and dispersed concents under emergency conditions that override normal separation. Millennial Apert and sack history matter because they show that Arbre already has rare institutional procedures for converting preserved expertise into coordinated public action when ordinary governance runs out of interpretive capacity — a case of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> scaled to planetary governance under a hard deadline.   </p>
+<h3 id="part-10-messal-and-the-lorites">Part 10 — Messal and the Lorites</h3>
+<p>Summary: Part 10 introduces the Lorites, the order of Saunt Lora, and the discipline of remembering prior thought so current theors do not mistake rediscovery for originality. Erasmas attends the first Plurality of Worlds Messal at Avrachon's Dowment with the Madame Secretary Ignetha Foral and others, where the practical question of how to read the Geometers' intentions frames the gathering. That role becomes more than comic pedantry during crisis: historians of thought help the avout search the archive of possible explanations quickly enough to matter. Erasmas's group confronts the practical value of intellectual memory when cosmological speculation has operational consequences. Source anchors: Erasmas; Lorites; Saunt Lora; Avrachon's Dowment; Ignetha Foral; Plurality of Worlds Messal; prior thought; theors; avout; archive; cosmological speculation. <br />
+Analysis: The Lorites sharpen <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> by making memory an active search function. Saunt Lora's order, prior thought, theors, and the archive prevent crisis reasoning from collapsing into charismatic novelty. Erasmas needs cosmological speculation, but the chapter argues that speculation gains power when a community can compare it against stored possibilities and discard false originality before action depends on it — a fusion of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> with the operational demands of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </p>
+<h3 id="part-11-advent-and-the-teglon">Part 11 — Advent and the Teglon</h3>
+<p>Summary: Part 11 uses the Teglon problem, Orithena, decagonal tiling, seven shapes, and generations of theors to connect formal difficulty with the novel's late emergency, as the avout cross continents and oceans toward the poles and the actual encounter with the aliens. What looks like a pure geometry tradition turns out to train habits of pattern recognition, constraint management, and intellectual patience that can matter outside the mathic enclosure. The section keeps pushing Erasmas and the others toward the point where abstract structures become instruments for interpreting the crisis and where the polycosm begins to be understood. Source anchors: Erasmas; Teglon; Orithena; decagonal tiling; seven shapes; generations of theors; polycosm; pattern recognition; crisis. <br />
+Analysis: Teglon makes abstraction operational without reducing it to utility. Orithena, decagonal tiling, seven shapes, and generations of theors show how a hard formal problem trains constraint thinking across time and how the many-worlds "polycosm" reasoners must read the anomaly; when Erasmas faces the crisis, that inheritance gives him habits for recognizing patterns that direct experience cannot supply. It is a <a href="//02%20Concepts/Systems%20Thinking.html">Systems Thinking</a> payoff built at staggering timescale, and it anchors the book's claim that a tradition's hardest, most "useless" puzzle can become the exact instrument a civilization needs at the moment it is broken open.   </p>
+<h3 id="part-12-requiem">Part 12 — Requiem</h3>
+<p>Summary: Part 12 converts cosmology, acceleration, technology, and collective action into immediate danger. Erasmas's embodied experience of force (the deceleration of the encounter) brings the high theory down into physical stakes, while the broader operation requires avout, saecular authorities, technical systems, and military capacity to act on models that few people fully understand, culminating in the disappearance of Orolo and the "requiem" for the old order. The section matters because it tests whether Arbre can coordinate around truth when truth arrives as an extreme technical and metaphysical shock. Source anchors: Erasmas; acceleration; cosmology; technology; Orolo; Requiem; avout; saecular authorities; military capacity; models; polycosm. <br />
+Analysis: Part 12 links <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> to execution. Cosmology and models do not remain seminar material; they guide avout, saecular authorities, technology, and military capacity through a crisis where wrong interpretation can kill. Erasmas's acceleration keeps the abstraction honest by making theory bodily, and the "Requiem" for lost comrades shows the emotional cost of the old order's passing. Arbre's institutions succeed only if they can let strange truths command action without letting panic or hierarchy flatten those truths into slogans — the novel's fullest test of <a href="//02%20Concepts/Systems%20Thinking.html">Systems Thinking</a> under fire.   </p>
+<h3 id="part-13-reconstitution">Part 13 — Reconstitution</h3>
+<p>Summary: Part 13 (Reconstitution) resolves the immediate emergency and then jumps long into the future, to the crater-rim settlement built in Orolo's name where avout and saeculars, including Artisan Quin and Barb, work side by side — surveying terraces, planting Orolo's old vineyard under scrap-metal trellises, and organizing gate-work as much for possible warfare between the "Magisteria" as for peace. The part's culmination is the cornerstone aut that begins the Second Reconstitution: Jesry's clock drops the cubic foundation stone — a fragment of the actual rod the Geometers threw from space, one face carved "of saunt orolo," "year 0 of the second reconstitution" on another — as the crowd sings a version of the Hylaean Anathem selected for its "temporal elasticity." The same gathering, attended by Orithenans, Bazian monks, Ganelial Crade, and Geometers of all four races (Urnudans, Troäns, Laterrans, Fthosians), hosts the double wedding: Yul and Cord are joined by Magister Sark, and Erasmas and Ala — joined in a Perelithian liaison, seconded by Jesry and Tulia — are united by Fraa Paphlagon at the place named after his former fid Fraa Orolo. Erasmas and the surviving institutions gain understanding, but the ending refuses to restore the old boundary between mathic contemplation and saecular history. The concent tradition proves its worth by entering action, and that success permanently alters the meaning of preservation, discipline, and future inquiry. Source anchors: Erasmas; Second Reconstitution; year 0; cornerstone; Hylaean Anathem; Jesry's clock; Orolo; Fraa Paphlagon; Magister Sark; Ala; Cord; Yul; Perelithian liaison; Geometers; Urnudans; Troäns; Laterrans; Fthosians; Artisan Quin; Barb; crater; Magisteria. <br />
+Analysis: Upsight names the intellectual payoff, but the ending matters institutionally. The cornerstone of the Second Reconstitution, the Hylaean Anathem, and the double wedding at the settlement named after Orolo show that preservation only justifies itself when it can reenter history at the right moment — memorialized here in stone, ritual, and marriage rather than in a restored cloister. The epilogue's final reflection on <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a> — that Deolaters are welcome "as long as they're not certain they're right," so that even an "Ark" becomes a social club when certainty dies — closes the loop opened in Part 1 and by Orolo's mockery of the artisan; Fraa Paphlagon's remarks likewise honor Orolo's instinctive skepticism of any system that "sought to draw limits around" the miracle of mind and cosmos. Contemplation and action are finally reconciled in <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: the new institution keeps the freedom of the mathic life but surrenders its false certainty and its insulation from the world.   </p>
+<h3 id="glossary">GLOSSARY</h3>
+<p>Summary: The extract closes with an extensive glossary defining Arbre's invented vocabulary — A.R., Adrakhonic Theorem, Allswell, Anathem, Apert, Aut, Avout, the Big Three (Muncoster, Tredegarh, Baritoe), blithe, the Book, the Convox, the Discipline, Dowment, Eliger, extramuros, Geometers, Hylaean Theoric World, Ita, Math, Peregrin, Plenner, Protism, the Reconstitution, Reticule, Sambe (the saecular variant), Sack, Saunt, Sæcular, synax, Teglon, Throwback, and more. Source anchors: Glossary; A.R.; Anathem; Apert; Avout; Big Three; Book; Convox; Discipline; Dowment; Geometers; Ita; Protism; Reconstitution; Reticule; Teglon. <br />
+Analysis: The glossary is more than back-matter: it formalizes the novel's <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> into a stable reference and gives the vault a canonical map of how Arbre's terms encode social theory. Read as a whole it reveals the systematic interlock of the concents' institutions, from the Discipline and the auts to the rare rites like Anathem and Voco — and it makes clear that knowing the vocabulary <em>is</em> a large part of understanding the social machinery the book stages.   </p>
+<h3 id="calca-1-cutting-the-cake">CALCA 1: Cutting the Cake</h3>
+<p>Summary: A supplement in which Erasmas walks Dath through the geometry of doubling by cutting a cake into square servings — a Socratic demonstration that doubling the side doubles, then quadruples, the area — attributed, in a wry aside, to Thelenes. Source anchors: Erasmas; Dath; Thelenes; cutting the cake; geometry. <br />
+Analysis: The vignette models teaching and the transmission of formal reasoning through shared practice, exactly the apprenticeship the mathic orders are built around — a compact instance of <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> as an enacted, Socratic act of passing understanding from one mind to another rather than storing it.   </p>
+<h3 id="calca-2-hemn-configuration-space">CALCA 2: Hemn (Configuration) Space</h3>
+<p>Summary: A supplement in which Erasmas uses a wine bottle on a gridded kitchen floor to explain configuration space — assigning coordinates so that the bottle's position and orientation become a point in a higher-dimensional space. Source anchors: Erasmas; wine bottle; coordinates; configuration space; hemn space; geometry. <br />
+Analysis: The piece is an elegant illustration of reducing a physical arrangement to a point in an abstract space, the same mathematical habit the novel relies on to think about the polycosm and the Geometers — a small window into <a href="//02%20Concepts/Information%20Theory.html">Information Theory</a> and abstract representation as the power at the heart of Arbre's mathic tradition.   </p>
+<h3 id="calca-3-complex-versus-simple-protism">CALCA 3: Complex Versus Simple Protism</h3>
+<p>Summary: A supplement in which Criscan walks Erasmas and Lio through the two-box diagram of Protism — the assertion that entities in the Hylaean Theoric World cause effects in the Arbran Causal Domain but not vice versa — and unpacks the premises: that the subjects of theorics exist independently of human minds and that human minds can perceive them. Source anchors: Erasmas; Lio; Criscan; Protism; Hylaean Theoric World; causal domain; theorics. <br />
+Analysis: This is the most explicitly philosophical of the supplements, laying out the Platonic/epistemological doctrine the whole novel tests against the crisis. It shows the avout's metaphysics as a formal, teachable framework — one that the arrival of the polycosm and the Geometers forces them to revise, and one that ties directly to the vault's interest in <a href="//02%20Concepts/Systems%20Thinking.html">Systems Thinking</a> and the structure of abstract claims.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li>The concent system is the main social technology of the book: a mechanism for preserving difficult thought across cycles of praxic overreach and civilizational backlash.   </li>
+<li>Orolo is the key character for understanding Stephenson's admiration for intellectually disciplined dissidence; the ending builds the new community in his name, the future Concent of Saunt Orolo (the "something of saunt orolo" carved on the Second Reconstitution cornerstone).   </li>
+<li>The novel's language is part of its argument, not just surface complexity; the dictionary definitions that open each Part are structural, not decorative.   </li>
+<li>The book's 13 reader "Parts" (Provener, Voco, Feral, Orithena, Inbrase, Messal, Advent, Requiem, Reconstitution, and so on) are each named for an aut or concept, mapping the crisis onto the liturgy of the mathic year.   </li>
+<li>The Geometers, the polycosm, the Teglon, the Convox, and the Lorites are the load-bearing concepts for cross-linking the book to other speculative-civilization texts in the vault.   </li>
+<li><code>Anathem</code> pairs especially well with books about institutions that store knowledge, about civilizations that repeatedly break themselves, and about the difficulty of acting on abstract truth in political time; it is a natural companion to the author's other system-building SF in this vault.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//02 Concepts/Knowledge Preservation.html">knowledge preservation</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html">collapse, resilience, and civilizational survival</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html">archives, skill, and civilizational continuity</a></li>
+	<li><a class="backlink" href="//04 Series/Middle-earth Legendarium.html">middle-earth legendarium</a></li>
+	<li><a class="backlink" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html">memory, narrative, and knowledge preservation</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Speculative Governance and Future Orders.html">speculative governance and future orders</a></li>
+	<li><a class="backlink" href="//01 Books/Children of Time.html">children of time</a></li>
+	<li><a class="backlink" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html">godel, escher, bach-an eternal golden braid</a></li>
+	<li><a class="backlink" href="//04 Series/Orthogonal Trilogy.html">04 series/orthogonal trilogy</a></li>
+	<li><a class="backlink" href="//01 Books/Orthogonal Trilogy.html">01 books/orthogonal trilogy</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Foundation Project.html">foundation project</a></li>
+	<li><a class="backlink" href="//04 Series/Foundation Sequence.html">foundation sequence</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Second Foundation.html">05 characters and entities/second foundation</a></li>
+	<li><a class="backlink" href="//05 Characters and Entities/Bene Gesserit.html">bene gesserit</a></li>
+	<li><a class="backlink" href="//01 Books/The Cleanest Race.html">the cleanest race</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/philosophy/index.html">philosophy</a></li>
+	<li><a class="backlink" href="//obs.html/tags/science-fiction/index.html">science-fiction</a></li>
+	<li><a class="backlink" href="//obs.html/tags/neal-stephenson/index.html">neal-stephenson</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A44950921788747469289761889155651311878{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D44950921788747469289761889155651311878{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B44950921788747469289761889155651311878{level}" level="{level}" note_temp_id="44950921788747469289761889155651311878" onclick="window.ObsHtmlGraph.run(this, '44950921788747469289761889155651311878', 'anathem');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C44950921788747469289761889155651311878{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

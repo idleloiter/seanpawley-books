@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="genoa and the genoese">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'genoa and the genoese';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=genoa and the genoese" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="genoa-and-the-genoese">Genoa and the Genoese</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><code>Genoa and the Genoese</code> (Steven A. Epstein, University of North Carolina Press, 1996) is a stand-alone nonfiction history of medieval and early Renaissance Genoa, 958–1528. In the vault graph it anchors the <strong>Early-modern commercial Europe</strong> subject cluster as the "republic-of-merchants" harbour book: it sits beside <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a>, <a href="//01%20Books/The%20House%20Of%20Medici.html">The House Of Medici</a>, <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a>, <a href="//01%20Books/The%20Richest%20Man%20Who%20Ever%20Lived.html">The Richest Man Who Ever Lived</a>, and <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a> as the medieval deep history of the state-as-firm and of funded public debt. The hub <a href="//01%20Books/A%20History%20of%20Portugal%20and%20the%20Portuguese%20Empire.html">A History of Portugal and the Portuguese Empire</a> also lists it as a sibling on maritime-empire grounds, and the Baroque-cycle novel <a href="//01%20Books/The%20Baroque%20Cycle/Quicksilver.html">Quicksilver</a> already treats Genoa as its world of early-modern finance. Topically the book belongs on the <a href="//00%20Maps%20of%20Content/Empire%2C%20Trade%2C%20and%20Maritime%20Worlds.html">Empire, Trade, and Maritime Worlds</a> shelf and feeds the <a href="//03%20Reading%20Paths/Maritime%20Empire%2C%20Peripheries%2C%20and%20Gateway%20Power.html">Maritime Empire, Peripheries, and Gateway Power</a> and <a href="//03%20Reading%20Paths/Commercial%20Society%2C%20Stagnation%2C%20and%20Institutional%20Drift.html">Commercial Society, Stagnation, and Institutional Drift</a> reading paths, with its San Giorgio material feeding the <a href="//03%20Reading%20Paths/Finance%2C%20Allocation%2C%20and%20Industrial%20Power.html">Finance, Allocation, and Industrial Power</a> path.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Epstein writes a history of Genoa that deliberately refuses to let the city dissolve into shipping lanes, colonies, and merchant stereotypes. He begins with the joke that Americans know Genoa through salami, jeans, Columbus, Paganini, Mazzini, and Corsica, then turns that thin recognition into a methodological problem: Genoa is famous in fragments, while the Genoese are poorly understood as a people formed by Liguria, maritime work, family structures, slavery, charity, and a long experiment with republican government. The book's title matters because Epstein keeps returning from Caffa, Chios, Famagusta, Alexandria, Bruges, and Cyprus to the streets, churches, hospitals, notarial offices, guild shops, and harbor taxes of Genoa itself. His preface announces four driving questions: the role of Islam in Genoa's rise (a bow to Henri Pirenne), the neglected literary culture of the Genoese, the puzzle of slavery and wage labor, and the paradox that the history of the Genoese abroad has obscured "the strangely neglected people of Genoa."   </p>
+<p>The opening chapters make Genoa's rise look contingent rather than inevitable. Liguria has a good harbor, the Giovi pass, winds useful to sailors, and access to the upper Po valley, but it also has poor soils, little flat land, no major navigable river, weak fishing, and scattered timber. The charter of 958 from Berengar and Adalbert, the 934–35 Muslim sack, the abbey of Santo Stefano, the first named slave Erkentruda (1005), and Marchese Alberto's charter of 1056 all show a small community rebuilding land tenure, written proof, and local custom before it had the later commune. Epstein's Genoa begins as a hard place where notaries, monasteries, women under Roman or Lombard law, small mills, vineyards, slaves, and transport routes mattered before capitalized maritime trade took recognizable shape. The compagna of 1099, the consuls and their brief of 1143, Caffaro's chronicle, and the crusading prizes of Antioch, Gibellet, Almería, and Tortosa then show self-government growing in lockstep with privileged trade.   </p>
+<p>The book follows Genoa's commercial acceleration through the twelfth and thirteenth centuries by tying contracts to state formation. Giovanni Scriba's cartulary (1,306 acts, 1154–64) with its commenda, societas, and sea loan contracts gives Epstein a way to show how capital moved through Sicily, Alexandria, Syria, North Africa, Provence, and the Byzantine world. The capture of Almería and Tortosa, the mint granted by Conrad II's successors, the abolition of the tercia for women (1143), the harbor mole, and the treaties from Saint Gilles to Barcelona all point to the same pattern: the commune grew by making legal and fiscal machinery for merchants while also taxing ships, disciplining neighborhoods, and buying or subordinating Ligurian towns. Through the thirteenth century the podestà experiment, the wars against Pisa and Frederick II, the rise of the popolo, and Genoa's fiscal inventions all repeat this pairing of outward power and internal stress.   </p>
+<p>Epstein repeatedly pairs Genoa's outward success with internal violence. The wars against Pisa, Venice, Frederick II, the Mamluks, Aragon, and Catalonia are inseparable from the feuds of the della Volta, de Curia (della Corte), Spinola, Doria, Fieschi, Grimaldi, Adorno, and Fregoso families. The rise of Guglielmo Boccanegra in 1257, the captaincies of the people, the naval victory at Meloria (1284), the battle of Curzola (1298), the surrender to Henry VII in 1311, the devastating civil war of 1314–31, and the dogeship of Simone Boccanegra (1339) all show a city that could build fleets and credit instruments but repeatedly failed to make its political class accept limits. The book treats foreign rule by Henry VII, Robert of Naples, the Visconti, Bourbon France, Boucicaut, Milan, and eventually Spain as a recurring Genoese remedy for self-inflicted disorder — liberty traded for peace.   </p>
+<p>Finance is Epstein's strongest connective thread. Genoa's state becomes poor while Genoese individuals remain rich because war debts are turned into compere, interest claims, salt gabelles, customs pledges, and offices that protect creditors. The 1259 funded-debt reform at 8 percent, the 1303 debt restructuring, the peace compera of 1331, the 1340 debt table (L2,862,757), Francesco Vivaldi's gift of shares in 1371, the Office of the Gazaria, and the foundation of the Casa San Giorgio in 1407 make public finance a governing institution rather than a background fact. San Giorgio begins as an organized creditor body, becomes a quasi-public bank, takes over customs revenues and eventually colonies like Corsica and the Black Sea possessions, and leaves the republic dependent on the same wealthy shareholders who benefit from regressive taxes on salt, grain, wine, contracts, wages, and necessities. Epstein is careful to show that the rich won twice: they lent to a state too weak to repay, and the interest was paid by the poor through excises on food and salt.   </p>
+<p>The moral center of the book lies in Epstein's refusal to separate Genoese liberty from Genoese slavery. He tracks named enslaved people from Erkentruda in 1005 through Saracen, Tartar, Circassian, Russian, Moorish, Jewish, and Black Sea slaves in later centuries, paying close attention to gender, domestic service, sexual vulnerability, sale prices, pregnancy rules, passes, branding, curfews, and the slave code under Boucicaut. The contradiction is not treated as incidental hypocrisy. Genoese humanists could invoke classical liberty, Genoese politicians could rebel against French or Milanese overlords, and Genoese merchants could still buy women in the Marini district, tax manumissions, and treat rape of an enslaved woman as a fine owed partly to her owner. The same citizens who voted to hand the city to Charles VI of France were the ones whose slave code branded runaways, chained their property, and pregnant slaves as financial assets of their masters.   </p>
+<p>The last chapter pulls together Caterina Fieschi Adorno, Columbus, the fall of Constantinople, Phocaea, Lesbos, Famagusta, the loss of Caffa, the silk and paper industries, Paolo da Novi's 1507 popular dogeship, the sack of 1522, and Andrea Doria's reform of 1528. Epstein does not present 1528 as a clean birth of modern Genoa. He makes it the moment when a weary city, battered by French and Spanish wars and exhausted by the old noble-popolo struggle, accepted an aristocratic settlement under Spanish protection. Andrea Doria becomes a recognizably Genoese figure: noble, maritime, anti-Muslim, a contractor for imperial galleys, a slave user, a maker of stability, and the man who closed political participation for most of the popolo in the name of liberty. The epilogue then follows Genoa past 1528 — Lepanto, the free port of 1669, the plague of 1656–57 and the Albergo dei Poveri, the sale of Corsica in 1768, the fall of the republic in 1797, annexation by France in 1805, and the Risorgimento — under the four original themes of Islam, mercantile culture, labor and charity, and the city proper.   </p>
+<h2 id="major-people-societies-and-motivations">Major people, societies, and motivations</h2>
+<ul>
+<li><strong>The nobles and their clans (Doria, Spinola, Fieschi, Grimaldi, della Volta, Carmadino/de Curia line)</strong>: This is the collective protagonist and antagonist of the book. Descended from the viscounts and marchesi of Liguria, the great families dominate the consulate, fight the feuds (della Volta vs. della Corte), take turns capturing the city (Spinola and Doria twins in 1270–91), and finally close the political class into twenty-eight alberghi in 1528.   </li>
+<li><strong>The popolo (the people)</strong>: Define the whole arc — from anonymous galley crews and taxed weavers to the "fiat populus" revolt of January 1257 that made Guglielmo Boccanegra captain, to the dogeship of Simone Boccanegra in 1339, to the last stand of Paolo da Novi in 1507. Epstein stresses that the popolo were usually "drawn into politics" through war service and regressive taxation rather than ideology.   </li>
+<li><strong>Caffaro (ca. 1080–1164)</strong>: The first great Genoese chronicler, consul six times, crusade veteran (fleet of 1100–01), envoy and bribes-payer in Rome, and the author both of the annals 1099–1163 and of works on the liberation of the eastern cities and the capture of Almería. For Epstein he anchors the "exemplary tradition of city chronicles."   </li>
+<li><strong>Giovanni Scriba</strong>: Genoa's official scribe and the notary whose cartulary (1,306 acts, 1154–64) is the oldest surviving in Europe; his records of commenda, societas, and sea loan let Epstein date the "heroic age" of Genoese commerce.   </li>
+<li><strong>Guglielmo Boccanegra (d. 1274)</strong>: A wealthy non-noble consul at Aigues Mortes and Acre who became captain of the people in January 1257, funded the state debt at 8 percent, built the Palazzo San Giorgio and the Molo Vecchio, and was overthrown in May 1262. His grandnephew Simone became the first doge.   </li>
+<li><strong>Benedetto Zaccaria (ca. 1250–1307)</strong>: The richest merchant-corsair of the age; private holder of Phocaea and its alum, the great galley the Divicia, service to emperor, France and Castile, victor's role at Meloria, and final lordship of Chios (1305).   </li>
+<li><strong>Simone Boccanegra (first doge, 1339–44; again 1356–63)</strong>: The popolo's doge, acclaimed in the Piazza after the 1339 rising; restructured debt, pacified Liguria, spun off the Old Maona of Chios, and died in office (possibly poisoned) in March 1363.   </li>
+<li><strong>Innocent IV (Sinibaldo Fieschi, pope 1243–54)</strong>: Genoa's first pope, of the counts of Lavagna; his election and the rescue of his pontificate by Genoese galleys in 1244 made Genoa the papacy's favored city and turned the city Guelf.   </li>
+<li><strong>The Stella brothers (Giorgio, chronicling 1311–1405; Giovanni, 1405–35)</strong>: The humanist-styled chroniclers of the "forgotten" fourteenth century; Giorgio is the only window on Simone Boccanegra's first rise and the plague of 1348.   </li>
+<li><strong>The Genoese women</strong>: From Richelda's Lombard-law consent and the women who despoiled the Wives ceremony after the abolition of the tercia (1143), to the mothers who rioted for pirate crews in 1230, to the charter women (Ginevra in Boccaccio), to the slave owners and charities of the fifteenth century, and finally Caterina Fieschi Adorno.   </li>
+<li><strong>Caterina Fieschi Adorno (1450–1510)</strong>: The noble mystic, rector of the Pammatone hospital, "oral authoress" of the Spiritual Dialogue and Treatise on Purgatory, who would "throw away a thousand worlds" for love of God. The internal frontier of the book's final chapter.   </li>
+<li><strong>Christopher Columbus (ca. 1446–1506)</strong>: Ludy, son of a wool weaver, mapseller in Lisbon, slave-trader in ordinary Genoese fashion, letter-writer to the protectors of San Giorgio in 1502, and for Epstein the external frontier of the same chapter.   </li>
+<li><strong>Andrea Doria (1466–1560)</strong>: The "great survivor" and "prince of Melfi"; admiral and corsair against the Turks, asiento contractor of galleys to Charles V, user of slave rowers, and architect of the aristocratic republic of 1528 that lasted until 1797.   </li>
+<li><strong>The archbishops and the church</strong>: From San Siro and San Lorenzo's relics (Saint John the Baptist from 1098), to Archbishop Siro and Ugone della Volta, to the Dominican Giustiniani-popolo saints and San Giorgio's conflict-of-interest piety.   </li>
+<li><strong>The Casa di San Giorgio (1407–1805)</strong>: Strictly an institution, but the book's most consequential "actor" — an organized body of creditors that became a quasi-public bank and eventually a state within a state that governed Corsica and portions of Liguria.   </li>
+<li><strong>Societies and collectives</strong>: the compagna/commune, the podestà, the alberghi (clans), the Maone (colonial shareholding companies), and the guilds — each branded as a Genoese institution created to make trust and credit work in a society with weak central power.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling/kindred books (Early-modern commercial Europe cluster, all [high] per <code>06 Plans/book-affinity.md</code>)</strong>: <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a> (the later quintessential commercial republic and financial innovator; the comparative for Genoa's "state-as-firm"), <a href="//01%20Books/The%20House%20Of%20Medici.html">The House Of Medici</a> (a merchant-bank family state, Florence's answer to Genoese commercial politics), <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a> (de Roover's bank-as-firm study; natural pair for the Casa San Giorgio), <a href="//01%20Books/The%20Richest%20Man%20Who%20Ever%20Lived.html">The Richest Man Who Ever Lived</a> (Fugger as prime early-modern financier; Genoa's compere and San Giorgio as the institutional prehistory of such fortunes), and <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a> (the North Sea commercial world as a parallel maritime takeoff).   </li>
+<li><strong>Hub</strong>: <a href="//01%20Books/A%20History%20of%20Portugal%20and%20the%20Portuguese%20Empire.html">A History of Portugal and the Portuguese Empire</a> — the hub's affinity row names Genoa as a sibling; both are Mediterranean-origin maritime commercial empires, and Genoese mariners and financiers (Columbus, the Atlantic projects) recur in the Portuguese story.   </li>
+<li><strong>Incoming link (Baroque-cycle fiction)</strong>: <a href="//01%20Books/The%20Baroque%20Cycle/Quicksilver.html">Quicksilver</a> (whose own affinity row lists this book) treats late-1680s finance and silver, the world the Casa San Giorgio's descendants made.   </li>
+<li><strong>Concepts</strong>: <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>, <a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a>, <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>, <a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>, <a href="//02%20Concepts/Institutions.html">Institutions</a>, <a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>, <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>, <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>, <a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>, <a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>, <a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>, <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>.   </li>
+<li><strong>Entities</strong>: <a href="//05%20Characters%20and%20Entities/Byzantine%20Empire.html">Byzantine Empire</a> (Genoa's chief eastern partner and rival; Nymphaeum 1261, Pera), <a href="//05%20Characters%20and%20Entities/Holy%20Roman%20Empire.html">Holy Roman Empire</a> (Barbarossa, Frederick II, Henry VII).   </li>
+<li><strong>Vault maps, paths, and series</strong>: <a href="//00%20Maps%20of%20Content/Empire%2C%20Trade%2C%20and%20Maritime%20Worlds.html">Empire, Trade, and Maritime Worlds</a>, <a href="//00%20Maps%20of%20Content/State%2C%20Order%2C%20and%20Legibility.html">State, Order, and Legibility</a>, <a href="//00%20Maps%20of%20Content/Finance%2C%20Firms%2C%20and%20Industrialization.html">Finance, Firms, and Industrialization</a>, <a href="//03%20Reading%20Paths/Maritime%20Empire%2C%20Peripheries%2C%20and%20Gateway%20Power.html">Maritime Empire, Peripheries, and Gateway Power</a>, <a href="//03%20Reading%20Paths/Commercial%20Society%2C%20Stagnation%2C%20and%20Institutional%20Drift.html">Commercial Society, Stagnation, and Institutional Drift</a>, <a href="//03%20Reading%20Paths/Finance%2C%20Allocation%2C%20and%20Industrial%20Power.html">Finance, Allocation, and Industrial Power</a>, <a href="//03%20Reading%20Paths/State%20Formation%2C%20Legibility%2C%20and%20Informal%20Order.html">State Formation, Legibility, and Informal Order</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>The sea as both lifeline and dividing wall</strong>: maritime wage work as Genoa's safety valve for men, and as the "wall of a prison" for the women left behind.   </li>
+<li><strong>Land scarcity and ecological constraint as the motor of commercial takeoff</strong>: poor Ligurian soils push nobles into piracy, trade, and shipbuilding.   </li>
+<li><strong>The compagna and the culture of written proof</strong>: notaries, cartularies, oaths, and arbitration replacing force as the basis of trust.   </li>
+<li><strong>The state grows poor while citizens grow rich</strong>: funded debt, compere, and regressive consumption taxes as the recurring fiscal formula.   </li>
+<li><strong>Slavery and liberty as two sides of one coin</strong>: liberty debates coexisting with an active slave trade and a slave code.   </li>
+<li><strong>Inviting the foreigner to rule</strong>: Henry VII, Robert of Naples, the Visconti, Charles VI, Boucicaut, Milan, Spain — foreign rule as the recurring Genoese remedy for factional paralysis.   </li>
+<li><strong>The alture of the alberghi</strong>: clan and neighborhood solidarity substituting for weak central authority; the eventual aristocratic closure of 1528.   </li>
+<li><strong>Private empire</strong>: Maone of Ceuta, Chios, and Cyprus — colonial holdings assigned to shareholders as interest on debt, with Genoa keeping only nominal imperium.   </li>
+<li><strong>Women, households, and the doubling of the city's half-visible population</strong>: dowries, the tercia, charity, foundling hospitals, and the female slave majority of the 1458 count (2,005 of 2,159 slaves).   </li>
+<li><strong>The "forgotten" fourteenth century and post-plague caution</strong>: the loss of the chronicle tradition, the depression of trade, and the shift from the intrepid, risk-taking merchant to the cautious shareholder.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a>: Epstein's Genoa is the argument that a fully commercial society — built on contracts, arbitration, privileged trade, and merchant-dominated politics — can run a city with almost no central coercion; the counterpoint being that its moral life (slavery, charity, honor) never squared with liberty.   </li>
+<li><a href="//02%20Concepts/Maritime%20Power.html">Maritime Power</a>: fleets and galleys as the state's chief instrument (Meloria, Curzola, the Flanders convoys), but always privately financed and, after 1348, drastically shrunken.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the paradox of a weak state with strong institutions; Genoa could build a mole and a palace, raise fleets, buy up Liguria — yet could not stop feuds or make a constitution stick.   </li>
+<li><a href="//02%20Concepts/Financial%20Infrastructure.html">Financial Infrastructure</a>: from commenda and sea loans to funded debt, share markets, exchange, insurance, and finally the Casa San Giorgio — Genoa invents the fiscal machinery later cities copy.   </li>
+<li><a href="//02%20Concepts/Institutions.html">Institutions</a>: the compagna, consuls, podestà, anziani, Office of the Debt, masters of accounts, and the college of protectors — Genoa's substitutes for a strong executive.   </li>
+<li><a href="//02%20Concepts/Elite%20Formation.html">Elite Formation</a>: how old nobles, new rich popolo, and co-opted foreigners (Solomon of Salerno, the Piacenza bankers) merge into the alberghi, closing ranks in 1528.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: the "largely privatized empire" — Almería enfeoffed, Gibellet, Caffa, Chios, Corsica, Cyprus — ruled by vassals and shareholders rather than by agents of the commune.   </li>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: galleys of 100–125 rowers, cogs of up to 18,000 cantars, the staple port rule, convoys, and the food supply that always weighed on policy.   </li>
+<li><a href="//02%20Concepts/Chokepoints%20and%20Gateways.html">Chokepoints and Gateways</a>: the Giovi pass, Lerici, the Bosphorus, Pera, the Dardanelles (Tenedos), and the Crimea as the strategic and fiscal pressure points of Genoese trade.   </li>
+<li><a href="//02%20Concepts/Political%20Economy.html">Political Economy</a>: Epstein's running demonstration that taxation, debt, and war were not background but the very matter of Genoese politics — who lent, who paid the gabelles, who got the interest.   </li>
+<li><a href="//02%20Concepts/Ecological%20Constraint.html">Ecological Constraint</a>: the poor soils, steep coast, chestnut-dependent peasantry, and absence of rivers that made Genoa's entire existence a rebuttal to "central place theory."   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: enslaved women in Genoese households, slave trading in the Mediterranean, and the moral cost of a commercial society that would tax the rape of a slave.   </li>
+<li><a href="//02%20Concepts/Capital%20Allocation.html">Capital Allocation</a>: the state's habit of mortgaging future revenues, the share market in the compere, Vivaldi's gift, and the eventual absorption of the budget by interest payments.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: galleys and cogs, the Voltri paper industry, silk and cotton weaving, printing in 1471, and shipwright skills — Genoa's adaptation to eastern contraction.   </li>
+<li><a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>: the repeated resort to foreign lords and the drift of power into San Giorgio as the cumulative result of each crisis's expedients.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="preface">Preface</h3>
+<p>Summary: Epstein opens by explaining why Genoa is poorly known despite its scattered associations with salami, blue jeans from Gênes, Christopher Columbus, Niccolò Paganini, Giuseppe Mazzini, and James Boswell's account of Corsica. Genoa, he writes, is "just a name for a place; the Genoese are an interesting people," shaped by Liguria's isolation, secrecy, clannishness, mercantile culture, poor relief, slavery, colonization, and republicanism. He surveys earlier interpreters — Michel-Giuseppe Canale, Teofilo De Negri (whose "love of liberty" thesis he will complicate with slavery), Robert S. Lopez (religiosity, irrepressible individualism, family clannishness, co-opting newcomers), Gabriella Airaldi (whose "Januensis ergo mercator" and secrecy leitmotivs he adopts), Henri Pirenne, and Fernand Braudel. He also introduces the Genoese authors who will double as sources: Caffaro, Jacopo da Voragine, Jacopo Doria, Sinibaldo Fieschi (Innocent IV), Giovanni Balbi, the Stella brothers, and Saint Catherine of Genoa. The preface lays out his four questions — Islam, Genoese authors, slavery and wage labor, and Genoa itself — and fixes the book's span: 958, "because what happened before is a tale briefly told," to 1528, Genoa's "forgotten centuries" being outside his competence.   </p>
+<p>Analysis: The preface turns partial recognition (Gênes, Columbus, Corsica) into a research agenda: Epstein will write a people, not a port. Lopez's and Airaldi's categories (secrecy, clannishness, mercantile culture) are both his scaffolding and his target, because <a href="//02%20Concepts/Coercive%20Labor.html">slavery</a> sits uneasily with De Negri's "love of liberty" — a tension that structures the book. The four questions map directly onto the vault's <a href="//02%20Concepts/Commercial%20Society.html">Commercial Society</a> and <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> frames: a city whose identity was made by trade with Islam, whose moral economy was corrupted by <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a>, and whose domestic institutions (the vaunted "republic") repeatedly failed to discipline its own people. The dates 958 and 1528 delimit the republic before Andrea Doria's aristocratic settlement, which the epilogue then extends. Islam's centrality in the preface is echoed down the vault by the Crusades-to-trade arc of <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a> and the later Iberian worlds of <a href="//01%20Books/A%20History%20of%20Portugal%20and%20the%20Portuguese%20Empire.html">A History of Portugal and the Portuguese Empire</a>.   </p>
+<p>Source anchors: Gênes; Columbus; Paganini; Mazzini; Boswell; Corsica; Michel-Giuseppe Canale; Teofilo De Negri; Robert S. Lopez; Gabriella Airaldi; Henri Pirenne; Fernand Braudel; Caffaro; Jacopo da Voragine; Sinibaldo Fieschi; Giovanni Balbi; Saint Catherine of Genoa; secrecy; 958; 1528   </p>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>Summary: Epstein dedicates the book to David Herlihy, who introduced him to Robert S. Lopez; he recalls Felix Gilbert and Myron Gilmore as teachers, thanks readers of the manuscript (David Abulafia, James B. Given, George Gorse, Benjamin Z. Kedar), consultants (Avner Greif for the first two chapters), and Genoese colleagues Gabriella Airaldi and Sandra Origone. He also acknowledges Geo Pistarino, the University of Colorado fellowship (1988–89), Patricia Murphy (tables), Pamela Marquez (maps), the University of North Carolina Press staff, and his wife Jean. The acknowledgments are a compact honor-roll of the twentieth-century historiography (Lopez, Abulafia, Greif, Kedar, Airaldi, Heers is not named here but will be a constant presence) that the footnotes deploy.   </p>
+<p>Analysis: This page shows Epstein's method — a social and economic historian working inside the archives of Liguria and the scholarship of Abulafia, Greif, and Kedar — and the intellectual tradition in which the book claims its place. Greif's later work on merchant reputation and contracts literally lives in the debate the book fights with its own evidence: <a href="//02%20Concepts/Institutions.html">institutions</a> (notarial record-keeping, oaths, arbitration) are what Genoa uses "to create a basis for trust." The dedication to Herlihy (a historian of family and demography) signals the book's core decision to write women, slaves, households, and population into a state-formation story — the decision that separates this book from the pure-fiscal narratives of its sibling <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a>.   </p>
+<p>Source anchors: David Herlihy; Robert S. Lopez; Gabriella Airaldi; Sandra Origone; Geo Pistarino; David Abulafia; Benjamin Z. Kedar; Avner Greif; University of Colorado   </p>
+<h3 id="h_1-from-practically-nothing-to-something-9581154">1. From Practically Nothing to Something, 958–1154</h3>
+<p>Summary: The first chapter begins with Liguria's physical limits: the Apennines drop steeply to the sea, the Bisagno and Polcevera are not navigable rivers, the Giovi pass (472 meters) reaches the Po valley only with difficulty, the region has poor shallow soils, chestnut forests, thin terraces, scattered timber, and a harbor that needs constant improvement. Epstein traces Roman Genua as a modest castrum, the early Christian cults of San Siro and San Lorenzo, Byzantine rule from 537 to about 642, Lombard and Carolingian survivals, the Muslim sack of 934–35 (which destroyed the archives and gave Jacopo da Voragine one of his only secure early facts), and the charter of 958 from kings Berengar and Adalbert to the fidelis Ebone — a collective confirmation of customs, lands, and slaves of both sexes. He then follows Santo Stefano's land charters (a double monastery building a patrimony by purchase and donation), Richelda's Lombard-law consent in 1019, the sale of the Burgundian slave Erkentruda in 1005 for ten solidi, the mill on the Bisagno of 1012 built by partners in thirds, San Fruttuoso di Capodimonte, the 1056 charter of Marchese Alberto (confirming Genoese customs, the validity of notarial charters, and freedom from ordeal or combat), early naval cooperation with Pisa against Muslims (Sardinia 1016, al-Mahdiyya 1087), and the First Crusade's rewards — Bohemund's heap of privileges at Antioch in 1098, Tancred's grants in 1101, the Embriaco brothers at Jerusalem, the capture of Caesarea in 1101, Baldwin I's one-third grants, and the conquests of Gibellet, Almería (1147), and Tortosa (1148), which cost the commune more than they returned and left it L15,000 in debt by 1154.   </p>
+<p>Analysis: The Bisagno, the Giovi pass, and the poor Ligurian soils make Genoa's rise depend on transport and legal organization rather than agricultural wealth, turning <a href="//02%20Concepts/Ecological%20Constraint.html">ecological constraint</a> into an institutional pressure from the very start — the same scarcity logic the book later finds in the <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a>'s North Sea towns and the marshland republics. The Muslim sack and the charter of 958 let Epstein begin with rupture and reconstruction instead of Roman grandeur, while Santo Stefano's charters and Erkentruda show that landholding, notarial memory, and <a href="//02%20Concepts/Coercive%20Labor.html">slavery</a> were present before the great commercial expansion. The 1056 charter records Genoese self-government and reliance on written proof before the fully visible commune appears; the crusading prizes (Antioch, Gibellet, Almería, Tortosa) then found the pattern of a "largely privatized empire" — vassals like Ottone Bonvillano and the Embriaco holding Genoa's one-thirds of distant cities — which is the embryo of the later <a href="//02%20Concepts/Empire%20and%20Periphery.html">empire and periphery</a> structure. The Spanish debacle establishes the fiscal theme that will never leave: wars fought for privileges and glory, financed by taxing ships and mortgaging income, ending in debt and retrenchment.   </p>
+<p>Source anchors: Bisagno; Polcevera; Giovi pass; San Siro; San Lorenzo; Muslim sack 934–35; Berengar and Adalbert 958; Ebone; Santo Stefano; Richelda; Erkentruda; Marchese Alberto 1056; San Fruttuoso; al-Mahdiyya; Caffaro; Bohemund; Tancred; Embriaco; Baldwin I; Gibellet; Almería 1147; Tortosa 1148; Ottone Bonvillano   </p>
+<h3 id="h_2-the-takeoff-11541204">2. The Takeoff, 1154–1204</h3>
+<p>Summary: The second chapter uses Giovanni Scriba's cartulary, the oldest surviving notarial cartulary in Europe (1,306 acts, 1154–64), to examine Genoese economic growth. Epstein explains the three contract forms — the commenda (investor bear all risk, traveling partner take profit share), the societas (both partners contribute capital, the traveler gets a larger share than his capital alone justifies), and the sea loan (repayable only "upon safe return," an embryonic insurance). He uses the tables to argue for scale, scope, and falling transaction costs, borrowing Alfred Chandler's categories of first-mover advantage, and shows how merchants such as Solomon of Salerno (a co-opted foreigner who married his daughter into the Mallon family), Ingone della Volta, and the Doria put trade profits into land. The chapter then follows politics and diplomacy: Emperor Frederick Barbarossa and Emperor Manuel Comnenus (treaty of 1155, the 4 percent commercium, Genoese quarters in Constantinople), the 1162 imperial charter drawn up with Giovanni Scriba as secretary, the del Volta/della Corte civil war and the peace of 1169 (archbishop and relics in the parlamento), the podestà experiment beginning with Manegoldo of Brescia (1190–91) and Oberto de Olevano, the "brief of 1143" and the oath of the compagna, the subordination of Albenga and other Riviera towns, the exclusion from Romania after the Fourth Crusade, and the spiritual landscape: 190 surviving wills (1155–1204) showing charity to San Giovanni, the lepers of Capo Fari, bridges, Masses, and the rich's ransom of captives.   </p>
+<p>Analysis: Giovanni Scriba allows Epstein to make commenda, societas, and sea loan contracts the primary evidence for <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a> rather than a vague "commercial spirit": contracts as trust technologies in an illiterate, oath-based society. Here is the deepest vault analogue of the authors of small firms and merchant-law worlds that run from the Medici banks to the present — the Medici practice of factor-and-partnership accounting in <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a> is the direct descendant of Scriba's societas. The locked alliance of market, law, and arbitration shows <a href="//02%20Concepts/Institutions.html">institutions</a> doing the work of the state. Solomon of Salerno and the della Volta show how outsiders and old nobles could both be folded into Genoese trade and <a href="//02%20Concepts/Elite%20Formation.html">elite formation</a>, while Manegoldo of Brescia and the Albenga treaties show that the same city needed imported political management and regional subordination to keep business working. The vow-enforced expulsions (tercia abolished 1143, women taxed, sables priced) point to a <a href="//02%20Concepts/Political%20Economy.html">political economy</a> run for merchants and paid for by everyone else — the formula that later produces the compere and San Giorgio.   </p>
+<p>Source anchors: Giovanni Scriba; cartulary; commenda; societas; sea loan; Solomon of Salerno; Mallon; Ingone della Volta; Doria; Frederick Barbarossa; Manuel Comnenus; commercium; brief of 1143; Manegoldo of Brescia; Oberto de Olevano; Albenga; Fourth Crusade; charity wills; Capo Fari; Alfred Chandler   </p>
+<h3 id="h_3-between-the-devil-and-the-deep-blue-sea-12041257">3. Between the Devil and the Deep Blue Sea, 1204–1257</h3>
+<p>Summary: This chapter presents early thirteenth-century Genoa as a city squeezed between maritime opportunity and enemies including Frederick II, Ghibellines, Pisa, Muslims, heretics, and its own restless popolo. Epstein opens with the economy: galleys with crews of 100 to 125 men, wool workers in Rivoturbido and San Andrea de Porta, the Humiliati weavers, tiny debased penny coins, slaves such as Alda and Maria (left by will in 1214) and the free servant Pauleta (given away for fourteen years of service in 1256). He then narrates the incorporation of Liguria: the collecta and forced loans, the war for Capriata, the Savona revolt and its blinding of Ventimiglia prisoners, the conspiratorial compagna of Guglielmo de Mari, and the peace of 1227. The middle of the chapter is dominated by Frederick II: the Rampini (Guelf) and Mascherati (Ghibelline) factions, Ansaldo de Mari's service as imperial admiral, the election of Genoa's own Pope Innocent IV (Sinibaldo Fieschi) in 1243, the papal rescue by Genoese galleys in 1244, and the end of the war after Frederick's death in 1250. After 1252's gold coinage and the purchase of Andora for L8,000, the chapter closes with the economic downturn Lopez detected — the Negrobono, Calvo, and Leccacorvo bank failures — and the "fiat populus" revolt of January 1257 that made Guglielmo Boccanegra captain of the people.   </p>
+<p>Analysis: Frederick II and Oltremare connect Genoa's economy to papal-imperial and crusading politics, while Rivoturbido and the Humiliati show how maritime wealth also reshaped wage labor inside the city — the artisan and textile world that comes to dominate the early modern economy of <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a> was first organized here on cloth. Alda and Maria make <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> part of household economy at the same time that Pauleta shows free poverty competing with enslaved domestic labor. The Rampini/Mascherati split, with both factions drawing on nobles and popolo, is used to dissolve the clean Guelf/Ghibelline mapping and to pose the book's recurring question about <a href="//02%20Concepts/State%20Capacity.html">state capacity</a>: why of all Italian cities Genoa proved least able to institutionalize its class conflict. Andora and Guglielmo Boccanegra link countryside acquisition to popular politics: the commune buys lordship over villages while the popolo learns that war taxes and noble violence give it reasons to demand power — the conjunction that makes 1257 the pivot into the next chapter.   </p>
+<p>Source anchors: Frederick II; Ghibellines; Oltremare; Rivoturbido; San Andrea de Porta; Humiliati; Alda; Maria; Pauleta; collecta; Capriata; Savona; Guglielmo de Mari; Innocent IV; Sinibaldo Fieschi; Ansaldo de Mari; Andora; gold coinage 1252; Negrobono bank; Leccacorvo; Guglielmo Boccanegra   </p>
+<h3 id="h_4-captains-of-the-people-12571311">4. Captains of the People, 1257–1311</h3>
+<p>Summary: Epstein follows Genoa through the popular captaincy of Guglielmo Boccanegra: the defeat at Acre in June 1258 in the War of Saint Sabas, fiscal reform that turned alienated revenues into a funded public debt at 8 percent (1259), the construction of the Palazzo San Giorgio (1260) and the Molo Vecchio, the inclusion of guild heads in the treaty approvers, the Treaty of Nymphaeum with Emperor Michael Palaeologus (April 1261, ratified July), the recovery of Constantinople days later, and Boccanegra's overthrow in May 1262. The chapter then covers Ghibelline rule under the Spinola and Doria captains (from 1270 with Oberto Spinola and Oberto Doria), the Black Sea colony at Caffa (late 1260s), Benedetto Zaccaria's Chios and Phocaea interests, the crushing defeat of Pisa at Meloria on 6 August 1284, the peace of 1288, the fall of Tripoli (1289) and Acre (1291), Sultan Qalawun's treaty of 1290, the Officium Robarie (1301), the Vivaldi brothers' Atlantic expedition of 1291, the Curzola victory over Venice in 1298 (Marco Polo among the prisoners), Catalan trouble, the burning of Caffa in 1308, and the surrender of the city to Henry VII in October-November 1311. A middle section treats Genoese culture as it peaked: Jacopo Doria's chronicle, Giovanni Balbi's Catholicon, the Anonymous poet ("Wherever one goes and stays he makes another Genoa"), and Jacopo da Varagine's Golden Legend.   </p>
+<p>Analysis: Guglielmo Boccanegra and Palazzo San Giorgio show popular government trying to make public power visible in the harbor, where Genoa's money was made; the 1259 compera at 8 percent is the vault's clearest medieval instance of a state funding itself by selling shares in its own tax income — the ancestor institution of <a href="//02%20Concepts/Financial%20Infrastructure.html">financial infrastructure</a> later perfected at San Giorgio. Nymphaeum, Caffa, and Benedetto Zaccaria make <a href="//02%20Concepts/Maritime%20Power.html">maritime power</a> a treaty-and-colony system rather than only fleet strength, opening the Black Sea and private colonial enterprise after the loss of Latin Constantinople. Meloria and the Qalawun treaty reveal a hard Genoese pragmatism: the city could crush Pisa, bargain with Mamluk Egypt after Acre fell, and still fail so badly at home that Henry VII looked like the solution to <a href="//02%20Concepts/State%20Capacity.html">factional paralysis</a>. The culture section is arguably the book's most distinctive move — a place where the vault's <a href="//02%20Concepts/Commercial%20Society.html">commercial society</a> generates dictionaries (Balbi), saints' lives (Varagine), and city chronicles rather than epic poetry — and Dante's invective against the Genoese sits beside the Anonymous's poem as two readings of the same city: one the world's scapegoat, the other "another Genoa" wherever a Genoese settles, a diaspora logic that anticipates the trading networks of the <a href="//05%20Characters%20and%20Entities/Byzantine%20Empire.html">Byzantine Empire</a>'s successors and of the later Dutch commercial republic <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a>.   </p>
+<p>Source anchors: Guglielmo Boccanegra; War of Saint Sabas; Acre 1258; compera 8%; Palazzo San Giorgio; Molo Vecchio; Treaty of Nymphaeum 1261; Michael Palaeologus; Caffa; Benedetto Zaccaria; Chios; Phocaea; Meloria 1284; peace of 1288; Tripoli; Acre 1291; Qalawun 1290; Officium Robarie; Vivaldi brothers 1291; Curzola 1298; Marco Polo; Caffa burned 1308; Henry VII 1311; Jacopo Doria; Giovanni Balbi; Catholicon; Anonymous poet; Jacopo da Varagine; Golden Legend   </p>
+<h3 id="h_5-long-live-the-people-the-merchants-and-the-doge-13111370">5. Long Live the People, the Merchants, and the Doge, 1311–1370</h3>
+<p>Summary: The fifth chapter begins with Genoa's under-studied fourteenth century, where civil war weakens the civic chronicle tradition and Giorgio Stella can barely report the plague of 1348. Epstein examines the 1303 debt restructuring (from 10 percent to 6 percent), the 1313 Office of the Gazaria, Henry VII's lordship and death (1313), Uguccione della Faggiuola, the Spinola-Doria civil war of 1314–31 (fought from Busalla), submission to Robert of Naples and Pope John XXII in July 1318, the siege of 1318–20, the Great Compera of Peace of 1331, the revolt of the mariners, the election of Simone Boccanegra as the first doge on 23 September 1339, his pacification of Liguria and consolidation of the debt, the Old Maona of Chios (founded 1346 after Vignoso's conquest), the plague of 1348, the Bosphorus battle of 1352, the defeat off Sardinia on 28 August 1353, Visconti rule from October 1353, Simone's return in 1356, his second dogeship and his death in March 1363, and Francesco Vivaldi's patriotic gift of L9,000 in shares in 1371. The plague section is a model of forensic uncertainty: three surviving notarial cartularies, the Ferrara chronicle's suspect 40,000 deaths, and a best estimate of population falling from roughly 60,000–100,000 (his own guess: 80,000 at the 1290s height) to about 40,000 in 1350.   </p>
+<p>Analysis: Giorgio Stella's thin reporting on 1348 lets Epstein show how civil war damaged Genoa's ability even to narrate itself. The debt figures — L2,862,757 by 1340, the compera di pace at L975,143 — and the Office of the Gazaria make <a href="//02%20Concepts/Capital%20Allocation.html">capital allocation</a> central to survival, because colonial revenues, public debt, and creditor claims shaped what the poorer post-plague city could actually do; the taxes that serviced this debt fell overwhelmingly on food, salt, and wages, the regressive fiscal engine the book documents again and again. Robert of Naples and the Visconti demonstrate how often foreign lords were treated as a "super podestà," an experiment in <a href="//02%20Concepts/Political%20Economy.html">political economy</a> that failed to deliver either order or liberty. Simone Boccanegra, the Old Maona, and Francesco Vivaldi show the popolo, colonial finance, and debt relief as linked attempts to govern scarcity — and the Maona of Chios is the book's purest case of <a href="//02%20Concepts/Empire%20and%20Periphery.html">empire-as-collateral</a>, a whole island-assigned to shareholders as interest on war debt. The plagues' economic aftermath (smaller fleets, constrained trade) is the demographic floor under everything that follows, connecting to the broader collapse-and-resilience arc the vault traces through <a href="//01%20Books/The%20House%20Of%20Medici.html">The House Of Medici</a>'s Florence and the post-plague Italian world.   </p>
+<p>Source anchors: Giorgio Stella; 1303 debt restructuring; Office of the Gazaria; Henry VII; Uguccione della Faggiuola; Busalla; Robert of Naples; John XXII; siege 1318–20; Compera of Peace 1331; Simone Boccanegra 1339; Santa Tecla; Vignoso; Old Maona of Chios 1346; plague 1348; Bosphorus 1352; Sardinia 1353; Visconti; Francesco Vivaldi 1371; Giovanni de Murta; Gabriele Adorno; debt L2,862,757   </p>
+<h3 id="h_6-liberty-and-humanism-slavery-and-the-bank-13701435">6. Liberty and Humanism: Slavery and the Bank, 1370–1435</h3>
+<p>Summary: Epstein frames this period around Genoese liberty, humanism, slavery, and the Casa San Giorgio, beginning from threats by Giangaleazzo Visconti, Charles VI of France, Venice, Florence, Milan, the Mamluks, and the Ottoman state. The 1376–77 customs records (L1,827,000 of trade) show the network moving cloth, pepper, gold, ginger, oil, wool, cotton, and silk; the masters of accounts, the Office of the Debt, the inspectors, and the protectors of the compere make up a creditor bureaucracy that rivals the state. War with Venice over Cyprus and Tenedos produces the conquest of Famagusta (1373), the Maona of Cyprus, the crushing War of Chioggia (1378–81) and the Peace of Turin (1381), then a decade of instability that leads to the assemblies of 1395–96, the debate over liberty, and submission to Charles VI of France on 27 November 1396, followed by Boucicaut's brutal governorship (1401–09). In 1407 the Genoese founded the Casa San Giorgio, first as an organized group of creditors managing the state's debts (L2.9 million across six compere), then — from March 1408 — as a quasi-public bank. The chapter ends with the anti-Milanese revolt of Christmas 1435 after the naval victory at Ponza (5 August 1435) and with a long section on slavery: Giorgio da Feggino's slave shop, the female majority of slaves (2,005 of 2,159 in 1458), Tartar and Circassian women, Boucicaut's slave code (keys, arsenic, passes, branding, curfew, and the fine for rape of a slave), and the Jewish refugees of 1492 sold or expelled.   </p>
+<p>Analysis: Casa San Giorgio gives institutional form to creditor power: a board of protectors who must own L1,000 in shares, a council of fifty-two, a market in L100 shares, a 1 percent transfer tax, and eventually the right to govern territory — Machiavelli's admiration ("a republic more memorable than the Venetian one") is quoted as the period's best commentary. Here the book most directly engages its sibling <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a>: both de Roover's bank and San Giorgio are early financial institutions, but Epstein stresses that the Casa is a state within a state, run for the rich on the backs of the poor — the pattern that will recur in <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a>, whose financial genius Genoa prefigures by three centuries. The 1396 debates over liberty, with citizens citing Sallust and Augustine while others swore the city could live free, are the book's most moving demonstration that <a href="//02%20Concepts/Commercial%20Society.html">commercial society</a> could still debate its <a href="//03%20Reading%20Paths/Voluntary%20Order%2C%20Civil%20Society%2C%20and%20Nonstate%20Capacity.html">liberty</a> in classical terms at the very moment it accepted a French master. And the slave code shows <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> fully legalized: equality before the law stops at the color line, and the state taxes both the sale and the rape of slaves.   </p>
+<p>Source anchors: Casa San Giorgio 1407; Giangaleazzo Visconti; 1376 customs; masters of accounts; Office of the Debt; protectors of the compere; Famagusta 1373; Maona of Cyprus; Tenedos; War of Chioggia; Peace of Turin 1381; assembly of 700; submission to Charles VI 1396; Boucicaut 1401; Bianchi 1399; battle of Ponza 1435; Giorgio da Feggino; Marini district; slave code; Tartar; Circassian; 1458 count of slaves; Jewish refugees 1492; Machiavelli   </p>
+<h3 id="h_7-to-throw-away-a-thousand-worlds-14361528">7. To Throw Away a Thousand Worlds, 1436–1528</h3>
+<p>Summary: The final chapter takes its title from Santa Caterina Fieschi Adorno, born in 1450, whose mystical love of God was such that "if she had a thousand worlds she would have thrown them all away for this love"; it sets her beside Christopher Columbus, born around 1446, who left Genoa for Chios, Cuba, and the Atlantic. Epstein describes eastern contraction — Constantinople in 1453 (with Giovanni Giustiniani Longo's Genoese contingent), Phocaea in 1455, Lesbos in 1462, Famagusta in 1464, Venetian Cyprus in 1474, Caffa in 1475, Chios's survival until 1566 — and industrial adjustment through cogs, the Voltri paper industry, silk and wool weaving, and apprenticeship contracts. On finance, San Giorgio's banking business fails in 1444 (the Office of '44), the Casa takes the mint in 1445, abolishes direct taxes (head tax 1456, avaria 1490), and becomes the state's pensioner, ruling Corsica and key Ligurian towns; the debt grows from L7 million in 1440 to nearly L20 million by 1509. Columbus appears three times: as the product of Genoa's Muslim-facing, slave-trading culture whose 1498 letter proposes exporting four thousand slaves a year from Hispaniola, and as the author of the 1502 letter offering a tithe of his New World income to San Giorgio. The political end runs from French and Spanish rule, through Paolo da Novi's 1507 dogeship (beheaded 15 June 1507), the sack of 1522, to Andrea Doria's reform of 1528: twenty-three (later twenty-eight) noble alberghi, a biennial doge, and a closed political class governing until 1797 under Spain's wing.   </p>
+<p>Analysis: Santa Caterina and Columbus let Epstein contrast two Genoese frontiers: the hospital and the Atlantic, Pammatone and Hispaniola, mystical labor and coerced labor — both figures shaped by the same culture of charity, slavery, and the sea. Constantinople, Caffa, and Voltri paper show <a href="//02%20Concepts/Technological%20Change.html">technological change</a> as adaptation after eastern contraction, with paper, silk, cotton, and wool replacing lost colonial advantage, in the way that <a href="//01%20Books/The%20Edge%20of%20the%20World.html">The Edge of the World</a> tracks commercial worlds re-founding themselves further north. Columbus as slave trader and Doria as asiento contractor and slave-gallery owner link the medieval <a href="//02%20Concepts/Coercive%20Labor.html">coercive labor</a> system directly to the New World and to the Spanish-imperial finance that <a href="//01%20Books/The%20Richest%20Man%20Who%20Ever%20Lived.html">The Richest Man Who Ever Lived</a>'s Fugger also supplied — the Genoese silver-and-galleys business is the prehistory of the whole Atlantic-finance cluster. Paolo da Novi and Andrea Doria complete the political arc: the last major popolo experiment ends under French force, and the 1528 settlement turns old civic liberty into an aristocratic <a href="//02%20Concepts/Order%20and%20Governance.html">order</a> protected by Spanish power — precisely the "state as firm backed by a great power" pattern that the <a href="//01%20Books/A%20History%20of%20Portugal%20and%20the%20Portuguese%20Empire.html">history of the Portuguese Empire</a> and, later, the Dutch and English republics will replay at larger scale.   </p>
+<p>Source anchors: Santa Caterina Fieschi Adorno; Pammatone; Monte de Pietà; Columbus; Chios; Constantinople 1453; Phocaea 1455; Lesbos 1462; Famagusta 1464; Cyprus 1474; Caffa 1475; cogs; Voltri paper; silk; wool; apprenticeship; Office of '44; mint 1445; head tax; avaria 1490; debt L20 million; letter of 1502; Paolo da Novi 1507; sack of 1522; Andrea Doria; asiento; alberghi; 1528   </p>
+<h3 id="epilogue">Epilogue</h3>
+<p>Summary: The epilogue looks beyond 1528 through Epstein's chosen questions about Islam, mercantile culture, labor and charity, and the city proper. Gian Andrea Doria appears at Lepanto in 1571 after Chios had been lost to the Ottomans in 1566, while Genoa's free-port declaration in 1669 tries to preserve trade as Tuscan Livorno rises and France dominates relations with the Ottomans. Epstein follows the 1576 reforms that abolished the medieval alberghi, the Spanish alliance Quevedo's line about gold being born in the New World, dying in Spain, and being buried in Genoa; the dedication of the republic to the Virgin Mary in 1637; the plague of 1656–57 that killed a quarter of the city; the Albergo dei Poveri founded by Emanuele Brignole in 1656 (the prototypical workhouse with over a thousand inmates by 1664); the Austrian occupation and revolt of 1746; the sale of Corsica in 1768; the fall of the republic in 1797; French annexation in 1805; Sardinian rule and the Risorgimento; industrial labor, fascism, communism, and the modern port.   </p>
+<p>Analysis: Gian Andrea Doria, Lepanto, and Chios mark the end of the martial eastern world that had shaped medieval Genoa, while Livorno and Quevedo point to a new early modern economy tied to Spain, Atlantic bullion, and rival ports — the world the <a href="//01%20Books/The%20Dutch%20Republic.html">The Dutch Republic</a> and the Baroque-cycle novels narrate. The Virgin Mary and the Albergo dei Poveri show how sovereignty and charity took institutional forms after the medieval republic, the workhouse being private charity's "ultimate solution" to poverty — an outcome with roots in the medieval alms the earlier chapters measured. By ending with fascism, communism, and the modern port, Epstein keeps <a href="//02%20Concepts/National%20Identity.html">national identity</a> attached to labor, civic memory, and outsider rule rather than treating Genoa as a finished medieval city; the red thread he commends is the old Latin motto in the Spinola palazzo, "Pecunia si uti nescis domina": use money well or it will use you.   </p>
+<p>Source anchors: Gian Andrea Doria; Lepanto 1571; Chios 1566; Livorno; free port 1669; Quevedo; Virgin Mary 1637; plague 1656–57; Emanuele Brignole; Albergo dei Poveri 1656; 1746 Austrian occupation; revolt of 1746; Corsica sold 1768; fall of republic 1797; annexation 1805; Sardinia; Risorgimento; Mazzini; Garibaldi; Pecunia si uti nescis   </p>
+<h3 id="appendix-genoese-revolts-and-changes-in-government-12571528">Appendix: Genoese Revolts and Changes in Government, 1257–1528</h3>
+<p>Summary: The appendix is a chronological table of every revolt and change of government from the popolo rising of January 1257 (which made Guglielmo Boccanegra captain) to the coup of Andrea Doria in September 1528 that founded the aristocratic republic lasting to 1798. It records more than eighty entries: noble revolts, popolo risings, Guelf and Ghibelline coups, submissions to Henry VII (1311), Robert of Naples (1318), Charles VI of France (1396), Filippo Maria Visconti (1421, 1464, 1487), the French in 1499 and 1515, the sack of 1522, and the dogeships of Simone Boccanegra, Giovanni de Murta, Gabriele Adorno, the Campofregoso and Adorno cycle of the fifteenth century, Paolo da Novi (1507), and the triumvirates of 1462. The table supplies dates, outcomes, and each ruler's term.   </p>
+<p>Analysis: The appendix is the book's most compact evidence that Genoa's problem was not poverty of institutions but their chronic instability: <a href="//02%20Concepts/Institutions.html">institutions</a> (consuls, podestà, captains, doges) multiplied while the underlying division of noble and popolo never resolved itself. The list is a control experiment for the whole vault's question of <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> and <a href="//02%20Concepts/Order%20and%20Governance.html">order and governance</a>: the same city that produced the first funded debt, the Compera of Peace, and San Giorgio could not perform even the elementary act of transferring power peacefully, which is why the citizens kept handing themselves to Henry VII, Robert, the Visconti, French kings, and finally a Spanish-admiral-turned-prince — the pattern repeated later at smaller scale in the faction-plagued commercial worlds of <a href="//01%20Books/The%20House%20Of%20Medici.html">The House Of Medici</a> and of the pre-1572 Dutch towns.   </p>
+<p>Source anchors: revolts and changes of government 1257–1528; Guglielmo Boccanegra; Simone Boccanegra; Henry VII; Robert of Naples; Charles VI; Filippo Maria Visconti; Otto; Paolo da Novi; Andrea Doria 1528; aristocratic republic to 1798   </p>
+<h3 id="back-matter-notes-bibliography-index">Back matter (Notes, Bibliography, Index)</h3>
+<p>Summary: The extract closes with the book's apparatus: roughly two hundred pages of notes keyed to each chapter, a bibliography of printed sources and modern scholarship (Caffaro's annals as edited by Belgrano and Imperiale di Sant'Angelo, Giovanni Scriba's cartulary as edited by Chiaudano and Moresco, the Statuto of Pera, the Annales Genuenses, Liber Iurium, the Codice diplomatico, Lopez, Airaldi, Abulafia, Kedar, Heers, Sieveking, Gioffrè, Day, and many others), and the index. The extract renders this section in fragmented OCR (abbreviations followed by per-chapter endnotes).   </p>
+<p>Analysis: The notes field is itself an argument for Epstein's method: the book is assembled from cartularies and chronicles that Genoa itself produced, so the reconstruction of Genoa's history is inseparable from the notarial and annalist institutions the book describes. The collation of notarial cartulary editions (Lanfranco, Guglielmo Cassinese, Bonvillano, Giovanni di Guiberto, Oberto Scriba de Mercato) shows how much of the vault's economic history rests on the "Culture of the written word" that Genoa industrialized first — the same archival matrix behind <a href="//01%20Books/The%20Rise%20and%20Decline%20of%20the%20Medici%20Bank%2C%201397-1494.html">The Rise and Decline of the Medici Bank, 1397-1494</a> and the account-books histories of early-modern Europe.   </p>
+<p>Source anchors: chapters 1–7 endnotes; Giovanni Scriba; Caffaro; Annales Genuenses; Liber Iurium; Codice diplomatico; Roberto Lopez; Gabriella Airaldi; David Abulafia; Benjamin Z. Kedar; Jacques Heers; Heinrich Sieveking; Domenico Gioffrè; John Day; index   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Gênes and jeans</strong>: blue cotton cloth reexported from France in bales marked "Gênes" gave English its word for denim — Epstein's favorite example of Genoa unrecognized.   </li>
+<li><strong>958 and 1528</strong>: the book's deliberate endpoints; "begun in 958 because what happened before is a tale briefly told," concluded because 1528 lies just before Genoa's "forgotten centuries."   </li>
+<li><strong>Erkentruda (1005)</strong>: the first slave with a name in Genoese history, a Burgundian woman sold by Armano to Benedetto and Benedetta for ten solidi, with a warranty that she was not a fugitive, not stolen, and not sick.   </li>
+<li><strong>The charter of 958</strong>: kings Berengar and Adalbert, via their fidelis Ebone, confirmed customs, villeins, vineyards, mills, and "the slaves of both sexes (servis et ancillis utriusque sexus)" — slavery present at the very foundation.   </li>
+<li><strong>The 1143 decision</strong>: on the first day of office the consuls abolished the tercia (a wife's customary third of her husband's goods), prompting Caffaro's marginal sketch of two mourning women; Diane Owen Hughes reads it as keeping wealth in the male line.   </li>
+<li><strong>Caffaro's bribes of 1120–21</strong>: 1,200 marks of silver to the pope for the consecration of Corsican bishops, borrowed from Roman bankers at 25 percent interest — "hence beginning the Genoese habit of secrecy."   </li>
+<li><strong>Cartulary statistics</strong>: Giovanni Scriba, 1,306 acts, 335 overseas contracts; Syria contracts averaged L300, Sicily L80; 26 wills.   </li>
+<li><strong>First gold coinage 1252</strong>: Genoa minted gold just before Florence as North African trade paid off.   </li>
+<li><strong>King Frederick's charter of 1162</strong>: the coast from Monaco to Portovenere in fief; the Genoese promised a third of any conquered lands; the delegation's secretary was Giovanni Scriba.   </li>
+<li><strong>The Compera of 1259</strong>: all alienated revenues annulled; creditors given L8 a year per L100; an early market in public securities; saying a word against it cost L100.   </li>
+<li><strong>Palazzo San Giorgio and the Molo Vecchio</strong>: Guglielmo Boccanegra's building program of 1260 made public power visible in the harbor.   </li>
+<li><strong>The Treaty of Nymphaeum (1261)</strong>: up to fifty galleys at the emperor's expense with a specified fighting complement of 154 men per galley and itemized pay; Constantinople fell days later "almost by accident."   </li>
+<li><strong>Meloria (6 August 1284)</strong>: Genoese claimed 5,000 Pisans killed and 9,272 captured; Oberto Doria's galley the center of the fight.   </li>
+<li><strong>Curzola (7 September 1298)</strong>: eighty-four of ninety-six Venetian galleys taken, 8,000 prisoners, including Marco Polo.   </li>
+<li><strong>The Anonymous poet</strong>: "And so many are the Genoese / And so spread out throughout the world, / That wherever one goes and stays / He makes another Genoa there" — his answer to Dante's "Why hasn't the world expunged you?"   </li>
+<li><strong>The debt numbers</strong>: L2,862,757 (1340); compera pacis L975,143 (1331); San Giorgio's original capital L2,938,462 (1407–08); debt near L20 million by 1509; interest consuming about 90 percent of ordinary income.   </li>
+<li><strong>Francesco Vivaldi (1371)</strong>: gave ninety shares (L9,000); his interest-dedicated fund had bought L921,490 of debt by 1454 — one hundred times the gift; a statue in the Palazzo San Giorgio's hall of honor.   </li>
+<li><strong>Maona of Chios (1346/47)</strong>: a debt of L203,000 converted into a twenty-year lease of Chios, mastic, and the alum of Phocaea; shareholders later renamed themselves Giustiniani.   </li>
+<li><strong>Chios until 1566</strong>: the last Genoese eastern holding; Lepanto in 1571 was the last great Genoese naval battle.   </li>
+<li><strong>The 1396 liberty debates</strong>: at the assembly of 10 November 1395, 188 backed Antonio Re (find a lord), 267 backed Clemente de Facio (let the doge do it), and 85 backed Lazaro Spinola (a balia of eight) — majority votes on submission to Charles VI.   </li>
+<li><strong>Boucicaut's slave code</strong>: keys, gold, and arsenic withheld from slaves; no teaching apothecary craft to Tartars or Turks; pregnant slaves' deaths fined L50 to the owner; the child cost L25; rape of a slave fined, with half to the owner.   </li>
+<li><strong>The 1458 slave count</strong>: 2,159 slaves in Genoa, of whom 2,005 were women and 54 men — slaves roughly 2–4 percent of the population.   </li>
+<li><strong>Caffa (1475)</strong>: the Ottomans took it to control the slave trade; survivors went to Pera, and 1,500 local boys and girls were sold.   </li>
+<li><strong>Columbus (1502)</strong>: from Seville, wrote to San Giorgio offering a tithe of his New World income to abolish gabelles on grain and wine; his will of 1506 forgot it.   </li>
+<li><strong>Paolo da Novi (1507)</strong>: a prosperous silk dyer; the last authentic popolo doge, beheaded on 15 June 1507 after his defeat by Louis XII.   </li>
+<li><strong>The sack of 1522</strong>: 30–31 May; Giustiniani counted it as only the third capture of Genoa, after the Carthaginians and Lombards and the Saracens.   </li>
+<li><strong>Doria's economics</strong>: free oarsmen cost thirteen gold scudi a year; slave rowers cost forty scudi and served ten years; his asiento paid 20 percent profit.   </li>
+<li><strong>The motto of the Genoese</strong>: "Pecunia si uti nescis domina, pecunia si uti scis ancilla" — use money well or it will use you.   </li>
+<li><strong>Population cues</strong>: perhaps 80,000 at the 1290s height, about 40,000 in 1350 (guestimates, not facts); Agostino Giustiniani's 51,000 for 1535 and 200,000 for all Liguria.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Going the Distance.html">going the distance</a></li>
+	<li><a class="backlink" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html">evolution of civilizations - carrol quigley</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/medieval-history/index.html">medieval-history</a></li>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/maritime-trade/index.html">maritime-trade</a></li>
+	<li><a class="backlink" href="//obs.html/tags/public-finance/index.html">public-finance</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/genoa/index.html">genoa</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A98466522074656270890102459283644908152{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D98466522074656270890102459283644908152{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B98466522074656270890102459283644908152{level}" level="{level}" note_temp_id="98466522074656270890102459283644908152" onclick="window.ObsHtmlGraph.run(this, '98466522074656270890102459283644908152', 'genoa and the genoese');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C98466522074656270890102459283644908152{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

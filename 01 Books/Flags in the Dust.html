@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="flags in the dust">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'flags in the dust';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=flags in the dust" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="flags-in-the-dust">Flags in the Dust</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>''Flags in the Dust'' is, on the extract's own evidence, Faulkner's unshorn Ur-version of the novel later cut to about 110,000 words and published in 1929 as ''Sartoris''. The title-page apparatus of this extract lists it explicitly as ''Sartoris (1929) [Flags in the Dust (1973)]'', and the Library of Congress entry calls the whole ''An uncut version of the work published in 1929 under title: Sartoris''. It is Faulkner's first Yoknapatawpha novel — the Editors' Note printed after the text says it was "the first of his novels to be set in what he later called 'my own little postage stamp of native soil'" — and the Saratory family legend it fixes here (Colonel John Sartoris, Redlaw, the derringer, the railroad, the doomed bayard twins) is the seedbed the rest of the corpus replays. Per <code>06 Plans/book-affinity.md</code> its kindred siblings are <a href="//01%20Books/Sanctuary.html">Sanctuary</a>, <a href="//01%20Books/The%20Unvanquished.html">The Unvanquished</a>, <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a>, and <a href="//01%20Books/The%20Reivers.html">The Reivers</a>, all marked [high]. In the vault graph the book sits inside the Faulkner/Sartor corpus cluster, advances the <a href="//03%20Reading%20Paths/Identity%2C%20Memory%2C%20and%20Cultural%20Legitimacy.html">Identity, Memory, and Cultural Legitimacy</a> and <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a> paths, and feeds the <a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a> and <a href="//00%20Maps%20of%20Content/War%2C%20Revolution%2C%20and%20Civilizational%20Breakdown.html">War, Revolution, and Civilizational Breakdown</a> maps. It is the source-twin of ''Sanctuary'' (both share the Horace Benbow–Belle–Little Belle triangle) and the reverse-echo of ''The Unvanquished'' (the same Colonel John Sartoris whose murder ''The Unvanquished'' retells from Bayard's side).   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><em>Flags in the Dust</em> is organized around a Mississippi family living under the weight of its own heroic dead. The opening scene makes the method clear: old man Falls brings Colonel John Sartoris into old Bayard's bank office as if memory were a physical visitor, and the dead colonel's pipe, teeth marks, military aura, and legend dominate the room more completely than the living banker or the pauper who has walked from the county Poor Farm. The novel's family history is not background; it is an active pressure on money, manners, horses, servants, courtship, grief, and recklessness.   </p>
+<p>The Sartoris household is built out of old Bayard, Miss Jenny, Simon, Isom, returning soldiers, horses, gardens, verandas, and rituals of deference that survive into an industrializing postwar world. Simon's carriage, top hat, linen duster, matched geldings, and refusal to use the hitching post keep the family theatrically linked to an older order, while Miss Jenny's fights over salvia beds, hoes, Isom's borrowed uniform, and Bayard's wartime damage puncture that order with comedy. Faulkner's social world is precise: Black servants, poor whites, bankers, merchants, Benbows, returning veterans, and townspeople all know the gestures by which rank is performed.   </p>
+<p>The novel's World War I aftermath enters through Bayard Sartoris and Horace Benbow in different registers. Bayard's war has intensified the Sartoris appetite for speed, risk, and death, while Horace arrives by train in badly fitting khaki, guarding a fragile glass object from Venice and babbling about art, his sister Narcissa, and the difficulty of re-entering Jefferson. Their returns are not heroic completions. They expose a generation unable to fit either the old county codes or the new postwar arrangements.   </p>
+<p>Faulkner works by counterpointing comedy and doom. Simon's schemes, the Second Baptist church money deputation, Brother Moore's greasy notebook, Uncle Bird, Miss Jenny's sharp tongue, and Horace's ornate letters sit beside grief for dead Sartorises, old Bayard's deaf isolation, Narcissa's emotional guardedness, and young Bayard's destructive momentum. The narrative repeatedly turns household management and local farce into signs of a larger family disorder.   </p>
+<p>The five-chapter structure moves from ancestral presence to domestic comedy, returned-veteran estrangement, public/community entanglement, and Horace's frustrated interior life. Chapter One reaches from old man Falls and the dead colonel's pipe through the carriage ride, Aunt Jenny's Civil War stories, old man Falls's yarns about the flight from the Yankees and the derringer, and young Bayard's night-time return with the story of John's death over France. Chapter Two plays marriage plot and community farce across the Sartoris veranda and the Beaumont/Caspey world and culminates in Bayard's stallion ride and arrest. Chapter Three is the longest: Horace's re-entry, his affair with Belle, young Bayard's rib-crushing car smash and convalescence, old man Falls treating the wen, and Byron Snopes's anonymous letters and theft. Chapter Four moves from the October church-deputation comedy to the sorghum-mill and 'possum-hunting idyll, the Thanksgiving dinner, old Bayard's death in the overturned car, Bayard's refuge with the MacCallums, and his Christmas ride away from home. Chapter Five follows Horace's letters from his rented house with Belle and Little Belle, Bayard's wanderings and death testing an inventor's spring-winged aeroplane at Dayton, and — the same June day Narcissa's child is born — Simon's murder and Miss Jenny's discovery at the cemetery, ending on the naming of the child "Benbow Sartoris." The extract ends with the 2006 Noel Polk textual note, Joseph Blotner's annotations, and a short Faulkner biography, all of which vouch for the uncut/Sartoris relationship.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>Colonel John Sartoris</strong> (dead): the shaper. The pipe, the derringer, the railroad, the two carpetbaggers he killed, and the phrase "Redlaw'll kill me tomorrow, for I shall be unarmed" define the Sartoris ethos his descendants spend the book re-enacting or escaping. He is "evoked like a genie or a deity by an illiterate old man's tedious reminiscing."   </li>
+<li><strong>Old Bayard Sartoris</strong>: the deaf, bank-president grandfather who carries town authority and family guilt. He keeps the hitching post against industrial progress, siphons bourbon into a decanter under his dogs' gaze, meditates on the family bible's dissolving column of names, lets old man Falls treat his wen (which a Memphis specialist plucks off whole), and dies in the car beside his grandson on the frosty road.   </li>
+<li><strong>Miss Jenny Du Pre</strong> (Virginia Du Pre, "Aunt Jenny"): the Carolina-born widow transplanted with the colored glass windows, keeper of the family legend (she tells the Jeb Stuart/anchovies story, "I danced a valse with him in Baltimore in '58"). She governs the Sartoris household by insult and discipline — carrot-and-stick mothering of Simon, Isom, and both Bayards — and survives nearly everyone.   </li>
+<li><strong>Young Bayard Sartoris</strong>: the returned RAF pilot, twin's survivor. His war (John shot down, Ploeckner) drives him into speed: the gray car, the water-tank dive, the stallion-ride, the serenade, the rib-crushing crash, the marriage to Narcissa, and finally the fatal test-flight at Dayton. He inherits the phrase old Bayard applies to himself — "keeping me for a reliable witness to the extinction of it."   </li>
+<li><strong>John Sartoris, Jr. ("Johnny")</strong>: the warm, merry dead twin and Bayard's obsession. Officer killed July 5, 1918, flying a Sopwith Camel ("Pupil of Richthofen's" Ploeckner got him); he haunts every scene as the gauge by which Bayard judges himself.   </li>
+<li><strong>Narcissa Benbow (later Sartoris)</strong>: Horace's sister and Bayard's wife. Serene, grave, 26, she is the "sanctuary" figure — her calm reads as provincial dullness to Caroline, as something to violate to Byron Snopes, and as love and dread to Bayard. She reads to him through his convalescence and ends by renaming their child "Benbow Sartoris" against the family curse.   </li>
+<li><strong>Horace Benbow</strong>: the lawyer-aesthete, glass-blower, "Thou still unravished bride of quietude" reciter. He returns to a hush (waiting for Belle, stringing everything through words), conducts the Belle affair, marries her, and moves to a crude new lumber town where he lives with Belle and Little Belle beyond hope of the "meaning of peace."   </li>
+<li><strong>Belle Mitchell</strong>: Harry's wife, "cannily stupid," the hot-house hostess whose tea ritual, music-room kisses, and "I want to have your child" pull Horace away from Narcissa; she goes to Reno and remarries him.   </li>
+<li><strong>Harry Mitchell</strong>: the cotton speculator, "ugly as sin and kindhearted," too decent to keep Belle; reduced to "movie subtitles" and a final portrait of a stricken ox.   </li>
+<li><strong>Simon (Deacon Strother)</strong>: the Sartoris carriage-driver, butler, and church deacon, the family's satiric chorus. He "puts out" the Second Baptist building fund, is bailed out by old Bayard's check, and is finally found with his head crushed in Meloney Harris's cabin — Miss Jenny's "last one."   </li>
+<li><strong>Isom and Elnora</strong>: Simon's grandson and daughter; Isom in borrowed khaki, Elnora's singing and kitchen labor keep the household's Black domestic economy visible.   </li>
+<li><strong>Caspey</strong>: Simon's war-returned son, insolent about "cullud soldiers" and demanding rights, knocked through the screen door by old Bayard with a stick of stove wood — the novel's sharpest point on race and the postwar labor order.   </li>
+<li><strong>Dr Lucius Quintus Peabody</strong>: 87-year-old, 310-pound, Yocona County institution and John Sartoris's regimental surgeon; he saves old Bayard from the knife and lectures him about the automobile.   </li>
+<li><strong>Dr Alford</strong>: the cold, ambitious newcomer who diagnoses cancer and wants to cut; his fame-wen disappears only when the Memphis specialist touches it.   </li>
+<li><strong>old man Falls</strong>: the poor-farm veteran who returns the colonel's pipe and treats the wen with Choctaw salve; his war memories and "walk up and spit in deestruction's face" speeches are the book's oldest surviving memory-bearer.   </li>
+<li><strong>Byron Snopes</strong>: the bank's bookkeeper, the anonymous letter-writer who dictates the secret letters through the boy Virgil Beard, who rises at the Benbows' garage roof, steals Narcissa's packet of letters, flees with stolen banknotes, and slinks to Frenchman's Bend — the first Snopes as villain.   </li>
+<li><strong>The MacCallums</strong> (Virginius the father, Rafe, Henry, Lee, Jackson, Buddy): the hill-country hunting family that shelters Bayard; Jackson's fox-hound experiment and Buddy's war "charm" provide the novel's most whole alternative to Sartoris doom.   </li>
+<li><strong>Aunt Sally Wyatt</strong>, <strong>Mrs Marders</strong>, <strong>Frankie</strong>, <strong>little Belle</strong>, <strong>Joan (Belle's sister)</strong>, <strong>V.K. Suratt</strong>: supporting registers of gossip, courtship, and male folly.   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><strong>Sibling books (affinity map, [high]):</strong> <a href="//01%20Books/Sanctuary.html">Sanctuary</a> — the same Horace-Belle-Little Belle love triangle and the watchful, breaking-into bedrooms Byron Snopes anticipates Temple Drake's perils; <a href="//01%20Books/The%20Unvanquished.html">The Unvanquished</a> — the same Colonel John Sartoris, his Redlaw killing, and the Sartoris war legend from the point of view of the (un)revenger Bayard; <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a> — family doom, the dynasty built on violent founding, and the phrase "the fatal semblance of his dream"; <a href="//01%20Books/The%20Reivers.html">The Reivers</a> — the Sartoris line's own last, comic breed, the child of the next generation (Benbow Sartoris here) and Faulkner's valediction to Yoknapatawpha's horses, cars, and boys.   </li>
+<li><strong>Concepts:</strong> <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>, <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>, <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>, <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>, <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>, <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>, <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>, <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>.   </li>
+<li><strong>Paths/MoCs:</strong> <a href="//03%20Reading%20Paths/Identity%2C%20Memory%2C%20and%20Cultural%20Legitimacy.html">Identity, Memory, and Cultural Legitimacy</a>, <a href="//03%20Reading%20Paths/Testimony%2C%20War%20Memory%2C%20and%20Broken%20Official%20Narratives.html">Testimony, War Memory, and Broken Official Narratives</a>, <a href="//00%20Maps%20of%20Content/Identity%2C%20Culture%2C%20and%20Social%20Formation.html">Identity, Culture, and Social Formation</a>, <a href="//00%20Maps%20of%20Content/War%2C%20Revolution%2C%20and%20Civilizational%20Breakdown.html">War, Revolution, and Civilizational Breakdown</a>.   </li>
+<li><strong>Extract node:</strong> <a href="//not_created.html" class="nonexistent-link">Extracted text</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li>The living dead: how a family legend, a pipe, a derringer, and a cussed sentence ("Redlaw'll kill me tomorrow") run the household better than any living man.   </li>
+<li>War memory and failed reintegration: Bayard's return outruns itself; Horace's return is verbal; Post-1918 Jefferson cannot hold either.   </li>
+<li>Ceremony as ideology: the carriage, top hat, wedding, church deputation, Thanksgiving, and inheritance are all ways of performing rank under economic change.   </li>
+<li>Race and labor after emancipation: Simon, Caspey, Elnora, Isom, and the "putting-out" of church money show dependency, insolence, and patronage inside one household.   </li>
+<li>Words as evasion: Horace's letters, Byron Snopes's anonymous letters, and Miss Jenny's telegrams all shape reality to the speaker.   </li>
+<li>Doom as path dependence: each generation replays "the fatal semblance of his dream" until the name is changed — "He isn't John. He's Benbow Sartoris."   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a>: Colonel Sartoris's pipe and family legend let the heroic dead govern the living household; old man Falls's recollections, the cedar chest, and the family bible's fading column of names are the archive the story works from.   </li>
+<li><a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: carriage rituals, military costumes, domestic manners, and public deference keep the Sartoris rank visible in postwar Jefferson; the new lumber town's $60,000 courthouse is its brittle fake.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: the veranda dispute over Second Baptist church money reveals obligation moving through household authority, church claims, and improvised accounting; the bank, the Beard hotel, and the deputation are informal power centers.   </li>
+<li><a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a>: Simon's threatened absence exposes how Sartoris dignity depends on Black domestic labor that the household treats as both subordinate and indispensable; Caspey's wartime "freedom talk" is the counter-order.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: Horace edits letters and aesthetic references into a version of himself that can evade the facts of his divided loyalties; Byron Snopes composes anonymous love letters by rote and guilt.   </li>
+<li><a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a>: the novel is the classic postwar-collapse text — veterans, displaced households, inherited injury, and the family's own civil war carried forward by sons.   </li>
+<li><a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a>: the Sartoris doom is institutionally inherited — each Bayard re-enacts the founder's recklessness ("I am the first of my name to see sixty years"); the hitching-post versus the automobile is drift in miniature.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the whole final pages turn on naming the heir — "We'll name him John" versus "He isn't John. He's Benbow Sartoris" — the fight over who (and what) succeeds the dead line.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="chapter-one">Chapter One</h3>
+<p>Summary: The chapter opens with old man Falls walking three miles in from the county Poor Farm carrying Colonel John Sartoris's pipe, returning it because "a po' house aint no fitten place for anything of his'n." The dead colonel, "far more palpable than either of the two old men," dominates the bank office; the pipe carries his teeth marks. After Falls goes, the green-eye-shaded bookkeeper announces Simon's arrival, and old Bayard drives out past the salvia bed where a Yankee patrol once halted, through Simon's news that young Bayard jumped off the wrong side of the two o'clock train and "lit out th'ough de woods," not wearing soldier clothes. At home, Elnora cannot tell the truth about anything; old Bayard retires. The chapter then turns to Aunt Jenny (Virginia Du Pre), who came from Carolina in '69 with the colored glass windows and tells the Christmas-story of her brother, the Carolina Bayard, Jeb Stuart's A.D.C., who died before second Manassas riding back "after those anchovies" and was shot in the back by a cook with a derringer — "Mister Stuart... said he was a good officer and a fine cavalryman, but that he was too reckless." old man Falls tells his own war yarns: the colonel in sock feet on the rail, the Yankee patrol, the flight by the hog-lot to the horse hidden in the willows, and the two carpetbaggers killed with "that same dang der'nger," leading to the prophecy "Redlaw'll kill me tomorrow... I'm tired of killing men," and John Sartoris's death. Old Bayard rides out with a ticked setter; Elnora sings. In Part Two, the scene shifts to Belle's card party, where Simon holds court in the kitchen over ice cream, and Miss Jenny and Narcissa Benbow discuss Horace (a wire "over fifty words long" about something he is bringing home). Simon tells Miss Jenny of Bayard's return and is cursed for it. Miss Jenny finds old Bayard siphoning bourbon in his office; the night brings the nine-thirty train, and young Bayard comes out of the lilac bushes to the veranda, telling of the war, of John: "I tried to keep him from going up there on that goddam little popgun," of Ploeckner — "Pupil of Richthofen's" — who "hemmed him up like a damn calf in a pen," and of John taking fire and jumping. Miss Jenny feeds him milk instead of whisky; asleep, he wakes groaning, and she sits by his bed. <br />
+Analysis: The pipe, the colonel, and falls make <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> tactile — the father's teeth marks turn legend into an heirloom relic, and old man Falls's compulsion to tell and re-tell ("Do I have to tell you that every time you tell me this damn story?") keeps the dead alive. The war-return of Bayard carries <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> into the family — John's death-before-return is the whole engine of the doom. Aunt Jenny's Jeb Stuart tale and the "banners in the dust" phrase ("her voice was proud and still as banners in the dust") set the Sartoris legend beside <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: the slogan of rank is a story told at the right fireplace. "Redlaw'll kill me tomorrow" plus the derringer directly primes <a href="//01%20Books/The%20Unvanquished.html">The Unvanquished</a>, which retells exactly this Colonel and his killing from the inheriting Bayard's side, and the "fatal semblance of his dream" casting of the dynasty is the same family-curse machinery <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a> blows up to epic scale. Simon's theatre with the matched geldings and the carriage-rouge prefigures the book's whole ceremonial apparatus of class. <br />
+Source anchors: old man Falls; county Poor Farm; John Sartoris; pipe; old Bayard; Simon; matched geldings; salvia bed; Virginia Du Pre; Jeb Stuart; anchovies; derringer; Redlaw; Ploeckner; Sopwith Camel; nine-thirty train.   </p>
+<h3 id="chapter-two">Chapter Two</h3>
+<p>Summary: Opening on the morning veranda and garden, Miss Jenny quarrels with Simon over the salvia bed while Miss Benbow calls; Isom appears in Caspey's borrowed khaki — divisional emblem, tarnished service stripe, putties, overseas cap. Miss Jenny's rants cover war-suffering, her judgment of men, and the story of young Bayard's marriage to the "thin as a rail" Caroline and the Memphis wedding and delicatessen dinner; then the apparition of the girl "beyond the veil." In the parlour of shrouded furniture she and Narcissa use the piano; in the kitchen Caspey tells his tall war tales (the steamboat cellar, the German swimmers, the Porto Rican medal) and advances his post-war claim: "War unloosed de black man's mouf... I dont take nothin' fum no white folks no mo'." Miss Jenny notes Caspey's insolence and invokes Senator Vardaman. Narcissa shows Miss Jenny an anonymous letter — "You did not answere mine of 25th... Hal Wagner"— which she insists on tearing up. At the Benbow house Aunt Sally Wyatt comments on the Sartoris boys (water tank, balloon ascension — John's, she will not believe it) and warns Narcissa away from Bayard: "He'll be killing you same as he did that poor little wife of his." Narcissa's Red Cross/S.O.S. charity, John's death, and Caroline's death in childbirth in October are recalled; Bayard comes into the parlor and says "Everybody ought to get married once, like everybody ought to go to one war." Part Two: young Bayard brings home the low gray car — four-cylinder, sixteen valves, eight spark-plugs, guaranteed to do eighty — and no sooner drives Miss Jenny and Isom to town than old man Falls reports the Poor House hill at "forty miles an hour," which Miss Jenny corrects to fifty-four via the speedometer; the wen on old Bayard's cheek is inspected ("Hard's a rock. Hit'll git bigger... I'll take hit off"). Old Bayard knocks Caspey through the screen door for refusing to saddle the mare, and Simon scolds his son's "nigger freedom talk." Part Three: Miss Jenny refuses to babysit the driving, old Bayard sits up nights reading Dumas and worrying; the car bursts past on a curve with Isom at the wheel; the harness-strap whipping follows. Miss Jenny predicts "He'll buy an aeroplane." old Bayard climbs to the cedar-chest attic, opens the chest (locked since 1901, when his son John died of yellow fever) and handles the Toledo rapier, the sabre, the dueling pistols, the "dang der'nger," the silver oil-can engraved "Virginia, August 9, 1873," and the brass-bound bible whose fading column of genealogies he extends with a fountain pen: "John Sartoris. July 5, 1918." and "Caroline White Sartoris and son. October 27, 1918." He reads John Sartoris's sentence on genealogy — "In the nineteenth century, genealogy is poppycock." Part Four: in the bank, Snopes the bookkeeper watches Narcissa, sweats, draws out a sheet at noon and writes, folds, burns; then he goes to the Beard hotel, and with the boy Virgil Beard paper-writing in a copybook hand, dictates the anonymous letter composed in the bank — "Code number forty eight. Mister Joe Butler, Saint Louis, Missouri... 'I thought once I would try to forget you...' ... 'Yours truly Hal Wagner.'" — paying the boy and promising an air-gun; "The next afternoon Virgil Beard killed a mockingbird." Part Five: Simon laments the carriage ("Gent'mun equipage"), talks to John Sartoris's ghost in the salvia bed, refuses to cut the switch on the car, then lets Bayard take him and is terrified, kneeling, holding the switch off — "Dat's de way you stops it, Lawd!" — and walks home with his rabbit-foot charm; Bayard runs the car past a wagon and reaches town, where the blind beggar, MacCallum, and the toddy-drinking at the restaurant (Henry's whisky) lead to a near-fight with "Gratton"; then the stallion — a fifteen-hundred-dollar killer in the livery stable — is mounted by Bayard, bursts through the splintered gate, nearly tramples a child, and crashes into concrete; "Then for Bayard, a red shock, then blackness." Part Six: the gathering-up — Dr Peabody bandages his head, V. K. Suratt (with his sewing-machine car) and Hub take him to the spring to drink whisky; the serenade that night with Mitch and three negroes with a bull fiddle, guitar, and clarinet — old tunes and "Goodnight, Ladies" under girls' windows, including the Benbows' where Narcissa watches from the curtain, another caller already hiding on the garage roof; then Bayard circles the square, is taken by Marshal Buck, and sleeps in the marshal's quarters at the jail, thinking "Three score and ten... and he was only twenty-six." <br />
+Analysis: This is the book's comic core and its most social chapter. The borrowed khaki and Caspey's "freedom talk" make <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a> theatrical — masculine rank is costume, be it soldier's or bank's — while Caspey, Simon, Isom, Elnora, and the harness-strap whipping expose <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> as the household's raw nerve: dignity is underpinned by exactly the Black labor its speech demeans. The anonymous letters link directly to <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> — Byron Snopes composes passion to a rehearsed formula, paid by air-gun; the marriage-épisode and the parlor scenes show housekeeping-as-ceremony. The car, the water-tank dive, the stallion, and the "Everybody ought to get married once" line advance the war-driven recklessness that is the novel's doom engine; the garage-roof watcher at the Benbows' (Byron) anticipates the predatory intrusion <a href="//01%20Books/Sanctuary.html">Sanctuary</a> will specialize in. The stallion sequence and the tomb/lineage talk of the cedar chest deepen <a href="//02%20Concepts/Path%20Dependence%20and%20Institutional%20Drift.html">Path Dependence and Institutional Drift</a> — a family line that "cannot leave the race to a heirloom" but keeps re-issuing itself into speed, war, and death. <br />
+Source anchors: Miss Jenny; Simon; salvia bed; Isom; Caspey; khaki; Vardaman; anonymous letter; Aunt Sally Wyatt; water tank; balloon; gray car; speedometer; wen; Dumas; cedar chest; Toledo rapier; derringer; bible; genealogy; Snopes; Virgil Beard; air gun; mockingbird; MacCallum; toddy; stallion; Dr Peabody; V. K. Suratt; serenade; Marshal Buck.   </p>
+<h3 id="chapter-three">Chapter Three</h3>
+<p>Summary: Horace Benbow arrives on the two-thirty train in ill-fitting khaki, overloaded with parcels and a fragile box of glass, calls his sister "Dear old Narcy," supervises porters, and brings a vase blown on the ship (his cabin caught fire on the voyage from Brest); a Second Division marine scorns his noncombatant triangle. The drive through Jefferson shows the courthouse, the Confederate monument, and the Benbow brick "doll's house" of cedars and an English architect's design; the "meaning of peace" settles on him. At supper Aunt Sally Wyatt asks "Did you bring your Snopes back with you?" — the Snopeses of Frenchman's Bend, among them Flem (soon vice-president of the Sartoris bank) and Montgomery Ward, who went to the Y.M.C.A. with Horace. Part Two gives Horacian history: Sewanee and Oxford, the plan to be an Episcopal minister, Will Benbow's death, and the law office of wills — his practice "the verities and humanities." Part Three moves to Belle's tennis: tea ritual, Mrs Marders, Frankie (the first bobbed head) playing against him, Harry Mitchell's whisky in the bathroom, and Belle's music-room kisses — "I want to have your child, Horace" — broken by little Belle at the door. Part Four covers little Belle's piano recital, Belle's coldness and hostility, the walk home with Narcissa, the note in his pocket, and Narcissa's "You've got the smell of her all over you. Oh, Horry, she's dirty!"; Miss Jenny and Narcissa discuss it in June; Horace's five named glass vases. Part Five returns to young Bayard, temporarily "snared by a rhythm of activities": tractor, grist mill, Caspey taught to drive, then in July the car in the creek with the son-father negro pair (John Henry), broken ribs, the whiskey-dream and the burning of John's coat, bible, trophy, and photograph behind the smokehouse ("Johnny," he whispered, "Johnny"), and the anaesthetic and the fury and "You beast, you beast" from a distraught Narcissa reading to him afterward. Part Six: old man Falls's June visit — salve again for the wen, peppermint candy, the calomel, the horse-race story (Cunnel on Jupiter vs. Zeb Fothergill's sorrel) crowding the spring with a Yankee cavalry dinner and "Surround 'em, boys!"; the ballot-box/carpetbagger story at Miz Winterbottom's; Simon's "financial 'rangements" — the church building money "put out" — and "collateral." Part Seven: the quarrels over the salve, Simon in charge again, the trip with Dr Alford and the young specialist (Dr Brandt) who twitches the wen off in his fingers — "a round spot of skin rosy and fair as any baby's" — the fifty-dollar bill, and Miss Jenny's acid remark. Part Eight: Narcissa's visits to Bayard in his cast, reading to him, his nightmare ("a loop of 'em around my chest"), his re-telling of John's death (the zigzag, the sideslip, "he thumbed his nose at me... and kicked his machine out of the way and jumped"), and gripping her wrists until she sobs. Part Nine: another anonymous letter, Horace telling Narcissa he and Belle will marry ("Belle has a backstairs nature"), the cast off, the promise about the car, and the bridge scene — "You promised," but he jerks the throttle down and drives straight over. Part Ten: the bookkeeper's sickness — the sleepless night, Virgil Beard again, the five dollars, the whipping, moving to I.O. Snopes's restaurant-house, and then the night in the bank: the final letter, the vault opened, the banknotes taken, the drive through Frenchman's Bend at two o'clock, the log house with Turpin and Minnie Sue, his failure ("a name not hers" on his lips — he babbles Narcissa's), and her "You come back tomorrer, when you git over this." He drives away. <br />
+Analysis: The chapter is Horace's — <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> at full stretch, from "the meaning of peace" to "Belle sends love, O Serene," with glass-blowing as the literal shaping of a self. His affair with Belle and its dénouement (Reno, the rented house, her mailbox marooned "backstairs") is the same triangle <a href="//01%20Books/Sanctuary.html">Sanctuary</a> will follow into its darker key. Against him young Bayard's convalescence and the burning of John's relics keeps <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> burning — the crash you must live through before you strike. The church money and Simon's finance plus old man Falls's Civil War stories (Jupiter, the ballot box) keep <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> alive — obligation as memory, as patronage, as improvised accounting. The wen/cancer episode frames mortality as household and medical politics and completes the "testament" of a man "keeping me as a reliable witness to the extinction of it." The Snopes material (Flem, I.O., Montgomery Ward, Byron) plants the parasitic counter-class and its secret writing squarely in the middle of Sartoris ceremony, tying into <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>. The Byron strand also prefigures <a href="//01%20Books/Sanctuary.html">Sanctuary</a>'s stalking violence, while the "I tried to keep him from going up there" refrain returns Bayard's guilt to <a href="//01%20Books/The%20Unvanquished.html">The Unvanquished</a>'s question of what a Sartoris inherits and whether he must re-enact or refuse the past. <br />
+Source anchors: Horace Benbow; two-thirty train; Narcissa; Venice vase; Brest; cabin fire; Snopeses; Frenchman's Bend; Flem Snopes; Montgomery Ward; "meaning of peace"; Aunt Sally Wyatt; Mrs Marders; Frankie; Harry Mitchell; Belle; little Belle; "I want to have your child"; recital; glass vases; John Henry; broken ribs; smokehouse; cedar chest grief; old man Falls; salve; Jupiter; ballot box; collateral; Dr Brandt; wen; the beast; anonymous letters; Reno; bridge; I.O. Snopes; Turpin; Minnie Sue.   </p>
+<h3 id="chapter-four">Chapter Four</h3>
+<p>Summary: Part One — a sunny October Sunday: the deputation of six negroes comes round the house for the Second Baptist church money, led by Uncle Bird in his prince-albert coat, with Brother Moore producing his shoe horn, tobacco plug, knife, twine, strap, and "greasy, dogeared notebook" before reading "Sixty sevum dollars en fawty cents"; old Bayard pays by check, and there is a forty-cent coda. Miss Jenny and Narcissa cut flowers in the garden — the last rose that "just dont know how to give up gracefully" — and "We'll name him John." Indian summer brings the sorghum-mill idyll at the negro patriarch's spring: the mule plodding its circle, the "Homer of the cotton fields" paragraph on the mule who "won the prone South from beneath the iron heel of Reconstruction," and a 'possum hunt with Caspey and Isom by lantern where Narcissa, shrinking, sees the creature killed with an axe and turns away; at the gate that night "she tasted fatality and doom," and afterward "she would not go with him again" save to lie with him in the dark. Part Two — Thanksgiving dinner with Dr Peabody at the Sartoris table: the yard-long fish ("Dat's a fish in dis worl', mon"), the catalogue of turkey, ham, quail, squirrel, baked 'possum, and sweet-potato pies, Peabody's mock proposal to Miss Jenny and her "You old gray-headed liar," and the pond with a nigger to bait every hook. Then December rains, Bayard hunting wet at dawn, Miss Jenny's warning ("It's in the blood. Savages, everyone of 'em"), the "Would you do it over again?" "Yes" exchange, and Narcissa's day with Horace in the rain — chocolate pie and the missing anonymous letters. Part Three — Horace sees Joan, Belle's sister: the tiger memory from his first circus at five, her swearing, "You're Horace Benbow, aren't you?", "I'm Belle's sister. I want to see what you look like," her cold carnivorousness, her history (married at eighteen, Honolulu, Australia, Calcutta, the oil-company husband), her prowl into Narcissa's room ("The one that married that Sartoris... I'd like to have known that man"), and her departure on the evening train, leaving his cold room full of her. Part Four — Bayard and old Bayard drive out on the frosty December road; the ford skids, the car hangs over the ravine and crashes down, climbs the bank and stops — and "his grandfather sat motionless beside him... his head bent a little and his hand on the door." He is dead. Part Five — the MacCallums: Bayard rides out to their hills, finds the fox Ethel with the puppies, the old man watchful by his fireplace, and passes Christmas with them — the hybrid foxhound litter of Jackson's experiment that "cant smell, cant bark," General's dignified horror, Buddy's war "charm" ("we'uns git up at fo' oclock"), the old man's "Buyin' turkeys!" grumble, and the memory of Johnny head-singing at Samson's bridge. He leaves after Christmas with the jug of corn whisky from Henry for his grandfather, turning aside at the road's fork rather than face Jefferson. Part Six — the night ride: he turns away from town, drinks the jug, rides to the cedar cold, halts at a negro cabin, asks lodging ("Bayard Sartoris, from Jefferson"), sleeps in the barn loft under a filthy quilt through Christmas Eve, wakes to Christmas Day breakfast among the pickaninnies' "Sandy Claus," hires the negro to drive him eight miles to a railroad town, and in the dusk boards the train with the jug between his legs — past the square's finished fireworks, past where John Sartoris's effigy looks down on his railroad. <br />
+Analysis: Chapter Four is the book's hinge of community and doom. The deputation is <a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a> at its funniest and most concrete — Brother Moore's notebook, the reinstated "deaconic capacity," and old Bayard's check are improvised accounting for a parish the money never reached. The mule passage, the sorghum mill, and the 'possum hunt fold <a href="//02%20Concepts/Coercive%20Labor.html">Coercive Labor</a> into a natural economy — the mule as the South's enduring laborer "who finds bread not only for a race, but for an entire form of behavior." The Thanksgiving table and the MacCallum Christmas against "Buyin' turkeys!" test <a href="//02%20Concepts/Culture%2C%20Identity%2C%20and%20Legitimacy.html">Culture, Identity, and Legitimacy</a>: hospitality and the barter of food are the older order's currency. Old Bayard's death in the car is the family's secular sacrifice — <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> arriving as automotive accident — and it re-triggers <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a>'s family-doom pattern: the survivor inherits the curse and feels "You caused it all: you killed Johnny." The MacCallum interlude is the novel's cleanest contrast to Sartoris doom (a functional, whole, unhurried household), and its Johnny-memories and the fox/Ethel motif keep the sibling theme of <a href="//01%20Books/The%20Reivers.html">The Reivers</a>' late comic breed in view. Joan's chapter, meanwhile, is Horace's last, most brutal temptation, and her tiger-figuration points to <a href="//01%20Books/Sanctuary.html">Sanctuary</a>'s predatory register. <br />
+Source anchors: deputation; Second Baptist church; Uncle Bird; Brother Moore; greasy notebook; sixty-seven dollars and forty cents; last rose; sorghum mill; mule; 'possum hunt; Caspey; Isom; Thanksgiving; Dr Peabody; fish; pond; December rains; Joan; Belle's sister; tiger; Narcissa's room; frosty road; old Bayard's death; MacCallums; Ethel the fox; Jackson's pups; Buddy; charm; Samson's bridge; corn whisky; cabin; Christmas; Sandy Claus; railroad town; train.   </p>
+<h3 id="chapter-five">Chapter Five</h3>
+<p>Summary: Part One — Horace, in a new crude lumber town, writes his spring letter: "since the essence of spring is loneliness and a little sadness," remembering apple trees and green lanes, "thou still unravished bride of quietude," aware he is "washing one woman's linen in the house of another," crosses out "I believe that Harry," writes "Belle sends love, O Serene," and races to catch the four o'clock train; the chapter meditates on the town's brigand prosperity (the hardwood lumber mill, the $60,000 courthouse, "There was money there... whose, at any one given time, God Himself could not have said"), the shrimp crate he carries home every Tuesday for Belle, and his guilt toward Harry — Harry's picture of "a stricken ox" — ending "She had ghosts in her bed." Part Two — after January: his aunt receives a postcard from Bayard mailed at Tampico, then Mexico City (a wire for money), then Rio; old Bayard is dead "practically from the 'inside out,'" Miss Jenny rummages out the miniature of John, recalls the boys' childhood fights, the curls, the barbering, and the New York police letters; she names the expected child John in her mouth. In June a request for money from San Francisco (robbed), a wire: "Come home you fool and see your family or I will have you arrested." But Bayard is in a Chicago sea of saxophones and painted ladies, with a girl afraid of him, an aviator named Monaghan, and a shabby inventor of a spring-braced wing that needs testing — Bayard agrees; at Dayton, in the inventor's "flying coffin," the wings buckle, come off, and the plane crashes. Part Three — "That day Narcissa's child was born": Simon rejoices ("De little marster done arrive'"), Miss Jenny wires, and the telegram office brings Dr Peabody with the news — "MISSISSIPPI AVIATOR" — and she reads from the paper, then says "I dont have to read it... Thank God that's the last one." A week later Simon is found in Meloney Harris's cabin with his head crushed in: "So that's where that church money went that he 'put out.'" Miss Jenny takes to her bed for three weeks, rises to refuse the christening, and drives with Isom to the cemetery, where she clears the graves and reads the inscriptions: Bayard Sartoris, March 16, 1893–June 11, 1920; the cenotaph of Lieut. John Sartoris, R.A.F., "I bare him on eagles' wings and brought him unto Me"; and Colonel John Sartoris's effigy — "Soldier, Statesman, Citizen of the World / For man's enlightenment he lived / By man's ingratitude he died / Pause here, son of sorrow; remember death" — with the chiselled addition "Fell at the hand of——Redlaw, Sept. 4, 1876." Dr Peabody and his son young Loosh join her; they speak of the new child — "He's got Sartoris blood in him, too." That evening, at the piano in the dusk, Narcissa tells Miss Jenny: "He isn't John. He's Benbow Sartoris," and when Miss Jenny asks "Do you think... because his name is Benbow, he'll be any less a Sartoris and a scoundrel and a fool?" Narcissa smiles and plays on: "for there is death in the sound of it, and a glamorous fatality, like silver pennons downrushing at sunset, or a dying fall of horns along the road to Roncevaux." <br />
+Analysis: Chapter Five closes the two arcs. Horace's letter is <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> distilled — the "unravished bride" citation, the crossed-out Harry, "Belle sends love, O Serene" — words managing cowardice and grief; its rented-house-with-Belle-and-little-Belle is the exact household <a href="//01%20Books/Sanctuary.html">Sanctuary</a> inherits. Bayard's end — wandering, robbed, the inventor's spring-wing plane — completes <a href="//02%20Concepts/War%2C%20Crisis%2C%20and%20Collapse.html">War, Crisis, and Collapse</a> as personal and generational suicide, while the "MISSISSIPPI AVIATOR" telegram and the cemetery inscriptions make the family story an archive of <a href="//02%20Concepts/Memory%2C%20Narrative%2C%20and%20Knowledge%20Preservation.html">Memory, Narrative, and Knowledge Preservation</a> fixed in stone — and doctored, as old Bayard had Redlaw's name chiselled in. The naming climax — "We'll name him John" versus "He isn't John. He's Benbow Sartoris" — is the book's purest <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: a woman trying to end the doom by renaming the heir, against Miss Jenny's fatalism that a Sartoris "played too late and to an old dead pattern" cannot be changed by a name. The closing "Player and the game... there is death in the sound of it" is the book's explicit merging with <a href="//01%20Books/Absalom%2C%20Absalom%21.html">Absalom, Absalom!</a>'s doom-aesthetics and with the whole Yoknapatawpha genealogical curse; the child itself reaches toward <a href="//01%20Books/The%20Reivers.html">The Reivers</a>' comic last-acts of the line, and Simon's murder plus Miss Jenny's "last one" resolve the household's own Black story that <a href="//01%20Books/The%20Unvanquished.html">The Unvanquished</a> will re-narrate from within the war. <br />
+Source anchors: Horace; spring letter; unravished bride; four o'clock train; lumber town; $60,000 courthouse; shrimp; Belle; Little Belle; Harry; Tampico; Mexico City; Rio; San Francisco; Chicago; Monaghan; inventor; Dayton; spring wings; MISSISSIPPI AVIATOR; Simon; Meloney Harris; christening; cemetery; effigy; Redlaw; eagles' wings; Benbow Sartoris; Roncevaux.   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li>Title origin is inside the extract: Miss Jenny's voice ends a war story "proud and still as banners in the dust" (Chapter One). The book's own apparatus confirms Flags is the uncut version of a novel published in 1929 as <em>Sartoris</em>, cut to ~110,000 words.   </li>
+<li>The wen: Dr Alford diagnoses cancer; Dr Peabody refuses; old man Falls treats it with Choctaw salve from his snuff-tin; in Memphis, Dr Brandt lifts it off in his fingers — "a round spot of skin rosy and fair as any baby's" — and bills fifty dollars.   </li>
+<li>The family bible entries written in by old Bayard: "John Sartoris. July 5, 1918." / "Caroline White Sartoris and son. October 27, 1918." — the oldest archive of the novel's dates.   </li>
+<li>The car: "low and gray," four cylinders, sixteen valves, eight spark-plugs, "guaranteed eighty miles an hour," windshield strip against speed; Miss Jenny's correction "fifty four... speedometer."   </li>
+<li>Center of the novel's comedy: the Second Baptist deputation and Brother Moore's pocket notebook, which takes "Sixty sevum dollars en fawty cents" out of the church funds that Simon "put out" to Meloney Harris — the same money behind his murder.   </li>
+<li>Signature characters introduced here that recur in later Faulkner: V. K. Suratt (the sewing-machine agent with vinegar wit), Flem and I.O. Snopes and Montgomery Ward, and the entire Sartoris lineage; the fox Ethel, Jackson's hybrid hound-fox "breed," and General the old hound at the MacCallums'.   </li>
+<li>The "Homer of the cotton fields" mule paragraph — the mule who "won the prone South from beneath the iron heel of Reconstruction" — is one of the extract's set pieces.   </li>
+<li>"Thou still unravished bride of quietude" (Keats) is Horace's running motto, and "She had ghosts in her bed" closes his chapter.   </li>
+<li>Cemetery inscriptions worth quoting in any note: John's cenotaph "Lieut. John Sartoris, R.A.F. / Killed in action, July 5, 1918 / 'I bare him on eagles' wings and brought him unto Me'"; the Colonel's pedestal "Soldier, Statesman, Citizen of the World / For man's enlightenment he lived / By man's ingratitude he died / Pause here, son of sorrow; remember death," plus the crude added line "Fell at the hand of——Redlaw, Sept. 4, 1876."   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+	<li><a class="backlink" href="//obs.html/tags/faulkner/index.html">faulkner</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A106898631425440269430563537547152598788{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D106898631425440269430563537547152598788{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B106898631425440269430563537547152598788{level}" level="{level}" note_temp_id="106898631425440269430563537547152598788" onclick="window.ObsHtmlGraph.run(this, '106898631425440269430563537547152598788', 'flags in the dust');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C106898631425440269430563537547152598788{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

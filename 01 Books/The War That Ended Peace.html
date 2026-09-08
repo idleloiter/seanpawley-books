@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the war that ended peace">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the war that ended peace';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the war that ended peace" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-war-that-ended-peace">The War That Ended Peace</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note is backed by a local extracted source and remains part of the vault's crosslinked book layer.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Margaret MacMillan writes the road to 1914 as an accumulation of choices made inside a Europe that had grown used to peace but kept building institutions, habits, plans, and expectations that made a general war easier to start. The book opens with Louvain in August 1914 because the burned university library, the German reprisals, the 1,100 destroyed houses, and the deported civilians make the war visible as an assault on the civilization Europeans believed they had perfected. From that image, MacMillan works backward to ask how a continent with the Concert of Europe, peace congresses, dense trade, shared aristocratic culture, and memories of earlier crises nevertheless reached mobilization and invasion within five weeks of Sarajevo.   </p>
+<p>The early chapters map the powers and their self-images around 1900. Paris's Exposition, Queen Victoria's Jubilee, the Boer War, Theodore Roosevelt's United States, Kaiser Wilhelm II's court, Weltpolitik, and the Anglo-German naval rivalry show a world full of confidence but also status anxiety. Britain still imagines splendid isolation, Germany wants a place on the world stage, France wants security and recovery after 1870, Russia seeks prestige after humiliation, Austria-Hungary fears Slavic nationalism, and the Ottoman Empire appears as both weakening neighbor and object of great-power calculation. MacMillan keeps returning to the way prestige, fear of decline, and public symbolism shape practical policy.   </p>
+<p>The alliance chapters are especially attentive to contingency. The Entente Cordiale is not presented as inevitable friendship but as a settlement of colonial irritants around Egypt, Morocco, and Fashoda; the Anglo-Russian understanding grows from Central Asian, Persian, Afghan, and Tibetan calculations as much as European ones; and the Dual Alliance binds Germany to Austria-Hungary through loyalty, need, and narrowing options. The book's political geography is not a static map. Morocco, Bosnia-Herzegovina, the Straits, Serbia, Bulgaria, Tripoli, Albania, Macedonia, and the North Sea repeatedly force leaders to decide whether a local quarrel is worth a European confrontation.   </p>
+<p>MacMillan also spends long sections on ideas, peace movements, and war planning because she does not reduce 1914 to diplomacy alone. Social Darwinism, nationalism, military honor, masculinity, fear of socialism, anarchist violence, The Hague conferences, Bertha von Suttner, Jean de Bloch, Alfred von Schlieffen, Helmuth von Moltke, Joseph Joffre, Conrad von Hotzendorf, and Russian mobilization timetables all matter because leaders inhabited a world of concepts as well as telegrams. Peace was imaginable and actively pursued, but <a href="//02%20Concepts/Language%20and%20Ideology.html">war was also imagined</a> as cleansing, inevitable, short, or manageable; those assumptions made brinkmanship more dangerous.   </p>
+<p>The crisis chapters show repeated rehearsals before the final disaster. The First Moroccan Crisis, Algeciras, the Bosnian annexation, Agadir, the Italo-Turkish War, the Balkan Wars, and the arguments over Serbia train governments to use threats and then expect someone else to contain the damage. In July 1914, that pattern fails. Austria-Hungary uses the murder of Franz Ferdinand and Sophie at Sarajevo to confront Serbia; Germany gives Vienna support; Russia cannot accept another humiliation over Serbia; France stands by Russia; Britain hesitates over Belgium, France, and the fleet; and <a href="//02%20Concepts/Logistics%20and%20Throughput.html">mobilization schedules</a> convert diplomatic pressure into military action.   </p>
+<p>The book's title is literal: the war ended a peace that had been maintained by habits, restraint, shared assumptions, and luck rather than by any automatic law of progress. MacMillan's strongest claim is that the Great War was not inevitable, but neither was it accidental. She treats individuals such as Wilhelm II, Edward VII, Sir Edward Grey, Raymond Poincare, Nicholas II, Bethmann-Hollweg, Berchtold, Conrad, Sazonov, and Princip as people whose decisions mattered, while showing that those decisions were constrained by <a href="//02%20Concepts/Crisis%20Governance.html">crisis-governance</a> habits, alliances, railway plans, parliaments, newspapers, military staffs, and inherited memories of previous crises.   </p>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="introduction-war-or-peace">Introduction: War or Peace?</h3>
+<p>Summary: MacMillan begins at Louvain, where German troops entered Belgium in August 1914, panicked after rumors of Belgian and British attacks, shot civilians including the mayor and university officials, deported 1,500 inhabitants, and burned the university library with its 200,000 books. She then connects Louvain to Rheims Cathedral, Ypres, Treviso, the Lusitania, the 9 million dead soldiers, the fall of Russia, Germany, Austria-Hungary, and the Ottoman Empire, and the later memory of the war in family medals, unexploded ordnance, memoirs, and paintings. The introduction sets out possible causes: arms races, military plans, economic rivalry, imperialism, alliances, nationalism, Social Darwinism, honor, domestic politics, and the decisions of monarchs and ministers during the five weeks from June 28 to August 4, 1914. Source anchors: Louvain; August 25; 200,000 books; Rheims Cathedral; June 28; August 4.   </p>
+<p>Analysis: Louvain, August 25, 200,000 books, Rheims Cathedral, June 28, and August 4 define the book's scale and method. Louvain turns an abstract European war into a concrete civilizational wound, while Rheims Cathedral shows that symbolic destruction quickly became part of the war's political meaning. June 28 and August 4 let MacMillan hold two time spans together: the long accumulation before 1914 and the compressed decision period after Sarajevo. The 200,000 books make <a href="//02%20Concepts/Knowledge%20Preservation.html">knowledge preservation</a> part of the war's meaning because the loss tests Europe's belief that culture, education, and progress had made such violence obsolete.   </p>
+<h3 id="h_1-europe-in-1900">1. Europe in 1900</h3>
+<p>Summary: The first chapter uses the Paris Exposition of 1900 to show Europe at the height of confidence, with exhibits, moving pavements, peace congresses, colonial displays, military technology, the Alexander III bridge, and the newly visible Franco-Russian alliance. MacMillan places that confidence beside doubts raised by Einstein, Freud's <em>Interpretation of Dreams</em>, Gustave Le Bon on crowds, Durkheim on social dislocation, neurasthenia, Japanese art, African sculpture, Harry Kessler's reflections on Japan, and the Palace of Armies and Navies. She also introduces Britain after the Boer War, Kitchener's concentration camps, the Transvaal pavilion, Theodore Roosevelt's expanding United States, the Spanish-American War, the Philippines, Puerto Rico, Cuba, Hawaii, and the Concert of Europe as both achievement and fragile habit. Source anchors: Paris Exposition; Alexander III bridge; Boer War; Theodore Roosevelt; Concert of Europe; Palace of Armies.   </p>
+<p>Analysis: Paris Exposition, Alexander III bridge, Boer War, Theodore Roosevelt, Concert of Europe, and Palace of Armies make 1900 look prosperous but unstable. The Paris Exposition celebrates progress while the Palace of Armies advertises improved killing power, so MacMillan can show optimism and danger in the same fairground. The Alexander III bridge makes the Franco-Russian alliance visible in stone, while the Boer War exposes British vulnerability and pushes London toward partners. Theodore Roosevelt and the Concert of Europe widen the story beyond the old continental powers: the United States is rising, and Europe's old consultation habits depend on leaders continuing to value them.   </p>
+<h3 id="h_2-great-britain-and-splendid-isolation">2. Great Britain and Splendid Isolation</h3>
+<p>Summary: MacMillan presents Britain as the greatest empire in 1900 but also as a power uneasy after Queen Victoria's Jubilee, the Boer War, criticism over concentration camps, and the discovery that the army and imperial prestige were less secure than assumed. Salisbury, Balfour, Chamberlain, Curzon, Kipling, the Royal Navy, the Indian Empire, Egypt, South Africa, and the dominions appear in a system that prized freedom of action and distrusted permanent continental commitments. The chapter follows Britain's search for room to maneuver through the Venezuelan boundary dispute, accommodation with the United States, the Anglo-Japanese Alliance of 1902, and the recognition that Germany, Russia, France, and imperial overstretch could no longer be handled from isolation alone. Source anchors: Queen Victoria's Jubilee; Salisbury; Boer War; Anglo-Japanese Alliance; Royal Navy; splendid isolation.   </p>
+<p>Analysis: Queen Victoria's Jubilee, Salisbury, Boer War, Anglo-Japanese Alliance, Royal Navy, and splendid isolation explain why British policy changes without Britain thinking of itself as joining a fixed camp. Salisbury's caution and the Royal Navy support splendid isolation when Britain feels strong, but the Boer War damages that confidence. The Anglo-Japanese Alliance shows London solving an Asian problem with a non-European partner and admitting that naval power alone cannot cover every imperial exposure. This chapter matters because Britain does not enter the later Ententes from sentimental friendship with France or Russia; it enters because isolation has become expensive and risky.   </p>
+<h3 id="h_3-woe-to-the-country-that-has-a-child-for-king-wilhelm-ii-and-germany">3. "Woe to the Country That Has a Child for King!": Wilhelm II and Germany</h3>
+<p>Summary: This chapter centers on Kaiser Wilhelm II as ruler, performer, grandson of Queen Victoria, admirer of uniforms and ships, and a man whose insecurity shaped German diplomacy after Bismarck. MacMillan follows Wilhelm's accession, the dismissal of Bismarck, the court atmosphere, the Kruger telegram, the Daily Telegraph affair, his relations with Edward VII, Nicholas II, and his own ministers, and the way his speeches and impulses interacted with Germany's federal constitution, Prussian militarism, and industrial expansion. Germany's strength is real: population, steel, coal, science, universities, railways, and the army give it weight, but Wilhelm's need for recognition makes policy noisy and unpredictable. Source anchors: Wilhelm II; Bismarck; Kruger telegram; Daily Telegraph; Edward VII; Prussian army.   </p>
+<p>Analysis: Wilhelm II, Bismarck, Kruger telegram, Daily Telegraph, Edward VII, and Prussian army let MacMillan connect personality to institutions without making the Kaiser the sole cause of war. Bismarck's dismissal removes a cautious manager, while the Kruger telegram and Daily Telegraph affair turn Wilhelm's words into international incidents. Edward VII matters because Wilhelm reads family and diplomacy through rivalry and slight. The Prussian army gives Germany formidable strength, but it also reinforces a political culture in which military solutions receive deference, especially when civilian direction is confused by the Kaiser's interventions.   </p>
+<h3 id="h_4-weltpolitik-germany-s-place-on-the-world-stage">4. Weltpolitik: Germany's Place on the World Stage</h3>
+<p>Summary: MacMillan explains Weltpolitik as Germany's bid for status, colonies, naval power, and global recognition after unification had made it Europe's strongest land power. Bernhard von Bulow, Alfred von Tirpitz, Wilhelm II, German nationalists, colonial leagues, the Pan-German League, the Berlin-Baghdad railway, Kiaochow, Samoa, Morocco, and Mahan's theory of sea power appear as signs of a country seeking "a place in the sun." Tirpitz's naval laws and risk theory are especially important because they promise Germany a fleet strong enough to deter Britain even if it cannot defeat the Royal Navy outright. The chapter shows how prestige politics, domestic pressure, industrial strength, and fear of encirclement become mutually reinforcing. Source anchors: Weltpolitik; Bulow; Tirpitz; place in the sun; Berlin-Baghdad railway; risk theory.   </p>
+<p>Analysis: Weltpolitik, Bulow, Tirpitz, place in the sun, Berlin-Baghdad railway, and risk theory explain why Germany's ambitions alarmed other powers even when German leaders described them as defensive or normal. Bulow gives the policy a public language of dignity, Tirpitz gives it ships, and risk theory turns British naval security into a German bargaining instrument. The Berlin-Baghdad railway shows that German reach is not limited to the North Sea. The phrase place in the sun matters because status becomes a policy objective in itself, making compromise harder when symbolic recognition is treated as national necessity.   </p>
+<h3 id="h_5-dreadnought-the-anglo-german-naval-rivalry">5. Dreadnought: The Anglo-German Naval Rivalry</h3>
+<p>Summary: The chapter follows the naval race from British invasion scares and popular press agitation to Fisher's reforms, HMS <em>Dreadnought</em>, German naval laws, Tirpitz's building program, and the British fear that command of the sea could be threatened close to home. MacMillan includes Northcliffe's newspapers, William Le Queux's invasion fiction, the Naval Scare, the Two-Power Standard, the cost of battleships, dominion contributions, the Kiel Canal, and the technical leap that made older ships obsolete. Britain responds with more building, budget fights, and closer attention to Germany, while Germany treats the fleet as both shield and symbol. Source anchors: HMS Dreadnought; Fisher; Tirpitz; Northcliffe; Two-Power Standard; Kiel Canal.   </p>
+<p>Analysis: HMS Dreadnought, Fisher, Tirpitz, Northcliffe, Two-Power Standard, and Kiel Canal show how technology, public fear, and strategic geography produce mistrust. Fisher's reforms are meant to preserve British superiority, but HMS Dreadnought resets the count and gives Tirpitz a chance to narrow the visible gap. Northcliffe turns naval numbers into mass politics, while the Two-Power Standard makes every German hull feel like a direct challenge. The Kiel Canal matters because it gives German ships operational flexibility between the Baltic and North Sea, making British fears more concrete than a general dislike of Germany.   </p>
+<h3 id="h_6-unlikely-friends-the-entente-cordiale-between-france-and-britain">6. Unlikely Friends: The Entente Cordiale Between France and Britain</h3>
+<p>Summary: MacMillan traces the Entente Cordiale through old Anglo-French hostility, Fashoda, Egypt, Morocco, colonial bargains, Edward VII's Paris visit, Theophile Delcasse's diplomacy, and the French need for security after defeat by Prussia. The chapter emphasizes that the Entente was not an alliance at first; it settled disputes over Egypt, Morocco, Newfoundland, West Africa, and Siam while leaving military commitments ambiguous. Yet German reactions, French expectations, British conversations between staffs, and repeated crises gradually gave the arrangement strategic meaning beyond its written terms. Source anchors: Fashoda; Entente Cordiale; Egypt; Morocco; Edward VII; Delcasse.   </p>
+<p>Analysis: Fashoda, Entente Cordiale, Egypt, Morocco, Edward VII, and Delcasse reveal how colonial settlement can become European alignment. Fashoda had nearly brought Britain and France to war, so resolving Egypt and Morocco removes a major source of friction. Edward VII's Paris visit and Delcasse's work add public warmth to practical bargaining, which makes the Entente politically usable in both countries. Morocco becomes the test: once Germany challenges French influence there, Britain begins to treat the colonial settlement as <a href="//02%20Concepts/Information%20and%20Coordination.html">coordination infrastructure</a> against German pressure.   </p>
+<h3 id="h_7-the-bear-and-the-whale-russia-and-great-britain">7. The Bear and the Whale: Russia and Great Britain</h3>
+<p>Summary: This chapter follows the long Anglo-Russian rivalry across Central Asia, Persia, Afghanistan, Tibet, the Ottoman Straits, and India, then shows how defeat in the Russo-Japanese War and revolution in 1905 weakened Russia and encouraged accommodation. MacMillan discusses Nicholas II, Sergei Witte, the Portsmouth peace mediated by Theodore Roosevelt, Bloody Sunday, the Duma, Stolypin, British concern for India, and the 1907 Anglo-Russian Convention dividing interests in Persia and clarifying Afghanistan and Tibet. The agreement does not make Britain and Russia natural friends, but it reduces imperial friction and helps create the Triple Entente alongside France. Source anchors: Russo-Japanese War; Nicholas II; Sergei Witte; Bloody Sunday; Persia; Anglo-Russian Convention.   </p>
+<p>Analysis: Russo-Japanese War, Nicholas II, Sergei Witte, Bloody Sunday, Persia, and Anglo-Russian Convention show a rivalry being managed after both sides find the old contest too costly. The Russo-Japanese War and Bloody Sunday weaken Nicholas II's room for adventure, while Witte's role at Portsmouth shows Russia accepting mediation by a rising United States. Persia is the key imperial space where British India and Russian expansion had collided. The Anglo-Russian Convention matters because it closes one more open quarrel among Germany's potential opponents, even though it remains a pragmatic bargain rather than deep trust.   </p>
+<h3 id="h_8-the-loyalty-of-the-nibelungs-the-dual-alliance-of-austria-hungary-and-germany">8. The Loyalty of the Nibelungs: The Dual Alliance of Austria-Hungary and Germany</h3>
+<p>Summary: MacMillan examines Austria-Hungary's dependence on Germany through Franz Joseph, the Habsburg monarchy's nationalities, Hungary, Bohemia, Galicia, South Slavs, the Balkans, and the army's fear of internal disintegration. The Dual Alliance promises Germany an ally and Austria-Hungary protection, but it also binds Berlin to a weakening empire whose quarrels with Serbia and Russia grow more dangerous. Figures such as Conrad von Hotzendorf, Aehrenthal, Berchtold, Franz Ferdinand, and Hungarian leader Istvan Tisza appear inside a monarchy trying to manage Slavic nationalism while preserving imperial authority. The Nibelung language captures loyalty as romance, obligation, and trap. Source anchors: Franz Joseph; Dual Alliance; Conrad; Franz Ferdinand; South Slavs; Istvan Tisza.   </p>
+<p>Analysis: Franz Joseph, Dual Alliance, Conrad, Franz Ferdinand, South Slavs, and Istvan Tisza explain why Austria-Hungary becomes both Germany's asset and Germany's liability. Franz Joseph personifies continuity, but the South Slavs and other nationalities make that continuity brittle. Conrad repeatedly imagines preventive war as a cure for imperial weakness, while Istvan Tisza often worries about the consequences for Hungary. Franz Ferdinand's reform interests complicate the picture because his death removes one possible, if uncertain, alternative. The Dual Alliance matters because Germany's fear of losing its only dependable ally turns <a href="//02%20Concepts/Information%20and%20Coordination.html">alliance coordination</a> into the blank check of 1914.   </p>
+<h3 id="h_9-what-were-they-thinking-hopes-fears-ideas-and-unspoken-assumptions">9. What Were They Thinking? Hopes, Fears, Ideas, and Unspoken Assumptions</h3>
+<p>Summary: This chapter surveys the mental world before 1914: nationalism, Social Darwinism, masculinity, honor, fears of decadence, class conflict, anarchism, socialism, anti-Semitism, imperial racism, and the belief that struggle could strengthen nations. MacMillan uses writers, soldiers, politicians, artists, and public controversies such as Zabern to show how violence and discipline were discussed long before the war. Nietzsche, Treitschke, Bernhardi, Cubism, Boy Scouts, school curricula, conscription, press campaigns, and fears of revolution all enter as evidence that ideas about vitality and decline influenced policy. She does not claim everyone wanted war, but she shows how many educated Europeans had language ready to justify it. Source anchors: Social Darwinism; honor; Zabern; Nietzsche; Bernhardi; Boy Scouts.   </p>
+<p>Analysis: Social Darwinism, honor, Zabern, Nietzsche, Bernhardi, and Boy Scouts give MacMillan a vocabulary for the pressures beneath formal diplomacy. Social Darwinism and Bernhardi make war appear natural or even healthy, while honor makes retreat from a crisis look morally shameful. Zabern shows militarism clashing with civilian society inside Germany, not merely between states. Nietzsche's reception and Boy Scouts training reveal how <a href="//02%20Concepts/Language%20and%20Ideology.html">ideological language</a> can bend cultural material toward hardness, discipline, and national readiness. These ideas do not mechanically cause 1914, but they make violent choices easier to defend when leaders face humiliation or uncertainty.   </p>
+<h3 id="h_10-dreaming-of-peace">10. Dreaming of Peace</h3>
+<p>Summary: MacMillan balances the war-minded material with the prewar peace movement, international law, arbitration, The Hague conferences, Bertha von Suttner, Jean de Bloch, Norman Angell, socialist internationalism, free trade arguments, and hopes that finance and interdependence made major war irrational. She shows peace activism in congresses, pamphlets, parliamentary efforts, women's organizations, religious groups, and the work of Andrew Carnegie and others who funded institutions meant to replace war with law. Yet the chapter also notes the limits of these efforts: governments refused binding arbitration on vital interests, militaries resisted constraints, and socialists split when national war came. Source anchors: Hague conferences; Bertha von Suttner; Jean de Bloch; Norman Angell; arbitration; Carnegie.   </p>
+<p>Analysis: Hague conferences, Bertha von Suttner, Jean de Bloch, Norman Angell, arbitration, and Carnegie prevent the book from treating prewar Europe as simply eager for war. The Hague conferences and arbitration show real institutional attempts to civilize disputes, while Bertha von Suttner and Carnegie give the peace movement public names and money. Jean de Bloch and Norman Angell argue that modern war would be economically and militarily self-defeating, which many readers found persuasive. The failure lies not in absence of peace thinking but in weak <a href="//02%20Concepts/Crisis%20Governance.html">crisis governance</a>: these mechanisms cannot bind governments when honor, alliances, and mobilization timetables take command.   </p>
+<h3 id="h_11-thinking-about-war">11. Thinking About War</h3>
+<p>Summary: This chapter turns to soldiers and civilians who imagined what a European war would be like, including debates over offense, defense, morale, firepower, conscription, reserves, railways, and the lessons drawn from the Franco-Prussian War, the Russo-Japanese War, and colonial fighting. MacMillan discusses French faith in elan, German confidence in staff work, Russian manpower, British expeditionary limits, Austro-Hungarian worries, and the assumption in many capitals that war would be short. Joseph Joffre, Ferdinand Foch, Moltke, Conrad, and military writers all appear in an atmosphere where doctrine often translated political fear into offensive planning. Source anchors: elan; Franco-Prussian War; Russo-Japanese War; Joffre; Moltke; Conrad.   </p>
+<p>Analysis: Elan, Franco-Prussian War, Russo-Japanese War, Joffre, Moltke, and Conrad show why military professionals could see evidence of modern firepower yet still favor attack. The Franco-Prussian War encouraged hopes for decisive campaigns, while the Russo-Japanese War offered mixed lessons that armies interpreted selectively. Joffre and elan give France a doctrine tied to morale and national recovery. Moltke and Conrad embody staff systems under pressure to solve political problems quickly. The chapter matters because leaders in 1914 did not improvise war from nothing; they activated ideas already built into doctrine, training, and railway assumptions.   </p>
+<h3 id="h_12-making-the-plans">12. Making the Plans</h3>
+<p>Summary: MacMillan details how general staffs converted fears into timetables, especially the Schlieffen Plan, German assumptions about Belgium, French Plan XVII, Russian mobilization schedules, Austro-Hungarian plans against Serbia and Russia, and British expeditionary planning. Railways, mobilization zones, reserve call-ups, frontier deployments, and staff secrecy turn diplomacy into a race once orders begin. Schlieffen, Moltke, Joffre, Sukhomlinov, Conrad, and the British Committee of Imperial Defence appear as planners who sought certainty in scenarios that left little flexibility. The chapter shows that plans did not cause the crisis, but they shaped what leaders believed they could still control after the crisis began. Source anchors: Schlieffen Plan; Belgium; Plan XVII; railways; Sukhomlinov; Committee of Imperial Defence.   </p>
+<p>Analysis: Schlieffen Plan, Belgium, Plan XVII, railways, Sukhomlinov, and Committee of Imperial Defence are the machinery behind July 1914. Belgium matters because German operational logic collides with British treaty and public commitments. Plan XVII reveals French willingness to attack into Alsace-Lorraine, while the Schlieffen Plan makes speed through Belgium central to German hopes. Railways and Sukhomlinov's Russian mobilization work turn <a href="//02%20Concepts/Logistics%20and%20Throughput.html">logistics and throughput</a> into a political constraint by reducing time for reconsideration. The Committee of Imperial Defence shows Britain planning without making an open alliance, which leaves ambiguity that later complicates deterrence and reassurance.   </p>
+<h3 id="h_13-the-crises-start-germany-france-and-morocco">13. The Crises Start: Germany, France and Morocco</h3>
+<p>Summary: The Moroccan crises begin when Germany challenges French influence, with Wilhelm II's Tangier visit in 1905, Delcasse's fall, the Algeciras Conference, French ambitions in Morocco, British support for France, and German frustration at diplomatic isolation. MacMillan shows Morocco as colonial terrain that becomes a European test of prestige and alignment. The crisis hardens the Entente because Britain sees German pressure as bullying and France sees British backing as useful, while Germany learns that dramatic gestures can produce conferences but not necessarily gains. Source anchors: Tangier; Algeciras Conference; Delcasse; Morocco; Wilhelm II; Entente.   </p>
+<p>Analysis: Tangier, Algeciras Conference, Delcasse, Morocco, Wilhelm II, and Entente show a recurring pattern in the book: a colonial issue becomes a European measuring stick. Wilhelm II's Tangier performance is meant to defend German status, but the Algeciras Conference exposes Germany's limited support. Delcasse's removal gives Berlin a tactical success without changing the underlying French-British connection. Morocco matters because it lets Britain and France practice cooperation under pressure, while Germany experiences diplomatic disappointment that feeds later suspicion of encirclement.   </p>
+<h3 id="h_14-the-bosnian-crisis-confrontation-between-russia-and-austria-hungary-in-the-balkans">14. The Bosnian Crisis: Confrontation Between Russia and Austria-Hungary in the Balkans</h3>
+<p>Summary: MacMillan moves to the Balkans, where Austria-Hungary's annexation of Bosnia-Herzegovina in 1908 enrages Serbia and humiliates Russia, which had expected compensation through the Straits after talks involving Aehrenthal and Izvolsky. Bosnia, Herzegovina, Serbia, Russia, Austria-Hungary, Germany, the Ottoman Empire, and the Young Turk revolution all intersect in a crisis that ends without war because Russia backs down under German pressure. Serbia is forced to accept the annexation, but resentment deepens, Russian leaders remember the humiliation, and Austria-Hungary concludes that firmness can work if Germany stands behind it. Source anchors: Bosnia-Herzegovina; 1908; Aehrenthal; Izvolsky; Serbia; Russian humiliation.   </p>
+<p>Analysis: Bosnia-Herzegovina, 1908, Aehrenthal, Izvolsky, Serbia, and Russian humiliation make this chapter one of the clearest rehearsals for 1914. Aehrenthal's move succeeds because Russia is too weak after 1905 to fight, and Izvolsky becomes associated with diplomatic failure. Serbia's anger is not resolved; it is stored as <a href="//02%20Concepts/National%20Identity.html">national humiliation</a>. Russian humiliation matters because later Russian leaders use it as a warning against backing down again. Austria-Hungary and Germany also learn a dangerous lesson: if Berlin applies pressure and Vienna holds firm, the other side may yield.   </p>
+<h3 id="h_15-1911-the-year-of-discords-morocco-again">15. 1911: The Year of Discords: Morocco Again</h3>
+<p>Summary: The second Moroccan crisis centers on Agadir, where the German gunboat <em>Panther</em> appears after French moves in Morocco, raising fears of a German Atlantic naval base and provoking British alarm. MacMillan follows Bethmann-Hollweg, Kiderlen-Waechter, Lloyd George's Mansion House speech, French and German bargaining, Congo compensation, and the way public opinion in Britain, France, and Germany hardened. The crisis ends in settlement, with France's position in Morocco confirmed and Germany compensated in Africa, but the episode strengthens British suspicion and convinces many Germans that they had again been denied respect. Source anchors: Agadir; Panther; Bethmann-Hollweg; Lloyd George; Mansion House; Congo.   </p>
+<p>Analysis: Agadir, Panther, Bethmann-Hollweg, Lloyd George, Mansion House, and Congo show brinkmanship becoming more theatrical and less controllable. The Panther makes a colonial dispute look like a naval threat to Britain, while Lloyd George's Mansion House speech signals that Britain will not ignore German pressure on France. Bethmann-Hollweg's government gains Congo territory but loses politically because German nationalists see the outcome as insufficient. Agadir matters because it pushes military conversations between Britain and France further and feeds German beliefs that prestige cannot be secured through diplomacy alone.   </p>
+<h3 id="h_16-the-first-balkan-wars">16. The First Balkan Wars</h3>
+<p>Summary: MacMillan explains how the Balkan League of Serbia, Bulgaria, Greece, and Montenegro attacked the Ottoman Empire in 1912, winning unexpectedly large victories and creating new disputes over Macedonia, Albania, Adrianople, and access to the Adriatic. Russia hopes to guide Slavic clients, Austria-Hungary fears a stronger Serbia, Germany watches its ally, Britain tries conference diplomacy, and the Ottoman retreat destabilizes the region. The Second Balkan War then pits Bulgaria against former allies and leaves Serbia enlarged, resentful over Albania, and more important to Russia, while Austria-Hungary feels increasingly threatened by Serbian ambition. Source anchors: Balkan League; Serbia; Bulgaria; Ottoman Empire; Albania; Adriatic.   </p>
+<p>Analysis: Balkan League, Serbia, Bulgaria, Ottoman Empire, Albania, and Adriatic show why the Balkans were not a peripheral nuisance but a pressure point in the alliance system. The Ottoman Empire's defeats create opportunities that Serbia and Bulgaria fight to divide. Albania blocks Serbia's Adriatic hopes largely because Austria-Hungary insists on it, so <a href="//02%20Concepts/National%20Identity.html">Serbian nationalism</a> turns more sharply toward Habsburg South Slav lands. Russia's support for Serbia becomes more valuable after the Balkan Wars, while Austria-Hungary sees delay as dangerous. The chapter prepares the reader for why Sarajevo matters beyond one assassination.   </p>
+<h3 id="h_17-preparing-for-war-or-peace-europe-s-last-months-of-peace">17. Preparing for War or Peace: Europe's Last Months of Peace</h3>
+<p>Summary: This chapter surveys 1913 and early 1914, when governments still debated budgets, elections, reforms, alliances, and crises while Europe appeared outwardly peaceful. MacMillan discusses Poincare, Jaures, Asquith, Grey, Churchill, Nicholas II, Sazonov, Berchtold, Conrad, Bethmann-Hollweg, the arms race, French three-year service, Russian military expansion, German army increases, Irish Home Rule, labor unrest, suffrage agitation, and continued Balkan anxiety. The chapter shows leaders managing ordinary politics while military and diplomatic timetables grew less forgiving. Source anchors: Poincare; Jaures; Grey; three-year service; Russian military expansion; Irish Home Rule.   </p>
+<p>Analysis: Poincare, Jaures, Grey, three-year service, Russian military expansion, and Irish Home Rule make the last months of peace feel crowded rather than calm. Poincare and the three-year service law reflect French concern about Germany and Russian readiness. Russian military expansion worries German planners who fear the future balance will worsen. Grey and Irish Home Rule show Britain absorbed by domestic crisis, which affects how clear British warnings can be. Jaures represents the antiwar left, but his presence also highlights how fragile socialist resistance proves when national crises arrive.   </p>
+<h3 id="h_18-assassination-at-sarajevo">18. Assassination at Sarajevo</h3>
+<p>Summary: MacMillan reconstructs June 28, 1914, when Archduke Franz Ferdinand and Sophie visited Sarajevo, encountered failed conspirators, survived an initial bomb attack, and were then shot by Gavrilo Princip after a mistaken turn near the Latin Bridge. The chapter explains the Serbian nationalist world around Young Bosnia, the Black Hand, Apis or Dragutin Dimitrijevic, Bosnia-Herzegovina, Habsburg rule, Serbian officials, and the ambiguous connections between Belgrade and the assassins. Franz Ferdinand's reform possibilities, Sophie's presence, the symbolism of St. Vitus Day, and the incompetence of security all heighten the event's political charge. Source anchors: June 28; Franz Ferdinand; Sophie; Gavrilo Princip; Black Hand; Apis.   </p>
+<p>Analysis: June 28, Franz Ferdinand, Sophie, Gavrilo Princip, Black Hand, and Apis show how a contingent killing becomes a great-power crisis. Franz Ferdinand matters because his death removes a Habsburg figure associated with possible reform and with caution about war. Sophie matters because the murder is also personal and dynastic, not only diplomatic. Gavrilo Princip gives the act a visible agent, while Black Hand and Apis create the unresolved question of Serbian state responsibility. June 28 becomes the trigger Austria-Hungary can use, but the chapter keeps the gap clear between assassination and general war.   </p>
+<h3 id="h_19-the-end-of-the-concert-of-europe-austria-hungary-declares-war-on-serbia">19. The End of the Concert of Europe: Austria-Hungary Declares War on Serbia</h3>
+<p>Summary: The July crisis begins as Austria-Hungary decides how to answer Sarajevo, seeks German backing, receives the blank check, drafts the ultimatum to Serbia, and waits until after Poincare's visit to Russia before acting. MacMillan follows Berchtold, Conrad, Tisza, Franz Joseph, Bethmann-Hollweg, Wilhelm II, Sazonov, Nicholas II, Poincare, Grey, and the ambassadors as they interpret timing, honor, deterrence, and risk. Serbia's reply accepts much but not all of the ultimatum; Austria-Hungary breaks relations and declares war on July 28, while Russia considers mobilization and Britain searches for mediation. Source anchors: blank check; Berchtold; Tisza; ultimatum; Serbia's reply; July 28.   </p>
+<p>Analysis: Blank check, Berchtold, Tisza, ultimatum, Serbia's reply, and July 28 mark the collapse of the Concert of Europe as a working habit. The blank check gives Vienna confidence that Germany will stand behind it, while Tisza's hesitation shows that even inside Austria-Hungary the risks are understood. The ultimatum is designed to be hard to accept, yet Serbia's reply is conciliatory enough to make Austria-Hungary's declaration on July 28 look like a choice for punishment. This chapter matters because mediation still exists as a language, but <a href="//02%20Concepts/Crisis%20Governance.html">crisis governance</a> fails when key governments refuse to let mediation slow the machinery they have set moving.   </p>
+<h3 id="h_20-turning-out-the-lights-europe-s-last-week-of-peace">20. Turning Out the Lights: Europe's Last Week of Peace</h3>
+<p>Summary: The final prewar chapter tracks the last week as Austria-Hungary shells Belgrade, Russia moves from partial to general mobilization, Germany issues ultimatums, France prepares, Belgium receives German demands, and Britain decides after the violation of Belgian neutrality. MacMillan follows Nicholas II and Wilhelm II's telegrams, Moltke, Bethmann-Hollweg, Sazonov, Poincare, Joffre, Grey, Asquith, the British Cabinet, Jean Jaures's assassination, German mobilization crowds, and the declarations of war that culminate with Britain on August 4. The title echoes Grey's remark about lamps going out across Europe, but MacMillan's emphasis remains on identifiable steps rather than one sudden darkness. Source anchors: Belgrade; general mobilization; Belgian neutrality; Grey; August 4; Jaures.   </p>
+<p>Analysis: Belgrade, general mobilization, Belgian neutrality, Grey, August 4, and Jaures show diplomacy losing to sequence. Belgrade's shelling makes the crisis military, while general mobilization convinces Germany that its own plans must begin. Belgian neutrality gives Grey and the British Cabinet a public and legal ground for intervention that previous Entente understandings had not supplied. Jaures's assassination removes a major French antiwar voice at the worst moment. August 4 matters because <a href="//02%20Concepts/Logistics%20and%20Throughput.html">mobilization throughput</a> lets each government describe itself as responding to someone else's step even as every response closes the remaining exits.   </p>
+<h3 id="epilogue-the-war">Epilogue: The War</h3>
+<p>Summary: Europeans enter August 1914 expecting a short war; even financial experts assume disrupted trade and credit will force peace. Instead, governments tax, direct production, mobilize women, and extract enough men and matériel to continue. Belgian resistance, troops diverted east, and the British Expeditionary Force help stop Germany's advance, after which trenches and defensive fire turn the Western Front into mass attrition while the more mobile Eastern Front also fails to produce decision. Imperial subjects and new belligerents make the conflict global, and German submarine warfare brings the United States in. By 1918 Russia, Austria-Hungary, the Ottoman Empire, and Germany have lost their old regimes; Bolshevism, new national states, American and Japanese power, and colonial nationalism replace Europe's prewar dominance. MacMillan closes by returning responsibility to choices, naming failures of imagination and courage rather than treating the catastrophe as automatic. Source anchors: short-war assumption; Belgian resistance; wartime resource extraction; Western Front attrition; four fallen empires; American entry; failure of imagination.   </p>
+<p>Analysis: The short-war assumption failed because leaders underestimated their own states' capacity for wartime resource extraction. Economic interdependence did not stop combat; taxation, administrative control, women's labor, and mass compliance sustained Western Front attrition after the opening plans failed. That endurance destroyed the political objects the belligerents claimed to defend: four fallen empires, Bolshevism, and American entry remade the balance of power. MacMillan's final “failure of imagination” therefore answers the book's causal question. Structures made prolonged war possible, but officials still chose escalation without imagining what their institutions could do once mobilized or showing the courage to resist claims that no alternative remained.   </p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Castles of Steel.html">castles of steel</a></li>
+	<li><a class="backlink" href="//01 Books/Hoover.html">hoover</a></li>
+	<li><a class="backlink" href="//01 Books/Black Hearts.html">black hearts</a></li>
+	<li><a class="backlink" href="//01 Books/A Fable.html">a fable</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A103851091796581153476976224282046640745{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D103851091796581153476976224282046640745{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B103851091796581153476976224282046640745{level}" level="{level}" note_temp_id="103851091796581153476976224282046640745" onclick="window.ObsHtmlGraph.run(this, '103851091796581153476976224282046640745', 'the war that ended peace');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C103851091796581153476976224282046640745{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

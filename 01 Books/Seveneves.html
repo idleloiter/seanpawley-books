@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="seveneves">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'seveneves';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=seveneves" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="seveneves">Seveneves</h1>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p>Neal Stephenson opens Seveneves with a single impossible sentence, then forces every institution and every character to behave as if it were a technical fact: the Moon has exploded at 05:03:12 UTC, leaving seven major fragments, dust, and a mystery called the Agent. The early narrative divides its attention between observers on Earth and the International Space Station, already nicknamed Izzy. Dinah MacQuarie, Ivy Xiao, Dubois “Doob” Harris, Rufus MacQuarie, Amalthea, Arjuna Expeditions, and the spinning torus around Izzy become the first pieces of a survival apparatus before anyone fully understands what survival will require.   </p>
+<p>The first part is a conversion story at planetary scale. Doob’s Bolide Fragmentation Rate model turns the Moon’s fragments from spectacle into death sentence: White Sky in roughly two years, then Hard Rain for five to ten thousand years. President Julia Bliss Flaherty, NASA director Scott Spalding, Pete Starling, and the global space agencies respond by transforming Izzy into the nucleus of the Cloud Ark. Stephenson makes the engineering painfully concrete: Scouts build tube trees and docking ports, Pioneers arrive in Soyuz and Shenzhou capsules, H2 and T2 are added, radiators sprawl aft, RTGs replace solar dreams, Dinah’s robots armor themselves with Amalthea’s metal, and Sean Probst goes after a comet core because water is propellant, shielding, coolant, and the basis of a space economy.   </p>
+<p>The second part begins when the White Sky actually arrives and ends the symbolic distance between space and Earth. Bolides burn Odessa, Crimea, Krasnodar, Stavropol, Paris, Notre Dame, the East Coast, and eventually the whole visible surface, while Ivy, Dinah, Doob, Markus Leuker, Moira Crewe, Luisa, Julia, Aida, and hundreds of Arkies attempt to keep the Cloud Ark from becoming a political and orbital disaster. The book’s hard science is inseparable from command: six orbital parameters, Parambulator, swarm algorithms, Streaker Alerts, triads, heptads, bolos, the Stack, the Tank, and the Human Genetic Archive become the vocabulary by which survival is organized and contested.   </p>
+<p>Stephenson’s central narrative turn is the Ymir expedition and the Break. Sean Probst’s ice gamble becomes essential but arrives with casualties, bad data, the Eight Ball, the Splurge, radiation, and political chaos. The Cloud Ark fractures between Endurance and the Swarm: one group follows Doob’s Big Ride toward Cleft, carrying Amalthea, Ymir’s pykrete, eighty-one arklet engines, and a dwindling crew; the other drifts into Julia’s and then Aida’s politics, starvation, mysticism, cannibalism, and civil fracture. The survival of humanity is not a clean ark myth but a chain of improvised repairs, ugly tradeoffs, social breakdowns, and exponential orbital mechanics.   </p>
+<p>Part Three jumps five thousand years to show what the seven surviving fertile women made possible. The descendants of Dinah, Ivy, Moira, Tekla, Julia, Aida, and Camila have become distinct human races with inherited cultural habits, engineered bodies, political territories, and long historical grievances. Kath Two, Tyuratam Lake, Doc, Memmie, Beled, Bard, Ariane, Einstein, Sonar Taxlaw, and Deep move through the habitat ring, the Eye, Cradle, Beringia, the Red Kulak, the Blue Great Chain, Digger communities, and Pinger contact zones. The far future is not a reset; it is a civilization built from every compromise made in the Banana, the Hammerhead, and the Council of the Seven Eves.   </p>
+<p>The novel’s structure is therefore deliberately asymmetrical. The first two parts dwell in emergency engineering and social triage over a few years; the third part treats the consequences after five millennia of mythmaking, eugenic choice, orbital infrastructure, treaty law, Red-Blue rivalry, and ecological reconstruction. Stephenson’s repeated mechanisms are specific: small decisions become exponential outcomes, software and orbital mechanics become politics, reproductive biology becomes constitutional law, and preserved scraps of Old Earth, from a radiator hose to Cal’s submarine photos, reopen supposedly settled history.   </p>
+<h2 id="core-concepts-and-linkages">Core concepts and linkages</h2>
+<ul>
+<li><a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a>: the Cloud Ark turns survival into launch cadence, docking capacity, water supply, thermal control, radiation shielding, arklet engines, and orbital mechanics.   </li>
+<li><a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a>: Julia, Markus, Ivy, Doob, and the Cloud Ark institutions show how emergency authority, public legitimacy, triage, morale, and command break under extinction pressure.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: the Council of the Seven Eves and the A+5000 civilizations turn reproductive biology, lineage choice, treaty law, and habitat geography into constitutional design.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: Parambulator, Streaker Alerts, swarm algorithms, delayed messages, archives, and future propaganda make coordination itself a survival technology.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: Moira's genetic archive, Old Earth artifacts, Cal's photos, Tav's Mistake, the Epic, and the radiator-hose relic show how fragments become civilizational memory.   </li>
+<li><a href="//02%20Concepts/Technological%20Change.html">Technological Change</a>: robotics, pykrete, space habitats, de-extinction tools, nat fabrics, bolos, the Eye, and engineered human lineages make technology an evolutionary and political force.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: the novel repeatedly asks who has authority to decide humanity's heirs, from the Casting of Lots to the Seven Eves and later Red-Blue inheritance.   </li>
+</ul>
+<h2 id="section-by-section-notes">Section-by-section notes</h2>
+<h3 id="part-one">Part One</h3>
+<p>Summary: Part One begins at Zero, when the Moon breaks into seven pieces and humanity is forced to turn scientific interpretation into a survival program. The section introduces Dinah MacQuarie at Amalthea, Ivy Xiao in command of Izzy, Rufus MacQuarie in the Brooks Range, Doob Harris at Caltech, President Julia Bliss Flaherty, the Agent, Reiner Gamma, and the new vocabulary of A+ time. Doob’s model of Bolide Fragmentation Rate leads to White Sky and Hard Rain, while the Cloud Ark becomes the name for a swarm of arklets around Izzy. Stephenson then follows the practical conversion of the station through Scouts, Pioneers, H2, T2, hamster tubes, radiators, RTGs, Sean Probst’s ice mission, the Crater Lake Accord, the Casting of Lots, and Moira Crewe’s genetic archive work. Source anchors: Zero, Agent, Izzy, Bolide Fragmentation Rate, Cloud Ark, Scouts, Casting of Lots, Moira Crewe.   </p>
+<p>Analysis: Zero gives Part One its clock, and the Agent gives the disaster its permanent mystery, but Stephenson quickly makes Izzy, Bolide Fragmentation Rate, and the Cloud Ark more important than speculation about cause, and the part is a case for <a href="//02%20Concepts/Logistics%20and%20Throughput.html">Logistics and Throughput</a> because survival becomes a production schedule. Scouts and Pioneers show the novel’s preferred logic: people survive by adding docking ports, tubes, trusses, suits, robots, and routines faster than ordinary institutions could approve them, so the question is whether water, propellant, shielding, coolant, and habitation volume can be assembled at the rate the Bolide Fragmentation Rate demands. Casting of Lots and Moira Crewe make the same pressure social and biological, because who goes to orbit and which genomes are preserved become engineering decisions with moral consequences. Part One matters because it turns apocalypse from spectacle into a throughput regime where Sean Probst hunts a comet core because water is simultaneously propellant, shielding, coolant, and the basis of a space economy.   </p>
+<h3 id="the-age-of-the-one-moon">The Age of the One Moon</h3>
+<p>Summary: The opening section narrates the Moon’s destruction from the first Utah astronomer’s view through the public naming of the Agent. The astronomer sees a blur near Reiner Gamma, blogs what he assumes is a meteor strike, looks back, and finds that his crater and then the Moon have ceased to exist. Stephenson explains that the Agent did not vaporize the Moon but broke it into seven large pieces plus countless smaller ones, all still gravitationally bound around their former center. The resulting cluster remains in the Moon’s orbit, visible first as a tawny dust cloud and then as seven white boulders, while “agent” and “patient” acquire their fencer’s meaning for a passive Earth. Source anchors: Utah astronomer, Reiner Gamma, Agent, seven large pieces, dust cloud, patient, Zero.   </p>
+<p>Analysis: The Utah astronomer and Reiner Gamma make the event observational before it becomes mythic, grounding the opening in telescope work, blogging, and orbital description. The Agent is important because its unknowability keeps the novel from becoming a disaster investigation; the real story is what the patient species does after being acted upon. Seven large pieces and the dust cloud establish the physical setup for Bolide Fragmentation Rate later, because the Moon is no longer a stable body but a collision machine. Zero fixes history into before and after, letting the rest of the book measure family life, engineering work, politics, and evolution against a single timestamp.   </p>
+<h3 id="the-seven-sisters">The Seven Sisters</h3>
+<p>Summary: “The Seven Sisters” moves to Rufus MacQuarie in the Brooks Range, Dinah MacQuarie on Izzy, Ivy Xiao in the torus, and Doob Harris at the Caltech Athenaeum. Rufus watches through a twelve-inch Cassegrain and uses a ham-radio telegraph key to tell Dinah, who is working with robots on Amalthea, to look at what used to be the Moon. The section explains Amalthea as an Arjuna asteroid captured by Arjuna Expeditions, bolted to Izzy for asteroid-mining research, and used by Dinah’s snake, crab, geodesic, and insectlike robots. Ivy convenes the ISS crew in the Banana at A+0.0.4 with Konrad Barth, Lina Ferreira, Frank Casper, Jibran Haroun, Aurelia Mackey, and NASA on the ground. Source anchors: Rufus MacQuarie, Brooks Range, Amalthea, Arjuna asteroid, Dinah MacQuarie, Ivy Xiao, Banana, Doob Harris.   </p>
+<p>Analysis: Rufus MacQuarie and Dinah MacQuarie connect Old Earth mining competence to orbital robotics, which is why Amalthea is more than scenery. The Arjuna asteroid makes Izzy already partly industrial before the crisis, giving the later Cloud Ark a material foundation in nickel, iron, robots, and experimental smelting. Ivy Xiao and the Banana establish command culture inside a station that is simultaneously NASA workplace, international outpost, and fragile future seed. Doob Harris supplies the public-science voice that will later become politically useful and personally unbearable.   </p>
+<h3 id="scouts">Scouts</h3>
+<p>Summary: “Scouts” is where Doob tells President Julia Bliss Flaherty at Camp David that the question is no longer what happened but what will happen. He explains exponential fragmentation with Kidney Bean, Mr. Spinny, the Seven Sisters becoming eight, Bolide Fragmentation Rate, the hockey-stick curve, White Sky, and Hard Rain lasting five thousand to ten thousand years. The section then cuts to J.B.F. telling the twelve people on Izzy that none of them will return to Earth and that Izzy will become the nucleus of an ark. Scott Spalding assigns Frank Casper, Spencer Grindstaff, Jibran Haroun, Fyodor Panteleimon, Zeke Petersen, Konrad Barth, Lina Ferreira, Margaret Coghlan, Jun Ueda, Marco Aldebrandi, and Dinah to urgent Cloud Ark tasks. Source anchors: Camp David, Julia Bliss Flaherty, Kidney Bean, White Sky, Hard Rain, Scott Spalding, Lina Ferreira, Cloud Ark.   </p>
+<p>Analysis: Camp David turns Doob’s mathematics into state action, and Julia Bliss Flaherty’s reaction shows how political authority has to yield to orbital physics. Kidney Bean, White Sky, and Hard Rain give the novel its countdown and make “two years” a brutal planning unit. Scott Spalding’s task list matters because each crew member’s expertise is repurposed immediately: Lina Ferreira’s fish-swarming research becomes arklet control, Konrad Barth’s astronomy becomes hazard detection, and Dinah’s robotics becomes survival manufacturing. Cloud Ark begins here as both a technical architecture and a political promise made to a dying planet.   </p>
+<h3 id="pioneers-and-prospectors">Pioneers and Prospectors</h3>
+<p>Summary: “Pioneers and Prospectors” follows the first expansion of Izzy after the Cloud Ark decision. Dinah and Rhys discuss Sean Probst’s ice ambitions while watching Larz Hoedemaeker’s video of Nats carving and rearranging a block of ice under simulated solar radiation. By Day 56, H2 has docked, T2 is planned, Scouts have built tube trees along the Integrated Truss Assembly, and docking ports become the scarce resource for Soyuz, Shenzhou, and American tourist capsules. Tekla and the other first-wave Scouts move into H2, Pioneers arrive with chocolate bars, morphine, antibiotics, microchips, condoms, coffee, lubricants, zip ties, and new EVA labor, and Dinah begins armoring Grabbs with rough Amalthea plates. Larz reveals that comet cores, solar mirrors, RTGs, and nuclear options have changed because Arjuna and Sean Probst understand that the Ark needs water. Source anchors: Rhys, Larz Hoedemaeker, Nats, H2, T2, tube trees, Tekla, Sean Probst.   </p>
+<p>Analysis: Rhys, Larz Hoedemaeker, and Nats shift the novel from abstract ark design to construction practices, showing how swarms, ice, and robots might become a shipbuilding method. H2, T2, and tube trees matter because docking capacity, not heroic launch rhetoric, controls how many human bodies can reach Izzy. Tekla’s Scout labor and Dinah’s armored Grabbs show that survival depends on people and machines doing ugly exterior work in radiation and vacuum. Sean Probst’s ice obsession reframes water as the hidden bottleneck: not only drinking supply but propellant, radiation shielding, cooling medium, and future industrial feedstock.   </p>
+<h3 id="consolidation">Consolidation</h3>
+<p>Summary: “Consolidation” explains why Izzy’s emergency growth creates new structural and thermal problems. Amalthea increases Izzy’s ballistic coefficient, but the Scouts’ and Pioneers’ additions make the station floppy again, so reboost burns expose weak joints, rattling trusses, and jury-rigged connections. From about A+0.144 to Day 250, “consol” means defloppification: external scaffolding around hamster tubes, giant heat radiators aft, water and anhydrous ammonia loops, check valves, crossover switches, and radiator panels that shine heat into deep space. Chinese beam-forming machines, Tinkertoy connectors, a 3-D printer, Fyodor’s Russian electron-beam welder, Vyacheslav, and Tekla harden the structure. On Earth, eight launch locations and new spaceports prepare rocket stages and three styles of arklet for the coming surge. Source anchors: ballistic coefficient, consol, radiators, anhydrous ammonia, Chinese beam-forming machines, Fyodor, Day 250, arklet.   </p>
+<p>Analysis: Ballistic coefficient makes Amalthea physically useful, but consol shows the cost of attaching a civilization to a station never designed to carry one. Radiators and anhydrous ammonia keep attention on heat, which is one of Stephenson’s recurring survival constraints alongside water, oxygen, and delta vee. Chinese beam-forming machines and Fyodor’s welder matter because the construction culture has moved beyond ground-designed perfection into in situ fabrication. The arklet buildup at multiple spaceports connects Izzy’s defloppification to Earth’s final industrial mobilization, making the station’s local repairs part of a planetary countdown.   </p>
+<h3 id="casting-of-lots">Casting of Lots</h3>
+<p>Summary: “Casting of Lots” centers on selection, publicity, and Doob’s reluctant decision to go to space. Doob watches Potatohead, Mr. Spinny, Acorn, Peach Pit, Scoop, Big Boy, Kidney Bean, KB1, KB2, SC1, SC2, SC3, BB2 fragments, and PP1 turn the Seven Sisters into an unmanageable rubble cloud. Julia Bliss Flaherty tells him he is going to the Cloud Ark, invokes the Crater Lake Accord, and explains that she cannot pardon herself or national leaders, while Doob realizes Pete Starling also doubts the Ark’s success. The section follows Doob to Bhutan with Tavistock Prowse, Mario, a U.S. Navy helicopter, the king, lamas, two selected candidates, priceless national objects, and the sadness of “abduction runs.” Doob secures one condition: Amelia’s frozen embryo will travel with him. Source anchors: Potatohead, Peach Pit, Crater Lake Accord, Pete Starling, Bhutan, Tavistock Prowse, Amelia's embryo, Casting of Lots.   </p>
+<p>Analysis: Potatohead and Peach Pit keep Doob’s public role tied to private horror, because the fragments he once named for viewers are now mechanisms of extinction. The Crater Lake Accord and Pete Starling show that the Casting of Lots is never pure chance; law, optics, morale, and hidden despair shape who goes. Bhutan and Tavistock Prowse make selection intimate, especially when the king, lamas, and Mario’s warning turn two Cloud Ark seats into a national funeral rite. Amelia's embryo reveals Doob’s compromise with unfairness: he accepts special treatment while knowing that nearly everyone else’s family line will end.   </p>
+<h3 id="cloud-ark">Cloud Ark</h3>
+<p>Summary: “Cloud Ark” begins on Day 365 with Doob inside Arklet 2, trying to explain orbital mechanics to children on Earth. He teaches that objects in orbit require six numbers, not three, and that arklets cannot simply “formation fly” without docking or thruster corrections. He meets Moira Crewe, who has come to Izzy after Clarence Crouch’s death, and she shows him the genetic work needed to preserve nonhuman life: black-footed ferrets, heterozygosity, algae ecosystems, digital DNA, woolly mammoth de-extinction, rad-hard storage, and whole-genome synthesis in an awkward “adolescent phase.” Moira complains that she needs gravity for lab work, while Doob admits that being the Ark’s cheerleader was his ticket into space. The section ends with the hard marker that as of that day they have one year left. Source anchors: Day 365, Arklet 2, six numbers, Moira Crewe, heterozygosity, black-footed ferrets, algae, Clarence Crouch.   </p>
+<p>Analysis: Arklet 2 and six numbers make Cloud Ark survival depend on orbital literacy, not only courage or launch volume. Moira Crewe moves the ark beyond human passengers by forcing Doob to think about heterozygosity, algae, nonhuman ecosystems, and future biospheres assembled from digital DNA. Black-footed ferrets give her work a concrete precedent for recovery from a tiny breeding stock, which later matters when humanity itself is reduced to seven fertile women. Clarence Crouch’s death and Doob’s cheerleader role expose the difference between what the public story needs and what the people inside Izzy know remains unsolved.   </p>
+<h3 id="part-two">Part Two</h3>
+<p>Summary: Part Two begins on Day 700, when the Cloud Ark has become a bead-and-chain system of 1,276 Arkies plus a final daily influx from Earth. The section follows White Sky, Hard Rain, the Splurge, Markus Leuker’s PSAPS authority, Parambulator, Streaker Alerts, Izzy’s shift from Ship thinking to Cloud thinking, and the political arrival of Julia Bliss Flaherty. Ymir’s ice, Sean Probst’s Greg’s Skeleton mission, the Eight Ball, the Human Genetic Archive disaster, the Break, Red Hope, New Caird, and the division between Endurance and the Swarm remake the survival problem. The part culminates in Endurance’s three-year Big Ride toward Cleft and the Council of the Seven Eves after only eight healthy humans remain. Source anchors: Day 700, White Sky, Hard Rain, Markus Leuker, Ymir, Human Genetic Archive, Break, Endurance.   </p>
+<p>Analysis: Day 700 marks the point where the Cloud Ark stops being preparation and becomes history’s only remaining arena. Markus Leuker, Parambulator, and Streaker Alerts show that command is now inseparable from data visualization and orbital mechanics. Ymir and the Human Genetic Archive both test the promise of preplanned salvation; ice can be turned into Endurance, but stored genomes can be lost to bad timing, thermal exposure, and swarm disorder. The Break matters because it makes survival physically plural: Endurance and the Swarm are no longer merely factions but incompatible trajectories through space.   </p>
+<h3 id="white-sky">White Sky</h3>
+<p>Summary: “White Sky” opens when the Eight Ball crosses the lunar debris cloud on A+1.335 and pushes the system over the exponential edge. Doob watches the Bolide Fragmentation Rate become meaningless as the cloud blooms like cream in coffee, develops cellular fronts, obscures PP1, PP2, and Cleft, and turns the end of Earth into a white gravel apocalypse before the fire begins. His communications narrow to Amelia, Henry, Hadley, and Hesper, with delayed texts replacing final conversations. From the Woo-Woo Pod he sees bolide trails over the Pacific and the dark side of Earth, while Markus Leuker tells him his family is dead and that his brain belongs on the Cloud Ark. Markus’s entourage hints that command has hardened around him. Source anchors: Eight Ball, A+1.335, Bolide Fragmentation Rate, PP1, Cleft, Amelia, Woo-Woo Pod, Markus Leuker.   </p>
+<p>Analysis: Eight Ball is a tiny object by lunar standards but becomes the trigger that proves Doob’s exponential model, making A+1.335 the moment prediction becomes lived disaster. PP1 and Cleft disappearing in the cloud are important because they foreshadow the later search for a metallic refuge beyond Earth. Amelia and the children keep Doob from becoming only a scientist, while the Woo-Woo Pod forces him to look at Earth as a dying home rather than a graph. Markus Leuker’s demand is harsh because it articulates the new ethics aboard Izzy: private grief must be subordinated to preserving the species.   </p>
+<h3 id="hard-rain">Hard Rain</h3>
+<p>Summary: “Hard Rain” begins with a kilometer-wide rock over eastern Europe, lighting Odessa, Crimea, Krasnodar, Stavropol, and the Black Sea rim before global bombardment accelerates. Rufus MacQuarie and Dinah exchange Morse code from the Brooks Range during the three-day grace period, while Ivy says goodbye to the Morg and Cal aboard a submarine off Norfolk. Notre Dame’s Vigil for the End of the World, the Orchestre Philharmonique de Radio France, Westminster Abbey, St. Patrick’s Cathedral, the Imperial Palace in Tokyo, Tiananmen Square, the Potala Palace, the Great Pyramids, and the Wailing Wall become Earth’s last broadcast culture. In orbit, the first real Streaker Alert forces Ivy into Parambulator, six-dimensional params, swarm negotiation, triangular collision calculations, and Cloud thinking as Splurge cargo modules remain red. Source anchors: Odessa, Brooks Range, Morse code, Notre Dame, Cal, Streaker Alert, Parambulator, params.   </p>
+<p>Analysis: Odessa and Notre Dame make Hard Rain both physical and civilizational: cities burn while inherited institutions perform until they are destroyed. Brooks Range Morse code gives Dinah a private channel outside Cloud Ark bandwidth, preserving the MacQuarie bond until the surface becomes impossible. Cal’s submarine and Ivy’s message release translate the end of Earth into a personal severing, even as she must keep working. Streaker Alert, Parambulator, and params convert catastrophe into operational procedure, showing that survival now depends on distributed computation rather than Izzy-centered command.   </p>
+<h3 id="ymir">Ymir</h3>
+<p>Summary: “Ymir” deals with the aftermath of Julia’s arrival, the damaged Human Genetic Archive, and the chaos around ice and swarm operations. In the Tank, Markus, Ivy, Dinah, Moira, Sal Guodian, and Zhong Hu reconstruct how Arklet 214, obsolete models, an omitted thermal blanket collision envelope, thruster exhaust, and bad data exposed the HGA to radiant heat from Earth’s burning atmosphere. Dinah summarizes the causal chain from Sean Probst’s secret Arjuna asteroid database, Greg’s Skeleton, the Eight Ball alert, the accelerated Splurge, scarce Flivvers and space suits, Julia’s rescue, and Arklet 214’s snagged blanket to the destruction of about 97 percent of the samples. Markus calls the HGA politically useful but largely unrealistic, while Doob asks Moira about heterozygosity and prepares for the larger consequence of lost embryos, sperm, ova, and species archives. Source anchors: Ymir, Arklet 214, Human Genetic Archive, Zhong Hu, thermal protection, Greg's Skeleton, Eight Ball, heterozygosity.   </p>
+<p>Analysis: Ymir names the hoped-for ice resource, but the section’s emotional center is the Human Genetic Archive failure, because Arklet 214 and thermal protection turn logistics into irreversible biological loss. Zhong Hu’s bad-data explanation shows that no algorithm can save a system whose model is out of date, a technical point that becomes a plot wound. Greg's Skeleton and Eight Ball tie Sean Probst’s improvisation to unintended damage: the same warning that accelerates survival launches also overloads the system. Heterozygosity returns because Moira and Doob now have to think about genetic bottlenecks without the comforting fiction of a complete archive.   </p>
+<h3 id="endurance">Endurance</h3>
+<p>Summary: “Endurance” follows the merger of Izzy and Ymir into a pykrete-armored vessel named after Shackleton’s ship. Nats move ice around the station, eighty-one arklets are fixed into nine groups of nine, the reactor is pulled close to the Stack, the Shipyard is moved, Amalthea becomes the summit, and Fyodor christens Endurance with champagne against metal. The Big Ride takes three years rather than one as Endurance burns at perigee to raise apogee toward Cleft, mines its own ice, trades sporadically with the Swarm, crosses the Van Allen belts, loses people to bolides, cancer, suicide, radiation, hunger, and equipment failure, and relies on Bo, Doob, Ivy, Dinah, and a shrinking crew. At the far end, Aida contacts them from the Swarm with only eleven people and twenty-six arklets left, seeking parley before Endurance enters the debris cloud. Source anchors: Endurance, pykrete, eighty-one arklets, Big Ride, Cleft, Van Allen belts, Bo, Aida.   </p>
+<p>Analysis: Endurance is the novel’s most literal conversion of material into fate, and the chapter is a case for <a href="//02%20Concepts/Crisis%20Governance.html">Crisis Governance</a> because even the correct plan distributes death across the crew. Pykrete, Amalthea, Ymir, eighty-one arklets, and the reactor become one slow vehicle, and the Big Ride matters because Doob’s physics is finally operational, with perigee burns, apogee gains, plane changes, and Cleft all governing human choices. Van Allen belts and cancer keep the victory ugly, because even the correct plan consumes bodies over three years, which is the crisis-governance truth that survival under exponential mechanics is paid in bodies, not won by courage. Aida’s contact from the Swarm shows that political fracture has become demographic collapse, and that the two survival paths cannot simply be recombined without paying in water, delta vee, and trust, so the triage is irreversible by the time the engineering works.   </p>
+<h3 id="cleft">Cleft</h3>
+<p>Summary: “Cleft” lands Endurance on the iron floor of a crevasse where low gravity makes a human weigh only a few pints of beer. Ivy sets the ship down nose-first, Dinah’s Grabbs weld it to Cleft, and Endurance changes from ship to building. The survivors explore with Buckies and Siwis, find Aida after she has eaten the last of Tavistock Prowse, set up a sick bay in the torus, and take Doob on one final walk where he imagines mirrors, sunlight, arklet agriculture, and Endomement before dying. After radiation sickness and wounds finish their work, eight healthy humans remain: Dinah, Ivy, Moira, Tekla, Julia, Aida, Camila, and Luisa. In the Banana, the Council of the Seven Eves confronts parthenogenesis, automictic recombination, Y-chromosome synthesis, alpha-thalassemia, cystic fibrosis, breast-cancer defects, bipolar disorder, and Moira’s black-footed-ferret expertise. Source anchors: Cleft, Grabbs, Aida, Tavistock Prowse, Endomement, Council of the Seven Eves, parthenogenesis, Y chromosome.   </p>
+<p>Analysis: Cleft matters because the novel finally trades motion for rootedness, and the chapter is a case for <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> because Stephenson changes the founding variable of a civilization from launch capacity to reproductive biology. Grabbs weld Endurance into shelter, and Endomement imagines a valley that can someday hold air, but Aida and Tavistock Prowse bring the Swarm’s moral catastrophe inside the last refuge, making the Council of the Seven Eves politically contaminated from its first meeting. Parthenogenesis and the Y chromosome make Moira’s lab the new founding institution, replacing launch vehicles and swarm algorithms with reproductive biology, so governance here is literally who may found a lineage. The Council of the Seven Eves turns eight survivors into seven founding lineages, because Luisa’s menopause excludes her from the genetic future while leaving her judgment present at the constitutional beginning, which is the speculative-governance move of biology becoming constitutional law.   </p>
+<h3 id="part-three">Part Three</h3>
+<p>Summary: Part Three jumps to the habitat ring around New Earth roughly five thousand years after Zero. Kath Two, a Moiran Survey worker, wakes near a crater lake on the surface, launches in a glider using wind, Space Grease, nat fabric, a katapult, a bolo hanger, and a flivver, and returns to a civilization of three billion humans living in more than nine thousand active habitats. The section explains the Eye, Greenwich, Rio, Memphis, Pitcairn, Kyoto, Dhaka, Baghdad, boneyards such as Cape Verde and Kamchatka, and seven racial lineages descended from the Eves. It then follows Kath Two through the Great Chain, Amistics, Tav’s Mistake, the Epic, Cradle, the Change, the Capitol, grizzled crows, and a mission with Tyuratam Lake, Doc, Memmie, Beled, Bard, Ariane, and eventually Einstein and Sonar Taxlaw. Source anchors: Kath Two, New Earth, Eye, Greenwich, Great Chain, Tav's Mistake, Epic, Cradle.   </p>
+<p>Analysis: Kath Two’s surface launch establishes the new world as both recovered nature and engineered artifact, because New Earth, Space Grease, nats, and the Eye all coexist in one morning. Greenwich and the Great Chain show that the descendants did not simply return to Earth; they built a ring civilization before descending by tether to Cradle. Tav's Mistake and the Epic explain why pre-Zero electronics, social media, and surveillance are remembered as moral lessons rather than neutral tools. Cradle matters because it concentrates wealth, atmosphere, politics, and historical symbolism at the point where the orbital human races touch the remade planet.   </p>
+<h3 id="the-habitat-ring-circa-a-5000">The Habitat Ring circa A+5000</h3>
+<p>Summary: “The Habitat Ring circa A+5000” introduces the built geography of the far future through Kath Two’s travel from New Earth back toward orbit. From the surface she sees almost half of the ten thousand habitats and the Eye above the Atlantic, then uses an inflatable glider, nat mesh suit, helmet, urine collector, lidar soundscape, and bolo hanger to reach a flivver. The ring is eighty-four thousand kilometers across, divided into arcs connected by boneyards, with Greenwich, Volta, Banu Qasim, Atlas, Roland, Rio, Memphis, Pitcairn, Kyoto, Dhaka, and Baghdad carrying the history of post-Cleft expansion. Kath Two’s Moiran condition, caches, shopping district on the Great Chain, paper books, Amistics, Old Earth tablets, Tavistock Prowse’s analyzed blog habits, and robots descended from Dinah’s Grabbs explain how culture has diverged under technological constraint. Source anchors: Habitat Ring, Kath Two, bolo hanger, Greenwich, Banu Qasim, Amistics, Tavistock Prowse, Grabbs.   </p>
+<p>Analysis: The Habitat Ring gives Stephenson a way to make civilization spatially legible after the compression of Cleft: Greenwich, Banu Qasim, and the boneyards encode five millennia of demography and construction. Kath Two’s bolo hanger flight shows that far-future technology remains bodily and risky, not magic, because Space Grease, three gees, and suit pressure still matter. Amistics and Tavistock Prowse connect cultural caution to archival memory, explaining why these people can build the Eye and yet still treat Old Earth phones as dangerous marvels. Grabbs link Dinah’s improvised robotics to the everyday infrastructure of a ring civilization.   </p>
+<h3 id="five-thousand-years-later">Five Thousand Years Later</h3>
+<p>Summary: “Five Thousand Years Later” follows Kath Two into Cradle and then into a first-contact expedition on the surface. Cradle hangs from the Eye by a thirty-six-thousand-kilometer tether, breathes engineered New Earth atmosphere, contains Change Hill, the Capitol, a bridge over the Vale, moonstone, marble, gardens, grizzled crows, and the sacred landing place of Endurance. The mission assembles a mixed Seven including Kath Two, Tyuratam Lake, Doc, Memmie, Beled Tomov, Langobard, Ariane, and later the surface-born Einstein, who leads them to a pre-Zero truck artifact reduced to a radiator hose, steering wheel totem, grave, and the inscription “Srap Tasmaner.” Contact with Diggers, Red Neoanders, Aidan Betas, Donno, Sonar Taxlaw, Pingers, Ark Darwin, Cantabrigia Barth Five, the Kulak, Gnomon, and the Black-Red-Blue propaganda battle forces the old orbital races to confront surviving surface and undersea humans. Source anchors: Cradle, Tyuratam Lake, Einstein, Srap Tasmaner, Diggers, Sonar Taxlaw, Pingers, Kulak.   </p>
+<p>Analysis: Cradle makes the return to Earth politically charged because air, tether access, the Change, and the Capitol are scarce symbols as well as infrastructure. Tyuratam Lake and Einstein turn the search for a truck artifact into a discovery of Diggers, proving that Old Earth did not survive only through the Seven Eves. Srap Tasmaner matters because a shovel handle and radiator hose carry more emotional force than abstract billions, giving the expedition a physical bridge to pre-Zero life. Sonar Taxlaw, Pingers, and the Kulak expand the novel from Red-Blue rivalry into a larger human plurality, where surface, undersea, and orbital histories all make claims.   </p>
+<h3 id="epilogue">Epilogue</h3>
+<p>Summary: The epilogue takes place aboard Ark Darwin after the encounter with the Pingers and reframes Cal’s submarine as another survival line. Esa Arjun tells Tyuratam Lake that Cal sent Eve Ivy seventeen photos before the Hard Rain, including selfies that secretly showed bathymetric charts, binders, undersea canyon preparations, and hints of a major submarine survival program. Deep, the Pinger technician or scientist, eats raw fish while Blue officials, Red soldiers onshore, Sonar Taxlaw, Einstein, and Pingers occupy a tense diplomatic setting in the flooded ark. Ty discusses the Purpose, the Crow’s Nest, Cradle, the Owners, Red and Blue politics, God without theology, and the possibility of assembling a Nine rather than a traditional Seven. The section closes by inviting Sonar, Einstein, the Cyc, Deep, Beled, Kathree, Bard, Julians, Camites, and Aidan subraces into a larger coalition. Source anchors: Ark Darwin, Esa Arjun, Cal, seventeen photos, Deep, Purpose, Crow's Nest, Nine.   </p>
+<p>Analysis: Ark Darwin and Esa Arjun reveal that Cal was not merely Ivy’s doomed fiance but a carrier of hidden undersea continuity, which changes the meaning of the Hard Rain survival story. Deep makes the Pingers embodied rather than legendary, with food, tools, manners, and technology preserved outside the Cloud Ark line. The Purpose gives Ty a nonsectarian reason to act beyond Red versus Blue inheritance, and the Crow's Nest becomes a practical meeting point for that motive. The proposed Nine matters because it answers the Council of the Seven Eves with a more inclusive form: the future will not be secured by seven orbital lineages alone.   </p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Anathem.html">anathem</a></li>
+	<li><a class="backlink" href="//02 Concepts/Ecological Constraint.html">ecological constraint</a></li>
+	<li><a class="backlink" href="//01 Books/Children of Time.html">children of time</a></li>
+	<li><a class="backlink" href="//01 Books/Accelerando.html">accelerando</a></li>
+	<li><a class="backlink" href="//02 Concepts/Ecology, Resources, and Constraint.html">ecology, resources, and constraint</a></li>
+	<li><a class="backlink" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html">collapse, resilience, and civilizational survival</a></li>
+	<li><a class="backlink" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html">technology, platforms, and speculative systems</a></li>
+	<li><a class="backlink" href="//01 Books/Delta-V.html">delta-v</a></li>
+	<li><a class="backlink" href="//02 Concepts/Collapse and Resilience.html">collapse and resilience</a></li>
+	<li><a class="backlink" href="//02 Concepts/Logistics and Throughput.html">logistics and throughput</a></li>
+	<li><a class="backlink" href="//02 Concepts/War, Crisis, and Collapse.html">war, crisis, and collapse</a></li>
+	<li><a class="backlink" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html">homo deus - a brief history of tomorrow</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A318978835296304782546604099051175014907{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D318978835296304782546604099051175014907{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B318978835296304782546604099051175014907{level}" level="{level}" note_temp_id="318978835296304782546604099051175014907" onclick="window.ObsHtmlGraph.run(this, '318978835296304782546604099051175014907', 'seveneves');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C318978835296304782546604099051175014907{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="foundation/second foundation">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'foundation/second foundation';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=foundation/second foundation" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="second-foundation">Second Foundation</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p><em>Second Foundation</em> is the third published novel of <a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a>. It sits directly after <a href="//01%20Books/Foundation/Foundation%20and%20Empire.html">Foundation and Empire</a>, which ends with the First Foundation's capture, the Mule stalled, and Ebling Mis killed by Bayta Darell just before he could name the hidden enemy. This note is the book note; the hidden institution both halves of the novel hunt has its own entity note, <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>, and the defeated and recovering First Foundation is covered by <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>. The book belongs to the speculative-governance cluster the vault assembles under <a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a>, and it is the key volume for anyone reading the series for institutional secrecy, mental control, and the cost of knowing one's own future.   </p>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><em>Second Foundation</em> is built from two searches that fear the same hidden institution for opposite reasons. The Mule searches because the Second Foundation is the one obstacle left after his mutant emotional power has broken the First Foundation and created the Union of Worlds. The First Foundation searches because dependence on an unseen guardian feels like humiliation after the Mule, and because physical scientists on Terminus cannot tolerate a group of mental scientists quietly correcting history from elsewhere.   </p>
+<p>The first half is a contest among minds already under pressure. Han Pritcher is Converted and loyal to the Mule because his emotions have been rearranged. Bail Channis is Unconverted, ambitious, charming, and apparently useful because self-interest gives him motives the Mule thinks Pritcher has lost. The Mule, ruling from Kalgan, uses both men to follow the clue of Star's End toward Tazenda and Rossem, but the expedition is also bait set by the Second Foundation. The First Speaker defeats the Mule not by fleets or blasters but by manipulating emotional confidence, suspicion, and despair at exactly the points where the mutant's power leaves him vulnerable.   </p>
+<p>The second half shifts the fear of hidden mental control to Terminus. Arcadia Darell, who wants to be called Arkady and writes school compositions with theatrical ambition, overhears adult conspirators and makes herself a stowaway in a plot involving Dr. Toran Darell, Pelleas Anthor, Homir Munn, Jole Turbor, and Elvett Semic. Their search is not a repetition of the Mule's; it is a rebellion by the First Foundation's physical-science culture against the idea that Seldon's Plan can be guarded by invisible psychologists.   </p>
+<p>Kalgan is the hinge between the two halves. Under Lord Stettin it is still marked by the Mule's former empire, court luxury, war potential, and resentment toward the Foundation. Lady Callia appears frivolous and affectionate, yet she quietly guides Arcadia away from danger and toward Trantor. Homir Munn thinks he is collecting evidence from the Mule's palace and Stettin's archives, but his conclusions are among the pieces the Second Foundation is arranging.   </p>
+<p>The novel's central trick is that it gives the First Foundation a satisfying answer before revealing the true one. Dr. Darell's Mind Static device, Anthor's exposure, Arcadia's message that a circle has no end, and the captured group on Terminus allow the physical scientists to believe they have found and neutralized the Second Foundation at home. The last section then discloses that this answer was planted: fifty Second Foundation volunteers were sacrificed so Terminus would stop looking.   </p>
+<p>The true location is Trantor, Star's End in the old Imperial sense, where Seldon and his psychohistorians had worked and where the data for maintaining the Plan already existed. Preem Palver, the First Speaker, has arranged the Kalganian war, Arcadia's childhood conditioning, Anthor's apparent betrayal, and the final false victory. The book ends with the Seldon Plan restored not because everyone knows the truth, but because the First Foundation once again believes it is free of supervision.   </p>
+<p>Structured as Part I "Search by the Mule" and Part II "Search by the Foundation," the book alternates chapters with five interludes set inside the Second Foundation's Executive Council, so the reader is given a guarded view of the hidden institution long before either searcher understands it. The extract follows the Bantam edition, whose Table of Contents numbers the chapters 1–22.   </p>
+<h2 id="primary-characters-and-motivations">Primary characters and motivations</h2>
+<ul>
+<li><strong>The Mule (First Citizen of the Union of Worlds)</strong>: a physically deformed, sterile mutant who can read and shape human emotions, and who conquered the First Foundation and most of the Galaxy in five years. His drive is conquest, loneliness, and revenge on a humanity into which he does not fit; his five years of post-conquest "consolidation" are actually paralysis before the unseen Second Foundation. He is not killed but emotionally adjusted by the First Speaker, losing the urge to conquer while keeping his empire and powers.   </li>
+<li><strong>Han Pritcher</strong>: a former Foundation captain, underground democrat, and failed assassin, Converted into a loyal lieutenant general. His useful obedience is artificial, and he recognizes that Conversion has cost him initiative. He leads the Mule's searches, joins Channis's Tazenda expedition, briefly arrests Channis, and is freed from Conversion by Channis in the final confrontation.   </li>
+<li><strong>Bail Channis</strong>: a young, handsome, Unconverted Kalganian of open ambition, secretly a Second Foundation agent. To make his deception undetectable, his own mind was surgically persuaded that Rossem was the Second Foundation; he volunteers as a decoy to draw the Mule into the trap at Rossem. His real personality is later restored on the Second Foundation.   </li>
+<li><strong>The First Speaker (Preem Palver)</strong>: the leader of the Second Foundation's Executive Council and the architect of both the Mule's defeat and the staged "destruction" of the Second Foundation. He appears in Part II disguised as the round, ruddy Trantorian farm trader who shelters Arcadia and smuggles her clue to Terminus; the final chapter reveals his identity.   </li>
+<li><strong>Dr. Toran Darell</strong>: Arcadia's father, the Foundation's leading encephalographer, son of the hero family of Bayta Darell. He reluctantly joins Anthor's conspiracy while privately building the Mind Static device, and he works out the "circle has no end" solution that produces the satisfying but false victory.   </li>
+<li><strong>Arcadia (Arkady) Darell</strong>: the fourteen-year-old grandchild of Bayta Darell, a theatrical would-be novelist who overhears the conspiracy, stows away to Kalgan, is steered by Lady Callia to Trantor, and delivers the five-word clue "A circle has no end." She is, without knowing it, the Second Foundation's longest-prepared instrument, conditioned from infancy. The Part II epigraph records that she grew up to become the novelist Arkady Darell, biographer of Bayta.   </li>
+<li><strong>Pelleas Anthor</strong>: presented as the brilliant young student of the dead scientist Kleise, he recruits Darell and steers the anti-Second-Foundation movement. He is actually one of the fifty Second Foundation volunteers planted to steer and later appear to lose the conspiracy, exactly on schedule.   </li>
+<li><strong>Homir Munn</strong>: a stuttering librarian, the Galaxy's leading collector of Muleana, sent to Kalgan to mine the Mule's palace records. The Second Foundation arranges his appearance there, adjusts his mind so he believes the Second Foundation never existed, and his later "peace ambassador" role lets him carry the false reassurance home.   </li>
+<li><strong>Jole Turbor</strong>: a visicastor and later war correspondent who joins the conspiracy and reads the war's morale dimension; his broadcast skepticism of the Second Foundation first drew Second-Foundation notice.   </li>
+<li><strong>Elvett Semic</strong>: an elderly, underestimated physicist who builds the hyperspace components of Darell's Mind Static device without fully knowing its purpose.   </li>
+<li><strong>Lord Stettin</strong>: the muscular, ambitious Lord of Kalgan who styles himself First Citizen of the Galaxy, launches the Kalganian war to revive the Mule's empire, and loses it — his wish to marry a scion of the Bayta Darell family marks the lengths of his dynastic ambition.   </li>
+<li><strong>Lady Callia</strong>: Stettin's apparent mistress, seeming frivolous and frightened. She is a Second Foundation agent who maneuvers Munn into the palace, extracts the war-triggering information from Arcadia, stages Arcadia's escape, and betrays herself to Arcadia by a momentary "vast, inhuman amusement."   </li>
+</ul>
+<h2 id="major-linkages">Major linkages</h2>
+<ul>
+<li><a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a> — the series hub; this is the third published volume.   </li>
+<li><a href="//01%20Books/Foundation/Foundation.html">Foundation</a> — establishes Seldon's Plan, psychohistory, and the twin-Foundation premise that this book's plot hinges on.   </li>
+<li><a href="//01%20Books/Foundation/Foundation%20and%20Empire.html">Foundation and Empire</a> — immediate predecessor; supplies the Mule crisis, Bayta's killing of Ebling Mis, and the unfinished clue that both searches chase.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> — the First Foundation institution it serves and then seemingly surpasses.   </li>
+<li><a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> — the hidden guardian as an entity; this book dramatizes its two hidden victories.   </li>
+<li><a href="//00%20Maps%20of%20Content/Science%20Fiction%20and%20Speculative%20Orders.html">Science Fiction and Speculative Orders</a> — the vault MoC hub that groups the speculative-governance cluster containing this note.   </li>
+<li>Core concept notes developed below: <a href="//02%20Concepts/Legibility.html">Legibility</a>, <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>, <a href="//02%20Concepts/Intelligence.html">Intelligence</a>, <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>.   </li>
+</ul>
+<h2 id="themes-and-concepts-to-track">Themes and concepts to track</h2>
+<ul>
+<li><strong>Hidden guardianship as a public secret</strong>: the Second Foundation's entire method is to make the First Foundation believe it governs itself, because belief in rescue destroys the initiative the Plan depends on. Watch how every "victory" in the book is arranged to restore that belief.   </li>
+<li><strong>Search as staged performance</strong>: the Mule's search and the Foundation's search are both channels prepared in advance. Star's End, Tazenda, Rossem, and Kalgan are stations on an arranged route, and each wrong answer deflects destructive attention from Trantor.   </li>
+<li><strong>Mental versus physical power</strong>: emotional adjustment is treated as the superior and invisible technology, opposed to the First Foundation's physical science, whose only answer is a device, Mind Static, that attacks the hidden sense directly.   </li>
+<li><strong>The individual versus the statistical</strong>: psychohistory works on masses, so a single mutant or a single dancing girl can wreck or save the Plan. The book repeatedly notes that individuals now matter because the Plan's normal functioning has been disturbed.   </li>
+<li><strong>Becoming readable to the enemy</strong>: brainwave analysis, Tamper Plateaus, and the Mind Static device all make mental control legible — and the Second Foundation engineers exactly what becomes legible and when.   </li>
+<li><strong>Cost of knowing your own future</strong>: Seldon's Plan works only while its details are unknown; the book dramatizes both the encyclopedic urge to find out and the institutional interest in keeping the future unreadable.   </li>
+<li><strong>War as confidence therapy</strong>: the Kalganian war is fought so Terminus can beat a physical enemy and rebuild the self-assurance the Mule destroyed, before it can safely "discover" that it has destroyed the mental enemy.   </li>
+</ul>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: the phrase "Star's End" and Seldon's "other end of the Galaxy" channel physical searchers toward a cartographic answer while the social meaning keeps the true location (Trantor) invisible; "the other end" becomes the novel's central semantic trap.   </li>
+<li><a href="//02%20Concepts/Intelligence.html">Intelligence</a>: the First Speaker uses Channis, Rossem, emotional diagnosis, and Callia's court performance to guide rivals without exposing the institution behind the operation; Darell's counter-intelligence runs on the same logic of arranging what others discover.   </li>
+<li><a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: hidden guardianship becomes self-defeating when Terminus starts waiting for invisible correction instead of acting through its own institutions, so the Second Foundation must both supply information (call warnings) and withhold its existence.   </li>
+<li><a href="//02%20Concepts/Legibility.html">Legibility</a>: Darell's Mind Static device and Tamper Plateau analysis make mental manipulation measurable enough to support a convincing but false identification, and the Second Foundation controls exactly what becomes legible.   </li>
+<li><a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: the Second Foundation sacrifices volunteers, conditions Arcadia, and stages a physical war and a physical victory so the First Foundation can recover the belief that it governs itself; the "destruction" of the Second Foundation is itself an act of government.   </li>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the Second Foundation's capacity is deliberately unrecognized statecraft — surveillance sites the potential, war as psychological maintenance — while Lord Stettin's Kalgan shows what visible military capacity alone can and cannot do.   </li>
+<li><a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a>: Kalgan's post-Mule Lords inherit the title "First Citizen of the Galaxy" through assassination and force rather than law, and Stettin seeks a marriage into the Bayta Darell line precisely because blood legitimacy is what the Mule, sterile and heirless, could never provide.   </li>
+<li><a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a>: Trantor, the old imperial center that every searcher passes by as an exhausted ruin, turns out to be the socially "other end" where the Second Foundation continues the Empire's central role of rule.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: the Prime Radiant holds the Seldon Plan complete, the Imperial Library survives the Great Sack, and the Mule's palace preserves the records of his failed search; institutions survive by keeping data that others cannot read.   </li>
+<li><a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: Trantor, stripped of its metal shell and reduced to farms, is at once the greatest ruin in the Galaxy and the home of the Galaxy's most resilient hidden institution.   </li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="two-men-and-the-mule">TWO MEN AND THE MULE</h3>
+<p>Summary: The novel opens in Part I on Kalgan, where the Mule rules as First Citizen of the Union of Worlds after five years of conquest and five years of "consolidation," with the First Foundation defeated and the rebel captain Han Pritcher Converted into a loyal lieutenant general. Pritcher returns from his fifth expedition to report that no Second Foundation exists, but the Mule still trusts the dying Ebling Mis's near-discovery that the Second Foundation is real, hidden, and that minds under his own control have been subtly and increasingly interfered with — six of his best men in the last year had initiative and ingenuity silently rubbed out. He summons the young, handsome, Unconverted Kalganian Bail Channis, pairs him with Pritcher, warns Pritcher that a charming man is dangerous, and demonstrates to Channis that emotional control can create unbearable grief as easily as loyalty.   </p>
+<p>Analysis: The Mule's Kalgan makes <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> visible only through its absence: the defeated First Foundation survives as Converted talent. His rule rests on personal emotional command rather than law or succession, so the Union of Worlds tests <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> at its limit — one body, one mutant sense, holds an empire together. Han Pritcher shows the cost of that command in a useful servant whose loyalty is artificial and whose judgment the Mule himself distrusts, which is why Channis, Unconverted and self-interested, is needed. The Mule's sensitivity to tampered Converted men is the first charge in the book's long battery of evidence that the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> is active as intelligence, not merely hidden. Ebling Mis's unfinished clue keeps the search grounded in the previous book's fact, and the chapter frames the whole novel's contest as one mind-versus-institution. <br />
+Source anchors: Mule; First Citizen; Union of Worlds; Kalgan; Han Pritcher; Conversion; Bail Channis; Unconverted; Ebling Mis; Second Foundation.   </p>
+<h3 id="first-interlude">FIRST INTERLUDE</h3>
+<p>Summary: The Executive Council of the Second Foundation meets as disembodied voices, with the First Speaker guiding discussion of the Mule's renewed search. The Fifth Speaker reconstructs how the Mule was stopped: on Trantor, using the heightened mind of the Foundation "psychologist" Ebling Mis, and the odds against the Second Foundation half a year after the conquest were "96.3 plus or minus 0.05%" — the rescue came only because a woman the Mule trusted emotionally, Bayta Darell, killed Mis before he could reveal the location. The Council concludes that the Plan has been bent toward fracture and that the only solution is risky: "We must allow the Mule to find us — in a sense."   </p>
+<p>Analysis: The interlude gives the hidden side of the conflict without naming faces, which makes the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> feel institutional rather than heroic, a governing body rather than a secret club. The First Speaker's treatment of the Mule as both a statistical disturbance and a specific person shows how <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> operates: the Plan is restored by calculated individual action, exactly where its own axioms say individuals should not matter. Bayta Darell's killing of Mis is reframed as the hinge of the whole sequence, an accident the Second Foundation then converts into preparedness. The chapter teaches that secrecy is not passivity; it is the operating method of an intelligence service, and the coming search is already being managed as a prepared channel. <br />
+Source anchors: Executive Council; Second Foundation; First Speaker; Fifth Speaker; Bayta Darell; Ebling Mis; Mule; Seldon's Plan; 96.3 plus or minus 0.05%.   </p>
+<h3 id="two-men-without-the-mule">TWO MEN WITHOUT THE MULE</h3>
+<p>Summary: Prtcher and Channis leave Kalgan, and their partnership becomes a duel between Converted suspicion and Unconverted performance. In the ship's navigation room Channis argues deductively that the Second Foundation must be weak in physical science, arrives at Tazenda as the answer, and demonstrates on the Lens — working from the crucial Trantorian orientation — that a rift called "The Mouth" in the dark nebula Pellot's Nebula leads to a single star called "Star's End," which is Tazenda. He has also ordered the ship to leave three days early, without telling Pritcher, and quietly discovers a hyper-relay planted on the communication circuit that would let the ship be traced through hyperspace. Pritcher, watching and measuring everything, is left suspecting that the apparently lucky Channis knows too much and is being guided by someone else.   </p>
+<p>Analysis: Star's End is the key phrase because <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> makes physical searchers treat it as a navigational clue before the book reveals it as a semantic product of a specific viewpoint — Trantor's. Channis's deduction is a lesson in <a href="//02%20Concepts/Intelligence.html">Intelligence</a>: the same evidence reads differently depending on the reference point one adopts, and the "accidental" success is the first sign that the search is being steered. The hyper-relay turns the expedition into an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> problem, since both men read it as origin tracing while the true originating mind is the one neither suspects. Pritcher's lingering self-doubt about what Conversion cost him gives the chapter its emotional torque: the Converted man can still notice tooperfect clues, but can no longer act on them with his old initiative. <br />
+Source anchors: Han Pritcher; Bail Channis; Lens; Pellot's Nebula; The Mouth; Star's End; Tazenda; hyper-relay; Trantor; Chief Engineer Huxlani.   </p>
+<h3 id="second-interlude">SECOND INTERLUDE</h3>
+<p>Summary: In a brief anteroom exchange between two members of the Second Foundation, one observes that "the Mule is on his way" and calls it mighty risky. The reply runs through the difficulty: the Mule is not an ordinary man, the controlled minds are hard to touch without his detecting it, and the uncontrolled minds — which are easier to reach — are few in positions of authority under him. They enter the Council Chamber with the others.   </p>
+<p>Analysis: The interlude condenses the institutional calculus of the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> into a single diagnostic: its instrument of influence, the visible agent, is a scarce resource, and the Mule's own Converted men are the hardest safe targets because he monitors them most closely. <a href="//02%20Concepts/Intelligence.html">Intelligence</a> work, the scene implies, runs on access to unguarded minds, and the whole first half of the novel is the inventory of which minds on the Mule's side remain unguarded. The matter-of-fact tone also does the work of normalization: the Council treats life-or-death manipulation as administrative routine, which frames the moral horror of the book's second half. <br />
+Source anchors: Second Foundation; Executive Council; Mule; controlled minds; Unconverted; risk.   </p>
+<h3 id="two-men-and-a-peasant">TWO MEN AND A PEASANT</h3>
+<p>Summary: The search descends from imperial ships to the cold, poor world of Rossem, where snow falls nine months of the year, the sun is "a small ruddy niggard," and peasants farm tough native grain and herd small goatlike animals. The peasant Narovi, eager to win favor with the governor, offers eager hospitality and informs them that the village Elders are waiting for them. Channis argues that the psychologists of the Second Foundation must be a small minority, well hidden even on their own world, and that Rossem — a subject planet where the Tazendian rulers concentrate in a single village, Gentri — is the perfect place to find them. Pritcher distrusts the move and the conspicuousness it brings.   </p>
+<p>Analysis: Rossem tests the assumption — carried by both searchers and most readers — that power must look like Kalgan, Terminus, or Trantor. The chapter makes <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> spatial and visual: the marginal world's labor, deference, and poverty are presented as evidence of insignificance, which is precisely the camouflage the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> depends on. Channis's argument converts weakness into a signature of hidden <a href="//02%20Concepts/Intelligence.html">Intelligence</a> organization, since the actual rulers would be a tiny elite concealed beneath ordinary populations. Pritcher's suspicion matters because even a Converted mind can notice too-perfect clues, though he cannot step outside the larger design he is part of. <br />
+Source anchors: Rossem; snow; Narovi; peasant; Tazenda; Gentri; Elders; Channis; Pritcher; Second Foundation.   </p>
+<h3 id="third-interlude">THIRD INTERLUDE</h3>
+<p>Summary: The First Speaker stands alone looking at the night sky after a short Council meeting, feeling that space now holds the Mule and that it has become "actively hostile." The doubts and questionings have been about the difficult mathematical problem of dealing with a mental mutant of uncertain makeup. Handling the Mule's men is easy — they continue to react according to plan — but the Mule himself remains the unresolved variable.   </p>
+<p>Analysis: The interlude isolates the epistemological core of the book: the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> can manage everyone around the Mule but is reduced to guesswork about the Mule, because he is an individual anomaly in a discipline that lives on <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> by mass statistics. It is the mirror image of the previous chapter's confidence — the peasant world looks governable, the mutant does not — and it reframes the whole expedition as a high-stakes experiment in <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> where the failure modes travel through one unreadable mind. <br />
+Source anchors: First Speaker; Executive Council; Mule; psychohistory; probability.   </p>
+<h3 id="two-men-and-the-elders">TWO MEN AND THE ELDERS</h3>
+<p>Summary: On Rossem, the Elders receive the two strangers with grave dignity, then flood them with naive questions about ships, climates, and clothing. When Channis asks directly about Tazenda, the Elders fall silent, frightened, and the spokesman insists they are faithful servants of the Lords of Tazenda who have ruled since before living memory — but held in place, Channis argues, by implanted mental attitudes rather than by soldiers. The governor, who has expected them for a week, arrives in a chemical-fueled ground-car, thickset and weak-chinned. Pritcher, feeling "the other fear," dreads the possibility that the governor will tamper with his mind as the Mule did once before.   </p>
+<p>Analysis: The Elders make hierarchy itself a clue: power may sit above them in Tazenda, behind them in the Second Foundation, or inside the conversation as planted expectation. Channis's reading of Tazendian rule — efficient, benign, enforced by belief rather than garrison — is a half-correct study in <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: the administration of a population through engineered consent rather than coercion. The chapter turns <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> into operational misdirection, since "Star's End" sounds precise enough to justify destroying Tazenda while remaining semantically open enough to conceal Trantor, and the wrong target is not harmless error but a channel that directs the Mule's force in a safe direction. Pritcher's irrational dread shows what the whole defeat looks like from inside the target population of a mind-controlling institution like the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>. <br />
+Source anchors: Rossem; Elders; Tazenda; Lords of Tazenda; governor; Gentri; Channis; Pritcher; mental handling.   </p>
+<h3 id="fourth-interlude">FOURTH INTERLUDE</h3>
+<p>Summary: Two Speakers of the Second Foundation pass on a road and exchange word from the First Speaker. One asks whether it is "intersection point," and the other confirms it, closing with "May we live to see the dawn!"   </p>
+<p>Analysis: The scene compresses the entire mechanism of the trap into two lines of antiphonal <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: messages travel through trusted channels, arrive at a predicted intersection of persons and events, and the operators themselves wait in uncertainty. It is a reminder that the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> plans probabilities, not certainties, and that its own agents face the same risk of its failure as everyone else. <br />
+Source anchors: Second Foundation; First Speaker; intersection point.   </p>
+<h3 id="one-man-and-the-mule">ONE MAN AND THE MULE</h3>
+<p>Summary: The partnership breaks as Pritcher, convinced Channis is a traitor or a Second Foundation agent, arrests him at blaster point on Rossem. Channis fights back with argument, claiming the hyper-relay was planted by the Second Foundation and that Pritcher himself has been manipulated — but the Mule enters, reveals the hyper-relay was his, and exposes Channis through the one test that matters: when the Mule wrenched his emotions at their first meeting, Channis resisted for an instant, which only someone with control like the Mule's could do. He is therefore a Second Foundationer and is sentenced to death. Channis's last gambit is to throw himself on the freed mind of Pritcher, whose Conversion he has snapped during the confrontation, leaving the Mule caught between two minds and forced to drop his blaster.   </p>
+<p>Analysis: The chapter is the first real test of the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>'s supremacy in its own arena of <a href="//02%20Concepts/Intelligence.html">Intelligence</a>: Channis is outmatched, and wins only by converting the Mule's own instrument — a third party — into a strategic liability. The "known inferiority" of the decoy is the trap's design, since a stronger agent would have been killed rather than followed. The Mule's near-execution exposes the structural weakness of his <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: personal rule concentrates everything in one mind, and that mind must be physically present to be certain, which is exactly the position the trap was built to force. <br />
+Source anchors: Channis; Pritcher; Mule; blaster; hyper-relay; grief test; Conversion; Rossem.   </p>
+<h3 id="one-man-the-muleand-another">ONE MAN, THE MULE—AND ANOTHER</h3>
+<p>Summary: The final confrontation of the Mule search brings in the hidden "another," the First Speaker. Channis delays the Mule with talk of Ebling Mis and of Seldon's true purpose, while the Mule, supremely confident, reveals that his fleet has already destroyed Tazenda and then forces from Channis, under torture, a confession that Rossem itself is the Second Foundation. The First Speaker enters and gives the counter-revelation: Bail Channis volunteered, and had his own mind surgically deceived into believing Rossem was the Second Foundation, while the real expedition quietly left the village a day earlier for Kalgan, where its agents will foment revolt. With the Mule's despair opened into "anger and despair" by the ruin of his search, the First Speaker adjusts his emotions in a fraction of a second, leaving him a contented man of peace who cannot even remember the Second Foundation.   </p>
+<p>Analysis: The First Speaker's entrance proves that the Second Foundation's strength is <a href="//02%20Concepts/Intelligence.html">Intelligence</a> rather than raw mental spectacle: Channis and Rossem become bait, Tazenda an expendable false answer, and the surrender of trivia the price of keeping Trantor invisible. The victory is an act of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> in its purest form — the conquered ruler, the destroyed world, and the staged confession are all inputs into a psychological adjustment that ends a war without a battle. The chapter also closes the loop opened in <em>Foundation and Empire</em>: Ebling Mis's "vast surprise" is now explained as the discovery that the Second Foundation was behind every seeming accident, which is the same shock Channis must be restored from later. The Mule is defeated in the one field where he ruled, through the same emotional manipulation he used on Pritcher, and he returns to Kalgan alive but historically neutered. <br />
+Source anchors: First Speaker; Channis; Mule; Ebling Mis; Tazenda; Rossem; Kalgan; fleet; emotional adjustment; self-deception.   </p>
+<h3 id="last-interlude">LAST INTERLUDE</h3>
+<p>Summary: Bail Channis lies in a small white-tiled room on the Second Foundation, contented, his mind emptied into aphasia while technicians "clean out" the false convictions surgically implanted for the Rossem deception. When the recording of his original brainwave makeup is returned, memory floods back and he is himself again. The First Speaker tells him Rossem was indeed not the Second Foundation, and asks the question that had destroyed Ebling Mis: do you know where the Second Foundation is now? And Channis, like Mis before him, is struck by a vast, numbing surprise — "By the Stars of the Galaxy — now, I know."   </p>
+<p>Analysis: The scene states the book's deepest method in miniature: the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> manages minds not only by adding belief but by removing it, and its most reliable instrument is a person who honestly believes the false target. Channis's restored "original mind" makes <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> literal — the self is a saved recording that can be erased and returned — while the withheld answer turns the whole novel into a test of what the reader, like Mis and Channis, can be made not to see. That the truth must be concealed even from the agent who defends it is the final lesson in the <a href="//02%20Concepts/Intelligence.html">Intelligence</a> economy of hidden guardianship. <br />
+Source anchors: Bail Channis; First Speaker; aphasia; brainwave recording; Rossem; Ebling Mis; "now, I know".   </p>
+<h3 id="arcadia">ARCADIA</h3>
+<p>Summary: Part II opens on Terminus with Arcadia Darell, two days past fourteen, dictating the school composition "The Future of Seldon's Plan" and dreaming of publishing as the single-name author "Arkady." Her composition rehearses Foundation history from psychohistory through Salvor Hardin and Hober Mallow to the Mule, and she hints dramatically at her grandmother Bayta's secret role in stopping him. Pelleas Anthor appears at her window, and after a duel of wits she lets him in, having already read, from the household details, that her father was expecting him in secret. Her opening repartee repeats Hardin's maxims — "only a lie that wasn't ashamed of itself could possibly succeed" and "nothing had to be true, but everything had to sound true" — and her forbidden guess is that the secrecy is about the Second Foundation.   </p>
+<p>Analysis: Arcadia changes the scale of the book from imperial pursuit to household eavesdropping, but Bayta Darell and Seldon's Plan make that household historically loaded. Arkady as a chosen name matters because Arcadia is trying to author herself into the public story the adults keep from her, and her composition is itself a rehearsal of <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>'s official self-image — a reminder that the First Foundation narrates its own history with a blind spot where the hidden guardian should be. Her repartee with Anthor is a practical lesson in <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: openness disguises best, and the lie that hides nothing is the most effective cover. Arcadia is the reader's free indirect eye, and the seed of the book's dark ending — she will be used, unknowingly, to confirm exactly the answer the Second Foundation wants Terminus to believe. <br />
+Source anchors: Arcadia Darell; Arkady; Transcriber; The Future of Seldon's Plan; Bayta Darell; Pelleas Anthor; Salvor Hardin; Terminus; Second Foundation.   </p>
+<h3 id="seldon-s-plan">SELDON'S PLAN</h3>
+<p>Summary: On the Second Foundation, the First Speaker initiates a shy Student onto the Prime Radiant, the featureless cube that holds the entire Seldon Plan. The lesson is that the Plan is neither complete nor correct — it is a living, edited document, forty percent complete, with each red addition the contribution of a Speaker since Seldon. The First Speaker explains the aim: a civilization based on mental science, impossible to reach spontaneously, which the Second Foundation will equip with a ready-made ruling class, while the First Foundation supplies the physical framework. The Second Foundation must remain hidden, above all from the First, because a visible ruling class of psychologists would be resented and fought. The Student is then given the problem of the Mule: a fork in the Plan half a century old whose divergence is under one percent probability, and whose correction is their unfinished business — success stands at 21.4 percent.   </p>
+<p>Analysis: The chapter is the closest the book comes to an explicit political theory of <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a>: rule is most durable when the ruled neither see it nor know they are being ruled. The Prime Radiant makes <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> the physical bedrock of the state — a four-hundred-year-old device none of its guardians can even repair, holding the equations that outlive empires. The Student's correct fear, that a civilization ruled by an unaccountable psychological elite is repugnant by construction, explains the chapter's real subject: why the institution must survive as <a href="//02%20Concepts/Intelligence.html">Intelligence</a> rather than as government. And the shift from mass to individual action — the Statistic fatal to the Plan's axioms — is introduced as the crisis the later chapters must solve, an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> problem of the highest order. <br />
+Source anchors: First Speaker; Student; Prime Radiant; Seldon's Plan; psychohistory; mental science; Second Foundation; First Foundation; 21.4 percent.   </p>
+<h3 id="the-conspirators">THE CONSPIRATORS</h3>
+<p>Summary: The anti-Second-Foundation circle assembles in Darell's living room: Darell, Anthor, the visicastor Jole Turbor, the elderly physicist Elvett Semic, and the librarian Homir Munn. The five subjects themselves to Anthor's encephalographic analysis, the science of reading brain microcurrents that the dead Kleise pushed forward, and Anthor presents records from dozens of government officials, academics, and industrialists across the outer worlds that share a common feature — a flat "Tamper Plateau" in the frontal-lobe waves, evidence that an emotional bias has been removed or suppressed. The conspirators conclude the Second Foundation works through the influential minds of the First Foundation's leadership, and they settle on a plan: Munn's known interest in Muleana makes it natural for him to request access to the Mule's palace on Kalgan, where the results of the Mule's own five-year search may still lie. Arcadia, eavesdropping with a home-built sound-receiver coaxed out of the schoolboy Olynthus Dam, learns the whole plot.   </p>
+<p>Analysis: The conspirators embody the First Foundation's answer to mental science: measure the brain, find the Tamper Plateau, and expose the enemy, reducing an invisible power to a <a href="//02%20Concepts/Legibility.html">Legibility</a> problem. The scheme is rigorous and exactly wrong — it makes the mind readable just enough to confirm the false identification the Second Foundation will feed it. Kleise's death, Anthor's plausible credentials, and Darell's own withdrawal from the field all read as the legacy of an intelligence threat for which <a href="//02%20Concepts/Intelligence.html">Intelligence</a> itself is the only answer, and the chapter quietly confirms the method of secret rule: the enemy infiltrates the counter-movement, joins it, steers it. Arcadia's eavesdropping shows that the conspiracy's secrecy is already compromised by the one person the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> has prepared most carefully, and that the entire apparatus built by <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a> 's physical culture can be turned. <br />
+Source anchors: Toran Darell; Pelleas Anthor; Jole Turbor; Elvett Semic; Homir Munn; electroencephalography; Tamper Plateau; Kleise; Kalgan; Mule's palace; Olynthus Dam.   </p>
+<h3 id="approaching-crisis">APPROACHING CRISIS</h3>
+<p>Summary: A week later the Student reports to the First Speaker that the First Foundation's confidence has become a liability: once Terminus knew a guardian existed, its "purposeful stride" lapsed toward dependence, decadence, and a growing belief that it could be carried on a litter. Worse, Korillov's Theorem guarantees a minority reaction of active hostility, and the Student adds a third factor — the First Foundation may begin to study psychology itself. The First Speaker answers that this change "has already taken place." The Speaker then gives the Student the actual course of action: for over a decade the Second Foundation has manipulated a minimum number of outsiders, dealing with individuals because the situation has degraded to that point, so that for the first time in the history of the Plan, the unexpected actions of a single ordinary individual could destroy it. The crisis will come well within the year.   </p>
+<p>Analysis: The Second Foundation's concern with Terminus is an <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> problem: Seldon's Plan requires the First Foundation to act, but belief in hidden guardians teaches its institutions to wait for rescue, converting confidence into paralysis. The chapter generalizes the novel's thesis — that knowledge of a savior is itself a threat to <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> — and it pulls the trigger on the book's central irony: the guardians must both save the Plan and conceal that they are saving it. That the crisis now turns on "a single ordinary individual" is the admission that the Plan, founded on mass statistics, has survived mutation only by descending to the individual scale it was designed to ignore. Darell's circle and a stowaway are not subplots; they are the locus of the crisis. <br />
+Source anchors: Second Foundation; First Speaker; Student; First Foundation; Seldon's Plan; Korillov's Theorem; individual agency; crisis.   </p>
+<h3 id="stowaway">STOWAWAY</h3>
+<p>Summary: Homir Munn leaves Terminus in a sullen mood aboard his one-man cruiser the Unimara, headed for Kalgan to study the Mule's records. Arcadia, judging that the adults are moving too slowly, hides in the luggage compartment and reveals herself only when Munn draws a blaster. She knows the whole plan, has left her father a note that converts the trip into a natural vacation, and receives a deliberately bland spacegram from Darell — "Thank you for your lovely present... Have a good time" — that instructs them to continue. On the week-long voyage she talks about her future as a writer of historical novels and about Trantor, where she was born to Toran and his bride while living near the Imperial Library, and where Bayta and Ebling Mis once ended the Mule's first drive. They make the last jump, Kalgan only a night's sleep away.   </p>
+<p>Analysis: Munn's mission is supposed to be archival and adult, but Arcadia's stowaway act turns it into the channel through which the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> can move information — and the plan's dependence on her will be revealed only at the end. Terminus and Kalgan are joined by a child's decision, exactly the kind of individual accident psychohistory handles badly unless prepared in advance, and the chapter is the first overt sign that the "natural" movements of the First Foundation are themselves being arranged. Darell's refusal to call the ship back is the mature counterweight: any move that attracts attention to Arcadia as an agent would be worse than letting her run. Her Trantor talk plants the geographic clue that later turns out to be the second end of the lode the book has been burying. <br />
+Source anchors: Homir Munn; Arcadia Darell; Unimara; stowaway; Kalgan; Terminus; Darell's spacegram; Trantor; Bayta Darell.   </p>
+<h3 id="lord">LORD</h3>
+<p>Summary: Kalgan is introduced through its unique history: the Galaxy's pleasure world for two centuries before Seldon, successively serving Imperial dandies, barbarian warlords, and Foundation businessmen, then the Mule's capital for a decade, and after his death a world that "never quite recovered," ruled by a succession of self-styled First Citizens of the Galaxy. The current Lord, Stettin, has held power five months after displacing his predecessor Thallos, and he chafes under the caution of his First Minister Lev Meirus, who warns that the Foundation has never been beaten and that the Mule himself was not entirely successful. Stettin wants war to revive the empire, and Lady Callia, his near-mistress, wheedles permission to see the young Foundation girl.   </p>
+<p>Analysis: Kalgan and Lord Stettin provide the visible antagonist the First Foundation can understand: a ruler, a fleet, a palace, and a grievance. The planet's history makes <a href="//02%20Concepts/Empire%20and%20Periphery.html">Empire and Periphery</a> legible as career: Kalgan moved from servicing empires to imitating them, and its politics are the politics of a world that cannot go back. Stettin's entire legitimacy is borrowed — he calls himself First Citizen exactly as the Mule did — which is a study in <a href="//02%20Concepts/Legitimacy%20and%20Succession.html">Legitimacy and Succession</a> by usurpation, and Meirus's warning names the real determinant: the Foundation wins before battle because everyone in Kalgan's sphere believes it must win. The chapter's real work is the <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> ledger: an idle navy, an expansionist treasury, and a ruler who cannot read the morale he commands — the exact conditions under which the Second Foundation's staged war will run. <br />
+Source anchors: Kalgan; pleasure world; Mule's capital; Lord Stettin; First Citizen of the Galaxy; Lev Meirus; Lady Callia; navy; war; Foundation.   </p>
+<h3 id="lady">LADY</h3>
+<p>Summary: Arcadia, triumphant, tours Kalgan's Central Theater, the Flowered Path fashion district, her re-dyed hair, and an audience with Lord Stettin's mistress. The Lady Callia appears plump and near-sighted, offering pearls she lets fall to the floor and tea she serves with vague conversation, and Arcadia plays the game she has learned from history books: the ruler's mistress is the real power behind the throne. She tells Callia that the Seldon Plan was changed, that the Second Foundation may now be backing Kalgan as the nucleus of a new Empire, and that Homir Munn needs the Mule's palace records to prove it. Callia carries the story to Stettin, who sends out two orders: five hundred ships of the line into "war games," and permission for Munn to enter the Mule's palace. Homir reads the permission with anything but joy; Arcadia is delighted — "or, at any rate, she thought she did."   </p>
+<p>Analysis: Lady Callia makes <a href="//02%20Concepts/Intelligence.html">Intelligence</a> look like Kalganese court frivolity: the "stupid" mistress is conducting the operation, feeding Stettin the exact pretext he wants while arranging Munn's access and Arcadia's later flight, all while the code the physical scientists watch for — brainwave Plateaus — is nowhere relevant. Arcadia's self-congratulation, so carefully narrativized, is the chapter's tragic irony, because she is performing exactly the part the Second Foundation wrote for her: her vivid story is the bait that sets the war in motion. The scene is a study in <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> as social performance, where manipulation passes as chatter and the most effective operators are the ones everyone underestimates. Homir's sudden access, so eagerly awaited, is the first of the Palace's gifts that are actually the enemy's receipts. <br />
+Source anchors: Lady Callia; Arcadia Darell; Central Theater; Flowered Path; Lord Stettin; pearls; Mule's palace; war games; Seldon Plan.   </p>
+<h3 id="anxiety">ANXIETY</h3>
+<p>Summary: On Terminus, Poli's breakfast monologue reports Kalganese mobs rioting before the Foundation consulate, while Dr. Darell — weighing the mayor's offer of Administrator of Research and Development — hides inside his own secret research: a mathematical model of the Mind Resonating Organ that would let a Second Foundationer's field be forced to align with a machine's. He recalls how Kleise collected Tamper Plateaus but never understood that the real work must be solitary, because any visible apparatus is a weakness. On Kalgan, Arcadia waits outside Stettin's office while Munn — transformed by the Palace, fluent and un-stuttering, dreaming of a museum — tells her the Seldon Convention records contain only one reference to the Second Foundation: it is located at the other end of the Galaxy at Star's End. Stettin interrogates Munn about the Seldon Plan, keeps him as an advisor, and reveals his interest in the Bayta Darell bloodline for a future dynastic marriage. Lady Callia quietly rescues Arcadia through her private passage, loads her with money and jewels, and warns of war — and in a final flicker, Arcadia sees in Callia's eye "a vast, inhuman amusement," and knows she is a woman of the Second Foundation, that she herself is being used as a decoy, and that she cannot return to the Foundation. At the spaceport she realizes that she and she alone, besides the enemy, knows the location of the Second Foundation, and that she is therefore the most important person in the Galaxy.   </p>
+<p>Analysis: The chapter is the hinge where the two searches collide inside one girl's consciousness. The <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> is shown at its best work: Callia's performance, the arranged access, the scripted fear, and the planted belief that the only clue is geographic — a decoy that converts Arcadia's intelligence into confirmation of the wrong answer. Darell's solitary mathematics is the counterweight: real counter-intelligence must be invisible to exactly the sense it studies, which is why his device, and his distrust of Kleise's apparatus, will matter. Arcadia's recognition that "they made every motion of following her yet let her go" is the book's clearest statement of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>, that the First Foundation's war and search are both being managed from inside. And her final self-importance — she alone knows the location — is the trap's last trigger, since everything she knows is exactly what she was conditioned to believe. The flicker of amusement in Callia's eye is the book's quiet signature: the operators enjoy the game. <br />
+Source anchors: Poli; Toran Darell; Kalgan; Kleise; Mind Resonating Organ; Arcadia Darell; Lord Stettin; Homir Munn; Bayta Darell; Lady Callia; "vast, inhuman amusement"; Trantor; spaceport.   </p>
+<h3 id="through-the-grid">THROUGH THE GRID</h3>
+<p>Summary: Arcadia, fleeing in borrowed clothes toward the crowded spaceport, buys a ticket for Trantor, the dead capital where she was born, and collides with the round, ruddy Preem Palver and his wife, who adopt her as a frightened "countrywoman." Their kindness is interrupted by the descent of the grid — a drama of glowing light beams and waiting squares that freezes the crowd while police search for a fugitive. Palver claims diplomatic immunity as an accredited trade representative, and when the lieutenant demands Arcadia's papers, a folded five-hundred-credit bill ensures they are "All in order" and the family is waved through. On the ship to Trantor, Arcadia's relief curdles into suspicion: no bribe would stop a police lieutenant unless the escape was planned, and the kind Palvers may themselves be tools of the Second Foundation. Whatever she does, she fears, may only be what "those terrible omnipotents" want her to do — yet she must somehow outwit them.   </p>
+<p>Analysis: The grid sequence is <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as display: the apparatus of the police state, its searchlights and neutral weapons, is overwhelmingly theatrical, engineered for psychological submission as much as for capture. That the escape is "arranged" at the exact level of a lieutenant accepting a bribe is the book's point about the <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> 's control method — it works through the ordinary corruptions and sympathies of ordinary officials, not through mind control of the obvious kind. Arcadia's suspicion of the Palvers, unresolved at the chapter's close, is the reader's first open wound: the chapter cannot decide, and deliberately will not, whether kindness is a weapon. It is also the pivot on which <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a> swings from the physical to the mental threat, since the chapter's real work is to get the girl and her secret to the right planet at the right time. <br />
+Source anchors: Arcadia Darell; spaceport; ticket-machine; Trantor; Preem Palver; wife; grid; diplomatic immunity; five-hundred-credit bill; bribery; pursuit.   </p>
+<h3 id="beginning-of-war">BEGINNING OF WAR</h3>
+<p>Summary: The Stettinian war begins when the Foundation cruiser Hober Mallow, refusing a Kalganian search party, is blasted into wreckage — dated 185 in four simultaneous calendars (Galactic Era, Seldon Era, Foundation Era, First Citizenship) so that every political system reads the same day differently. For Dr. Darell it is simply the thirty-second day since Arcadia left. With the rules suspended, Darell and Semic begin building the Mind Static device, pulling fifty hyper-relays and a Symes-Molff Resonator under cover of war research. Anthor brings an agent, Kalganian police lieutenant Orum Dirige, the last man on Kalgan to see Arcadia; Dirige reports her ticket to Trantor and Palver's protective ruse — but a fresh brainwave reading shows Dirige has been Controlled, meaning he is not the Foundation's man but the Second Foundation's. Anthor urges Darell to flee to Trantor; Darell refuses, reasoning in an endless double-double-cross that any choice he can predict is one the Second Foundation has already predicted, so he will deliberately stay. The video confirms the Hober Mallow was found wrecked and that the Foundation is again at war.   </p>
+<p>Analysis: The chapter formalizes the book's counter-intelligence logic in Darell's refusal to move: if every probable reaction is foreseeable, then the only freedom is to act improbably, and his staying put is both martyrdom and method. Dirige's brainwave is a masterstroke of <a href="//02%20Concepts/Legibility.html">Legibility</a> — the First Foundation's tool is turned because Control is detectable only where a bias was removed, and the enemy simply deletes the very instrument of detection. The war itself is framed as a calendar problem, each era reckoning the same instant differently — a wry reminder that the meaning of events depends entirely on the frame of reference, which is the book's epistemological theme and its plot device. The Mind Static device, built in secret under war cover, is the first material counter the First Foundation has ever had, and precisely because it is aimed at the right sense, the wrong target, it will produce the false victory. <br />
+Source anchors: war; Hober Mallow; dating systems; Toran Darell; Elvett Semic; Mind Static; Symes-Molff Resonator; hyper-relays; Orum Dirige; Tamper Plateau; Trantor; Pelleas Anthor.   </p>
+<h3 id="war">WAR</h3>
+<p>Summary: The mayor shows Darell the Galactic model in which a red Kalganian sphere sits inside a yellow Foundation fist, and explains that galactography is the Foundation's greatest enemy: Kalgan has inner lines, concentration, and short interior distances, while the Foundation's worlds are spaced three times farther apart. Darell insists the Foundation cannot lose, resting on his own reading of the Seldon Plan — "merely on the help of inevitability — and of courage and persistence." On Kalgan, Stettin frames the mirror strategy: wait, strike in two simultaneous thrusts when the Foundation spreads thin, and count on the Foundation's ideological faith in the Second Foundation to paralyze its preparations. His First Minister Meirus warns that delay only gives a stronger Foundation more time, but Stettin is confident, leaning on the reports of the captured Homir Munn and on the useful wiles of Lady Callia.   </p>
+<p>Analysis: The war chapters strip <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> to its spatial bones: the fatigues, the lines of communication, the concentration that lets a smaller sphere beat a larger fist. But the real battlefield is morale, and the chapter's two commanders read it oppositely: Darell trusts the inertia of belief, Stettin the paralysis of the same belief. The First Foundation's confidence is shown to be a strategic asset of the "<a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>" kind — the Seldon Plan functions as a self-fulfilling prophecy precisely because its faithful behave as if victory were inevitable. Meirus's protest names the whole weakness of Stettin's model: he has counted metal and power "and they have sustained you as far as they could. You have ignored mind and morale and they have failed you." The war, like the search, is fought over what people believe about the Plan before a single ship fires. <br />
+Source anchors: mayor; galactography; Galactic model; Terminus; Lord Stettin; Lev Meirus; Homir Munn; Lady Callia; war; Seldon Plan.   </p>
+<h3 id="ghost-of-a-world">GHOST OF A WORLD</h3>
+<p>Summary: Trantor is presented as "a world in dregs and rebirth": a metal shell stripped after the Great Sack a century ago, its soil re-exposed for primitive agriculture while the colossal ruins of the old capital still gleam toward the sun. Arcadia lives with the Palvers in a farming village, awed by the Imperial Library, the one intact structure of Old Trantor, where Seldon worked and Ebling Mis found the secret and was killed. Preem Palver brings news of the war: Santanni and Korell lost, the Ifni squadron wiped out, the Foundation driven back to the Four-Kingdom core but still fighting. Arcadia, desperate to reach her father, plants the idea of a food-smuggling mission to war-beset Terminus at huge profit. When Palver agrees to go, she whispers him five words she refuses to let him repeat to anyone else: "A circle has no end."   </p>
+<p>Analysis: The chapter offers the book's most explicit essay on <a href="//02%20Concepts/Collapse%20and%20Resilience.html">Collapse and Resilience</a>: the greatest administrative city in history becomes a farm world whose peasants fear the ruins of the past, while the institution founded to preserve civilization survives precisely because nobody believes a farm world can still rule. The Imperial Library, "the veriest Trantor of Trantor," is a <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> shrine whose very survival is a clue no searcher reads — that the guardians live where the data for the Plan already exists. Arcadia's food-smuggling scheme is the perfect instrument of <a href="//02%20Concepts/Information%20and%20Coordination.html">Information and Coordination</a>: an individually plausible, commercially motivated cover for moving the crucial message to Terminus. The five words she delivers — a purely linguistic answer to a geographic question — are the key that the "<a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>" wanted Darell himself to discover, and her control of the encryption is also her unknowing signature as the infant-conditioned instrument of the whole plan. <br />
+Source anchors: Trantor; Great Sack; Imperial Library; Arcadia Darell; Preem Palver; war; Santanni; Korell; Ifni; Four-Kingdom core; food mission; "a circle has no end".   </p>
+<h3 id="end-of-war">END OF WAR</h3>
+<p>Summary: Jole Turbor, now a war correspondent embedded with the Third Fleet, files "the little man's war" — interviews with volunteers like Fennel Leemor — while the Foundation's earlier defeats are reversed by a single trap. At the Battle of Quoriston the Foundation fleet baits two hundred Kalganian warships, then loops a fifty-ship force under Commander Cenn back through hyperspace to a calculated point at a calculated time, smashing the Kalganian rear: of three hundred ships, fewer than sixty reach Kalgan, at a Foundation cost of eight ships out of one hundred twenty-five. Preem Palver, picked up as a spy, is recognized by Turbor, delivers the food deal and Darell's message back to Terminus, and returns Arcadia's five words to her father, receiving in exchange "Come back now. There won't be any danger." Lord Stettin, facing ruin, is lectured by Meirus on the one truth of the war: the Seldon Plan is belief, and belief can no more be defeated by ships than morale can be built by them. Munn is released to carry the peace offers, already certain he knows the one true thing about the Second Foundation.   </p>
+<p>Analysis: Quoriston is the Foundation's first wholly physical victory since the Mule, and the chapter maps it onto <a href="//02%20Concepts/State%20Capacity.html">State Capacity</a> as actual war: concentration, timing, morale, and the calculated return of a force through hyperspace. Meirus's speech is the strategic thesis of the book — that the Foundation is "never defeated" not because it is invulnerable but because every enemy, including Stettin, has already lost whatever battle is fought at the level of expectation. The trap itself is the material double of the Second Foundation's method: advantage taken at a precisely computed moment and place, when the opponent's own caution freezes him in position. Palver's delivery of the five words and of "Come back now" quietly completes the mechanism of the staged conclusion, and Munn's smug certainty — the "knew the truth" that is precisely the false truth — sets up the next chapter's double reversal. <br />
+Source anchors: Jole Turbor; Battle of Quoriston; Commander Cenn; Foundation fleet; Preem Palver; "a circle has no end"; "Come back now"; Lev Meirus; morale; Homir Munn; peace.   </p>
+<h3 id="i-know">"I KNOW . . ."</h3>
+<p>Summary: Months later, with the war formally ended on the asteroid base and Homir Munn returned as Mediator Extraordinary, the five conspirators meet again in Darell's house. Anthor rages that a petty naval brawl has distracted everyone from the real enemy, but Munn delivers his news flatly: after months inside the Mule's palace records, he has concluded there is no Second Foundation and never was one — the Mule simply died, and all talk of the hidden Foundation is anthropomorphism, the savages' explanation of the inexplicable. Anthor, seeing Munn's fluency where the old stutter used to be, demands encephalographic tests for everyone; Munn's old and new records are compared, and Darell concedes the Plateau proves Munn has been handled and adjusted by the Second Foundation. Anthor then announces he knows where the Second Foundation actually is — Kalgan, the last place anyone will look after the war — and the argument runs until Darell cuts in: his Mind Static devices have already surrounded the mayor's offices, the legislatures, the key factories, and this building. And then, having shown his hand, he adds the sentence the chapter was waiting for: he knows where the Second Foundation really is.   </p>
+<p>Analysis: The chapter stages the Second Foundation's victory as a process of epistemic corrosion: main characters are shown to be reliable only until they are not, and Munn's confident anti-Foundation testimony is itself proof of manipulation, so the honest response — Darell's doubt — is also the precondition of the false conclusion. The brainwave comparison is the turning point in <a href="//02%20Concepts/Legibility.html">Legibility</a>: the very instrument that was supposed to make the enemy visible now makes the conspirators' own tool visible to the enemy's plan. Anthor's Kalgan thesis is a decoy the narrative invites the reader to endorse, exactly as the Second Foundation intended, and Darell's reveal of the Mind Static — a weapon whose existence proves the threat must be real — yanks the physical scientists toward the satisfying answer with maximum cognitive force. The chapter's end, withholding the actual answer, inverts the convention of the cliffhanger: the reader knows Darell "knows," but the truth is that the knowing is the final step of the trap. <br />
+Source anchors: Homir Munn; Pelleas Anthor; Dr. Darell; Elvett Semic; Jole Turbor; Muliana; Tamper Plateau; Kalgan; Mind Static; Seldon Plan.   </p>
+<h3 id="the-answer-that-satisfied">THE ANSWER THAT SATISFIED</h3>
+<p>Summary: Darell produces the solution that satisfies the physical scientists. Arcadia's five words — "a circle has no end" — unlock Seldon's claim: the Galaxy is a flat lens, a cross-section of its rim is a circle, and a circle has no end. Following the rim from Terminus to the "other end" leads back to Terminus itself, so both Foundations are on the same world, and the Mind-masters have been hiding among their own conquest. This explains Ebling Mis's vast surprise — the Mule had captured both Foundations at a stroke — and the Mule's failure to find the enemy he had already taken. Darell then demonstrates the Mind Static device: intensified electromagnetic noise, invisible to ordinary people, is a blinding, agonizing "flickering light" to a mind with the Second Foundation's sense. He gives Anthor a dummy control box, then activates the real one from his belt, and Anthor — a Second Foundation agent planted by Kleise's supposed letter — collapses in agony and confesses: fifty of them, Lady Callia one of them, controlling the anti-Foundation movement from within, losing through the Plan's own probabilities. The conspirators weigh exile, sterilization, or death for the captured fifty. Arcadia returns, passes her own encephalographic test, and the group celebrates; only Darell's private relief — "it had been too easy — too easy" — and his question about how she knew point at the suspicion that ends the chapter.   </p>
+<p>Analysis: The chapter is the book's controlled detonation: a false answer supplied with overwhelming internal consistency, and the reader is invited to share the scientists' relief exactly where the text has planted the knife. The "circle has no end" derivation is a magnificent piece of <a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> — Seldon's words are made to mean exactly what the physical mind needs them to mean, converting a geometric riddle into a false identification. The Mind Static device realizes <a href="//02%20Concepts/Legibility.html">Legibility</a> as an actual weapon: the enemy's private sense becomes a vulnerability the physical scientists can aim, which is the final validation of their entire physical culture — and precisely why the Second Foundation staged the loss. Anthor's confession, Darell's long-held suspicion, the talk of exile, sterilization, and death — the moral evasions of the winning side — are the price of a victory that is really a <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a> operation, and the chapter's last doubt ("When can a man know he is not a puppet?") is the honest center of the book: even the answer that satisfies is orchestrated. <br />
+Source anchors: Dr. Darell; "a circle has no end"; Terminus; Mind Static; dummy controls; Pelleas Anthor; confession; Lady Callia; fifty; sterilization; Arcadia; Arkady.   </p>
+<h3 id="the-answer-that-was-true">THE ANSWER THAT WAS TRUE</h3>
+<p>Summary: In an unlocated room on an unlocated world, the First Speaker tells the Student the true accounting of the false victory. Fifty men and women were sacrificed — the lower limit needed to carry conviction, seventy-five if pure objectivism had ruled — knowing it meant death or permanent imprisonment, and they could not even be "oriented" to prevent weakness because orientation would have been detected. The Kalganian war existed to show the Foundation it could beat a physical enemy, restoring the self-confidence the Mule destroyed; the "destruction" of the Second Foundation had to come only in the full flush of victory, or the Foundation would have panicked before fighting Stettin. Arcadia's conditioning is the masterstroke: a newborn infant on Trantor fifteen years earlier, a blank slate with no previous bias to remove, and therefore no Tamper Plateau possibly detectable; Anthor arranged that Darell would know all about Tamper Plateaus, while Arcadia will never know she was Controlled and is all the better for it. The true location is at last named: the socially "other end" of the Galaxy is not the cartographic opposite but the opposite in imperial strength — Trantor, capital of Seldon's time, where his group worked, where the accumulated data lived, where the Imperial Library survived the Great Sack untouched, and where Ebling Mis found them and was permitted not to survive. "Hari Seldon called Trantor 'Star's End,'" says the First Speaker, "and why not that bit of poetic imagery? All roads lead to Trantor... and that is where all stars end." The round, ruddy face at the window, watching the crowded central stars with somber satisfaction, is Preem Palver — First Speaker.   </p>
+<p>Analysis: The final chapter restates the entire book as <a href="//02%20Concepts/Speculative%20Governance.html">Speculative Governance</a> in its least consoling form: the Second Foundation governs by arranging what its subjects believe, and every seeming victory of the First Foundation — the war, the discovery, the exposure, even Arcadia's safety — was a stage direction. The fifty martyrs are the moral counterweight to the earlier talk of sterilizing the enemy, and the First Speaker's calm arithmetic ("the lower limit... seventy-five for margin") makes governance indistinguishable from sacrifice. The physical spiral-lens answer (<a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a> again) is shown to be the wrong kind of reading: a social scientist would have asked what "opposite ends" means for imperial strength, not for coordinate geometry, and the entire "search" wasted four hundred years on a pun. Trantor, the ruin every searcher passed by, is revealed as the natural home of the institution Seldon left behind — a <a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a> argument as well as a political one, since the guardians lived where the Plan's data was, and a perfectly precise location for an institution whose entire method, like the Empire before it, is to be the invisible center from which all the stars are ruled. The final image — Preem Palver, the farmer who carried Arcadia's message, revealed as the First Speaker — closes the loop between the book's kindest fiction and its hardest truth, and leaves the reader with the question the novel refuses to answer: whether the First Foundation is freer believing it governs itself, and whether that belief is worth its price. <br />
+Source anchors: First Speaker; Student; fifty martyrs; Kalganian war; Arcadia Darell; Tamper Plateau; Leffert's Theorem; Star's End; Trantor; Imperial Library; Ebling Mis; "All roads lead to Trantor".   </p>
+<h2 id="useful-details-and-retrieval-cues">Useful details and retrieval cues</h2>
+<ul>
+<li><strong>Structure</strong>: 22 chapters in two parts — Part I "Search by the Mule" (chapters 1–6) and Part II "Search by the Foundation" (chapters 7–22) — with five "Interludes" set in the Second Foundation's Executive Council.   </li>
+<li><strong>The five-word clue</strong>: "A circle has no end" — delivered to Darell by the disguised First Speaker, Preem Palver, in "End of War."   </li>
+<li><strong>The happy indignity</strong>: the Mule's official title is "First Citizen of the Union"; Channis's jingle mocks the secret: "Second Foundation threatens the Nation and all of Creation."   </li>
+<li><strong>The arithmetic of the Plan</strong>: the Second Foundation's own odds against the Mule were "96.3 plus or minus 0.05%" before Bayta killed Ebling Mis; the Plan is "forty percent complete" and its success probability assessed at "21.4 percent."   </li>
+<li><strong>The cost of the false victory</strong>: fifty volunteers ("martyrs") deliberately walked into capture so that Terminus would believe the Second Foundation destroyed; seventy-five would have been the "pure objectivist" margin.   </li>
+<li><strong>The disguised institution</strong>: Preem Palver, the round farmer-delegate, is the First Speaker; Lady Callia, Stettin's "stupid" mistress, is a Second Foundation agent; Dirige, the Foundation's Corruptible agent, has been Controlled.   </li>
+<li><strong>The location answer</strong>: Seldon's "other end of the Galaxy" is Trantor — not the cartographic opposite but the social opposite, where the Empire was strongest and where its data survived; "All roads lead to Trantor, and that is where all stars end."   </li>
+<li><strong>Authorial tags</strong>: the Encyclopedia Galactica epigraphs date Arkady Darell's life to 362–443 F.E. and record her as the biographer of Bayta Darell who visited Kalgan in her youth.   </li>
+<li><strong>Watch-out names</strong>: the hidden institution is the entity <a href="//05%20Characters%20and%20Entities/Second%20Foundation.html">Second Foundation</a>, the defeated but recovering First Foundation is <a href="//05%20Characters%20and%20Entities/Foundation%20Project.html">Foundation Project</a>, and both belong to <a href="//04%20Series/Foundation%20Sequence.html">Foundation Sequence</a> — this note is the third book of that series.   </li>
+</ul></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Foundation/Foundation and Empire.html">foundation and empire</a></li>
+	<li><a class="backlink" href="//04 Series/Foundation Sequence.html">foundation sequence</a></li>
+	<li><a class="backlink" href="//01 Books/Foundation/Foundation's Edge.html">foundation's edge</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/foundation-sequence/index.html">foundation-sequence</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A253892884673935876266964298207241152093{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D253892884673935876266964298207241152093{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B253892884673935876266964298207241152093{level}" level="{level}" note_temp_id="253892884673935876266964298207241152093" onclick="window.ObsHtmlGraph.run(this, '253892884673935876266964298207241152093', 'foundation/second foundation');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C253892884673935876266964298207241152093{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

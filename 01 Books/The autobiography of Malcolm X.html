@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="the autobiography of malcolm x">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="//favicon.ico" />
+
+                <!-- Set title -->
+                <title>Sean Pawley Books Vault</title>
+
+                <!-- Includes -->
+                <script src="//obs.html/static/obsidian_core.js"></script>
+<script src="//obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="//obs.html/static/master.css" />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+            'securityLevel': 'loose',
+            'theme': 'dark',
+            'themeVariables': {
+                    'darkMode': true,
+            }
+    });
+</script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="//obs.html/static/flexsearch.bundle.js"></script>
+<script src="//obs.html/static/pako.js"></script>
+<script src="//obs.html/static/search.js"></script>
+<script src="//obs.html/static/dirtree.js"></script>
+
+
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'the autobiography of malcolm x';
+                        const HTML_URL_PREFIX = '/';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction mobile">
+                            <button onclick="toggle_id('search-master-div');"><b>Close</b> Search </button>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="//index.html" id="homelink" title="Clear screen and go to homepage">Sean Pawley Books Vault</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "//obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="//obs.html/graph/index.html?node=the autobiography of malcolm x" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "//obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="//obs.html/dir_index.html" title="View directory tree">
+                    <img src = "//obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="//obs.html/tags/index.html" title="Open tag view">
+            <img src = "//obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div id="dirtree"><button id="folder-1" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>00 Maps of Content</button>
+<div id="folder-container-1" class="dir-container requires_js " path="//00 Maps of Content">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Empire, Trade, and Maritime Worlds.html"  >Empire, Trade, and Maritime Worlds</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Finance, Firms, and Industrialization.html"  >Finance, Firms, and Industrialization</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Identity, Culture, and Social Formation.html"  >Identity, Culture, and Social Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Linkage Atlas.html"  >Linkage Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/Science Fiction and Speculative Orders.html"  >Science Fiction and Speculative Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/State, Order, and Legibility.html"  >State, Order, and Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//00 Maps of Content/War, Revolution, and Civilizational Breakdown.html"  >War, Revolution, and Civilizational Breakdown</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>01 Books</button>
+<div id="folder-container-2" class="dir-container requires_js " path="//01 Books">
+	<button id="folder-3" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A History of Portugal and the Portuguese Empire</button>
+	<div id="folder-container-3" class="dir-container requires_js " path="//01 Books/A History of Portugal and the Portuguese Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 1 - Portugal.html"  >Volume 1 - Portugal</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire/Volume 2 - The Portuguese Empire.html"  >Volume 2 - The Portuguese Empire</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>A Song of Ice and Fire</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="//01 Books/A Song of Ice and Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Clash of Kings.html"  >A Clash of Kings</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Dance with Dragons.html"  >A Dance with Dragons</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Feast For Crows.html"  >A Feast For Crows</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Game Of Thrones.html"  >A Game Of Thrones</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/A Song of Ice and Fire/A Storm of Swords.html"  >A Storm of Swords</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Analog</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="//01 Books/Analog">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Bandwidth.html"  >Bandwidth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Analog/Borderless (An Analog Novel Book 2).html"  >Borderless (An Analog Novel Book 2)</a></li>
+		</ul>
+	</div>
+	<button id="folder-6" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Culture</button>
+	<div id="folder-container-6" class="dir-container requires_js " path="//01 Books/Culture">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Consider Phlebas.html"  >Consider Phlebas</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Excession.html"  >Excession</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Inversions.html"  >Inversions</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Look to Windward.html"  >Look to Windward</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Matter.html"  >Matter</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Surface Detail.html"  >Surface Detail</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Hydrogen Sonata.html"  >The Hydrogen Sonata</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The Player of Games.html"  >The Player of Games</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/The State of the Art.html"  >The State of the Art</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Culture/Use of Weapons.html"  >Use of Weapons</a></li>
+		</ul>
+	</div>
+	<button id="folder-7" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Dune</button>
+	<div id="folder-container-7" class="dir-container requires_js " path="//01 Books/Dune">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Children of Dune.html"  >Children of Dune</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/Dune Messiah.html"  >Dune Messiah</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Dune/God Emperor of Dune.html"  >God Emperor of Dune</a></li>
+		</ul>
+	</div>
+	<button id="folder-8" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Empire Games</button>
+	<div id="folder-container-8" class="dir-container requires_js " path="//01 Books/Empire Games">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Dark State.html"  >Dark State</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Empire Games/Empire Games.html"  >Empire Games</a></li>
+		</ul>
+	</div>
+	<button id="folder-9" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Foundation</button>
+	<div id="folder-container-9" class="dir-container requires_js " path="//01 Books/Foundation">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Forward the Foundation.html"  >Forward the Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation.html"  >Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Chaos.html"  >Foundation and Chaos</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Earth.html"  >Foundation and Earth</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation and Empire.html"  >Foundation and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Edge.html"  >Foundation's Edge</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Fear.html"  >Foundation's Fear</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Foundation's Triumph.html"  >Foundation's Triumph</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Prelude to Foundation.html"  >Prelude to Foundation</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Foundation/Second Foundation.html"  >Second Foundation</a></li>
+		</ul>
+	</div>
+	<button id="folder-10" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Galactic Empire</button>
+	<div id="folder-container-10" class="dir-container requires_js " path="//01 Books/Galactic Empire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/Pebble in the Sky.html"  >Pebble in the Sky</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Currents of Space.html"  >The Currents of Space</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Galactic Empire/The Stars, Like Dust.html"  >The Stars, Like Dust</a></li>
+		</ul>
+	</div>
+	<button id="folder-11" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Karla Trilogy</button>
+	<div id="folder-container-11" class="dir-container requires_js " path="//01 Books/Karla Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Karla Trilogy/Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852).html"  >Karla Trilogy Digital Collection Featuring George Smiley - Tinker, Tailor, Soldier, Spy, the Honourable Schoolboy, Smiley's People (9781101570852)</a></li>
+		</ul>
+	</div>
+	<button id="folder-12" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Memory of Fire</button>
+	<div id="folder-container-12" class="dir-container requires_js " path="//01 Books/Memory of Fire">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Memory of Fire/The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind.html"  >The Memory of Fire Trilogy - Genesis, Faces and Masks, and Century of the Wind</a></li>
+		</ul>
+	</div>
+	<button id="folder-13" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Merchant Princes</button>
+	<div id="folder-container-13" class="dir-container requires_js " path="//01 Books/Merchant Princes">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Clan Corporate.html"  >Clan Corporate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Family Trade.html"  >Family Trade</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Hidden Family.html"  >Hidden Family</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Merchants' War.html"  >Merchants' War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Revolution Business.html"  >Revolution Business</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Merchant Princes/Trade of Queens.html"  >Trade of Queens</a></li>
+		</ul>
+	</div>
+	<button id="folder-14" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Middle-earth Legendarium</button>
+	<div id="folder-container-14" class="dir-container requires_js " path="//01 Books/Middle-earth Legendarium">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 01 - The Fellowship of the Ring.html"  >Lord of the Rings - 01 - The Fellowship of the Ring</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 02 - The Two Towers.html"  >Lord of the Rings - 02 - The Two Towers</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/Lord of the Rings - 03 - The Return of the King.html"  >Lord of the Rings - 03 - The Return of the King</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Hobbit.html"  >The Hobbit</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Middle-earth Legendarium/The Silmarillion.html"  >The Silmarillion</a></li>
+		</ul>
+	</div>
+	<button id="folder-15" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Nexus Trilogy</button>
+	<div id="folder-container-15" class="dir-container requires_js " path="//01 Books/Nexus Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Apex.html"  >Apex</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Crux.html"  >Crux</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Nexus Trilogy/Nexus.html"  >Nexus</a></li>
+		</ul>
+	</div>
+	<button id="folder-16" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Orthogonal</button>
+	<div id="folder-container-16" class="dir-container requires_js " path="//01 Books/Orthogonal">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Arrows of Time - Orthogonal Book Three.html"  >The Arrows of Time - Orthogonal Book Three</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal/The Clockwork Rocket.html"  >The Clockwork Rocket</a></li>
+		</ul>
+	</div>
+	<button id="folder-17" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Robot</button>
+	<div id="folder-container-17" class="dir-container requires_js " path="//01 Books/Robot">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/I, Robot.html"  >I, Robot</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/Robots and Empire.html"  >Robots and Empire</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Caves of Steel.html"  >The Caves of Steel</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Naked Sun.html"  >The Naked Sun</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Robot/The Robots of Dawn.html"  >The Robots of Dawn</a></li>
+		</ul>
+	</div>
+	<button id="folder-18" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Snopes Trilogy</button>
+	<div id="folder-container-18" class="dir-container requires_js " path="//01 Books/Snopes Trilogy">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/Snopes - The Hamlet, The Town, The Mansion.html"  >Snopes - The Hamlet, The Town, The Mansion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Snopes Trilogy/The Mansion.html"  >The Mansion</a></li>
+		</ul>
+	</div>
+	<button id="folder-19" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>Terra Ignota</button>
+	<div id="folder-container-19" class="dir-container requires_js " path="//01 Books/Terra Ignota">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Seven Surrenders.html"  >Seven Surrenders</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/The Will to Battle.html"  >The Will to Battle</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota/Too Like the Lightning.html"  >Too Like the Lightning</a></li>
+		</ul>
+	</div>
+	<button id="folder-20" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Baroque Cycle</button>
+	<div id="folder-container-20" class="dir-container requires_js " path="//01 Books/The Baroque Cycle">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/Quicksilver.html"  >Quicksilver</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The confusion.html"  >The confusion</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle/The system of the world.html"  >The system of the world</a></li>
+		</ul>
+	</div>
+	<button id="folder-21" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>The Expanse</button>
+	<div id="folder-container-21" class="dir-container requires_js " path="//01 Books/The Expanse">
+		<ul class="dir-list">
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Abaddon's Gate.html"  >Abaddon's Gate</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Babylons Ashes.html"  >Babylons Ashes</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Caliban's War.html"  >Caliban's War</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Cibola Burn.html"  >Cibola Burn</a></li>
+			<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse/Leviathan Wakes.html"  >Leviathan Wakes</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1177 BC.html"  >1177 BC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1491.html"  >1491</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/1493.html"  >1493</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/4th Generation Warfare Handbook.html"  >4th Generation Warfare Handbook</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Collection of Essays.html"  >A Collection of Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Fable.html"  >A Fable</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/A Tranquil Star.html"  >A Tranquil Star</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Absalom, Absalom!.html"  >Absalom, Absalom!</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Accelerando.html"  >Accelerando</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Against Democracy.html"  >Against Democracy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Albion's Seed.html"  >Albion's Seed</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/All Art Is Propaganda.html"  >All Art Is Propaganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Anathem.html"  >Anathem</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Animal Farm and 1984.html"  >Animal Farm and 1984</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Ant Encounters.html"  >Ant Encounters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Antifragile.html"  >Antifragile</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/As I Lay Dying.html"  >As I Lay Dying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Auschwitz Report.html"  >Auschwitz Report</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War.html"  >Autumn in the Heavenly Kingdom - China, the West, and the Epic Story of the Taiping Civil War</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Axiomatic.html"  >Axiomatic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Believe in People.html"  >Believe in People</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Big Woods.html"  >Big Woods</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Biohazard.html"  >Biohazard</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Black Hearts.html"  >Black Hearts</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Broken Spears.html"  >Broken Spears</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Burmese Days.html"  >Burmese Days</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985.html"  >Capital Allocation - The Financials of a New England Textile Mill 1955 - 1985</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Castles of Steel.html"  >Castles of Steel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Children of Time.html"  >Children of Time</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Collected Stories.html"  >Collected Stories</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Coup d'État.html"  >Coup d'État</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Crazy Like Us.html"  >Crazy Like Us</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Daemon.html"  >Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/David McCullough Library E-book Box Set.html"  >David McCullough Library E-book Box Set</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Days of Rage.html"  >Days of Rage</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Delta-V.html"  >Delta-V</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dignity.html"  >Dignity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distant Force.html"  >Distant Force</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Distress.html"  >Distress</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Disunited Nations.html"  >Disunited Nations</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Do Androids Dream of Electric Sheep%3F.html"  >Do Androids Dream of Electric Sheep?</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Down and Out in Paris and London.html"  >Down and Out in Paris and London</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Du Pont Dynasty.html"  >Du Pont Dynasty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Dune.html"  >Dune</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Electronic Value Exchange.html"  >Electronic Value Exchange</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape from Rome.html"  >Escape from Rome</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 1.html"  >Escape the City volume 1</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Escape the City volume 2.html"  >Escape the City volume 2</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Essays, Speeches & Public Letters.html"  >Essays, Speeches & Public Letters</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Evolution of Civilizations - Carrol Quigley.html"  >Evolution of Civilizations - Carrol Quigley</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Flags in the Dust.html"  >Flags in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Frankenstein; Or, The Modern Prometheus.html"  >Frankenstein; Or, The Modern Prometheus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Freaks of Fortune - The Emerging World of Capitalism and Risk in America.html"  >Freaks of Fortune - The Emerging World of Capitalism and Risk in America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Genoa and the Genoese.html"  >Genoa and the Genoese</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Go Down, Moses.html"  >Go Down, Moses</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/God's Chinese Son.html"  >God's Chinese Son</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Godel, Escher, Bach-An Eternal Golden Braid.html"  >Godel, Escher, Bach-An Eternal Golden Braid</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Going the Distance.html"  >Going the Distance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Gomorrah.html"  >Gomorrah</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Good Profit.html"  >Good Profit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hard Landing.html"  >Hard Landing</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Harpoon.html"  >Harpoon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Heart of Europe.html"  >Heart of Europe</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homage to Catalonia.html"  >Homage to Catalonia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html"  >Homo Deus - A Brief History of Tomorrow</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Hoover.html"  >Hoover</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House of Leaves.html"  >House of Leaves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/House on Fire.html"  >House on Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/How to rapidly industrialize Mars.html"  >How to rapidly industrialize Mars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/If This Is A Man - The Truce (Abacus 40th Anniversary).html"  >If This Is A Man - The Truce (Abacus 40th Anniversary)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Imperial Twilight.html"  >Imperial Twilight</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Intruder in the Dust.html"  >Intruder in the Dust</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Invisible Planets.html"  >Invisible Planets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Keep the Aspidistra Flying.html"  >Keep the Aspidistra Flying</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kentucky Barracuda.html"  >Kentucky Barracuda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Knight's Gambit (Vintage).html"  >Knight's Gambit (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Kochland.html"  >Kochland</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lakota America.html"  >Lakota America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Liftoff.html"  >Liftoff</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Light in August.html"  >Light in August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lords of Finance - The Bankers Who Broke the World.html"  >Lords of Finance - The Bankers Who Broke the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Lucifer's Banker.html"  >Lucifer's Banker</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/MITI and the Japanese Miracle.html"  >MITI and the Japanese Miracle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Maisky Diaries.html"  >Maisky Diaries</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Men Without Work.html"  >Men Without Work</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Mosquitoes.html"  >Mosquitoes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Napoleon.html"  >Napoleon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Narconomics.html"  >Narconomics</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nineteen Eighty-Four.html"  >Nineteen Eighty-Four</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Nuclear Weapons and American Grand Strategy.html"  >Nuclear Weapons and American Grand Strategy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Oceanic.html"  >Oceanic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Perihelion Summer.html"  >Perihelion Summer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Political Power in Pre-Colonial Buganda.html"  >Political Power in Pre-Colonial Buganda</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Postwar.html"  >Postwar</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Private Empire - ExxonMobil and American Power.html"  >Private Empire - ExxonMobil and American Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Prometheus Shackled.html"  >Prometheus Shackled</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Pylon.html"  >Pylon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Reamde.html"  >Reamde</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Famine - Stalin's War on Ukraine.html"  >Red Famine - Stalin's War on Ukraine</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Red Sparrow - A Novel.html"  >Red Sparrow - A Novel</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Religion and Ritual in Ancient Egypt.html"  >Religion and Ritual in Ancient Egypt</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Requiem for a Nun.html"  >Requiem for a Nun</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Safeguarding The Future.html"  >Safeguarding The Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sanctuary.html"  >Sanctuary</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Savage Continent.html"  >Savage Continent</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Schild's Ladder.html"  >Schild's Ladder</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seeing Like a State.html"  >Seeing Like a State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Seveneves.html"  >Seveneves</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Shooting an Elephant.html"  >Shooting an Elephant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Snow Crash.html"  >Snow Crash</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Soldiers Pay.html"  >Soldiers Pay</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stalin's War - A New History of World War II.html"  >Stalin's War - A New History of World War II</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Starship Troopers.html"  >Starship Troopers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Stories of Your Life and Others.html"  >Stories of Your Life and Others</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Sulla.html"  >Sulla</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Survival in Auschwitz.html"  >Survival in Auschwitz</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/THE SHIELD OF ACHILLES.html"  >THE SHIELD OF ACHILLES</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Taliban.html"  >Taliban</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Teranesia.html"  >Teranesia</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States.html"  >The 2020 Commission Report on the North Korean Nuclear Attacks Against the United States</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Absent Superpower - The Shale Revolution and a World Without America.html"  >The Absent Superpower - The Shale Revolution and a World Without America</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Accidental Superpower.html"  >The Accidental Superpower</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Ancient City.html"  >The Ancient City</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cheese and the Worms.html"  >The Cheese and the Worms</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Cleanest Race.html"  >The Cleanest Race</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Coming of Neo-Feudalism.html"  >The Coming of Neo-Feudalism</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complacent Class - The Self-Defeating Quest for the American Dream.html"  >The Complacent Class - The Self-Defeating Quest for the American Dream</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Complete Works of Primo Levi.html"  >The Complete Works of Primo Levi</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Decadent Society.html"  >The Decadent Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Diamond Age.html"  >The Diamond Age</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Dutch Republic.html"  >The Dutch Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Edge of the World.html"  >The Edge of the World</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Alchemy.html"  >The End of Alchemy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The End of Power.html"  >The End of Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Enterprise of Law.html"  >The Enterprise of Law</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Essential Faulkner.html"  >The Essential Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Expanse.html"  >The Expanse</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Fountainhead.html"  >The Fountainhead</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The French Intifada - The Long War Between France and Its Arabs.html"  >The French Intifada - The Long War Between France and Its Arabs</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Chessboard - American Primacy and Its Geostrategic Imperatives.html"  >The Grand Chessboard - American Primacy and Its Geostrategic Imperatives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Byzantine Empire.html"  >The Grand Strategy of the Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grand Strategy of the Roman Empire.html"  >The Grand Strategy of the Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Grid - The Fraying Wires Between Americans and Our Energy Future.html"  >The Grid - The Fraying Wires Between Americans and Our Energy Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Guns of August.html"  >The Guns of August</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The High Frontier - Human Colonies in Space.html"  >The High Frontier - Human Colonies in Space</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The House Of Medici.html"  >The House Of Medici</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Last Kings of Shanghai.html"  >The Last Kings of Shanghai</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Left Hand of Darkness.html"  >The Left Hand of Darkness</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Leveller Revolution.html"  >The Leveller Revolution</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Library of Scott Alexandria.html"  >The Library of Scott Alexandria</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Machinery of Freedom.html"  >The Machinery of Freedom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Magic Paint.html"  >The Magic Paint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Man In The High Castle.html"  >The Man In The High Castle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Martian.html"  >The Martian</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Moral Economy of the Peasant.html"  >The Moral Economy of the Peasant</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Myth Of Sisyphus And Other Essays.html"  >The Myth Of Sisyphus And Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Periodic Table.html"  >The Periodic Table</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Polyester Prince - The Rise of Dhirubhai Ambani.html"  >The Polyester Prince - The Rise of Dhirubhai Ambani</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Reivers.html"  >The Reivers</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Richest Man Who Ever Lived.html"  >The Richest Man Who Ever Lived</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Decline of the Medici Bank, 1397-1494.html"  >The Rise and Decline of the Medici Bank, 1397-1494</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Rise and Fall of American Growth.html"  >The Rise and Fall of American Growth</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Son Also Rises.html"  >The Son Also Rises</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sound and the Fury.html"  >The Sound and the Fury</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Sovereign Individual.html"  >The Sovereign Individual</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Space Barons.html"  >The Space Barons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Spy Who Came in from the Cold.html"  >The Spy Who Came in from the Cold</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Struggle Against the State and Other Essays.html"  >The Struggle Against the State and Other Essays</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The True Believer.html"  >The True Believer</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Tyrannicide Brief.html"  >The Tyrannicide Brief</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Unvanquished.html"  >The Unvanquished</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War That Ended Peace.html"  >The War That Ended Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The War with Hannibal.html"  >The War with Hannibal</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Water Knife.html"  >The Water Knife</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wishing Tree.html"  >The Wishing Tree</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/The Wizards of Armageddon (Stanford Nuclear Age Series).html"  >The Wizards of Armageddon (Stanford Nuclear Age Series)</a></li>
+		<li><div class="file-icon"></div><a class="active current_page_dirtree" href="//01 Books/The autobiography of Malcolm X.html"  >The autobiography of Malcolm X</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/These 13.html"  >These 13</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage).html"  >Three Famous Short Novels - Spotted Horses Old Man The Bear (Vintage)</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Till Time's Last Sand.html"  >Till Time's Last Sand</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Titan.html"  >Titan</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Trade Wars Are Class Wars.html"  >Trade Wars Are Class Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Tuxedo Park.html"  >Tuxedo Park</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Uncollected Stories of William Faulkner.html"  >Uncollected Stories of William Faulkner</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/VC.html"  >VC</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/War and Peace.html"  >War and Peace</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/William Walker's Wars.html"  >William Walker's Wars</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Windows for the Crown Prince.html"  >Windows for the Crown Prince</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/World War Z.html"  >World War Z</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Worm.html"  >Worm</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Would You Like to Buy a Kilo of Isopropyl Bromide.html"  >Would You Like to Buy a Kilo of Isopropyl Bromide</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zero to One - Notes on Startups, or How to Build the Future.html"  >Zero to One - Notes on Startups, or How to Build the Future</a></li>
+		<li><div class="file-icon"></div><a class="" href="//01 Books/Zinky Boys - Soviet Voices from the Afghanistan War.html"  >Zinky Boys - Soviet Voices from the Afghanistan War</a></li>
+	</ul>
+</div>
+<button id="folder-22" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>02 Concepts</button>
+<div id="folder-container-22" class="dir-container requires_js " path="//02 Concepts">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Antifragility and Optionality.html"  >Antifragility and Optionality</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Artificial Intelligence.html"  >Artificial Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Capital Allocation.html"  >Capital Allocation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Chokepoints and Gateways.html"  >Chokepoints and Gateways</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Coercive Labor.html"  >Coercive Labor</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Collapse and Resilience.html"  >Collapse and Resilience</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commercial Society.html"  >Commercial Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Commodity Systems.html"  >Commodity Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Common Patterns and Transferable Lessons.html"  >Common Patterns and Transferable Lessons</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Concept Atlas.html"  >Concept Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Crisis Governance.html"  >Crisis Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Culture, Identity, and Legitimacy.html"  >Culture, Identity, and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecological Constraint.html"  >Ecological Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Ecology, Resources, and Constraint.html"  >Ecology, Resources, and Constraint</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Economy, Firms, and Infrastructure.html"  >Economy, Firms, and Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Elite Formation.html"  >Elite Formation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire and Periphery.html"  >Empire and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Empire, Frontier, and Periphery.html"  >Empire, Frontier, and Periphery</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Financial Infrastructure.html"  >Financial Infrastructure</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Frontier Systems.html"  >Frontier Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Illicit Markets.html"  >Illicit Markets</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Industrial Policy.html"  >Industrial Policy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Informal Institutions.html"  >Informal Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information Theory.html"  >Information Theory</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information and Coordination.html"  >Information and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Information, Legibility, and Coordination.html"  >Information, Legibility, and Coordination</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Institutions.html"  >Institutions</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Intelligence.html"  >Intelligence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Knowledge Preservation.html"  >Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Language and Ideology.html"  >Language and Ideology</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legibility.html"  >Legibility</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy.html"  >Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Legitimacy and Succession.html"  >Legitimacy and Succession</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Logistics and Throughput.html"  >Logistics and Throughput</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Maritime Power.html"  >Maritime Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Memory, Narrative, and Knowledge Preservation.html"  >Memory, Narrative, and Knowledge Preservation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Moral Economy.html"  >Moral Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/National Identity.html"  >National Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Order and Governance.html"  >Order and Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Path Dependence and Institutional Drift.html"  >Path Dependence and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Platform Governance.html"  >Platform Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Political Economy.html"  >Political Economy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Polycentric Order.html"  >Polycentric Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Religion and Legitimacy.html"  >Religion and Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Speculative Governance.html"  >Speculative Governance</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/State Capacity.html"  >State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Systems Thinking.html"  >Systems Thinking</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technological Change.html"  >Technological Change</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/Technology, Platforms, and Speculative Systems.html"  >Technology, Platforms, and Speculative Systems</a></li>
+		<li><div class="file-icon"></div><a class="" href="//02 Concepts/War, Crisis, and Collapse.html"  >War, Crisis, and Collapse</a></li>
+	</ul>
+</div>
+<button id="folder-23" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>03 Reading Paths</button>
+<div id="folder-container-23" class="dir-container requires_js " path="//03 Reading Paths">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/AI, Platforms, and Sovereignty.html"  >AI, Platforms, and Sovereignty</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Archives, Skill, and Civilizational Continuity.html"  >Archives, Skill, and Civilizational Continuity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Coercive Labor, Commodity Systems, and Extraction.html"  >Coercive Labor, Commodity Systems, and Extraction</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Collapse, Resilience, and Civilizational Survival.html"  >Collapse, Resilience, and Civilizational Survival</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Commercial Society, Stagnation, and Institutional Drift.html"  >Commercial Society, Stagnation, and Institutional Drift</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Finance, Allocation, and Industrial Power.html"  >Finance, Allocation, and Industrial Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Identity, Memory, and Cultural Legitimacy.html"  >Identity, Memory, and Cultural Legitimacy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Illicit Markets, Contraband, and State Capacity.html"  >Illicit Markets, Contraband, and State Capacity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Intelligence, Warning, and Institutional Self-Deception.html"  >Intelligence, Warning, and Institutional Self-Deception</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Legitimacy, Religion, and Revolutionary Rupture.html"  >Legitimacy, Religion, and Revolutionary Rupture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Maritime Empire, Peripheries, and Gateway Power.html"  >Maritime Empire, Peripheries, and Gateway Power</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Private Frontier Capital, Infrastructure, and Technical Risk.html"  >Private Frontier Capital, Infrastructure, and Technical Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Reading Paths.html"  >Reading Paths</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Small Firms, Tacit Knowledge, and Industrial Risk.html"  >Small Firms, Tacit Knowledge, and Industrial Risk</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Speculative Governance and Future Orders.html"  >Speculative Governance and Future Orders</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/State Formation, Legibility, and Informal Order.html"  >State Formation, Legibility, and Informal Order</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Testimony, War Memory, and Broken Official Narratives.html"  >Testimony, War Memory, and Broken Official Narratives</a></li>
+		<li><div class="file-icon"></div><a class="" href="//03 Reading Paths/Voluntary Order, Civil Society, and Nonstate Capacity.html"  >Voluntary Order, Civil Society, and Nonstate Capacity</a></li>
+	</ul>
+</div>
+<button id="folder-24" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>04 Series</button>
+<div id="folder-container-24" class="dir-container requires_js " path="//04 Series">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A History of Portugal and the Portuguese Empire.html"  >A History of Portugal and the Portuguese Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/A Song of Ice and Fire.html"  >A Song of Ice and Fire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Analog.html"  >Analog</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Culture.html"  >Culture</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Dune Chronicles.html"  >Dune Chronicles</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Empire Games.html"  >Empire Games</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Foundation Sequence.html"  >Foundation Sequence</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Galactic Empire.html"  >Galactic Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Hyperion Cantos.html"  >Hyperion Cantos</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Karla Trilogy.html"  >Karla Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Merchant Princes.html"  >Merchant Princes</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Middle-earth Legendarium.html"  >Middle-earth Legendarium</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Orthogonal Trilogy.html"  >Orthogonal Trilogy</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Series Atlas.html"  >Series Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/Terra Ignota.html"  >Terra Ignota</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Baroque Cycle.html"  >The Baroque Cycle</a></li>
+		<li><div class="file-icon"></div><a class="" href="//04 Series/The Expanse.html"  >The Expanse</a></li>
+	</ul>
+</div>
+<button id="folder-25" class="dir-button " onclick="toggle_dir(this.id)"><div class="file-icon"></div>05 Characters and Entities</button>
+<div id="folder-container-25" class="dir-container requires_js " path="//05 Characters and Entities">
+	<ul class="dir-list">
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Bene Gesserit.html"  >Bene Gesserit</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Byzantine Empire.html"  >Byzantine Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Dutch Republic as Commercial Polity.html"  >Dutch Republic as Commercial Polity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Earth as Administrative Core.html"  >Earth as Administrative Core</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/East India Company.html"  >East India Company</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Entity Atlas.html"  >Entity Atlas</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Foundation Project.html"  >Foundation Project</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Fremen Society.html"  >Fremen Society</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Holy Roman Empire.html"  >Holy Roman Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Atreides.html"  >House Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Lannister.html"  >House Lannister</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/House Stark.html"  >House Stark</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Iron Throne Regime.html"  >Iron Throne Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/James Holden.html"  >James Holden</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Lakota Polity and Expansion System.html"  >Lakota Polity and Expansion System</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/MITI.html"  >MITI</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Mars as Military-Technocratic State.html"  >Mars as Military-Technocratic State</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Medici Bank.html"  >Medici Bank</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Monowitz-Buna Labor Regime.html"  >Monowitz-Buna Labor Regime</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Nights Watch.html"  >Nights Watch</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/OPA and Belt Political Identity.html"  >OPA and Belt Political Identity</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Paul Atreides.html"  >Paul Atreides</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Protomolecule and Ring Network.html"  >Protomolecule and Ring Network</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Qing Empire.html"  >Qing Empire</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Rocinante Crew.html"  >Rocinante Crew</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Roman Republic.html"  >Roman Republic</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Room 40.html"  >Room 40</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Second Foundation.html"  >Second Foundation</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Spacing Guild.html"  >Spacing Guild</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taiping Heavenly Kingdom.html"  >Taiping Heavenly Kingdom</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Taliban Movement.html"  >Taliban Movement</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Circus.html"  >The Circus</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/The Daemon.html"  >The Daemon</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/U.S. Robots and Mechanical Men.html"  >U.S. Robots and Mechanical Men</a></li>
+		<li><div class="file-icon"></div><a class="" href="//05 Characters and Entities/Young Lady's Illustrated Primer.html"  >Young Lady's Illustrated Primer</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><div class="file-icon"></div><a class="" href="//index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <div class="content"><h1 id="the-autobiography-of-malcolm-x">The autobiography of Malcolm X</h1>
+<h2 id="position-in-the-vault">Position in the vault</h2>
+<p>This note is backed by a local extracted source and remains part of the vault's crosslinked book layer.   </p>
+<h2 id="core-concepts">Core concepts</h2>
+<ul>
+<li><a href="//02%20Concepts/State%20Capacity.html">State Capacity</a>: welfare agencies, courts, prisons, police, surveillance, and passport offices show how the American state enters Malcolm's life through custody, punishment, and administrative gates.   </li>
+<li><a href="//02%20Concepts/Informal%20Institutions.html">Informal Institutions</a>: Roxbury, Harlem, numbers runners, pimps, burglars, musicians, and the Nation's street recruitment all operate through unwritten codes of status, trust, threat, and discipline.   </li>
+<li><a href="//02%20Concepts/Language%20and%20Ideology.html">Language and Ideology</a>: names such as Detroit Red, Satan, Malcolm X, Black Muslim, and El-Hajj Malik El-Shabazz mark changes in the vocabulary through which Malcolm interprets himself and America.   </li>
+<li><a href="//02%20Concepts/Religion%20and%20Legitimacy.html">Religion and Legitimacy</a>: Elijah Muhammad, Master W. D. Fard, Temple discipline, Hajj, and orthodox Muslim recognition repeatedly decide which authority Malcolm treats as spiritually binding.   </li>
+<li><a href="//02%20Concepts/National%20Identity.html">National Identity</a>: Garveyism, Black Nationalism, Pan-Africanism, Omowale, and the United Nations turn Malcolm's story from individual conversion into a struggle over collective peoplehood.   </li>
+<li><a href="//02%20Concepts/Knowledge%20Preservation.html">Knowledge Preservation</a>: Alex Haley's epilogue frames the autobiography as a negotiated spoken record preserved under surveillance, fatigue, rupture, and the expectation of assassination.   </li>
+</ul>
+<h2 id="detailed-overview">Detailed overview</h2>
+<p><code>The Autobiography of Malcolm X</code> is built as a series of conversions rather than as a smooth rise from poverty to prominence. Malcolm begins with Earl Little's Garveyite preaching, Louise Little's Grenadian background, Ku Klux Klan riders in Omaha, the Black Legion in Lansing, the burning of the family house, and the state agencies that break up the Little children after Earl's death and Louise's institutionalization. The early chapters make racism intimate and administrative at once: night riders, welfare agents, school counselors, foster homes, detention homes, and teachers all shape the child before he has any public language for what has happened to him.   </p>
+<p>The middle chapters move through Boston, Roxbury, Harlem, the railroad, Small's Paradise, numbers runners, zoot suits, conks, Sophia, Shorty, Sammy the Pimp, West Indian Archie, cocaine, burglary, and prison. Malcolm does not present "Detroit Red" as a colorful detour; he treats the hustler world as a social education in American racism, masculinity, money, sexual exploitation, police power, and survival inside black urban districts. The book's moral pressure comes from the fact that he later reads those years not as private wickedness alone but as a predictable product of ghettos built and policed by white society.   </p>
+<p>Prison changes the book's engine. Malcolm's first letters to Elijah Muhammad, his copying of the dictionary, his reading of history, his debates at Norfolk Prison Colony, his rejection of pork and tobacco, and his adoption of the "X" all turn confinement into a second education. The Nation of Islam gives him a total interpretation of his life: slavery erased his name, Christianity trained black submission, the white man acted as the devil, and disciplined black self-respect could rescue men who had been written off as criminals and addicts. The narrative does not hide how absolute that interpretation became; it shows Malcolm applying it to his brother Reginald, prison converts, and every public encounter with reporters.   </p>
+<p>The Nation of Islam chapters are also organizational history. Malcolm leaves prison in 1952, joins Temple Number One in Detroit, meets Elijah Muhammad in Chicago, becomes Malcolm X, "fishes" in ghettos for converts, builds mosques in Boston, Philadelphia, and Harlem, starts <code>Muhammad Speaks</code>, organizes Fruit of Islam discipline, handles police surveillance, and becomes the movement's most visible minister after the television program <code>The Hate That Hate Produced</code>. The book carefully shows both the power and the danger of this rise: Malcolm's talent makes Elijah Muhammad better known, but it also creates jealousy, dependency, and a public identity that Malcolm later struggles to reshape.   </p>
+<p>The break with Elijah Muhammad is narrated as a spiritual and political crisis, not only a personal quarrel. Malcolm learns of Elijah Muhammad's relationships with secretaries, is silenced after describing Kennedy's assassination as "chickens coming home to roost," forms Muslim Mosque, Inc. and the Organization of Afro-American Unity, and then travels through Mecca, Jedda, Mina, Arafat, Beirut, Lagos, Ibadan, Accra, Cairo, and other places where he sees Islam and Pan-African politics outside the Nation's racial theology. Hajj changes his use of the phrase "white man" because he encounters people with white complexions whose actions do not match America's racial order.   </p>
+<p>Alex Haley's epilogue makes the finished book inseparable from its making and from Malcolm's murder. Haley describes the <code>Reader's Digest</code>, <code>Playboy</code>, Muslim restaurant, Elijah Muhammad's approval, the contract giving proceeds to Muhammad's Mosque No. 2, Malcolm's late-night sessions in Greenwich Village, the way memories of Louise Little unlocked the early chapters, the break with the Nation, the Audubon Ballroom assassination, the Unity Funeral Home, Ossie Davis's eulogy, Betty Shabazz's grief, and the burial at Ferncliff Cemetery. The epilogue confirms the autobiography as a collaboration produced under pressure from surveillance, fatigue, loyalty, rupture, and the expectation of violent death.   </p>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li><a href="//not_created.html" class="nonexistent-link">Extracted text</a>   </li>
+</ul>
+<h2 id="chapter-by-chapter-notes">Chapter-by-chapter notes</h2>
+<h3 id="chapter-one-nightmare">CHAPTER ONE NIGHTMARE</h3>
+<p>Summary: Malcolm begins before his birth, with Ku Klux Klan riders surrounding the Omaha, Nebraska house while Louise Little is pregnant and Earl Little is away preaching Marcus Garvey's back-to-Africa program. The family moves through Milwaukee to Lansing, where Earl organizes for the U.N.I.A., clashes with Uncle Tom informants and the Black Legion, and sees the family house burned in 1929 while police and firemen stand by. Malcolm names Louise's Grenada birth, her white father, his own reddish-brown skin, Earl's one eye, the violent deaths of Earl's brothers, and Earl's later death as part of a family pattern of racial violence. Source anchors: Omaha, Earl Little, Louise Little, Marcus Garvey, Black Legion, Lansing, 1929 fire, U.N.I.A.   </p>
+<p>Analysis: Omaha and the 1929 fire make racial terror the first material fact in Malcolm's life, not an idea he later adopts from Elijah Muhammad. Earl Little and Marcus Garvey give the chapter its counter-force: black independence, African return, and public defiance in the face of the Black Legion. Louise Little matters because her Grenada background and white father make color, shame, and family preference part of the household before Malcolm can name them politically. Lansing is not a quiet childhood setting; it is where police indifference, welfare power, and racial violence teach him that <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> can destroy a Black family by refusing protection, supervising poverty, and calling the result normal.   </p>
+<h3 id="chapter-two-mascot">CHAPTER TWO MASCOT</h3>
+<p>Summary: After Earl Little's death, the family is pushed toward poverty, relief agencies, foster placements, and state supervision while Louise Little's health collapses and the children are split among homes. Malcolm lives with the Swerlins in Mason, becomes a class president, works in a restaurant, follows Joe Louis's 1937 victory over James J. Braddock, visits his mother in Kalamazoo, and sees Ella arrive from Boston as a proud dark-skinned woman. Mr. Ostrowski, despite Malcolm's high grades, tells him that becoming a lawyer is no realistic goal for a Black boy and advises carpentry instead, prompting Malcolm to withdraw from Mason's white approval. Source anchors: Swerlins, Mason, Joe Louis, James J. Braddock, Kalamazoo, Ella, Mr. Ostrowski, lawyer.   </p>
+<p>Analysis: The Swerlins and Mason show Malcolm being treated as a beloved exception, a mascot whose success is acceptable only inside white limits. Joe Louis and James J. Braddock give him a racial victory image that contrasts with the humiliations of school and welfare oversight. Ella's proud blackness supplies the first model of dignity that does not depend on white praise. Mr. Ostrowski's lawyer remark is the chapter's hinge because it turns Malcolm's good grades and class presidency into evidence that white encouragement stops exactly where Black ambition threatens to become professional equality.   </p>
+<h3 id="chapter-three-homeboy">CHAPTER THREE "HOMEBOY"</h3>
+<p>Summary: Malcolm reaches Roxbury in his green suit and country haircut, lives with Ella on Waumbeck Street, explores the Hill, Boston Common, Harvard, Roseland State Ballroom, Townsend Drugstore, and the ghetto section where poolrooms, bars, storefront churches, and sharp-dressed cats draw him away from Ella's respectable circle. Shorty, a Lansing homeboy and saxophone player, introduces him to Boston slang, numbers, pimps, conks, reefers, and the job shining shoes at Roseland among Benny Goodman crowds. Malcolm contrasts the Hill's so-called cultured Negroes with the more natural town ghetto and starts seeing white-Boston history and Black urban life as separate worlds occupying the same city. Source anchors: Roxbury, Ella, Waumbeck Street, Shorty, Roseland State Ballroom, conk, Benny Goodman.   </p>
+<p>Analysis: Roxbury gives Malcolm a Black mass world after Mason's white surveillance, but Ella's Hill and Shorty's poolroom offer competing versions of that world. Waumbeck Street and the Hill show property, status, and imitation of white manners; Roseland State Ballroom and the conk show performance, money, and street prestige. Shorty matters because he translates Boston into the language of the homeboy and makes hustling appear teachable. Benny Goodman and the ballroom place Malcolm near the national entertainment economy, where service work, style, and racial spectacle begin replacing school achievement as measures of success.   </p>
+<h3 id="chapter-four-laura">CHAPTER FOUR LAURA</h3>
+<p>Summary: Malcolm works the Roseland men's room, learns to shine shoes, hand towels, whiskbroom white customers, sell condoms, and watch the dancers, then meets Laura at a drugstore and finds in her a serious Black girl who loves school, dancing, and her grandmother's stricter expectations. Sophia, a white woman, enters through the ballroom world and becomes Malcolm's status symbol, while Laura is drawn into the nightlife after Malcolm abandons her. The chapter is full of lindy-hopping, zoot suits, Ella's warnings, the Boston black social scene, and Malcolm's growing appetite for being seen as hip. Source anchors: Roseland, Laura, Sophia, lindy-hop, zoot suit, Ella, towels, shoeshine.   </p>
+<p>Analysis: Roseland is Malcolm's apprenticeship in performance before white and Black audiences, and the towel and shoeshine hustles teach him how servility can be converted into tips and style. Laura represents a path of disciplined Black possibility that Malcolm damages by choosing Sophia and the zoot suit world. Sophia's whiteness functions as street capital, not romance, and that makes the chapter brutally specific about the sexual politics Malcolm later condemns. Ella's warnings matter because she recognizes that Malcolm is moving from exploration into self-fashioning around the very signs of corruption that impress him.   </p>
+<h3 id="chapter-five-harlemite">CHAPTER FIVE HARLEMITE</h3>
+<p>Summary: Malcolm becomes a railroad sandwich man on the Yankee Clipper, travels between Boston and New York, and is overwhelmed by Harlem's Small's Paradise, the Braddock Hotel, Sugar Hill, rent parties, Daily Worker sellers, beauty shops, conk experts, and after-hours nightlife. He learns Harlem history from old-timers at Small's, including Dutch, German, Irish, Italian, Jewish, and Black successions in the neighborhood, the Cotton Club, Savoy Ballroom, Connie's Inn, Louis Armstrong, Fletcher Henderson, Cab Calloway, Ethel Waters, and the Lindy Hop. He becomes "Sandwich Red," wears a fire-red conk and zoot suits, gets fired from the railroad, and moves closer to Small's as a waiter. Source anchors: Yankee Clipper, Harlem, Small's Paradise, Braddock Hotel, Savoy Ballroom, Cotton Club, Sandwich Red, fire-red conk.   </p>
+<p>Analysis: The Yankee Clipper makes Harlem accessible as a repeated layover, not a one-time discovery, and that repetition lets Malcolm be remade as Sandwich Red. Small's Paradise and the Braddock Hotel give him an education in Black celebrity, hustling, and racial performance that no Mason classroom could provide. The Savoy Ballroom and Cotton Club history teach him that Harlem's glamour sits on older cycles of migration, exclusion, and white consumption. The fire-red conk marks his adoption of a visible identity built from white imitation and Black street prestige, which later makes his rejection of processed hair so personally charged.   </p>
+<h3 id="chapter-six-detroit-red">CHAPTER SIX DETROIT RED</h3>
+<p>Summary: Working at Small's, Malcolm enters the numbers economy, learns combinating, runners, controllers, bankers, police payoffs, and daily betting tied to the Stock Exchange's last three digits. He studies Forty Thieves boosters, fences, longshoremen, merchant sailors, gunja, Plainclothes detectives, Black Sammy, Bub Hewlett, King Padmore, West Indian Archie, Cadillac Drake, Sammy the Pimp, Alabama Peach, Fewclothes, Jumpsteady, and the St. Nicholas Avenue rooming house. The chapter also follows prostitution, morning customers, steering white men, bootleg liquor for Hymie, and the first dangerous suspicions around Italian racketeers and Jackie Robinson's signing. Source anchors: Small's, numbers, Forty Thieves, West Indian Archie, Sammy the Pimp, Jumpsteady, St. Nicholas Avenue, Jackie Robinson.   </p>
+<p>Analysis: Small's becomes a classroom in underground economics where numbers, Forty Thieves, and police payoffs reveal a whole parallel structure of work and authority. West Indian Archie and Sammy the Pimp embody different forms of skill: memory, menace, women, and reputation. Jumpsteady and St. Nicholas Avenue show <a href="//02%20Concepts/Informal%20Institutions.html">informal institutions</a> under confinement: burglary, prostitution, and addiction follow durable codes rather than random vice. Jackie Robinson's signing appears amid racketeer danger, which lets the chapter hold Black public triumph and Malcolm's private descent in the same historical moment.   </p>
+<h3 id="chapter-seven-hustler">CHAPTER SEVEN HUSTLER</h3>
+<p>Summary: Malcolm catalogs his Harlem hustles after the railroad, including gambling in Grand Central Station's lower-level locker room, selling reefers to touring bands, steering white customers to prostitutes, running bootleg liquor, handling tips, and moving between musicians, pimps, waiters, and dope users. He describes the code of trust inside hustling circles, the meaning of "slave" for regular work, the role of cocaine and marijuana, and his dependence on people such as Sammy, Sophia, Hymie, and Jean Parks. The chapter ends near the West Indian Archie dispute, after Malcolm collects three hundred dollars on a disputed fifty-cent combination hit. Source anchors: Grand Central Station, reefers, bootleg liquor, Hymie, Sammy, Sophia, Jean Parks, three hundred dollars.   </p>
+<p>Analysis: Grand Central Station connects Malcolm's hustling to the labor networks of Black railroad men, showing how legal work and illicit opportunity occupy the same spaces. Reefers, bootleg liquor, and Hymie make the chapter about escalation from performance to criminal logistics. Sammy and Sophia keep gender and exploitation inside the account rather than outside it; Malcolm's income and status depend on using people. Jean Parks and the three hundred dollars prepare the West Indian Archie crisis by showing how a tiny slip in the numbers economy can threaten reputation, life, and the whole code that holds the hustler world together.   </p>
+<h3 id="chapter-eight-trapped">CHAPTER EIGHT TRAPPED</h3>
+<p>Summary: West Indian Archie confronts Malcolm at Sammy's apartment with a .32-20, accusing him of claiming a number he had not actually combinated, and gives him until noon to return the three hundred dollars. Malcolm moves through the Onyx Club with Jean Parks, hears Billie Holiday sing "You Don't Know What Love Is," sniffs cocaine, sits with his back to the door at the La Marr-Cheri, and faces Archie's public humiliation before the bar. He then loads himself with opium, benzedrine, reefers, and cocaine, evades police looking for his gun, senses danger from Italians and a young hustler, and is finally rescued when Shorty drives from Boston after Sammy's call. Source anchors: West Indian Archie, .32-20, Onyx Club, Billie Holiday, La Marr-Cheri, opium, benzedrine, Shorty.   </p>
+<p>Analysis: West Indian Archie turns the abstract hustler code into a life-or-death ritual in which face matters more than money. The Onyx Club and Billie Holiday sharpen the chapter because beauty and danger coexist while Malcolm is too high and frightened to receive the music as anything but atmosphere. La Marr-Cheri is the public courtroom where <a href="//02%20Concepts/Informal%20Institutions.html">informal enforcement</a> protects Archie's name without police, contracts, or written rules. Opium, benzedrine, and Shorty's rescue show that Malcolm is no longer mastering the street; the drugs and threats have trapped him in a system he once thought he controlled.   </p>
+<h3 id="chapter-nine-caught">CHAPTER NINE CAUGHT</h3>
+<p>Summary: Back in Roxbury, Malcolm shocks Ella and Shorty with his atheism, profanity, cocaine use, guns, and predatory habits, then resumes his relationship with Sophia and draws Sophia's younger sister toward Shorty. He wins a large poker pot from John Hughes, carries multiple guns, buys a machine gun from a merchant sailor, and plans a burglary ring with Shorty, Rudy, Sophia, and Sophia's sister using Harvard Square as a base. The group cases wealthy homes through the white women, uses a fence, plays Russian roulette as a loyalty test, steals jewelry and furs, and is finally arrested after Sophia tries to repair a stolen watch. Source anchors: Ella, Sophia, John Hughes, machine gun, Rudy, Harvard Square, stolen watch, burglary ring.   </p>
+<p>Analysis: Ella's disbelief shows how far Malcolm has traveled from the boy she brought to Boston, while Sophia and Rudy make the burglary ring interracial in ways that intensify its danger. John Hughes and the machine gun build Malcolm's self-image as fearless, but the Harvard Square operation shows his fearlessness hardening into control over others. The stolen watch is important because the careful burglary system collapses through a small practical mistake, not through a dramatic shootout. The chapter's title is exact: Malcolm is caught by police, but also by addiction, ego, sexual domination, and a need to prove he is beyond fear.   </p>
+<h3 id="chapter-ten-satan">CHAPTER TEN SATAN</h3>
+<p>Summary: Malcolm, Shorty, Sophia, and Sophia's sister are sentenced in Middlesex County Court on burglary charges, with Shorty's mother, Ella, and Reginald present, and Malcolm receives a harsh term partly because white women were involved with Black men. In Charlestown Prison he earns the name Satan by cursing God and the Bible, resists the chaplain, meets Bimbi, discovers the prison library, and begins to respect articulate thought. He is transferred to Norfolk Prison Colony, where debate, books, and letters from his siblings begin preparing him for the Nation of Islam. Source anchors: Middlesex County Court, Shorty's mother, Sophia, Charlestown Prison, Satan, Bimbi, Norfolk Prison Colony.   </p>
+<p>Analysis: Middlesex County Court exposes the racial-sexual punishment behind the burglary sentence, because Sophia and her sister make the crimes more scandalous to the judge than property theft alone. Charlestown Prison reduces Malcolm to Satan, a name that records both rebellion and emptiness. Bimbi matters because he shows verbal power without hustler violence, giving Malcolm a new model of command. Norfolk Prison Colony shows <a href="//02%20Concepts/State%20Capacity.html">state capacity</a> cutting two ways: courts and prisons enforce racial punishment, yet confinement also strips away the street roles that made books and debate unable to reach him.   </p>
+<h3 id="chapter-eleven-saved">CHAPTER ELEVEN SAVED</h3>
+<p>Summary: Malcolm writes to Elijah Muhammad at 6116 South Michigan Avenue after Reginald and other siblings introduce him to the Nation of Islam's teaching that the white man is the devil and the Black man is original. He stops eating pork, quits smoking, copies the dictionary, reads history, religion, and philosophy, debates at Norfolk, challenges a Harvard Seminary student over Paul's and Jesus's color, and recruits Black prisoners by linking slavery, African peoples, Arabic-speaking Muslims, and prison experience. He also narrates Reginald's suspension from the Nation, his own vision of a light-brown man he later identifies with Master W. D. Fard, and the painful break with his brother. Source anchors: Elijah Muhammad, 6116 South Michigan Avenue, dictionary, Norfolk, Reginald, Master W. D. Fard, Jesus.   </p>
+<p>Analysis: Elijah Muhammad gives Malcolm a complete explanation for his life, and 6116 South Michigan Avenue becomes the address of that rescue. The dictionary and Norfolk debates matter because salvation is intellectual as well as religious: Malcolm learns words, history, and public argument. Reginald's role is tragic because he serves as the messenger who brings Islam to Malcolm and then becomes an example Malcolm interprets through the Nation's doctrine of chastisement. Master W. D. Fard and the question about Jesus show <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">religious legitimacy</a> working through doctrine: Christianity, race, and world history become weapons for prison recruitment because they authorize Malcolm's new interpretation of suffering.   </p>
+<h3 id="chapter-twelve-savior">CHAPTER TWELVE SAVIOR</h3>
+<p>Summary: Released in 1952, Malcolm goes to Detroit under Wilfred's custody, works in a furniture store that exploits poor Black customers through credit, and enters the disciplined household routine of Wilfred, Ruth, ablutions, prayer rugs, Arabic greetings, and daily Muslim prayer. He attends Temple Number One on Frederick Street, hears Minister Lemuel Hassan, meets Elijah Muhammad in Chicago at Temple Number Two, receives the "X" that replaces Little, and begins fishing in Detroit bars, poolrooms, and corners for converts. His recruitment energy leads to larger caravans, new appointments, and eventually ministerial work in Boston, Philadelphia, and Harlem. Source anchors: Detroit, Wilfred, Frederick Street, Temple Number One, Lemuel Hassan, Elijah Muhammad, Malcolm X, fishing.   </p>
+<p>Analysis: Detroit marks Malcolm's reentry into the world as a disciplined Muslim rather than as a returning hustler. Wilfred's home and the Frederick Street temple give the faith domestic and institutional form: ablution, prayer, greetings, and meetings make conversion habitual. Elijah Muhammad's recognition in Chicago gives Malcolm a mission, while the "X" makes <a href="//02%20Concepts/Language%20and%20Ideology.html">language and ideology</a> visible every time his name is spoken: Little names slavery's inheritance, and X turns erased ancestry into public doctrine. Fishing matters because Malcolm immediately turns belief into organizing; the saved prisoner becomes a recruiter among the same bars and corners that once trained Detroit Red.   </p>
+<h3 id="chapter-thirteen-minister-malcolm-x">CHAPTER THIRTEEN MINISTER MALCOLM X</h3>
+<p>Summary: Malcolm leaves the Ford Motor Company's Lincoln-Mercury Division to work full time for Elijah Muhammad, develops as a minister, expands temples, organizes Fruit of Islam discipline, and builds Mosque Seven in Harlem after earlier work in Boston and Philadelphia. He tells of police attention, street recruiting, temple protocol, strict moral rules, and the way Nation members give up alcohol, pork, tobacco, dope, and processed hair. The chapter also details the Nation's prison appeal, ex-addict rescue work, Muslim-owned businesses, <code>Muhammad Speaks</code>, the Universities of Islam, and Malcolm's pride in bringing Elijah Muhammad's children into Nation work. Source anchors: Lincoln-Mercury, Mosque Seven, Fruit of Islam, Muhammad Speaks, Universities of Islam, ex-addict, processed hair.   </p>
+<p>Analysis: Lincoln-Mercury is abandoned because Malcolm's activism cannot remain secondary to wage work once Elijah Muhammad gives him authority. Mosque Seven and the Fruit of Islam show him as an institution builder, not just an orator. <code>Muhammad Speaks</code>, Universities of Islam, and Muslim-owned businesses reveal the Nation as a full social program of media, education, commerce, discipline, and family life. The ex-addict program and processed hair attacks matter because <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">religious authority</a> reaches the body: Malcolm's own past makes bodily reform and street rescue central to what he believes the Nation can do.   </p>
+<h3 id="chapter-fourteen-black-muslims">CHAPTER FOURTEEN BLACK MUSLIMS</h3>
+<p>Summary: The Nation of Islam becomes nationally visible through Louis Lomax, Mike Wallace, the television documentary <code>The Hate That Hate Produced</code>, and the Brother Johnson Hinton case in Harlem, where police violence against a Muslim draws thousands to the precinct. Malcolm manages reporters, television cameras, mosque scenes in New York, Chicago, and Washington, and a public image that turns "Black Muslims" into a feared national phrase. He contrasts Elijah Muhammad's teachings with civil-rights integrationism, describes white surveillance and FBI interest, and explains how public rallies, searches by Fruit of Islam men, and disciplined collections build the Nation's reach. Source anchors: Louis Lomax, Mike Wallace, Hate That Hate Produced, Johnson Hinton, Harlem precinct, FBI, Black Muslims.   </p>
+<p>Analysis: Louis Lomax and Mike Wallace make the Nation legible to white America, but <code>The Hate That Hate Produced</code> also gives the press a label that Malcolm cannot fully control. Johnson Hinton and the Harlem precinct show why Malcolm's discipline impressed Black observers: he converts police brutality into organized mass pressure without losing command of the crowd. The FBI and rally searches prove that visibility brings surveillance as well as recruits. The chapter turns <a href="//02%20Concepts/Language%20and%20Ideology.html">Black Muslim</a> into a contested public category, and that category begins to exceed both local mosque work and Elijah Muhammad's private authority.   </p>
+<h3 id="chapter-fifteen-icarus">CHAPTER FIFTEEN ICARUS</h3>
+<p>Summary: As Malcolm represents Elijah Muhammad on television, radio, college platforms, and in newspapers, letters pour in from white admirers, racists, and threat-makers, while social workers and Black intellectuals accuse him of distortion and demagoguery. He attacks Northern liberal hypocrisy, the word integration, Freedom Riders who ignore Northern ghettos, civil-rights tokenism, and the assumption that Black people mainly want proximity to whites. The chapter also shows Malcolm answering reporters about Rosa Parks, Montgomery, Gandhi, the Army, white immigrants, A-bombs, Japanese internment, and the knife-in-the-back image of racial "progress." Source anchors: Dear Nigger X, integration, Freedom Riders, Rosa Parks, Montgomery, Gandhi, A-bomb, Japanese internment.   </p>
+<p>Analysis: <code>Dear Nigger X</code> letters and college appearances show Malcolm's public power reaching audiences far beyond the mosque, which is why the chapter's Icarus title carries danger. Integration and Freedom Riders become targets because Malcolm wants to redirect attention from Southern spectacle to Northern ghettos and white liberal control. Rosa Parks, Montgomery, and Gandhi let him avoid being maneuvered into attacking Black protest while still rejecting civil-rights leadership. The A-bomb and Japanese internment widen his indictment of America from domestic segregation to a racialized global record.   </p>
+<h3 id="chapter-sixteen-out">CHAPTER SIXTEEN OUT</h3>
+<p>Summary: Elijah Muhammad's bronchial asthma worsens and he spends more time in Phoenix, while Malcolm receives greater authority to decide speaking, media, and organizational matters in the Nation's interest. Rumors and evidence about Elijah Muhammad's sexual relationships with young secretaries reach Malcolm through Elijah's sons and others, shaking his loyalty, and then Malcolm's comment after Kennedy's assassination about "chickens coming home to roost" gives Nation officials a reason to silence him. The chapter follows jealousy, internal surveillance, Captain Joseph, Wallace Muhammad, Herbert Muhammad, the ninety-day suspension, and Malcolm's realization that he is being pushed out. Source anchors: Phoenix, Elijah Muhammad, secretaries, Kennedy assassination, chickens coming home, ninety-day suspension, Wallace Muhammad.   </p>
+<p>Analysis: Phoenix and Elijah Muhammad's illness create the administrative opening that makes Malcolm indispensable and therefore threatening. The secretaries break Malcolm's trust because they contradict the moral law used to discipline Reginald, converts, and ordinary Muslims. Kennedy assassination and "chickens coming home" provide the public pretext for a suspension that had deeper causes in jealousy and control. Wallace Muhammad matters because the crisis is not introduced only by enemies; it comes through Elijah's own family, forcing Malcolm to separate <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">religious legitimacy</a> from loyalty to the Messenger.   </p>
+<h3 id="chapter-seventeen-mecca">CHAPTER SEVENTEEN MECCA</h3>
+<p>Summary: Orthodox Muslims in America challenge Malcolm to study Islam beyond Elijah Muhammad, and his sister Ella finances the Hajj that she had been saving to make herself. Dr. Mahmoud Youssef Shawarbi supplies the required certification and connects him to the Azzam family. At Jedda, officials confine Malcolm because he cannot demonstrate Muslim status in Arabic; Omar Azzam's intervention and Sheikh Muhammad Harkon's examination before the Hajj Committee Court secure his recognition and Prince Faisal's hospitality. Wearing the equalizing Ihram, Malcolm circles the Ka'ba, drinks from Zem Zem, runs between Safa and Marwa, and completes the rites at Mount Arafat among pilgrims of every complexion. He then writes home that their brotherhood has forced him to revise conclusions about white people while preserving his indictment of American racism. Source anchors: Ella; Dr. Shawarbi; Jedda detention; Omar Azzam; Hajj Committee Court; Ihram; Mount Arafat letter.   </p>
+<p>Analysis: Jedda detention strips Malcolm of the religious standing he held among American followers: outside the Nation, sincerity must be tested through orthodox institutions and practice. Dr. Shawarbi, Omar Azzam, and the Hajj Committee Court restore that standing through sponsorship, examination, and recognition rather than charisma. Ihram and the Mount Arafat letter then supply the evidence for his doctrinal change. Shared rites let Malcolm redefine “white” as a structure of conduct instead of complexion, widening <a href="//02%20Concepts/Religion%20and%20Legitimacy.html">religious legitimacy</a> without erasing the history of American racism. The Hajj changes his classification of possible allies, not his judgment that Black Americans face organized oppression.   </p>
+<h3 id="chapter-eighteen-el-hajj-malik-el-shabazz">CHAPTER EIGHTEEN EL-HAJJ MALIK EL-SHABAZZ</h3>
+<p>Summary: As El-Hajj Malik El-Shabazz, Malcolm tours Mecca as Prince Faisal's state guest, prays at Arafat and Mina, talks with Hussein Amini, Kasem Gulek, Sheikh Abdullah Eraif, African officials, Indian officials, and journalists, and preaches America's racism to Muslim audiences. He writes letters to Betty, Ella, Dr. Shawarbi, Wallace Muhammad, and Muslim Mosque, Inc., explaining that true Islam's brotherhood has forced him to rearrange some earlier conclusions about white people. The chapter then follows him through Beirut, Cairo, Alexandria, Lagos, Ibadan, and Nigeria, where he receives the Yoruba name Omowale and argues for Pan-African links to the United Nations. Source anchors: El-Hajj Malik El-Shabazz, Prince Faisal, Hussein Amini, Betty, Muslim Mosque Inc., Beirut, Ibadan, Omowale.   </p>
+<p>Analysis: El-Hajj Malik El-Shabazz is a new name for a new international role, and Prince Faisal's hospitality gives that role public standing. Hussein Amini and the Muslim audiences let Malcolm tell America's racial story to nonwhite listeners who treat it as a global human-rights issue. Betty, Ella, and Muslim Mosque Inc. receive the letters because Malcolm needs the change in Mecca to become an organizational turn at home. Beirut, Ibadan, and Omowale extend the conversion from Islam to <a href="//02%20Concepts/National%20Identity.html">Pan-African peoplehood</a>, making the American Negro's struggle part of diplomatic and cultural ties across Africa and the Muslim world.   </p>
+<h3 id="chapter-nineteen-1965">CHAPTER NINETEEN 1965</h3>
+<p>Summary: Malcolm returns to the United States trying to build Muslim Mosque, Inc. and the Organization of Afro-American Unity while reshaping the old "Black Muslim" image that still blocks alliances. He speaks in Harlem about Black Nationalism, human rights, white allies working among whites, sincere cooperation without white control of Black organizations, and the need to bring the Afro-American case before the United Nations. He reflects on Martin Luther King, violent death, his father's murder, daily threats from the Nation of Islam and white racists, the ghetto origins of crime, the Civil Rights Bill, language study, Arabic, Chinese, Hausa, Swahili, and his hope that the book will have social value. Source anchors: Muslim Mosque Inc., Organization of Afro-American Unity, Black Nationalism, United Nations, Martin Luther King, Civil Rights Bill, Arabic, violent death.   </p>
+<p>Analysis: Muslim Mosque Inc. and the Organization of Afro-American Unity show Malcolm trying to turn personal transformation into institutions before he is killed. Black Nationalism and the United Nations matter because he is moving the struggle from civil rights inside American law toward human rights before world opinion, a shift from legal reform to <a href="//02%20Concepts/National%20Identity.html">collective identity</a> on an international stage. Martin Luther King appears as a contrasting method rather than an enemy, which marks how far Malcolm has moved from the Nation's earlier isolation. Arabic, the Civil Rights Bill, and violent death all point to urgency: he wants more study and broader politics while expecting that enemies may not allow him time.   </p>
+<h3 id="epilogue-alex-haley">EPILOGUE ALEX HALEY</h3>
+<p>Summary: Alex Haley explains how he first encountered the Nation of Islam through reports after <code>The Hate That Hate Produced</code>, pursued a <code>Reader's Digest</code> article, met Malcolm at the Harlem Muslim restaurant, visited Elijah Muhammad in Chicago and Phoenix, and later interviewed Malcolm for <code>Playboy</code>. Haley describes the autobiography contract, the dedication to Elijah Muhammad, the agreement that nothing could be included unless Malcolm said it, the late-night Greenwich Village sessions, Malcolm's suspicion of bugging, and the moment questions about Louise Little opened the childhood material. The epilogue then follows Malcolm's break with Elijah Muhammad, threats, the Audubon Ballroom assassination, Unity Funeral Home, Sheik Ahmed Hassoun, Faith Temple, Betty Shabazz, Ossie Davis's eulogy, and burial at Ferncliff Cemetery. Source anchors: Alex Haley, Reader's Digest, Playboy, Greenwich Village, Louise Little, Audubon Ballroom, Ossie Davis, Ferncliff Cemetery.   </p>
+<p>Analysis: Alex Haley's epilogue is essential because it documents the autobiography as a negotiated spoken text, not a solitary manuscript. <code>Reader's Digest</code> and <code>Playboy</code> show Haley first approaching Malcolm through journalism, while Greenwich Village shows the labor that turns guarded interviews into narrative. Louise Little matters because Haley identifies her as the key that unlocked Malcolm's memory and made the early chapters possible. Audubon Ballroom, Ossie Davis, and Ferncliff Cemetery turn the epilogue into <a href="//02%20Concepts/Knowledge%20Preservation.html">knowledge preservation</a> under assassination pressure, so the reader finishes knowing that Malcolm's predictions of violent death were not rhetorical posture.   </p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="//01 Books/Homo Deus - A Brief History of Tomorrow.html">homo deus - a brief history of tomorrow</a></li>
+	<li><a class="backlink" href="//index.html">index</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="//obs.html/tags/books/index.html">books</a></li>
+	<li><a class="backlink" href="//obs.html/tags/sean-pawley/index.html">sean-pawley</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A323568135017746890704000260902291508016{level}" class="graph_div"></div>
+
+    <div class="graph-instructions" id="D323568135017746890704000260902291508016{level}">
+        Left-click: follow link, Right-click: select node, Scroll: zoom
+    </div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B323568135017746890704000260902291508016{level}" level="{level}" note_temp_id="323568135017746890704000260902291508016" onclick="window.ObsHtmlGraph.run(this, '323568135017746890704000260902291508016', 'the autobiography of malcolm x');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C323568135017746890704000260902291508016{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('//obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="//obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
