@@ -166,6 +166,50 @@ body.site-root #header,
 body.site-root #page_holder { display: none !important; }
 
 /* ------------------------------------------------------------------ */
+/*  CONTENT SHELL — content pages keep only the reading column          */
+/* ------------------------------------------------------------------ */
+
+/* belt-and-braces: the sidebar shell is stripped from the HTML by
+   apply_style.py, but if anything survives on any page, hide it and
+   center the reading column (which custom.css already centers via the
+   body rule; this keeps .container honest after the flex panes are
+   gone and prevents any full-width flex sibling from sprawling) */
+body.site-note #dirtree,
+body.site-note #left_pane,
+body.site-note #right_pane,
+body.site-note #header,
+body.site-note #search-master-div { display: none !important; }
+body.site-note .container {
+  max-width: 52rem !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  CONTEXT NAV — one-line in-section context (apply_style.py)         */
+/* ------------------------------------------------------------------ */
+
+.context-nav {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  margin: -0.3rem 0 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.3em 0.8em;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  align-items: baseline;
+}
+.context-nav a { text-transform: none; font-weight: 600; }
+.context-nav a:hover { color: var(--ink); }
+.context-nav .context-prev,
+.context-nav .context-next { color: var(--accent); }
+.context-nav .context-cur { font-weight: 700; color: var(--ink); }
+
+/* ------------------------------------------------------------------ */
 /*  BROWSE LINK — compact chrome on content pages (apply_style.py)       */
 /* ------------------------------------------------------------------ */
 
