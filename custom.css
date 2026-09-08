@@ -1,35 +1,159 @@
-/* Site-wide, minimal override of obsidianhtml defaults.
-   White background, max-width centered wrapper, black links with
-   underline on hover, serif headings, monospace accents, whitespace. */
+/* Site theme for Sean Pawley Books — a quiet, bookish paper reader.
+   Overrides obsidianhtml defaults (master.css is re-contained below the
+   sourced stylesheet, so every override here uses !important to win). */
 
+:root {
+  --paper: #faf8f4;
+  --paper-soft: #f3efe7;
+  --ink: #1c1917;
+  --ink-soft: #57534e;
+  --accent: #7a5c3e;
+  --line: #e2dcd2;
+  --code-bg: #f0ece4;
+}
+
+html {
+  background: var(--paper) !important;
+}
+
+body.theme-obs-light,
+body.theme-obs-dark,
 body {
-  background: #fff !important;
-  color: #111;
-  max-width: 60rem;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-family: 'SourceSerifPro', Georgia, 'Times New Roman', serif !important;
+  font-size: 1.06rem !important;
+  line-height: 1.7 !important;
+  max-width: 52rem !important;
   margin: 0 auto !important;
-  padding: 1.5rem;
+  padding: 1.5rem 1.75rem 4rem !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  inset: auto !important;
 }
 
-a { color: #000; text-decoration: none; }
-a:hover { text-decoration: underline; }
+/* typed rendering */
+p, li { line-height: 1.7 !important; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, 'Times New Roman', serif;
+a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color 120ms ease, color 120ms ease !important;
 }
+a:hover { color: var(--ink) !important; border-bottom-color: var(--accent) !important; }
+a:visited { color: var(--accent) !important; }
 
+/* headings */
+h1, h2, h3, h4, h5, h6, embeddedtitle {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  border-bottom: 0 !important;
+  letter-spacing: -0.01em !important;
+}
+h1 { font-size: 1.9rem !important; margin-bottom: 1.2rem !important; }
+h2 { font-size: 1.45rem !important; margin-top: 2rem !important; }
+h3 { font-size: 1.2rem !important; margin-top: 1.6rem !important; }
+
+/* code and pre */
 code, pre, kbd, samp {
-  font-family: 'SourceCodePro-Regular', 'Courier New', monospace;
+  font-family: 'SourceCodePro-Regular', 'Courier New', monospace !important;
+  font-size: 0.92em !important;
+  background: var(--code-bg) !important;
+  color: #2f2a26 !important;
 }
+code { padding: 0.12em 0.4em !important; border-radius: 4px !important; }
+pre {
+  padding: 1rem 1.2rem !important;
+  border-left: 3px solid var(--accent) !important;
+  border-radius: 6px !important;
+  overflow-x: auto !important;
+  line-height: 1.5 !important;
+  white-space: pre-wrap !important;
+}
+pre code { background: transparent !important; padding: 0 !important; }
 
-/* small home bar shown on the root page */
+/* ------------------------------------------------------------------ */
+/*  NAV CHROME — injected by apply_style.py                            */
+/* ------------------------------------------------------------------ */
+
 .site-topbar {
-  font-size: 0.85em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  align-items: baseline;
+  font-size: 0.84rem;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ccc;
 }
-.site-topbar a {
-  font-weight: bold;
+.site-topbar a { text-transform: uppercase; font-weight: 600; }
+.site-topbar a:hover { color: var(--ink); }
+.site-topbar .nav-home { color: var(--ink); }
+
+/* breadcrumbs */
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: -0.4rem 0 1.4rem;
+}
+.breadcrumbs a { text-transform: none; color: var(--accent); }
+.breadcrumbs a:hover { color: var(--ink); }
+
+/* ------------------------------------------------------------------ */
+/*  ROOT — hero + folder cards                                        */
+/* ------------------------------------------------------------------ */
+
+.site-hero {
+  padding: 3.2rem 0 2.6rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.2rem;
+}
+.hero-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin: 0 0 0.8rem;
 }
+.site-hero h1 { font-size: 2.6rem; margin: 0 0 0.9rem; }
+.hero-lead { color: var(--ink-soft); max-width: 38rem; margin: 0 0 2.4rem; }
+
+.folder-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 1rem;
+}
+.folder-card {
+  display: block;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  text-decoration: none;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+.folder-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(122, 92, 62, 0.12);
+  color: var(--ink);
+}
+.folder-card h2 { font-size: 1.02rem; margin: 0 0 0.35rem; }
+.folder-card p { font-size: 0.8rem; color: var(--ink-soft); margin: 0; }
+
+/* ------------------------------------------------------------------ */
+/*  FOLDER INDEX — generated by add_index_pages.py                    */
+/* ------------------------------------------------------------------ */
+
+body.theme-paper { padding-top: 1.2rem; }
+.folder-index h1 { font-size: 1.7rem; }
+.folder-entry { border-bottom: 1px solid var(--line); padding: 0.45rem 0; }
+.folder-entry a { font-size: 1rem; }
+.folder-entry .folder-arrow { color: var(--ink-soft); }
+
+/* obsidian bells and whistles hidden where the design replaces them */
+#antiflash { display: none !important; }
