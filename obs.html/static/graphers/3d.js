@@ -7,7 +7,7 @@ function run(args) {
 
     if (window.ObsHtmlGraph.graph_dependencies_loaded['3d'] == false){
         load_script_on_demand(
-            CONFIGURED_HTML_URL_PREFIX + '/obs.html/static/3d-force-graph.js', 
+            CONFIGURED_HTML_URL_PREFIX + '/seanpawley-books//obs.html/static/3d-force-graph.js', 
             start,
             []
         )

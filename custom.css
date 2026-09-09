@@ -158,12 +158,10 @@ body.theme-paper { padding-top: 1.2rem; }
 /* obsidian bells and whistles hidden where the design replaces them */
 #antiflash { display: none !important; }
 
-/* on the root, the hero + folder cards are the page; hide the raw
-   obsidian shell that would otherwise dump below the fold */
+/* on the root, the hero + folder cards are the page; the raw obsidian
+   shell is stripped from the HTML by apply_style.py, so the shell hide
+   block is dead weight; keep only the root's own padding */
 body.site-root { padding-bottom: 3rem; }
-body.site-root #search-master-div,
-body.site-root #header,
-body.site-root #page_holder { display: none !important; }
 
 /* ------------------------------------------------------------------ */
 /*  CONTENT SHELL — content pages keep only the reading column          */
@@ -174,12 +172,12 @@ body.site-root #page_holder { display: none !important; }
    center the reading column (which custom.css already centers via the
    body rule; this keeps .container honest after the flex panes are
    gone and prevents any full-width flex sibling from sprawling) */
-body.site-note #dirtree,
-body.site-note #left_pane,
-body.site-note #right_pane,
-body.site-note #header,
-body.site-note #search-master-div { display: none !important; }
-body.site-note .container {
+body[site-note] #dirtree,
+body[site-note] #left_pane,
+body[site-note] #right_pane,
+body[site-note] #header,
+body[site-note] #search-master-div { display: none !important; }
+body[site-note] .container {
   max-width: 52rem !important;
   margin: 0 auto !important;
   width: auto !important;

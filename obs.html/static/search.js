@@ -88,7 +88,7 @@ async function LoadSearchData(){
     // no cached data available, get data and cache it when possible
     console.log('Loading search data from file...')
 
-    GetGzipContentsAsB64Str(CONFIGURED_HTML_URL_PREFIX + '/obs.html/data/search.json.gzip').then(gzipped_data_str => {
+    GetGzipContentsAsB64Str(CONFIGURED_HTML_URL_PREFIX + '/seanpawley-books//obs.html/data/search.json.gzip').then(gzipped_data_str => {
 
         ls_set('search_hash', gzip_hash);
 

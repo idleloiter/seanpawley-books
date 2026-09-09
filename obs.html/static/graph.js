@@ -16,9 +16,9 @@ var graphers_hash = {
 }
 // // DYNAMIC
 // ///////////////////////////////////////////////////////////////////////////////
-// import * as grapher_custom from '/obs.html/static/graphers/custom.js';
-// import * as grapher_3d from '/obs.html/static/graphers/3d.js';
-// import * as grapher_2d from '/obs.html/static/graphers/2d.js';
+// import * as grapher_custom from '/seanpawley-books//obs.html/static/graphers/custom.js';
+// import * as grapher_3d from '/seanpawley-books//obs.html/static/graphers/3d.js';
+// import * as grapher_2d from '/seanpawley-books//obs.html/static/graphers/2d.js';
 
 // var graphers = [
 // 	{'id': 'custom', 'name': 'custom', 'module': grapher_custom},

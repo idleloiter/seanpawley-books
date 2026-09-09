@@ -13,7 +13,7 @@ var CONFIG_CLOSE_LEFT_PANE_IF_EMPTY = 0;
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '183169427319167603483769832293762159976'                       // used to check whether the localStorage data is stale
+var gzip_hash = '57600177213839758450962573360494910954'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
@@ -521,13 +521,13 @@ function get_graph_data(){
     if (RELATIVE_PATHS){
         let page_depth = window.location.pathname.split('/').length - CONFIGURED_HTML_URL_PREFIX.split('/').length - 1;
         if (page_depth > 0){
-            return '../'.repeat(page_depth) + '/obs.html/data/graph.json';
+            return '../'.repeat(page_depth) + '/seanpawley-books//obs.html/data/graph.json';
         }
         else {
-            return './' + '/obs.html/data/graph.json';
+            return './' + '/seanpawley-books//obs.html/data/graph.json';
         }
     }
-    return get_html_url_prefix()+'/obs.html/data/graph.json';
+    return get_html_url_prefix()+'/seanpawley-books//obs.html/data/graph.json';
 }
 function get_html_url_prefix(){
     return ''  // this value is replaced by the actual url prefix when compiled
